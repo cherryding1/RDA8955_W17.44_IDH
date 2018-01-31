@@ -1,0 +1,17 @@
+--- !ruby/object:DELIV::Config 
+libDeliveryCopy: 
+- defs
+- bcpu/include
+- bcpu/spc/include
+- bcpu/spp/include
+- boot/include
+- hal/include
+- pal/include
+- patch/include
+- regs/greenstone/include/regdef.h
+- packed/chip_greenstone_chip/lib
+- rom/greenstone
+- Makefile
+moduleName: chip
+compileOptions: 
+- CT_TARGET=greenstone_cs2324d

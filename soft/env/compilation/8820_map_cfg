@@ -1,0 +1,174 @@
+LOGICAL_MAP
+{
+    cached          @0x80000000 to 0x9fffffff and_mask 0x1fffffff;
+    uncached        @0xa0000000 to 0xbfffffff and_mask 0x1fffffff;
+}
+
+PHYSICAL_MAP
+{
+    modemRam    @0x02000000 size 16M
+    {
+/*
+        modem_ram:    load
+        {
+            filename "modemRam.lod"
+            sectormap (64 x 64K)
+            fillvalue 0xffffffff
+            fill on
+            saveheader on
+        }
+*/
+        modem_ram:    bin
+        {
+            filename "modemRam.bin"
+            addressfilename "modemRam.def"
+            saveloadaddress on
+            saveentryaddress on
+        }
+
+        modem_ram_fpga_micron:    bin
+        {
+            filename "modemRam.bin"
+            addressfilename "modemRam.def"
+            saveloadaddress on
+            saveentryaddress on
+        }
+
+        simu:    bin
+        {
+            filename "modemRamSimu.bin"
+            fillvalue 0xffffffff
+            fillheader on
+        }
+
+        preload:    load
+        {
+            filename "ram.lod"
+        }
+    }
+
+    modemDdr    @0x03000000 size 16M
+    {
+/*
+        modem_ram:    load
+        {
+            filename "modemRam.lod"
+            sectormap (64 x 64K)
+            fillvalue 0xffffffff
+            fill on
+            saveheader on
+        }
+*/
+        modem_ram:    bin
+        {
+            filename "modemRam.bin"
+            addressfilename "modemRam.def"
+            saveloadaddress on
+            saveentryaddress on
+        }
+
+        modem_ram_fpga_micron:    bin
+        {
+            filename "modemRam.bin"
+            addressfilename "modemRam.def"
+            saveloadaddress on
+            saveentryaddress on
+        }
+
+        simu:    bin
+        {
+            filename "modemRamSimu.bin"
+            fillvalue 0xffffffff
+            fillheader on
+        }
+
+        preload:    load
+        {
+            filename "ddrram.lod"
+        }
+    }
+
+    bbdualportsram    @0x018b8000 size 16K
+    {
+        preload:    load
+        {
+            filename "bbdpsram.lod"
+        }       
+    }
+
+    wddualportsram    @0x018b0000 size 32K
+    {
+        preload:    load
+        {
+            filename "wddpsram.lod"
+        }       
+    }
+
+    apdualportsram    @0x018a0000 size 64K
+    {
+        preload:    load
+        {
+            filename "apdpsram.lod"
+        }       
+    }
+
+    intsram    @0x01c00000 size 1M
+    {
+        modem_ram:    bin
+        {
+            filename "modemIntsram.bin"
+            addressfilename "modemIntsram.def"
+            saveloadaddress on
+            #saveentryaddress on
+        }
+
+        modem_ram_fpga_micron:    bin
+        {
+            filename "modemIntsram.bin"
+            addressfilename "modemIntsram.def"
+            saveloadaddress on
+            #saveentryaddress on
+        }
+
+        simu:    bin
+        {
+            filename "modemIntsramSimu.bin"
+            fillvalue 0x0
+            fillheader on
+        }
+
+        preload:    load
+        {
+            filename "intsram.lod"
+        }       
+    }
+
+    bbsram    @0x01980000 size 128K
+    {
+         preload:    load
+        {
+            filename "bbsram.lod"
+        }       
+    }
+
+    introm @0x01e00000 size 512K
+    {
+         rom:    load
+        {
+            filename "introm.lod"
+            sectormap (32 x 16K)
+            fill on
+        }       
+    }
+
+    bcpurom @0x01e80000 size 512K
+    {
+         rom:    load
+        {
+            filename "bcpurom.lod"
+            sectormap (32 x 16K)
+            fill on
+        }       
+    }
+}
+

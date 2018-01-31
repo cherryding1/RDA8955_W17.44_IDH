@@ -1,0 +1,78 @@
+comment "--- application/coolmmi/mmi/organizer ---"
+
+config __MMI_GAME__
+	option skipmk
+	bool "GAME_SUPPORT"
+	default y
+    ---help---
+        This option enables to support Game.
+
+config CALENDAR_SUPPORT
+    option skipmk
+    bool "CALENDAR_SUPPORT"
+    default y
+    ---help---
+    CALENDAR_SUPPORT depends on the resouce type defined by CT_ERES.
+
+config TODOLIST_SUPPORT
+    option skipmk
+    bool "TODOLIST_SUPPORT"
+    default y
+    ---help---
+    TODOLIST_SUPPORT depends on the resouce type defined by CT_ERES.
+	
+config ORGANIZER_SUPPORT
+    option skipmk
+    bool "ORGANIZER_SUPPORT"
+    default y
+    ---help---
+    ORGANIZER_SUPPORT depends on the resouce type defined by CT_ERES.
+
+config __MOD_FLASHLIGHT__
+    option skipmk
+    bool "TORCH_LED_SUPPORT"
+    default y
+    ---help---
+        This option enables to support Torch LED.
+
+config __MMI_WORLD_CLOCK__
+    option skipmk
+    bool "WORLD_CLOCK_SUPPORT"
+    default y
+    ---help---
+        This option defines whether supports world clock function.
+
+config WORLD_CITY_LIST_NUMBER
+	option skiph
+	option skipmk
+	int "World Clock City List"
+	depends on __MMI_WORLD_CLOCK__
+	range 1 4
+	default 3
+    ---help---
+        It defines the list number of world clock to enable below Macro.
+        __MMI_WCLOCK_CITY_LIST_1__
+        __MMI_WCLOCK_CITY_LIST_2__
+        __MMI_WCLOCK_CITY_LIST_3__
+        __MMI_WCLOCK_CITY_LIST_4__
+
+config __MMI_WCLOCK_CITY_LIST_1__
+    option skipmk
+    def_bool y if WORLD_CITY_LIST_NUMBER = 1
+	default n
+
+config __MMI_WCLOCK_CITY_LIST_2__
+    option skipmk
+    def_bool y if WORLD_CITY_LIST_NUMBER = 2
+	default n
+
+config __MMI_WCLOCK_CITY_LIST_3__
+    option skipmk
+    def_bool y if WORLD_CITY_LIST_NUMBER = 3
+	default n
+
+config __MMI_WCLOCK_CITY_LIST_4__
+    option skipmk
+    def_bool y if WORLD_CITY_LIST_NUMBER = 4
+	default n
+

@@ -1,0 +1,64 @@
+menuconfig TOUCHPANEL_SUPPORT
+	option skipmk
+	option skiph
+	default n
+	bool "Touch Panel"
+
+if TOUCHPANEL_SUPPORT
+
+comment "--- Touch Panel Options ---"
+
+config TOUCH_PANEL_SUPPORT
+	option skipmk
+	bool "Touch panel support"
+	default n
+
+config MMI_SUPPORT_TOUCHPANEL
+    option skiph
+    bool
+    default n
+
+config __MMI_TOUCH_SCREEN__
+	option skipmk
+	bool "Touch panel MMI display"
+	depends on TOUCH_PANEL_SUPPORT
+	def_bool y
+
+config __MMI_TOUCH_DIAL_SCREEN__
+	option skipmk
+	bool "Touch panel displays dial screen"
+	depends on __MMI_TOUCH_SCREEN__
+	def_bool y
+
+config __MMI_PENPOWER__
+	option skipmk
+	bool "Enable HandWritting"
+	depends on __MMI_TOUCH_SCREEN__
+	def_bool y
+
+config __MMI_WGUI_CSK_ENABLE__
+	option skipmk
+	bool "Enable Center Key"
+	depends on __MMI_TOUCH_SCREEN__
+	def_bool y if __MMI_MAINLCD_176X220__ || __MMI_MAINLCD_240X320__ || __MMI_MAINLCD_220X176__
+
+config __MMI_NUMPAD_VK__
+	option skipmk
+	bool "New Virtual Keyboard"
+	depends on __MMI_TOUCH_SCREEN__
+	def_bool y if __MMI_MAINLCD_240X240__
+    ---help---
+    	support Nine number keypad Virtual keyboard. 
+    	
+config __MMI_RWATCH_CALL_MANAGEMENT__
+	option skipmk
+	bool "Call Touch Panel"
+	depends on __MMI_TOUCH_SCREEN__
+	def_bool y if __MMI_MAINLCD_240X240__
+    ---help---
+    	support call touch panel. 
+    	    	
+endif 
+
+
+

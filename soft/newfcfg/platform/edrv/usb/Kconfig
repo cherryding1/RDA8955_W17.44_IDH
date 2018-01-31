@@ -1,0 +1,70 @@
+config UCTLS_SERVICE
+    option skiph
+    bool "UCTLS_SERVICE"
+    default y
+
+config _UTRACE_
+    depends on UCTLS_SERVICE
+    bool "usb trace"
+    default y
+
+config _UMSS_
+    depends on UCTLS_SERVICE
+    bool "usb mass storage"
+    default y
+
+config _UCDCACM_
+    depends on UCTLS_SERVICE
+    bool "usb cdcacm"
+    default y
+
+config _UVIDEO_
+    depends on UCTLS_SERVICE
+    bool "usb video"
+    default n
+
+config _URNDIS_
+    depends on UCTLS_SERVICE
+    bool "usb rndis"
+    default n
+
+if _UMSS_
+config _UMSS_DUAL_MC_
+    option skiph
+    bool
+    default n
+endif
+
+if _UCDCACM_
+config __MMI_USB_COM_PORT__
+    option skipmk
+    bool
+    default y
+
+config AT_USE_USB_TRAS_DATA
+    option skipmk
+    bool "AT_USE_USB_TRAS_DATA"
+    default y
+
+config _TO_ADAPT_SPRD_COM_PC_DRIVER_
+    option skipmk
+    bool "TO_ADAPT_SPRD_COM_PC_DRIVER"
+    default y
+    ---help---
+        This option enables usb supports com port of spredum.
+endif
+
+if _UVIDEO_
+config WEBCAM_SUPPORT
+    option skipmk
+    bool
+    default y
+endif
+
+if _URNDIS_
+config __USB_TETHERING__
+    option skipmk
+    bool
+    default y
+endif
+

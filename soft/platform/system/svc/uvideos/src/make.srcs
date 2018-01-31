@@ -1,0 +1,7 @@
+# leave this comment and the last \ on last line for easier merge
+C_SRC :=                     \
+         uvideos.c
+
+
+
+

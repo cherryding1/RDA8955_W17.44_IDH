@@ -1,0 +1,16 @@
+# leave this comment and the last \ on last line for easier merge
+C_SRC := \
+         avrs.c \
+         avrs_fnc.c \
+         avrs_pcm.c \
+         avrs_speech.c \
+         avrs_amjr_audio.c \
+         avrs_amjr_video.c \
+         avrs_amjr_handler.c \
+         avrs_task.c \
+         avrs_video_handler.c \
+         \
+
+
+
+

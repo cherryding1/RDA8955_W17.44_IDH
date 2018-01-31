@@ -1,0 +1,384 @@
+<archive asm='no'>
+<var name='L1_NB_MEAS_SERVING' value='16'>
+	<comment>Must be a power of 2. Max (5s, 5 Pch) = 5 / (2*235ms) = 10   (BsPaMfrms = 2, T = 5 s, 1 measure / Pch)</comment>
+</var>
+
+<var name='L1_NB_MAX_NEAR_CELLS' value='6'></var>
+<var name='L1_NB_MAX_OLD_CELLS'  value='0'></var>
+<var name='L1_NB_MAX_PLMN_CELLS' value='12'></var>
+<var name='L1_NB_MAX_CELLS'  value='(L1_NB_MAX_NEAR_CELLS + L1_NB_MAX_OLD_CELLS + L1_NB_MAX_PLMN_CELLS + 1)'></var>
+
+
+<enum name='JOB_ENUM_H_ENUM_0'>
+	<entry name='L1_POWER_JOB'></entry>
+	<entry name='L1_MONITORING_JOB'></entry>
+	<entry name='L1_NEAR_JOB'></entry>
+	<entry name='L1_CCH_JOB'></entry>
+	<entry name='L1_PCCH_JOB'></entry>
+	<entry name='L1_BCCH_JOB'></entry>
+	<entry name='L1_PBCCH_JOB'></entry>
+	<entry name='L1_RACH_JOB'></entry>
+	<entry name='L1_CONNECT_JOB'></entry>
+	<entry name='L1_HO_JOB'></entry>
+	<entry name='L1_HO_ACCESS_JOB'></entry>
+	<entry name='L1_UL_TBF_SETUP_JOB'></entry>
+	<entry name='L1_DL_TBF_SETUP_JOB'></entry>
+	<entry name='L1_PDCH_JOB'></entry>
+	<entry name='L1_TBF_RELEASE_JOB'></entry>
+	<entry name='L1_PTCCH_JOB'></entry>
+	<entry name='L1_CBCH_JOB'></entry>
+	<entry name='L1_JOB_LAST'></entry>
+</enum>
+
+
+
+<typedef name='l1_Cell'>
+	<uint16 name='Arfcn'></uint16>
+	<uint16 name='Agc'></uint16>
+	<uint16 name='PAgc'></uint16>
+	<uint8 name='Bsic'></uint8>
+	<uint8 name='Rla'></uint8>
+	<int8 name='RTOf'></int8>
+	<uint16 name='PFct'></uint16>
+	<int32 name='TOf'></int32>
+	<int32 name='FOf'></int32>
+	<int16 name='QbOf'></int16>
+	<int32 name='FnOf'></int32>
+	<uint8 name='RLChn'></uint8>
+	<uint8 name='RLInit'></uint8>
+	<uint8 name='RLCnt'></uint8>
+	<uint8 name='RLUp'></uint8>
+	<uint8 name='RLDwn'></uint8>
+	<uint8 name='EvtCnt'></uint8>
+	<uint8 name='Status'></uint8>
+	<uint8 name='Update'></uint8>
+	<uint8 name='Idx'></uint8>
+	<uint8 name='Next'></uint8>
+	<uint8 name='SpyIdx'></uint8>
+</typedef>
+
+<typedef name='l1_Serving'>
+	<ptr name='Cell' type='l1_Cell'></ptr>
+	<uint8 name='BcchSdcchComb'></uint8>
+</typedef>
+
+<typedef name='l1_GPwrCtrl'>
+	<uint8 name='Alpha'></uint8>
+	<uint8 name='TAvgW'></uint8>
+	<uint8 name='TAvgT'></uint8>
+	<uint8 name='Pb'></uint8>
+	<uint8 name='PCMeasChan'></uint8>
+	<uint8 name='NAvgI'></uint8>
+	<uint8 name='TxPwrMax'></uint8>
+</typedef>
+
+<alias name='l1_PMeasCtrlReq'>
+	<instance name='unused' type='l1_GPwrCtrl'></instance>
+</alias>
+
+<typedef name='l1_CchReq'>
+	<uint16 name='Arfcn'></uint16>
+	<uint8 name='BcchSdcchComb'></uint8>
+	<uint8 name='BsAgBlkRes'></uint8>
+	<uint8 name='BsPaMfrms'></uint8>
+	<uint8 name='Group'></uint8>
+	<uint8 name='Tn'></uint8>
+	<uint8 name='Mode'></uint8>
+</typedef>
+
+<var name='L1_MA_SIZE' value='64'>
+	<comment>Maximum number of valid Arfcn in the Mobile Allocation</comment>
+</var>
+
+<typedef name='l1_FreqParam'>
+	<uint8 name='NbArfcn'></uint8>
+	<uint8 name='Maio'></uint8>
+	<uint8 name='Hsn'></uint8>
+	<uint8 name='Pad'></uint8>
+	<uint16 name='MA' count='L1_MA_SIZE'></uint16>
+</typedef>
+
+<typedef name='l1_PCchReq'>
+	<uint16 name='Arfcn'></uint16>
+	<instance name='FreqParam' type='l1_FreqParam'></instance>
+	<uint8 name='MultiframeType'></uint8>
+	<uint8 name='Tn'></uint8>
+	<uint8 name='Tsc'></uint8>
+	<uint8 name='AgBlkRes'></uint8>
+	<uint8 name='PBcchBlks'></uint8>
+	<uint8 name='BcchSdcchComb'></uint8>
+	<uint8 name='SplitPagingCycle'></uint8>
+	<uint8 name='Mode'></uint8>
+	<uint16 name='Group'></uint16>
+	<uint8 name='Pb'></uint8>
+</typedef>
+
+<typedef name='l1_RachOnReq'>
+	<uint16 name='RachInfo'></uint16>
+	<uint8 name='Type'></uint8>
+	<uint8 name='IdleType'></uint8>
+	<uint8 name='RandSize'></uint8>
+	<uint8 name='TxPower'></uint8>
+	<uint8 name='S'></uint8>
+	<uint8 name='T'></uint8>
+	<uint8 name='NbMaxRetrans'>
+		<comment>10.5.2.29, 4.60 12.14</comment>
+	</uint8>
+	<uint8 name='PersistenceLevel'></uint8>
+	<uint8 name='RadioPrio'></uint8>
+	<uint8 name='Pad'></uint8>
+</typedef>
+
+<typedef name='l1_CiphParam'>
+	<uint8 name='Kc' count='8'></uint8>
+	<uint8 name='Algo'></uint8>
+	<bool  name='Start'></bool>
+	<uint8 name='Pad' count='2'></uint8>
+</typedef>
+
+<typedef name='l1_CellOpt'>
+	<bool name='Pwrc'></bool>
+	<uint8 name='Rlt'></uint8>
+	<uint8 name='Dtx'></uint8>
+	<uint8 name='Pad'></uint8>
+</typedef>
+
+<var name='L1_NO_ICM' value='0xFF'></var>
+
+<typedef name='l1_AMRCfg'>
+	<bool name='AMRCfgValid'></bool>
+	<uint8 name='Version'></uint8>
+	<uint8 name='NoiseSuppression'></uint8>
+	<uint8 name='StartModeIdx'></uint8>
+	<uint8 name='ACS'>
+		<comment>be used. When value is L1_NO_ICM initial codec selection  is done according to 05.09 requirement.</comment>
+	</uint8>
+	<uint8 name='Threshold' count='3'></uint8>
+	<uint8 name='Hysteresis' count='3'></uint8>
+</typedef>
+
+<typedef name='l1_ConnectReq'>
+	<ptr name='FreqParam' type='l1_FreqParam' count='2'></ptr>
+	<instance name='CipherParam' type='l1_CiphParam'>
+		<comment>- immediate action only ([0]) or  - later action only ([0]) or  - both ([0] and [1])</comment>
+	</instance>
+	<instance name='CellOptions' type='l1_CellOpt'></instance>
+	<instance name='AMRCfg' type='l1_AMRCfg'></instance>
+	<uint16 name='ST'></uint16>
+	<uint16 name='Arfcn'>
+		<comment>L1_NO_ST = non significant</comment>
+	</uint16>
+	<uint8 name='ChanType'></uint8>
+	<uint8 name='TdmaOffset'>
+		<comment>champs (ChanType et TdmaOffset)</comment>
+	</uint8>
+	<uint8 name='TN'></uint8>
+	<uint8 name='Tsc'></uint8>
+	<uint8 name='PowerLevel'></uint8>
+	<uint8 name='ChanMode'></uint8>
+	<uint8 name='TA'></uint8>
+	<uint8 name='HoType'>
+		<comment>Assignment command and Handover command specific fields</comment>
+	</uint8>
+	<bool name='Ctrl'>
+	</bool>
+	<uint8 name='HORef'>
+		<comment>Handover command specific fields</comment>
+	</uint8>
+	<bool name='Nci'></bool>
+	<bool name='ATC'></bool>
+	<uint8 name='RTD'>
+		<comment>mandatory; 3GPP TS 4.18: if new cell  supports extended TA and TA &amp;gt; 63 and  ATC == TRUE, MS must not send HO access</comment>
+	</uint8>
+</typedef>
+
+<typedef name='l1s_TACtx'>
+	<uint8 name='Previous'></uint8>
+	<uint8 name='Current'></uint8>
+	<uint8 name='Next'></uint8>
+</typedef>
+
+<typedef name='pal_AMRCfg'>
+	<comment>AMR Configuration structure</comment>
+
+	<uint8 name='Version'></uint8>
+	<uint8 name='NoiseSuppression'></uint8>
+	<uint8 name='StartModeIdx'></uint8>
+	<uint8 name='NbActiveCodecSet'></uint8>
+	<uint8 name='ActiveCodecSet' count='4'></uint8>
+	<uint8 name='Hysteresis' count='3'></uint8>
+	<uint8 name='Threshold' count='3'></uint8>
+	<uint8 name='CMIPhase'></uint8>
+</typedef>
+
+<typedef name='l1_MeasCfg'>
+	<uint16 name='NbMeasTgt'></uint16>
+	<uint16 name='NbMeasMax'></uint16>
+	<uint16 name='ReadIdx'></uint16>
+	<uint16 name='RunningAverageThres'></uint16>
+	<uint8 name='NbCells'></uint8>
+	<uint8 name='NbMonPerFr'></uint8>
+	<uint8 name='PacketMeas'></uint8>
+	<uint8 name='NbExtraMon'></uint8>
+	<uint8 name='ServingIdx'>
+		<comment>u8 PcMeasBcch;  Power control measurement on Bcch (PcMeasChan = false).</comment>
+	</uint8>
+	<bool name='Tag'></bool>
+	<bool name='ExtendedMeas'></bool>
+	<uint8 name='NcMeasState'></uint8>
+	<uint8 name='NcRPIdle'></uint8>
+	<uint8 name='NcRPTransfer'></uint8>
+	<uint8 name='NcCurrentRp'></uint8>
+	<uint8 name='LastNcInTransfer'></uint8>
+	<uint32 name='FrmSchd'></uint32>
+	<ptr name='ArfcnL' type='uint16'></ptr>
+	<ptr name='WriteIdx' type='uint16'></ptr>
+	<ptr name='NcMeasCumul' type='uint32'></ptr>
+	<ptr name='NbNcMeas' type='uint16'></ptr>
+	<ptr name='Meas' type='uint8'></ptr>
+</typedef>
+
+<typedef name='l1_ServMeasCfg'>
+	<uint8 name='PwrC'></uint8>
+	<uint8 name='NbMeas'></uint8>
+	<uint8 name='NbMeasSub'></uint8>
+	<uint8 name='MeasMax'></uint8>
+	<uint8 name='MeasMin'></uint8>
+	<uint8 name='MeasSubMax'></uint8>
+	<uint8 name='MeasSubMin'></uint8>
+	<uint16 name='MeasCumul'></uint16>
+	<uint16 name='MeasCumulSub'></uint16>
+	<uint16 name='TotalBit'></uint16>
+	<uint16 name='TotalBitSub'></uint16>
+	<uint16 name='WrongBitCumul'></uint16>
+	<uint16 name='WrongBitCumulSub'></uint16>
+	<uint8 name='NbMeasTgt'></uint8>
+	<uint8 name='ReadIdx'></uint8>
+	<uint8 name='WriteIdx'></uint8>
+	<uint8 name='Meas' count='L1_NB_MEAS_SERVING'></uint8>
+	<uint16 name='BlkMeasCumul'></uint16>
+	<uint8 name='NbBstMeas'></uint8>
+	<uint8 name='NbBstBcch'></uint8>
+	<uint8 name='BfiBitMap'></uint8>
+	<uint8 name='PcMeasBcch'></uint8>
+	<uint16 name='n'></uint16>
+	<uint16 name='F'></uint16>
+	<uint16 name='vF'></uint16>
+	<uint32 name='C'></uint32>
+	<uint8 name='TxPower' count='8'></uint8>
+	<uint8 name='BstMeas' count='4'></uint8>
+	<uint16 name='BlVarCumul'></uint16>
+	<uint8 name='NbBlVar'></uint8>
+	<uint16 name='Int' count='8'></uint16>
+	<uint8 name='Intn' count='8'></uint8>
+	<uint16 name='IntF'></uint16>
+	<uint8 name='IntvF'></uint8>
+	<bool name='ExtIntRequest'></bool>
+	<bool name='NextExtInt'></bool>
+	<uint16 name='ExtIntArfcn'></uint16>
+	<uint16 name='ExtInt' count='8'></uint16>
+	<uint8 name='ExtIntn' count='8'></uint8>
+	<uint8 name='IntMeas' count='2*4'></uint8>
+	<uint16 name='IntArfcn' count='2'></uint16>
+</typedef>
+
+<typedef name='l1_CbchReq'>
+	<uint8 name='BitMap'></uint8>
+	<uint8 name='Tn'>
+		<comment>extended to be listened.</comment>
+	</uint8>
+	<uint8 name='Tsc'></uint8>
+	<uint8 name='Pad'></uint8>
+	<instance name='FreqParam' type='l1_FreqParam'></instance>
+</typedef>
+
+<var name='PAL_NB_MAX_WIN_PER_FRAME' value='3'>
+	<comment>This parameter indicates the number of windows that can be handle  in a frame. The minimum value is three (1 Rx, 1 Tx and 1 Mx or  1 Rx and 2 Mx or 3 Mx).\n  For performance purpose, one additional monitoring window would be  a plus especially in GPRS and in a multi-band context to speed up  the initial power measurement.</comment>
+</var>
+
+<typedef name='WinAlloc'>
+	<uint8 name='Win' count='PAL_NB_MAX_WIN_PER_FRAME'></uint8>
+	<uint8 name='Idx'></uint8>
+	<uint8 name='NbWin'></uint8>
+</typedef>
+
+<alias name='s16Pair'>
+	<int16 name='unused' count='2'></int16>
+</alias>
+
+<typedef name='l1_EquRes'>
+	<uint8 name='WrIdx'></uint8>
+	<uint8 name='Pad' count='3'>
+		<comment>u8 RdIdx;</comment>
+	</uint8>
+	<uint32 name='Pwr' count='2'></uint32>
+	<uint32 name='Snr' count='2'></uint32>
+	<uint32 name='TOf' count='2'></uint32>
+	<uint32 name='Agc' count='2'></uint32>
+	<instance name='FOf' type='s16Pair' count='4'></instance>
+	<instance name='Arfcn' type='s16Pair' count='4'></instance>
+</typedef>
+
+<typedef name='l1_Ctx'>
+	<uint8 name='State'></uint8>
+	<uint8 name='AMR'></uint8>
+	<uint16 name='SubState'></uint16>
+	<uint32 name='FrameLoadBitMap'></uint32>
+	<instance name='Cell' type='l1_Cell' count='L1_NB_MAX_CELLS'></instance>
+	<instance name='Serving' type='l1_Serving'></instance>
+	<ptr name='MonitorReq' type='Msg'></ptr>
+	<ptr name='MemMonitorReq' type='Msg'></ptr>
+	<ptr name='ExtdMonitorReq' type='Msg'></ptr>
+	<ptr name='TxDiscardReq' type='Msg'></ptr>
+	<ptr name='NextTxDiscardReq' type='Msg'></ptr>
+	<ptr name='PMeasCtrlReq' type='l1_PMeasCtrlReq'></ptr>
+	<ptr name='CchReq' type='l1_CchReq'></ptr>
+	<ptr name='PCchReq' type='l1_PCchReq'></ptr>
+	<ptr name='PBcchReq' type='Msg' count='2'></ptr>
+	<ptr name='RachOnReq' type='l1_RachOnReq'>
+		<comment>Msg_t *NcMonitorReq;  To be taken into account at the beginning of the next RP.</comment>
+	</ptr>
+	<ptr name='ConnectReq' type='l1_ConnectReq'></ptr>
+	<ptr name='TACtx' type='l1s_TACtx'></ptr>
+	<ptr name='TBFCtx' type='l1_TBFCtx'></ptr>
+	<ptr name='AMRCfg' type='pal_AMRCfg'></ptr>
+	<instance name='MeasCfg' type='l1_MeasCfg'></instance>
+	<instance name='ServMeasCfg' type='l1_ServMeasCfg'></instance>
+	<ptr name='CbchReq' type='l1_CbchReq'></ptr>
+	<uint8 name='CbchSkipCnt' count='2'></uint8>
+	<uint8 name='CbchSkipBitMap'></uint8>
+	<uint8 name='OldTA'></uint8>
+	<uint8 name='PSTxBitMap'></uint8>
+	<uint8 name='NbPSJob'></uint8>
+	<uint8 name='PDataPurgeReq'></uint8>
+	<uint16 name='NbGPMeaSkip'></uint16>
+	<uint8 name='FreeCell'></uint8>
+	<uint8 name='ActiveCell'></uint8>
+	<uint8 name='AfcIdx'></uint8>
+	<uint8 name='AfcLocked'></uint8>
+	<uint8 name='GainOffset'></uint8>
+	<uint8 name='Job' count='L1_JOB_LAST'></uint8>
+	<uint8 name='CellList' count='3'></uint8>
+	<uint32 name='Fn' ckeywords='VOLATILE'></uint32>
+	<uint16 name='RFn' ckeywords='VOLATILE'></uint16>
+	<uint8 name='T1R' ckeywords='VOLATILE'></uint8>
+	<uint8 name='T2' ckeywords='VOLATILE'></uint8>
+	<uint8 name='T3' ckeywords='VOLATILE'></uint8>
+	<uint8 name='C52' ckeywords='VOLATILE'></uint8>
+	<uint8 name='C102' ckeywords='VOLATILE'></uint8>
+	<uint8 name='C104' ckeywords='VOLATILE'></uint8>
+	<instance name='WinAlloc' type='WinAlloc'></instance>
+	<uint8 name='Tn'></uint8>
+	<uint8 name='Sleep'></uint8>
+	<uint8 name='SleepEnable'></uint8>
+	<uint8 name='NearMode'></uint8>
+	<uint8 name='DataBlockSize'></uint8>
+	<uint8 name='BandMap'></uint8>
+	<uint8 name='SpyServingId'></uint8>
+	<uint8 name='SpyNearId'></uint8>
+	<instance name='EquRes' type='l1_EquRes' count='5'></instance>
+</typedef>
+
+
+
+</archive>

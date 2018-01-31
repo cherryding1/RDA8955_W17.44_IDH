@@ -1,0 +1,21 @@
+新的8852芯片上已经可以使用串口GC6113了，具体使用说明如下：
+ 
+1、至本邮件发出时，此功能只能在8808 V3版芯片上使用。
+ 
+检查芯片版本的方法：
+— 从map表中查到g_xcvChipId的地址；
+— 从CoolWatcher中读取g_xcvChipId的值，若为0x18883吗，则为V3版芯片；
+ 
+2、target配置：
+target.def中:
+CAMERA_MODEL    ?= gc6113
+CAMERA_IF       ?= spi
+同时确认打开_CAM_SMALL_MEM_宏，并关闭_CAM_GC6113_SPECIAL_宏；
+tgt_board.cfg.h中：
+TGT_HAL_CAM_CFG中的camSerialIfMode设为TRUE；
+同时检查一下手机板的原理图，注意一下RESET管脚所接的pin；如果使用了GPIO/GPO口作RESET管脚，则需将TGT_HAL_CAM_CFG中camRstRemap的值映射到对应的GPIO/GPO管脚。举个例子，假设当前RESET管脚使用的是GPO1，则：camRstRemap = { .gpioId  = HAL_GPO_1}, 
+ 
+3、根据附件升级代码。该升级代码基于BV4 Trunk，获取时间为12月30日13:00。
+4、由于时间问题，GC6113的显示效果还需提高，请兄弟们联系一下格科在当地的FAE调试一下，并将调试后的参数返回给我。
+ 
+有任何问题，请尽快与本人联系。

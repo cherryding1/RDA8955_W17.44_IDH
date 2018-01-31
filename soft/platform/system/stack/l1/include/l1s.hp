@@ -1,0 +1,581 @@
+/*
+================================================================================
+
+  This source code is property of StackCom. The information contained in this
+  file is confidential. Distribution, reproduction, as well as exploitation,or
+  transmisison of any content of this file is not allowed except if expressly
+  permitted. Infringements result in damage claims.
+
+  Copyright StackCom (c) 2004
+
+================================================================================
+*/
+
+/*
+================================================================================
+ File          l1s.hp
+--------------------------------------------------------------------------------
+
+  Scope      : L1 synchronous private header file.
+
+  History    :
+--------------------------------------------------------------------------------
+  Aug 25 03  |  ADA  | Creation
+  Dec 15 05  |  ADA  | GAIN_FAST_UPDATE faster !
+  Jan 16 06  |  JFN  | Define for Cell Cnt managagement.
+================================================================================
+*/
+#ifndef __L1S_HP__
+#define __L1S_HP__
+
+#include "sxr_ops.h"
+#include "l1.h"
+#include "pal_gsm.h"
+
+#ifdef __L1S_VAR__
+#define DefExtern
+#else
+#define DefExtern extern
+#endif
+
+#define L1S_SACCH0_BUFFER  4
+#define L1S_TCH0_BUFFER    1
+#define L1S_PDCH_BUFFER    0
+#define L1S_PTCCH_BUFFER   4
+#define L1S_SDCCH_BUFFER   4
+
+#define L1S_FCH_WIN_IDX    0
+#define L1S_SCH_WIN_IDX    0
+#define L1S_RX_NB_WIN_IDX  2
+#define L1S_TX_NB_WIN_IDX  1
+
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_RX_GOOD 0
+#define L1S_RX_NOTBAD 1
+#define L1S_RX_BAD 2
+#define L1S_GOODBLOCK_THR 2
+#define L1S_SNR_THR 10
+#endif
+
+
+//  TTTTCCCCxxxxxDxxxxxRRRREEEExx
+//  87654321098765432109876543210
+
+#define L1S_GET_RX_RES_POS        0
+#define L1S_GET_RX_RES            (1    << L1S_GET_RX_RES_POS)
+#define L1S_GET_RX_RES_SCHD       (L1S_GET_RX_RES << 2)
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_GET_2RX_RES           (0x03 << L1S_GET_RX_RES_POS)
+#define L1S_GET_2RX_RES_SCHD      (L1S_GET_2RX_RES << 2)
+#define L1S_GET_3RX_RES           (0x07 << L1S_GET_RX_RES_POS)
+#define L1S_GET_3RX_RES_SCHD      (L1S_GET_3RX_RES << 2)
+#endif
+#define L1S_GET_4RX_RES           (0x0F << L1S_GET_RX_RES_POS)
+#define L1S_GET_4RX_RES_SCHD      (L1S_GET_4RX_RES << 2)
+#define L1S_GET_RX_RES_MSK        (0x3E << L1S_GET_RX_RES_POS)
+
+#define L1S_SET_4RX_NB_POS        6
+#define L1S_SET_RX_NB             (1    << L1S_SET_4RX_NB_POS)
+#define L1S_SET_RX_NB_SCHD        (L1S_SET_RX_NB)
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_SET_2RX_NB            (0x03 << L1S_SET_4RX_NB_POS)
+#define L1S_SET_2RX_NB_SCHD       (L1S_SET_2RX_NB)
+#define L1S_SET_3RX_NB            (0x07 << L1S_SET_4RX_NB_POS)
+#define L1S_SET_3RX_NB_SCHD       (L1S_SET_3RX_NB)
+#endif
+#define L1S_SET_4RX_NB            (0x0F << L1S_SET_4RX_NB_POS)
+#define L1S_SET_4RX_NB_SCHD       (L1S_SET_4RX_NB)
+#define L1S_SET_4RX_NB_MSK        (0xE << L1S_SET_4RX_NB_POS)
+
+#if 0
+#define L1S_GET_DECOD_POS         10
+#define L1S_GET_DECOD             (1    << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_SCHD(Chn,d) ((L1S_GET_DECOD | ((Chn & 0x0F) << (L1S_GET_DECOD_POS + d + 1))) << 5)
+#define L1S_DECOD_CHN_MSK         (0x0F << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_MSK         (0x7FE << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_CHN(Schd)   (((Schd >> 1) & L1S_DECOD_CHN_MSK) >> L1S_GET_DECOD_POS)
+#define L1S_RST_DECOD_CHN(Schd)   Schd = (Schd & ~(L1S_DECOD_CHN_MSK << 1))
+#else
+#define L1S_GET_DECOD_POS         10
+#define L1S_GET_CHN_POS           16
+#define L1S_GET_DECOD             (1    << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_SCHD(Chn,d) ((L1S_GET_DECOD << (5 + d)) | ((Chn & 0xF) << (L1S_GET_CHN_POS + 5 + d)))
+#define L1S_DECOD_CHN_MSK         (0x0F << L1S_GET_CHN_POS)
+//#define L1S_GET_DECOD_MSK         (0x7FBE << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_MSK         (0xFFFE << L1S_GET_DECOD_POS)
+#define L1S_GET_DECOD_CHN(Schd)   ((Schd & L1S_DECOD_CHN_MSK) >> L1S_GET_CHN_POS)
+#define L1S_RST_DECOD_CHN(Schd)   Schd = (Schd & ~L1S_DECOD_CHN_MSK)
+#endif
+
+#define L1S_LOCK_WIN_POS          26  // 25
+#define L1S_LOCK_WIN              (3l    << L1S_LOCK_WIN_POS)  // Lock 2 frames after last Rx burst (wait decodage retreived)
+#define L1S_LOCK_WIN_SCHD(n)      ((u32)(L1S_LOCK_WIN << (n)))
+#define L1S_LOCK_WIN_MSK          ((u32)(0x3El << L1S_LOCK_WIN_POS))
+
+#define L1S_SET_4TX_NB_POS        26  // 25
+#define L1S_SET_TX_NB             ((u32)(1    << L1S_SET_4TX_NB_POS))
+#define L1S_SET_TX_NB_SCHD(a)     ((u32)(L1S_SET_TX_NB << (a-1)))
+#define L1S_SET_4TX_NB            ((u32)(0x0F << L1S_SET_4TX_NB_POS))
+#define L1S_SET_4TX_NB_SCHD(a)    ((u32)(L1S_SET_4TX_NB << (a-1)))
+#define L1S_SET_4TX_NB_MSK        ((u32)(0x3E << L1S_SET_4TX_NB_POS))
+
+
+#define L1S_SCHD_MSK (L1S_SET_4TX_NB_MSK | L1S_GET_RX_RES_MSK | L1S_SET_4RX_NB_MSK | L1S_GET_DECOD_MSK)
+
+
+/* Defines for measurements schedule. */
+#define L1S_GET_MON_RES_POS       0
+#define L1S_GET_MON_RES           (1    << L1S_GET_MON_RES_POS)
+#define L1S_GET_MON_RES_SCHD      (L1S_GET_MON_RES << 2)
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_GET_2MON_RES          (0x03 << L1S_GET_MON_RES_POS)
+//#define L1S_GET_3MON_RES          (0x07 << L1S_GET_MON_RES_POS)
+#define L1S_GET_2MON_RES_SCHD     (L1S_GET_2MON_RES << 2)
+//#define L1S_GET_3MON_RES_SCHD     (L1S_GET_3MON_RES << 2)
+#endif
+#define L1S_GET_4MON_RES          (0x0F << L1S_GET_MON_RES_POS)
+#define L1S_GET_4MON_RES_SCHD     (L1S_GET_4MON_RES << 2)
+#define L1S_GET_MON_RES_MSK       (0x3E << L1S_GET_MON_RES_POS)
+
+#define L1S_SET_4MON_NB_POS       6
+#define L1S_SET_MON_NB            (1    << L1S_SET_4MON_NB_POS)
+#define L1S_SET_MON_NB_SCHD       (L1S_SET_MON_NB)
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_SET_2MON_NB           (0x03 << L1S_SET_4MON_NB_POS)
+//#define L1S_SET_3MON_NB           (0x07 << L1S_SET_4MON_NB_POS)
+#define L1S_SET_2MON_NB_SCHD      (L1S_SET_2MON_NB)
+//#define L1S_SET_3MON_NB_SCHD      (L1S_SET_3MON_NB)
+#endif
+#define L1S_SET_4MON_NB           (0x0F << L1S_SET_4MON_NB_POS)
+#define L1S_SET_4MON_NB_SCHD      (L1S_SET_4MON_NB)
+#define L1S_SET_4MON_NB_MSK       (0xE << L1S_SET_4MON_NB_POS)
+
+#define L1S_GET_MEA_RES_POS       10
+#define L1S_GET_MEA_RES           (1    << L1S_GET_MEA_RES_POS)
+#define L1S_GET_MEA_RES_SCHD      (L1S_GET_MEA_RES << 2)
+#define L1S_GET_4MEA_RES          (0x0F << L1S_GET_MEA_RES_POS)
+#define L1S_GET_4MEA_RES_SCHD     (L1S_GET_4MEA_RES << 2)
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_GET_3MEA_RES          (0x07 << L1S_GET_MEA_RES_POS)
+#define L1S_GET_3MEA_RES_SCHD     (L1S_GET_3MEA_RES << 2)
+#define L1S_GET_2MEA_RES          (0x03 << L1S_GET_MEA_RES_POS)
+#define L1S_GET_2MEA_RES_SCHD     (L1S_GET_2MEA_RES << 2)
+#endif
+#define L1S_GET_MEA_RES_MSK       (0x3E << L1S_GET_MEA_RES_POS)
+
+/* Sub frame identification at the time the equalisation results are available. */
+#define L1S_SUB_FRAME_POS         16
+#define L1S_SUB_FRAME             (1    << L1S_SUB_FRAME_POS)
+#define L1S_SUB_FRAME_SCHD        (L1S_SUB_FRAME << 2)
+#define L1S_SUB_FRAME_MSK         (0x6 << L1S_SUB_FRAME_POS)
+
+#define L1S_SET_EXTRA_POS         19
+#define L1S_SET_EXTRA             (1    << L1S_SET_EXTRA_POS)
+#define L1S_SET_EXTRA_SCHD        (L1S_SET_EXTRA << 4)
+#define L1S_SET_EXTRA_MSK         (0x1E << L1S_SET_EXTRA_POS)
+
+#define L1S_MEA_SCHD_MSK (L1S_GET_MON_RES_MSK | L1S_SET_4MON_NB_MSK | L1S_GET_MEA_RES_MSK | L1S_SUB_FRAME_MSK | L1S_SET_EXTRA_MSK)
+
+#define L1S_NO_WIN               0xFF
+#define L1S_GET_WIN(w)           (l1_Ctx.WinAlloc.Win [w]++ == FALSE ? w : L1S_NO_WIN)
+#define L1S_WIN_AVAILABLE(w)     (l1_Ctx.WinAlloc.Win [w] == 0)
+
+/* Slot 0 of next frame is considered in the folowing bit map. */
+#define L1S_SET_FRAME_LOAD(HTn)  l1_Ctx.FrameLoadBitMap |= (PAL_WIN_BIT_MAP << ((HTn) + 2)); \
+                                 l1_Ctx.WinAlloc.NbWin++;
+#if 1
+#define L1S_SET_TX_FRAME_LOAD(HTn) l1_Ctx.FrameLoadBitMap |= (PAL_TX_WIN_BIT_MAP << ((HTn) + 1)); \
+                                 l1_Ctx.WinAlloc.NbWin++;
+#else
+#define L1S_SET_TX_FRAME_LOAD(HTn) L1S_SET_FRAME_LOAD(HTn)
+#endif
+#define L1S_SET_MS_LOAD(Map)     l1_Ctx.FrameLoadBitMap |= (Map << 2); \
+                                 l1_Ctx.WinAlloc.NbWin++;
+#define L1S_SET_MON_LOAD(HTn)    l1_Ctx.FrameLoadBitMap |= (PAL_MON_BIT_MAP << ((HTn) + 2)); \
+                                 l1_Ctx.WinAlloc.NbWin++;
+#define L1S_SET_FRAME_LARGE_LOAD(HTn) l1_Ctx.FrameLoadBitMap |= (PAL_LARGE_WIN_BIT_MAP << ((HTn) + 2)); \
+                                 l1_Ctx.WinAlloc.NbWin++;
+
+#define L1S_MON_LOAD(HTn)        (PAL_MON_BIT_MAP << (HTn + 2))
+#ifdef __L1_DUMMY_DETECTION__
+#define L1S_MON_SMALL_LOAD(HTn)        (0x3l << (HTn + 2)) // to be decided, select 0x3l temp test, only be used when do monitor in paging block.
+#define L1S_SET_SMALL_MON_LOAD(HTn)    l1_Ctx.FrameLoadBitMap |= (0x3L << ((HTn) + 2)); \
+                                						 l1_Ctx.WinAlloc.NbWin++;
+#endif
+
+#define L1S_GAIN_SLOW_UPDATE(Gain, PwrMeas) Gain = (u16)(((u32)(15*Gain) + (u32)((PwrMeas) << 4)) >> 4)
+//#define L1S_GAIN_FAST_UPDATE(Gain, PwrMeas) Gain = (u16)(((u32)(3*Gain) + (u32)((PwrMeas) << 4)) >> 2)
+#define L1S_GAIN_FAST_UPDATE(Gain, PwrMeas) Gain = (u16)(((u32)(Gain) + (u32)((PwrMeas) << 4)) >> 1)
+//#define L1S_GAIN_UPDATE(Gain, PwrMeas)      Gain = (u8)(((u16)(3*Gain) + PwrMeas) >> 2)
+
+#define L1_FCH_DETECTION_DURATION 14
+#define L1_FCH_WIN_QB_POS         (5000 - 625 - PAL_PLL_LOCK_TIME)
+#define L1_FCH_RL_CNT_INIT        2
+#define L1_SCH_RL_CNT_INIT        2
+#define L1_NEAR_RX_BCCH_THRES     29
+#define L1_NEAR_RX_BCCH_IDLE_CNT_STEP       3
+#define L1_NEAR_RX_BCCH_DEDICATED_CNT_STEP  1
+#define L1_NEAR_RX_BCCH_FAILURE   (L1_NEAR_RX_BCCH_THRES + 3)
+#ifdef STK_MAX_SIM
+#if STK_MAX_SIM > 2
+#define L1_SERVING_SYNCH_MAX_ATTEMPT 4
+#else
+#define L1_SERVING_SYNCH_MAX_ATTEMPT PAL_SYNCH_MAX_ATTEMPT ///move the define the max synch attemp to Pal
+#endif
+#else
+#define L1_SERVING_SYNCH_MAX_ATTEMPT 6
+#endif
+#define L1_NEAR_SYNCH_MAX_ATTEMPT 2
+#define L1_SERVING_FCH_MAX_ATTEMPT 2
+#define L1_NEAR_FCH_MAX_ATTEMPT 1
+
+//#define L1_NEAR_RX_BCCH_THRES     (l1_Ctx.State != L1_TRANSFER_STATE ? 10 : 30)
+//#define L1_NEAR_RX_BCCH_FAILURE   (L1_NEAR_RX_BCCH_THRES + 3)
+
+/* Remember that event 0 and 1 are reserved for the PAL. */
+#define L1S_NEAR_EVT     SXR_USR_EVT(2)  // Time to work for near Job.
+#define L1S_TX_EVT       SXR_USR_EVT(3)  // Tx opportunity for Ho access Job.
+#define L1S_PDCH_UL_EVT  SXR_USR_EVT(4)  // To achieve MutEx between Pdch Job and PSJob.
+#define L1S_PDCH_DL_EVT  SXR_USR_EVT(5)  // Up to 2 SetUp jobs in parallel.
+#ifndef STK_SINGLE_SIM 
+#define L1S_FRAME_END_EVT(i)  (SXR_USR_EVT(6+i) ) // for 2C2D1T prj. monitor job.
+#endif
+#ifdef __L1_DUMMY_DETECTION__
+#define L1S_DUMMY_EVT  SXR_USR_EVT(12)  
+#endif
+#define L1S_SET_PSI(Type, Idx, Chn) ((((Type << 8) | Idx) << 4) | Chn)
+#define L1S_GET_PSI_TYPE(Psi)  (Psi >> (8 + 4))
+#define L1S_GET_PSI_IDX(Psi)   ((Psi >> 4) & 0xFF)
+#ifdef __L1_CCH_DEC_DONE_IRQ_EN__
+#define L1S_CCH_DECODED_DONE SXR_USR_EVT(10) 
+#endif
+#ifdef __EGPRS__
+#define L1S_EGPRS_DECODED_DONE SXR_USR_EVT(11) 
+#define L1S_SET_FIRST_2_SLOTS(Chn)  (Chn)
+#define L1S_SET_REST_SLOTS(Chn)   (Chn|(1<<15))
+
+#define L1S_GET_REST_SLOTS(Chn) (Chn>>15)
+#endif
+#ifdef __PDCH_THREE_BURST_DEC__
+#define L1S_GPRS_DECODED_DONE SXR_USR_EVT(12) 
+#endif
+#define L1S_IS_HIGH_BAND(Arfcn) (l1s_UpBandMap [Arfcn >> 7])
+
+#ifdef __L1S_VAR__
+/* Block size for coding schemes 1 to 4. MCS1-9. added by zhanghy. 2006-11-14*/
+const u8 l1s_BlkSize [] = {23, 34, 40, 54
+#ifdef __EGPRS__
+   ,29,35,44,51,63,81,120,144,156};
+#else
+   };
+#endif
+
+/* Distance from the next Sch in the multiframe 51. */
+const u8 l1s_SchDist [51] =
+{
+ 0,  9, 8, 7, 6, 5, 4, 3, 2, 1,
+ 0,  9, 8, 7, 6, 5, 4, 3, 2, 1,
+ 0,  9, 8, 7, 6, 5, 4, 3, 2, 1,
+ 0,  9, 8, 7, 6, 5, 4, 3, 2, 1,
+ 0, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+};
+
+/* Distance from the current TC (T3 = 0) and the next SI 3 or 4 expressed */
+/* in frames in the                                                       */
+const u8 l1s_Si34Dist [8] = {51, 0, 0,    102, 51, 0,     0, 102};
+const u8 l1s_Si3Dist [8] =   {51, 0, 153, 102, 51, 0, 153, 102};
+
+/* Gsm L2 filling frame. */
+u8 l1s_L2FillFrame [25] =
+{
+ 0,    0,    0x01, 0x03, 0x01, 0x2B, 0x2B, 0x2B,
+ 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B,
+ 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B, 0x2B,
+ 0x2B
+};
+
+const u8 l1s_NBin [64] =
+{
+ 0x00, 0x01, 0x03, 0x03, 0x07, 0x07, 0x07, 0x07,
+ 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f,
+ 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f,
+ 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f, 0x1f,
+ 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f,
+ 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f,
+ 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f,
+ 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x3f
+};
+
+/* Pseudo random table used for Hopping Arfcn calculation plus an extension  */
+/* for pseudo random number generation.                                      */
+const u8 l1s_RnTable [128] =
+{
+  48,   98,   63,    1,   36,   95,   78,  102,
+  94,   73,    0,   64,   25,   81,   76,   59,
+ 124,   23,  104,  100,  101,   47,  118,   85,
+  18,   56,   96,   86,   54,    2,   80,   34,
+ 127,   13,    6,   89,   57,  103,   12,   74,
+  55,  111,   75,   38,  109,   71,  112,   29,
+  11,   88,   87,   19,    3,   68,  110,   26,
+  33,   31,    8,   45,   82,   58,   40,  107,
+  32,    5,  106,   92,   62,   67,   77,  108,
+ 122,   37,   60,   66,  121,   42,   51,  126,
+ 117,  114,    4,   90,   43,   52,   53,  113,
+ 120,   72,   16,   49,    7,   79,  119,   61,
+  22,   84,    9,   97,   91,   15,   21,   24,
+  46,   39,   93,  105,   65,   70,  125,   99,
+  17,  123,  115,   30,   69,   44,   41,  116,
+  50,   28,   83,   35,   14,   27,   10,   20
+};
+
+/* Maps of Gsm or Hi band index by Arfcn / 128. */
+const u8 l1s_GsmBandMap [8] = { 1, 1, 0, 0, 0, 0, 0, 0};
+const u8 l1s_UpBandMap [8]  = { 0, 0, 0, 0, 1, 1, 1, 0};
+
+/* Numbers of bits to be considered for RxQual calculation for each block type. */
+const u16 l1s_BitsPerBlock [] =
+{
+ 0,   // L1_SCH_ID NA
+ 456, // L1_BCCH_ID
+ 456, // L1_CCCH_ID
+ 456, // L1_PCH_ID
+ 456, // L1_PBCCH_ID
+ 456, // L1_PCCCH_ID
+ 456, // L1_PPCH_ID
+ 456, // L1_PDCH_ID
+ 456, // L1_PTCCH_ID
+ 456, // L1_SDCCH_ID
+ 378, // L1_TCHF_ID
+ 211, // L1_TCHH_ID
+ 456, // L1_FACCH_ID
+ 456, // L1_SACCH_ID
+};
+
+const u8 l1s_MsbToLsb [256] =
+{
+ 0x00, 0x80, 0x40, 0xc0, 0x20, 0xa0, 0x60, 0xe0,
+ 0x10, 0x90, 0x50, 0xd0, 0x30, 0xb0, 0x70, 0xf0,
+ 0x08, 0x88, 0x48, 0xc8, 0x28, 0xa8, 0x68, 0xe8,
+ 0x18, 0x98, 0x58, 0xd8, 0x38, 0xb8, 0x78, 0xf8,
+ 0x04, 0x84, 0x44, 0xc4, 0x24, 0xa4, 0x64, 0xe4,
+ 0x14, 0x94, 0x54, 0xd4, 0x34, 0xb4, 0x74, 0xf4,
+ 0x0c, 0x8c, 0x4c, 0xcc, 0x2c, 0xac, 0x6c, 0xec,
+ 0x1c, 0x9c, 0x5c, 0xdc, 0x3c, 0xbc, 0x7c, 0xfc,
+ 0x02, 0x82, 0x42, 0xc2, 0x22, 0xa2, 0x62, 0xe2,
+ 0x12, 0x92, 0x52, 0xd2, 0x32, 0xb2, 0x72, 0xf2,
+ 0x0a, 0x8a, 0x4a, 0xca, 0x2a, 0xaa, 0x6a, 0xea,
+ 0x1a, 0x9a, 0x5a, 0xda, 0x3a, 0xba, 0x7a, 0xfa,
+ 0x06, 0x86, 0x46, 0xc6, 0x26, 0xa6, 0x66, 0xe6,
+ 0x16, 0x96, 0x56, 0xd6, 0x36, 0xb6, 0x76, 0xf6,
+ 0x0e, 0x8e, 0x4e, 0xce, 0x2e, 0xae, 0x6e, 0xee,
+ 0x1e, 0x9e, 0x5e, 0xde, 0x3e, 0xbe, 0x7e, 0xfe,
+ 0x01, 0x81, 0x41, 0xc1, 0x21, 0xa1, 0x61, 0xe1,
+ 0x11, 0x91, 0x51, 0xd1, 0x31, 0xb1, 0x71, 0xf1,
+ 0x09, 0x89, 0x49, 0xc9, 0x29, 0xa9, 0x69, 0xe9,
+ 0x19, 0x99, 0x59, 0xd9, 0x39, 0xb9, 0x79, 0xf9,
+ 0x05, 0x85, 0x45, 0xc5, 0x25, 0xa5, 0x65, 0xe5,
+ 0x15, 0x95, 0x55, 0xd5, 0x35, 0xb5, 0x75, 0xf5,
+ 0x0d, 0x8d, 0x4d, 0xcd, 0x2d, 0xad, 0x6d, 0xed,
+ 0x1d, 0x9d, 0x5d, 0xdd, 0x3d, 0xbd, 0x7d, 0xfd,
+ 0x03, 0x83, 0x43, 0xc3, 0x23, 0xa3, 0x63, 0xe3,
+ 0x13, 0x93, 0x53, 0xd3, 0x33, 0xb3, 0x73, 0xf3,
+ 0x0b, 0x8b, 0x4b, 0xcb, 0x2b, 0xab, 0x6b, 0xeb,
+ 0x1b, 0x9b, 0x5b, 0xdb, 0x3b, 0xbb, 0x7b, 0xfb,
+ 0x07, 0x87, 0x47, 0xc7, 0x27, 0xa7, 0x67, 0xe7,
+ 0x17, 0x97, 0x57, 0xd7, 0x37, 0xb7, 0x77, 0xf7,
+ 0x0f, 0x8f, 0x4f, 0xcf, 0x2f, 0xaf, 0x6f, 0xef,
+ 0x1f, 0x9f, 0x5f, 0xdf, 0x3f, 0xbf, 0x7f, 0xff
+};
+
+#ifdef __EGPRS__
+/*
+///E = e*(1<<10)
+*/
+const u16 l1s_BepPeriod_E [16] = 
+{	//Q10 precision
+0x400,	//index 0, 1;   e<<10
+0x333,	//index 1, 0.8; 
+0x299,	//index 2, 0.65;
+0x200,	//index 3, 0.5;
+0x199,	//index 4, 0.4;
+0x133,	//index 5, 0.3;
+0x100,	//index 6, 0.25;
+0xCC,	//index 7, 0.2;
+0x99,	//index 8, 0.15;
+0x66,	//index 9, 0.1;
+0x51,	//index 10, 0.08;
+0xffff,	//index 11, 0xff;
+0xffff, 	//index 12, 0xff;
+0xffff, 	//index 13, 0xff;
+0xffff, 	//index 14, 0xff;
+0xffff 	//index 15, 0xff;
+};
+
+const u16 l1s_BepPeriod2_E [16] = 
+{	//Q10 precision
+0x400,	//index 0, 1;   e<<10
+0x333,	//index 1, 0.8; 
+0x299,	//index 2, 0.65;
+0x200,	//index 3, 0.5;
+0x199,	//index 4, 0.4;
+0x133,	//index 5, 0.3;
+0x100,	//index 6, 0.25;
+0xCC,	//index 7, 0.2;
+0x99,	//index 8, 0.15;
+0x66,	//index 9, 0.1;
+0x51,	//index 10, 0.08;
+0x42,	//index 11, 0.065;
+0x33,	//index 12, 0.05;
+0x28,	//index 13, 0.04;
+0x1E,	//index 14, 0.03;
+0xffff	//index 15, 0xff;
+};
+#endif
+
+const u8 l1s_BitMapx2 [16] =
+{
+ 0x00, 0x03, 0x0C, 0x0F, 0x30, 0x33, 0x3C, 0x3F,
+ 0xC0, 0xC3, 0xCC, 0xCF, 0xF0, 0xF3, 0xFC, 0xFF
+};
+
+#else
+extern const u8  l1s_BlkSize [];
+extern const u8  l1s_SchDist [51];
+extern const u8  l1s_Si34Dist [8];
+extern const u8  l1s_Si3Dist [8];
+extern       u8  l1s_L2FillFrame [25];
+extern const u8  l1s_NBin [64];
+extern const u8  l1s_RnTable [128];
+extern const u8  l1s_GsmBandMap [8];
+extern const u8  l1s_UpBandMap [8];
+extern const u16 l1s_BitsPerBlock [];
+extern const u8  l1s_MsbToLsb [256];
+extern const u8  l1s_BitMapx2 [16];
+#ifdef __EGPRS__
+extern const u16 l1s_BepPeriod_E [16];
+extern const u16 l1s_BepPeriod2_E [16];
+#endif
+#endif
+
+
+enum {L1S_DO_NOT_RMV_NEAR, L1S_RMV_NEAR, L1S_RMV_OLD};
+
+#ifndef STK_SINGLE_SIM
+l1_Cell_t *l1s_NewCell (u32 SimId);
+void       l1s_FreeCell (l1_Cell_t *Cell);
+l1_Cell_t *l1s_FindCell (u16 Arfcn, u8 MustBeFound, u32 SimId);
+void      *l1s_QueueRmv (void *Item, u8 QueueId, u32 SimId);
+l1_Cell_t *l1s_RmvCellFromList (u16 Arfcn, u8 RmvNear, u32 SimId);
+#else
+l1_Cell_t *l1s_NewCell (void);
+void       l1s_FreeCell (l1_Cell_t *Cell);
+l1_Cell_t *l1s_FindCell (u16 Arfcn, u8 MustBeFound);
+void      *l1s_QueueRmv (void *Item, u8 QueueId);
+l1_Cell_t *l1s_RmvCellFromList (u16 Arfcn, u8 RmvNear);
+#endif
+void       l1s_CellBecomesOld (l1_Cell_t *Cell);
+u8         l1s_CellListPurge (u32 Id, l1_Cell_t *Cell);
+u8         l1s_QueuePurge (u32 Id, Msg_t *Msg);
+u8         l1s_PDataQueuePurge (l1_PDataPurgeInd_t *PDataPurgeInd, Msg_t *DataReq);
+u8         l1s_TxDiscardQueuePurge (l1_PDataPurgeInd_t *PDataPurgeInd, Msg_t *DataReq);
+void       l1s_FreeTimer  (u16 Id, u32 *Ctx);
+
+void l1s_SynchRsp (l1_Cell_t *Cell, u32 Found);
+
+u32  l1s_Fn (u16 T1, u8 T2, u8 T3);
+void l1s_SetFn (u32 Fn);
+void l1s_CounterUpdate (u32 Offset);
+void l1s_SynchroUpdate (l1_Cell_t *Cell, u8 Tn, u8 Jobupdt);
+void l1s_UpdtNearRLCnt (l1_Cell_t *Cell);
+u8   l1s_GetSchResult (l1_Cell_t *Cell, u8 WinIdx);
+
+#ifdef __EGPRS__
+#define L1S_EGPRS_MEA ((u8)(1 << 4))
+#endif
+
+#define L1S_NO_MEAS  ((u8)0)
+#define L1S_GET_MEAS ((u8)(1 << 0))
+#define L1S_MEAS_SUB ((u8)(1 << 1))
+#ifdef __L1_CCH_RX_OPT__
+#define L1S_GET_SNR ((u8)(1<<2))
+#endif
+#ifdef __L1_DUMMY_DETECTION__
+#define L1S_GET_DUMMY ((u8)(1<<3))
+#endif
+#ifndef STK_SINGLE_SIM
+void l1s_InitialBox(u32 SimId, u8 JobType);
+u8 l1s_GetComBox(u32 SimId, s32 PchDistance, u8 JobType);
+void l1s_ReleaseBox(u32 SimId, u8 JobType);
+void l1s_UpdateAimFn(u32 SimId, s32 PchDistance,u8 JobType);
+#endif
+void l1s_GetNBurstResult (pal_NBurstRxWin_t *NBurstRxWin, l1_Cell_t *Cell, u8 MeasType);
+u8  *l1s_GetNBlockResult (u16 ChnId, pal_NBurstRxWin_t *NBurstRxWin, l1_Cell_t *Cell, u8 MeasType);
+
+u16  l1s_HoppingArfcn (l1_FreqParam_t *FreqParam);
+u16 l1s_HoppingArfcnSlave (l1_FreqParam_t *FreqParam,l1_Cell_t *Cell);
+u16  l1s_StartingTime (u16 ST, u32 FnOf);
+u8   l1s_GetPageMode (u8* Data);
+void l1s_SetNewFrequencyParam (l1_ConnectReq_t *ConnectReq);
+void l1s_SetTchChannel (l1_ConnectReq_t *ConnectReq, u8 StartTch);
+void l1s_SendTxInd (l1_DataReq_t *DataReq, u16 T200, u8 EndTxDueDate);
+void l1s_SendPSDataInd (u8 Index);
+void l1s_TOfCtrlTimer (l1_Cell_t *Cell);
+void l1s_TxPwrCtrlTimer (l1s_TxPwrCtx_t *TxPwrCtx);
+#ifndef STK_SINGLE_SIM
+u8   l1s_TxPower (u8 TxPwr, u16 Arfcn, u32 SimId);
+void l1s_MeasReport (u32 SimId);
+#else
+u8   l1s_TxPower (u8 TxPwr, u16 Arfcn);
+void l1s_MeasReport (void);
+#endif
+void l1s_SetPacketTxPwr (u16 Arfcn, u8 *TxPwr);
+u32  l1s_ProceedHo (l1_ConnectReq_t *ConnectReq, l1s_TACtx_t *TACtx, l1_Cell_t *Cell);
+u8  *l1s_IlData (Msg_t *Msg, u8 ReqOffset);
+void l1s_NearTimer (u8 ReSchedule);
+u8   l1s_RxQual (u32 NbErrorBits, u32 NbBitsTotal);
+
+u8   l1s_CellSynch (l1_Cell_t *Cell, u32 Horizon);
+void l1s_CellSlicedSynch (l1_Cell_t *Cell);
+u8   l1s_NearCellSch (l1_Cell_t *Cell, u32 Horizon);
+u8   l1s_NearCellBcch (l1_Cell_t *Cell, u32 Horizon);
+
+void l1s_PSEncodeTimer (Msg_t *Msg);
+
+#ifndef STK_SINGLE_SIM
+void l1s_ResetChannelQuality (u8 RxBitMap, bool NewFreq, u32 SimId);
+void l1s_ChangePMeasCtrl (u8 State, u32 SimId);
+void l1s_ResetCValue (u32 SimId);
+void l1s_CValueUpdate (u32 SimLevel);
+#else
+void l1s_ResetChannelQuality (u8 RxBitMap, bool NewFreq);
+void l1s_ChangePMeasCtrl (u8 State);
+void l1s_ResetCValue (void);
+void l1s_CValueUpdate (u8 Level);
+#endif
+void l1s_PacketPwrCtrlCfg (l1_PwrCtrl_t *PtrNewPwrCtrl, l1_PwrCtrl_t *PtrOldPwrCtrl,l1_PwrCtrl_t *PtrWritePwrCtrl);
+void l1s_PacketTxPowerUpdate (l1_PwrCtrl_t *PtrPwrCtrl, u16 Arfcn);
+
+
+u8   l1s_GetPCchCellGain (l1_Cell_t *Cell, u16 Arfcn, u8 Pb, u8 Serving);
+u8   l1s_GetPdchGain (void);
+
+void l1s_InterferenceMeasure (u32 Horizon, void *FrameType);
+void l1s_IntMeasUpdate (u8 *Meas, u16 *Arfcn);
+
+#ifdef __EGPRS__
+u8 l1s_GetMeanBepValue (u32 MeanBep, bool Apsk);
+u8 l1s_GetCvBepValue (u16 CvBep);
+u16 l1s_GetBepE(u8 Period, u8 Period2);
+void l1s_BepValueUpdate (u8 TnIdx, u8 ApskMode, u32 MeanBEP, u32 CvBEP);
+void zero_u64(u64 *num);
+void set_u64(u64 *num, u32 low, u32 high);
+bool less_u64(u64 num1, u64 num2);
+bool equ0_u64(u64 num1);
+u64 sum_u64(u64 num1, u64 num2);
+u64 sub_u64(u64 num1, u64 num2);
+
+#endif
+#undef DefExtern
+
+#endif
+

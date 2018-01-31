@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Profile FormatVersion="1">
+<Tools>
+<Tool Filename="perl" AllowRemote="true" />
+<Tool Filename="gawk" AllowIntercept="true" />
+<Tool Filename="make" AllowRemote="true" />
+<Tool Filename="mips-elf-gcc" AllowRemote="true" />
+<Tool Filename="mips-elf-g++" AllowRemote="true" />
+<Tool Filename="mips-elf-cpp" AllowRemote="true" />
+<Tool Filename="mips-elf-as" AllowRemote="true" />
+<Tool Filename="mips-elf-ar" AllowIntercept="true" />
+<Tool Filename="svn" AllowRemote="true" />
+<Tool Filename="pwd" AllowIntercept="true" />
+<Tool Filename="ls" AllowIntercept="true" />
+<Tool Filename="dir" AllowIntercept="true" />
+<Tool Filename="vdir" AllowIntercept="true" />
+<Tool Filename="dirname" AllowIntercept="true" />
+<Tool Filename="echo" AllowIntercept="true" />
+<Tool Filename="printf" AllowIntercept="true" />
+<Tool Filename="env" AllowIntercept="true" />
+<Tool Filename="envsubst" AllowIntercept="true" />
+<Tool Filename="mkdir" AllowIntercept="true" />
+<Tool Filename="cp" AllowIntercept="true" />
+<Tool Filename="dd" AllowIntercept="true" />
+<Tool Filename="mv" AllowIntercept="true" />
+<Tool Filename="rename" AllowIntercept="true" />
+<Tool Filename="rm" AllowIntercept="true" />
+<Tool Filename="rmdir" AllowIntercept="true" />
+<Tool Filename="hostid" AllowIntercept="true" />
+<Tool Filename="hostname" AllowIntercept="true" />
+<Tool Filename="id" AllowIntercept="true" />
+<Tool Filename="date" AllowIntercept="true" />
+<Tool Filename="ln" AllowIntercept="true" />
+<Tool Filename="chattr" AllowIntercept="true" />
+<Tool Filename="chmod" AllowIntercept="true" />
+<Tool Filename="chown" AllowIntercept="true" />
+<Tool Filename="chroot" AllowIntercept="true" />
+<Tool Filename="chgrp" AllowIntercept="true" />
+<Tool Filename="kill" AllowIntercept="true" />
+<Tool Filename="gkill" AllowIntercept="true" />
+<Tool Filename="ps" AllowIntercept="true" />
+<Tool Filename="alias" AllowIntercept="true" />
+<Tool Filename="sh" AllowIntercept="true" />
+<Tool Filename="csh" AllowIntercept="true" />
+<Tool Filename="bash" AllowIntercept="true" />
+<Tool Filename="whoami" AllowIntercept="true" />
+<Tool Filename="touch" AllowIntercept="true" />
+<Tool Filename="uname" AllowIntercept="true" />
+<Tool Filename="sed" AllowIntercept="true" />
+<Tool Filename="perl" AllowIntercept="true" />
+</Tools>
+</Profile>

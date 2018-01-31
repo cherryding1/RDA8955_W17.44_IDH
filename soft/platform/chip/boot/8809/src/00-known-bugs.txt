@@ -1,0 +1,10 @@
+boot_uart_monitor.c
+-------------------
+- boot_UartMonitorWriteProcess(), 2-byte access,
+  "if (size % 2 != 0)" should be "if (writeHeader.size % 2 != 0)".
+- boot_UartMonitor(), when handling BOOT_UART_MONITOR_AT,
+  it should wait for Tx finished after sending "OK", and
+  there should be a "break" statement at the end of "case" block.
+- boot_UartMonitor(), when handling default case,
+  it should reset Rx FIFO before enabling UART.
+

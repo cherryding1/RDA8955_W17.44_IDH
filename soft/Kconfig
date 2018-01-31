@@ -1,0 +1,27 @@
+
+comment "--- RDA Software Configuration ---"
+
+menu "Platform"
+source "newfcfg/platform/Kconfig"
+endmenu
+
+menu "Custom Setup"
+source "newfcfg/custom/Kconfig"
+endmenu
+
+menu "Application"
+source "newfcfg/application/Kconfig"
+endmenu
+
+menu "AT"
+source "newfcfg/at/Kconfig"
+endmenu
+
+menu "Debug"
+source "newfcfg/Kconfig.debug"
+endmenu
+
+menu "Default"
+source "newfcfg/Kconfig.default"
+endmenu
+

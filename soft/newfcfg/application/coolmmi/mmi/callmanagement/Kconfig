@@ -1,0 +1,8 @@
+comment "--- application/coolmmi/mmi/callmanagement ---"
+
+config __MMI_CALLING_CALLHISTORY_SUPPORT__
+    option skipmk
+    bool "MMI_CALLING_CALLHISTORY_SUPPORT"
+    default y
+    ---help---
+    	To support to enter call history when calling.

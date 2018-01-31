@@ -1,0 +1,91 @@
+comment "--- Fonts and Others---"
+
+menuconfig __MMI_LARGE_EN_FONTS__
+    option skipmk
+    bool "Larget English Fonts"
+    default n
+ 
+if  __MMI_LARGE_EN_FONTS__   
+config __MMI_14_EN_FONT__
+    option skipmk
+    bool "14 English Fonts"
+    default y
+            
+config __MMI_20_EN_FONT__
+    option skipmk
+    bool "20 English Fonts"
+    default y
+    
+config __MMI_22_EN_FONT__
+    option skipmk
+    bool "22 English Fonts"
+    default n
+endif    
+menuconfig __MMI_LARGE_FONTS__
+    option skipmk
+    bool "Larget Fonts"
+    default y if !TARGET_MEM_ULC_3216
+    default n
+    
+if __MMI_LARGE_FONTS__ 
+config __MMI_20X20_CHINESE_FONT__
+    option skipmk
+    bool "20X20_Chinese Font"
+    default y if __MMI_LANG_SM_CHINESE__
+    default n
+endif
+
+config __MMI_PHB_PINYIN_SORT__
+    option skipmk
+    bool "PinYin Sort in PHB"
+    depends on __MMI_LANG_SM_CHINESE__ && !(MEM_ULC_3216)
+    default n
+
+      
+config __MMI_CHAR_SET_GB2312__
+    option skipmk
+    bool "Charset GB2312"
+    depends on __MMI_LANG_SM_CHINESE__
+    default n
+    
+config __MMI_CHAR_SET_BIG5__
+    option skipmk
+    bool "Charset BIG5"
+    depends on __MMI_LANG_TR_CHINESE__
+    default n     
+    
+config __MMI_CHSET_GB2312__
+    option skipmk
+    bool "__MMI_CHSET_GB2312__"
+    depends on __MMI_LANG_SM_CHINESE__
+    default n
+    
+config __MMI_CHSET_BIG5__
+    option skipmk
+    bool "__MMI_CHSET_BIG5__"
+    depends on __MMI_LANG_TR_CHINESE__
+    default n          
+         
+config __MMI_CHANGABLE_FONT__
+    option skipmk
+    bool "Change Font"
+    default n     
+    
+config __MMI_CHSET_WESTERN_WIN__
+    option skipmk
+    def_bool y    
+    
+config __MMI_MULTITAP_KEY_0__
+    option skipmk
+    bool "Key0 function"
+    default n
+help
+    change dialling screen mulitap + p w
+    from key star to key-zero
+
+config __MMI_WITH_C_KEY__
+    option skipmk
+    bool "Clear key function"
+    default n
+help
+    Turn on clear key function

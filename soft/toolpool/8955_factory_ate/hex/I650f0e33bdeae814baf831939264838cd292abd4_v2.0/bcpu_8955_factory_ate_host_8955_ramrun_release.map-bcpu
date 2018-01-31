@@ -1,0 +1,353 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/local/RDAMICRO/tingtingyang/projects/fpga/soft/platform/chip/rom/8955/lib/bcpu_rom_CHIP.elf
+                0xffffffff82000000                . = 0xffffffff82000000
+                0xffffffff82000980                . = (. + 0x980)
+                0xffffffff82000a00                . = ALIGN (0x100)
+                0xffffffff82000a00                _bcpu_ram_available_base = .
+                0xffffffff82001500                . = 0xffffffff82001500
+                0xffffffff82001500                _bcpu_flash_start = .
+                0xffffffff82001500                _bcpu_flash_rotext_start = .
+
+.bcpu_rotext    0xffffffff82001500        0x0
+ *spc_main.o(.bcpu_main_entry)
+ *(.text .text.*)
+                0xffffffff82001500                . = ALIGN (0x10)
+                0xffffffff82001500                _bcpu_flash_rotext_end = .
+                0xffffffff82001500                _bcpu_flash_rodata_start = .
+
+.bcpu_rodata    0xffffffff82001500        0x0
+ *(.rdata .rodata .rodata.str1.4 .rodata.* .rodata1)
+                0xffffffff82001500                . = ALIGN (0x10)
+                0xffffffff82001500                _bcpu_flash_rodata_end = .
+                0xffffffff82001500                _bcpu_rom_flash_start_location = .
+                0xffffffff82001500                _bcpu_rom_flash_end_location = _bcpu_rom_flash_start_location
+                0xffffffff82001500                _bb_sram_flash_start_location = _bcpu_rom_flash_end_location
+                0xffffffff81980000                . = 0xffffffff81980000
+                0xffffffff81980000                _bb_sram_start = .
+
+.bbsram         0xffffffff81980000        0x0
+                0xffffffff81980000                _bb_sram_cached_start = .
+ *(BB_ITLV_SECTION)
+                0xffffffff81980000                . = ALIGN (0x4)
+ *(BB_SPC_CTX_SECTION)
+                0xffffffff81980000                . = ALIGN (0x10)
+                0xffffffff81980000                _bb_sram_cached_end = .
+                0x0000000000000000                _bb_sram_cached_size = (_bb_sram_cached_end - _bb_sram_cached_start)
+                0xffffffffa1980000                . = (. + 0x20000000)
+
+.bbsramu        0xffffffffa1980000        0x0
+                0xffffffffa1980000                _bb_sram_uncached_start = .
+                0xffffffffa1980000                . = ALIGN (0x10)
+                0xffffffffa1980000                _mbbsramu = .
+ *(BB_STATIC_SECTION)
+                0xffffffffa1980000                . = ALIGN (0x10)
+                0xffffffffa1980000                _bb_sram_uncached_end = .
+                0x0000000000000000                _bb_sram_uncached_size = (_bb_sram_uncached_end - _bb_sram_uncached_start)
+                0xffffffff819867f9                . = _bb_sram_romed_globals_end
+
+.bbsram_globals_not_romed
+                0xffffffff819867f9        0x0
+                0xffffffff819867f9                _bb_sram_not_romed_globals_start = .
+ *(BB_SRAM_GLOBALS)
+ *(.bbsram_globals)
+                0xffffffff819867f9                _bb_sram_not_romed_globals_end = .
+                0x0000000000000001                ASSERT ((0xffffffff81986800 >= ABSOLUTE (_bb_sram_not_romed_globals_end)), BBSRAM not romed globals overflow out of BBSRAM.)
+                0x0000000000000000                _bb_sram_var_size = (_bb_sram_cached_size + _bb_sram_uncached_size)
+                0xffffffff81980000                _bb_sram_var_end = (_bb_sram_start + _bb_sram_var_size)
+                0xffffffff82001500                _bb_sram_patch_flash_start = _bb_sram_flash_start_location
+                0xffffffff81986800                . = 0xffffffff81986800
+                0xffffffff81986800                _bb_sram_patch_start = .
+
+.bbsram_patch_text
+                0xffffffff81986800        0x0
+                0xffffffff81986800                _bb_sram_patch_text_start = .
+ *(.bbsram_patch_text)
+ *(.bbsram_patch_rodata)
+                0xffffffff81986800                . = ALIGN (0x10)
+                0xffffffff81986800                _bb_sram_patch_text_end = .
+                0x0000000000000000                _bb_sram_patch_text_size = (_bb_sram_patch_text_end - _bb_sram_patch_text_start)
+
+.bbsram_patch_data
+                0xffffffff81986800        0x0
+                0xffffffff81986800                _bb_sram_patch_data_start = .
+ *(.bbsram_patch_data)
+                0xffffffff81986800                . = ALIGN (0x10)
+                0xffffffff81986800                _bb_sram_patch_data_end = .
+                0x0000000000000000                _bb_sram_patch_data_size = (_bb_sram_patch_data_end - _bb_sram_patch_data_start)
+                0xffffffffa1986800                . = (. + 0x20000000)
+
+.bbsram_patch_ucdata
+                0xffffffffa1986800        0x0
+                0xffffffffa1986800                _bb_sram_patch_ucdata_start = .
+ *(.bbsram_patch_ucdata)
+                0xffffffffa1986800                . = ALIGN (0x10)
+                0xffffffffa1986800                _bb_sram_patch_ucdata_end = .
+                0x0000000000000000                _bb_sram_patch_ucdata_size = (_bb_sram_patch_ucdata_end - _bb_sram_patch_ucdata_start)
+                0xffffffff81986800                . = (. - 0x20000000)
+                0xffffffff81986800                _bb_sram_patch_end = .
+                0x0000000000000000                _bb_sram_patch_size = (_bb_sram_patch_end - _bb_sram_patch_start)
+                0xffffffff82001500                _bb_sram_patch_flash_end = _bb_sram_patch_flash_start
+                0xffffffff82001500                _bb_sram_flash_end_location = _bb_sram_patch_flash_end
+                0xffffffff81986800                _bb_sram_patch_bss_start = .
+                0xffffffffa1986800                . = (. + 0x20000000)
+
+.bbsram_patch_ucbss
+                0xffffffffa1986800        0x0
+ *(.bbsram_patch_ucbss)
+                0xffffffffa1986800                . = ALIGN (0x10)
+                0xffffffff81986800                . = (. - 0x20000000)
+
+.bbsram_patch_bss
+                0xffffffff81986800        0x0
+ *(.bbsram_patch_bss)
+                0xffffffff81986800                . = ALIGN (0x10)
+                0xffffffff81986800                _bb_sram_patch_bss_end = .
+                0x0000000000000000                _bb_sram_patch_bss_size = (_bb_sram_patch_bss_end - _bb_sram_patch_bss_start)
+                0x0000000000000001                ASSERT ((0xffffffff81988000 >= ABSOLUTE (_bb_sram_patch_bss_end)), BBSRAM patch code overflow out of BBSRAM.)
+                0xffffffff82001500                _bcpu_dualport_sram_flash_start_location = _bb_sram_flash_end_location
+                0xffffffff81b00000                . = 0xffffffff81b00000
+                0xffffffff81b00000                _bcpu_dualport_sram_start = .
+
+.bcpu_dualport_sram_text
+                0xffffffff81b00000        0x0
+                0xffffffff81b00000                _bcpu_dualport_sram_text_start = .
+ *(.dualport_sram_text)
+ *(.dualport_sram_rodata)
+                0xffffffff81b00000                . = ALIGN (0x10)
+                0xffffffff81b00000                _bcpu_dualport_sram_text_end = .
+                0x0000000000000000                _bcpu_dualport_sram_text_size = (_bcpu_dualport_sram_text_end - _bcpu_dualport_sram_text_start)
+
+.bcpu_dualport_sram_data
+                0xffffffff81b00000        0x0
+                0xffffffff81b00000                _bcpu_dualport_sram_cached_data_start = .
+ *(.dualport_sram_data)
+                0xffffffff81b00000                . = ALIGN (0x10)
+                0xffffffff81b00000                _bcpu_dualport_sram_cached_data_end = .
+                0x0000000000000000                _bcpu_dualport_sram_cached_data_size = (_bcpu_dualport_sram_cached_data_end - _bcpu_dualport_sram_cached_data_start)
+                0xffffffffa1b00000                . = (. + 0x20000000)
+
+.bcpu_dualport_sram_ucdata
+                0xffffffffa1b00000        0x0
+                0xffffffffa1b00000                _bcpu_dualport_sram_uncached_data_start = .
+ *(.dualport_sram_ucdata)
+                0xffffffffa1b00000                . = ALIGN (0x10)
+                0xffffffffa1b00000                _bcpu_dualport_sram_uncached_data_end = .
+                0x0000000000000000                _bcpu_dualport_sram_uncached_data_size = (_bcpu_dualport_sram_uncached_data_end - _bcpu_dualport_sram_uncached_data_start)
+                0xffffffff81b00000                . = (. - 0x20000000)
+                0xffffffff81b00000                _bcpu_dualport_sram_end = .
+                0x0000000000000000                _bcpu_dualport_sram_size = (_bcpu_dualport_sram_end - _bcpu_dualport_sram_start)
+                0xffffffff82001500                _bcpu_dualport_sram_flash_end_location = _bcpu_dualport_sram_flash_start_location
+                0xffffffff81b00000                _bcpu_dualport_bss_start = .
+                0xffffffffa1b00000                . = (. + 0x20000000)
+
+.bcpu_dualport_sram_ucbss
+                0xffffffffa1b00000        0x0
+ *(.dualport_sram_ucbss)
+                0xffffffffa1b00000                . = ALIGN (0x10)
+                0xffffffff81b00000                . = (. - 0x20000000)
+
+.bcpu_dualport_sram_bss
+                0xffffffff81b00000        0x0
+ *(.dualport_sram_bss)
+                0xffffffff81b00000                . = ALIGN (0x10)
+                0xffffffff81b00000                _bcpu_dualport_bss_end = .
+                0x0000000000000000                _bcpu_dualport_bss_size = (_bcpu_dualport_bss_end - _bcpu_dualport_bss_start)
+                0x0000000000000001                ASSERT ((0xffffffff81b00580 >= ABSOLUTE (_bcpu_dualport_bss_end)), BCPU DUALPORT SRAM overflow.)
+                0xffffffff82001500                _bcpu_sys_sram_flash_start_location = _bcpu_dualport_sram_flash_end_location
+                0xffffffff81c00680                . = 0xffffffff81c00680
+                0xffffffff81c00680                _bcpu_sys_sram_start = .
+
+.bcpu_sramtext  0xffffffff81c00680        0x0
+                0xffffffff81c00680                _bcpu_sys_sram_txt_start = .
+ *(.sramtext .sramrodata)
+                0xffffffff81c00680                . = ALIGN (0x10)
+                0xffffffff81c00680                _bcpu_sys_sram_txt_end = .
+                0x0000000000000000                _bcpu_sys_sram_txt_size = (_bcpu_sys_sram_txt_end - _bcpu_sys_sram_start)
+
+.bcpu_sramdata  0xffffffff81c00680        0x0
+                0xffffffff81c00680                _bcpu_sys_sram_cached_start = .
+ *(.sramdata)
+                0xffffffff81c00680                . = ALIGN (0x10)
+                0xffffffff81c00680                _bcpu_sys_sram_cached_end = .
+                0x0000000000000000                _bcpu_sys_sram_cached_size = (_bcpu_sys_sram_cached_end - _bcpu_sys_sram_cached_start)
+                0xffffffffa1c00680                . = (. + 0x20000000)
+
+.bcpu_sramucdata
+                0xffffffffa1c00680        0x0
+                0xffffffffa1c00680                _bcpu_sys_sram_uncached_start = .
+ *(.sramucdata)
+                0xffffffffa1c00680                . = ALIGN (0x10)
+                0xffffffffa1c00680                _bcpu_sys_sram_uncached_end = .
+                0x0000000000000000                _bcpu_sys_sram_uncached_size = (_bcpu_sys_sram_uncached_end - _bcpu_sys_sram_uncached_start)
+                0xffffffff81c00680                . = (. - 0x20000000)
+                0xffffffff81c00680                _bcpu_sys_sram_end = .
+                0x0000000000000000                _bcpu_sys_sram_size = (_bcpu_sys_sram_end - _bcpu_sys_sram_start)
+                0xffffffff82001500                _bcpu_sys_sram_flash_end_location = _bcpu_sys_sram_flash_start_location
+                0xffffffff81c00680                _bcpu_sys_sram_bss_start = .
+                0xffffffffa1c00680                . = (. + 0x20000000)
+
+.bcpu_sramucbss
+                0xffffffffa1c00680        0x0
+ *(.sramucbss)
+                0xffffffffa1c00680                . = ALIGN (0x10)
+                0xffffffff81c00680                . = (. - 0x20000000)
+
+.bcpu_srambss   0xffffffff81c00680        0x0
+ *(.srambss)
+                0xffffffff81c00680                . = ALIGN (0x10)
+                0xffffffff81c00680                _bcpu_sys_sram_bss_end = .
+                0x0000000000000000                _bcpu_sys_sram_bss_size = (_bcpu_sys_sram_bss_end - _bcpu_sys_sram_bss_start)
+                0xffffffff81c00680                _bcpu_sys_sram_end = _bcpu_sys_sram_bss_end
+                0x0000000000000001                ASSERT ((0xffffffff81c0f17c > ABSOLUTE (_bcpu_sys_sram_bss_end)), BCPU Internal SRAM overflow !)
+                0xffffffff82001500                _bcpu_ram_flash_start_location = _bcpu_sys_sram_flash_end_location
+                0xffffffff82001500                . = _bcpu_ram_flash_start_location
+                0xffffffff82001500                _bcpu_ram_start = .
+
+.bcpu_ramtext   0xffffffff82001500        0x0
+                0xffffffff82001500                _bcpu_ram_txt_start = .
+ *(.ram)
+                0xffffffff82001500                . = ALIGN (0x10)
+                0xffffffff82001500                _bcpu_ram_txt_end = .
+                0x0000000000000000                _bcpu_ram_txt_size = (_bcpu_ram_txt_end - _bcpu_ram_start)
+                0xffffffff82001500                _bcpu_ram_data_load_start = .
+                0xffffffff82001500                _bcpu_ram_data_start = .
+
+.bcpu_data      0xffffffff82001500        0x0
+                0xffffffff82001500                _bcpu_ram_cached_start = .
+ *(.data .data.* .sdata .sdata.* .data1)
+                0xffffffff82001500                . = ALIGN (0x10)
+                0xffffffff82001500                _bcpu_ram_cached_end = .
+                0x0000000000000000                _bcpu_ram_cached_size = (_bcpu_ram_cached_end - _bcpu_ram_cached_start)
+                0xffffffffa2001500                . = (. + 0x20000000)
+
+.bcpu_ucdata    0xffffffffa2001500        0x0 load address 0xffffffff82001500
+                0xffffffffa2001500                _bcpu_ram_uncached_start = .
+ *(.ucdata)
+                0xffffffffa2001500                . = ALIGN (0x10)
+                0xffffffffa2001500                _bcpu_ram_uncached_end = .
+                0x0000000000000000                _bcpu_ram_uncached_size = (_bcpu_ram_uncached_end - _bcpu_ram_uncached_start)
+                0xffffffff82001500                . = (. - 0x20000000)
+                0xffffffff82001500                _bcpu_ram_data_end = .
+                0x0000000000000000                _bcpu_ram_data_size = (_bcpu_ram_data_end - _bcpu_ram_data_start)
+                0xffffffff82001500                _bcpu_ram_data_load_end = (_bcpu_ram_data_load_start + _bcpu_ram_data_size)
+                0xffffffff82001500                _bcpu_ram_end = .
+                0x0000000000000000                _bcpu_ram_size = (_bcpu_ram_end - _bcpu_ram_start)
+                0xffffffff82001500                _bcpu_ram_flash_end_location = _bcpu_ram_flash_start_location
+                0xffffffff82001500                _bcpu_ram_bss_start = .
+                0xffffffffa2001500                . = (. + 0x20000000)
+
+.bcpu_ucbss     0xffffffffa2001500        0x0
+ *(.ucbss)
+                0xffffffffa2001500                . = ALIGN (0x10)
+                0xffffffff82001500                . = (. - 0x20000000)
+
+.bcpu_bss       0xffffffff82001500        0x0
+ *(.bss .bss.* .sbss .sbss.*)
+                0xffffffff82001500                . = ALIGN (0x10)
+                0xffffffff82001500                _bcpu_ram_bss_end = .
+                0x0000000000000000                _bcpu_ram_bss_size = (_bcpu_ram_bss_end - _bcpu_ram_bss_start)
+                0x0000000000000001                ASSERT ((0xffffffff82400000 > ABSOLUTE (_bcpu_ram_bss_end)), BCPU External RAM overflow !)
+                0xffffffff82001500                . = _bcpu_ram_bss_end
+
+.bcpu_flash_end
+                0xffffffff82001500       0x10
+                0xffffffff82001500        0x4 LONG 0x0
+                0xffffffff82001510                . = ALIGN (0x10)
+ *fill*         0xffffffff82001504        0xc 00
+                0xffffffff82001510                _bcpu_flash_end = .
+                0x0000000000000001                ASSERT ((0xffffffff82400000 > ABSOLUTE (_bcpu_flash_end)), BCPU RAM overflow: there is no more space available in RAM.)
+
+.debug
+ *(EXCLUDE_FILE(*.elf) .debug)
+
+.line
+ *(EXCLUDE_FILE(*.elf) .line)
+
+.debug_srcinfo
+ *(EXCLUDE_FILE(*.elf) .debug_srcinfo)
+
+.debug_sfnames
+ *(EXCLUDE_FILE(*.elf) .debug_sfnames)
+
+.debug_aranges
+ *(EXCLUDE_FILE(*.elf) .debug_aranges)
+
+.debug_pubnames
+ *(EXCLUDE_FILE(*.elf) .debug_pubnames)
+
+.debug_info
+ *(EXCLUDE_FILE(*.elf) .debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(EXCLUDE_FILE(*.elf) .debug_abbrev)
+
+.debug_line
+ *(EXCLUDE_FILE(*.elf) .debug_line)
+
+.debug_frame
+ *(EXCLUDE_FILE(*.elf) .debug_frame)
+
+.debug_str
+ *(EXCLUDE_FILE(*.elf) .debug_str)
+
+.debug_loc
+ *(EXCLUDE_FILE(*.elf) .debug_loc)
+
+.debug_macinfo
+ *(EXCLUDE_FILE(*.elf) .debug_macinfo)
+
+.debug_weaknames
+ *(EXCLUDE_FILE(*.elf) .debug_weaknames)
+
+.debug_funcnames
+ *(EXCLUDE_FILE(*.elf) .debug_funcnames)
+
+.debug_typenames
+ *(EXCLUDE_FILE(*.elf) .debug_typenames)
+
+.debug_varnames
+ *(EXCLUDE_FILE(*.elf) .debug_varnames)
+
+.stab
+ *(EXCLUDE_FILE(*.elf) .stab)
+
+.stabstr
+ *(EXCLUDE_FILE(*.elf) .stabstr)
+
+.stab.excl
+ *(EXCLUDE_FILE(*.elf) .stab.excl)
+
+.stab.exclstr
+ *(EXCLUDE_FILE(*.elf) .stab.exclstr)
+
+.stab.index
+ *(EXCLUDE_FILE(*.elf) .stab.index)
+
+.stab.indexstr
+ *(EXCLUDE_FILE(*.elf) .stab.indexstr)
+
+.comment
+ *(EXCLUDE_FILE(*.elf) .comment)
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+/DISCARD/
+ *(*)
+START GROUP
+LOAD /home/local/RDAMICRO/tingtingyang/projects/fpga/soft/build/8955_ramrun/8955_factory_ate/bcpu/platform/base/std/lib/libstd_release.a
+END GROUP
+LOAD /opt/CSDTK/bin/../lib/gcc/mips-elf/4.4.2/libgcc.a
+OUTPUT(/home/local/RDAMICRO/tingtingyang/projects/fpga/soft/build/8955_ramrun/8955_factory_ate/bcpu/toolpool/8955_factory_ate/bcpu_8955_factory_ate_host_8955_ramrun_release.elf elf32-littlemips)

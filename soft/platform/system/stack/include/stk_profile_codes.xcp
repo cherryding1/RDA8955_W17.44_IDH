@@ -1,0 +1,76 @@
+<module name="STK">
+
+    <fn name="l1s_CValueUpdate"                   id="0x1B59" group="STK"/>
+    <fn name="l1s_GetNBurstResult"                id="0x1B5A" group="STK"/>
+    <fn name="l1s_GetNBlockResult"                id="0x1B5B" group="STK"/>
+    <fn name="l1s_StartCnx"                       id="0x1B5C" group="STK"/>
+    <fn name="l1s_PSEncodeTimer"                  id="0x1B5D" group="STK"/>
+    <fn name="l1s_TxPwrCtrlTimer"                 id="0x1B5E" group="STK"/>
+    <fn name="l1s_TxPwrCtrlTimer_ext"             id="0x1B5F" group="STK"/>
+    <fn name="l1a_Init"                           id="0x1B60" group="STK"/>
+    <fn name="l1a_InitReq"                        id="0x1B61" group="STK"/>
+
+    <fn name="sim_Interrupt_SIM_RESET_TIMEOUT"    id="0x1C10" group="STK"/>
+    <fn name="sim_Interrupt_SIM_PARITY_ERROR"     id="0x1C11" group="STK"/>
+    <fn name="sim_Interrupt_SIM_BAD_TS"           id="0x1C12" group="STK"/>
+    <fn name="sim_Interrupt_SIM_ATR_SUCCESS"      id="0x1C13" group="STK"/>
+    <fn name="sim_Interrupt_SIM_DMA_SUCCESS"      id="0x1C14" group="STK"/>
+    <fn name="sim_Interrupt_SIM_ATR_START"        id="0x1C15" group="STK"/>
+    <fn name="sim_Interrupt_SIM_WWT_TIMEOUT"      id="0x1C16" group="STK"/>
+    <fn name="sim_Interrupt_SIM_EXTRA_RX"         id="0x1C17" group="STK"/>
+    <fn name="sim_Interrupt_SIM_INT_CHK"          id="0x1C18" group="STK"/>
+    <fn name="sim_ParseEvt"                       id="0x1C19" group="STK"/>
+    <fn name="sim_ParseMsg"                       id="0x1C1A" group="STK"/>
+    <fn name="sim_Parse"                          id="0x1C1B" group="STK"/>
+    <fn name="sim_TestSW1SW2"                     id="0x1C1C" group="STK"/>
+    <fn name="sim_SendInstruction"                id="0x1C1D" group="STK"/>
+    <fn name="sim_ReleaseResource"                id="0x1C1E" group="STK"/>
+    <fn name="sim_SW1TimeOut"                     id="0x1C1F" group="STK"/>
+
+    <fn name="mac_DataBlock"                      id="0x1C85" group="STK"/>
+    <fn name="mac_CtrlBlock"                      id="0x1C86" group="STK"/>
+    <fn name="mac_T3200Exp"                       id="0x1C87" group="STK"/>
+    <fn name="mac_HdleSegmentation"               id="0x1C88" group="STK"/>
+    <fn name="mac_PurgeCtrlQ"                     id="0x1C89" group="STK"/>
+    <fn name="mac_DlAckReq"                       id="0x1C8A" group="STK"/>
+    <fn name="mac_PrepPCtrlAck"                   id="0x1C8B" group="STK"/>
+    <fn name="mac_SdBlock"                        id="0x1C8C" group="STK"/>
+    <fn name="rrpAccI_TrsL1PSDataInd"             id="0x1C8D" group="STK"/>
+    <fn name="rrpAccN_TrsL1PSDataInd"             id="0x1C8E" group="STK"/>
+    <fn name="rrpCond_TrsL1PSDataInd"             id="0x1C8F" group="STK"/>
+    <fn name="rrpWcnI_TrsL1PSDataInd"             id="0x1C90" group="STK"/>
+    <fn name="rrpWcnN_TrsL1PSDataInd"             id="0x1C91" group="STK"/>
+    <fn name="rlu_AckSdu"                         id="0x1CE9" group="STK"/>
+    <fn name="rluGene_TrsTxInd"                   id="0x1CEA" group="STK"/>
+    <fn name="rluGene_TrsRelInd"                  id="0x1CEB" group="STK"/>
+    <fn name="rlu_UndoPduFromSdu"                 id="0x1CEC" group="STK"/>
+    <fn name="rlu_BackTrack"                      id="0x1CED" group="STK"/>
+    <fn name="rlu_BuildBlock"                     id="0x1CEE" group="STK"/>
+    <fn name="rlu_StartNextSdu"                   id="0x1CEF" group="STK"/>
+    <fn name="rlu_SduClean"                       id="0x1CF0" group="STK"/>
+    <fn name="rlu_ResetSdus"                      id="0x1CF1" group="STK"/>
+    <fn name="rlu_SearchSduQ"                     id="0x1CF2" group="STK"/>
+    <fn name="rlu_CleanCtx"                       id="0x1CF3" group="STK"/>
+    <fn name="rluNack_TrsRepeatReq"               id="0x1CF4" group="STK"/>
+    <fn name="rlu_GetPrevPdu"                     id="0x1CF5" group="STK"/>
+    <fn name="rlu_TrsAckNackInd"                  id="0x1CF6" group="STK"/>
+    <fn name="rlu_TrsTxFillReq"                   id="0x1CF7" group="STK"/>
+    <fn name="rld_DataInd"                        id="0x1D4D" group="STK"/>
+    <fn name="rld_PurgeQ"                         id="0x1D4E" group="STK"/>
+    <fn name="rld_RmvFirstPduQ"                   id="0x1D4F" group="STK"/>
+    <fn name="rld_BuildAndFwdSdu"                 id="0x1D50" group="STK"/>
+    <fn name="rld_RelInd"                         id="0x1D51" group="STK"/>
+    <fn name="sim_Reset"                          id="0x1DB1" group="STK"/>
+    <fn name="sim_AnalyzeATR"                     id="0x1DB2" group="STK"/>
+    <fn name="sim_ProcessInstruction"             id="0x1DB3" group="STK"/>
+    <fn name="sim_AnalyzeReceivedBytes"           id="0x1DB4" group="STK"/>
+    <fn name="mm_mmcHandleEvt"                    id="0x1E15" group="STK"/>
+    <fn name="mm_mmpHandleEvt"                    id="0x1E16" group="STK"/>
+    <fn name="sm_ProcessEvt"                      id="0x1E79" group="STK"/>
+    <fn name="snd_ProcessEvt"                     id="0x1E97" group="STK"/>
+    <fn name="api_ParseMsg"                       id="0x1F0F" group="STK"/>
+    <fn name="l1a_MsgParseSleep"                  id="0x1F10" group="STK"/>
+    <fn name="l1s_waitdecodeIrq"                  id="0x1F11" group="STK"/>
+    
+</module>
+

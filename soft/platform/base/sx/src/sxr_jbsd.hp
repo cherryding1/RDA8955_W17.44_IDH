@@ -1,0 +1,145 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+// ================================================================================
+/// @file         sxr_jbsd.hp
+/// @par Real time executif job scheduler private header file.
+//--------------------------------------------------------------------------------
+/// @defgroup sx_jbsd SX Job Scheduler
+/// @{
+
+#ifndef __SXR_JBSD_HP__
+#define __SXR_JBSD_HP__
+
+#include "sxr_jbsd.h"
+#include "sxs_io.h"
+
+
+#define SXR_NB_MAX_JOB            24
+
+#define SXR_JOB_ID                ((u32)1 << 31)
+
+#define SXR_NB_MAX_JOB_EVT        16 /* Current implementation maximum value. */
+
+#define SXR_EVT_PENDING            0
+#define SXR_EVT_FRAME_PENDING      1
+#define SXR_EVT_FRAME_EXPECTED     2
+#define SXR_EVT_NXT_FRAME_EXPECTED 3
+
+
+typedef struct
+{
+    u32  *Sp;
+    sxr_JbDesc_t const *Desc;
+    void *Data;
+    u32  *StackSwp;
+    u32  *StackTop;
+    u32  *StackBottom;
+    u16   State;
+    u8    Free;
+    u8    IdxSort;
+} sxr_JbCtx_t;
+
+typedef struct
+{
+    u8  Active;
+    u8  LastActive;
+
+    u8  InitCnt;
+
+    u8  IdxFree;
+    u8  IdxQueue;
+    u8  Load;
+    u8  EvtQueue    [SXR_NB_MAX_JOB_EVT];
+    void *EvtData   [SXR_NB_MAX_JOB_EVT];
+    sxr_JbCtx_t Ctx [SXR_NB_MAX_JOB];
+    u8  Sorted      [SXR_NB_MAX_JOB];
+    u8  FirstReady;
+    u8  SkipFrameEndEvt;
+    u32 BitMapReady;
+    u16 EvtStatus   [4];
+
+} sxr_Job_t;
+
+#ifdef __SXR_JBSD_VAR__
+#define DefExtern
+#else
+#define DefExtern extern
+#endif
+
+DefExtern sxr_Job_t *sxr_Job;
+
+#undef DefExtern
+
+
+// =============================================================================
+// sxr_TimerDelivery
+// -----------------------------------------------------------------------------
+/// Notify that waited duration required by a job has expired.
+/// The job remains in Wait state but is marked as ready in a bit map.
+/// @param  Ctx Pointer onto context which contains job number.
+// =============================================================================
+void sxr_TimerDelivery (u32 *Id);
+
+// =============================================================================
+// sxr_JobSetUp
+// -----------------------------------------------------------------------------
+/// Set up a job context
+/// @param  JobNb   Job number
+/// @param  JobCtx  job context to set up.
+// =============================================================================
+void sxr_JobSetUp (u8 JobNb, sxr_JbCtx_t *JobCtx);
+
+// =============================================================================
+// sxr_JobSwap
+// -----------------------------------------------------------------------------
+/// Save current (old) job and restore new job
+/// @param  OldJob  place to store old stack pointer
+/// @param  NewJob  place to get new stack pointer to restore
+// =============================================================================
+void sxr_JobSwap (u32 **OldJobSp, u32 **NewJobSp);
+
+// =============================================================================
+// sxr_CheckJobNb
+// -----------------------------------------------------------------------------
+/// Check if a JobNb is valid. If invalid, an exception will be raised.
+/// @param  JobNb
+// =============================================================================
+static inline void sxr_CheckJobNb (u8 JobNb)
+{
+    if (UNLIKELY(JobNb >= SXR_NB_MAX_JOB))
+    {
+        SXS_RAISE ((_SXR|TABORT|TDB|TNB_ARG(1),TSTR("Job number unconsistent: %d",0x06a6000c), JobNb, sxr_CheckJob ()));
+    }
+}
+
+// =============================================================================
+// sxr_CheckJobNbNil
+// -----------------------------------------------------------------------------
+/// Check if a JobNb is valid or NIL. If not NIL and invalid, an exception
+/// will be raised.
+/// @param  JobNb
+// =============================================================================
+static inline void sxr_CheckJobNbNil (u8 JobNb)
+{
+    if (JobNb != SXR_NIL_JOB)
+    {
+        sxr_CheckJobNb(JobNb);
+    }
+}
+
+
+#undef DefExtern
+
+#endif
+
+/// @} // <-- End of sx_jbsd group

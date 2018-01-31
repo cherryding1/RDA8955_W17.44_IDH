@@ -1,0 +1,37 @@
+menuconfig GSENSOR_SUPPORT
+	option skipmk
+	option skiph
+	bool "gsensor"
+	default n
+		
+if GSENSOR_SUPPORT
+
+comment "--- platform/edrv/gsensor ---"
+
+choice
+	option skipmk
+	option skiph
+	prompt "gsensor driver"
+	default mma7660fc
+	---help---
+		It defines Gsensor Model for integrated Chip.
+		
+	config mma7660fc
+		option skipmk
+		option skiph
+		bool	"mma7660fc"
+	
+	config mma7660fc_gpio
+		option skipmk
+		option skiph
+		bool	"mma7660fc_gpio"	
+endchoice
+		
+config GSENSOR_MODEL
+	option skipmk
+	string
+	default mma7660fc if mma7660fc
+	default mma7660fc_gpio if mma7660fc_gpio	
+	---help---
+		It defines Gsensor Model for integrated Chip. mma7660fc/mma7660fc_gpio							
+endif

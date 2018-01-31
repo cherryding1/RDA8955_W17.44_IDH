@@ -1,0 +1,19 @@
+comment "--- application/coolmmi/mmi/usb ---"
+
+config __MMI_USB_SUPPORT__
+    option skipmk
+    bool "MMI USB support"
+    default y
+    ---help---
+        This option enables MMI USB support.
+
+config __USB_ENABLE__
+    option skipmk
+    bool "USB feature Enable"
+    def_bool y if __MMI_USB_SUPPORT__
+
+config __MMI_EXT_DEVICE__
+    option skipmk
+    bool "MMI external device support"
+    def_bool y if __USB_ENABLE__ || __BTCOOLSAND__ || __IRDA_SUPPORT__
+	def_bool n

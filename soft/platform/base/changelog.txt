@@ -1,0 +1,55 @@
+Source delivery base v2
+=======================
+  Workspace:
+    ^/modem2G/BJbranches/Total_integration/application      application
+    ^/Sources/env/trunk                                     env
+    ^/Sources/platform/trunk                                platform
+    ^/Sources/base/releases/v2                              platform/base
+    ^/Sources/chip/trunk                                    platform/chip
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SERVICE}     ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk                                    platform/edrv
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/mdi     ${PLATFORM_SYSTEM}/mdi
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/stack   ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk                                     ${PLATFORM_SYSTEM}/svc
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/vpp     ${PLATFORM_SYSTEM}/vpp
+    ^/modem2G/BJbranches/Total_integration/platform_test    platform_test
+    ^/Sources/target/trunk                                  target
+    ^/Sources/toolpool/trunk                                toolpool
+
+  Compatibility, upgrade notes:
+    * CHIP v4 (for new pal_Initialisation() interface).
+    * EDRV trunk or v2 (for new calibration audio gains support).
+
+  Changes:
+    * SX: Queue: Added low-priority (-LP suffixed) wrapper for low priority access to the queues.
+    * SX: Improved the documentation.
+    * SX: Imported some modifications from Total Integration (max task, mbx, sem, etc; added MCI trace level).
+    * SX: Changed the pal_SoftBreak from break 1 to break 2.
+    * CALIB: Update to calibration version 2.3. Audio gains are now bitfields describing all gains in the audio path.
+    * SAP: Added the trace path auto switch to the trace configuration.
+    * Makefile: Added the packed mechanism for single or dual SIM.
+
+Source delivery base v1
+=======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v2       env
+    ^/Sources/platform/releases/v1  platform
+    ^/Sources/base/releases/v1      platform/base
+    ^/Libraries/chip/releases/v2.1  platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/releases/v1      platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/releases/v1     ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/releases/v1       ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/releases/v1       ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/releases/v1    target
+    ^/Sources/toolpool/releases/v1  toolpool
+
+  Compatibility, upgrade notes:
+    *
+
+  Changes:
+    * initial delivery.
+

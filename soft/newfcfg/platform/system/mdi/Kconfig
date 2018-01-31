@@ -1,0 +1,46 @@
+comment "--- platform/system/mdi ---"
+
+config MEDIA_RM_SUPPORT
+	bool "MEDIA_RM_SUPPORT"
+	default n
+	---help---
+	    This option enables rm format support. The feature need enough memeory size.
+
+config VIDEO_PLAYER_SUPPORT
+	bool "VIDEO_PLAYER_SUPPORT"
+	default y
+	---help---
+	    This option enables video player support.
+
+config SOUND_RECORDER_SUPPORT
+	bool "SOUND_RECORDER_SUPPORT" 
+	default y
+	---help---
+	    This option enables sound recorder support.
+
+config VIDEO_RECORDER_SUPPORT
+	bool "VIDEO_RECORDER_SUPPORT"
+	default y
+	---help---
+	    This option enables video recorder support.
+
+config VDOREC_MODE_VGA
+	option skipmk
+	bool "VGA(640X480) recording"
+	depends on VIDEO_PLAYER_SUPPORT
+	default n
+	---help---
+	    This option enables video recorder supports VGA mode.
+
+config MEDIA_MIDI_SUPPORT
+	bool "MEDIA_MIDI_SUPPORT"
+	default n
+	---help---
+	    This option enables midi format.
+
+config DONOT_SUPPORT_DUAL_BUFFER
+	option skipmk
+	bool "DONOT_SUPPORT_DUAL_BUFFER"
+	default n
+	---help---
+	    This option disables that video recorder does NOT support dual buffer. If set at NO, VID_REC_CAP_DUAL_BUF will work.

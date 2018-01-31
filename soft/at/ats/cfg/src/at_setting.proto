@@ -1,0 +1,124 @@
+syntax = "proto2";
+
+message PB_AtSmsSetting {
+    required uint32 csmpFo = 1;
+    required uint32 csdhShow = 2;
+
+    message AtSmsInfo {
+        message AtCnMi {
+            required uint32 nMode = 1;
+            required uint32 nMt = 2;
+            required uint32 nBm = 3;
+            required uint32 nDs = 4;
+            required uint32 nBfr = 5;
+        }
+
+        required AtCnMi sCnmi = 1;
+        required uint32 nStorage1 = 2;
+        required uint32 nStorage2 = 3;
+        required uint32 nStorage3 = 4;
+
+        required uint32 nTotal1 = 5;
+        required uint32 nTotal2 = 6;
+        required uint32 nTotal3 = 7;
+
+        required uint32 nUsed1 = 8;
+        required uint32 nUsed2 = 9;
+        required uint32 nUsed3 = 10;
+
+        required uint32 nServType = 11;
+        required uint32 nOverflowCtrl = 12;
+        required uint32 nOverflowMode = 13;
+    }
+
+    repeated AtSmsInfo smsInfo = 3;
+    required uint32 smsFormat = 4;
+}
+
+message PB_AtSetting {
+    required uint32 resultCodePresent = 1;
+    required uint32 resultCodeFormat = 2;
+    required uint32 commandEchoMode = 3;
+    required uint32 nS3 = 4;
+    required uint32 nS4 = 5;
+    required uint32 nS5 = 6;
+    required uint32 cmee = 7;
+    required uint32 cgreg = 8;
+    required uint32 crc = 9;
+    required uint32 rxfc = 10;
+    required uint32 txfc = 11;
+    required uint32 icfFormat = 12;
+    required uint32 icfParity = 13;
+    required uint32 dtrData = 14;
+    required uint32 secUartEnable = 47;
+    required uint32 secUartBaud = 48;
+    required uint32 secUartIcfFormat = 49;
+    required uint32 secUartIcfParity = 50;
+    required string cmerInd = 15;
+    message PB_CfgInfo {
+        required uint32 ind_ctrl_mask = 1;
+        required uint32 sind_ctrl_mask = 2;
+        required uint32 te_chset = 3;
+        required uint32 mt_chset = 4;
+    }
+    required PB_CfgInfo cfgInfo = 16;
+    required uint32 cc_VTD = 17;
+    required uint32 cc_s0 = 18;
+    required uint32 gprsAuto = 19;
+    required fixed32 baudRate = 20;
+    required string operFormat = 21;
+    required uint32 copsModeTemp = 22;
+    required uint32 preferredOperFormat = 23;
+    required string preferredOperator = 24;
+    required uint32 preferredOperatorIndex = 25;
+    required uint32 preferredOperatorCaller = 26;
+    required uint32 pbkListEntryCaller = 27;
+    required uint32 pbkCharacterSet = 28;
+    required fixed32 tempStorage = 29;
+    required uint32 alphabet = 30;
+    required PB_AtSmsSetting smsSetting = 31;
+    required uint32 callWaitingPresentResultCode = 32;
+    required uint32 ussd = 33;
+    required uint32 ucClip = 34;
+    required uint32 ucClir = 35;
+    required uint32 ucColp = 36;
+    required uint32 ucCSSU = 37;
+    required uint32 ucCSSI = 38;
+    required uint32 moniPara = 39;
+    required uint32 monpPara = 40;
+    required uint32 pmIndMark = 41;
+    required uint32 vgrVolume = 42;
+    required uint32 vgtVolume = 43;
+    required uint32 cmutMute = 44;
+    required uint32 audioTestMode = 45;
+    message AtTcpipSetting {
+        required uint32 cipSCONT_unSaved = 5;
+        required uint32 cipMux_multiIp = 6;
+        required uint32 cipHEAD_addIpHead = 7;
+        required uint32 cipSHOWTP_dispTP = 8;
+        required uint32 cipSRIP_showIPPort = 9;
+        required uint32 cipATS_setTimer = 10;
+        required uint32 cipATS_time = 11;
+        required uint32 cipSPRT_sendPrompt = 12;
+        required uint32 cipQSEND_quickSend = 13;
+        required uint32 cipMODE_transParent = 14;
+        required uint32 cipCCFG_NmRetry = 15;
+        required uint32 cipCCFG_WaitTm = 16;
+        required uint32 cipCCFG_SendSz = 17;
+        required uint32 cipCCFG_esc = 18;
+        required uint32 cipCCFG_Rxmode = 19;
+        required uint32 cipCCFG_RxSize = 20;
+        required uint32 cipCCFG_Rxtimer = 21;
+        required uint32 cipDPDP_detectPDP = 22;
+        required uint32 cipDPDP_interval = 23;
+        required uint32 cipDPDP_timer = 24;
+        required uint32 cipCSGP_setGprs = 25;
+        required uint32 cipRDTIMER_rdsigtimer = 26;
+        required uint32 cipRDTIMER_rdmuxtimer = 27;
+        required uint32 cipRXGET_manualy = 28;
+        required string cipApn = 29;
+        required string cipUserName = 30;
+        required string cipPassWord = 31;
+    }
+    required AtTcpipSetting tcpip = 46;
+}

@@ -1,0 +1,12 @@
+comment "--- platform/system ---"
+
+menu "calib"
+source "newfcfg/platform/system/calib/Kconfig"
+endmenu
+
+menu "mdi"
+source "newfcfg/platform/system/mdi/Kconfig"
+endmenu
+
+
+

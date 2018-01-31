@@ -1,0 +1,4 @@
+S_SRC := $(S_SRC)
+C_SRC := $(C_SRC) pmd.c pmd_charger.c
+
+

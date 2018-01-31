@@ -1,0 +1,13 @@
+		//0x0200		VoC_code_section_1
+		//0x0200		vpp_HelloBye
+0x0B1E0A86,	//0x0200		VoC_lw16i(REG6,0xb1e)
+0xFFC0F007,	//0x0202		VoC_NOP	|	VoC_lw16i_short(REG7,0x0,DEFAULT)
+0x40041583,	//0x0204		VoC_sw32_d(REG67,0x4004)
+0x2B80DFE9,	//0x0206		VoC_jal(vpp_HelloByeTest)(lo)	|	VoC_push16(RA,DEFAULT)
+0xDFA9020C,	//0x0208		VoC_pop16(RA,DEFAULT)	|	VoC_jal(vpp_HelloByeTest)(hi)
+0xE580FFC0,	//0x020a		VoC_return	|	VoC_NOP
+		//0x020c		vpp_HelloByeTest
+0x40401583,	//0x020c		VoC_sw32_d(REG67,0x4040)
+0x0AC81583,	//0x020e		VoC_sw32_d(REG67,0xac8)
+0x0ACA1583,	//0x0210		VoC_sw32_d(REG67,0xaca)
+0xFFC0E580,	//0x0212		VoC_NAD	|	VoC_return

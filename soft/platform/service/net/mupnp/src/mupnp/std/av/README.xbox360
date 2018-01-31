@@ -1,0 +1,72 @@
+
+Requirements for Microsoft XBox 360 UPNP Support.
+
+
+*
+UPNP Friendly Name (cg_upnpav_dms_setfriendlyname) must be of the form:
+   XXXX (MediaServer) : 1
+
+For example, "Cyberlink for C Media Server (MediaServer) : 1"
+
+*
+The ModelName (cg_upnp_device_setmodelname) must be one of:
+
+    * Windows Media Connect
+    * Windows Media Player
+
+*
+Device must have service X_MS_MediaReceiverRegistrar and 3 methods.
+
+
+More information can be found:
+
+[http://code.google.com/p/jems/wiki/XBox360Notes]
+X_MS_MediaReceiverRegistrar Service
+
+This service is required to a certain extent. It must be listed,
+however all requests to the service can be safely denied and the
+description can be empty or even blank. The XBox will periodically
+make queries to the non-existent service, but never actually complain
+about it not working. If the service is not present in the device
+description, the device will still show up, however upon connection,
+it will timeout and complain about network connectivity problems, or
+something equally generic.
+
+
+Affected files, see
+"urn:microsoft.com:service:X_MS_MediaReceiverRegistrar" portion of the
+CG_UPNPAV_DMS_DEVICE_DESCRIPTION definition in cmediaserver_device.c:15
+
+Service handler, cg_upnpav_dms_medrec_actionreceived in ccontendir_service.c
+
+
+NOTE:
+Please be aware that the Syabas Networked Media Tank OEM players
+(Popcornhour, HDX etc) enter a special UPNP mode if the ModelName is
+set to "Windows Media Connect" or "Windows Media Player".
+
+This special (4-icon mode) makes some hard-coded assumptions, like
+that of; ROOT "0" will contain "Videos" with ID="2". This means you
+will have to chose between supporting Syabas' NMT players, or
+Microsoft XBox 360. Supporting both will be tricky.
+
+One option could be to handle requests and change ModelName in your 
+http_listener:
+
+        server = cg_http_request_getheadervalue(httpReq, "SERVER");
+        if (server && strcasestr(server,
+                       "xbox")) {
+            cg_upnp_device_setmodelname(dev, "Windows Media Connect");
+        } else {
+            cg_upnp_device_setmodelname(dev, "CyberGarage Media Server");
+        }
+
+        cg_upnp_device_httprequestrecieved(httpReq);
+
+
+Alternatively, if you wish to use "Windows Media Connect" with NMT, you need
+to handle (hard-coded) ID=2, ID=3 etc.
+
+
+
+

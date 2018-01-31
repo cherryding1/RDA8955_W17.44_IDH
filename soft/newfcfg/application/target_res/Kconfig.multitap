@@ -1,0 +1,122 @@
+menuconfig __MMI_MULTITAP_REVERIE_INPUT__
+    option skipmk
+    bool "Reverie multitap"
+    default y
+    
+if __MMI_MULTITAP_REVERIE_INPUT__
+
+config __MMI_MULTITAP_REVERIE_HINDI__
+    option skipmk
+    bool "Hindi Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_ASSAMESE__
+    option skipmk
+    bool "Assamese Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_BENGALI__
+    option skipmk
+    bool "Bengali Multitap"
+    default n
+        
+config __MMI_MULTITAP_REVERIE_GUJARATI__
+    option skipmk
+    bool "Gujarati Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_MARATHI__
+    option skipmk
+    bool "Marathi Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_NEPALI__
+    option skipmk
+    bool "Nepail Multitap"
+    default n                
+
+config __MMI_MULTITAP_REVERIE_BODO__
+    option skipmk
+    bool "Bodo Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_KONKANI__
+    option skipmk
+    bool "Konkani Multitap"
+    default n
+   
+config __MMI_MULTITAP_REVERIE_DOGRI__
+    option skipmk
+    bool "Dogri Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_TELUGU__
+    option skipmk
+    bool "Telugu Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_TAMIL__
+    option skipmk
+    bool "Tamil Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_SINDHI__
+    option skipmk
+    bool "Sindhi Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_MALAYALAM__
+    option skipmk
+    bool "Malayalam Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_PUNJABI__
+    option skipmk
+    bool "Punjabi Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_ODIA__
+    option skipmk
+    bool "Odia Multitap"
+    default n
+    
+config __MMI_MULTITAP_REVERIE_SANSKRIT__
+    option skipmk
+    bool "Sanskrit Multitap"
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_MANIPURI__
+    option skipmk
+    bool "Manipuri Multitap"
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_KANNADA__
+    option skipmk
+    bool "Kannada Multitap"
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_MAITHILI__
+    option skipmk
+    bool "Maithili Multitap"
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_SANTALI__
+    option skipmk
+    bool "Santali Multitap"
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_URDU__
+    option skipmk
+    bool "Urdu Multitap"
+    select __MMI_BIDI_ALG__
+    default n   
+    
+config __MMI_MULTITAP_REVERIE_KASHMIRI__
+    option skipmk
+    bool "Kashmiri Multitap"
+    select __MMI_BIDI_ALG__
+    default n   
+                                  
+                                 
+endif
+  

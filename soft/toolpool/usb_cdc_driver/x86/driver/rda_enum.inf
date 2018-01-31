@@ -1,0 +1,116 @@
+;
+; Jungo Confidential. Copyright (c) Jungo 2011.  http://www.jungo.com
+;
+; DriverCore USB transport layer
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%Mfg%
+DriverVer=09/01/2014,2.4.0.32
+
+; ================= Device section =====================
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+; For Win2K
+[DeviceList]
+%USB\VID_0525&PID_A4A7.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A7
+%USB\VID_0525&PID_A4A9&MI_00.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_00
+%USB\VID_0525&PID_A4A9&MI_02.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_02
+%USB\VID_18D1&PID_5D30&MI_00.DeviceDesc% = CdcInstall, USB\VID_18D1&PID_5D30&MI_00
+
+; For XP and later
+[DeviceList.NTx86]
+%USB\VID_0525&PID_A4A7.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A7
+%USB\VID_0525&PID_A4A9&MI_00.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_00
+%USB\VID_0525&PID_A4A9&MI_02.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_02
+%USB\VID_18D1&PID_5D30&MI_00.DeviceDesc% = CdcInstall, USB\VID_18D1&PID_5D30&MI_00
+
+; For XP and later x64
+[DeviceList.NTamd64]
+%USB\VID_0525&PID_A4A7.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A7
+%USB\VID_0525&PID_A4A9&MI_00.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_00
+%USB\VID_0525&PID_A4A9&MI_02.DeviceDesc% = CdcInstall, USB\VID_0525&PID_A4A9&MI_02
+%USB\VID_18D1&PID_5D30&MI_00.DeviceDesc% = CdcInstall, USB\VID_18D1&PID_5D30&MI_00
+
+[CdcInstall.NT]
+CopyFiles=rda_enum.Files.Ext
+
+[CdcInstall.NT.Services]
+AddService = %rda_enum.SvcName%, %SPSVCINST_ASSOCSERVICE%, rda_enum.AddService
+
+[rda_enum.AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\rda_enum.sys
+AddReg         = rda_enum.AddReg
+
+[rda_enum.AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 0
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 0
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 0
+HKR, Parameters,     DebugLevel,      0x00010001, 2
+
+[CdcInstall.NT.HW]
+AddReg = CdcInstall_NT_HW_AddReg
+
+[CdcInstall_NT_HW_AddReg]
+HKR,,"IdleTimeout",0x00010001,0     ; Number of seconds before the device goes idle
+HKR,,"EnableZLP",0x00010001,0x0      ; Enable zero length packet
+HKR,,"EnableInReset",0x00010001,0 ; Enable IN pipe reset after error
+HKR,,"MaxTransferSize",0x00010001,0x200 ; Enable IN pipe reset after error
+
+[rda_enum.Files.Ext]
+rda_enum.sys,,,0x6 ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+rda_enum.sys = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+;-------------- WDF & DC Coinstallers installation
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 10,System32
+
+[CdcInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01009.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01009.dll,WdfCoInstaller"
+
+[SourceDisksFiles]
+wdfcoinstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CdcInstall.NT.Wdf]
+KmdfService = %rda_enum.SvcName%, rda_enum_wdfsect
+
+[rda_enum_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;---------------------------------------------------------------;
+
+[Strings]
+Mfg = "Rdamicro"
+Disk_Description = "DriverCore Installation Disk"
+USB\VID_0525&PID_A4A7.DeviceDesc = "RDA COM Enumerator"
+USB\VID_0525&PID_A4A9&MI_00.DeviceDesc = "RDA COM Enumerator"
+USB\VID_0525&PID_A4A9&MI_02.DeviceDesc = "RDA COM Enumerator"
+USB\VID_18D1&PID_5D30&MI_00.DeviceDesc = "RDA COM Enumerator"
+
+rda_enum.SvcName = "rda_enum"
+SPSVCINST_ASSOCSERVICE = 0x00000002
+

@@ -1,0 +1,41 @@
+ifneq "${CHIP_HAS_BCPU_ROM}-${BUILD_BCPU_IMAGE}" "1-"
+
+S_SRC += bcpu_ram.S \
+         bcpu_rom.S \
+         spal_irq_handler.S \
+         spal_gdb.S
+
+C_SRC += spal_vitac.c \
+         spal_cache.c \
+         spal_cap_cp2.c \
+         spal_cfg.c \
+         spal_gdb_stub.c \
+         spal_cipher.c \
+         spal_irq.c \
+         spal_ifc.c \
+         spal_itlv.c \
+         spal_xcor.c \
+         spal_debug.c \
+         spal_version.c
+
+S_SRC += spal_XcorFchFilterAsm.S
+C_SRC += spal_cordic.c
+
+ifeq "${CT_CHIP_DIE}" "8955"
+C_SRC += spal_excor.c
+C_SRC += spal_cholk.c
+endif
+
+
+ifneq "${CT_ASIC}" "gallite"
+ifneq "${CT_ASIC}" "8808"
+C_SRC += bcpu_romstring.c \
+         bcpu_rom_version.c
+endif
+endif
+
+endif # !CHIP_HAS_BCPU_ROM || BUILD_BCPU_IMAGE
+
+%/spal_cap_cp2.o: CT_MIPS16_CFLAGS=
+%/spal_cache.o: CT_MIPS16_CFLAGS=
+

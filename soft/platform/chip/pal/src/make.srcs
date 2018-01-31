@@ -1,0 +1,20 @@
+# make.srcs for drivers, to include at end of test's make.srcs
+S_SRC := 
+C_SRC :=    pal_gsmr.c \
+            pal_gsms.c \
+            pal_imei.c \
+            pal_sim.c \
+            pal_map.c
+
+# all files can be compiled with CT_MIPS16
+#CT_MIPS16_CFLAGS= $(CT_MIPS16)
+
+NULL_STRING :=
+SPACE := ${NULL_STRING} # end of the line
+COMMA := ,
+TGT_SIM_ORDER := $(foreach SIM, ${USER_SIM_ORDER},PAL_SIM_ORDER_SIM_${SIM}${COMMA})
+PAL_SIM_LIST := $(subst ${SPACE},,${TGT_SIM_ORDER})
+
+# Overwrite the normal optimisation to fit in the internal SRAM
+%/pal_gsmr.o: MYCFLAGS=-O2
+%/pal_sim.o: CPPFLAGS += -DPAL_SIM_LIST=${PAL_SIM_LIST}

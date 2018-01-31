@@ -1,0 +1,13 @@
+<module name="LCDD">
+
+    <!-- Functions -->
+    <fn name="lcdd_TransferData"                  id="0x1280" group="LCDD API"/>
+
+    <!-- Windows -->
+    <fn name="lcdd_BlitWin"                       id="0x3930" group="LCDD API"/>
+    
+    <!-- Pulses -->
+    <fn name="LCDD_TRANSFER_START_REDO"           id="0x3138" group="LCDD API"/>
+
+</module>
+

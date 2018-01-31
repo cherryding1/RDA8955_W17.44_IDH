@@ -1,0 +1,177 @@
+comment "--- application/coolmmi/mmi/phonebook ---"
+
+config PHONE_PHB_ENTRY_COUNT
+    int "PHONE_PHB_ENTRY_COUNT"
+    range 0 100
+    default 100
+    ---help---
+        Select the maximum count for phonebook saved in phone. By default, set at 100.
+
+config MAX_PHB_PHONE_ENTRY
+	option skiph
+	int "MAX_PHB_PHONE_ENTRY"
+	range 0 100
+	default PHONE_PHB_ENTRY_COUNT
+	---help---
+	   it was used in simulator and saved temporarily.
+
+config __MMI_PHB_SLIM_OPTIONAL_FIELD__
+    option skipmk
+    bool "MMI_PHB_SLIM_OPTIONAL_FIELD"
+    default y
+    ---help---
+    	This option supports slim phonebook.
+
+config __PHB_CALLER_IMAGE_SAVE_PATH_ONLY__
+    option skipmk
+    bool "PHB_CALLER_IMAGE_SAVE_PATH_ONLY"
+    default y
+    ---help---
+    	This option enables the function that only save path of caller image in phonebook.
+
+config __MMI_PHB_MARK_SEVERAL__
+	option skipmk
+	bool "MMI_PHB_MARK_SEVERAL"
+	default y
+	---help---
+		This option supports that users can mark several contacts in phonebook.
+
+config __MMI_PHB_GROUP_MARK_SEVERAL__
+	option skipmk
+	bool "MMI_PHB_GROUP_MARK_SEVERAL"
+	def_bool y
+	---help---
+		This option supports that users can mark several contacts in phonebook group list.
+
+#config __MMI_PHB_CALLERGROUP_MEMBER_LIST__
+#    option skipmk
+#    bool "Edit member list in caller group"
+#    default y
+#
+#config __MMI_PHB_COMPARE_9_DIGIT__
+#    option skipmk
+#    bool "Compare 9 digits in number field for call"
+#    default y
+#
+#config __MMI_PHB_QUICK_SEARCH__
+#    option skipmk
+#    bool "Enable Quick search feature"
+#    default y
+#
+#config MMI_ENTRY_QUICK_SEARCH_FOR_PHB_SEARH
+#    option skipmk
+#    bool "MMI support Entry quick search for PHB"
+#    default y
+#
+#config __MMI_PHB_ADV_NUM_MATCH_MOBILE__
+#    option skipmk
+#    bool "Compare number filed in advance way for call"
+#    default y
+#
+#config __MMI_PHB_DELETE_ALL_CHECK_PHONE_LOCK__
+#    option skipmk
+#    bool "Check phone lock when delete all"
+#    default y
+#
+#config __MMI_PHB_SOS_NUM_EDIT__
+#    option skipmk
+#    bool "Allow sos number editable"
+#    default y
+#
+#config __MMI_PHB_DISPLAY_ONE_MSISDN__
+#    option skipmk
+#    bool "Display one MSISDN only"
+#    default y
+#
+#config __MMI_PHB_SEND_SMS_FROM_PHB__
+#    option skipmk
+#    bool "Send SMS from phonebook"
+#    default y
+#
+#config __MMI_PHB_CALLERGROUP_IN_SIM__
+#    option skipmk
+#    bool "Can associate caller group info for entry in SIM card"
+#    default y
+#
+#config __MMI_PHB_NO_OPTIONAL_FIELD__
+#    option skipmk
+#    bool "Disable optional field in phonebook"
+#    default y
+#
+#config __MMI_CALLERGROUP_NO_ALERT__
+#    option skipmk
+#    bool "No alert setting in caller group"
+#    default y
+#
+#config __MMI_PHB_UPDATE_CALL_LOG_AFTER_SAVE__
+#    option skipmk
+#    bool "Update Call Log after save number"
+#    default y
+#
+#config __MMI_PHB_IP_DIAL_FROM_PHB__
+#    option skipmk
+#    bool "Make IP dial from phonebook"
+#    default y if __IP_NUMBER__
+#    default n
+#
+#config __MMI_INCOMING_CALL_VIDEO__
+#    option skipmk
+#    bool "Disable optional field in phonebook"
+#    depends on !MEM_ULC_3216
+#    default y if (MP4_CODEC || MJPG_SUPPORT) && (__MMI_DATA_STORE__ && __MMI_FILE_MANAGER__)
+#    default n
+#
+#config __MMI_PHB_CALL_SHOW_PICTURE_FROM_FILE__
+#    option skipmk
+#    bool "Show Picture from file for calling screen"
+#    default y if __MMI_FILE_MANAGER__
+#
+#config __MMI_VCARD__
+#    option skipmk
+#    bool "Enable vCard feature"
+#    default y if !MEM_ULC_3216 || SUPPORT_PHB_EXPORT_IMPORT
+#    default n
+#
+#config __MMI_PHB_SEND_MMS_FROM_PHB__
+#    option skipmk
+#    bool "Send MMS from phonebook"
+#    depends on RWAPMMS_SUPPORT
+#    default n
+#
+#config __MMI_PHB_COMBINE_COPY_DUPLICATE__
+#    option skipmk
+#    bool "Combine copy and duplicate as one item"
+#    default n
+#
+#config __MMI_PHB_NAME_AND_NUM_REQUIRE__
+#    option skipmk
+#    bool "Both name and number required to add a new entry"
+#    default n
+#
+#config __MMI_PHB_CALLERGROUP_IN_SIM__
+#    option skipmk
+#    bool "Can associate caller group info for entry in SIM card"
+#    default n
+#
+#config __MMI_PHB_UPDATE_CALL_LOG_AFTER_SAVE__
+#    option skipmk
+#    bool "Update call log data after save an entry to phb from call log"
+#    default n
+#
+#config __MMI_PHB_CALLER_RES_SETTING__
+#    option skipmk
+#    bool "Select resource first then forward to phonebook entry"
+#    default n
+#
+#config __MMI_PHB_BIRTHDAY_FIELD__
+#    option skipmk
+#    bool "Turn on birthday field in phonebook field"
+#    default n
+#
+
+config SUPPORT_PHB_EXPORT_IMPORT
+    option skipmk
+    bool "SUPPORT_PHB_EXPORT_IMPORT"
+    default y
+    ---help---
+    	This options enables phonebook export and import functions.

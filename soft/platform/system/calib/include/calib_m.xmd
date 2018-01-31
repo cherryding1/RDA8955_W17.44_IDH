@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+
+<comment>
+<!-- TODO Add a complete comment header, with @mainpage, etc -->
+@defgroup calib Calibration Driver<br/>
+@{<br/>
+</comment>
+
+<include load="no" file="cs_types.h"/>
+<include load="no" file="gsm.h"/>
+<include load="no" file="calib_stub_nst.h"/>
+
+<!-- rubyconstants is used to make this a class owning all the constants
+     of this file.
+-->
+<typedef name="calib_globals" rubyconstants="yes"></typedef>
+
+<var name='CALIB_MAJ_VERSION' value='2'>
+    <comment>Version of the calibration stub and code (on 8 bits).</comment>
+</var>
+
+<var name='CALIB_MIN_VERSION' value='7'></var>
+
+<var name='CALIB_MARK_VERSION' value='0xCA1B0000'></var>
+
+<var name='CALIB_VERSION_NUMBER' value='( CALIB_MARK_VERSION | CALIB_MAJ_VERSION &lt;&lt; 8 | CALIB_MIN_VERSION )'></var>
+
+<var name='CALIB_STUB_VERSION' value='0xCA5B0001'></var>
+
+<var name='CALIB_XCV_TIME_QTY' value='20'>
+    <comment>Number of calib timings for the transceiver.</comment>
+</var>
+
+<var name='CALIB_PA_TIME_QTY' value='15'>
+    <comment>Number of calib timings for the PA.</comment>
+</var>
+
+<var name='CALIB_SW_TIME_QTY' value='15'>
+    <comment>Number of calib timings for the switch.</comment>
+</var>
+
+<var name='CALIB_PAL_TIME_QTY' value='20'>
+    <comment>Number of calib timings for PAL.</comment>
+</var>
+
+<var name='CALIB_XCV_PARAM_QTY' value='20'>
+    <comment>Number of generic parameters for the transceiver.</comment>
+</var>
+
+<var name='CALIB_PA_PARAM_QTY' value='15'>
+    <comment>Number of generic parameters for the PA.</comment>
+</var>
+
+<var name='CALIB_SW_PARAM_QTY' value='15'>
+    <comment>Number of generic parameters for the switch.</comment>
+</var>
+
+<var name='CALIB_XCV_MASK' value='(1 &lt;&lt; 24)'>
+    <comment>Mask for transceiver RF name.</comment>
+</var>
+
+<var name='CALIB_PA_MASK' value='(1 &lt;&lt; 25)'>
+    <comment>Mask for PA RF name.</comment>
+</var>
+
+<var name='CALIB_SW_MASK' value='(1 &lt;&lt; 26)'>
+    <comment>Mask for switch RF name.</comment>
+</var>
+
+<var name='CALIB_GSM_PCL_QTY' value='15'></var>
+
+<var name='CALIB_DCS_PCL_QTY' value='17'></var>
+
+<var name='CALIB_PCS_PCL_QTY' value='18'></var>
+
+<var name='CALIB_PADAC_PROF_INTERP_QTY' value='16'></var>
+
+<var name='CALIB_PADAC_PROF_QTY' value='1024'></var>
+
+<var name='CALIB_PADAC_RAMP_QTY' value='32'></var>
+
+<var name='CALIB_LOW_VOLT_QTY' value='6'></var>
+
+<var name='CALIB_VOC_MDF_QTY' value='64'>
+    <comment>Number of coefficiens in the MDF FIR filter.</comment>
+</var>
+
+<var name='CALIB_VOC_SDF_QTY' value='64'>
+    <comment>Number of coefficiens in the SDF FIR filter.</comment>
+</var>
+
+<var name='CALIB_EC_ON' value='(1 &lt;&lt; 0)'>
+    <comment>Mask for echo cancelation enable (to be used with audio VoC enable).</comment>
+</var>
+
+<var name='CALIB_MDF_ON' value='(1 &lt;&lt; 1)'>
+    <comment>Mask for MDF FIR filter enable (to be used with audio VoC enable).</comment>
+</var>
+
+<var name='CALIB_SDF_ON' value='(1 &lt;&lt; 2)'>
+    <comment>Mask for SDF FIR filter enable (to be used with audio VoC enable).</comment>
+</var>
+
+<var name='CALIB_AUDIO_GAIN_QTY' value='8'>
+    <comment>Number of audio gain steps.</comment>
+</var>
+
+<var name='CALIB_AUDIO_GAIN_VALUE_MUTE' value='-128'>
+    <comment>The audio gain value standing for mute.</comment>
+</var>
+
+<var name='CALIB_AUDIO_PARAM_QTY' value='8'>
+    <comment>Number of misc audio parameters.</comment>
+</var>
+
+<var name='CALIB_STUB_SEARCH_POWER' value='0x0'>
+    <comment>Unrealistic values meaning that the power measure is not complete yet.</comment>
+</var>
+
+<var name='CALIB_STUB_SEARCH_FOF' value='-2000000'>
+    <comment>Unrealistic values meaning that the FOf measure is not complete yet.</comment>
+</var>
+
+<var name='CALIB_STUB_XTAL_IDLE' value='-2000001'>
+    <comment>For communication between Calib Stub and calibration tools.</comment>
+</var>
+
+<var name='CALIB_STUB_PA_PROF_IDLE' value='-2000002'>
+    <comment>For communication between Calib Stub and calibration tools.</comment>
+</var>
+
+<var name='CALIB_STUB_ILOSS_IDLE' value='-128'>
+    <comment>For communication between Calib Stub and calibration tools.
+    </comment>
+</var>
+
+<var name='CALIB_STUB_DCO_IDLE' value='-32768'>
+    <comment>For communication between Calib Stub and calibration tools.
+    </comment>
+</var>
+
+<var name='CALIB_STUB_DCO_ERROR' value='-32767'>
+    <comment>For communication between Calib Stub and calibration tools.
+    </comment>
+</var>
+
+<var name='CALIB_STUB_GPADC_ERROR' value='0xFFFF'>
+    <comment>For communication between Calib Stub and calibration tools.
+    </comment>
+</var>
+
+<var name='CALIB_STUB_GPADC_IDLE' value='0xFFFE'>
+    <comment>For communication between Calib Stub and calibration tools.
+    </comment>
+</var>
+
+<var name='CALIB_NB_CELLS' value='5'>
+    <comment>Number of cells used for measurement averages
+    </comment>
+</var>
+
+<!-- CALIB_AUDIO_ITF_QTY must be equal or bigger than AUD_ITF_QTY! -->
+<var name='CALIB_AUDIO_ITF_QTY' value='6'>
+    <comment>
+        Maximum number of different Audio Interfaces supported
+        by this calibration structure.
+        The value of CALIB_AUDIO_ITF_QTY must be the same as AUD_ITF_QTY!
+    </comment>
+</var>
+
+<var name='CALIB_GPADC_CH_QTY' value='4'>
+    <comment>The number of GP ADC channels.
+    </comment>
+</var>
+
+<alias name='CALIB_GPADC_ALL_CH'>
+    <uint16 name='unused' count='CALIB_GPADC_CH_QTY'>
+        <comment>Type used to avoid the need for a matrix.
+        It represents an array of one measurement per
+        GPADC Channel.
+        </comment>
+    </uint16>
+</alias>
+
+
+<var name='CALIB_GPADC_ACC_COUNT' value='8'>
+    <comment>
+    </comment>
+</var>
+
+
+<var name='CALIB_GPADC_ACC_COUNT_MAX' value='128'>
+    <comment>
+    </comment>
+</var>
+
+
+<var name='CALIB_AUDIO_DICTA_REC' value='1'>
+    <comment>
+    </comment>
+</var>
+
+
+<var name='CALIB_AUDIO_DICTA_PLAY' value='2'>
+    <comment>
+    </comment>
+</var>
+
+
+<alias name='CALIB_VERSION_TAG'>
+    <uint32 name='unused'>
+        <comment>
+            Calib version type. Use #CALIB_VERSION to build
+            a version number to check against a calib sector version number.
+            The calibration version number of the code
+            is defined by CALIB_VERSION_NUMBER.
+        </comment>
+    </uint32>
+</alias>
+
+<enum name='CALIB_METHOD'>
+    <comment>Calib process method type.</comment>
+
+    <entry name='CALIB_METH_DEFAULT' value='0xCA11E700'></entry>
+    <entry name='CALIB_METH_COMPILATION'></entry>
+    <entry name='CALIB_METH_MANUAL'></entry>
+    <entry name='CALIB_METH_AUTOMATIC'></entry>
+    <entry name='CALIB_METH_SIMULATION'></entry>
+</enum>
+
+<typedef name='CALIB_OP_INFO'>
+    <comment>Calib process method and date type.</comment>
+
+    <uint32 name='date'></uint32>
+    <instance name='method' type='CALIB_METHOD'></instance>
+</typedef>
+
+<alias name='CALIB_XCV_TIMES'>
+    <int16 name='unused' count='CALIB_XCV_TIME_QTY'>
+        <comment>Transceiver timing type.</comment>
+    </int16>
+</alias>
+
+<alias name='CALIB_PA_TIMES'>
+    <int16 name='unused' count='CALIB_PA_TIME_QTY'>
+        <comment>PA timing type.</comment>
+    </int16>
+</alias>
+
+<alias name='CALIB_SW_TIMES'>
+    <int16 name='unused' count='CALIB_SW_TIME_QTY'>
+        <comment>Switch timing type.</comment>
+    </int16>
+</alias>
+
+<alias name='CALIB_PAL_TIMES'>
+    <int16 name='unused' count='CALIB_PAL_TIME_QTY'>
+        <comment>PAL timing type.</comment>
+    </int16>
+</alias>
+
+<alias name='CALIB_XCV_PARAM'>
+    <int32 name='unused' count='CALIB_XCV_PARAM_QTY'>
+        <comment>Transceiver generic parameter type.</comment>
+    </int32>
+</alias>
+
+<alias name='CALIB_PA_PARAM'>
+    <int32 name='unused' count='CALIB_PA_PARAM_QTY'>
+        <comment>PA generic parameter type.</comment>
+    </int32>
+</alias>
+
+<alias name='CALIB_SW_PARAM'>
+    <int32 name='unused' count='CALIB_SW_PARAM_QTY'>
+        <comment>Switch generic parameter type.</comment>
+    </int32>
+</alias>
+
+<enum name='CALIB_H_ENUM_0'>
+    <comment>Used for autonomous calib processes, results from Calib Stub to remote.</comment>
+
+    <entry name='CALIB_PROCESS_STOP' value='0x0'></entry>
+    <entry name='CALIB_PROCESS_CONTINUE' value='0x1'></entry>
+    <entry name='CALIB_PROCESS_PENDING' value='0x2'></entry>
+    <entry name='CALIB_PROCESS_NEED_CALM' value='0x3'></entry>
+    <entry name='CALIB_PROCESS_ERR_BAD_POW' value='0xf0'></entry>
+    <entry name='CALIB_PROCESS_ERR_NO_MONO_POW' value='0xf1'></entry>
+    <entry name='CALIB_PROCESS_ERR_ZERO_DAC' value='0xf2'></entry>
+    <entry name='CALIB_PROCESS_ERROR' value='0xff'></entry>
+</enum>
+
+<enum name='CALIB_STUB_BAND'>
+    <entry name='CALIB_STUB_BAND_GSM850' value='0'></entry>
+    <entry name='CALIB_STUB_BAND_GSM900' value='1'></entry>
+    <entry name='CALIB_STUB_BAND_DCS1800' value='2'></entry>
+    <entry name='CALIB_STUB_BAND_PCS1900' value='3'></entry>
+    <entry name='CALIB_STUB_BAND_QTY'></entry>
+</enum>
+
+<alias name='CALIB_RF_CHIP_NAME'>
+    <uint32 name='unused'>
+        <comment>RF chip identification name.</comment>
+    </uint32>
+</alias>
+
+<alias name='CALIB_RXTX_FREQ_OFFSET'>
+    <int16 name='unused' count='CALIB_STUB_BAND_QTY'></int16>
+</alias>
+
+<alias name='CALIB_RXTX_TIME_OFFSET'>
+    <int16 name='unused'></int16>
+</alias>
+
+<alias name='CALIB_RXTX_IQ_TIME_OFFSET'>
+    <int16 name='unused'></int16>
+</alias>
+
+<alias name='CALIB_DCO_CAL_TIME'>
+    <int16 name='unused'></int16>
+</alias>
+
+<typedef name='CALIB_XCV_PALCUST'>
+    <comment>XCV PAL custom types.</comment>
+
+    <instance name='name' type='CALIB_RF_CHIP_NAME'></instance>
+    <instance name='rxTxFreqOffset' type='CALIB_RXTX_FREQ_OFFSET'></instance>
+    <instance name='rxTxTimeOffset' type='CALIB_RXTX_TIME_OFFSET'></instance>
+    <instance name='rxIqTimeOffset' type='CALIB_RXTX_IQ_TIME_OFFSET'></instance>
+    <instance name='txIqTimeOffset' type='CALIB_RXTX_IQ_TIME_OFFSET'></instance>
+    <instance name='dcoCalTime' type='CALIB_DCO_CAL_TIME'></instance>
+    <int32 name='spare' count='7'></int32>
+</typedef>
+
+<alias name='CALIB_ARFCN'>
+    <int16 name='unused' count='2'></int16>
+</alias>
+
+<alias name='CALIB_PCL2DBM_ARFCN_G'>
+    <instance name='unused' type='CALIB_ARFCN' count='CALIB_GSM_PCL_QTY'></instance>
+</alias>
+
+<alias name='CALIB_PCL2DBM_ARFCN_D'>
+    <instance name='unused' type='CALIB_ARFCN' count='CALIB_DCS_PCL_QTY'></instance>
+</alias>
+
+<alias name='CALIB_PCL2DBM_ARFCN_P'>
+    <instance name='unused' type='CALIB_ARFCN' count='CALIB_PCS_PCL_QTY'></instance>
+</alias>
+
+<alias name='CALIB_PADAC_PROFILE_INTERP'>
+    <uint16 name='unused' count='CALIB_PADAC_PROF_INTERP_QTY'></uint16>
+</alias>
+
+<alias name='CALIB_PADAC_PROFILE'>
+    <uint16 name='unused' count='CALIB_PADAC_PROF_QTY'></uint16>
+</alias>
+
+<alias name='CALIB_PADAC_PROFILE_EXTREM'>
+    <int16 name='unused'></int16>
+</alias>
+
+<alias name='CALIB_PADAC_RAMP'>
+    <uint16 name='unused' count='CALIB_PADAC_RAMP_QTY'></uint16>
+</alias>
+
+<alias name='CALIB_PADAC_RAMP_SWAP'>
+    <uint16 name='unused'></uint16>
+</alias>
+
+<alias name='CALIB_PADAC_LOW_VOLT'>
+    <uint16 name='unused' count='CALIB_LOW_VOLT_QTY'></uint16>
+</alias>
+
+<alias name='CALIB_PADAC_LOW_DAC'>
+    <uint16 name='unused' count='CALIB_LOW_VOLT_QTY'></uint16>
+</alias>
+
+<typedef name='CALIB_PA_PALCUST'>
+    <comment>PA PAL custom types.</comment>
+
+    <instance name='name' type='CALIB_RF_CHIP_NAME'></instance>
+    <instance name='pcl2dbmArfcnG' type='CALIB_PCL2DBM_ARFCN_G'></instance>
+    <instance name='pcl2dbmArfcnD' type='CALIB_PCL2DBM_ARFCN_D'></instance>
+    <instance name='pcl2dbmArfcnP' type='CALIB_PCL2DBM_ARFCN_P'></instance>
+    <instance name='profileInterpG' type='CALIB_PADAC_PROFILE_INTERP'></instance>
+    <instance name='profileInterpDp' type='CALIB_PADAC_PROFILE_INTERP'></instance>
+    <instance name='profileG' type='CALIB_PADAC_PROFILE'></instance>
+    <instance name='profileDp' type='CALIB_PADAC_PROFILE'></instance>
+    <instance name='profileDbmMinG' type='CALIB_PADAC_PROFILE_EXTREM'></instance>
+    <instance name='profileDbmMinDp' type='CALIB_PADAC_PROFILE_EXTREM'></instance>
+    <instance name='profileDbmMaxG' type='CALIB_PADAC_PROFILE_EXTREM'></instance>
+    <instance name='profileDbmMaxDp' type='CALIB_PADAC_PROFILE_EXTREM'></instance>
+    <instance name='rampLow' type='CALIB_PADAC_RAMP'></instance>
+    <instance name='rampHigh' type='CALIB_PADAC_RAMP'></instance>
+    <instance name='rampSwapG' type='CALIB_PADAC_RAMP_SWAP'></instance>
+    <instance name='rampSwapDp' type='CALIB_PADAC_RAMP_SWAP'></instance>
+    <instance name='lowVoltLimit' type='CALIB_PADAC_LOW_VOLT'></instance>
+    <instance name='lowDacLimit' type='CALIB_PADAC_LOW_DAC'></instance>
+    <int32 name='spare' count='8'></int32>
+</typedef>
+
+<typedef name='CALIB_SW_PALCUST'>
+    <instance name='name' type='CALIB_RF_CHIP_NAME'></instance>
+    <int32 name='spare' count='8'></int32>
+</typedef>
+
+
+
+<typedef name='CALIB_AUDIO_VOC_EC'>
+    <comment>Echo Cancelling for VoC.</comment>
+    <uint8 name='ecMu'>
+        <comment> Enables Echo Canceller algorithm when >0.
+        </comment>
+    </uint8>
+    <uint8 name='ecRel'>
+        <comment> Echo Canceller REL parameter (0,+16).
+        </comment>
+    </uint8>
+    <uint8 name='ecMin'>
+        <comment> Echo Canceller MIN parameter (0, 32).
+        </comment>
+    </uint8>
+    <uint8 name='esOn'>
+        <comment> Enable Echo Suppressor algorithm (0,1).
+        </comment>
+    </uint8>
+    <uint8 name='esDtd'>
+        <comment> Double talk threshold for Echo Suppressor algo  (0,32).
+        </comment>
+    </uint8>
+    <uint8 name='esVad'>
+        <comment> Donwlink vad threshold for Echo Suppressor algo (0,32).
+        </comment>
+    </uint8>
+    <uint32 name='enableField'>
+        <comment>Enable for echo cancelling.</comment>
+    </uint32>
+</typedef>
+
+<typedef name='CALIB_AUDIO_VOC_FILTERS'>
+    <comment>VoC anti-distortion filters.</comment>
+    <uint16 name='mdfFilter' count='CALIB_VOC_MDF_QTY'>
+        <comment>VoC needs the MDF coeffs to be 32-bit aligned.</comment>
+    </uint16>
+    <uint16 name='sdfFilter' count='CALIB_VOC_SDF_QTY'>
+        <comment>SDF coeffs must stay right after MDF.</comment>
+    </uint16>
+</typedef>
+
+<typedef name='CALIB_AUDIO_IN_GAINS'>
+    <comment>Input (MIC) gains.</comment>
+    <int8 name='ana'>
+        <comment>Input analog gain.</comment>
+    </int8>
+    <int8 name='adc'>
+        <comment>Input ADC gain.</comment>
+    </int8>
+    <int8 name='alg'>
+        <comment>Input algorithm gain.</comment>
+    </int8>
+    <int8 name='reserv'>
+        <comment>Reserved.</comment>
+    </int8>
+</typedef>
+
+<typedef name='CALIB_AUDIO_OUT_GAINS'>
+    <comment>Output gains.</comment>
+    <int8 name='voiceOrEpAna'>
+        <comment>
+            Output voice gains for physical interfaces, or
+            earpiece gains for application interfaces.
+            Output analog gain.
+        </comment>
+    </int8>
+    <int8 name='voiceOrEpDac'>
+        <comment>Output DAC gain.</comment>
+    </int8>
+    <int8 name='voiceOrEpAlg'>
+        <comment>Output algorithm gain.</comment>
+    </int8>
+    <int8 name='reserv1'>
+        <comment>Reserved.</comment>
+    </int8>
+    <int8 name='musicOrLsAna'>
+        <comment>
+            Output music gains for physical interfaces, or
+            loudspeaker gains for application interfaces.
+            Output analog gain.
+        </comment>
+    </int8>
+    <int8 name='musicOrLsDac'>
+        <comment>Output DAC gain.</comment>
+    </int8>
+    <int8 name='musicOrLsAlg'>
+        <comment>Output algorithm gain.</comment>
+    </int8>
+    <int8 name='reserv2'>
+        <comment>Reserved.</comment>
+    </int8>
+</typedef>
+
+<typedef name='CALIB_AUDIO_GAINS'>
+    <comment>Calib audio gain types.</comment>
+
+    <instance name='inGainsCall' type='CALIB_AUDIO_IN_GAINS'>
+        <comment>MIC gains during a voice call.</comment>
+    </instance>
+    <instance name='outGains' type='CALIB_AUDIO_OUT_GAINS' count='CALIB_AUDIO_GAIN_QTY'>
+    </instance>
+    <int8 name='sideTone' count='CALIB_AUDIO_GAIN_QTY'></int8>
+    <instance name='inGainsRecord' type='CALIB_AUDIO_IN_GAINS'>
+        <comment>MIC gains during a sound recording.</comment>
+    </instance>
+    <int8 name='reserv' count='20'></int8>
+</typedef>
+
+<typedef name='CALIB_AUDIO_PARAMS'>
+    <comment>Audio calibration parameters.</comment>
+    <uint32 name='reserv1'></uint32>
+    <int8 name='AecEnbleFlag'></int8>
+    <int8 name='AgcEnbleFlag'></int8>
+    <int8 name='StrongEchoFlag'></int8>
+    <int8 name='reserv2'></int8>
+    <int8 name='NoiseGainLimit'></int8>
+    <int8 name='NoiseMin'></int8>
+    <int8 name='NoiseGainLimitStep'></int8>
+    <int8 name='AmpThr'></int8>
+    <int8 name='HighPassFilterFlag'></int8>
+    <int8 name='NotchFilterFlag'></int8>
+    <int8 name='NoiseSuppresserFlag'></int8>
+    <int8 name='NoiseSuppresserWithoutSpeechFlag'></int8>
+    <uint32 name='AudioParams' count='CALIB_AUDIO_PARAM_QTY-4'></uint32>
+</typedef>
+
+<typedef name='CALIB_AUDIO_ITF'>
+    <comment>
+        Calibration of an audio interface. It gathers the
+        audio gains and VoC calibrations data
+    </comment>
+    <instance name='vocEc'          type='CALIB_AUDIO_VOC_EC'>
+    </instance>
+    <instance name='vocFilters'     type='CALIB_AUDIO_VOC_FILTERS'>
+    </instance>
+    <instance name='audioGains'     type='CALIB_AUDIO_GAINS'>
+    </instance>
+    <instance name='audioParams'    type='CALIB_AUDIO_PARAMS'>
+    </instance>
+</typedef>
+
+<typedef name='CALIB_GPADC'>
+    <comment>Calib GPADC analog type.</comment>
+
+    <uint16 name='sensorGainA'></uint16>
+    <uint16 name='sensorGainB'></uint16>
+</typedef>
+
+<alias name='CALIB_RF_CRC'>
+    <uint32 name='unused'>
+    </uint32>
+</alias>
+
+<typedef name='CALIB_XCV'>
+    <comment>Transceiver calibration.</comment>
+
+    <instance name='times' type='CALIB_XCV_TIMES'></instance>
+    <instance name='param' type='CALIB_XCV_PARAM'></instance>
+    <instance name='palcust' type='CALIB_XCV_PALCUST'></instance>
+</typedef>
+
+<typedef name='CALIB_PA'>
+    <comment>Power Amplifier RF calibration.</comment>
+
+    <instance name='times' type='CALIB_PA_TIMES'></instance>
+    <instance name='param' type='CALIB_PA_PARAM'></instance>
+    <instance name='palcust' type='CALIB_PA_PALCUST'></instance>
+</typedef>
+
+<typedef name='CALIB_SW'>
+    <comment>Switch calibration.</comment>
+
+    <instance name='times' type='CALIB_SW_TIMES'></instance>
+    <instance name='param' type='CALIB_SW_PARAM'></instance>
+    <instance name='palcust' type='CALIB_SW_PALCUST'></instance>
+</typedef>
+
+<typedef name='CALIB_BB'>
+    <comment>Baseband calibration.</comment>
+
+    <instance name='times' type='CALIB_PAL_TIMES'>
+        <comment>PAL calibration.</comment>
+    </instance>
+    <instance name='audio' type='CALIB_AUDIO_ITF' count='CALIB_AUDIO_ITF_QTY'>
+        <comment>Audio calibration, for each interface</comment>
+    </instance>
+    <instance name='gpadc' type='CALIB_GPADC'>
+        <comment>Analog macros calibration: GPADC.</comment>
+    </instance>
+</typedef>
+
+<typedef name='CALIB_BUFFER'>
+    <instance name='versionTag' type='CALIB_VERSION_TAG'>
+        <comment>Information about this calib buffer.</comment>
+    </instance>
+    <instance name='opInfo' type='CALIB_OP_INFO'></instance>
+    <instance name='xcv' type='CALIB_XCV'>
+        <comment>Transceiver calibration.</comment>
+    </instance>
+    <instance name='pa' type='CALIB_PA'>
+        <comment>Power Amplifier RF calibration.</comment>
+    </instance>
+    <instance name='sw' type='CALIB_SW'>
+        <comment>Switch calibration.</comment>
+    </instance>
+    <instance name='bb' type='CALIB_BB'>
+        <comment>Baseband calibration.</comment>
+    </instance>
+    <uint32 name='reserved' count='2'>
+        <comment>Reserved for future use.</comment>
+    </uint32>
+    <instance name='audioVersionTag' type='CALIB_VERSION_TAG'>
+        <comment>Information for audio calibration data.</comment>
+    </instance>
+    <instance name='rfCrc' type='CALIB_RF_CRC'>
+        <comment>CRC value for RF calibration data.</comment>
+    </instance>
+</typedef>
+
+<enum name='CALIB_STUB_CMDS'>
+    <comment>Values used to define the contexts of the Calib Stub.</comment>
+
+    <entry name='CALIB_STUB_NO_STATE'></entry>
+    <entry name='CALIB_STUB_MONIT_STATE'></entry>
+    <entry name='CALIB_STUB_FOF_STATE'></entry>
+    <entry name='CALIB_STUB_TX_STATE'></entry>
+    <entry name='CALIB_STUB_PA_STATE'></entry>
+    <entry name='CALIB_STUB_AUDIO_OUT'></entry>
+    <entry name='CALIB_STUB_AUDIO_IN'></entry>
+    <entry name='CALIB_STUB_AUDIO_SIDE'></entry>
+    <entry name='CALIB_STUB_SYNCH_STATE'></entry>
+    <entry name='CALIB_STUB_IDLE_STATE'></entry>
+    <entry name='CALIB_STUB_NST_STATE'></entry>   
+    <entry name='CALIB_STUB_NSTREQ_STATE'></entry> 
+</enum>
+
+<enum name='CALIB_STUB_AFC_BOUND_T'>
+    <entry name='CALIB_STUB_AFC_BOUND_CENTER' value='0'></entry>
+    <entry name='CALIB_STUB_AFC_BOUND_NEG_FREQ'></entry>
+    <entry name='CALIB_STUB_AFC_BOUND_POS_FREQ'></entry>
+    <entry name='CALIB_STUB_AFC_BOUND_NO'></entry>
+</enum>
+
+
+<var name='CALIB_DCO_ACC_COUNT' value='32'>
+    <comment>Value that defines the number of measure to do before the DC offset
+    average is considered valid.
+    </comment>
+</var>
+
+<var name='CALIB_MAGIC_TAG' value='0xCA1BCA1B'>
+    <comment>
+        This magiv tag is used as a parameter to the
+        boot loader to force is to run the calibration
+        stub
+    </comment>
+</var>
+
+<typedef name='CALIB_STUB_CTX'>
+    <comment>Used to send calibration context change requests from the remote  calibration tools to the Calib Stub.</comment>
+
+    <instance name='state' type='CALIB_STUB_CMDS' ckeywords='VOLATILE'>
+        <comment>Commands from the remote calibration tools.</comment>
+    </instance>
+    <bool name='firstFint' ckeywords='VOLATILE'></bool>
+    <int32 name='setXtalFreqOffset' ckeywords='VOLATILE'>
+        <comment>Subcommands from the remote calibration tools.</comment>
+    </int32>
+    <uint8 name='setAfcBound' ckeywords='VOLATILE'></uint8>
+    <uint8 name='setChangeDACAfcBound' ckeywords='VOLATILE'></uint8>
+    <int32 name='setChangeDACAfcFreqOffset' ckeywords='VOLATILE'></int32>
+    <int32 name='setChangeDACAfcFreq' ckeywords='VOLATILE'></int32>
+    <int32 name='setAfcFreqOffset' ckeywords='VOLATILE'></int32>
+    <int8 name='setILossOffset' ckeywords='VOLATILE'></int8>
+    <int32 name='setPAProfMeas' ckeywords='VOLATILE'></int32>
+    <int8 name='setCalibUpdate' ckeywords='VOLATILE'></int8>
+    <uint8 name='setRestartGpadcMeasure' ckeywords='VOLATILE'></uint8>
+
+    <!-- Cells information-->
+    <uint16 name='arfcn' ckeywords='VOLATILE' count='CALIB_NB_CELLS'>
+        <comment>Cells information</comment>
+    </uint16>
+    <uint8  name='power' ckeywords='VOLATILE'  count='CALIB_NB_CELLS'></uint8>
+    <bool   name='isPcs' ckeywords='VOLATILE'  count='CALIB_NB_CELLS'></bool>
+    <uint8  name='bsic'  ckeywords='VOLATILE'  ></uint8>
+    <uint32 name='fn'    ckeywords='VOLATILE'  ></uint32>
+    <uint8  name='t2'    ckeywords='VOLATILE'  ></uint8>
+    <uint8  name='t3'    ckeywords='VOLATILE'  ></uint8>
+    <uint16 name='qbOf'  ckeywords='VOLATILE'  ></uint16>
+
+    <!-- Feedback loops and results-->
+    <uint16 name='pFactor' ckeywords='VOLATILE'></uint16>
+    <int32 name='tOf' ckeywords='VOLATILE'></int32>
+    <int32 name='fOf' ckeywords='VOLATILE'></int32>
+    <uint16 name='snR' ckeywords='VOLATILE'></uint16>
+    <uint8 name='bitError' ckeywords='VOLATILE'></uint8>
+    <uint8 name='monPower' ckeywords='VOLATILE'></uint8>
+    <uint8 name='nbPower' ckeywords='VOLATILE'></uint8>
+    <uint8 name='monBitmap' ckeywords='VOLATILE'></uint8>
+    <int32 name='meanFOf' ckeywords='VOLATILE'></int32>
+    <uint8 name='xtalCalibDone' ckeywords='VOLATILE'>
+        <comment> This is initialized by HST </comment>
+        </uint8>
+    <uint16 name='paProfNextDacVal' ckeywords='VOLATILE'>>
+        <comment> This is initialized by HST </comment>
+        </uint16>
+    <uint8 name='paProfCalibDone' ckeywords='VOLATILE'></uint8>
+    <int16 name='dcoAverI' ckeywords='VOLATILE'></int16>
+    <int16 name='dcoAverQ' ckeywords='VOLATILE'></int16>
+    <uint8 name='dcoAccCount' ckeywords='VOLATILE'>
+        <comment>Can go up to 2 * CT_CALIB_DCO_ACC_COUNT - 1.</comment>
+    </uint8>
+    <int16 name='dcoI' ckeywords='VOLATILE' count='CALIB_DCO_ACC_COUNT'></int16>
+    <int16 name='dcoQ' ckeywords='VOLATILE' count='CALIB_DCO_ACC_COUNT'></int16>
+    <uint8  name='iLossCalibDone'>>
+        <comment>Status of the iloss calibration porcess.
+                 This is initialized by HST.
+        </comment>
+     </uint8>
+    <uint16 name='iLossNextArfcn'>
+        <comment>ARFCN for which to measure the insertion loss. This is not initialized.
+        </comment>
+    </uint16>
+    <uint16 name='gpadcAver' count='CALIB_GPADC_CH_QTY'> </uint16>
+    <uint8  name='gpadcAccCount'>
+        <comment>Can go up to 2*CALIB_GPADC_ACC_COUNT-1.
+        </comment>
+    </uint8>
+    <instance name='gpadcAcc' type='CALIB_GPADC_ALL_CH' count='CALIB_GPADC_ACC_COUNT_MAX'> </instance>
+
+    <!-- Parameters for Tx commands from the remote calibration tools -->
+    <uint16 name='txArfcn' ckeywords='VOLATILE'>
+        <comment>Parameters for Tx commands from the remote calibration tools.</comment>
+    </uint16>
+    <uint8 name='txPcl' ckeywords='VOLATILE'></uint8>
+    <uint16 name='txDac' ckeywords='VOLATILE'></uint16>
+    <uint8 name='txBand' ckeywords='VOLATILE'></uint8>
+    <uint8 name='txTsc' ckeywords='VOLATILE'></uint8>
+
+    <!-- Parameters for monitoring commands from the remote calibration tools. -->
+    <uint16 name='monArfcn' ckeywords='VOLATILE'>
+        <comment>Parameters for monitoring commands from the remote calibration tools.</comment>
+    </uint16>
+    <uint8 name='monBand' ckeywords='VOLATILE'></uint8>
+    <uint8 name='monExpPow' ckeywords='VOLATILE'></uint8>
+
+    <!-- Parameters for audio commands from the remote calibration tools. -->
+    <uint8 name='itfSel' ckeywords='VOLATILE'>
+        <comment>
+            Parameters for audio commands from the remote calibration tools.
+            This parameter is used to select the Audio Interface to calibrate
+        </comment>
+    </uint8>
+    <uint8 name='inSel' ckeywords='VOLATILE'>
+        <comment>
+            This field selects which input (microphone) is used on the
+            Audio Interface defined by the itfSel field.
+        </comment>
+    </uint8>
+    <uint8 name='inGain' ckeywords='VOLATILE'></uint8>
+    <uint8 name='inUart' ckeywords='VOLATILE'></uint8>
+    <uint8 name='outSel' ckeywords='VOLATILE'>
+        <comment>
+            This field selects which input (speaker) is used on the
+            Audio Interface defined by the itfSel field.
+        </comment>
+    </uint8>
+    <uint8 name='outGain' ckeywords='VOLATILE'></uint8>
+    <uint8 name='polyGain' ckeywords='VOLATILE'></uint8>
+    <uint8 name='sideGain' ckeywords='VOLATILE'></uint8>
+    <uint16 name='outFreq' ckeywords='VOLATILE'></uint16>
+    <uint8 name='outAmpl' ckeywords='VOLATILE'></uint8>
+
+    <!-- TODO Replace by AUD's: Audio Dictaphone command-->
+    <uint8 name='startAudioDictaphone' ckeywords='VOLATILE'></uint8>
+    <uint8 name='audioDictaphoneStatus' ckeywords='VOLATILE'></uint8>
+
+    <uint8 name='pmdCustomCalibStart' ckeywords='VOLATILE'>
+        <comment>Command to start the custom calibration of the PMD.
+            This value is given to the pmd_CustomCalibration() function.
+            This is initialized by the stub and written by the HST.
+        </comment>
+    </uint8>
+    <uint32 name='pmdCustomCalibStatus' ckeywords='VOLATILE'>
+        <comment>Status of the custom calibration of the PMD.
+            This is initialized by the HST and returned by the stub.
+        </comment>
+    </uint32>
+    
+    <uint16 name='tn' ckeywords='VOLATILE'>
+        <comment>Rx slot number on TCH.
+        </comment>
+    </uint16>
+</typedef>
+
+<enum name='CALIB_COMMAND'>
+    <entry name='CALIB_CMD_DONE' value='0xCA11B042'>
+        <comment>Command used by the Calibration Embedded Stub to inform HST that the command is done.</comment>
+    </entry>
+    <entry name='CALIB_CMD_NOT_ACCESSIBLE'></entry>
+    <entry name='CALIB_CMD_UPDATE'></entry>
+    <entry name='CALIB_CMD_UPDATE_ERROR'></entry>
+    <entry name='CALIB_CMD_PA_PROFILE_GSM'></entry>
+    <entry name='CALIB_CMD_PA_PROFILE_DCSPCS'></entry>
+    <entry name='CALIB_CMD_RF_FLASH_BURN'></entry>
+    <entry name='CALIB_CMD_FLASH_ERASE'></entry>
+    <entry name='CALIB_CMD_FLASH_ERROR'></entry>
+    <entry name='CALIB_CMD_RF_RESET'></entry>
+    <entry name='CALIB_CMD_AUDIO_RESET'></entry>
+    <entry name='CALIB_CMD_RESET'></entry>
+    <entry name='CALIB_CMD_AUDIO_FLASH_BURN'></entry>
+    <entry name='CALIB_CMD_FLASH_BURN'></entry>
+    <entry name='CALIB_CMD_CFP_BURN'></entry>
+</enum>
+
+<enum name='CALIB_PARAM_STATUS'>
+    <comment>Calibration parameter type identifier.</comment>
+
+    <entry name='CALIB_PARAM_DEFAULT' value='0xca11b042'></entry>
+    <entry name='CALIB_PARAM_DEFAULT_RF_MIS' value='0xca11b043'></entry>
+    <entry name='CALIB_PARAM_INIT_ERROR' value='0xca10dead'></entry>
+    <entry name='CALIB_PARAM_RF_CALIBRATED' value='0x007f0011'></entry>
+    <entry name='CALIB_PARAM_AUDIO_CALIBRATED' value='0x00a0d011'></entry>
+    <entry name='CALIB_PARAM_AUDIO_CALIBRATED_RF_MIS' value='0x00a0d043'></entry>
+    <entry name='CALIB_PARAM_CALIBRATED' value='0x00def011'></entry>
+</enum>
+
+<typedef name='CALIB_CALIBRATION_T'>
+    <comment>This struct will contain pointers to the calibration info and to  the struct where to put the calibration context requests. It also  contains the address of the calibration sector in flash.</comment>
+
+    <instance name='codeVersion' type='CALIB_VERSION_TAG'></instance>
+    <instance name='paramStatus' type='CALIB_PARAM_STATUS'></instance>
+    <instance name='command' type='CALIB_COMMAND'></instance>
+    <ptr name='opInfo' type='CALIB_OP_INFO'></ptr>
+    <ptr name='xcv' type='CALIB_XCV'></ptr>
+    <ptr name='pa' type='CALIB_PA'></ptr>
+    <ptr name='sw' type='CALIB_SW'></ptr>
+    <ptr name='bb' type='CALIB_BB'></ptr>
+    <ptr name='hstOpInfo' type='CALIB_OP_INFO' ckeywords='VOLATILE'></ptr>
+    <ptr name='hstXcv' type='CALIB_XCV' ckeywords='VOLATILE'></ptr>
+    <ptr name='hstPa' type='CALIB_PA' ckeywords='VOLATILE'></ptr>
+    <ptr name='hstSw' type='CALIB_SW' ckeywords='VOLATILE'></ptr>
+    <ptr name='hstBb' type='CALIB_BB' ckeywords='VOLATILE'></ptr>
+    <ptr name='stubCtx' type='CALIB_STUB_CTX' ckeywords='VOLATILE'></ptr>
+    <ptr name='flash' type='CALIB_BUFFER' ckeywords='CONST'></ptr>
+    <ptr name='stubNsftCtx' type='CALIB_STUB_NST_CTX_T' ckeywords='VOLATILE'></ptr>
+</typedef>
+
+<cjoker>
+//------------------------------------------------------------------------------
+// Defines
+//------------------------------------------------------------------------------
+
+#define CALIB_MAJ_MASK(x) ((x &gt;&gt; 8) &amp; 0xFF)
+#define CALIB_MIN_MASK(x) (x &amp; 0xFF)
+#define CALIB_MARK_MASK(x) (x &amp; 0xFFFF0000)
+#define CALIB_VERSION(maj, min) (CALIB_MARK_VERSION | maj &lt;&lt; 8 | min &lt;&lt; 0)
+
+
+//------------------------------------------------------------------------------
+// Functions
+//------------------------------------------------------------------------------
+
+//=============================================================================
+// calib_DaemonInit
+//-----------------------------------------------------------------------------
+/// At boot time, if the CALIB_TAG_CALIBRATED is in the validTag field of
+/// the calibration flash sector, Calib uses the calibrated parameters
+/// (i.e. the parameters present in the calib flash sector), else Calib
+/// uses the default parameters.
+/// @par
+/// If the code has been compiled with the calibration mode flag set, at boot
+/// time, this function also uses the remote parameters RAM buffer and copy 
+/// the default parameters in it.
+/// @par
+/// This must be called in the PAL initialization, after the initialization
+/// of the RF drivers.
+//=============================================================================
+PUBLIC VOID calib_DaemonInit(VOID);
+
+//=============================================================================
+// calib_DaemonProcess
+//-----------------------------------------------------------------------------
+/// Execute the calibration commands received by the remote calib tools. This
+/// will, usually, update the calibration buffers with new values provided by
+/// the user controlling the calib tools.
+/// @par
+/// This must be called in the PAL start frame.
+//=============================================================================
+PUBLIC VOID calib_DaemonProcess(VOID);
+
+//=============================================================================
+// calib_GetPointers
+//-----------------------------------------------------------------------------
+/// Access to the calibration parameters.
+///
+/// @return The global pointers used by the code to access the calibrated
+/// parameters. When the target's flash does not contain a flash sector,
+/// the calib parameters are initialized with default parameters during
+/// the calibration init. Also returns the pointers used by the remote
+/// calibration tools to get the version number of the calibration and to 
+/// find the calibration buffers.
+//=============================================================================
+PUBLIC CALIB_CALIBRATION_T* calib_GetPointers(VOID);
+
+
+
+//=============================================================================
+// calib_SetStubContext
+//-----------------------------------------------------------------------------
+/// Used by the Calib Stub to define the calibration context structure that
+/// the remote calibration tools must use to communicate with the Calib Stub.
+///
+/// @param ctx Pointer to the context where the remote calib tools must put
+/// its calibration command to be executed by the Calib Stub.
+//=============================================================================
+PUBLIC VOID calib_SetStubContext(CONST CALIB_STUB_CTX_T *ctx);
+
+
+
+//=============================================================================
+// calib_SetXcvDefaults
+//-----------------------------------------------------------------------------
+/// Used by the transceiver RF driver to set its default calibration parameters
+/// (see #calib_DaemonInit to know when they can be used). It must be called 
+/// during the RF transceiver driver initialization.
+///
+/// @param param Pointer to a structure containing the default values to be
+/// used by this transceiver model.
+//=============================================================================
+PUBLIC VOID calib_SetXcvDefaults(CONST CALIB_XCV_T* param);
+
+
+
+//=============================================================================
+// calib_SetPaDefaults
+//-----------------------------------------------------------------------------
+/// Used by the PA RF driver to set its default calibration parameters
+/// (see #calib_DaemonInit to know when they can be used). It must be called 
+/// during the RF PA driver initialization.
+///
+/// @param param Pointer to a structure containing the default values to be
+/// used for this PA model.
+//=============================================================================
+PUBLIC VOID calib_SetPaDefaults(CONST CALIB_PA_T* param);
+
+
+
+//=============================================================================
+// calib_SetSwDefaults
+//-----------------------------------------------------------------------------
+/// Used by the switch RF driver to set the default calibration parameters
+/// (see #calib_DaemonInit to know when they can be used). It must be called 
+/// during the RF switch driver initialization.
+///
+/// @param param Pointer to a structure containing the default values to be
+/// used for this switch model.
+//=============================================================================
+PUBLIC VOID calib_SetSwDefaults(CONST CALIB_SW_T* param);
+
+
+
+//=============================================================================
+// calib_DaemonTracePrint
+//-----------------------------------------------------------------------------
+/// Display in the trace the current calibration status, used for debug.
+//=============================================================================
+PUBLIC VOID calib_DaemonTracePrint(VOID);
+
+
+
+// =============================================================================
+// calib_DaemonSetContext
+// -----------------------------------------------------------------------------
+/// Defines the context structure that HST and CES must use.
+/// @param ctx Pointer to the context to use.
+// =============================================================================
+PUBLIC VOID calib_DaemonSetContext(VOID* ctx);
+
+
+// =============================================================================
+// calib_DaemonSetNsftContext
+// -----------------------------------------------------------------------------
+/// Defines the context structure that HST and CES must use.
+/// @param ctx Pointer to the context to use.
+// =============================================================================
+PUBLIC VOID calib_DaemonSetNsftContext(VOID* ctx);
+
+
+// =============================================================================
+// calib_DaemonUsrDataProcess
+// -----------------------------------------------------------------------------
+/// Apply and burn HST calibration buffer.
+/// @return TRUE if success, and FALSE otherwise.
+// =============================================================================
+PUBLIC BOOL calib_DaemonUsrDataProcess(VOID);
+
+
+
+// =============================================================================
+// calib_GetRfCalibStatus
+// -----------------------------------------------------------------------------
+/// Get the status of RF calibration data.
+/// @return 0 if calibrated with good CRC, 1 if calibrated with bad CRC,
+///         2 if not calibrated.
+// =============================================================================
+PUBLIC UINT8 calib_GetRfCalibStatus(VOID);
+
+
+
+// =============================================================================
+// calib_GetAudioCalibStatus
+// -----------------------------------------------------------------------------
+/// Get the status of audio calibration data.
+/// @return 0 if calibrated, 2 if not calibrated.
+// =============================================================================
+PUBLIC UINT8 calib_GetAudioCalibStatus(VOID);
+
+
+
+/// @} // end of calib group
+
+</cjoker>
+</archive>

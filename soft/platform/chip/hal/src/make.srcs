@@ -1,0 +1,117 @@
+# make.srcs for drivers, to include at end of test's make.srcs\n
+S_SRC += \
+    hal_gdb.S \
+    hal_gdb_stub_mips.S \
+    hal_irq_handler.S \
+    hal_lps_utils.S \
+    hal_sxr_mips.S \
+    hal_utils.S \
+    setjmp.S
+
+# leave this comment and the last \ on last line for easier merge
+
+C_SRC += \
+    hal_perfmeter.c \
+    hal_aif.c \
+    hal_assert.c \
+    hal_calendar.c \
+    hal_cipher.c \
+    hal_comregs.c \
+    hal_debug.c \
+    hal_debugpaltrc.c \
+    hal_dma.c \
+    hal_ebc.c \
+    hal_fint.c \
+    hal_gdb_stub.c \
+    hal_host.c \
+    hal_host_ram.c\
+    hal_irq.c \
+    hal_lps.c \
+    hal_map.c \
+    hal_map_engine.c \
+    hal_open.c \
+    hal_overlay.c \
+    hal_page_spy.c \
+    hal_profile.c \
+    hal_rfspi.c \
+    hal_sim.c \
+    hal_speech.c \
+    hal_spi.c\
+    hal_sxr.c \
+    hal_sys.c \
+    hal_sys_ifc.c \
+    hal_tcu.c \
+    hal_timer.c \
+    hal_trace.c\
+    hal_voc.c \
+    hal_ispi.c \
+    hal_rda_abb.c \
+    hal_rda_audio.c \
+    hal_spi_flash.c \
+    clock.c  \
+    clkdev.c \
+    hal_clk_8955.c
+
+C_SRC += hal_ana_gpadc.c
+
+ifeq "${CHIP_HAS_AP}" "1"
+C_SRC += hal_ap_mailbox.c \
+    hal_ap_comm.c \
+    hal_ap_ispi.c \
+    hal_ap_monitor.c \
+    hal_stub_func.c
+else # !CHIP_HAS_AP
+C_SRC += \
+    hal_boot_sector_reload.c \
+    hal_camera.c \
+    hal_flash.c \
+    hal_gouda.c \
+    hal_i2c.c \
+    hal_key.c\
+    hal_proxy_memory.c \
+    hal_pwm.c \
+    hal_sdmmc.c \
+    hal_sdmmc2.c \
+    hal_sdio.c \
+    hal_uart.c
+endif # !CHIP_HAS_AP
+
+ifeq "${CHIP_HAS_USB}" "1"
+C_SRC += \
+    hal_usb.c \
+    hal_usb_monitor.c \
+    hal_usb_descriptor.c
+endif
+
+ifeq "${NAND_FLASH}" "1"
+C_SRC += hal_nand.c
+endif
+
+ifeq "${CHIP_HAS_BTCPU}" "1"
+C_SRC += hal_bt.c
+endif
+
+ifeq "${CT_ASIC}" "8955"
+C_SRC += hal_gpio_8955.c
+else
+C_SRC += hal_gpio.c
+endif
+
+ifeq "${CHIP_HAS_WCPU}" "1"
+C_SRC += hal_wd_mailbox.c
+endif
+
+C_SRC += hal_gdb_stub_cache.c
+# leave this comment and the last \ on last line for easier merge
+
+%/hal_getk1.o: CT_MIPS16_CFLAGS=
+
+# Overwrite the normal optimisation to fit in the internal SRAM
+%/hal_tcu.o: MYCFLAGS=-O2
+%/hal_fint.o: MYCFLAGS=-O2
+%/hal_irq.o: MYCFLAGS=-O2
+#%/hal_irq_handler.o: MYCFLAGS=-O2
+#%/hal_sxr_mips.o: MYCFLAGS=-O2
+%/hal_lps.o: MYCFLAGS=-O2
+%/hal_ebc.o: MYCFLAGS=-O2
+

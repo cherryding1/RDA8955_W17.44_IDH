@@ -1,0 +1,21 @@
+menu "boot"
+source "newfcfg/platform/boot/Kconfig"
+endmenu
+
+menu "chip"
+source "newfcfg/platform/chip/Kconfig"
+endmenu
+
+menu "drivers"
+source "newfcfg/platform/edrv/Kconfig"
+endmenu
+
+menu "service"
+source "newfcfg/platform/service/Kconfig"
+endmenu
+
+menu "system"
+source "newfcfg/platform/system/Kconfig"
+endmenu
+
+

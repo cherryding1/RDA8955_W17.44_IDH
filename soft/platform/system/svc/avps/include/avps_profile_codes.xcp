@@ -1,0 +1,22 @@
+<module name="AVPS">
+    <!-- Functions -->
+    <fn name="avps_AudioAddedData"           id="0x1090" group="AVPS"/>
+    <fn name="avps_VideoAddedData"           id="0x1091" group="AVPS"/>
+    <fn name="avps_Pause"                    id="0x1092" group="AVPS"/>
+    <fn name="avps_Stop"                     id="0x1093" group="AVPS"/>
+    <fn name="avps_Play"                     id="0x1094" group="AVPS"/>
+    <fn name="avps_Setup"                    id="0x1095" group="AVPS"/>
+    <fn name="avps_Handler"                  id="0x1096" group="AVPS"/>
+
+    <!-- Pulse -->
+    <fn name="avps_underFlow"                id="0x3000" group="AVPS"/>
+    <fn name="avps_fetchVideo0"              id="0x3001" group="AVPS"/>
+    <fn name="avps_fetchVideo1"              id="0x3002" group="AVPS"/>
+    <fn name="avps_fetchAudio"               id="0x3003" group="AVPS"/>
+    <fn name="avps_skipVideo"                id="0x3004" group="AVPS"/>
+
+    <!-- Windows -->
+    <fn name="avps_videoDecode0"             id="0x3900" group="AVPS"/>
+    <fn name="avps_videoDecode1"             id="0x3901" group="AVPS"/>
+    <fn name="avps_audioDecode"              id="0x3902" group="AVPS"/>
+</module>

@@ -1,0 +1,101 @@
+if ANALOG_TV_SUPPORT
+
+menu "atvd"
+
+choice
+	option skipmk
+	option skiph
+	prompt "ATV_MODEL"
+	default atv_rda5888h
+	---help---
+		if use rda5888s, config to rda5888e
+		
+	config atv_rda5888h
+		option skipmk
+		option skiph
+		bool	"rda5888h"
+	
+	config atv_rda5888he
+		option skipmk
+		option skiph
+		bool	"rda5888he"
+	
+	config 	atv_rda5888e
+		option skipmk
+		option skiph
+		bool	"rda5888e"
+		
+endchoice
+
+config ATV_MODEL
+	option skiph
+	string
+	default rda5888h if atv_rda5888h
+	default rda5888he if atv_rda5888he
+	default rda5888e if atv_rda5888e
+	---help---
+		It defines ATV model for integrated Chip.
+		rda5888h/rda5888he/rda5888e
+	
+config ANALOG_TV_SUPPORT_MCP_LOCK
+	option skipmk
+	bool
+	default y
+	---help---
+		Analog TV supports MCP lock.
+
+config RDAATV_CHIPVER_5888E
+	option skipmk
+	bool
+	default y if atv_rda5888e	
+	default n
+	---help---
+		It defines the chip version of RDA5888E is 6.
+
+config RDAATV_CHIPVER_5888HE
+	option skipmk
+	bool
+	default y if atv_rda5888he	
+	default n
+	---help---
+		It defines the chip version of RDA5888HE is 7.
+
+config RDAATV_CHIPVER_5888H
+	option skipmk
+	bool
+	default y if atv_rda5888h	
+	default n
+	---help---
+		It defines the chip version of RDA5888H is 7.
+			
+choice
+	option skipmk
+	option skiph
+	prompt "32K clock pin used by anatv:1/0"
+	default atv_pin0
+	---help---
+		32K clock pin used by anatv:1/0,1: 32K_CLK pin,0: CLK_OUT pin
+		
+	config atv_pin0
+		option skipmk
+		option skiph
+		bool	"CLK_OUT"
+	
+	config atv_pin1
+		option skipmk
+		option skiph
+		bool	"32K_CLK"
+		
+endchoice
+
+config TV_USE_32K_CLK_PIN
+	option skiph
+	string
+	default 0 if atv_pin0
+	default 1 if atv_pin1
+	---help---
+		It defines 32k clock pin of analog TV. 0 is for CLK_OUT pin; 1 is for 32K_CLK pin.
+
+endmenu
+
+endif

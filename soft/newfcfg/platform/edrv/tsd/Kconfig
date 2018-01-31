@@ -1,0 +1,7 @@
+
+config TSD_MODEL
+	option skiph
+	string "TSD_MODEL"
+	default ""
+	---help---
+		It defines TSD Model for integrated Chip.

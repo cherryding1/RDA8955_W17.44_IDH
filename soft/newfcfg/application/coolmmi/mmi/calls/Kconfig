@@ -1,0 +1,42 @@
+comment "--- application/coolmmi/mmi/calls ---"
+
+#config __IP_NUMBER__
+#    option skipmk
+#    bool "IP_NUMBER"
+#    default n
+#
+config __MMI_CALL_RECORDER__
+    option skipmk
+    bool "MMI_CALL_RECORDER"
+    default y
+    ---help---
+        MMI supports call recording function. It must define __MMI_AUTO_CALL_RECORDER__ / __MMI_CALL_RECORDER_FILE_SAVE_PATH__ at the same time.
+
+config __MMI_AUTO_CALL_RECORDER__
+    option skipmk
+    bool "MMI_AUTO_CALL_RECORDER"
+    default y
+    ---help---
+        To support call recording function.
+
+config __MMI_CALL_RECORDER_FILE_SAVE_PATH__
+    option skipmk
+    bool "MMI_CALL_RECORDER_FILE_SAVE_PATH"
+    default y
+    ---help---
+        To support call recording function.
+
+config  __MMI_SELF_SOS__
+    option skipmk
+    bool "MMI_SELF_SOS"
+    default n
+    ---help---
+        MMI supports SOS function.
+
+config INCOMING_CALL_RINGTONE_AUD_MODE_LOUDSPK_HEADSET
+    option skipmk
+    bool "INCOMING_CALL_RINGTONE_AUD_MODE_LOUDSPK_HEADSET"
+    default y
+    ---help---
+        Loudspeaker and headset both can ring when incoming call.
+

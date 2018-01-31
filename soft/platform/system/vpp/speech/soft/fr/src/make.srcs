@@ -1,0 +1,41 @@
+S_SRC := $(S_SRC)
+C_SRC := $(C_SRC)   vpp_fr_add.c \
+                    vpp_fr_code.c \
+                    vpp_fr_decode.c\
+                    vpp_fr_dtx.c\
+                    vpp_fr_gsm_deco.c\
+                    vpp_fr_gsm_crea.c\
+                    vpp_fr_gsm_enco.c\
+                    vpp_fr_gsm_expl.c\
+                    vpp_fr_gsm_impl.c\
+                    vpp_fr_gsm_opti.c\
+                    vpp_fr_long_ter.c\
+                    vpp_fr_lpc.c\
+                    vpp_fr_preproce.c\
+                    vpp_fr_rpe.c\
+                    vpp_fr_short_te.c\
+                    vpp_fr_table.c\
+                    vpp_fr_vad.c
+
+%/vpp_fr_long_ter.o: CT_MIPS16_CFLAGS=
+%/vpp_fr_vad.o: CT_MIPS16_CFLAGS=
+%/vpp_fr_rpe.o: CT_MIPS16_CFLAGS=
+
+                   
+
+
+
+
+
+
+
+
+
+             
+                   
+
+
+
+
+
+ 

@@ -1,0 +1,51 @@
+S_SRC := $(S_SRC)
+C_SRC := $(C_SRC)   vpp_hr_dtx.c \
+                    vpp_hr_err_conc.c\
+                    vpp_hr_globdefs.c \
+                    vpp_hr_host.c \
+                    vpp_hr_homing.c \
+                    vpp_hr_mathdp31.c \
+                    vpp_hr_mathhalf.c \
+                    vpp_hr_sp_enc.c \
+                    vpp_hr_sp_dec.c \
+                    vpp_hr_sp_frm.c \
+                    vpp_hr_sp_rom.c \
+                    vpp_hr_sp_sfrm.c \
+                    vpp_hr_vad.c \
+                    
+                   
+
+%/vpp_hr_dtx.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_err_conc.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_globdefs.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_host.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_homing.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_mathdp31.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_mathhalf.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_sp_enc.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_sp_dec.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_sp_frm.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_sp_rom.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_sp_sfrm.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_vad.o: CT_MIPS16_CFLAGS=
+%/vpp_hr_utils.o: CT_MIPS16_CFLAGS=
+
+
+
+
+
+
+
+
+
+
+
+
+             
+                   
+
+
+
+
+
+ 

@@ -1,0 +1,33 @@
+
+config __MMI_FM_RADIO__
+	option skipmk
+	def_bool y if FM_RADIO_ENABLE
+	def_bool n
+
+config __MMI_FM_RADIO_RECORD__
+	option skipmk
+	def_bool y if FM_RADIO_RECORD
+	def_bool n
+
+config __MMI_FM_RADIO_SCHEDULE_REC__
+	option skipmk
+	def_bool y if FM_RADIO_RECORD
+	def_bool n
+
+config __MMI_FM_RECORD_ONLY_SUPPORT_WAV__
+	option skipmk
+	def_bool y if FM_RADIO_RECORD
+	def_bool n
+
+config __MMI_FM_RADIO_BIND_EARPHONE__
+	option skipmk
+	def_bool n if FM_RADIO_WITH_EXTERNAL_ANT
+	def_bool y
+
+config __MMI_FM_RADIO_ANIMATION__
+	option skipmk
+	bool "Radio Animation (only support 240x320)"
+	depends on FM_RADIO_ENABLE
+	default n
+
+

@@ -1,0 +1,393 @@
+comment "--- Inputmethod ---"
+
+choice Thirdparty 
+	option enum
+	option skipmk
+	prompt "Thirdparty support:"
+	default Default_inputmethod
+
+	config GB_inputmethod
+		option skipmk
+		option skiph
+		bool "GB"
+
+	config  Reverie_inputmethod
+		option skipmk
+		option skiph
+		bool "Reverie"
+		
+	config  Default_inputmethod
+		option skipmk
+		option skiph
+		bool "Null"		
+
+endchoice
+
+if GB_inputmethod
+source "newfcfg/application/target_res/Kconfig.gb"
+endif
+
+if Reverie_inputmethod
+source "newfcfg/application/target_res/Kconfig.reverie"
+endif
+
+config __MMI_PREFER_INPUT_METHOD__
+    option skipmk
+    bool "Prefer inputmethod"
+    default y
+
+config __MMI_MULTITAP_FRENCH__
+    option skipmk
+    bool "French Multitap"
+    depends on __MMI_LANG_FRENCH__ || __MMI_LANG_CA_FRENCH__
+    default n
+    
+config __MMI_MULTITAP_ITALIAN__
+    option skipmk
+    bool "Italian Multitap"
+    depends on __MMI_LANG_ITALIAN__
+    default n 
+        
+config __MMI_MULTITAP_VIETNAMESE__
+    option skipmk
+    bool "Vietnamese Multitap"
+    depends on __MMI_LANG_VIETNAMESE__
+    default n     
+    
+config __MMI_MULTITAP_RUSSIAN__
+    option skipmk
+    bool "Russian Multitap"
+    depends on __MMI_LANG_RUSSIAN__
+    default n            
+
+config __MMI_MULTITAP_ARABIC__
+    option skipmk
+    bool "Arabic Multitap"
+    depends on __MMI_LANG_ARABIC__
+    default n
+    
+config __MMI_MULTITAP_THAI__
+    option skipmk
+    bool "Thai Multitap"
+    depends on __MMI_LANG_THAI__
+    default n
+    
+config __MMI_MULTITAP_GERMAN__
+    option skipmk
+    bool "German Multitap"
+    depends on __MMI_LANG_GERMAN__
+    default n     
+    
+config __MMI_MULTITAP_SPANISH__
+    option skipmk
+    bool "Spanish Multitap"
+    depends on __MMI_LANG_SPANISH__ || __MMI_LANG_SA_SPANISH__
+    default n    
+    
+config __MMI_MULTITAP_PORTUGUESE__
+    option skipmk
+    bool "Portuguese Multitap"
+    depends on __MMI_LANG_PORTUGUESE__ || __MMI_LANG_SA_PORTUGUESE__
+    default n
+
+if !(__MMI_REVERIE_FONT_ENGINE__)    
+config __MMI_MULTITAP_URDU__
+    option skipmk
+    bool "Urdu Multitap"
+    depends on __MMI_LANG_URDU__
+    default n    
+endif
+    
+config __MMI_MULTITAP_PERSIAN__
+    option skipmk
+    bool "Persian Multitap"
+    depends on __MMI_LANG_PERSIAN__
+    default n
+    
+config __MMI_MULTITAP_TURKISH__
+    option skipmk
+    bool "Turkish Multitap"
+    depends on __MMI_LANG_TURKISH__
+    default n     
+    
+config __MMI_MULTITAP_INDONESIAN__
+    option skipmk
+    bool "Indonesian Multitap"
+    depends on __MMI_LANG_INDONESIAN__
+    default n     
+    
+config __MMI_MULTITAP_MALAY__
+    option skipmk
+    bool "Malay Multitap"
+    depends on __MMI_LANG_MALAY__
+    default n 
+    
+config __MMI_MULTITAP_ZULU__
+    option skipmk
+    bool "Zulu Multitap"
+    depends on __MMI_LANG_ZULU__
+    default n
+    
+config __MMI_MULTITAP_XHOSA__
+    option skipmk
+    bool "Xhosa Multitap"
+    depends on __MMI_LANG_XHOSA__
+    default n
+    
+config __MMI_MULTITAP_SWAHILI__
+    option skipmk
+    bool "Swahili Multitap"
+    depends on __MMI_LANG_SWAHILI__
+    default n
+    
+config __MMI_MULTITAP_CZECH__
+    option skipmk
+    bool "Czech Multitap"
+    depends on __MMI_LANG_CZECH__
+    default n
+    
+config __MMI_MULTITAP_POLISH__
+    option skipmk
+    bool "Polish Multitap"
+    depends on __MMI_LANG_POLISH__
+    default n
+    
+config __MMI_MULTITAP_HUNGARIAN__
+    option skipmk
+    bool "Hungarian Multitap"
+    depends on __MMI_LANG_HUNGARIAN__
+    default n
+    
+config __MMI_MULTITAP_NORWEGIAN__
+    option skipmk
+    bool "Norwegian Multitap"
+    depends on __MMI_LANG_NORWEGIAN__
+    default n  
+    
+config __MMI_MULTITAP_SLOVAK__
+    option skipmk
+    bool "Slovak Multitap"
+    depends on __MMI_LANG_SLOVAK__
+    default n 
+    
+config __MMI_MULTITAP_DUTCH__
+    option skipmk
+    bool "Dutch Multitap"
+    depends on __MMI_LANG_DUTCH__
+    default n
+    
+config __MMI_MULTITAP_SWEDISH__
+    option skipmk
+    bool "Swedish Multitap"
+    depends on __MMI_LANG_SWEDISH__
+    default n
+    
+config __MMI_MULTITAP_CROATIAN__
+    option skipmk
+    bool "Croatian Multitap"
+    depends on __MMI_LANG_CROATIAN__
+    default n
+    
+config __MMI_MULTITAP_SLOVENIAN__
+    option skipmk
+    bool "Slovenian Multitap"
+    depends on __MMI_LANG_SLOVENIAN__
+    default n 
+    
+config __MMI_MULTITAP_AFRIKAANS__
+    option skipmk
+    bool "Afrikaans  Multitap"
+    depends on __MMI_LANG_AFRIKAANS__
+    default n
+    
+config __MMI_MULTITAP_LITHUANIAN__
+    option skipmk
+    bool "Lithuanian Multitap"
+    depends on __MMI_LANG_LITHUANIAN__
+    default n 
+    
+config __MMI_MULTITAP_LATVIAN__
+    option skipmk
+    bool "Latvian Multitap"
+    depends on __MMI_LANG_LATVIAN__
+    default n
+    
+config __MMI_MULTITAP_ESTONIAN__
+    option skipmk
+    bool "Estonian Multitap"
+    depends on __MMI_LANG_ESTONIAN__
+    default n  
+    
+config __MMI_MULTITAP_MOLDOVAN__
+    option skipmk
+    bool "Moldovan Multitap"
+    depends on __MMI_LANG_MOLDOVAN__
+    default n
+    
+config __MMI_MULTITAP_ALBANIAN__
+    option skipmk
+    bool "Albanian Multitap"
+    depends on __MMI_LANG_ALBANIAN__
+    default n
+    
+config __MMI_MULTITAP_SESOTHO__
+    option skipmk
+    bool "Sesotho Multitap"
+    depends on __MMI_LANG_SESOTHO__
+    default n
+    
+config __MMI_MULTITAP_TAGALOG__
+    option skipmk
+    bool "Tagalog Multitap"
+    depends on __MMI_LANG_TAGALOG__
+    default n
+    
+config __MMI_MULTITAP_YORUBA__
+    option skipmk
+    bool "Yoruba Multitap"
+    depends on __MMI_LANG_YORUBA__
+    default n
+       
+config __MMI_MULTITAP_CATALAN__
+    option skipmk
+    bool "Catalan Multitap"
+    depends on __MMI_LANG_CATALAN__
+    default n
+    
+config __MMI_MULTITAP_ICELANDIC__
+    option skipmk
+    bool "Icelandic Multitap"
+    depends on __MMI_LANG_ICELANDIC__
+    default n
+    
+config __MMI_MULTITAP_DANISH__
+    option skipmk
+    bool "Danish Multitap"
+    depends on __MMI_LANG_DANISH__
+    default n
+    
+config __MMI_MULTITAP_FINNISH__
+    option skipmk
+    bool "Finnish Multitap"
+    depends on __MMI_LANG_FINNISH__
+    default n
+    
+config __MMI_MULTITAP_ROMANIAN__
+    option skipmk
+    bool "Romanian Multitap"
+    depends on __MMI_LANG_ROMANIAN__
+    default n
+    
+config __MMI_MULTITAP_HAUSA__
+    option skipmk
+    bool "Hausa Multitap"
+    depends on __MMI_LANG_HAUSA__
+    default n
+    
+config __MMI_MULTITAP_BULGARIAN__
+    option skipmk
+    bool "Bulgarian Multitap"
+    depends on __MMI_LANG_BULGARIAN__
+    default n
+    
+config __MMI_MULTITAP_UKRAINIAN__
+    option skipmk
+    bool "Ukrainian Multitap"
+    depends on __MMI_LANG_UKRAINIAN__
+    default n
+    
+config __MMI_MULTITAP_MACEDONIAN__
+    option skipmk
+    bool "Macedonian Multitap"
+    depends on __MMI_LANG_MACEDONIAN__
+    default n
+    
+config __MMI_MULTITAP_SERBIAN__
+    option skipmk
+    bool "Serbian Multitap"
+    depends on __MMI_LANG_SERBIAN__
+    default n
+    
+config __MMI_MULTITAP_GREEK__
+    option skipmk
+    bool "Greek Multitap"
+    depends on __MMI_LANG_GREEK__
+    default n
+    
+config __MMI_MULTITAP_HEBREW__
+    option skipmk
+    bool "Hebrew Multitap"
+    depends on __MMI_LANG_HEBREW__
+    default n  
+    
+if !(__MMI_REVERIE_FONT_ENGINE__)    
+config __MMI_MULTITAP_HINDI__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_HINDI__
+    default n
+
+config __MMI_MULTITAP_TELUGU__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_TELUGU__
+    default n
+    
+config __MMI_MULTITAP_PUNJABI__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_PUNJABI__
+    default n
+    
+config __MMI_MULTITAP_BENGALI__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_BENGALI__
+    select __MMI_MULTITAP_BANGLA_SPEC__
+    default n
+   
+config __MMI_MULTITAP_BANGLA_SPEC__
+    option skipmk
+    bool "__MMI_MULTITAP_BANGLA_SPEC__"
+    depends on __MMI_MULTITAP_BENGALI__
+    select __MMI_MULTITAP_FOR_STAR_AND_POUND__
+    default n    
+    
+config __MMI_MULTITAP_FOR_STAR_AND_POUND__
+    option skipmk
+    bool "__MMI_MULTITAP_BANGLA_SPEC__"
+    depends on __MMI_MULTITAP_BANGLA_SPEC__
+    default n        
+    
+config __MMI_MULTITAP_MARATHI__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_MARATHI__
+    default n
+    
+config __MMI_MULTITAP_MYANMAR__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_MYANMAR__
+    default n
+    
+config __MMI_MULTITAP_TAMIL__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_TAMIL__
+    default n
+    
+config __MMI_MULTITAP_ASSAMESE__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_ASSAMESE__
+    default n
+    
+config __MMI_MULTITAP_GUJARATI__
+    option skipmk
+    bool 
+    default y if __MMI_LANG_GUJARATI__
+    default n
+    
+endif
+          

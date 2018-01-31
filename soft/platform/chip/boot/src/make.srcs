@@ -1,0 +1,33 @@
+ifneq "${BUILD_ROM}" "1"
+
+ifneq "${STANDALONE_RAMINIT_IMAGE}-${BUILD_RAMINIT_IMAGE}" "1-"
+C_SRC += \
+		boot_sector.c \
+		boot_xcv.c \
+		boot_sector_driver.c \
+		boot_mem_init.c \
+		boot_sys.c \
+
+ifneq "${CHIP_HAS_AP}" "1"
+C_SRC += boot_key.c
+endif
+endif
+
+ifneq "${STANDALONE_RAMINIT_IMAGE}-${BUILD_RAMINIT_IMAGE}" "1-1"
+C_SRC += boot_loader.c
+endif
+
+ifeq "${NAND_FLASH}" "1"
+C_SRC += boot_sector_nand.c
+endif
+
+
+
+
+S_SRC +=
+
+endif # BUILD_ROM != 1
+
+%/boot_loader.o: CT_MIPS16_CFLAGS=
+%/boot_sector.o: CT_MIPS16_CFLAGS=
+%/boot_sector_nand.o: CT_MIPS16_CFLAGS=

@@ -1,0 +1,4 @@
+S_SRC :=
+C_SRC := asicsimu.c asicsimu_boot_sector.c
+
+%/asicsimu_boot_sector.o: CT_MIPS16_CFLAGS=

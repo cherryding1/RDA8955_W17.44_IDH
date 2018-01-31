@@ -1,0 +1,82 @@
+menuconfig WIFI_SUPPORT
+	option skipmk
+	bool "wifi"
+	default n
+	
+if 	WIFI_SUPPORT
+
+choice
+	option skiph
+	option skipmk
+	prompt "32k clock pin used by wifi: 1/0"
+	default wifipin0
+		
+	config wifipin0
+		option skiph
+		option skipmk
+		bool	"CLK_OUT"
+	
+	config wifipin1
+		option skiph
+		option skipmk
+		bool	"32K_CLK"	
+endchoice
+		
+config WIFI_USE_32K_CLK_PIN
+	option skiph
+	string
+	default 0 if wifipin0
+	default 1 if wifipin1
+
+config WIFI_MODEL
+	option skiph
+	string "WIFI_MODEL"
+	default "rdawifi"
+
+config WIFI_CHIP
+	option skiph
+	string "WIFI_CHIP"
+	default "5991h"
+
+config __SCAN_INFO__
+	option skipmk
+	bool "__SCAN_INFO__"
+	default y
+	---help---
+	   __SCAN_INFO__
+
+config __USE_GPIO__
+	option skipmk
+	bool "__USE_GPIO__"
+	default y
+	---help---
+	   __USE_GPIO__
+
+config USE_SDIO_DMA
+	option skipmk
+	bool "USE_SDIO_DMA"
+	default y
+	---help---
+	   USE_SDIO_DMA
+
+config __USE_SDMMC1__
+	option skipmk
+	bool "__USE_SDMMC1__"
+	default y
+	---help---
+	   __USE_SDMMC1__
+
+config WIFI_SMARTCONFIG
+	option skipmk
+	bool "WIFI_SMARTCONFIG"
+	default n
+	---help---
+	   WIFI_SMARTCONFIG
+
+config WIFI_SNIFFER
+	option skipmk
+	bool "WIFI_SNIFFER"
+	default n
+	---help---
+	   WIFI_SNIFFER
+endif

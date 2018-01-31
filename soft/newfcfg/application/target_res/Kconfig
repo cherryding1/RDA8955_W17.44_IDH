@@ -1,0 +1,177 @@
+comment "--- application/target_res ---"
+
+menu "Language"
+source "newfcfg/application/target_res/Kconfig.lang"
+endmenu
+
+menu "Inputmethod"
+source "newfcfg/application/target_res/Kconfig.im"
+endmenu
+
+menu "Fonts"
+source "newfcfg/application/target_res/Kconfig.font"
+endmenu
+
+choice CT_ERES
+    option enum
+    option skiph
+    prompt "CT_ERES"
+    default qqvga_3232
+
+    config qqvga_3232
+    option skiph
+    bool "qqvga_3232"
+
+    config qvga_3264
+    option skiph
+    bool "qvga_3264"
+
+    config qcif_3264
+    option skiph
+    bool "qcif_3264"
+
+    config 128_128
+    option skiph
+    bool "128_128"
+	
+    config 160_128_3216
+    option skiph
+    bool "160_128_3216"
+
+    config 220_176_3232
+    option skiph
+    bool "220_176_3232"
+
+    config 320_240_6432
+    option skiph
+    bool "320_240_6432"
+
+    config 240_240
+    option skiph
+    bool "240_240"
+endchoice
+
+config TARGET_MEM_ULC_3216
+    bool "TARGET_MEM_ULC_3216"
+    option skiph
+    default y
+    ---help---
+        If yes, below Macro will be defined by default:
+            FLASH_OPT
+            MMI_ULC
+            MEM_ULC_3216
+            __MMI_RESOURCE_SLIM_ON_128X160__
+            __MMI_RESOURCE_SLIM_AUD_SOURCE__
+            __MMI_FM_SLIM_SKIN__
+            __MMI_SLIM_LISTMENU_NUMBER__
+            SLIM_AUDIO_PROFILE
+            __SLIM_EMS__
+            __MMI_SLIM_PROGRESS_ANIMATION__
+            DAF_DECODE
+            AUDIO_PLAYER_SUPPORT
+        If no, below Macro will be defined by default:
+            __MMI_EBOOK_READER__
+            USE_SW_PNG_DECODER
+
+config FLASH_OPT
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config MMI_ULC
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config MEM_ULC_3216
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_RESOURCE_SLIM_ON_128X160__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_RESOURCE_SLIM_AUD_SOURCE__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_FM_SLIM_SKIN__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_SLIM_LISTMENU_NUMBER__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config SLIM_AUDIO_PROFILE
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __SLIM_EMS__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_SLIM_PROGRESS_ANIMATION__
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_SLIM_CALCULATOR__
+	option skipmk
+	bool "Slim Calculator"
+	default y
+
+config DAF_DECODE
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config AUDIO_PLAYER_SUPPORT
+    option skipmk
+    def_bool y if TARGET_MEM_ULC_3216
+    def_bool n
+
+config __MMI_EBOOK_READER__
+	option skipmk
+	def_bool n if TARGET_MEM_ULC_3216
+	def_bool y
+
+config USE_SW_PNG_DECODER
+	option skipmk
+	def_bool n if TARGET_MEM_ULC_3216
+	def_bool y
+
+#config __MMI_SLIM_FILE_MANAGER__
+#    option skipmk
+#    bool "MMI_SLIM_FILE_MANAGER"
+#    def_bool n if TARGET_MEM_ULC_3216
+#
+#config __MMI_SLIM_CALENDAR__
+#    option skipmk
+#    bool "MMI_SLIM_CALENDAR"
+#    def_bool y if __MMI_RESOURCE_SLIM_ON_128X160__
+#
+#config __MMI_USING_BLACK_THEME_BG__
+#    option skipmk
+#    bool "__MMI_USING_BLACK_THEME_BG__"
+#    default y if qqvga_3232
+#    default n
+
+config __MMI_MM_SLIM_RESOURCE__
+    bool "MMI_MM_SLIM_RESOURCE"
+    option skipmk
+    default y
+    ---help---
+        MMI supports slim resource of multimedia.
+
+config __MMI_FOLDER_DETAIL__
+    option skipmk
+    bool "MMI_FOLDER_DETAIL"
+    default y

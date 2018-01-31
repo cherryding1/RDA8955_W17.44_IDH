@@ -1,0 +1,128 @@
+comment "--- platform/edrv/rfd ---"
+
+choice PA_MODEL
+	option enum
+	option skiph
+	prompt "PA MODEL"
+	default pasw_rda6625
+	---help---
+		It defines PA Model for integrated Chip.
+
+	config pasw_rda6625
+		option skiph
+		bool	"pasw_rda6625"
+
+	config pasw_rda6231
+		option skiph
+		bool	"pasw_rda6231"
+
+	config pasw_hs8292u
+		option skiph
+		bool	"pasw_hs8292u"
+endchoice
+
+config XCV_MODEL
+	option skiph
+	string "XCV Model"
+	default "xcv_8809e2" if 8809e2 && CT_ASIC_8809
+	default "xcv_8955" if CT_ASIC_8955
+	default "xcv_8909" if CT_ASIC_8909
+	---help---
+		It defines XCV Model for integrated Chip.
+
+config INTERNAL_XCV_CONTROL_PASW
+	option skipmk
+	bool "INTERNAL XCV CONTROL PASW"
+	default y
+	---help---
+		if XCV control pa and sw ,open this config.
+		if TCO control, then close.	
+
+config __RF_RDAPASW_TWOBAND_AS_FOURBAND__
+	option skipmk
+	bool "RF RDAPASW TWOBAND AS FOURBAND__"
+	default y
+	---help---
+		enable this config, open the forged	four freq function.
+
+config PASW_RDAPA
+	option skipmk
+	def_bool y if pasw_rda6625 || pasw_rda6231
+	def_bool n
+	---help---
+		It defines if PA use pasw_rda6625 or pasw_rda6231.
+
+config PASW_HS8292U
+	option skipmk
+	def_bool y if pasw_hs8292u
+	def_bool n
+	---help---
+		It defines if PA use hs8292u.
+
+config PASW_MODEM
+	option skipmk
+	bool "Modem PA"
+	default y if CT_MODEM = 1
+	default n
+	---help---
+		It defines if CT_MODEM = 1.
+
+config TXPOWER_TEMPERATURE_OFFSET
+	option skipmk
+	bool "TXPOWER TEMPERATURE OFFSET"
+	default y
+	---help---
+		To support RF temperature offset.
+
+config PA_VRAMP_220PF
+	option skiph
+	bool "PA VRAMP 220PF"
+	default y
+	---help---
+		PA RAMP use 220pF: 1/0
+
+config VOC_CLOCK_WORKAROUND
+	option skipmk
+	bool "VOC_CLOCK_WORKAROUND"
+	default n
+	---help---
+		Dynamic change VOC Frequency to improve RF RX deep channel perfermance.
+
+config XCV_PLL_SDM_MODE
+	option skipmk
+	bool "XCV_PLL_SDM_MODE"
+	default y if 8809e2
+	default n
+
+config MULTI_BANDWIDE
+    option skipmk
+    bool "MULTI_BANDWIDE"
+    default y
+    ---help---
+    	To support to adjust RF bandwide automatically.
+
+config USE_BB_DC_CANCEL
+    option skipmk
+    bool "USE_BB_DC_CANCEL"
+    default y
+    ---help---
+    	To support to eliminate the rest of DC.
+
+config XCV_RAMP_DEBUG
+	option skipmk
+	bool "SCV Ramp Debug"
+	default n
+
+config USE_EXT_XTAL_32K
+	option skiph
+	bool "use ext XTAL 32k"
+	default n
+	---help---
+		whether base band chip use exteran 32k clock or not,8805/8806 do not enable this
+
+config RF_LDO_MODE
+	option skipmk
+	bool "RF LDO MODE"
+	default n
+	---help---
+

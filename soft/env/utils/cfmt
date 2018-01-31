@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/bin/clang-format -i -style="{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, SortIncludes: false }" $@
+

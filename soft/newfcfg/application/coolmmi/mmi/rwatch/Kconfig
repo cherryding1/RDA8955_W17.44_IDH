@@ -1,0 +1,49 @@
+
+comment "--- Watch Options ---"
+
+config __MMI_R_WATCH__
+	option skipmk
+	bool "MMI Watch Idle"
+	default n
+	---help---
+	   MMI Idle Feature for Watch
+
+if __MMI_R_WATCH__
+config __MMI_R_WATCH_KEY_HANDLE__
+	option skipmk
+	bool "WATCH KEY HANDLE"
+	default n
+	---help---
+		Support only three key handle .
+
+config __MMI_TP_NO_SHORTCUT_FR__
+	option skipmk
+	bool 
+	default y if __MMI_TOUCH_SCREEN__
+	default n
+	---help---
+		Remove Touch Panel Shortcut Functions.
+
+config __MMI_R_WATCH_KIDS__
+	option skipmk
+	bool "Watch KIDS"
+	default n
+	---help---
+		Support Kids watch.
+
+config __MMI_R_WATCH_SERVICE__
+	option skipmk
+	bool "Watch Background Service"
+	default y
+	---help---
+		Start watch background service.
+
+config STACK_NOT_SUPPORT_EXT_UL_TBF
+	option skipmk
+	bool "Not Support EXT_UL_TBF"
+	default y
+	---help---
+		Support EXT_UL_TBF, will cost more current. Watch Project should Disable EXT_UL_TBF.
+
+endif
+

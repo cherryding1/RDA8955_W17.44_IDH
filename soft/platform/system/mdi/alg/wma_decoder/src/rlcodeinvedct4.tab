@@ -1,0 +1,1955 @@
+		//0x1600		VoC_code_section_1
+		//0x1600		CII_SetActualPower_VOC
+0x00030A86,	//0x1600		VoC_lw16i(REG6,0x3)
+0x08F91401,	//0x1602		VoC_lw16_d(REG1,0x8f9)
+0x08F64516,	//0x1604		VoC_bne16_rd(Label_derectreturn,REG6,0x8f6)
+0x09D20A84,	//0x1606		VoC_lw16i(REG4,0x9d2)
+0x09C61400,	//0x1608		VoC_lw16_d(REG0,0x9c6)
+0x00000A87,	//0x160a		VoC_lw16i(REG7,0x0)
+0x09D06C2A,	//0x160c		VoC_bez16_d(Label_channel_finish,0x9d0)
+0x09C66C28,	//0x160e		VoC_bez16_d(Label_channel_finish,0x9c6)
+0x09CE1402,	//0x1610		VoC_lw16_d(REG2,0x9ce)
+0xFFC0E5D2,	//0x1612		VoC_NAD	|	VoC_jump(Label_SetActualPower)
+		//0x1614		Label_continue
+0x161831C1,	//0x1614		VoC_bnez16_r(Label_rightchannel,REG1)
+		//0x1616		Label_derectreturn
+0xFFC0E580,	//0x1616		VoC_NAD	|	VoC_return
+		//0x1618		Label_rightchannel
+0x09FA0A84,	//0x1618		VoC_lw16i(REG4,0x9fa)
+0x09EE1400,	//0x161a		VoC_lw16_d(REG0,0x9ee)
+0x00000A87,	//0x161c		VoC_lw16i(REG7,0x0)
+0x09F86C18,	//0x161e		VoC_bez16_d(Label_channel_finish,0x9f8)
+0x09EE6C16,	//0x1620		VoC_bez16_d(Label_channel_finish,0x9ee)
+0x09F61402,	//0x1622		VoC_lw16_d(REG2,0x9f6)
+		//0x1624		Label_SetActualPower
+0x0A86F030,	//0x1624		VoC_lw16i(REG6,0x0)(lo)	|	VoC_lw16i_short(INC0,0x1,DEFAULT)
+0x0A850000,	//0x1626		VoC_lw16i(REG5,0x1)(lo)	|	VoC_lw16i(REG6,0x0)(hi)
+0xFFC00001,	//0x1628		VoC_NAD	|	VoC_lw16i(REG5,0x1)(hi)
+		//0x162a		Loop_incr
+0x16363496,	//0x162a		VoC_bngt16_rr(Label_channel_finish,REG2,REG6)
+0xFFC0D883,	//0x162c		VoC_NOP	|	VoC_lw16inc_p(REG3,REG0,DEFAULT)
+0x16333183,	//0x162e		VoC_bez16_r(Label_jump,REG3)
+0x00010A87,	//0x1630		VoC_lw16i(REG7,0x1)
+0xC1AEE5C4,	//0x1632		VoC_add16_rr(REG6,REG6,REG5,DEFAULT)	|	VoC_jump(Label_channel_finish)
+		//0x1633		Label_jump
+0xFFC0E5F6,	//0x1634		VoC_NAD	|	VoC_jump(Loop_incr)
+		//0x1636		Label_channel_finish
+0x00010A85,	//0x1636		VoC_lw16i(REG5,0x1)
+0xC269DC47,	//0x1638		VoC_sub16_rr(REG1,REG1,REG5,DEFAULT)	|	VoC_sw16_p(REG7,REG4,DEFAULT)
+0x16142B00,	//0x163a		VoC_jump_lg(Label_continue)
+		//0x163c		CII_qstCalcQuantStep_VOC
+0x00920A85,	//0x163c		VoC_lw16i(REG5,0x92)
+0x00120A84,	//0x163e		VoC_lw16i(REG4,0x12)
+0x00000A87,	//0x1640		VoC_lw16i(REG7,0x0)
+0x16623426,	//0x1642		VoC_bgt16_rr(Label_lt18,REG4,REG6)
+0x1649342E,	//0x1644		VoC_bgt16_rr(Label_lt146,REG5,REG6)
+0x2B00FF47,	//0x1646		VoC_jump_lg(CQSLabel_RETURN)(lo)	|	VoC_lw32z(RL7,DEFAULT)
+0xC3A41673,	//0x1648		VoC_sub16_rr(REG4,REG6,REG4,DEFAULT)	|	VoC_jump_lg(CQSLabel_RETURN)(hi)
+		//0x1649		Label_lt146
+0x00180A85,	//0x164a		VoC_lw16i(REG5,0x18)
+0x0A80F8FC,	//0x164c		VoC_lw16i(REG0,0x622a)(lo)	|	VoC_shr16_ri(REG4,0xffffffff,DEFAULT)
+0xC104622A,	//0x164e		VoC_add16_rr(REG4,REG4,REG0,DEFAULT)	|	VoC_lw16i(REG0,0x622a)(hi)
+0xD9A7F81E,	//0x1650		VoC_lw32_p(RL7,REG4,DEFAULT)	|	VoC_shr16_ri(REG6,0x3,DEFAULT)
+0x3307C376,	//0x1652		VoC_bez32_r(CQSLabel_RETURN,RL7)(lo)	|	VoC_sub16_rr(REG6,REG5,REG6,DEFAULT)
+0x0AC41673,	//0x1654		VoC_lw16i(REG4,0xffff)(lo)	|	VoC_bez32_r(CQSLabel_RETURN,RL7)(hi)
+0x0A857FFF,	//0x1656		VoC_lw16i(REG5,0x3fff)(lo)	|	VoC_lw16i(REG4,0xffff)(hi)
+0x0A803FFF,	//0x1658		VoC_lw16i(REG0,0x1)(lo)	|	VoC_lw16i(REG5,0x3fff)(hi)
+0xFFC00001,	//0x165a		VoC_NAD	|	VoC_lw16i(REG0,0x1)(hi)
+		//0x165c		Loop_NormUInt_start
+0x16733697,	//0x165c		VoC_bngt32_rr(CQSLabel_RETURN,REG45,RL7)
+0xC186FBFF,	//0x165e		VoC_add16_rr(REG6,REG6,REG0,DEFAULT)	|	VoC_shr32_ri(RL7,0xffffffff,DEFAULT)
+0xFFC0E5FC,	//0x1660		VoC_NAD	|	VoC_jump(Loop_NormUInt_start)
+		//0x1662		Label_lt18
+0x39B10A8E,	//0x1662		VoC_lw16i(RL7_LO,0x39b1)
+0x0DE90A8F,	//0x1664		VoC_lw16i(RL7_HI,0xde9)
+0x00000A85,	//0x1666		VoC_lw16i(REG5,0x0)
+0x166F3106,	//0x1668		VoC_bgtz16_r(Label_gtz,REG6)
+0x0ACEC336,	//0x166a		VoC_lw16i(RL7_LO,0x89bf)(lo)	|	VoC_sub16_rr(REG6,REG4,REG6,DEFAULT)
+0x0A8F09BF,	//0x166c		VoC_lw16i(RL7_HI,0x620)(lo)	|	VoC_lw16i(RL7_LO,0x89bf)(hi)
+0xF81E0620,	//0x166e		VoC_shr16_ri(REG6,0x3,DEFAULT)	|	VoC_lw16i(RL7_HI,0x620)(hi)
+		//0x166f		Label_gtz
+0x001B0A84,	//0x1670		VoC_lw16i(REG4,0x1b)
+0xE580C336,	//0x1672		VoC_return	|	VoC_sub16_rr(REG6,REG4,REG6,DEFAULT)
+		//0x1673		CQSLabel_RETURN
+		//0x1674		CII_MULT_HI
+0x00200A96,	//0x1674		VoC_lw16i(STATUS,0x20)
+0xFF3AFF31,	//0x1676		VoC_movreg32(REG45,RL7,DEFAULT)	|	VoC_movreg32(REG23,RL6,DEFAULT)
+0xF90CF90A,	//0x1678		VoC_shru16_ri(REG4,0x1,DEFAULT)	|	VoC_shru16_ri(REG2,0x1,DEFAULT)
+0xF1DAF7F9,	//0x167a		VoC_lw16i_short(FORMATX,0xe,DEFAULT)	|	VoC_lw16i_short(FORMAT32,0xffffffff,DEFAULT)
+0xCE55CCEC,	//0x167c		VoC_macX_rr(REG2,REG5,DEFAULT)	|	VoC_multf32_rr(ACC0,REG3,REG5,DEFAULT)
+0xFFC0CE5C,	//0x167e		VoC_NOP	|	VoC_macX_rr(REG3,REG4,DEFAULT)
+0xF019FF26,	//0x1680		VoC_lw16i_short(FORMAT32,0x0,DEFAULT)	|	VoC_movreg32(RL6,ACC0,DEFAULT)
+0x0A96F01A,	//0x1682		VoC_lw16i(STATUS,0x60)(lo)	|	VoC_lw16i_short(FORMATX,0x0,DEFAULT)
+0xE5800060,	//0x1684		VoC_return	|	VoC_lw16i(STATUS,0x60)(hi)
+		//0x1686		CII_MULT_HI_DWORD
+0xFC0FFC0E,	//0x1686		VoC_shru32_ri(RL7,0x1,DEFAULT)	|	VoC_shru32_ri(RL6,0x1,DEFAULT)
+0xFF3AFF31,	//0x1688		VoC_movreg32(REG45,RL7,DEFAULT)	|	VoC_movreg32(REG23,RL6,DEFAULT)
+0xF90CF90A,	//0x168a		VoC_shru16_ri(REG4,0x1,DEFAULT)	|	VoC_shru16_ri(REG2,0x1,DEFAULT)
+0xF1BAF7D9,	//0x168c		VoC_lw16i_short(FORMATX,0xd,DEFAULT)	|	VoC_lw16i_short(FORMAT32,0xfffffffe,DEFAULT)
+0xCE55CCEC,	//0x168e		VoC_macX_rr(REG2,REG5,DEFAULT)	|	VoC_multf32_rr(ACC0,REG3,REG5,DEFAULT)
+0xF019CE5C,	//0x1690		VoC_lw16i_short(FORMAT32,0x0,DEFAULT)	|	VoC_macX_rr(REG3,REG4,DEFAULT)
+0xFF26F01A,	//0x1692		VoC_movreg32(RL6,ACC0,DEFAULT)	|	VoC_lw16i_short(FORMATX,0x0,DEFAULT)
+0xC3BEE580,	//0x1694		VoC_sub16_rr(REG6,REG6,REG7,DEFAULT)	|	VoC_return
+		//0x1695		CII_Align2FracBits
+0x00200A85,	//0x1696		VoC_lw16i(REG5,0x20)
+0x169C3246,	//0x1698		VoC_bnltz16_r(iValue_CON1,REG6)
+0xE5C7FEF6,	//0x169a		VoC_jump(iValue_END)	|	VoC_shru32_rr(RL6,REG6,DEFAULT)
+		//0x169c		iValue_CON1
+0x169F342E,	//0x169c		VoC_bgt16_rr(iValue_CON2,REG5,REG6)
+0xFEB6E5C3,	//0x169e		VoC_shr32_rr(RL6,REG6,DEFAULT)	|	VoC_jump(iValue_CON3)
+		//0x169f		iValue_CON2
+0xFF46E5C2,	//0x16a0		VoC_lw32z(RL6,DEFAULT)	|	VoC_jump(iValue_END)
+		//0x16a1		iValue_CON3
+		//0x16a2		iValue_END
+0xFFC0E580,	//0x16a2		VoC_NAD	|	VoC_return
+		//0x16a4		CII_NormUInt
+0x7FFF0AC8,	//0x16a4		VoC_lw16i(ACC0_LO,0xffff)
+0x3FFF0A89,	//0x16a6		VoC_lw16i(ACC0_HI,0x3fff)
+0x00000A86,	//0x16a8		VoC_lw16i(REG6,0x0)
+0x40000AC7,	//0x16aa		VoC_lw16i(REG7,0xc000)
+0x16AF3346,	//0x16ac		VoC_bnez32_r(NormUInt_Con,RL6)
+0xDF46E580,	//0x16ae		VoC_push32(RL6,DEFAULT)	|	VoC_return
+		//0x16af		NormUInt_Con
+0xF050E4DE,	//0x16b0		VoC_lw16i_short(INC0,0x2,DEFAULT)	|	VoC_and32_rr(RL6,REG67,DEFAULT)
+0x16B63306,	//0x16b2		VoC_bez32_r(NormUInt_Con_low,RL6)
+0xE5CFDF06,	//0x16b4		VoC_jump(uiV_End)	|	VoC_pop32(RL6,DEFAULT)
+		//0x16b6		NormUInt_Con_low
+0xDF06FF23,	//0x16b6		VoC_pop32(RL6,DEFAULT)	|	VoC_movreg32(REG67,ACC0,DEFAULT)
+0xF050FC0C,	//0x16b8		VoC_lw16i_short(INC0,0x2,DEFAULT)	|	VoC_shru32_ri(ACC0,0x1,DEFAULT)
+		//0x16ba		uiV_Start
+0x16BF36A6,	//0x16ba		VoC_bngt32_rr(uiV_Con,ACC0,RL6)
+0xDE00FDF6,	//0x16bc		VoC_inc_p(REG0,DEFAULT)	|	VoC_shru32_ri(RL6,0xfffffffe,DEFAULT)
+0xF030E5FC,	//0x16be		VoC_lw16i_short(INC0,0x1,DEFAULT)	|	VoC_jump(uiV_Start)
+		//0x16bf		uiV_Con
+0x16C4369E,	//0x16c0		VoC_bngt32_rr(uiV_End,REG67,RL6)
+0xDE00FDFE,	//0x16c2		VoC_inc_p(REG0,DEFAULT)	|	VoC_shru32_ri(RL6,0xffffffff,DEFAULT)
+		//0x16c4		uiV_End
+0xFFC0E580,	//0x16c4		VoC_NAD	|	VoC_return
+		//0x16c6		CII_quickRand
+0x00200A96,	//0x16c6		VoC_lw16i(STATUS,0x20)
+0x09C11404,	//0x16c8		VoC_lw16_d(REG4,0x9c1)
+0x11180A85,	//0x16ca		VoC_lw16i(REG5,0x1118)
+0x1401C165,	//0x16cc		VoC_lw16_d(REG1,0x9c0)(lo)	|	VoC_add16_rr(REG5,REG5,REG4,DEFAULT)
+0xFF4309C0,	//0x16ce		VoC_lw32z(REG67,DEFAULT)	|	VoC_lw16_d(REG1,0x9c0)(hi)
+0x09C07207,	//0x16d0		VoC_bnltz16_d(Lable_NLTZ,0x9c0)
+0x7FFF0A80,	//0x16d2		VoC_lw16i(REG0,0x7fff)
+0xE401D856,	//0x16d4		VoC_and16_rr(REG1,REG0,DEFAULT)	|	VoC_lw16_p(REG6,REG5,DEFAULT)
+0xD855FB8B,	//0x16d6		VoC_lw16_p(REG5,REG5,DEFAULT)	|	VoC_shr32_ri(REG67,0xfffffff1,DEFAULT)
+		//0x16d7		Lable_NLTZ
+0x11A90724,	//0x16d8		VoC_add16_rd(REG4,REG4,0x11a9)
+0x1504CC6C,	//0x16da		VoC_sw16_d(REG4,0x9c1)(lo)	|	VoC_multf32_rr(ACC0,REG1,REG5,DEFAULT)
+0xC91C09C1,	//0x16dc		VoC_add32_rr(ACC0,ACC0,REG67,DEFAULT)	|	VoC_sw16_d(REG4,0x9c1)(hi)
+0x09C21403,	//0x16de		VoC_lw16_d(REG3,0x9c2)
+0x11250A85,	//0x16e0		VoC_lw16i(REG5,0x1125)
+0x0A87C15D,	//0x16e2		VoC_lw16i(REG7,0x0)(lo)	|	VoC_add16_rr(REG5,REG5,REG3,DEFAULT)
+0x071B0000,	//0x16e4		VoC_add16_rd(REG3,REG3,0x11a9)(lo)	|	VoC_lw16i(REG7,0x0)(hi)
+0xD85611A9,	//0x16e6		VoC_lw16_p(REG6,REG5,DEFAULT)	|	VoC_add16_rd(REG3,REG3,0x11a9)(hi)
+0x09C21503,	//0x16e8		VoC_sw16_d(REG3,0x9c2)
+0x0A81C91B,	//0x16ea		VoC_lw16i(REG1,0xd)(lo)	|	VoC_add32_rr(REG67,ACC0,REG67,DEFAULT)
+0x0A82000D,	//0x16ec		VoC_lw16i(REG2,0x3)(lo)	|	VoC_lw16i(REG1,0xd)(hi)
+0x15060003,	//0x16ee		VoC_sw16_d(REG6,0x9c0)(lo)	|	VoC_lw16i(REG2,0x3)(hi)
+0x0A8009C0,	//0x16f0		VoC_lw16i(REG0,0x0)(lo)	|	VoC_sw16_d(REG6,0x9c0)(hi)
+0xFD9B0000,	//0x16f2		VoC_shru32_ri(REG67,0xfffffff3,DEFAULT)	|	VoC_lw16i(REG0,0x0)(hi)
+0x09C13821,	//0x16f4		VoC_bgt16_rd(LCA_OVER,REG1,0x9c1)
+0x09C11500,	//0x16f6		VoC_sw16_d(REG0,0x9c1)
+		//0x16f8		LCA_OVER
+0x09C23822,	//0x16f8		VoC_bgt16_rd(LCC_OVER,REG2,0x9c2)
+0x09C21500,	//0x16fa		VoC_sw16_d(REG0,0x9c2)
+		//0x16fc		LCC_OVER
+0xFA13FF1F,	//0x16fc		VoC_shr32_ri(REG67,0x2,DEFAULT)	|	VoC_movreg32(RL7,REG67,DEFAULT)
+0xFFC0FA27,	//0x16fe		VoC_NOP	|	VoC_shr32_ri(RL7,0x4,DEFAULT)
+0x0A96C8FF,	//0x1700		VoC_lw16i(STATUS,0x60)(lo)	|	VoC_add32_rr(RL7,REG67,RL7,DEFAULT)
+0x09BE0060,	//0x1702		VoC_sub32_rd(RL6,RL7,0x9be)(lo)	|	VoC_lw16i(STATUS,0x60)(hi)
+0x158709BE,	//0x1704		VoC_sw32_d(RL7,0x9be)(lo)	|	VoC_sub32_rd(RL6,RL7,0x9be)(hi)
+0xE58009BE,	//0x1706		VoC_return	|	VoC_sw32_d(RL7,0x9be)(hi)
+		//0x1708		CII_uiInverseMaxWeight
+0x001E0A81,	//0x1708		VoC_lw16i(REG1,0x1e)
+0x00150A82,	//0x170a		VoC_lw16i(REG2,0x15)
+0x11B90B09,	//0x170c		VoC_sub16_dr(REG1,0x11b9,REG1)
+0x11B90B12,	//0x170e		VoC_sub16_dr(REG2,0x11b9,REG2)
+0x00000A8F,	//0x1710		VoC_lw16i(RL7_HI,0x0)
+0x0A8EC050,	//0x1712		VoC_lw16i(RL7_LO,0x1)(lo)	|	VoC_add16_rr(REG0,REG1,REG2,DEFAULT)
+0x0B020001,	//0x1714		VoC_sub16_dr(REG2,0x11a8,REG0)(lo)	|	VoC_lw16i(RL7_LO,0x1)(hi)
+0x0A9611A8,	//0x1716		VoC_lw16i(STATUS,0x60)(lo)	|	VoC_sub16_dr(REG2,0x11a8,REG0)(hi)
+0xFED70060,	//0x1718		VoC_shru32_rr(RL7,REG2,DEFAULT)	|	VoC_lw16i(STATUS,0x60)(hi)
+0x36BEDFE9,	//0x171a		VoC_bngt32_rr(INVERSE_CON1,RL7,RL6)(lo)	|	VoC_push16(RA,DEFAULT)
+0x0ACC1724,	//0x171c		VoC_lw16i(RL6_LO,0xffff)(lo)	|	VoC_bngt32_rr(INVERSE_CON1,RL7,RL6)(hi)
+0x0ACD7FFF,	//0x171e		VoC_lw16i(RL6_HI,0xffff)(lo)	|	VoC_lw16i(RL6_LO,0xffff)(hi)
+0x2B007FFF,	//0x1720		VoC_jump_lg(INVERSE_END)(lo)	|	VoC_lw16i(RL6_HI,0xffff)(hi)
+0xFFC01774,	//0x1722		VoC_NAD	|	VoC_jump_lg(INVERSE_END)(hi)
+		//0x1724		INVERSE_CON1
+		//0x1724		COM_START1
+0x00000A8E,	//0x1724		VoC_lw16i(RL7_LO,0x0)
+0x70000ACF,	//0x1726		VoC_lw16i(RL7_HI,0xf000)
+0xFFC0E4F7,	//0x1728		VoC_NOP	|	VoC_and32_rr(RL7,RL6,DEFAULT)
+0x172E3307,	//0x172a		VoC_bez32_r(iExp_Con1,RL7)
+0xFFC0E5C6,	//0x172c		VoC_NAD	|	VoC_jump(COM_START2)
+		//0x172e		iExp_Con1
+0x11AC0780,	//0x172e		VoC_sub16_rd(REG0,REG0,0x11ac)
+0xE5F3FDE6,	//0x1730		VoC_jump(COM_START1)	|	VoC_shru32_ri(RL6,0xfffffffc,DEFAULT)
+		//0x1732		COM_START2
+0x00000A8E,	//0x1732		VoC_lw16i(RL7_LO,0x0)
+0x00000ACF,	//0x1734		VoC_lw16i(RL7_HI,0x8000)
+0xFFC0E4F7,	//0x1736		VoC_NOP	|	VoC_and32_rr(RL7,RL6,DEFAULT)
+0x173C3307,	//0x1738		VoC_bez32_r(iExp_Con2,RL7)
+0xFFC0E5C6,	//0x173a		VoC_NAD	|	VoC_jump(iExp_End2)
+		//0x173c		iExp_Con2
+0x11A90780,	//0x173c		VoC_sub16_rd(REG0,REG0,0x11a9)
+0xE5F3FDFE,	//0x173e		VoC_jump(COM_START2)	|	VoC_shru32_ri(RL6,0xffffffff,DEFAULT)
+		//0x1740		iExp_End2
+0x11A90780,	//0x1740		VoC_sub16_rd(REG0,REG0,0x11a9)
+0x3240FDFE,	//0x1742		VoC_bnltz16_r(INVERSE_CON2,REG0)(lo)	|	VoC_shru32_ri(RL6,0xffffffff,DEFAULT)
+0x0ACC174C,	//0x1744		VoC_lw16i(RL6_LO,0xffff)(lo)	|	VoC_bnltz16_r(INVERSE_CON2,REG0)(hi)
+0x0ACD7FFF,	//0x1746		VoC_lw16i(RL6_HI,0xffff)(lo)	|	VoC_lw16i(RL6_LO,0xffff)(hi)
+0x2B007FFF,	//0x1748		VoC_jump_lg(INVERSE_END)(lo)	|	VoC_lw16i(RL6_HI,0xffff)(hi)
+0xFFC01774,	//0x174a		VoC_NAD	|	VoC_jump_lg(INVERSE_END)(hi)
+		//0x174c		INVERSE_CON2
+0x00080A82,	//0x174c		VoC_lw16i(REG2,0x8)
+0x11B90B11,	//0x174e		VoC_sub16_dr(REG1,0x11b9,REG2)
+0xFECDFF35,	//0x1750		VoC_shru32_rr(ACC1,REG1,DEFAULT)	|	VoC_movreg32(ACC1,RL6,DEFAULT)
+0x11A80B12,	//0x1752		VoC_sub16_dr(REG2,0x11a8,REG2)
+0x632A0A85,	//0x1754		VoC_lw16i(REG5,0x632a)
+0xE144FED6,	//0x1756		VoC_movreg16(REG4,ACC1_LO,DEFAULT)	|	VoC_shru32_rr(RL6,REG2,DEFAULT)
+0x0A8EF9FC,	//0x1758		VoC_lw16i(RL7_LO,0x1)(lo)	|	VoC_shru16_ri(REG4,0xffffffff,DEFAULT)
+0xC1640001,	//0x175a		VoC_add16_rr(REG4,REG5,REG4,DEFAULT)	|	VoC_lw16i(RL7_LO,0x1)(hi)
+0x00000A8F,	//0x175c		VoC_lw16i(RL7_HI,0x0)
+0xC97DD9A4,	//0x175e		VoC_add32_rr(ACC1,ACC1,RL7,DEFAULT)	|	VoC_lw32_p(ACC0,REG4,DEFAULT)
+0xE144DF44,	//0x1760		VoC_movreg16(REG4,ACC1_LO,DEFAULT)	|	VoC_push32(ACC0,DEFAULT)
+0xC164F9FC,	//0x1762		VoC_add16_rr(REG4,REG5,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0xffffffff,DEFAULT)
+0xD9A5FC0C,	//0x1764		VoC_lw32_p(ACC1,REG4,DEFAULT)	|	VoC_shru32_ri(ACC0,0x1,DEFAULT)
+0xCB2FFC0D,	//0x1766		VoC_sub32_rr(RL7,ACC0,ACC1,DEFAULT)	|	VoC_shru32_ri(ACC1,0x1,DEFAULT)
+0xFDFFFFC0,	//0x1768		VoC_shru32_ri(RL7,0xffffffff,DEFAULT)	|	VoC_NOP
+0x16862B80,	//0x176a		VoC_jal(CII_MULT_HI_DWORD)
+0xFC0EDF07,	//0x176c		VoC_shru32_ri(RL6,0x1,DEFAULT)	|	VoC_pop32(RL7,DEFAULT)
+0xCBF6FC0F,	//0x176e		VoC_sub32_rr(RL6,RL7,RL6,DEFAULT)	|	VoC_shru32_ri(RL7,0x1,DEFAULT)
+0xFDFEFFC0,	//0x1770		VoC_shru32_ri(RL6,0xffffffff,DEFAULT)	|	VoC_NOP
+0xFEC6FFC0,	//0x1772		VoC_shru32_rr(RL6,REG0,DEFAULT)	|	VoC_NOP
+		//0x1774		INVERSE_END
+0x0A96DFA9,	//0x1774		VoC_lw16i(STATUS,0x20)(lo)	|	VoC_pop16(RA,DEFAULT)
+0xE5800020,	//0x1776		VoC_return	|	VoC_lw16i(STATUS,0x20)(hi)
+		//0x1778		CII_prvInverseQuantizeLowRate
+0x1400DFE9,	//0x1778		VoC_lw16_d(REG0,0x8e4)(lo)	|	VoC_push16(RA,DEFAULT)
+0x318008E4,	//0x177a		VoC_bez16_r(IQLRChannel_left,REG0)(lo)	|	VoC_lw16_d(REG0,0x8e4)(hi)
+0x0A851780,	//0x177c		VoC_lw16i(REG5,0x9ee)(lo)	|	VoC_bez16_r(IQLRChannel_left,REG0)(hi)
+0xE5C309EE,	//0x177e		VoC_jump(IQLRChannel_Over)	|	VoC_lw16i(REG5,0x9ee)(hi)
+		//0x1780		IQLRChannel_left
+0x09C60A85,	//0x1780		VoC_lw16i(REG5,0x9c6)
+		//0x1782		IQLRChannel_Over
+0x00000A80,	//0x1782		VoC_lw16i(REG0,0x0)
+0x0C4B1505,	//0x1784		VoC_sw16_d(REG5,0xc4b)
+0x00240A84,	//0x1786		VoC_lw16i(REG4,0x24)
+0x26A61500,	//0x1788		VoC_sw16_d(REG0,0x26a6)
+0x1500C12D,	//0x178a		VoC_sw16_d(REG0,0x26a8)(lo)	|	VoC_add16_rr(REG5,REG4,REG5,DEFAULT)
+0x150026A8,	//0x178c		VoC_sw16_d(REG0,0x26a7)(lo)	|	VoC_sw16_d(REG0,0x26a8)(hi)
+0xD9AE26A7,	//0x178e		VoC_lw32_p(RL6,REG5,DEFAULT)	|	VoC_sw16_d(REG0,0x26a7)(hi)
+0x26F01500,	//0x1790		VoC_sw16_d(REG0,0x26f0)
+0x17082B80,	//0x1792		VoC_jal(CII_uiInverseMaxWeight)
+0x26AA1586,	//0x1794		VoC_sw32_d(RL6,0x26aa)
+0x09AE0A85,	//0x1796		VoC_lw16i(REG5,0x9ae)
+0x09AE1484,	//0x1798		VoC_lw32_d(ACC0,0x9ae)
+0x11AA072D,	//0x179a		VoC_add16_rd(REG5,REG5,0x11aa)
+0x26AE1584,	//0x179c		VoC_sw32_d(ACC0,0x26ae)
+0xFFC0D9AF,	//0x179e		VoC_NAD	|	VoC_lw32_p(RL7,REG5,DEFAULT)
+0x16862B80,	//0x17a0		VoC_jal(CII_MULT_HI_DWORD)
+0x00200A80,	//0x17a2		VoC_lw16i(REG0,0x20)
+0x00000A81,	//0x17a4		VoC_lw16i(REG1,0x0)
+0x001E0A82,	//0x17a6		VoC_lw16i(REG2,0x1e)
+0x00000A83,	//0x17a8		VoC_lw16i(REG3,0x0)
+0x1586CA40,	//0x17aa		VoC_sw32_d(RL6,0x26ac)(lo)	|	VoC_sub32_rr(REG01,REG23,REG01,DEFAULT)
+0x090726AC,	//0x17ac		VoC_add32_rd(RL7,REG01,0x26ae)(lo)	|	VoC_sw32_d(RL6,0x26ac)(hi)
+0x148626AE,	//0x17ae		VoC_lw32_d(RL6,0x26ac)(lo)	|	VoC_add32_rd(RL7,REG01,0x26ae)(hi)
+0x158726AC,	//0x17b0		VoC_sw32_d(RL7,0x26ae)(lo)	|	VoC_lw32_d(RL6,0x26ac)(hi)
+0x148026AE,	//0x17b2		VoC_lw32_d(REG01,0x26ae)(lo)	|	VoC_sw32_d(RL7,0x26ae)(hi)
+0xFFC026AE,	//0x17b4		VoC_NAD	|	VoC_lw32_d(REG01,0x26ae)(hi)
+0x16A42B80,	//0x17b6		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x17b8		VoC_lw16i(REG1,0x0)
+0x26AC1586,	//0x17ba		VoC_sw32_d(RL6,0x26ac)
+0x26AE1580,	//0x17bc		VoC_sw32_d(REG01,0x26ae)
+0x00240A84,	//0x17be		VoC_lw16i(REG4,0x24)
+0x00000A80,	//0x17c0		VoC_lw16i(REG0,0x0)
+0x0C4B0725,	//0x17c2		VoC_add16_rd(REG5,REG4,0xc4b)
+0x11A80B02,	//0x17c4		VoC_sub16_dr(REG2,0x11a8,REG0)
+0x0A80D9AE,	//0x17c6		VoC_lw16i(REG0,0x0)(lo)	|	VoC_lw32_p(RL6,REG5,DEFAULT)
+0xFE960000,	//0x17c8		VoC_shr32_rr(RL6,REG2,DEFAULT)	|	VoC_lw16i(REG0,0x0)(hi)
+0x26B01580,	//0x17ca		VoC_sw32_d(REG01,0x26b0)
+0x26B21586,	//0x17cc		VoC_sw32_d(RL6,0x26b2)
+0x16A42B80,	//0x17ce		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x17d0		VoC_lw16i(REG1,0x0)
+0x26B21586,	//0x17d2		VoC_sw32_d(RL6,0x26b2)
+0x26B01580,	//0x17d4		VoC_sw32_d(REG01,0x26b0)
+0x08EE6C04,	//0x17d6		VoC_bez16_d(LowCutOff_START_not,0x8ee)
+0x18502B00,	//0x17d8		VoC_jump_lg(LowCutOff_START)
+		//0x17da		LowCutOff_START_not
+0x0C4B1405,	//0x17da		VoC_lw16_d(REG5,0xc4b)
+0x11B4072C,	//0x17dc		VoC_add16_rd(REG4,REG5,0x11b4)
+0x0000180B,	//0x17de		VoC_lw16i_set_inc(REG3,0x0,0x2)
+0x140780E3,	//0x17e0		VoC_lw16_d(REG7,0x9a5)(lo)	|	VoC_add16_rp(REG3,REG3,REG4,DEFAULT)
+0xFF4609A5,	//0x17e2		VoC_lw32z(RL6,DEFAULT)	|	VoC_lw16_d(REG7,0x9a5)(hi)
+0x09A51400,	//0x17e4		VoC_lw16_d(REG0,0x9a5)
+0xDDDEE7C1,	//0x17e6		VoC_sw32inc_p(RL6,REG3,DEFAULT)	|	VoC_loop_r_short(REG7,DEFAULT)
+		//0x17e7		VoC_endloop0
+0x26A81500,	//0x17e8		VoC_sw16_d(REG0,0x26a8)
+		//0x17ea		FOR_LOOP_START
+0x09A61400,	//0x17ea		VoC_lw16_d(REG0,0x9a6)
+0x183A3488,	//0x17ec		VoC_bngt16_rr(FOR_LOOP_END,REG1,REG0)
+0x000E0A84,	//0x17ee		VoC_lw16i(REG4,0xe)
+0x0C4B0724,	//0x17f0		VoC_add16_rd(REG4,REG4,0xc4b)
+0xD845F8F8,	//0x17f2		VoC_lw16_p(REG5,REG4,DEFAULT)	|	VoC_shr16_ri(REG0,0xffffffff,DEFAULT)
+0x26B00A83,	//0x17f4		VoC_lw16i(REG3,0x26b0)
+0x0B1EC02D,	//0x17f6		VoC_sub16_dr(REG6,0x11a8,REG3)(lo)	|	VoC_add16_rr(REG5,REG0,REG5,DEFAULT)
+0x0A8211A8,	//0x17f8		VoC_lw16i(REG2,0x15)(lo)	|	VoC_sub16_dr(REG6,0x11a8,REG3)(hi)
+0xD9AE0015,	//0x17fa		VoC_lw32_p(RL6,REG5,DEFAULT)	|	VoC_lw16i(REG2,0x15)(hi)
+0xFEB6C0D0,	//0x17fc		VoC_shr32_rr(RL6,REG6,DEFAULT)	|	VoC_add16_rr(REG0,REG3,REG2,DEFAULT)
+0x16A42B80,	//0x17fe		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x1800		VoC_lw16i(REG1,0x0)
+0x26AC1487,	//0x1802		VoC_lw32_d(RL7,0x26ac)
+0x26B81580,	//0x1804		VoC_sw32_d(REG01,0x26b8)
+0x16742B80,	//0x1806		VoC_jal(CII_MULT_HI)
+0x0C4B1400,	//0x1808		VoC_lw16_d(REG0,0xc4b)
+0x26A71404,	//0x180a		VoC_lw16_d(REG4,0x26a7)
+0x26AE1407,	//0x180c		VoC_lw16_d(REG7,0x26ae)
+0x14068105,	//0x180e		VoC_lw16_d(REG6,0x26b8)(lo)	|	VoC_add16_rp(REG5,REG4,REG0,DEFAULT)
+0xD85426B8,	//0x1810		VoC_lw16_p(REG4,REG5,DEFAULT)	|	VoC_lw16_d(REG6,0x26b8)(hi)
+0x00000A85,	//0x1812		VoC_lw16i(REG5,0x0)
+0xFB67FF17,	//0x1814		VoC_shr32_ri(RL7,0xffffffec,DEFAULT)	|	VoC_movreg32(RL7,REG45,DEFAULT)
+0x16742B80,	//0x1816		VoC_jal(CII_MULT_HI)
+0x0A84C1F6,	//0x1818		VoC_lw16i(REG4,0x2a)(lo)	|	VoC_add16_rr(REG6,REG7,REG6,DEFAULT)
+0xC3A6002A,	//0x181a		VoC_sub16_rr(REG6,REG6,REG4,DEFAULT)	|	VoC_lw16i(REG4,0x2a)(hi)
+0x00000A87,	//0x181c		VoC_lw16i(REG7,0x0)
+0x000F0A81,	//0x181e		VoC_lw16i(REG1,0xf)
+0x26BC1583,	//0x1820		VoC_sw32_d(REG67,0x26bc)
+0x00050A87,	//0x1822		VoC_lw16i(REG7,0x5)
+0x16952B80,	//0x1824		VoC_jal(CII_Align2FracBits)
+0x0C4B0709,	//0x1826		VoC_add16_rd(REG1,REG1,0xc4b)
+0x26A81404,	//0x1828		VoC_lw16_d(REG4,0x26a8)
+0xF8FCD815,	//0x182a		VoC_shr16_ri(REG4,0xffffffff,DEFAULT)	|	VoC_lw16_p(REG5,REG1,DEFAULT)
+0x0A80C165,	//0x182c		VoC_lw16i(REG0,0x1)(lo)	|	VoC_add16_rr(REG5,REG5,REG4,DEFAULT)
+0xDDAE0001,	//0x182e		VoC_sw32_p(RL6,REG5,DEFAULT)	|	VoC_lw16i(REG0,0x1)(hi)
+0x26A80701,	//0x1830		VoC_add16_rd(REG1,REG0,0x26a8)
+0x26A70702,	//0x1832		VoC_add16_rd(REG2,REG0,0x26a7)
+0x26A81501,	//0x1834		VoC_sw16_d(REG1,0x26a8)
+0x26A71502,	//0x1836		VoC_sw16_d(REG2,0x26a7)
+0x17EA2B00,	//0x1838		VoC_jump_lg(FOR_LOOP_START)
+		//0x183a		FOR_LOOP_END
+0x000F1808,	//0x183a		VoC_lw16i_set_inc(REG0,0xf,0x2)
+0x0C4B0700,	//0x183c		VoC_add16_rd(REG0,REG0,0xc4b)
+0x09A61404,	//0x183e		VoC_lw16_d(REG4,0x9a6)
+0x00001807,	//0x1840		VoC_lw16i_set_inc(REG3,0x0,0x1)
+0x08FC0B27,	//0x1842		VoC_sub16_dr(REG7,0x8fc,REG4)
+0xFF46F8FC,	//0x1844		VoC_lw32z(RL6,DEFAULT)	|	VoC_shr16_ri(REG4,0xffffffff,DEFAULT)
+0xFFC08100,	//0x1846		VoC_NAD	|	VoC_add16_rp(REG0,REG4,REG0,DEFAULT)
+		//0x1848		MEM_Z_START
+0x184E34BB,	//0x1848		VoC_bngt16_rr(MEM_Z_END,REG7,REG3)
+0xDE18DDC6,	//0x184a		VoC_inc_p(REG3,DEFAULT)	|	VoC_sw32inc_p(RL6,REG0,DEFAULT)
+0xFFC0E5FC,	//0x184c		VoC_NAD	|	VoC_jump(MEM_Z_START)
+		//0x184e		MEM_Z_END
+0x1AF42B00,	//0x184e		VoC_jump_lg(Subband_LOOP_END)
+		//0x1850		LowCutOff_START
+		//0x1850		FirstNoise_LOOP_START
+0x09BC1400,	//0x1850		VoC_lw16_d(REG0,0x9bc)
+0x3828F030,	//0x1852		VoC_bgt16_rd(HighCutOff_LOOP_START_not,REG0,0x26a8)(lo)	|	VoC_lw16i_short(INC0,0x1,DEFAULT)
+0x2B0026A8,	//0x1854		VoC_jump_lg(HighCutOff_LOOP_START)(lo)	|	VoC_bgt16_rd(HighCutOff_LOOP_START_not,REG0,0x26a8)(hi)
+0xFFC018EC,	//0x1856		VoC_NAD	|	VoC_jump_lg(HighCutOff_LOOP_START)(hi)
+		//0x1858		HighCutOff_LOOP_START_not
+0x16C62B80,	//0x1858		VoC_jal(CII_quickRand)
+0x26B41586,	//0x185a		VoC_sw32_d(RL6,0x26b4)
+0x26A61400,	//0x185c		VoC_lw16_d(REG0,0x26a6)
+0x26A61403,	//0x185e		VoC_lw16_d(REG3,0x26a6)
+0x0700DE00,	//0x1860		VoC_add16_rd(REG0,REG0,0x9ad)(lo)	|	VoC_inc_p(REG0,DEFAULT)
+0x140709AD,	//0x1862		VoC_lw16_d(REG7,0x26a8)(lo)	|	VoC_add16_rd(REG0,REG0,0x9ad)(hi)
+0xD80426A8,	//0x1864		VoC_lw16_p(REG4,REG0,DEFAULT)	|	VoC_lw16_d(REG7,0x26a8)(hi)
+		//0x1865		iBark_LOOP_START
+0x3427F033,	//0x1866		VoC_bgt16_rr(iBark_LOOP_END,REG4,REG7)(lo)	|	VoC_lw16i_short(INC3,0x1,DEFAULT)
+0xDE00186C,	//0x1868		VoC_inc_p(REG0,DEFAULT)	|	VoC_bgt16_rr(iBark_LOOP_END,REG4,REG7)(hi)
+0xE5FADE18,	//0x186a		VoC_jump(iBark_LOOP_START)	|	VoC_inc_p(REG3,DEFAULT)
+		//0x186c		iBark_LOOP_END
+0x000E0A84,	//0x186c		VoC_lw16i(REG4,0xe)
+0x26A61503,	//0x186e		VoC_sw16_d(REG3,0x26a6)
+0x0C4B0724,	//0x1870		VoC_add16_rd(REG4,REG4,0xc4b)
+0x26B01480,	//0x1872		VoC_lw32_d(REG01,0x26b0)
+0x1404D845,	//0x1874		VoC_lw16_d(REG4,0x26a8)(lo)	|	VoC_lw16_p(REG5,REG4,DEFAULT)
+0xF9FC26A8,	//0x1876		VoC_shru16_ri(REG4,0xffffffff,DEFAULT)	|	VoC_lw16_d(REG4,0x26a8)(hi)
+0x0B00C165,	//0x1878		VoC_sub16_dr(REG0,0x11a8,REG0)(lo)	|	VoC_add16_rr(REG5,REG5,REG4,DEFAULT)
+0xD9AE11A8,	//0x187a		VoC_lw32_p(RL6,REG5,DEFAULT)	|	VoC_sub16_dr(REG0,0x11a8,REG0)(hi)
+0x00150A82,	//0x187c		VoC_lw16i(REG2,0x15)
+0xC280FE86,	//0x187e		VoC_sub16_rr(REG0,REG2,REG0,DEFAULT)	|	VoC_shr32_rr(RL6,REG0,DEFAULT)
+0x26AC1487,	//0x1880		VoC_lw32_d(RL7,0x26ac)
+0x26B81580,	//0x1882		VoC_sw32_d(REG01,0x26b8)
+0x16A42B80,	//0x1884		VoC_jal(CII_NormUInt)
+0x26B61586,	//0x1886		VoC_sw32_d(RL6,0x26b6)
+0x26B81580,	//0x1888		VoC_sw32_d(REG01,0x26b8)
+0x16742B80,	//0x188a		VoC_jal(CII_MULT_HI)
+0x26BA1586,	//0x188c		VoC_sw32_d(RL6,0x26ba)
+0x26B81487,	//0x188e		VoC_lw32_d(RL7,0x26b8)
+0x001F0A80,	//0x1890		VoC_lw16i(REG0,0x1f)
+0x26AE093E,	//0x1892		VoC_add32_rd(RL6,RL7,0x26ae)
+0x00000A81,	//0x1894		VoC_lw16i(REG1,0x0)
+0x1407CB86,	//0x1896		VoC_lw16_d(REG7,0xc4b)(lo)	|	VoC_sub32_rr(RL6,RL6,REG01,DEFAULT)
+0x15860C4B,	//0x1898		VoC_sw32_d(RL6,0x26bc)(lo)	|	VoC_lw16_d(REG7,0xc4b)(hi)
+0x140426BC,	//0x189a		VoC_lw16_d(REG4,0x26a7)(lo)	|	VoC_sw32_d(RL6,0x26bc)(hi)
+0x813D26A7,	//0x189c		VoC_add16_rp(REG5,REG4,REG7,DEFAULT)	|	VoC_lw16_d(REG4,0x26a7)(hi)
+0x26BA1486,	//0x189e		VoC_lw32_d(RL6,0x26ba)
+0x0AC7D856,	//0x18a0		VoC_lw16i(REG7,0xffff)(lo)	|	VoC_lw16_p(REG6,REG5,DEFAULT)
+0x32467FFF,	//0x18a2		VoC_bnltz16_r(Positive_CQ1,REG6)(lo)	|	VoC_lw16i(REG7,0xffff)(hi)
+0xE5C318A6,	//0x18a4		VoC_jump(CQ_OVER1)	|	VoC_bnltz16_r(Positive_CQ1,REG6)(hi)
+		//0x18a6		Positive_CQ1
+0x00000A87,	//0x18a6		VoC_lw16i(REG7,0x0)
+		//0x18a8		CQ_OVER1
+0xFD67FF1F,	//0x18a8		VoC_shru32_ri(RL7,0xffffffec,DEFAULT)	|	VoC_movreg32(RL7,REG67,DEFAULT)
+0x16742B80,	//0x18aa		VoC_jal(CII_MULT_HI)
+0x7FF50AC2,	//0x18ac		VoC_lw16i(REG2,0xfffffff5)
+0x26BC1480,	//0x18ae		VoC_lw32_d(REG01,0x26bc)
+0x26BE1586,	//0x18b0		VoC_sw32_d(RL6,0x26be)
+0x0A87C010,	//0x18b2		VoC_lw16i(REG7,0x5)(lo)	|	VoC_add16_rr(REG0,REG0,REG2,DEFAULT)
+0x15800005,	//0x18b4		VoC_sw32_d(REG01,0x26bc)(lo)	|	VoC_lw16i(REG7,0x5)(hi)
+0xE00626BC,	//0x18b6		VoC_movreg16(REG6,REG0,DEFAULT)	|	VoC_sw32_d(REG01,0x26bc)(hi)
+0x16952B80,	//0x18b8		VoC_jal(CII_Align2FracBits)
+0x26C01586,	//0x18ba		VoC_sw32_d(RL6,0x26c0)
+0x051F0ACE,	//0x18bc		VoC_lw16i(RL7_LO,0x851f)
+0x51EB0A8F,	//0x18be		VoC_lw16i(RL7_HI,0x51eb)
+0x26B41486,	//0x18c0		VoC_lw32_d(RL6,0x26b4)
+0x16742B80,	//0x18c2		VoC_jal(CII_MULT_HI)
+0x26BA1487,	//0x18c4		VoC_lw32_d(RL7,0x26ba)
+0x16742B80,	//0x18c6		VoC_jal(CII_MULT_HI)
+0x26AE1480,	//0x18c8		VoC_lw32_d(REG01,0x26ae)
+0x26B81481,	//0x18ca		VoC_lw32_d(REG23,0x26b8)
+0x0AC6C010,	//0x18cc		VoC_lw16i(REG6,0xffffffe3)(lo)	|	VoC_add16_rr(REG0,REG0,REG2,DEFAULT)
+0xC1867FE3,	//0x18ce		VoC_add16_rr(REG6,REG6,REG0,DEFAULT)	|	VoC_lw16i(REG6,0xffffffe3)(hi)
+0x00050A87,	//0x18d0		VoC_lw16i(REG7,0x5)
+0x16952B80,	//0x18d2		VoC_jal(CII_Align2FracBits)
+0x000F0A83,	//0x18d4		VoC_lw16i(REG3,0xf)
+0x26A81404,	//0x18d6		VoC_lw16_d(REG4,0x26a8)
+0x0C4B071B,	//0x18d8		VoC_add16_rd(REG3,REG3,0xc4b)
+0xF9FCDFC4,	//0x18da		VoC_shru16_ri(REG4,0xffffffff,DEFAULT)	|	VoC_push16(REG4,DEFAULT)
+0x26C00936,	//0x18dc		VoC_add32_rd(RL6,RL6,0x26c0)
+0x0A83811D,	//0x18de		VoC_lw16i(REG3,0x1)(lo)	|	VoC_add16_rp(REG5,REG4,REG3,DEFAULT)
+0xDDAE0001,	//0x18e0		VoC_sw32_p(RL6,REG5,DEFAULT)	|	VoC_lw16i(REG3,0x1)(hi)
+0x071DDF84,	//0x18e2		VoC_add16_rd(REG5,REG3,0x26a7)(lo)	|	VoC_pop16(REG4,DEFAULT)
+0xC11C26A7,	//0x18e4		VoC_add16_rr(REG4,REG4,REG3,DEFAULT)	|	VoC_add16_rd(REG5,REG3,0x26a7)(hi)
+0x26A71505,	//0x18e6		VoC_sw16_d(REG5,0x26a7)
+0x26A81504,	//0x18e8		VoC_sw16_d(REG4,0x26a8)
+0x18502B00,	//0x18ea		VoC_jump_lg(FirstNoise_LOOP_START)
+		//0x18ec		HighCutOff_LOOP_START
+0x09A61400,	//0x18ec		VoC_lw16_d(REG0,0x9a6)
+0x3828F030,	//0x18ee		VoC_bgt16_rd(HighCutOff_LOOP_END_not,REG0,0x26a8)(lo)	|	VoC_lw16i_short(INC0,0x1,DEFAULT)
+0x2B0026A8,	//0x18f0		VoC_jump_lg(HighCutOff_LOOP_END)(lo)	|	VoC_bgt16_rd(HighCutOff_LOOP_END_not,REG0,0x26a8)(hi)
+0xFFC01A84,	//0x18f2		VoC_NAD	|	VoC_jump_lg(HighCutOff_LOOP_END)(hi)
+		//0x18f4		HighCutOff_LOOP_END_not
+0x26A61400,	//0x18f4		VoC_lw16_d(REG0,0x26a6)
+0x26A61403,	//0x18f6		VoC_lw16_d(REG3,0x26a6)
+0x0700DE00,	//0x18f8		VoC_add16_rd(REG0,REG0,0x9ad)(lo)	|	VoC_inc_p(REG0,DEFAULT)
+0xF03309AD,	//0x18fa		VoC_lw16i_short(INC3,0x1,DEFAULT)	|	VoC_add16_rd(REG0,REG0,0x9ad)(hi)
+		//0x18fc		iBark_LOOP1_START
+0xFFC0D884,	//0x18fc		VoC_NOP	|	VoC_lw16inc_p(REG4,REG0,DEFAULT)
+0x26A83824,	//0x18fe		VoC_bgt16_rd(iBark_LOOP1_END,REG4,0x26a8)
+0xE5FBDE18,	//0x1900		VoC_jump(iBark_LOOP1_START)	|	VoC_inc_p(REG3,DEFAULT)
+		//0x1902		iBark_LOOP1_END
+0x00020A86,	//0x1902		VoC_lw16i(REG6,0x2)
+0x0C4B0736,	//0x1904		VoC_add16_rd(REG6,REG6,0xc4b)
+0x00010A84,	//0x1906		VoC_lw16i(REG4,0x1)
+0x150380F5,	//0x1908		VoC_sw16_d(REG3,0x26a6)(lo)	|	VoC_add16_rp(REG5,REG3,REG6,DEFAULT)
+0xD85626A6,	//0x190a		VoC_lw16_p(REG6,REG5,DEFAULT)	|	VoC_sw16_d(REG3,0x26a6)(hi)
+0x3534FFC0,	//0x190c		VoC_be16_rr(BandNotCoded_LOOP_START,REG6,REG4)(lo)	|	VoC_NOP
+0x2B001912,	//0x190e		VoC_jump_lg(LRBandNotCoded_LOOP_END)(lo)	|	VoC_be16_rr(BandNotCoded_LOOP_START,REG6,REG4)(hi)
+0xFFC019EE,	//0x1910		VoC_NAD	|	VoC_jump_lg(LRBandNotCoded_LOOP_END)(hi)
+		//0x1912		BandNotCoded_LOOP_START
+0x26A60724,	//0x1912		VoC_add16_rd(REG4,REG4,0x26a6)
+0x09A61403,	//0x1914		VoC_lw16_d(REG3,0x9a6)
+0x09AD0725,	//0x1916		VoC_add16_rd(REG5,REG4,0x9ad)
+0x00040A80,	//0x1918		VoC_lw16i(REG0,0x4)
+0x0700D856,	//0x191a		VoC_add16_rd(REG0,REG0,0xc4b)(lo)	|	VoC_lw16_p(REG6,REG5,DEFAULT)
+0x341E0C4B,	//0x191c		VoC_bgt16_rr(MIN_JUDGE_START,REG3,REG6)(lo)	|	VoC_add16_rd(REG0,REG0,0xc4b)(hi)
+0x15031922,	//0x191e		VoC_sw16_d(REG3,0x26a9)(lo)	|	VoC_bgt16_rr(MIN_JUDGE_START,REG3,REG6)(hi)
+0xE5C326A9,	//0x1920		VoC_jump(MIN_JUDGE_END)	|	VoC_sw16_d(REG3,0x26a9)(hi)
+		//0x1922		MIN_JUDGE_START
+0x26A91506,	//0x1922		VoC_sw16_d(REG6,0x26a9)
+		//0x1924		MIN_JUDGE_END
+0x26F01404,	//0x1924		VoC_lw16_d(REG4,0x26f0)
+0xFFC08105,	//0x1926		VoC_NOP	|	VoC_add16_rp(REG5,REG4,REG0,DEFAULT)
+0xFFC0D856,	//0x1928		VoC_NAD	|	VoC_lw16_p(REG6,REG5,DEFAULT)
+0x163C2B80,	//0x192a		VoC_jal(CII_qstCalcQuantStep_VOC)
+0x27061808,	//0x192c		VoC_lw16i_set_inc(REG0,0x2706,0x2)
+0x26F01404,	//0x192e		VoC_lw16_d(REG4,0x26f0)
+0x1405DDC3,	//0x1930		VoC_lw16_d(REG5,0xc4b)(lo)	|	VoC_sw32inc_p(REG67,REG0,DEFAULT)
+0xDD870C4B,	//0x1932		VoC_sw32_p(RL7,REG0,DEFAULT)	|	VoC_lw16_d(REG5,0xc4b)(hi)
+0x00031808,	//0x1934		VoC_lw16i_set_inc(REG0,0x3,0x2)
+0xF9F4C145,	//0x1936		VoC_shru16_ri(REG4,0xfffffffe,DEFAULT)	|	VoC_add16_rr(REG5,REG5,REG0,DEFAULT)
+0x0A858128,	//0x1938		VoC_lw16i(REG5,0x2702)(lo)	|	VoC_add16_rp(REG0,REG4,REG5,DEFAULT)
+0xD9C62702,	//0x193a		VoC_lw32inc_p(RL6,REG0,DEFAULT)	|	VoC_lw16i(REG5,0x2702)(hi)
+0x00020A84,	//0x193c		VoC_lw16i(REG4,0x2)
+0x27021586,	//0x193e		VoC_sw32_d(RL6,0x2702)
+0xD987C165,	//0x1940		VoC_lw32_p(RL7,REG0,DEFAULT)	|	VoC_add16_rr(REG5,REG5,REG4,DEFAULT)
+0x27081486,	//0x1942		VoC_lw32_d(RL6,0x2708)
+0xFFC0DDAF,	//0x1944		VoC_NAD	|	VoC_sw32_p(RL7,REG5,DEFAULT)
+0x16742B80,	//0x1946		VoC_jal(CII_MULT_HI)
+0x27021480,	//0x1948		VoC_lw32_d(REG01,0x2702)
+0x001F0A82,	//0x194a		VoC_lw16i(REG2,0x1f)
+0x27060907,	//0x194c		VoC_add32_rd(RL7,REG01,0x2706)
+0x00000A83,	//0x194e		VoC_lw16i(REG3,0x0)
+0xFF40CBCC,	//0x1950		VoC_lw32z(REG01,DEFAULT)	|	VoC_sub32_rr(ACC0,RL7,REG23,DEFAULT)
+0xDF44DF46,	//0x1952		VoC_push32(ACC0,DEFAULT)	|	VoC_push32(RL6,DEFAULT)
+0x19573286,	//0x1954		VoC_bgtz32_r(FFLT_LARGER,RL6)
+0xFF04CA36,	//0x1956		VoC_movreg32(ACC0,REG01,DEFAULT)	|	VoC_sub32_rr(RL6,REG01,RL6,DEFAULT)
+		//0x1957		FFLT_LARGER
+0x19763306,	//0x1958		VoC_bez32_r(ffltNP_OVER,RL6)
+0x7FFF0AC2,	//0x195a		VoC_lw16i(REG2,0xffff)
+0x1FFF0A83,	//0x195c		VoC_lw16i(REG3,0x1fff)
+0xFFC0F050,	//0x195e		VoC_NAD	|	VoC_lw16i_short(INC0,0x2,DEFAULT)
+		//0x1960		uiF_START_1
+0x1966368E,	//0x1960		VoC_bngt32_rr(uiF_OVER_1,REG23,RL6)
+0xDE00FDF6,	//0x1962		VoC_inc_p(REG0,DEFAULT)	|	VoC_shru32_ri(RL6,0xfffffffe,DEFAULT)
+0xFFC0E5FC,	//0x1964		VoC_NAD	|	VoC_jump(uiF_START_1)
+		//0x1966		uiF_OVER_1
+0x7FFF0AC2,	//0x1966		VoC_lw16i(REG2,0xffff)
+0x3FFF0A83,	//0x1968		VoC_lw16i(REG3,0x3fff)
+0x368EF030,	//0x196a		VoC_bngt32_rr(uiF_OVER_2,REG23,RL6)(lo)	|	VoC_lw16i_short(INC0,0x1,DEFAULT)
+0xDE00196E,	//0x196c		VoC_inc_p(REG0,DEFAULT)	|	VoC_bngt32_rr(uiF_OVER_2,REG23,RL6)(hi)
+		//0x196e		uiF_OVER_2
+0xDF06DF04,	//0x196e		VoC_pop32(RL6,DEFAULT)	|	VoC_pop32(ACC0,DEFAULT)
+0x11A80B02,	//0x1970		VoC_sub16_dr(REG2,0x11a8,REG0)
+0x00000A81,	//0x1972		VoC_lw16i(REG1,0x0)
+0xFED6C904,	//0x1974		VoC_shru32_rr(RL6,REG2,DEFAULT)	|	VoC_add32_rr(ACC0,ACC0,REG01,DEFAULT)
+		//0x1976		ffltNP_OVER
+0x27061808,	//0x1976		VoC_lw16i_set_inc(REG0,0x2706,0x2)
+0x26AA1487,	//0x1978		VoC_lw32_d(RL7,0x26aa)
+0xFA0FDDC4,	//0x197a		VoC_shr32_ri(RL7,0x1,DEFAULT)	|	VoC_sw32inc_p(ACC0,REG0,DEFAULT)
+0xFFC0DD86,	//0x197c		VoC_NAD	|	VoC_sw32_p(RL6,REG0,DEFAULT)
+0x16742B80,	//0x197e		VoC_jal(CII_MULT_HI)
+0x001F0A80,	//0x1980		VoC_lw16i(REG0,0x1f)
+0x0A82FDFE,	//0x1982		VoC_lw16i(REG2,0x1e)(lo)	|	VoC_shru32_ri(RL6,0xffffffff,DEFAULT)
+0x1586001E,	//0x1984		VoC_sw32_d(RL6,0x26ec)(lo)	|	VoC_lw16i(REG2,0x1e)(hi)
+0xC21026EC,	//0x1986		VoC_sub16_rr(REG0,REG0,REG2,DEFAULT)	|	VoC_sw32_d(RL6,0x26ec)(hi)
+0x00000A81,	//0x1988		VoC_lw16i(REG1,0x0)
+0x27060B80,	//0x198a		VoC_sub32_dr(REG01,0x2706,REG01)
+0x26EC1486,	//0x198c		VoC_lw32_d(RL6,0x26ec)
+0x26BC1580,	//0x198e		VoC_sw32_d(REG01,0x26bc)
+0x16A42B80,	//0x1990		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x1992		VoC_lw16i(REG1,0x0)
+0x26EC1586,	//0x1994		VoC_sw32_d(RL6,0x26ec)
+0x26BC1580,	//0x1996		VoC_sw32_d(REG01,0x26bc)
+		//0x1998		LimitOniRecon_Start
+0x26A91403,	//0x1998		VoC_lw16_d(REG3,0x26a9)
+0x382BFFC0,	//0x199a		VoC_bgt16_rd(HighCutOff_LOOP_CON_not,REG3,0x26a8)(lo)	|	VoC_NOP
+0x2B0026A8,	//0x199c		VoC_jump_lg(HighCutOff_LOOP_CON)(lo)	|	VoC_bgt16_rd(HighCutOff_LOOP_CON_not,REG3,0x26a8)(hi)
+0xFFC019E4,	//0x199e		VoC_NAD	|	VoC_jump_lg(HighCutOff_LOOP_CON)(hi)
+		//0x19a0		HighCutOff_LOOP_CON_not
+0x16C62B80,	//0x19a0		VoC_jal(CII_quickRand)
+0x26EC1487,	//0x19a2		VoC_lw32_d(RL7,0x26ec)
+0x16742B80,	//0x19a4		VoC_jal(CII_MULT_HI)
+0x26EE1586,	//0x19a6		VoC_sw32_d(RL6,0x26ee)
+0x000E0A86,	//0x19a8		VoC_lw16i(REG6,0xe)
+0x0C4B0736,	//0x19aa		VoC_add16_rd(REG6,REG6,0xc4b)
+0x26A81404,	//0x19ac		VoC_lw16_d(REG4,0x26a8)
+0x8135F9FC,	//0x19ae		VoC_add16_rp(REG5,REG4,REG6,DEFAULT)	|	VoC_shru16_ri(REG4,0xffffffff,DEFAULT)
+0x26B01480,	//0x19b0		VoC_lw32_d(REG01,0x26b0)
+0x0B00D9AE,	//0x19b2		VoC_sub16_dr(REG0,0x11a8,REG0)(lo)	|	VoC_lw32_p(RL6,REG5,DEFAULT)
+0x0A8211A8,	//0x19b4		VoC_lw16i(REG2,0x15)(lo)	|	VoC_sub16_dr(REG0,0x11a8,REG0)(hi)
+0xFEC60015,	//0x19b6		VoC_shru32_rr(RL6,REG0,DEFAULT)	|	VoC_lw16i(REG2,0x15)(hi)
+0x1487C280,	//0x19b8		VoC_lw32_d(RL7,0x26ee)(lo)	|	VoC_sub16_rr(REG0,REG2,REG0,DEFAULT)
+0x158026EE,	//0x19ba		VoC_sw32_d(REG01,0x26b8)(lo)	|	VoC_lw32_d(RL7,0x26ee)(hi)
+0xFFC026B8,	//0x19bc		VoC_NAD	|	VoC_sw32_d(REG01,0x26b8)(hi)
+0x16A42B80,	//0x19be		VoC_jal(CII_NormUInt)
+0x26B61586,	//0x19c0		VoC_sw32_d(RL6,0x26b6)
+0x26B81580,	//0x19c2		VoC_sw32_d(REG01,0x26b8)
+0x16742B80,	//0x19c4		VoC_jal(CII_MULT_HI)
+0x26BC1480,	//0x19c6		VoC_lw32_d(REG01,0x26bc)
+0x26B81481,	//0x19c8		VoC_lw32_d(REG23,0x26b8)
+0x7FDF0AC6,	//0x19ca		VoC_lw16i(REG6,0xffffffdf)
+0x0A87C010,	//0x19cc		VoC_lw16i(REG7,0x5)(lo)	|	VoC_add16_rr(REG0,REG0,REG2,DEFAULT)
+0xC1860005,	//0x19ce		VoC_add16_rr(REG6,REG6,REG0,DEFAULT)	|	VoC_lw16i(REG7,0x5)(hi)
+0x16952B80,	//0x19d0		VoC_jal(CII_Align2FracBits)
+0x26A81406,	//0x19d2		VoC_lw16_d(REG6,0x26a8)
+0x000F0A84,	//0x19d4		VoC_lw16i(REG4,0xf)
+0x0C4B0724,	//0x19d6		VoC_add16_rd(REG4,REG4,0xc4b)
+0x81A5F9FE,	//0x19d8		VoC_add16_rp(REG5,REG6,REG4,DEFAULT)	|	VoC_shru16_ri(REG6,0xffffffff,DEFAULT)
+0x00010A83,	//0x19da		VoC_lw16i(REG3,0x1)
+0x26A8071C,	//0x19dc		VoC_add16_rd(REG4,REG3,0x26a8)
+0x1504DDAE,	//0x19de		VoC_sw16_d(REG4,0x26a8)(lo)	|	VoC_sw32_p(RL6,REG5,DEFAULT)
+0x2B0026A8,	//0x19e0		VoC_jump_lg(LimitOniRecon_Start)(lo)	|	VoC_sw16_d(REG4,0x26a8)(hi)
+0xFFC01998,	//0x19e2		VoC_NAD	|	VoC_jump_lg(LimitOniRecon_Start)(hi)
+		//0x19e4		HighCutOff_LOOP_CON
+0x00010A83,	//0x19e4		VoC_lw16i(REG3,0x1)
+0x26F0071C,	//0x19e6		VoC_add16_rd(REG4,REG3,0x26f0)
+0x1504FFC0,	//0x19e8		VoC_sw16_d(REG4,0x26f0)(lo)	|	VoC_NOP
+0x2B0026F0,	//0x19ea		VoC_jump_lg(HighCutOff_LOOP_START)(lo)	|	VoC_sw16_d(REG4,0x26f0)(hi)
+0xFFC018EC,	//0x19ec		VoC_NAD	|	VoC_jump_lg(HighCutOff_LOOP_START)(hi)
+		//0x19ee		LRBandNotCoded_LOOP_END
+0x26A62004,	//0x19ee		VoC_lw16d_set_inc(REG0,0x26a6,0x1)
+0x26A61403,	//0x19f0		VoC_lw16_d(REG3,0x26a6)
+0x1407DE00,	//0x19f2		VoC_lw16_d(REG7,0x26a8)(lo)	|	VoC_inc_p(REG0,DEFAULT)
+0x070026A8,	//0x19f4		VoC_add16_rd(REG0,REG0,0x9ad)(lo)	|	VoC_lw16_d(REG7,0x26a8)(hi)
+0xF03309AD,	//0x19f6		VoC_lw16i_short(INC3,0x1,DEFAULT)	|	VoC_add16_rd(REG0,REG0,0x9ad)(hi)
+		//0x19f8		LRiBark_LOOP2_START
+0xFFC0D884,	//0x19f8		VoC_NOP	|	VoC_lw16inc_p(REG4,REG0,DEFAULT)
+0x19FE3427,	//0x19fa		VoC_bgt16_rr(LRiBark_LOOP2_END,REG4,REG7)
+0xE5FBDE18,	//0x19fc		VoC_jump(LRiBark_LOOP2_START)	|	VoC_inc_p(REG3,DEFAULT)
+		//0x19fe		LRiBark_LOOP2_END
+0x26A61503,	//0x19fe		VoC_sw16_d(REG3,0x26a6)
+0x16C62B80,	//0x1a00		VoC_jal(CII_quickRand)
+0x26B41586,	//0x1a02		VoC_sw32_d(RL6,0x26b4)
+0x000E0A86,	//0x1a04		VoC_lw16i(REG6,0xe)
+0x26A81404,	//0x1a06		VoC_lw16_d(REG4,0x26a8)
+0x0C4B0736,	//0x1a08		VoC_add16_rd(REG6,REG6,0xc4b)
+0x1480F9FC,	//0x1a0a		VoC_lw32_d(REG01,0x26b0)(lo)	|	VoC_shru16_ri(REG4,0xffffffff,DEFAULT)
+0x813526B0,	//0x1a0c		VoC_add16_rp(REG5,REG4,REG6,DEFAULT)	|	VoC_lw32_d(REG01,0x26b0)(hi)
+0x11A80B00,	//0x1a0e		VoC_sub16_dr(REG0,0x11a8,REG0)
+0x0A82D9AE,	//0x1a10		VoC_lw16i(REG2,0x15)(lo)	|	VoC_lw32_p(RL6,REG5,DEFAULT)
+0xFEC60015,	//0x1a12		VoC_shru32_rr(RL6,REG0,DEFAULT)	|	VoC_lw16i(REG2,0x15)(hi)
+0x1487C280,	//0x1a14		VoC_lw32_d(RL7,0x26ac)(lo)	|	VoC_sub16_rr(REG0,REG2,REG0,DEFAULT)
+0x158026AC,	//0x1a16		VoC_sw32_d(REG01,0x26b8)(lo)	|	VoC_lw32_d(RL7,0x26ac)(hi)
+0xFFC026B8,	//0x1a18		VoC_NAD	|	VoC_sw32_d(REG01,0x26b8)(hi)
+0x16A42B80,	//0x1a1a		VoC_jal(CII_NormUInt)
+0x26B61586,	//0x1a1c		VoC_sw32_d(RL6,0x26b6)
+0x26B81580,	//0x1a1e		VoC_sw32_d(REG01,0x26b8)
+0x16742B80,	//0x1a20		VoC_jal(CII_MULT_HI)
+0x26BA1586,	//0x1a22		VoC_sw32_d(RL6,0x26ba)
+0x26B81487,	//0x1a24		VoC_lw32_d(RL7,0x26b8)
+0x001F0A80,	//0x1a26		VoC_lw16i(REG0,0x1f)
+0x26AE093E,	//0x1a28		VoC_add32_rd(RL6,RL7,0x26ae)
+0x00000A81,	//0x1a2a		VoC_lw16i(REG1,0x0)
+0x0ACECB86,	//0x1a2c		VoC_lw16i(RL7_LO,0x851f)(lo)	|	VoC_sub32_rr(RL6,RL6,REG01,DEFAULT)
+0x1586051F,	//0x1a2e		VoC_sw32_d(RL6,0x26bc)(lo)	|	VoC_lw16i(RL7_LO,0x851f)(hi)
+0x0A8F26BC,	//0x1a30		VoC_lw16i(RL7_HI,0x51eb)(lo)	|	VoC_sw32_d(RL6,0x26bc)(hi)
+0x148651EB,	//0x1a32		VoC_lw32_d(RL6,0x26b4)(lo)	|	VoC_lw16i(RL7_HI,0x51eb)(hi)
+0x2B8026B4,	//0x1a34		VoC_jal(CII_MULT_HI)(lo)	|	VoC_lw32_d(RL6,0x26b4)(hi)
+0xFF371674,	//0x1a36		VoC_movreg32(RL7,RL6,DEFAULT)	|	VoC_jal(CII_MULT_HI)(hi)
+0x26BA1486,	//0x1a38		VoC_lw32_d(RL6,0x26ba)
+0x16742B80,	//0x1a3a		VoC_jal(CII_MULT_HI)
+0x26C21586,	//0x1a3c		VoC_sw32_d(RL6,0x26c2)
+0x26BC1481,	//0x1a3e		VoC_lw32_d(REG23,0x26bc)
+0x11AA0716,	//0x1a40		VoC_add16_rd(REG6,REG2,0x11aa)
+0x26A71404,	//0x1a42		VoC_lw16_d(REG4,0x26a7)
+0x0C4B1407,	//0x1a44		VoC_lw16_d(REG7,0xc4b)
+0x813DDFC6,	//0x1a46		VoC_add16_rp(REG5,REG4,REG7,DEFAULT)	|	VoC_push16(REG6,DEFAULT)
+0x26BA1486,	//0x1a48		VoC_lw32_d(RL6,0x26ba)
+0x0AC7D856,	//0x1a4a		VoC_lw16i(REG7,0xffff)(lo)	|	VoC_lw16_p(REG6,REG5,DEFAULT)
+0x32467FFF,	//0x1a4c		VoC_bnltz16_r(Positive_CQ2,REG6)(lo)	|	VoC_lw16i(REG7,0xffff)(hi)
+0xE5C31A50,	//0x1a4e		VoC_jump(CQ_OVER2)	|	VoC_bnltz16_r(Positive_CQ2,REG6)(hi)
+		//0x1a50		Positive_CQ2
+0x00000A87,	//0x1a50		VoC_lw16i(REG7,0x0)
+		//0x1a52		CQ_OVER2
+0xFD67FF1F,	//0x1a52		VoC_shru32_ri(RL7,0xffffffec,DEFAULT)	|	VoC_movreg32(RL7,REG67,DEFAULT)
+0x16742B80,	//0x1a54		VoC_jal(CII_MULT_HI)
+0x26BE1586,	//0x1a56		VoC_sw32_d(RL6,0x26be)
+0x26BC1480,	//0x1a58		VoC_lw32_d(REG01,0x26bc)
+0x7FF50AC2,	//0x1a5a		VoC_lw16i(REG2,0xfffffff5)
+0x0A87C010,	//0x1a5c		VoC_lw16i(REG7,0x5)(lo)	|	VoC_add16_rr(REG0,REG0,REG2,DEFAULT)
+0x15800005,	//0x1a5e		VoC_sw32_d(REG01,0x26bc)(lo)	|	VoC_lw16i(REG7,0x5)(hi)
+0xE00626BC,	//0x1a60		VoC_movreg16(REG6,REG0,DEFAULT)	|	VoC_sw32_d(REG01,0x26bc)(hi)
+0x16952B80,	//0x1a62		VoC_jal(CII_Align2FracBits)
+0x26C01586,	//0x1a64		VoC_sw32_d(RL6,0x26c0)
+0x0A84DF86,	//0x1a66		VoC_lw16i(REG4,0x5)(lo)	|	VoC_pop16(REG6,DEFAULT)
+0x14870005,	//0x1a68		VoC_lw32_d(RL7,0x26c2)(lo)	|	VoC_lw16i(REG4,0x5)(hi)
+0xC3A426C2,	//0x1a6a		VoC_sub16_rr(REG4,REG6,REG4,DEFAULT)	|	VoC_lw32_d(RL7,0x26c2)(hi)
+0x26A81406,	//0x1a6c		VoC_lw16_d(REG6,0x26a8)
+0x000F0A83,	//0x1a6e		VoC_lw16i(REG3,0xf)
+0x071BFEA7,	//0x1a70		VoC_add16_rd(REG3,REG3,0xc4b)(lo)	|	VoC_shr32_rr(RL7,REG4,DEFAULT)
+0xF9FE0C4B,	//0x1a72		VoC_shru16_ri(REG6,0xffffffff,DEFAULT)	|	VoC_add16_rd(REG3,REG3,0xc4b)(hi)
+0xC9BE819D,	//0x1a74		VoC_add32_rr(RL6,RL6,RL7,DEFAULT)	|	VoC_add16_rp(REG5,REG6,REG3,DEFAULT)
+0x00010A83,	//0x1a76		VoC_lw16i(REG3,0x1)
+0x071EDDAE,	//0x1a78		VoC_add16_rd(REG6,REG3,0x26a8)(lo)	|	VoC_sw32_p(RL6,REG5,DEFAULT)
+0x071D26A8,	//0x1a7a		VoC_add16_rd(REG5,REG3,0x26a7)(lo)	|	VoC_add16_rd(REG6,REG3,0x26a8)(hi)
+0x150626A7,	//0x1a7c		VoC_sw16_d(REG6,0x26a8)(lo)	|	VoC_add16_rd(REG5,REG3,0x26a7)(hi)
+0x150526A8,	//0x1a7e		VoC_sw16_d(REG5,0x26a7)(lo)	|	VoC_sw16_d(REG6,0x26a8)(hi)
+0x2B0026A7,	//0x1a80		VoC_jump_lg(HighCutOff_LOOP_START)(lo)	|	VoC_sw16_d(REG5,0x26a7)(hi)
+0xFFC018EC,	//0x1a82		VoC_NAD	|	VoC_jump_lg(HighCutOff_LOOP_START)(hi)
+		//0x1a84		HighCutOff_LOOP_END
+0x000E0A83,	//0x1a84		VoC_lw16i(REG3,0xe)
+0x0C4B071B,	//0x1a86		VoC_add16_rd(REG3,REG3,0xc4b)
+0x09A60B08,	//0x1a88		VoC_sub16_dr(REG0,0x9a6,REG1)
+0x00010A81,	//0x1a8a		VoC_lw16i(REG1,0x1)
+0x801DF9F8,	//0x1a8c		VoC_add16_rp(REG5,REG0,REG3,DEFAULT)	|	VoC_shru16_ri(REG0,0xffffffff,DEFAULT)
+0x00000A82,	//0x1a8e		VoC_lw16i(REG2,0x0)
+0x0B12D9AE,	//0x1a90		VoC_sub16_dr(REG2,0x11a8,REG2)(lo)	|	VoC_lw32_p(RL6,REG5,DEFAULT)
+0x0A8611A8,	//0x1a92		VoC_lw16i(REG6,0x0)(lo)	|	VoC_sub16_dr(REG2,0x11a8,REG2)(hi)
+0xFE960000,	//0x1a94		VoC_shr32_rr(RL6,REG2,DEFAULT)	|	VoC_lw16i(REG6,0x0)(hi)
+0x00150A83,	//0x1a96		VoC_lw16i(REG3,0x15)
+0x1586C19E,	//0x1a98		VoC_sw32_d(RL6,0x26b6)(lo)	|	VoC_add16_rr(REG6,REG6,REG3,DEFAULT)
+0xFF4026B6,	//0x1a9a		VoC_lw32z(REG01,DEFAULT)	|	VoC_sw32_d(RL6,0x26b6)(hi)
+0xFFC0E0C0,	//0x1a9c		VoC_NAD	|	VoC_movreg16(REG0,REG6,DEFAULT)
+0x16A42B80,	//0x1a9e		VoC_jal(CII_NormUInt)
+0x26B61586,	//0x1aa0		VoC_sw32_d(RL6,0x26b6)
+0x26B81580,	//0x1aa2		VoC_sw32_d(REG01,0x26b8)
+0x26AC1487,	//0x1aa4		VoC_lw32_d(RL7,0x26ac)
+0x16742B80,	//0x1aa6		VoC_jal(CII_MULT_HI)
+0x26BA1586,	//0x1aa8		VoC_sw32_d(RL6,0x26ba)
+0x7FE10AC0,	//0x1aaa		VoC_lw16i(REG0,0xffffffe1)
+0x26AE1481,	//0x1aac		VoC_lw32_d(REG23,0x26ae)
+0x1482C010,	//0x1aae		VoC_lw32_d(REG45,0x26b8)(lo)	|	VoC_add16_rr(REG0,REG0,REG2,DEFAULT)
+0xC02026B8,	//0x1ab0		VoC_add16_rr(REG0,REG0,REG4,DEFAULT)	|	VoC_lw32_d(REG45,0x26b8)(hi)
+0x16A42B80,	//0x1ab2		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x1ab4		VoC_lw16i(REG1,0x0)
+0x051F0ACE,	//0x1ab6		VoC_lw16i(RL7_LO,0x851f)
+0x51EB0A8F,	//0x1ab8		VoC_lw16i(RL7_HI,0x51eb)
+0x16742B80,	//0x1aba		VoC_jal(CII_MULT_HI)
+0x26C41586,	//0x1abc		VoC_sw32_d(RL6,0x26c4)
+0x11AC0700,	//0x1abe		VoC_add16_rd(REG0,REG0,0x11ac)
+0x16A42B80,	//0x1ac0		VoC_jal(CII_NormUInt)
+0x00000A81,	//0x1ac2		VoC_lw16i(REG1,0x0)
+0x26C41586,	//0x1ac4		VoC_sw32_d(RL6,0x26c4)
+0x26BC1580,	//0x1ac6		VoC_sw32_d(REG01,0x26bc)
+		//0x1ac8		Subband_LOOP_START
+0x08FC1480,	//0x1ac8		VoC_lw32_d(REG01,0x8fc)
+0x3828FFC0,	//0x1aca		VoC_bgt16_rd(Subband_LOOP_END_not,REG0,0x26a8)(lo)	|	VoC_NOP
+0x2B0026A8,	//0x1acc		VoC_jump_lg(Subband_LOOP_END)(lo)	|	VoC_bgt16_rd(Subband_LOOP_END_not,REG0,0x26a8)(hi)
+0xFFC01AF4,	//0x1ace		VoC_NAD	|	VoC_jump_lg(Subband_LOOP_END)(hi)
+		//0x1ad0		Subband_LOOP_END_not
+0x16C62B80,	//0x1ad0		VoC_jal(CII_quickRand)
+0x26B41586,	//0x1ad2		VoC_sw32_d(RL6,0x26b4)
+0x26C41487,	//0x1ad4		VoC_lw32_d(RL7,0x26c4)
+0x16742B80,	//0x1ad6		VoC_jal(CII_MULT_HI)
+0x26BC1481,	//0x1ad8		VoC_lw32_d(REG23,0x26bc)
+0x11AA0792,	//0x1ada		VoC_sub16_rd(REG2,REG2,0x11aa)
+0x00050A87,	//0x1adc		VoC_lw16i(REG7,0x5)
+0xFFC0E046,	//0x1ade		VoC_NAD	|	VoC_movreg16(REG6,REG2,DEFAULT)
+0x16952B80,	//0x1ae0		VoC_jal(CII_Align2FracBits)
+0x26A81404,	//0x1ae2		VoC_lw16_d(REG4,0x26a8)
+0x000F0A83,	//0x1ae4		VoC_lw16i(REG3,0xf)
+0x0C4B071B,	//0x1ae6		VoC_add16_rd(REG3,REG3,0xc4b)
+0x811DF9FC,	//0x1ae8		VoC_add16_rp(REG5,REG4,REG3,DEFAULT)	|	VoC_shru16_ri(REG4,0xffffffff,DEFAULT)
+0x00010A83,	//0x1aea		VoC_lw16i(REG3,0x1)
+0x26A8071C,	//0x1aec		VoC_add16_rd(REG4,REG3,0x26a8)
+0x1504DDAE,	//0x1aee		VoC_sw16_d(REG4,0x26a8)(lo)	|	VoC_sw32_p(RL6,REG5,DEFAULT)
+0x2B0026A8,	//0x1af0		VoC_jump_lg(Subband_LOOP_START)(lo)	|	VoC_sw16_d(REG4,0x26a8)(hi)
+0xFFC01AC8,	//0x1af2		VoC_NAD	|	VoC_jump_lg(Subband_LOOP_START)(hi)
+		//0x1af4		Subband_LOOP_END
+0x16C62B80,	//0x1af4		VoC_jal(CII_quickRand)
+0xFFC0DFA9,	//0x1af6		VoC_NOP	|	VoC_pop16(RA,DEFAULT)
+0xDF41E580,	//0x1af8		VoC_push32(REG23,DEFAULT)	|	VoC_return
+		//0x1af9		CII_FFTBUTTERFLY_N_32_VOC
+0xD9DA5983,	//0x1afa		VoC_lw32inc_p(REG45,REG3,IN_PARALLEL)	|	VoC_lw32_p(REG67,REG0,DEFAULT)
+0xF90C4DEC,	//0x1afc		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1afe		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0xD98BCE75,	//0x1b00		VoC_lw32_p(REG67,REG1,DEFAULT)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0xFF264DEC,	//0x1b02		VoC_movreg32(RL6,ACC0,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1b04		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0xD99ACE75,	//0x1b06		VoC_lw32_p(REG45,REG3,DEFAULT)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0xFF274DEC,	//0x1b08		VoC_movreg32(RL7,ACC0,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90C4E75,	//0x1b0a		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0xD983CE7C,	//0x1b0c		VoC_lw32_p(REG67,REG0,DEFAULT)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0xCDEC4BA6,	//0x1b0e		VoC_multf32_rr(ACC0,REG7,REG5,IN_PARALLEL)	|	VoC_sub32_rr(RL6,RL6,ACC0,DEFAULT)
+0xF90E4E7C,	//0x1b10		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0xD9D24E75,	//0x1b12		VoC_lw32inc_p(REG45,REG2,IN_PARALLEL)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0xC93F5993,	//0x1b14		VoC_add32_rr(RL7,ACC0,RL7,IN_PARALLEL)	|	VoC_lw32_p(REG67,REG2,DEFAULT)
+0xFA0B7A0A,	//0x1b16		VoC_shr32_ri(REG67,0x1,IN_PARALLEL)	|	VoC_shr32_ri(REG45,0x1,DEFAULT)
+0x4AB6DF01,	//0x1b18		VoC_sub32_rr(RL6,REG45,RL6,DEFAULT)	|	VoC_pop32(REG23,DEFAULT)
+0x48FDC8B4,	//0x1b1a		VoC_add32_rr(ACC1,REG67,RL7,DEFAULT)	|	VoC_add32_rr(ACC0,REG45,RL6,IN_PARALLEL)
+0xDDD4CAFF,	//0x1b1c		VoC_sw32inc_p(ACC0,REG2,DEFAULT)	|	VoC_sub32_rr(RL7,REG67,RL7,IN_PARALLEL)
+0xDD95DDDE,	//0x1b1e		VoC_sw32_p(ACC1,REG2,DEFAULT)	|	VoC_sw32inc_p(RL6,REG3,DEFAULT)
+0xE580DD9F,	//0x1b20		VoC_return	|	VoC_sw32_p(RL7,REG3,DEFAULT)
+		//0x1b22		CII_prvFFT4DCT_VOC
+0x0B00F021,	//0x1b22		VoC_sub16_dr(REG0,0x11a8,REG0)(lo)	|	VoC_lw16i_short(REG1,0x1,DEFAULT)
+0xDFE911A8,	//0x1b24		VoC_push16(RA,DEFAULT)	|	VoC_sub16_dr(REG0,0x11a8,REG0)(hi)
+0x1505FE01,	//0x1b26		VoC_sw16_d(REG5,0x26c6)(lo)	|	VoC_shr16_rr(REG1,REG0,DEFAULT)
+0xE02626C6,	//0x1b28		VoC_movreg16(REG6,REG1,DEFAULT)	|	VoC_sw16_d(REG5,0x26c6)(hi)
+0xF7F9F1DA,	//0x1b2a		VoC_lw16i_short(FORMAT32,0xffffffff,DEFAULT)	|	VoC_lw16i_short(FORMATX,0xe,DEFAULT)
+0xF8FEF000,	//0x1b2c		VoC_shr16_ri(REG6,0xffffffff,DEFAULT)	|	VoC_lw16i_short(REG0,0x0,DEFAULT)
+0x1506F004,	//0x1b2e		VoC_sw16_d(REG6,0x26c7)(lo)	|	VoC_lw16i_short(REG4,0x0,DEFAULT)
+0x382E26C7,	//0x1b30		VoC_bgt16_rd(Label_return_not,REG6,0x11ac)(lo)	|	VoC_sw16_d(REG6,0x26c7)(hi)
+0x2B0011AC,	//0x1b32		VoC_jump_lg(Label_return)(lo)	|	VoC_bgt16_rd(Label_return_not,REG6,0x11ac)(hi)
+0xFFC01C3A,	//0x1b34		VoC_NAD	|	VoC_jump_lg(Label_return)(hi)
+		//0x1b36		Label_return_not
+0xF00B7052,	//0x1b36		VoC_lw16i_short(INC3,0x2,IN_PARALLEL)	|	VoC_lw16i_short(INC2,0x2,DEFAULT)
+		//0x1b38		Label_loop_sort_start
+0x1B3C3430,	//0x1b38		VoC_bgt16_rr(Label_loop_sort_con,REG6,REG0)
+0x1B6A2B00,	//0x1b3a		VoC_jump_lg(Label_loop_sort_end)
+		//0x1b3c		Label_loop_sort_con
+0x1B5234A0,	//0x1b3c		VoC_bngt16_rr(Label_iNLTj,REG4,REG0)
+0xC142C163,	//0x1b3e		VoC_add16_rr(REG2,REG5,REG0,DEFAULT)	|	VoC_add16_rr(REG3,REG5,REG4,DEFAULT)
+0xD997D99E,	//0x1b40		VoC_lw32_p(RL7,REG2,DEFAULT)	|	VoC_lw32_p(RL6,REG3,DEFAULT)
+0xDDDFDDD6,	//0x1b42		VoC_sw32inc_p(RL7,REG3,DEFAULT)	|	VoC_sw32inc_p(RL6,REG2,DEFAULT)
+0xD99CD995,	//0x1b44		VoC_lw32_p(ACC0,REG3,DEFAULT)	|	VoC_lw32_p(ACC1,REG2,DEFAULT)
+0xDDD4DDDD,	//0x1b46		VoC_sw32inc_p(ACC0,REG2,DEFAULT)	|	VoC_sw32inc_p(ACC1,REG3,DEFAULT)
+0xC0B2C0F3,	//0x1b48		VoC_add16_rr(REG2,REG2,REG6,DEFAULT)	|	VoC_add16_rr(REG3,REG3,REG6,DEFAULT)
+0xD997D99E,	//0x1b4a		VoC_lw32_p(RL7,REG2,DEFAULT)	|	VoC_lw32_p(RL6,REG3,DEFAULT)
+0xDDDFDDD6,	//0x1b4c		VoC_sw32inc_p(RL7,REG3,DEFAULT)	|	VoC_sw32inc_p(RL6,REG2,DEFAULT)
+0xD99CD995,	//0x1b4e		VoC_lw32_p(ACC0,REG3,DEFAULT)	|	VoC_lw32_p(ACC1,REG2,DEFAULT)
+0xDD94DD9D,	//0x1b50		VoC_sw32_p(ACC0,REG2,DEFAULT)	|	VoC_sw32_p(ACC1,REG3,DEFAULT)
+		//0x1b52		Label_iNLTj
+0xC1634142,	//0x1b52		VoC_add16_rr(REG3,REG5,REG4,IN_PARALLEL)	|	VoC_add16_rr(REG2,REG5,REG0,DEFAULT)
+0x11AC0712,	//0x1b54		VoC_add16_rd(REG2,REG2,0x11ac)
+0xD997C0F3,	//0x1b56		VoC_lw32_p(RL7,REG2,DEFAULT)	|	VoC_add16_rr(REG3,REG3,REG6,DEFAULT)
+0xDDDFD99E,	//0x1b58		VoC_sw32inc_p(RL7,REG3,DEFAULT)	|	VoC_lw32_p(RL6,REG3,DEFAULT)
+0xD99CDDD6,	//0x1b5a		VoC_lw32_p(ACC0,REG3,DEFAULT)	|	VoC_sw32inc_p(RL6,REG2,DEFAULT)
+0xE027D995,	//0x1b5c		VoC_movreg16(REG7,REG1,DEFAULT)	|	VoC_lw32_p(ACC1,REG2,DEFAULT)
+0xDD94DD9D,	//0x1b5e		VoC_sw32_p(ACC0,REG2,DEFAULT)	|	VoC_sw32_p(ACC1,REG3,DEFAULT)
+		//0x1b60		Label_loop_updatej
+0x1B65343C,	//0x1b60		VoC_bgt16_rr(Label_loop_updatej_end,REG7,REG4)
+0xF80FC33C,	//0x1b62		VoC_shr16_ri(REG7,0x1,DEFAULT)	|	VoC_sub16_rr(REG4,REG4,REG7,DEFAULT)
+0xC13CE5FC,	//0x1b64		VoC_add16_rr(REG4,REG4,REG7,DEFAULT)	|	VoC_jump(Label_loop_updatej)
+		//0x1b65		Label_loop_updatej_end
+0x11B00700,	//0x1b66		VoC_add16_rd(REG0,REG0,0x11b0)
+0x1B382B00,	//0x1b68		VoC_jump_lg(Label_loop_sort_start)
+		//0x1b6a		Label_loop_sort_end
+0x26C61402,	//0x1b6a		VoC_lw16_d(REG2,0x26c6)
+0x00000A87,	//0x1b6c		VoC_lw16i(REG7,0x0)
+0x26D81502,	//0x1b6e		VoC_sw16_d(REG2,0x26d8)
+		//0x1b70		Label_loop_i_start
+0x26C74827,	//0x1b70		VoC_blt16_rd(Label_loop_i_con,REG7,0x26c7)
+0x1BD42B00,	//0x1b72		VoC_jump_lg(Label_loop_i_end)
+		//0x1b74		Label_loop_i_con
+0x26D81402,	//0x1b74		VoC_lw16_d(REG2,0x26d8)
+0x26C81507,	//0x1b76		VoC_sw16_d(REG7,0x26c8)
+0x11AC0713,	//0x1b78		VoC_add16_rd(REG3,REG2,0x11ac)
+0x1B882C21,	//0x1b7a		VoC_loop_i(0x1,0x10)
+0x919CD996,	//0x1b7c		VoC_add32_rp(ACC0,RL6,REG3,DEFAULT)	|	VoC_lw32_p(RL6,REG2,DEFAULT)
+0xDDD4959D,	//0x1b7e		VoC_sw32inc_p(ACC0,REG2,DEFAULT)	|	VoC_sub32_rp(ACC1,RL6,REG3,DEFAULT)
+0xD996DDDD,	//0x1b80		VoC_lw32_p(RL6,REG2,DEFAULT)	|	VoC_sw32inc_p(ACC1,REG3,DEFAULT)
+0x959D919C,	//0x1b82		VoC_sub32_rp(ACC1,RL6,REG3,DEFAULT)	|	VoC_add32_rp(ACC0,RL6,REG3,DEFAULT)
+0xDDDDDDD4,	//0x1b84		VoC_sw32inc_p(ACC1,REG3,DEFAULT)	|	VoC_sw32inc_p(ACC0,REG2,DEFAULT)
+0x11AC0712,	//0x1b86		VoC_add16_rd(REG2,REG2,0x11ac)
+		//0x1b88		VoC_endloop1
+0x11AC071B,	//0x1b88		VoC_add16_rd(REG3,REG3,0x11ac)
+0xE0847201,	//0x1b8a		VoC_lw16i_short(REG4,0x8,IN_PARALLEL)	|	VoC_lw16i_short(REG1,0x10,DEFAULT)
+0x7FFE0AC6,	//0x1b8c		VoC_lw16i(REG6,0xfffffffe)
+0x1BC62C09,	//0x1b8e		VoC_loop_i(0x1,0x4)
+0x00000A87,	//0x1b90		VoC_lw16i(REG7,0x0)
+0x26CE1501,	//0x1b92		VoC_sw16_d(REG1,0x26ce)
+0x26D71504,	//0x1b94		VoC_sw16_d(REG4,0x26d7)
+0x26CF1506,	//0x1b96		VoC_sw16_d(REG6,0x26cf)
+		//0x1b98		Label_loop_j_start
+0x26D74827,	//0x1b98		VoC_blt16_rd(Label_loop_j_end_not,REG7,0x26d7)
+0x1BBC2B00,	//0x1b9a		VoC_jump_lg(Label_loop_j_end)
+		//0x1b9c		Label_loop_j_end_not
+0x11D40A80,	//0x1b9c		VoC_lw16i(REG0,0x11d4)
+0xFE35E0E5,	//0x1b9e		VoC_shr16_rr(REG5,REG6,DEFAULT)	|	VoC_movreg16(REG5,REG7,DEFAULT)
+0x26C91507,	//0x1ba0		VoC_sw16_d(REG7,0x26c9)
+0x0701C028,	//0x1ba2		VoC_add16_rd(REG1,REG0,0x11b9)(lo)	|	VoC_add16_rr(REG0,REG0,REG5,IN_PARALLEL)
+0xFFC011B9,	//0x1ba4		VoC_NAD	|	VoC_add16_rd(REG1,REG0,0x11b9)(hi)
+		//0x1ba6		Label_loop_k_start
+0x26D8073A,	//0x1ba6		VoC_add16_rd(REG2,REG7,0x26d8)
+0x11BE4CA7,	//0x1ba8		VoC_bnlt16_rd(Label_loop_k_end,REG7,0x11be)
+0x0713DFC7,	//0x1baa		VoC_add16_rd(REG3,REG2,0x26d7)(lo)	|	VoC_push16(REG7,DEFAULT)
+0x2B8026D7,	//0x1bac		VoC_jal(CII_FFTBUTTERFLY_N_32_VOC)(lo)	|	VoC_add16_rd(REG3,REG2,0x26d7)(hi)
+0xDF871AF9,	//0x1bae		VoC_pop16(REG7,DEFAULT)	|	VoC_jal(CII_FFTBUTTERFLY_N_32_VOC)(hi)
+0x26CE073F,	//0x1bb0		VoC_add16_rd(REG7,REG7,0x26ce)
+0xFFC0E5F4,	//0x1bb2		VoC_NAD	|	VoC_jump(Label_loop_k_start)
+		//0x1bb4		Label_loop_k_end
+0x26C91407,	//0x1bb4		VoC_lw16_d(REG7,0x26c9)
+0x26CF1406,	//0x1bb6		VoC_lw16_d(REG6,0x26cf)
+0x11AC073F,	//0x1bb8		VoC_add16_rd(REG7,REG7,0x11ac)
+0x1B982B00,	//0x1bba		VoC_jump_lg(Label_loop_j_start)
+		//0x1bbc		Label_loop_j_end
+0x26CE1401,	//0x1bbc		VoC_lw16_d(REG1,0x26ce)
+0x26D71404,	//0x1bbe		VoC_lw16_d(REG4,0x26d7)
+0x26CF1406,	//0x1bc0		VoC_lw16_d(REG6,0x26cf)
+0x0736F8F9,	//0x1bc2		VoC_add16_rd(REG6,REG6,0x11a9)(lo)	|	VoC_shr16_ri(REG1,0xffffffff,IN_PARALLEL)
+0xF8FC11A9,	//0x1bc4		VoC_shr16_ri(REG4,0xffffffff,IN_PARALLEL)	|	VoC_add16_rd(REG6,REG6,0x11a9)(hi)
+		//0x1bc6		VoC_endloop1
+0x26CF1506,	//0x1bc6		VoC_sw16_d(REG6,0x26cf)
+0x26D81402,	//0x1bc8		VoC_lw16_d(REG2,0x26d8)
+0x26C81407,	//0x1bca		VoC_lw16_d(REG7,0x26c8)
+0x11BE0712,	//0x1bcc		VoC_add16_rd(REG2,REG2,0x11be)
+0x11BB073F,	//0x1bce		VoC_add16_rd(REG7,REG7,0x11bb)
+0x26D81502,	//0x1bd0		VoC_sw16_d(REG2,0x26d8)
+0x1B702B00,	//0x1bd2		VoC_jump_lg(Label_loop_i_start)
+		//0x1bd4		Label_loop_i_end
+0x26C71405,	//0x1bd4		VoC_lw16_d(REG5,0x26c7)
+0x00400A81,	//0x1bd6		VoC_lw16i(REG1,0x40)
+0xE08670C3,	//0x1bd8		VoC_lw16i_short(REG6,0x8,IN_PARALLEL)	|	VoC_lw16i_short(REG3,0x6,DEFAULT)
+0x00800A84,	//0x1bda		VoC_lw16i(REG4,0x80)
+0xF007F82D,	//0x1bdc		VoC_lw16i_short(REG7,0x0,DEFAULT)	|	VoC_shr16_ri(REG5,0x5,DEFAULT)
+		//0x1bdd		Label_fft32_t_start
+0x26C74821,	//0x1bde		VoC_blt16_rd(Label_fft32_t_con,REG1,0x26c7)
+0x1C3A2B00,	//0x1be0		VoC_jump_lg(Label_fft32_t_end)
+		//0x1be2		Label_fft32_t_con
+0x26D41505,	//0x1be2		VoC_sw16_d(REG5,0x26d4)
+0x26CF1506,	//0x1be4		VoC_sw16_d(REG6,0x26cf)
+0x26D61504,	//0x1be6		VoC_sw16_d(REG4,0x26d6)
+0x26CE1501,	//0x1be8		VoC_sw16_d(REG1,0x26ce)
+0x26D91503,	//0x1bea		VoC_sw16_d(REG3,0x26d9)
+		//0x1bec		Label_fft32_i_start
+0x482FF000,	//0x1bec		VoC_blt16_rd(Label_fft32_i_con,REG7,0x26d4)(lo)	|	VoC_lw16i_short(REG0,0x0,DEFAULT)
+0x2B0026D4,	//0x1bee		VoC_jump_lg(Label_fft32_i_end)(lo)	|	VoC_blt16_rd(Label_fft32_i_con,REG7,0x26d4)(hi)
+0xFFC01C28,	//0x1bf0		VoC_NAD	|	VoC_jump_lg(Label_fft32_i_end)(hi)
+		//0x1bf2		Label_fft32_i_con
+0x26C81507,	//0x1bf2		VoC_sw16_d(REG7,0x26c8)
+		//0x1bf4		Label_fft32_j_start
+0x26CF4820,	//0x1bf4		VoC_blt16_rd(Label_fft32_j_con,REG0,0x26cf)
+0x1C222B00,	//0x1bf6		VoC_jump_lg(Label_fft32_j_end)
+		//0x1bf8		Label_fft32_j_con
+0x26C91500,	//0x1bf8		VoC_sw16_d(REG0,0x26c9)
+0x26D91401,	//0x1bfa		VoC_lw16_d(REG1,0x26d9)
+0x26C60705,	//0x1bfc		VoC_add16_rd(REG5,REG0,0x26c6)
+0x1403F1C4,	//0x1bfe		VoC_lw16_d(REG3,0x26c8)(lo)	|	VoC_lw16i_short(REG4,0xe,DEFAULT)
+0xC26426C8,	//0x1c00		VoC_sub16_rr(REG4,REG1,REG4,DEFAULT)	|	VoC_lw16_d(REG3,0x26c8)(hi)
+0x11A80B09,	//0x1c02		VoC_sub16_dr(REG1,0x11a8,REG1)
+0xFE0BFE20,	//0x1c04		VoC_shr16_rr(REG3,REG1,DEFAULT)	|	VoC_shr16_rr(REG0,REG4,DEFAULT)
+0x11D40A84,	//0x1c06		VoC_lw16i(REG4,0x11d4)
+0xC020C15A,	//0x1c08		VoC_add16_rr(REG0,REG0,REG4,DEFAULT)	|	VoC_add16_rr(REG2,REG5,REG3,DEFAULT)
+0x11B90701,	//0x1c0a		VoC_add16_rd(REG1,REG0,0x11b9)
+0x1C1A2C21,	//0x1c0c		VoC_loop_i(0x1,0x10)
+0x26D51502,	//0x1c0e		VoC_sw16_d(REG2,0x26d5)
+0x26D60713,	//0x1c10		VoC_add16_rd(REG3,REG2,0x26d6)
+0x1AF92B80,	//0x1c12		VoC_jal(CII_FFTBUTTERFLY_N_32_VOC)
+0x26D51402,	//0x1c14		VoC_lw16_d(REG2,0x26d5)
+0x11AA0700,	//0x1c16		VoC_add16_rd(REG0,REG0,0x11aa)
+0x26CF0712,	//0x1c18		VoC_add16_rd(REG2,REG2,0x26cf)
+		//0x1c1a		VoC_endloop1
+0x11AA0709,	//0x1c1a		VoC_add16_rd(REG1,REG1,0x11aa)
+0x26C91400,	//0x1c1c		VoC_lw16_d(REG0,0x26c9)
+0x11AC0700,	//0x1c1e		VoC_add16_rd(REG0,REG0,0x11ac)
+0x1BF42B00,	//0x1c20		VoC_jump_lg(Label_fft32_j_start)
+		//0x1c22		Label_fft32_j_end
+0x26C81407,	//0x1c22		VoC_lw16_d(REG7,0x26c8)
+0x11AC073F,	//0x1c24		VoC_add16_rd(REG7,REG7,0x11ac)
+0x1BEC2B00,	//0x1c26		VoC_jump_lg(Label_fft32_i_start)
+		//0x1c28		Label_fft32_i_end
+0x26CE1401,	//0x1c28		VoC_lw16_d(REG1,0x26ce)
+0x26D91403,	//0x1c2a		VoC_lw16_d(REG3,0x26d9)
+0x26CF1406,	//0x1c2c		VoC_lw16_d(REG6,0x26cf)
+0x26D61404,	//0x1c2e		VoC_lw16_d(REG4,0x26d6)
+0x26D41405,	//0x1c30		VoC_lw16_d(REG5,0x26d4)
+0x11A9071B,	//0x1c32		VoC_add16_rd(REG3,REG3,0x11a9)
+0xF8FE78F9,	//0x1c34		VoC_shr16_ri(REG6,0xffffffff,IN_PARALLEL)	|	VoC_shr16_ri(REG1,0xffffffff,DEFAULT)
+0xF80D78FC,	//0x1c36		VoC_shr16_ri(REG5,0x1,IN_PARALLEL)	|	VoC_shr16_ri(REG4,0xffffffff,DEFAULT)
+0x1BDD2B00,	//0x1c38		VoC_jump_lg(Label_fft32_t_start)
+		//0x1c3a		Label_fft32_t_end
+		//0x1c3a		Label_return
+0x701ADFA9,	//0x1c3a		VoC_lw16i_short(FORMATX,0x0,DEFAULT)	|	VoC_pop16(RA,DEFAULT)
+0xE580F401,	//0x1c3c		VoC_return	|	VoC_lw16i_short(FORMAT32,0x0,IN_PARALLEL)
+		//0x1c3e		CII_INBF_VOC
+0x1483D98A,	//0x1c3e		VoC_lw32_d(REG67,0x25c8)(lo)	|	VoC_lw32_p(REG45,REG1,DEFAULT)
+0x4DEC25C8,	//0x1c40		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_lw32_d(REG67,0x25c8)(hi)
+0x4E7CF90C,	//0x1c42		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xCE75F90E,	//0x1c44		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x25C61483,	//0x1c46		VoC_lw32_d(REG67,0x25c6)
+0xFF2659D2,	//0x1c48		VoC_movreg32(RL6,ACC0,IN_PARALLEL)	|	VoC_lw32inc_p(REG45,REG2,DEFAULT)
+0xF90C4DEC,	//0x1c4a		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1c4c		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x1483CE75,	//0x1c4e		VoC_lw32_d(REG67,0x25c8)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x4DEC25C8,	//0x1c50		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_lw32_d(REG67,0x25c8)(hi)
+0x4E7CCBA6,	//0x1c52		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_sub32_rr(RL6,RL6,ACC0,IN_PARALLEL)
+0xCE75F90E,	//0x1c54		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x25C61483,	//0x1c56		VoC_lw32_d(REG67,0x25c6)
+0xFF27598A,	//0x1c58		VoC_movreg32(RL7,ACC0,IN_PARALLEL)	|	VoC_lw32_p(REG45,REG1,DEFAULT)
+0xF90C4DEC,	//0x1c5a		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1c5c		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0xDDCE4E75,	//0x1c5e		VoC_sw32inc_p(RL6,REG1,IN_PARALLEL)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x26041482,	//0x1c60		VoC_lw32_d(REG45,0x2604)
+0x4DECC9E7,	//0x1c62		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_add32_rr(RL7,RL7,ACC0,DEFAULT)
+0xCE7CF90C,	//0x1c64		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xDDCF4E75,	//0x1c66		VoC_sw32inc_p(RL7,REG1,IN_PARALLEL)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x25C81483,	//0x1c68		VoC_lw32_d(REG67,0x25c8)
+0xFF264DEC,	//0x1c6a		VoC_movreg32(RL6,ACC0,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1c6c		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x0BB6CE75,	//0x1c6e		VoC_sub32_dr(RL6,0x25cc,RL6)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x092725CC,	//0x1c70		VoC_add32_rd(RL7,ACC0,0x25ca)(lo)	|	VoC_sub32_dr(RL6,0x25cc,RL6)(hi)
+0x148425CA,	//0x1c72		VoC_lw32_d(ACC0,0x25c8)(lo)	|	VoC_add32_rd(RL7,ACC0,0x25ca)(hi)
+0x158625C8,	//0x1c74		VoC_sw32_d(RL6,0x25c8)(lo)	|	VoC_lw32_d(ACC0,0x25c8)(hi)
+0x158425C8,	//0x1c76		VoC_sw32_d(ACC0,0x25cc)(lo)	|	VoC_sw32_d(RL6,0x25c8)(hi)
+0x148525CC,	//0x1c78		VoC_lw32_d(ACC1,0x25c6)(lo)	|	VoC_sw32_d(ACC0,0x25cc)(hi)
+0x158725C6,	//0x1c7a		VoC_sw32_d(RL7,0x25c6)(lo)	|	VoC_lw32_d(ACC1,0x25c6)(hi)
+0x158525C6,	//0x1c7c		VoC_sw32_d(ACC1,0x25ca)(lo)	|	VoC_sw32_d(RL7,0x25c6)(hi)
+0xE58025CA,	//0x1c7e		VoC_return	|	VoC_sw32_d(ACC1,0x25ca)(hi)
+		//0x1c80		CII_auDctIV_VOC
+0xDFC5DFE9,	//0x1c80		VoC_push16(REG5,DEFAULT)	|	VoC_push16(RA,DEFAULT)
+0x09EC1406,	//0x1c82		VoC_lw16_d(REG6,0x9ec)
+0x3186F031,	//0x1c84		VoC_bez16_r(EQ_end,REG6)(lo)	|	VoC_lw16i_short(INC1,0x1,DEFAULT)
+0x0A811CE0,	//0x1c86		VoC_lw16i(REG1,0x672e)(lo)	|	VoC_bez16_r(EQ_end,REG6)(hi)
+0x412E672E,	//0x1c88		VoC_be16_rd(EQtypeEnd,REG6,0x11a9)(lo)	|	VoC_lw16i(REG1,0x672e)(hi)
+0x070911A9,	//0x1c8a		VoC_add16_rd(REG1,REG1,0x11b2)(lo)	|	VoC_be16_rd(EQtypeEnd,REG6,0x11a9)(hi)
+0x410E11B2,	//0x1c8c		VoC_be16_rd(EQtypeEnd,REG6,0x11aa)(lo)	|	VoC_add16_rd(REG1,REG1,0x11b2)(hi)
+0x070911AA,	//0x1c8e		VoC_add16_rd(REG1,REG1,0x11b2)(lo)	|	VoC_be16_rd(EQtypeEnd,REG6,0x11aa)(hi)
+0x40AE11B2,	//0x1c90		VoC_be16_rd(EQtypeEnd,REG6,0x11ab)(lo)	|	VoC_add16_rd(REG1,REG1,0x11b2)(hi)
+0x070911AB,	//0x1c92		VoC_add16_rd(REG1,REG1,0x11b2)(lo)	|	VoC_be16_rd(EQtypeEnd,REG6,0x11ab)(hi)
+0x408E11B2,	//0x1c94		VoC_be16_rd(EQtypeEnd,REG6,0x11ac)(lo)	|	VoC_add16_rd(REG1,REG1,0x11b2)(hi)
+0x070911AC,	//0x1c96		VoC_add16_rd(REG1,REG1,0x11b2)(lo)	|	VoC_be16_rd(EQtypeEnd,REG6,0x11ac)(hi)
+0x402E11B2,	//0x1c98		VoC_be16_rd(EQtypeEnd,REG6,0x11ad)(lo)	|	VoC_add16_rd(REG1,REG1,0x11b2)(hi)
+0x2B0011AD,	//0x1c9a		VoC_jump_lg(EQ_end)(lo)	|	VoC_be16_rd(EQtypeEnd,REG6,0x11ad)(hi)
+0xFFC01CE0,	//0x1c9c		VoC_NAD	|	VoC_jump_lg(EQ_end)(hi)
+		//0x1c9e		EQtypeEnd
+0x08FA1406,	//0x1c9e		VoC_lw16_d(REG6,0x8fa)
+0xF966F032,	//0x1ca0		VoC_shru16_ri(REG6,0xc,DEFAULT)	|	VoC_lw16i_short(INC2,0x1,DEFAULT)
+0x67740A82,	//0x1ca2		VoC_lw16i(REG2,0x6774)
+0x11A94186,	//0x1ca4		VoC_be16_rd(BandFreqEnd,REG6,0x11a9)
+0x11B20712,	//0x1ca6		VoC_add16_rd(REG2,REG2,0x11b2)
+0x11AA4126,	//0x1ca8		VoC_be16_rd(BandFreqEnd,REG6,0x11aa)
+0x11B20712,	//0x1caa		VoC_add16_rd(REG2,REG2,0x11b2)
+0x11AB4106,	//0x1cac		VoC_be16_rd(BandFreqEnd,REG6,0x11ab)
+0x11B20712,	//0x1cae		VoC_add16_rd(REG2,REG2,0x11b2)
+0x11AD40A6,	//0x1cb0		VoC_be16_rd(BandFreqEnd,REG6,0x11ad)
+0x11B20712,	//0x1cb2		VoC_add16_rd(REG2,REG2,0x11b2)
+0x11AF4086,	//0x1cb4		VoC_be16_rd(BandFreqEnd,REG6,0x11af)
+0x11B20712,	//0x1cb6		VoC_add16_rd(REG2,REG2,0x11b2)
+0x11B24026,	//0x1cb8		VoC_be16_rd(BandFreqEnd,REG6,0x11b2)
+0x11B20712,	//0x1cba		VoC_add16_rd(REG2,REG2,0x11b2)
+		//0x1cbc		BandFreqEnd
+0xF799F17A,	//0x1cbc		VoC_lw16i_short(FORMAT32,0xfffffffc,DEFAULT)	|	VoC_lw16i_short(FORMATX,0xb,DEFAULT)
+0x00200A96,	//0x1cbe		VoC_lw16i(STATUS,0x20)
+0xF050E0A0,	//0x1cc0		VoC_lw16i_short(INC0,0x2,DEFAULT)	|	VoC_movreg16(REG0,REG5,DEFAULT)
+		//0x1cc2		BandChange
+0x08FC1403,	//0x1cc2		VoC_lw16_d(REG3,0x8fc)
+0x11C31407,	//0x1cc4		VoC_lw16_d(REG7,0x11c3)
+0xFFC0D8A4,	//0x1cc6		VoC_NAD	|	VoC_lw16inc_p(REG4,REG2,DEFAULT)
+		//0x1cc8		SubbandAdaptStart
+0x1CCE351F,	//0x1cc8		VoC_be16_rr(SubbandAdaptEnd,REG3,REG7)
+0xF80C780F,	//0x1cca		VoC_shr16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_shr16_ri(REG7,0x1,DEFAULT)
+0xFFC0E5FC,	//0x1ccc		VoC_NAD	|	VoC_jump(SubbandAdaptStart)
+		//0x1cce		SubbandAdaptEnd
+0xD89578FB,	//0x1cce		VoC_lw16inc_p(REG5,REG1,IN_PARALLEL)	|	VoC_shr16_ri(REG3,0xffffffff,DEFAULT)
+0xD61678FC,	//0x1cd0		VoC_lw16_sd(REG6,0x0,IN_PARALLEL)	|	VoC_shr16_ri(REG4,0xffffffff,DEFAULT)
+0xC13440F3,	//0x1cd2		VoC_add16_rr(REG4,REG4,REG6,IN_PARALLEL)	|	VoC_add16_rr(REG3,REG3,REG6,DEFAULT)
+		//0x1cd4		BandWeightMult
+0x1CE03498,	//0x1cd4		VoC_bngt16_rr(EQ_end,REG3,REG0)
+0x1CC234A0,	//0x1cd6		VoC_bngt16_rr(BandChange,REG4,REG0)
+0x4DECD983,	//0x1cd8		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_lw32_p(REG67,REG0,DEFAULT)
+0xCE75F90E,	//0x1cda		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0xFFC0FFC0,	//0x1cdc		VoC_NOP	|	VoC_NOP
+0xE5F5DDC4,	//0x1cde		VoC_jump(BandWeightMult)	|	VoC_sw32inc_p(ACC0,REG0,DEFAULT)
+		//0x1ce0		EQ_end
+0x08FC1400,	//0x1ce0		VoC_lw16_d(REG0,0x8fc)
+0x61240A81,	//0x1ce2		VoC_lw16i(REG1,0x6124)
+0xC041F838,	//0x1ce4		VoC_add16_rr(REG1,REG1,REG0,DEFAULT)	|	VoC_shr16_ri(REG0,0x7,DEFAULT)
+0xD810F050,	//0x1ce6		VoC_lw16_p(REG0,REG1,DEFAULT)	|	VoC_lw16i_short(INC0,0x2,DEFAULT)
+0x0703FF43,	//0x1ce8		VoC_add16_rd(REG3,REG0,0x11b6)(lo)	|	VoC_lw32z(REG67,DEFAULT)
+0x070411B6,	//0x1cea		VoC_add16_rd(REG4,REG0,0x11b2)(lo)	|	VoC_add16_rd(REG3,REG0,0x11b6)(hi)
+0x070511B2,	//0x1cec		VoC_add16_rd(REG5,REG0,0x11b0)(lo)	|	VoC_add16_rd(REG4,REG0,0x11b2)(hi)
+0x94DE11B0,	//0x1cee		VoC_sub32_rp(RL6,REG67,REG3,DEFAULT)	|	VoC_add16_rd(REG5,REG0,0x11b0)(hi)
+0xD9ACD9A7,	//0x1cf0		VoC_lw32_p(ACC0,REG5,DEFAULT)	|	VoC_lw32_p(RL7,REG4,DEFAULT)
+0x26041586,	//0x1cf2		VoC_sw32_d(RL6,0x2604)
+0x26061587,	//0x1cf4		VoC_sw32_d(RL7,0x2606)
+0x26081584,	//0x1cf6		VoC_sw32_d(ACC0,0x2608)
+0x08FC1401,	//0x1cf8		VoC_lw16_d(REG1,0x8fc)
+0xD9C796C6,	//0x1cfa		VoC_lw32inc_p(RL7,REG0,DEFAULT)	|	VoC_sub32inc_rp(RL6,REG67,REG0,DEFAULT)
+0xD9C5D9C4,	//0x1cfc		VoC_lw32inc_p(ACC1,REG0,DEFAULT)	|	VoC_lw32inc_p(ACC0,REG0,DEFAULT)
+0xFA0FFA0E,	//0x1cfe		VoC_shr32_ri(RL7,0x1,DEFAULT)	|	VoC_shr32_ri(RL6,0x1,DEFAULT)
+0xFA0DFA0C,	//0x1d00		VoC_shr32_ri(ACC1,0x1,DEFAULT)	|	VoC_shr32_ri(ACC0,0x1,DEFAULT)
+0x25C61586,	//0x1d02		VoC_sw32_d(RL6,0x25c6)
+0x25C81587,	//0x1d04		VoC_sw32_d(RL7,0x25c8)
+0x25CA1584,	//0x1d06		VoC_sw32_d(ACC0,0x25ca)
+0x25CC1585,	//0x1d08		VoC_sw32_d(ACC1,0x25cc)
+0xF7F9F1DA,	//0x1d0a		VoC_lw16i_short(FORMAT32,0xffffffff,DEFAULT)	|	VoC_lw16i_short(FORMATX,0xe,DEFAULT)
+0x00200A96,	//0x1d0c		VoC_lw16i(STATUS,0x20)
+0x08FC1404,	//0x1d0e		VoC_lw16_d(REG4,0x8fc)
+0x07A4D611,	//0x1d10		VoC_sub16_rd(REG4,REG4,0x11a9)(lo)	|	VoC_lw16_sd(REG1,0x0,DEFAULT)
+0x140011A9,	//0x1d12		VoC_lw16_d(REG0,0x8fc)(lo)	|	VoC_sub16_rd(REG4,REG4,0x11a9)(hi)
+0xF8FC08FC,	//0x1d14		VoC_shr16_ri(REG4,0xffffffff,DEFAULT)	|	VoC_lw16_d(REG0,0x8fc)(hi)
+0xC063F810,	//0x1d16		VoC_add16_rr(REG3,REG1,REG4,DEFAULT)	|	VoC_shr16_ri(REG0,0x2,DEFAULT)
+0xF0127051,	//0x1d18		VoC_lw16i_short(INC2,0x4,IN_PARALLEL)	|	VoC_lw16i_short(INC1,0x2,DEFAULT)
+0x11AA070A,	//0x1d1a		VoC_add16_rd(REG2,REG1,0x11aa)
+		//0x1d1c		PREFFT_LOOP_1_BEGIN
+0x1D2A3180,	//0x1d1c		VoC_bez16_r(PREFFT_LOOP_1_END,REG0)
+0xD996D99C,	//0x1d1e		VoC_lw32_p(RL6,REG2,DEFAULT)	|	VoC_lw32_p(ACC0,REG3,DEFAULT)
+0xDD9EDD94,	//0x1d20		VoC_sw32_p(RL6,REG3,DEFAULT)	|	VoC_sw32_p(ACC0,REG2,DEFAULT)
+0x1C3E2B80,	//0x1d22		VoC_jal(CII_INBF_VOC)
+0x11A90780,	//0x1d24		VoC_sub16_rd(REG0,REG0,0x11a9)
+0x11AC079B,	//0x1d26		VoC_sub16_rd(REG3,REG3,0x11ac)
+0xFFC0E5F4,	//0x1d28		VoC_NAD	|	VoC_jump(PREFFT_LOOP_1_BEGIN)
+		//0x1d2a		PREFFT_LOOP_1_END
+0x08FC1400,	//0x1d2a		VoC_lw16_d(REG0,0x8fc)
+0xFFC0FFC0,	//0x1d2c		VoC_NAD	|	VoC_NOP
+		//0x1d2e		PREFFT_LOOP_2_BEGIN
+0x1D363180,	//0x1d2e		VoC_bez16_r(PREFFT_LOOP_2_END,REG0)
+0x1C3E2B80,	//0x1d30		VoC_jal(CII_INBF_VOC)
+0x11AC0780,	//0x1d32		VoC_sub16_rd(REG0,REG0,0x11ac)
+0xFFC0E5FA,	//0x1d34		VoC_NAD	|	VoC_jump(PREFFT_LOOP_2_BEGIN)
+		//0x1d36		PREFFT_LOOP_2_END
+0x08FC1401,	//0x1d36		VoC_lw16_d(REG1,0x8fc)
+0xF831F0A0,	//0x1d38		VoC_shr16_ri(REG1,0x6,DEFAULT)	|	VoC_lw16i_short(REG0,0x5,DEFAULT)
+0xFFC0D615,	//0x1d3a		VoC_NAD	|	VoC_lw16_sd(REG5,0x0,DEFAULT)
+		//0x1d3c		LOG_BEGIN
+0x11A93C31,	//0x1d3c		VoC_bngt16_rd(LOG_END,REG1,0x11a9)
+0x0700F809,	//0x1d3e		VoC_add16_rd(REG0,REG0,0x11a9)(lo)	|	VoC_shr16_ri(REG1,0x1,DEFAULT)
+0xE5FB11A9,	//0x1d40		VoC_jump(LOG_BEGIN)	|	VoC_add16_rd(REG0,REG0,0x11a9)(hi)
+		//0x1d42		LOG_END
+0xF019F01A,	//0x1d42		VoC_lw16i_short(FORMAT32,0x0,DEFAULT)	|	VoC_lw16i_short(FORMATX,0x0,DEFAULT)
+0x00010A96,	//0x1d44		VoC_lw16i(STATUS,0x1)
+0x1B222B80,	//0x1d46		VoC_jal(CII_prvFFT4DCT_VOC)
+0x00410A96,	//0x1d48		VoC_lw16i(STATUS,0x41)
+0xF7F9F1DA,	//0x1d4a		VoC_lw16i_short(FORMAT32,0xffffffff,DEFAULT)	|	VoC_lw16i_short(FORMATX,0xe,DEFAULT)
+0x08FC1400,	//0x1d4c		VoC_lw16_d(REG0,0x8fc)
+0x0782D611,	//0x1d4e		VoC_sub16_rd(REG2,REG0,0x11aa)(lo)	|	VoC_lw16_sd(REG1,0x0,DEFAULT)
+0xFF4611AA,	//0x1d50		VoC_lw32z(RL6,DEFAULT)	|	VoC_sub16_rd(REG2,REG0,0x11aa)(hi)
+0x1487F8FA,	//0x1d52		VoC_lw32_d(RL7,0x11c8)(lo)	|	VoC_shr16_ri(REG2,0xffffffff,DEFAULT)
+0xC08A11C8,	//0x1d54		VoC_add16_rr(REG2,REG2,REG1,DEFAULT)	|	VoC_lw32_d(RL7,0x11c8)(hi)
+0x25C61586,	//0x1d56		VoC_sw32_d(RL6,0x25c6)
+0x25C81587,	//0x1d58		VoC_sw32_d(RL7,0x25c8)
+		//0x1d5a		POSTFFT_LOOP_BEGIN
+0x1DDA3180,	//0x1d5a		VoC_bez16_r(POSTFFT_LOOP_END,REG0)
+0x1483D98A,	//0x1d5c		VoC_lw32_d(REG67,0x25c8)(lo)	|	VoC_lw32_p(REG45,REG1,DEFAULT)
+0x158225C8,	//0x1d5e		VoC_sw32_d(REG45,0x25ce)(lo)	|	VoC_lw32_d(REG67,0x25c8)(hi)
+0x4DEC25CE,	//0x1d60		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_sw32_d(REG45,0x25ce)(hi)
+0x4E7CF90C,	//0x1d62		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xCE75F90E,	//0x1d64		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x11AA070B,	//0x1d66		VoC_add16_rd(REG3,REG1,0x11aa)
+0x25C61483,	//0x1d68		VoC_lw32_d(REG67,0x25c6)
+0xFF26599A,	//0x1d6a		VoC_movreg32(RL6,ACC0,IN_PARALLEL)	|	VoC_lw32_p(REG45,REG3,DEFAULT)
+0xF90C4DEC,	//0x1d6c		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1d6e		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x1482CE75,	//0x1d70		VoC_lw32_d(REG45,0x25ce)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x4DEC25CE,	//0x1d72		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_lw32_d(REG45,0x25ce)(hi)
+0x4E75CBA6,	//0x1d74		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_sub32_rr(RL6,RL6,ACC0,IN_PARALLEL)
+0x4E7CF90C,	//0x1d76		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0x1483DD8E,	//0x1d78		VoC_lw32_d(REG67,0x25c8)(lo)	|	VoC_sw32_p(RL6,REG1,IN_PARALLEL)
+0x599A25C8,	//0x1d7a		VoC_lw32_p(REG45,REG3,DEFAULT)	|	VoC_lw32_d(REG67,0x25c8)(hi)
+0x4DECFF26,	//0x1d7c		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_movreg32(RL6,ACC0,IN_PARALLEL)
+0x4E7CF90C,	//0x1d7e		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xCE75F90E,	//0x1d80		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x11AA0713,	//0x1d82		VoC_add16_rd(REG3,REG2,0x11aa)
+0xD99AC9A6,	//0x1d84		VoC_lw32_p(REG45,REG3,DEFAULT)	|	VoC_add32_rr(RL6,RL6,ACC0,DEFAULT)
+0x11CC0BB6,	//0x1d86		VoC_sub32_dr(RL6,0x11cc,RL6)
+0x25CE1582,	//0x1d88		VoC_sw32_d(REG45,0x25ce)
+0x1482DD9E,	//0x1d8a		VoC_lw32_d(REG45,0x2604)(lo)	|	VoC_sw32_p(RL6,REG3,DEFAULT)
+0x14832604,	//0x1d8c		VoC_lw32_d(REG67,0x25c6)(lo)	|	VoC_lw32_d(REG45,0x2604)(hi)
+0x4DEC25C6,	//0x1d8e		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_lw32_d(REG67,0x25c6)(hi)
+0x4E7CF90C,	//0x1d90		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xCE75F90E,	//0x1d92		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x25C81483,	//0x1d94		VoC_lw32_d(REG67,0x25c8)
+0xFF264DEC,	//0x1d96		VoC_movreg32(RL6,ACC0,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1d98		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x0BB6CE75,	//0x1d9a		VoC_sub32_dr(RL6,0x2606,RL6)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x09272606,	//0x1d9c		VoC_add32_rd(RL7,ACC0,0x2608)(lo)	|	VoC_sub32_dr(RL6,0x2606,RL6)(hi)
+0x14842608,	//0x1d9e		VoC_lw32_d(ACC0,0x25c8)(lo)	|	VoC_add32_rd(RL7,ACC0,0x2608)(hi)
+0x158625C8,	//0x1da0		VoC_sw32_d(RL6,0x25c8)(lo)	|	VoC_lw32_d(ACC0,0x25c8)(hi)
+0x158425C8,	//0x1da2		VoC_sw32_d(ACC0,0x2606)(lo)	|	VoC_sw32_d(RL6,0x25c8)(hi)
+0x14852606,	//0x1da4		VoC_lw32_d(ACC1,0x25c6)(lo)	|	VoC_sw32_d(ACC0,0x2606)(hi)
+0x158725C6,	//0x1da6		VoC_sw32_d(RL7,0x25c6)(lo)	|	VoC_lw32_d(ACC1,0x25c6)(hi)
+0x158525C6,	//0x1da8		VoC_sw32_d(ACC1,0x2608)(lo)	|	VoC_sw32_d(RL7,0x25c6)(hi)
+0xD9922608,	//0x1daa		VoC_lw32_p(REG45,REG2,DEFAULT)	|	VoC_sw32_d(ACC1,0x2608)(hi)
+0x25C81483,	//0x1dac		VoC_lw32_d(REG67,0x25c8)
+0xF90C4DEC,	//0x1dae		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1db0		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x1483CE75,	//0x1db2		VoC_lw32_d(REG67,0x25c6)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x148225C6,	//0x1db4		VoC_lw32_d(REG45,0x25ce)(lo)	|	VoC_lw32_d(REG67,0x25c6)(hi)
+0xFF2625CE,	//0x1db6		VoC_movreg32(RL6,ACC0,DEFAULT)	|	VoC_lw32_d(REG45,0x25ce)(hi)
+0xF90C4DEC,	//0x1db8		VoC_shru16_ri(REG4,0x1,IN_PARALLEL)	|	VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)
+0xF90E4E7C,	//0x1dba		VoC_shru16_ri(REG6,0x1,IN_PARALLEL)	|	VoC_macX_rr(REG7,REG4,DEFAULT)
+0x070BCE75,	//0x1dbc		VoC_add16_rd(REG3,REG1,0x11aa)(lo)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x599211AA,	//0x1dbe		VoC_lw32_p(REG45,REG2,DEFAULT)	|	VoC_add16_rd(REG3,REG1,0x11aa)(hi)
+0x4DECC9A6,	//0x1dc0		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_add32_rr(RL6,RL6,ACC0,IN_PARALLEL)
+0xCE7CF90C,	//0x1dc2		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xDD9E4E75,	//0x1dc4		VoC_sw32_p(RL6,REG3,IN_PARALLEL)	|	VoC_macX_rr(REG6,REG5,DEFAULT)
+0x25C81483,	//0x1dc6		VoC_lw32_d(REG67,0x25c8)
+0x25CE1482,	//0x1dc8		VoC_lw32_d(REG45,0x25ce)
+0x4DECFF26,	//0x1dca		VoC_multf32_rr(ACC0,REG7,REG5,DEFAULT)	|	VoC_movreg32(RL6,ACC0,DEFAULT)
+0x4E7CF90C,	//0x1dcc		VoC_macX_rr(REG7,REG4,DEFAULT)	|	VoC_shru16_ri(REG4,0x1,IN_PARALLEL)
+0xCE75F90E,	//0x1dce		VoC_macX_rr(REG6,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,IN_PARALLEL)
+0x11AC0709,	//0x1dd0		VoC_add16_rd(REG1,REG1,0x11ac)
+0x0780CB36,	//0x1dd2		VoC_sub16_rd(REG0,REG0,0x11ac)(lo)	|	VoC_sub32_rr(RL6,ACC0,RL6,DEFAULT)
+0xDD9611AC,	//0x1dd4		VoC_sw32_p(RL6,REG2,DEFAULT)	|	VoC_sub16_rd(REG0,REG0,0x11ac)(hi)
+0x11AC0792,	//0x1dd6		VoC_sub16_rd(REG2,REG2,0x11ac)
+0x1D5A2B00,	//0x1dd8		VoC_jump_lg(POSTFFT_LOOP_BEGIN)
+		//0x1dda		POSTFFT_LOOP_END
+0xF01ADF82,	//0x1dda		VoC_lw16i_short(FORMATX,0x0,DEFAULT)	|	VoC_pop16(REG2,DEFAULT)
+0x0A96F019,	//0x1ddc		VoC_lw16i(STATUS,0x60)(lo)	|	VoC_lw16i_short(FORMAT32,0x0,DEFAULT)
+0xF0070060,	//0x1dde		VoC_lw16i_short(REG7,0x0,DEFAULT)	|	VoC_lw16i(STATUS,0x60)(hi)
+0x1507DFA9,	//0x1de0		VoC_sw16_d(REG7,0xc49)(lo)	|	VoC_pop16(RA,DEFAULT)
+0xE5800C49,	//0x1de2		VoC_return	|	VoC_sw16_d(REG7,0xc49)(hi)
+		//0x1de4		CII_Norm4FastFloat_VOC
+0x1E043307,	//0x1de4		VoC_bez32_r(iFractionEZ,RL7)
+0x0A80DF47,	//0x1de6		VoC_lw16i(REG0,0x0)(lo)	|	VoC_push32(RL7,DEFAULT)
+0x32870000,	//0x1de8		VoC_bgtz32_r(iFractionGTZ,RL7)(lo)	|	VoC_lw16i(REG0,0x0)(hi)
+0x0BBF1DEE,	//0x1dea		VoC_sub32_dr(RL7,0x11cc,RL7)(lo)	|	VoC_bgtz32_r(iFractionGTZ,RL7)(hi)
+0xFFC011CC,	//0x1dec		VoC_NAD	|	VoC_sub32_dr(RL7,0x11cc,RL7)(hi)
+		//0x1dee		iFractionGTZ
+0x7FFF0AC4,	//0x1dee		VoC_lw16i(REG4,0xffff)
+0x1FFF0A85,	//0x1df0		VoC_lw16i(REG5,0x1fff)
+		//0x1df2		uiF_START_2
+0x1DF8363A,	//0x1df2		VoC_bgt32_rr(uiF_END_2,RL7,REG45)
+0x0780FBF7,	//0x1df4		VoC_sub16_rd(REG0,REG0,0x11aa)(lo)	|	VoC_shr32_ri(RL7,0xfffffffe,DEFAULT)
+0xE5FB11AA,	//0x1df6		VoC_jump(uiF_START_2)	|	VoC_sub16_rd(REG0,REG0,0x11aa)(hi)
+		//0x1df8		uiF_END_2
+0x7FFF0AC4,	//0x1df8		VoC_lw16i(REG4,0xffff)
+0x3FFF0A85,	//0x1dfa		VoC_lw16i(REG5,0x3fff)
+0x1E00363A,	//0x1dfc		VoC_bgt32_rr(FFLT_return,RL7,REG45)
+0x11A90780,	//0x1dfe		VoC_sub16_rd(REG0,REG0,0x11a9)
+		//0x1e00		FFLT_return
+0xC282DF07,	//0x1e00		VoC_sub16_rr(REG2,REG2,REG0,DEFAULT)	|	VoC_pop32(RL7,DEFAULT)
+0xE580FE87,	//0x1e02		VoC_return	|	VoC_shr32_rr(RL7,REG0,DEFAULT)
+		//0x1e04		iFractionEZ
+0xE5FBFF41,	//0x1e04		VoC_jump(FFLT_return)	|	VoC_lw32z(REG23,DEFAULT)
+		//0x1e06		CII_func_DivFastFloatU_VOC
+0x00000A85,	//0x1e06		VoC_lw16i(REG5,0x0)
+0x00010A84,	//0x1e08		VoC_lw16i(REG4,0x1)
+0x001E0A86,	//0x1e0a		VoC_lw16i(REG6,0x1e)
+0xFC0EFF44,	//0x1e0c		VoC_shru32_ri(RL6,0x1,DEFAULT)	|	VoC_lw32z(ACC0,DEFAULT)
+0xFC0FC0B2,	//0x1e0e		VoC_shru32_ri(RL7,0x1,DEFAULT)	|	VoC_add16_rr(REG2,REG2,REG6,DEFAULT)
+0xFFC0C282,	//0x1e10		VoC_NAD	|	VoC_sub16_rr(REG2,REG2,REG0,DEFAULT)
+		//0x1e12		LOOP_shift_30
+0x1E1C3186,	//0x1e12		VoC_bez16_r(LOOP_shift_break,REG6)
+0x1E183637,	//0x1e14		VoC_bgt32_rr(Label_div_shift,RL6,RL7)
+0xE514CBF7,	//0x1e16		VoC_or32_rr(ACC0,REG45,DEFAULT)	|	VoC_sub32_rr(RL7,RL7,RL6,DEFAULT)
+		//0x1e18		Label_div_shift
+0xFDFCFDFF,	//0x1e18		VoC_shru32_ri(ACC0,0xffffffff,DEFAULT)	|	VoC_shru32_ri(RL7,0xffffffff,DEFAULT)
+0xE5F7C3A6,	//0x1e1a		VoC_jump(LOOP_shift_30)	|	VoC_sub16_rr(REG6,REG6,REG4,DEFAULT)
+		//0x1e1c		LOOP_shift_break
+0xE580FF27,	//0x1e1c		VoC_return	|	VoC_movreg32(RL7,ACC0,DEFAULT)
+		//0x1e1e		CII_prvGetBandWeightLowRate_VOC
+0x00000A86,	//0x1e1e		VoC_lw16i(REG6,0x0)
+0xFFC0DFE9,	//0x1e20		VoC_NAD	|	VoC_push16(RA,DEFAULT)
+		//0x1e22		LOOP_channel_start
+0x08E41506,	//0x1e22		VoC_sw16_d(REG6,0x8e4)
+0x08F94826,	//0x1e24		VoC_blt16_rd(LOOP_channel_end_not,REG6,0x8f9)
+0x1F5A2B00,	//0x1e26		VoC_jump_lg(LOOP_channel_end)
+		//0x1e28		LOOP_channel_end_not
+0x09D01401,	//0x1e28		VoC_lw16_d(REG1,0x9d0)
+0x09C81405,	//0x1e2a		VoC_lw16_d(REG5,0x9c8)
+0x09D41406,	//0x1e2c		VoC_lw16_d(REG6,0x9d4)
+0x09C91400,	//0x1e2e		VoC_lw16_d(REG0,0x9c9)
+0x08E46C0A,	//0x1e30		VoC_bez16_d(Label_leftchannnel0,0x8e4)
+0x09F81401,	//0x1e32		VoC_lw16_d(REG1,0x9f8)
+0x09F01405,	//0x1e34		VoC_lw16_d(REG5,0x9f0)
+0x09FC1406,	//0x1e36		VoC_lw16_d(REG6,0x9fc)
+0x09F11400,	//0x1e38		VoC_lw16_d(REG0,0x9f1)
+		//0x1e3a		Label_leftchannnel0
+0x1F543181,	//0x1e3a		VoC_bez16_r(LOOP_channel_skip,REG1)
+0x09BB1407,	//0x1e3c		VoC_lw16_d(REG7,0x9bb)
+0x00000A84,	//0x1e3e		VoC_lw16i(REG4,0x0)
+0x26331505,	//0x1e40		VoC_sw16_d(REG5,0x2633)
+0x26341506,	//0x1e42		VoC_sw16_d(REG6,0x2634)
+0x26321504,	//0x1e44		VoC_sw16_d(REG4,0x2632)
+0x26371500,	//0x1e46		VoC_sw16_d(REG0,0x2637)
+		//0x1e48		LOOP_WMAB_TRUE
+0x0738F030,	//0x1e48		VoC_add16_rd(REG0,REG7,0x9ad)(lo)	|	VoC_lw16i_short(INC0,0x1,DEFAULT)
+0x150709AD,	//0x1e4a		VoC_sw16_d(REG7,0x2635)(lo)	|	VoC_add16_rd(REG0,REG7,0x9ad)(hi)
+0xD8832635,	//0x1e4c		VoC_lw16inc_p(REG3,REG0,DEFAULT)	|	VoC_sw16_d(REG7,0x2635)(hi)
+0x4C2BD802,	//0x1e4e		VoC_bnlt16_rd(Label_compare_iStart_finish,REG3,0x9bc)(lo)	|	VoC_lw16_p(REG2,REG0,DEFAULT)
+0x140309BC,	//0x1e50		VoC_lw16_d(REG3,0x9bc)(lo)	|	VoC_bnlt16_rd(Label_compare_iStart_finish,REG3,0x9bc)(hi)
+0xFFC009BC,	//0x1e52		VoC_NAD	|	VoC_lw16_d(REG3,0x9bc)(hi)
+		//0x1e54		Label_compare_iStart_finish
+0x09A64823,	//0x1e54		VoC_blt16_rd(Label_break_not,REG3,0x9a6)
+0x1ECE2B00,	//0x1e56		VoC_jump_lg(Label_break)
+		//0x1e58		Label_break_not
+0x09A63C22,	//0x1e58		VoC_bngt16_rd(Lable_compare_iEnd_finish,REG2,0x9a6)
+0x09A61402,	//0x1e5a		VoC_lw16_d(REG2,0x9a6)
+		//0x1e5c		Lable_compare_iEnd_finish
+0x26330739,	//0x1e5c		VoC_add16_rd(REG1,REG7,0x2633)
+0xD811C29E,	//0x1e5e		VoC_lw16_p(REG1,REG1,DEFAULT)	|	VoC_sub16_rr(REG6,REG2,REG3,DEFAULT)
+0x26361506,	//0x1e60		VoC_sw16_d(REG6,0x2636)
+0x11A94021,	//0x1e62		VoC_be16_rd(Label_coded_not,REG1,0x11a9)
+0x1EC82B00,	//0x1e64		VoC_jump_lg(Label_coded)
+		//0x1e66		Label_coded_not
+0xF8FB78FA,	//0x1e66		VoC_shr16_ri(REG3,0xffffffff,IN_PARALLEL)	|	VoC_shr16_ri(REG2,0xffffffff,DEFAULT)
+0x00020A93,	//0x1e68		VoC_lw16i(INC3,0x2)
+0x26340712,	//0x1e6a		VoC_add16_rd(REG2,REG2,0x2634)
+0x2634071B,	//0x1e6c		VoC_add16_rd(REG3,REG3,0x2634)
+0xFF45FF44,	//0x1e6e		VoC_lw32z(ACC1,DEFAULT)	|	VoC_lw32z(ACC0,DEFAULT)
+0xF01AF7D9,	//0x1e70		VoC_lw16i_short(FORMATX,0x0,DEFAULT)	|	VoC_lw16i_short(FORMAT32,0xfffffffe,DEFAULT)
+0x00200A96,	//0x1e72		VoC_lw16i(STATUS,0x20)
+		//0x1e74		LOOP_AvgSquareWeights_start
+0x1E8A3493,	//0x1e74		VoC_bngt16_rr(LOOP_AvgSquareWeights_end,REG2,REG3)
+0x0A96D9DA,	//0x1e76		VoC_lw16i(STATUS,0x48)(lo)	|	VoC_lw32inc_p(REG45,REG3,DEFAULT)
+0xF90C0048,	//0x1e78		VoC_shru16_ri(REG4,0x1,DEFAULT)	|	VoC_lw16i(STATUS,0x48)(hi)
+0xCD2FFF43,	//0x1e7a		VoC_multf32_rr(RL7,REG4,REG5,DEFAULT)	|	VoC_lw32z(REG67,DEFAULT)
+0xCEAD4E24,	//0x1e7c		VoC_macX_rr(REG5,REG5,IN_PARALLEL)	|	VoC_mac32_rr(REG4,REG4,DEFAULT)
+0xC95DE1E6,	//0x1e7e		VoC_add32_rr(ACC1,ACC1,REG67,DEFAULT)	|	VoC_movreg16(REG6,RL7_HI,DEFAULT)
+0x00000A86,	//0x1e80		VoC_lw16i(REG6,0x0)
+0xC91CE1C7,	//0x1e82		VoC_add32_rr(ACC0,ACC0,REG67,DEFAULT)	|	VoC_movreg16(REG7,RL7_LO,DEFAULT)
+0x11CC092D,	//0x1e84		VoC_add32_rd(ACC1,ACC1,0x11cc)
+0x00080A96,	//0x1e86		VoC_lw16i(STATUS,0x8)
+0xFFC0E5EC,	//0x1e88		VoC_NAD	|	VoC_jump(LOOP_AvgSquareWeights_start)
+		//0x1e8a		LOOP_AvgSquareWeights_end
+0x00080A96,	//0x1e8a		VoC_lw16i(STATUS,0x8)
+0x00600A96,	//0x1e8c		VoC_lw16i(STATUS,0x60)
+0xFF41FF2F,	//0x1e8e		VoC_lw32z(REG23,DEFAULT)	|	VoC_movreg32(RL7,ACC1,DEFAULT)
+0x1E9A3347,	//0x1e90		VoC_bnez32_r(GBWLRLabel_continue,RL7)
+0x0A82FF27,	//0x1e92		VoC_lw16i(REG2,0x20)(lo)	|	VoC_movreg32(RL7,ACC0,DEFAULT)
+0x33470020,	//0x1e94		VoC_bnez32_r(GBWLRLabel_continue,RL7)(lo)	|	VoC_lw16i(REG2,0x20)(hi)
+0xFF411E9A,	//0x1e96		VoC_lw32z(REG23,DEFAULT)	|	VoC_bnez32_r(GBWLRLabel_continue,RL7)(hi)
+0x1EBC2B00,	//0x1e98		VoC_jump_lg(Label_return_fft)
+		//0x1e9a		GBWLRLabel_continue
+0x1DE42B80,	//0x1e9a		VoC_jal(CII_Norm4FastFloat_VOC)
+0x11B90B10,	//0x1e9c		VoC_sub16_dr(REG0,0x11b9,REG2)
+0x11A80B11,	//0x1e9e		VoC_sub16_dr(REG1,0x11a8,REG2)
+0xFE8DFEC4,	//0x1ea0		VoC_shr32_rr(ACC1,REG1,DEFAULT)	|	VoC_shru32_rr(ACC0,REG0,DEFAULT)
+0x11B20712,	//0x1ea2		VoC_add16_rd(REG2,REG2,0x11b2)
+0x1581E52C,	//0x1ea4		VoC_sw32_d(REG23,0x262e)(lo)	|	VoC_or32_rr(ACC0,ACC1,DEFAULT)
+0xFF27262E,	//0x1ea6		VoC_movreg32(RL7,ACC0,DEFAULT)	|	VoC_sw32_d(REG23,0x262e)(hi)
+0x1587FF41,	//0x1ea8		VoC_sw32_d(RL7,0x2630)(lo)	|	VoC_lw32z(REG23,DEFAULT)
+0x0A8F2630,	//0x1eaa		VoC_lw16i(RL7_HI,0x0)(lo)	|	VoC_sw32_d(RL7,0x2630)(hi)
+0x140E0000,	//0x1eac		VoC_lw16_d(RL7_LO,0x2636)(lo)	|	VoC_lw16i(RL7_HI,0x0)(hi)
+0x2B802636,	//0x1eae		VoC_jal(CII_Norm4FastFloat_VOC)(lo)	|	VoC_lw16_d(RL7_LO,0x2636)(hi)
+0xFF3E1DE4,	//0x1eb0		VoC_movreg32(RL6,RL7,DEFAULT)	|	VoC_jal(CII_Norm4FastFloat_VOC)(hi)
+0x1481FF08,	//0x1eb2		VoC_lw32_d(REG23,0x262e)(lo)	|	VoC_movreg32(REG01,REG23,DEFAULT)
+0x1487262E,	//0x1eb4		VoC_lw32_d(RL7,0x2630)(lo)	|	VoC_lw32_d(REG23,0x262e)(hi)
+0xFFC02630,	//0x1eb6		VoC_NAD	|	VoC_lw32_d(RL7,0x2630)(hi)
+0x1E062B80,	//0x1eb8		VoC_jal(CII_func_DivFastFloatU_VOC)
+0x1DE42B80,	//0x1eba		VoC_jal(CII_Norm4FastFloat_VOC)
+		//0x1ebc		Label_return_fft
+0x26321401,	//0x1ebc		VoC_lw16_d(REG1,0x2632)
+0x25C61808,	//0x1ebe		VoC_lw16i_set_inc(REG0,0x25c6,0x2)
+0x0709C008,	//0x1ec0		VoC_add16_rd(REG1,REG1,0x11ac)(lo)	|	VoC_add16_rr(REG0,REG0,REG1,DEFAULT)
+0xDDC111AC,	//0x1ec2		VoC_sw32inc_p(REG23,REG0,DEFAULT)	|	VoC_add16_rd(REG1,REG1,0x11ac)(hi)
+0x1501DD87,	//0x1ec4		VoC_sw16_d(REG1,0x2632)(lo)	|	VoC_sw32_p(RL7,REG0,DEFAULT)
+0xFFC02632,	//0x1ec6		VoC_NAD	|	VoC_sw16_d(REG1,0x2632)(hi)
+		//0x1ec8		Label_coded
+0x26351407,	//0x1ec8		VoC_lw16_d(REG7,0x2635)
+0x11A9073F,	//0x1eca		VoC_add16_rd(REG7,REG7,0x11a9)
+0x1E482B00,	//0x1ecc		VoC_jump_lg(LOOP_WMAB_TRUE)
+		//0x1ece		Label_break
+0x26321404,	//0x1ece		VoC_lw16_d(REG4,0x2632)
+0x11AC07A4,	//0x1ed0		VoC_sub16_rd(REG4,REG4,0x11ac)
+0x25C61808,	//0x1ed2		VoC_lw16i_set_inc(REG0,0x25c6,0x2)
+0x1504C020,	//0x1ed4		VoC_sw16_d(REG4,0x2636)(lo)	|	VoC_add16_rr(REG0,REG0,REG4,DEFAULT)
+0x0A852636,	//0x1ed6		VoC_lw16i(REG5,0x0)(lo)	|	VoC_sw16_d(REG4,0x2636)(hi)
+0xD9C40000,	//0x1ed8		VoC_lw32inc_p(ACC0,REG0,DEFAULT)	|	VoC_lw16i(REG5,0x0)(hi)
+0x1584D986,	//0x1eda		VoC_sw32_d(ACC0,0x262a)(lo)	|	VoC_lw32_p(RL6,REG0,DEFAULT)
+0x1586262A,	//0x1edc		VoC_sw32_d(RL6,0x262c)(lo)	|	VoC_sw32_d(ACC0,0x262a)(hi)
+0xFFC0262C,	//0x1ede		VoC_NAD	|	VoC_sw32_d(RL6,0x262c)(hi)
+		//0x1ee0		Label_ratio_start
+0x26351505,	//0x1ee0		VoC_sw16_d(REG5,0x2635)
+0x25C60A80,	//0x1ee2		VoC_lw16i(REG0,0x25c6)
+0x4825C028,	//0x1ee4		VoC_blt16_rd(Label_ratio_end_not,REG5,0x2636)(lo)	|	VoC_add16_rr(REG0,REG0,REG5,DEFAULT)
+0x2B002636,	//0x1ee6		VoC_jump_lg(Label_ratio_end)(lo)	|	VoC_blt16_rd(Label_ratio_end_not,REG5,0x2636)(hi)
+0xD9C11F3C,	//0x1ee8		VoC_lw32inc_p(REG23,REG0,DEFAULT)	|	VoC_jump_lg(Label_ratio_end)(hi)
+		//0x1ee9		Label_ratio_end_not
+0x7A09D9C7,	//0x1eea		VoC_bnez32_d(Label_notzero,0x262c)(lo)	|	VoC_lw32inc_p(RL7,REG0,DEFAULT)
+0x0ACE262C,	//0x1eec		VoC_lw16i(RL7_LO,0xffff)(lo)	|	VoC_bnez32_d(Label_notzero,0x262c)(hi)
+0x0A8F7FFF,	//0x1eee		VoC_lw16i(RL7_HI,0x7fff)(lo)	|	VoC_lw16i(RL7_LO,0xffff)(hi)
+0xFF417FFF,	//0x1ef0		VoC_lw32z(REG23,DEFAULT)	|	VoC_lw16i(RL7_HI,0x7fff)(hi)
+0x1F302B00,	//0x1ef2		VoC_jump_lg(Label_return_fft_sqrt)
+		//0x1ef4		Label_notzero
+0x262A1480,	//0x1ef4		VoC_lw32_d(REG01,0x262a)
+0x262C1486,	//0x1ef6		VoC_lw32_d(RL6,0x262c)
+0x1E062B80,	//0x1ef8		VoC_jal(CII_func_DivFastFloatU_VOC)
+0xFFC0FF3B,	//0x1efa		VoC_NAD	|	VoC_movreg32(REG67,RL7,DEFAULT)
+		//0x1efc		LOOP_1bit_start
+0x00000AC5,	//0x1efc		VoC_lw16i(REG5,0x8000)
+0xE43DFFC0,	//0x1efe		VoC_and16_rr(REG5,REG7,DEFAULT)	|	VoC_NOP
+0x31C5FFC0,	//0x1f00		VoC_bnez16_r(LOOP_1bit_end,REG5)(lo)	|	VoC_NOP
+0x071B1F07,	//0x1f02		VoC_add16_rd(REG3,REG3,0x11a9)(lo)	|	VoC_bnez16_r(LOOP_1bit_end,REG5)(hi)
+0xFDFB11A9,	//0x1f04		VoC_shru32_ri(REG67,0xffffffff,DEFAULT)	|	VoC_add16_rd(REG3,REG3,0x11a9)(hi)
+0xFDFBE5F6,	//0x1f06		VoC_shru32_ri(REG67,0xffffffff,DEFAULT)	|	VoC_jump(LOOP_1bit_start)
+		//0x1f07		LOOP_1bit_end
+0x11A9071B,	//0x1f08		VoC_add16_rd(REG3,REG3,0x11a9)
+0xFCC3FF1A,	//0x1f0a		VoC_shru32_ri(REG67,0x18,DEFAULT)	|	VoC_movreg32(REG45,REG67,DEFAULT)
+0x652C1808,	//0x1f0c		VoC_lw16i_set_inc(REG0,0x652c,0x2)
+0xC030FDFB,	//0x1f0e		VoC_add16_rr(REG0,REG0,REG6,DEFAULT)	|	VoC_shru32_ri(REG67,0xffffffff,DEFAULT)
+0xD9C3FDC2,	//0x1f10		VoC_lw32inc_p(REG67,REG0,DEFAULT)	|	VoC_shru32_ri(REG45,0xfffffff8,DEFAULT)
+0xFF1CD985,	//0x1f12		VoC_movreg32(ACC0,REG67,DEFAULT)	|	VoC_lw32_p(ACC1,REG0,DEFAULT)
+0xFC8ACB5B,	//0x1f14		VoC_shru32_ri(REG45,0x11,DEFAULT)	|	VoC_sub32_rr(REG67,ACC1,REG67,DEFAULT)
+0xC098FC8B,	//0x1f16		VoC_add16_rr(REG0,REG2,REG3,DEFAULT)	|	VoC_shru32_ri(REG67,0x11,DEFAULT)
+0x1600CD36,	//0x1f18		VoC_and16_ri(REG0,0x1)(lo)	|	VoC_multf32_rr(RL6,REG4,REG6,DEFAULT)
+0xC9330001,	//0x1f1a		VoC_add32_rr(REG67,ACC0,RL6,DEFAULT)	|	VoC_and16_ri(REG0,0x1)(hi)
+0x1F233180,	//0x1f1c		VoC_bez16_r(Label_justbeEven,REG0)
+0x35040AC1,	//0x1f1e		VoC_lw16i(REG1,0xb504)
+0xF909FC8B,	//0x1f20		VoC_shru16_ri(REG1,0x1,DEFAULT)	|	VoC_shru32_ri(REG67,0x11,DEFAULT)
+0xFFC0CD8B,	//0x1f22		VoC_NOP	|	VoC_multf32_rr(REG67,REG6,REG1,DEFAULT)
+		//0x1f23		Label_justbeEven
+0xF80AFF1F,	//0x1f24		VoC_shr16_ri(REG2,0x1,DEFAULT)	|	VoC_movreg32(RL7,REG67,DEFAULT)
+0x000C0A81,	//0x1f26		VoC_lw16i(REG1,0xc)
+0xC08AC09A,	//0x1f28		VoC_add16_rr(REG2,REG2,REG1,DEFAULT)	|	VoC_add16_rr(REG2,REG2,REG3,DEFAULT)
+0x00000A83,	//0x1f2a		VoC_lw16i(REG3,0x0)
+0xFFC0FC0F,	//0x1f2c		VoC_NAD	|	VoC_shru32_ri(RL7,0x1,DEFAULT)
+0x1DE42B80,	//0x1f2e		VoC_jal(CII_Norm4FastFloat_VOC)
+		//0x1f30		Label_return_fft_sqrt
+0x26351405,	//0x1f30		VoC_lw16_d(REG5,0x2635)
+0x26372008,	//0x1f32		VoC_lw16d_set_inc(REG0,0x2637,0x2)
+0x072DC028,	//0x1f34		VoC_add16_rd(REG5,REG5,0x11ac)(lo)	|	VoC_add16_rr(REG0,REG0,REG5,DEFAULT)
+0xDDC111AC,	//0x1f36		VoC_sw32inc_p(REG23,REG0,DEFAULT)	|	VoC_add16_rd(REG5,REG5,0x11ac)(hi)
+0x2B00DDC7,	//0x1f38		VoC_jump_lg(Label_ratio_start)(lo)	|	VoC_sw32inc_p(RL7,REG0,DEFAULT)
+0xFFC01EE0,	//0x1f3a		VoC_NAD	|	VoC_jump_lg(Label_ratio_start)(hi)
+		//0x1f3c		Label_ratio_end
+0x26321404,	//0x1f3c		VoC_lw16_d(REG4,0x2632)
+0x26331405,	//0x1f3e		VoC_lw16_d(REG5,0x2633)
+0x1400F814,	//0x1f40		VoC_lw16_d(REG0,0x2637)(lo)	|	VoC_shr16_ri(REG4,0x2,DEFAULT)
+0xDC542637,	//0x1f42		VoC_sw16_p(REG4,REG5,DEFAULT)	|	VoC_lw16_d(REG0,0x2637)(hi)
+0x1F543144,	//0x1f44		VoC_bngtz16_r(LOOP_channel_skip,REG4)
+0x0700F050,	//0x1f46		VoC_add16_rd(REG0,REG0,0x2636)(lo)	|	VoC_lw16i_short(INC0,0x2,DEFAULT)
+0x0A832636,	//0x1f48		VoC_lw16i(REG3,0x0)(lo)	|	VoC_add16_rd(REG0,REG0,0x2636)(hi)
+0x0A820000,	//0x1f4a		VoC_lw16i(REG2,0x1e)(lo)	|	VoC_lw16i(REG3,0x0)(hi)
+0x0A8E001E,	//0x1f4c		VoC_lw16i(RL7_LO,0x0)(lo)	|	VoC_lw16i(REG2,0x1e)(hi)
+0x0A8F0000,	//0x1f4e		VoC_lw16i(RL7_HI,0x4000)(lo)	|	VoC_lw16i(RL7_LO,0x0)(hi)
+0xDDC14000,	//0x1f50		VoC_sw32inc_p(REG23,REG0,DEFAULT)	|	VoC_lw16i(RL7_HI,0x4000)(hi)
+0xFFC0DDC7,	//0x1f52		VoC_NAD	|	VoC_sw32inc_p(RL7,REG0,DEFAULT)
+		//0x1f54		LOOP_channel_skip
+0x08E41406,	//0x1f54		VoC_lw16_d(REG6,0x8e4)
+0x11A90736,	//0x1f56		VoC_add16_rd(REG6,REG6,0x11a9)
+0x1E222B00,	//0x1f58		VoC_jump_lg(LOOP_channel_start)
+		//0x1f5a		LOOP_channel_end
+0xF019DFA9,	//0x1f5a		VoC_lw16i_short(FORMAT32,0x0,DEFAULT)	|	VoC_pop16(RA,DEFAULT)
+0xFFC0E580,	//0x1f5c		VoC_NAD	|	VoC_return
+0xFFFFFFFF,	//0x1f5e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f60		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f62		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f64		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f66		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f68		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f6a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f6c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f6e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f70		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f72		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f74		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f76		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f78		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f7a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f7c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f7e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f80		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f82		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f84		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f86		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f88		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f8a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f8c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f8e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f90		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f92		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f94		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f96		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f98		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f9a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f9c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1f9e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fa0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fa2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fa4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fa6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fa8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1faa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fac		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fae		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fb0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fb2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fb4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fb6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fb8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fba		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fbc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fbe		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fc0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fc2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fc4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fc6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fc8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fca		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fcc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fce		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fd0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fd2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fd4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fd6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fd8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fda		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fdc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fde		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fe0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fe2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fe4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fe6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fe8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fea		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fec		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1fee		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ff0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ff2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ff4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ff6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ff8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ffa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ffc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x1ffe		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2000		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2002		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2004		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2006		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2008		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x200a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x200c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x200e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2010		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2012		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2014		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2016		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2018		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x201a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x201c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x201e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2020		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2022		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2024		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2026		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2028		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x202a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x202c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x202e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2030		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2032		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2034		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2036		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2038		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x203a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x203c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x203e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2040		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2042		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2044		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2046		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2048		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x204a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x204c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x204e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2050		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2052		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2054		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2056		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2058		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x205a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x205c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x205e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2060		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2062		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2064		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2066		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2068		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x206a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x206c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x206e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2070		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2072		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2074		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2076		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2078		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x207a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x207c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x207e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2080		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2082		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2084		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2086		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2088		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x208a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x208c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x208e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2090		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2092		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2094		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2096		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2098		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x209a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x209c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x209e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20a0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20a2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20a4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20a6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20a8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20aa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ac		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ae		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20b0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20b2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20b4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20b6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20b8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ba		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20bc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20be		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20c0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20c2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20c4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20c6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20c8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ca		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20cc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ce		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20d0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20d2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20d4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20d6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20d8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20da		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20dc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20de		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20e0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20e2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20e4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20e6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20e8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ea		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ec		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20ee		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20f0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20f2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20f4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20f6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20f8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20fa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20fc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x20fe		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2100		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2102		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2104		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2106		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2108		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x210a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x210c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x210e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2110		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2112		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2114		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2116		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2118		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x211a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x211c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x211e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2120		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2122		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2124		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2126		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2128		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x212a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x212c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x212e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2130		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2132		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2134		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2136		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2138		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x213a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x213c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x213e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2140		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2142		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2144		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2146		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2148		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x214a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x214c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x214e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2150		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2152		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2154		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2156		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2158		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x215a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x215c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x215e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2160		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2162		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2164		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2166		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2168		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x216a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x216c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x216e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2170		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2172		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2174		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2176		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2178		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x217a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x217c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x217e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2180		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2182		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2184		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2186		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2188		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x218a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x218c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x218e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2190		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2192		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2194		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2196		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2198		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x219a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x219c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x219e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21a0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21a2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21a4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21a6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21a8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21aa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ac		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ae		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21b0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21b2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21b4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21b6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21b8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ba		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21bc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21be		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21c0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21c2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21c4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21c6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21c8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ca		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21cc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ce		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21d0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21d2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21d4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21d6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21d8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21da		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21dc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21de		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21e0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21e2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21e4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21e6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21e8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ea		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ec		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21ee		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21f0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21f2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21f4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21f6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21f8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21fa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21fc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x21fe		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2200		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2202		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2204		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2206		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2208		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x220a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x220c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x220e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2210		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2212		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2214		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2216		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2218		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x221a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x221c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x221e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2220		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2222		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2224		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2226		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2228		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x222a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x222c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x222e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2230		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2232		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2234		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2236		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2238		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x223a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x223c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x223e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2240		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2242		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2244		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2246		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2248		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x224a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x224c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x224e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2250		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2252		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2254		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2256		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2258		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x225a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x225c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x225e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2260		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2262		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2264		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2266		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2268		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x226a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x226c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x226e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2270		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2272		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2274		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2276		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2278		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x227a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x227c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x227e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2280		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2282		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2284		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2286		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2288		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x228a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x228c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x228e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2290		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2292		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2294		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2296		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2298		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x229a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x229c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x229e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22a0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22a2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22a4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22a6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22a8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22aa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ac		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ae		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22b0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22b2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22b4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22b6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22b8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ba		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22bc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22be		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22c0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22c2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22c4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22c6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22c8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ca		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22cc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ce		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22d0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22d2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22d4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22d6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22d8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22da		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22dc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22de		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22e0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22e2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22e4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22e6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22e8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ea		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ec		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22ee		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22f0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22f2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22f4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22f6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22f8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22fa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22fc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x22fe		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2300		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2302		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2304		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2306		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2308		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x230a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x230c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x230e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2310		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2312		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2314		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2316		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2318		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x231a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x231c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x231e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2320		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2322		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2324		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2326		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2328		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x232a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x232c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x232e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2330		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2332		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2334		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2336		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2338		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x233a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x233c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x233e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2340		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2342		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2344		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2346		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2348		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x234a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x234c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x234e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2350		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2352		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2354		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2356		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2358		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x235a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x235c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x235e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2360		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2362		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2364		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2366		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2368		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x236a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x236c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x236e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2370		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2372		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2374		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2376		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2378		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x237a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x237c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x237e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2380		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2382		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2384		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2386		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2388		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x238a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x238c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x238e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2390		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2392		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2394		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2396		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x2398		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x239a		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x239c		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x239e		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23a0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23a2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23a4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23a6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23a8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23aa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ac		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ae		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23b0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23b2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23b4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23b6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23b8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ba		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23bc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23be		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23c0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23c2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23c4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23c6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23c8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ca		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23cc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ce		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23d0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23d2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23d4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23d6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23d8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23da		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23dc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23de		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23e0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23e2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23e4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23e6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23e8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ea		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ec		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23ee		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23f0		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23f2		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23f4		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23f6		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23f8		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23fa		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23fc		VoC_NOP	|	VoC_NOP
+0xFFFFFFFF,	//0x23fe		VoC_NOP	|	VoC_NOP

@@ -1,0 +1,122 @@
+
+	write_c_16bit(0x3a);
+	write_d_16bit(0x05);
+
+	write_c_16bit(0x36);
+	write_d_16bit(0x00);
+
+        write_c_16bit(0xfe);
+	write_c_16bit(0xef);
+
+	write_c_16bit(0xa8);
+	write_d_16bit(0x02);
+
+	write_c_16bit(0xa7);
+	write_d_16bit(0x02);
+
+	write_c_16bit(0xb4);
+	write_d_16bit(0x00);
+
+	write_c_16bit(0xea);	    
+	write_d_16bit(0x3a); 
+
+	write_c_16bit(0xff);
+	write_d_16bit(0x0b);
+
+	write_c_16bit(0xfd);	 
+	write_d_16bit(0x1b);
+
+	write_c_16bit(0xe3);
+	write_d_16bit(0x07);
+
+	write_c_16bit(0xa4);	 
+	write_d_16bit(0x0a); 
+
+	//=====add verC====	
+	write_c_16bit(0xe7);	 
+	write_d_16bit(0x94);
+	write_d_16bit(0x88);	
+	
+ 	write_c_16bit(0xed);	 
+	write_d_16bit(0x11);
+	
+	write_c_16bit(0xe4);	 
+	write_d_16bit(0xc5);
+	
+	write_c_16bit(0xe2);
+	write_d_16bit(0x80);//80
+	
+	write_c_16bit(0xe5);	 
+	write_d_16bit(0x10);	
+	
+	write_c_16bit(0x35);	 
+	write_d_16bit(0x00);	
+
+//==========gamma====================//
+	write_c_16bit(0xf0);
+	write_d_16bit(0x60);
+	write_c_16bit(0xf1);
+	write_d_16bit(0x37);
+	write_c_16bit(0xf2);
+	write_d_16bit(0x00);
+	write_c_16bit(0xf3);
+	write_d_16bit(0x45);
+	write_c_16bit(0xf4);
+	write_d_16bit(0x00);
+	write_c_16bit(0xf5);
+	write_d_16bit(0x00);
+	write_c_16bit(0xf7);
+	write_d_16bit(0x77);
+	write_c_16bit(0xf8);
+	write_d_16bit(0x24);
+	write_c_16bit(0xf9);
+	write_d_16bit(0x77);
+	write_c_16bit(0xfa);
+	write_d_16bit(0x44);
+	write_c_16bit(0xfb);
+	write_d_16bit(0x00);
+	write_c_16bit(0xfc);
+	write_d_16bit(0x00);
+//==========gamma====================//
+	write_c_16bit(0x11);
+	LCD_Delayms(120); 
+	write_c_16bit(0x29);
+	write_c_16bit(0x2c);
+
+
+if ( is_sleep ) // enter sleep mode.
+	{
+	write_c_16bit(0x28);
+
+	LCD_Delayms(120);
+	write_c_16bit(0xfe);
+	write_c_16bit(0xef);
+
+	write_c_16bit(0xe9);
+	write_d_16bit(0x08);     //RN1+RN0
+	LCD_Delayms(20);
+	write_c_16bit(0xe9);
+	write_d_16bit(0x0c);     //RN1+RN0
+	LCD_Delayms(20);
+	write_c_16bit(0xe9);
+	write_d_16bit(0x0e);     //RN1+RN0
+	LCD_Delayms(20);
+	write_c_16bit(0xe9);
+	write_c_16bit(0x0f);     //RN1+RN0
+	LCD_Delayms(20);
+	write_c_16bit(0x10);
+	LCD_Delayms(120);
+
+	write_c_16bit(0xe9);
+	write_d_16bit(0x00);    
+	LCD_Delayms(20);
+
+	}
+else 			// out sleep mode
+	{	
+
+	write_c_16bit(0x11);
+	LCD_Delayms(120);
+	write_c_16bit(0x29);		
+
+	}	

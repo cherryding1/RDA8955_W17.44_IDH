@@ -1,0 +1,2 @@
+C_SRC :=   \
+  umss_storagemc0.c

@@ -1,0 +1,129 @@
+comment "--- Compress Options ---"
+
+config CT_COMPRESS_CODE_SECTION
+    bool "CT_COMPRESS_CODE_SECTION"
+    option skiph
+    default y
+    ---help---
+        To support code compress.
+
+config CT_COMPRESS_PREMAIN
+    bool "CT_COMPRESS_PREMAIN"
+    option skiph
+    default y
+    ---help---
+        use compress before os init
+
+config COMPRESS_OPTIMIZE_FLASH_SIZE
+    bool "COMPRESS_OPTIMIZE_FLASH_SIZE"
+    option skipmk
+    default y
+    ---help---
+        use string resources compress
+
+config COMPRESS_USE_LZMA
+    bool "COMPRESS_USE_LZMA"
+    option skipmk
+    default y
+    ---help---
+        the algorithm used by string resources compress
+
+if CT_COMPRESS_CODE_SECTION
+choice COMPRESS_STATE_SEL
+    option skiph
+    option skipmk
+    prompt "COMPRESS_STATE"
+    default compress_state_3264
+    ---help---
+        different state used by memd.def file for zone user_data_size,user_data_base and so on info.
+        if overlay is enabled, every state has its own overlay compress strategy
+
+    config compress_state_3264
+    option skiph
+    option skipmk
+    bool "3264"
+    select COMPRESS_3264
+
+    config compress_state_3232
+    option skiph
+    option skipmk
+    bool "3232"
+    select COMPRESS_3232
+
+    config compress_state_3232_no_overlay
+    option skiph
+    option skipmk
+    bool "3232_NO_OVERLAY"
+    select COMPRESS_3232_NO_VOERLAY
+
+    config compress_state_6464
+    option skiph
+    option skipmk
+    bool "6464"
+    select COMPRESS_6464
+
+endchoice
+
+config COMPRESS_STATE
+    option skiph
+    string
+    default "3264" if compress_state_3264
+    default "3232" if compress_state_3232
+    default "3232_NO_OVERLAY" if compress_state_3232_no_overlay
+    default "6464" if compress_state_6464
+
+config COMPRESS_3264
+    bool
+    option skipmk
+    default y if compress_state_3264
+    default n
+
+config COMPRESS_3232
+    bool
+    option skipmk
+    default y if compress_state_3232
+    default n
+
+config COMPRESS_3232_NO_OVERLAY
+    bool
+    option skipmk
+    default y if compress_state_3232_no_overlay
+    default n
+
+config COMPRESS_6464
+    bool
+    option skipmk
+    default y if compress_state_6464
+    default n
+
+config COMPRESS_3264_USE_OVERLAY
+    bool "Compress 3264 use overlay"
+    option skipmk
+    depends on COMPRESS_3264 && CT_COMPRESS_3264_USE_OVERLAY
+    default y
+
+config __CODE_DECOMPRESS_WITH_VOC__
+    bool "Code decompress with voc"
+    option skipmk
+    default y
+    ---help---
+        enable this config,decompress code wit voc , otherwise decompress with cpu.
+
+config COMPRESS_PREMAIN
+    bool
+    option skipmk
+    depends on CT_COMPRESS_PREMAIN
+    default y
+    ---help---
+        use compress before os init
+endif
+
+if !CT_COMPRESS_CODE_SECTION
+config VOCCODE_IN_PSRAM
+    bool "VOCCODE_IN_PSRAM"
+	option skipmk
+	default y
+	---help---
+	   if not enable code compress, voc code should put in sram. Otherwise, will cause system crash.
+
+endif

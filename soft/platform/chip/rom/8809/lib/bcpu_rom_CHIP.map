@@ -1,0 +1,382 @@
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .bss           0x0000000000000000        0x0 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .reginfo       0x0000000000000000       0x18 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .pdr           0x0000000000000000      0x220 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .mdebug.abi32  0x0000000000000000        0x0 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_abbrev  0x0000000000000000      0x2ff /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_info    0x0000000000000000     0x37d9 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_line    0x0000000000000000      0xb3f /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_frame   0x0000000000000000      0x1f4 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_loc     0x0000000000000000     0x161b /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_pubnames
+                0x0000000000000000      0x33c /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_aranges
+                0x0000000000000000       0x20 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_ranges  0x0000000000000000      0x148 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .debug_str     0x0000000000000000     0x22c5 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .comment       0x0000000000000000       0x32 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+ .gnu.attributes
+                0x0000000000000000       0x10 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+LOAD /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+
+.bcpu_rom_text  0xffffffffa1e80000     0xe960 load address 0xffffffff81e80000
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bcpu_rom_text)
+ .bcpu_rom_text
+                0xffffffffa1e80000     0xe960 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffffa1e80000                __bcpu_rom_main
+                0xffffffffa1e80000                __bcpu_start
+                0xffffffffa1e80024                __bcpu_init
+                0xffffffffa1e80060                spal_InvalidateDcache
+                0xffffffffa1e80090                spal_InvalidateCache
+                0xffffffffa1e800c1                spp_CipherDecipherNb
+                0xffffffffa1e800d1                spp_CipherCipherNb
+                0xffffffffa1e800e1                spp_CipherStart
+                0xffffffffa1e80101                spp_CipherCountInit
+                0xffffffffa1e80180                __bb_int_handler
+                0xffffffffa1e80438                spal_BbGetSp
+                0xffffffffa1e80440                spal_IrqInit
+                0xffffffffa1e80471                spp_Open
+                0xffffffffa1e804a0                spp_FcchDetectAsm
+                0xffffffffa1e807f1                spp_GetAmrIc
+                0xffffffffa1e80911                spp_SearchAmrMarker
+                0xffffffffa1e80d81                spp_ReorderFR_EFR
+                0xffffffffa1e811b1                spp_DecodeBlock
+                0xffffffffa1e82651                spp_TofSearch
+                0xffffffffa1e82771                spp_FofEstimation
+                0xffffffffa1e829e1                spp_Equalize
+                0xffffffffa1e82f21                spp_ChannelEstimation
+                0xffffffffa1e83151                spp_EqualizeDecodeSch
+                0xffffffffa1e83301                spp_EqualizeNBurst
+                0xffffffffa1e834c1                spp_GetUSF
+                0xffffffffa1e835e1                spp_DecodeStealingBits
+                0xffffffffa1e83731                spp_GetChannelType
+                0xffffffffa1e83931                spp_GetMonPower
+                0xffffffffa1e83981                spp_DeinterleaveBlock
+                0xffffffffa1e839d1                spp_SearchFcchFilter
+                0xffffffffa1e83ed1                spp_SearchFcch
+                0xffffffffa1e84491                spp_Modulation
+                0xffffffffa1e847d1                spp_BuildNBurst
+                0xffffffffa1e84891                spp_EncodeABurst
+                0xffffffffa1e849e1                spp_EncodeBlock
+                0xffffffffa1e861c1                spp_10log10
+                0xffffffffa1e86281                spp_Log2
+                0xffffffffa1e86341                spp_DivL
+                0xffffffffa1e863f1                spp_FullBurstReady
+                0xffffffffa1e86401                spp_ResetFullBurstReady
+                0xffffffffa1e86411                spp_OneFullBurstReady
+                0xffffffffa1e86441                spp_OneFullBurstDone
+                0xffffffffa1e86471                spp_DetectDummyPCH
+                0xffffffffa1e86600                spp_DummyPCH_DisAsm
+                0xffffffffa1e8664c                spp_FcchDetectFilterAsm
+                0xffffffffa1e86871                spal_Open
+                0xffffffffa1e868a1                spal_DbgPxtsProfileTask
+                0xffffffffa1e86971                spal_DbgPxtsDump
+                0xffffffffa1e869a1                spal_DbgHstSendEvent
+                0xffffffffa1e86a01                spal_DbgPxtsProfilePulse
+                0xffffffffa1e86ad1                spal_DbgPxtsProfileFunctionEnter
+                0xffffffffa1e86ba1                spal_DbgPxtsProfileFunctionExit
+                0xffffffffa1e86c71                spal_DbgPxtsProfileWindowEnter
+                0xffffffffa1e86d41                spal_DbgPxtsProfileWindowExit
+                0xffffffffa1e86e11                spal_IrqSetMask
+                0xffffffffa1e86e31                spal_IrqHandler
+                0xffffffffa1e86fb1                spal_ItlvBusy
+                0xffffffffa1e86fc1                spal_ItlvItlv
+                0xffffffffa1e87001                spal_ItlvDitlv
+                0xffffffffa1e87041                spal_ItlvIntClear
+                0xffffffffa1e87051                spal_VitacBusy
+                0xffffffffa1e87071                spal_VitacEqualize
+                0xffffffffa1e87161                spal_VitacFullDecoding
+                0xffffffffa1e872d1                spal_XcorResetFchFilterParam
+                0xffffffffa1e872f1                spal_XcorTscxcNb
+                0xffffffffa1e87321                spal_XcorTscxcSch
+                0xffffffffa1e87351                spal_XcorBiterror
+                0xffffffffa1e87381                spal_XcorChest
+                0xffffffffa1e87401                spal_XcorSrec
+                0xffffffffa1e87451                spal_XcorBmsum
+                0xffffffffa1e87561                spal_XcorErrCalc
+                0xffffffffa1e87591                spal_XcorIcorCalc
+                0xffffffffa1e875c1                spal_XcorHvextract
+                0xffffffffa1e875f1                spal_XcorDcoc
+                0xffffffffa1e877a1                spal_XcorDcocHburst
+                0xffffffffa1e87811                spal_XcorFchxc_Delay
+                0xffffffffa1e879a1                spal_XcorFchxc_AutoCorr
+                0xffffffffa1e879f1                spal_XcorFchxc
+                0xffffffffa1e87b41                spal_XcorFchFilter
+                0xffffffffa1e87cb0                spal_XcorFchFilterAsm
+                0xffffffffa1e87e50                spal_CapDecodeCrc
+                0xffffffffa1e87f10                spal_CapEncodeCrc
+                0xffffffffa1e87fd0                spal_CapConvoluate
+                0xffffffffa1e880c0                spal_CapConvSrc
+                0xffffffffa1e88180                spal_CapFireCorrection
+                0xffffffffa1e88251                spal_CipherCountInit
+                0xffffffffa1e88271                spal_CipherStart
+                0xffffffffa1e882c1                spal_CipherCipherNb
+                0xffffffffa1e88311                spal_CipherDecipherNb
+                0xffffffffa1e88341                spal_CordicAngle
+                0xffffffffa1e88370                spal_DbgGdbPrintf
+                0xffffffffa1e88381                spal_DbgGdbHstSendEvent
+                0xffffffffa1e883a1                spal_GdbOpen
+                0xffffffffa1e883e1                spal_GdbBreaks
+                0xffffffffa1e88411                spal_GdbBreakPrint
+                0xffffffffa1e88481                spal_GdbPrepare
+                0xffffffffa1e884a1                spal_GdbSendcmd
+                0xffffffffa1e884e1                spal_Gdb16Step
+                0xffffffffa1e88871                spal_Gdb32Step
+                0xffffffffa1e88ad1                spal_Gdb16EndStep
+                0xffffffffa1e88b01                spal_Gdb32EndStep
+                0xffffffffa1e88b21                spal_GdbLoop
+                0xffffffffa1e88e61                spal_GdbException
+                0xffffffffa1e88ef1                spal_GdbIrqDebug
+                0xffffffffa1e88f61                spal_GdbBreakRaise
+                0xffffffffa1e89001                spal_GdbBreakSoftBreakPoint
+                0xffffffffa1e890a1                spal_GdbBreakBreakPoint
+                0xffffffffa1e89111                spal_GdbBreakDivBy0
+                0xffffffffa1e891c1                spal_IfcTxFifoReset
+                0xffffffffa1e891d1                spal_IfcTxFifoSetup
+                0xffffffffa1e891f1                spal_IfcDisableRf
+                0xffffffffa1e89201                spal_IfcParamRf
+                0xffffffffa1e89221                spc_AHSencoding
+                0xffffffffa1e89611                spc_AFSencoding
+                0xffffffffa1e898e1                spc_AmrEncode
+                0xffffffffa1e89aa1                spc_UpdateAmrCfg
+                0xffffffffa1e89c01                spc_UpdateCMR
+                0xffffffffa1e89cc1                spc_AmrFrameFilter
+                0xffffffffa1e89d11                spc_AHSdecoding
+                0xffffffffa1e8a271                spc_AFSdecoding
+                0xffffffffa1e8a641                spc_AmrRatscch
+                0xffffffffa1e8a781                spc_AmrDecode
+                0xffffffffa1e8ae11                bb_prog_rx_win
+                0xffffffffa1e8b031                spc_IrqHandler
+                0xffffffffa1e8b3f1                spc_SppToMboxSpeechMode
+                0xffffffffa1e8b451                spc_CheckLoopMode
+                0xffffffffa1e8b581                spc_BfiFilter
+                0xffffffffa1e8b691                spc_SetFacch
+                0xffffffffa1e8b7b1                spc_VocBfiFilter
+                0xffffffffa1e8b931                spc_UpdateSpeechDec
+                0xffffffffa1e8baa1                spc_TCHRxProcess
+                0xffffffffa1e8c201                spc_CCHRxProcess
+                0xffffffffa1e8c701                spc_NBurstProcess
+                0xffffffffa1e8c761                spc_SchProcess
+                0xffffffffa1e8c841                spc_MonitoringProcess
+                0xffffffffa1e8c8a1                spc_FcchProcess
+                0xffffffffa1e8ca01                spc_RxProcess
+                0xffffffffa1e8cc91                spc_GnrlReset
+                0xffffffffa1e8cfb1                spc_SchedulerMain
+                0xffffffffa1e8d131                spc_MboxToSppSpeechMode
+                0xffffffffa1e8d221                spc_EgprsCCHTxProcess
+                0xffffffffa1e8d231                spc_UpdateSpeechEnc
+                0xffffffffa1e8d411                spc_ResetCodec
+                0xffffffffa1e8d501                spc_DataFacch
+                0xffffffffa1e8d611                spc_DataEncode
+                0xffffffffa1e8d781                spc_TCHTxProcess
+                0xffffffffa1e8dbf1                spc_CCHTxProcess
+                0xffffffffa1e8de11                spc_RACHTxProcess
+                0xffffffffa1e8df11                spc_TxProcess
+                0xffffffffa1e8dfe1                spc_UpdateOnFint
+                0xffffffffa1e8e2c1                atoi
+                0xffffffffa1e8e301                memchr
+                0xffffffffa1e8e341                memcmp
+                0xffffffffa1e8e371                memcpy
+                0xffffffffa1e8e541                memmove
+                0xffffffffa1e8e681                memscan
+                0xffffffffa1e8e6a1                memset
+                0xffffffffa1e8e731                strcat
+                0xffffffffa1e8e751                strchr
+                0xffffffffa1e8e781                strrchr
+                0xffffffffa1e8e7a1                strcmp
+                0xffffffffa1e8e7e1                strcpy
+                0xffffffffa1e8e801                strlen
+                0xffffffffa1e8e821                strnlen
+                0xffffffffa1e8e841                strncmp
+                0xffffffffa1e8e881                strncpy
+                0xffffffffa1e8e8c1                strsep
+                0xffffffffa1e8e901                strstr
+
+.bcpu_rom_rodata
+                0xffffffff81e8e960     0x2700
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bcpu_rom_rodata)
+ .bcpu_rom_rodata
+                0xffffffff81e8e960     0x2700 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffff81e8e960                bcpu_romCsString
+                0xffffffff81e8e990                bcpu_romDT
+                0xffffffff81e8e9b8                g_sppCsCrcParam
+                0xffffffff81e8eb28                g_sppCsConvParam
+                0xffffffff81e8ec98                g_sppCsSrcParam
+                0xffffffff81e8ed28                g_sppVitacDecParam
+                0xffffffff81e8ede0                g_sppVitacPolyres
+                0xffffffff81e8ee00                g_sppInputLengthBitAfs
+                0xffffffff81e8ee08                g_sppAfsReorderTables
+                0xffffffff81e8ee28                g_sppInputLengthBitAhs
+                0xffffffff81e8ee30                g_sppAhsReorderTables
+                0xffffffff81e8ee48                g_sppMatrixHr
+                0xffffffff81e8ef28                g_sppMatrixFrInv
+                0xffffffff81e8f130                g_sppMatrixEfr1
+                0xffffffff81e8f174                g_sppMatrixEfr1Inv
+                0xffffffff81e8f1b8                g_sppMatrixEfr2Inv
+                0xffffffff81e8f3b0                g_sppNbFwequStartSt
+                0xffffffff81e8f3b8                g_sppNbBwequStartSt
+                0xffffffff81e8f3c0                g_sppGsmTscSch
+                0xffffffff81e8f3c8                g_sppGsmTscAburst
+                0xffffffff81e8f3d0                g_sppGsmTscNburst
+                0xffffffff81e8f3f0                g_sppUsfCs2Cs3
+                0xffffffff81e8f3f8                g_spp_UsfCs4
+                0xffffffff81e8f408                g_sppIcSidRatscch
+                0xffffffff81e8f410                g_sppIcAfsSpeech
+                0xffffffff81e8f414                g_sppIcAhsSpeech
+                0xffffffff81e8f418                g_sppImAfsSid
+                0xffffffff81e8f434                g_sppImAhsSid
+                0xffffffff81e8f454                g_sppImRatscch
+                0xffffffff81e8f474                g_sppAfsSidMarker
+                0xffffffff81e8f490                g_sppAhsSidMarker
+                0xffffffff81e8f4ac                g_sppRatscchMarker
+                0xffffffff81e8f4c8                g_sppConvOutLengthBitAhs
+                0xffffffff81e8f4d0                g_sppConvOutMaskAhs
+                0xffffffff81e8f4e8                g_sppChestTab
+                0xffffffff81e8fca4                g_sppCsPuncturingTable
+                0xffffffff81e908f8                g_sppPCH_vector_a
+                0xffffffff81e90a50                g_sppPCH_vector_b1
+                0xffffffff81e90aa4                g_sppPCH_vector_b2
+                0xffffffff81e90af8                g_sppPCH_vector_b3
+                0xffffffff81e90b4c                g_sppPCH_vector_b4
+                0xffffffff81e90ba0                g_sppPCH_b_pos
+                0xffffffff81e90bf4                g_sppPCH_size_vector_b
+                0xffffffff81e90c30                g_sppMapVersion
+                0xffffffff81e90c40                g_spalMapAccess
+                0xffffffff81e90c44                g_spalMapVersion
+                0xffffffff81e90c8c                spal_GdbGBreak
+                0xffffffff81e90d68                AFSfilterCI
+                0xffffffff81e90e34                AHSfilterCI
+                0xffffffff81e90e9c                MutedFrame_AMR
+                0xffffffff81e90ea4                MutedFrame_HR
+                0xffffffff81e90eb4                MutedFrame_EFR
+                0xffffffff81e90ed4                MutedFrame_FR
+                0xffffffff81e90ef8                spcSizeFromMCS
+                0xffffffff81e90f48                g_spcMapVersion
+                0xffffffff81e90f58                _ctype
+
+.bbsram         0xffffffff81980000     0x1400
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bbsram)
+ .bbsram        0xffffffff81980000     0x1400 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffff81980000                _bb_sram_romed_cached_start
+                0xffffffff81980000                g_spcItlvBufTab
+                0xffffffff81980f20                _bb_sram_romed_itlv_buf_end
+                0xffffffff81980f20                g_spcCtxStruct
+
+.bbsramu        0xffffffffa1981400      0xd40
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bbsramu)
+ .bbsramu       0xffffffffa1981400      0xd40 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffffa1981400                _bb_sram_romed_uncached_start
+                0xffffffffa1981400                g_spcStaticBufTab
+                0xffffffffa1981400                _mbbsramu
+
+.bbsram_globals
+                0xffffffff81983260      0x190
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bbsram_globals)
+ .bbsram_globals
+                0xffffffff81983260      0x190 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffff81983260                bcpu_error_code
+                0xffffffff81983260                _bb_sram_romed_globals_start
+                0xffffffff81983264                bcpu_error_status
+                0xffffffff81983268                bcpu_sp_context
+                0xffffffff8198326c                bcpu_stack_base
+                0xffffffff81983270                bcpu_main_entry
+                0xffffffff81983274                g_spalIrqRegistry
+                0xffffffff81983278                g_spalProfileControl
+                0xffffffff819832a4                g_spcAmrState
+                0xffffffff819832ac                g_spcSwTxFifo
+                0xffffffff81983398                g_sppGlobalParams
+                0xffffffff819833e4                g_sppFullBurstReady
+                0xffffffff819833e8                spal_GdbGData
+
+.mailbox        0xffffffffa1b00580      0x280
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.mailbox)
+ .mailbox       0xffffffffa1b00580      0x280 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffffa1b00580                _dualport_sram_romed_mbx_start
+                0xffffffffa1b00580                g_mailbox
+
+.bcpu_rom_version_number
+                0xffffffff81e97ff8        0x4
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bcpu_rom_version_number)
+ .bcpu_rom_version_number
+                0xffffffff81e97ff8        0x4 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffff81e97ff8                _bcpu_rom_version_number
+                0xffffffff81e97ff8                g_bcpuRomVersionNumber
+
+.bcpu_rom.crc   0xffffffff81e97ffc        0x4
+ /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf(.bcpu_rom.crc)
+ .bcpu_rom.crc  0xffffffff81e97ffc        0x4 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/stripped_rom_elf_file.elf
+                0xffffffff81e97ffc                __bcpu_rom_crc
+                0xffffffff81e91060                . = 0xffffffff81e91060
+                0xffffffff81e91060                . = ALIGN (0x10)
+                0xffffffff81e91060                __bcpu_rom_ext_8809_start = .
+                0xffffffffa1e91060                . = (. + 0x20000000)
+
+.bcpu_rom_text_ext_8809
+                0xffffffffa1e91060     0x2170 load address 0xffffffff81e91060
+ *spc_rx_ext_8809.o(.text .text.*)
+ .text          0xffffffffa1e91060     0x2170 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+                0xffffffffa1e91061                spal_XcorChest_8taps_Ext_8809
+                0xffffffffa1e910f1                spal_XcorComplexConvolution_Ext_8809
+                0xffffffffa1e91321                spal_XcorComplexMatrixMultiply_Ext_8809
+                0xffffffffa1e91461                spp_Max_Ext_8809
+                0xffffffffa1e914b1                spp_8tapDetect_Ext_8809
+                0xffffffffa1e91591                spp_PrefltCheckValid_Ext_8809
+                0xffffffffa1e91641                spp_Equalize_Prefilter_Ext_8809
+                0xffffffffa1e91c31                spp_3tapRebuild_Prefilter_Ext_8809
+                0xffffffffa1e91e31                spal_XcorSrec_8tap_Ext_8809
+                0xffffffffa1e91f41                spp_BuildRefNBurst_Prefilter_Ext_8809
+                0xffffffffa1e92031                spp_LpChannelEstimation_Ext_8809
+                0xffffffffa1e92311                spp_LsePrefilter_Ext_8809
+                0xffffffffa1e92521                spp_GprsLsePrefilter_Ext_8809
+                0xffffffffa1e92831                spp_FofEstimation_Prefilter_Ext_8809
+                0xffffffffa1e92911                spp_EqualizeNBurst_Prefilter_Ext_8809
+                0xffffffffa1e92c41                spc_CCHRxProcess_Ext_8809
+                0xffffffffa1e93181                spc_InitRx_Ext_8809
+                0xffffffffa1e931d0                . = ALIGN (0x10)
+                0xffffffff81e931d0                . = (. - 0x20000000)
+
+.bcpu_rom_rodata_ext_8809
+                0xffffffff81e931d0      0x9a0
+ *spc_rx_ext_8809.o(.rdata .rodata .rodata.str1.4 .rodata.*)
+ .rodata        0xffffffff81e931d0      0x9a0 /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+                0xffffffff81e931d0                gc_EqShiftTableDefault_Ext_8809
+                0xffffffff81e931d8                gc_sppChestTabEgprs_Ext_8809
+                0xffffffff81e93b70                . = ALIGN (0x10)
+                0xffffffff81e93b70                __bcpu_rom_ext_8809_end = .
+                0xffffffff81e93b70                __bcpu_rom_end = .
+                0x0000000000000001                ASSERT ((ABSOLUTE (_bcpu_rom_version_number) >= ABSOLUTE (__bcpu_rom_end)), BCPU ROM Ext 8809 code overflow out of ROM space.)
+                0xffffffff819833f0                . = 0xffffffff819833f0
+
+.bbsram_globals_ext_8809
+                0xffffffff819833f0        0xc
+                0xffffffff819833f0                _bb_sram_romed_globals_ext_8809_start = .
+ *(.bbsram_globals_ext_8809)
+ .bbsram_globals_ext_8809
+                0xffffffff819833f0        0xc /home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/obj/cool_profile/spc_rx_ext_8809.o
+                0xffffffff819833f0                g_EqShiftTable_Ext_8809
+                0xffffffff819833f8                g_fadingchannel_cnt
+                0xffffffff819833f9                g_fadingchannel_8tap_num
+                0xffffffff819833fa                g_fadingchannel_8tap_state
+                0xffffffff819833fb                g_dgc_pwr_target_shift
+                0xffffffff819833fc                _bb_sram_romed_globals_ext_8809_end = .
+                0xffffffff819833fc                _bb_sram_romed_globals_end = .
+                0x0000000000000001                ASSERT ((0xffffffff81983400 >= ABSOLUTE (_bb_sram_romed_globals_end)), BBSRAM romed ext 8809 globals overflow out of BBSRAM.)
+
+/DISCARD/
+ *(*)
+START GROUP
+END GROUP
+LOAD /home/huazeng/projects/gallite_hz20/soft/env/lib/gcc/mips-elf/4.4.2/libgcc.a
+OUTPUT(/home/huazeng/projects/gallite_hz20/soft/build/8851c_gh021/bcpu/platform_test/rom/rom_ext_8809/bcpu_rom_ext_8809_chip_8851c_gh021_cool_profile.elf elf32-littlemips)

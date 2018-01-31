@@ -1,0 +1,13 @@
+V_SRC = \
+src/vpp_morphvoice_asm_common.c\
+src/vpp_morphvoice_asm_hi.c\
+src/vppp_morphvoice_asm_common.h\
+src/vppp_morphvoice_asm_sections.h\
+/cygdrive/D/projectroot/gallite_g800/soft/platform/chip/regs/gallite/include/voc_ram.h \
+
+V_OBJ = \
+src/vpp_morphvoice_asm_common.tab\
+src/vpp_morphvoice_asm_hi.tab\
+src/vppp_morphvoice_asm_map.h \
+src/vppp_morphvoice_map.h \
+src/vpp_morphvoice.vocsrcs

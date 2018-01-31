@@ -1,0 +1,47 @@
+voc_fun: exit with success
+voc_fun: exit with success
+voc_fun: exit with success
+voc_gen: exit with success
+copy voc2_define.h into source.h
+copy vppp_aec_asm_common.h into source.h
+copy vppp_aec_asm_sections.h into source.h
+
+copy source.h vpp_aec_asm_common.c into source.voc
+voc_ppc source.voc -o source.par
+voc_fun source.par -o vpp_aec_asm_common.map
+
+copy source.h vpp_aec_asm_hi.c into source.voc
+voc_ppc source.voc -o source.par
+voc_fun source.par -o vpp_aec_asm_hi.map
+
+copy source.h vpp_aec_asm_bye.c into source.voc
+voc_ppc source.voc -o source.par
+voc_fun source.par -o vpp_aec_asm_bye.map
+
+voc_gen -m map.mx
+
+voc_map: exit with success
+copy voc2_define.h into source.h
+copy MAP_ADDR.h into source.h
+copy vppp_aec_asm_common.h into source.h
+copy vppp_aec_asm_sections.h into source.h
+
+copy source.h vpp_aec_asm_common.c into source.voc
+voc_parser source.voc -o source.par
+voc_assembler source.par -o vpp_aec_asm_common.sec
+
+copy source.h vpp_aec_asm_hi.c into source.voc
+voc_parser source.voc -o source.par
+voc_assembler source.par -o vpp_aec_asm_hi.sec
+
+copy source.h vpp_aec_asm_bye.c into source.voc
+voc_parser source.voc -o source.par
+voc_assembler source.par -o vpp_aec_asm_bye.sec
+
+voc_section -m code.mx
+MAP_ADDR.h: done.
+MAP_EXPORT.h: done.
+vpp_aec_asm_bye.tab: done.
+vpp_aec_asm_common.tab: done.
+vpp_aec_asm_hi.tab: done.
+/cygdrive/d/projects/gallite_trunk/soft/platform/vpp/aec

@@ -1,0 +1,1023 @@
+<module name="CSW">
+
+    <!-- TCPIP -->
+
+    <fn name="netbuf_alloc"                       id="0x1325" group="TCPIP"/>
+    <fn name="netbuf_chain"                       id="0x1326" group="TCPIP"/>
+    <fn name="netbuf_copy"                        id="0x1327" group="TCPIP"/>
+    <fn name="netbuf_copy_partial"                id="0x1328" group="TCPIP"/>
+    <fn name="netbuf_data"                        id="0x1329" group="TCPIP"/>
+    <fn name="netbuf_delete"                      id="0x132A" group="TCPIP"/>
+    <fn name="netbuf_first"                       id="0x132B" group="TCPIP"/>
+    <fn name="netbuf_free"                        id="0x132C" group="TCPIP"/>
+    <fn name="netbuf_fromaddr"                    id="0x132D" group="TCPIP"/>
+    <fn name="netbuf_fromport"                    id="0x132E" group="TCPIP"/>
+    <fn name="netbuf_len"                         id="0x132F" group="TCPIP"/>
+    <fn name="netbuf_new"                         id="0x1330" group="TCPIP"/>
+    <fn name="netbuf_next"                        id="0x1331" group="TCPIP"/>
+    <fn name="netbuf_ref"                         id="0x1332" group="TCPIP"/>
+    <fn name="netconn_accept"                     id="0x1333" group="TCPIP"/>
+    <fn name="netconn_addr"                       id="0x1334" group="TCPIP"/>
+    <fn name="netconn_bind"                       id="0x1335" group="TCPIP"/>
+    <fn name="netconn_close"                      id="0x1336" group="TCPIP"/>
+    <fn name="netconn_connect"                    id="0x1337" group="TCPIP"/>
+    <fn name="netconn_delete"                     id="0x1338" group="TCPIP"/>
+    <fn name="netconn_disconnect"                 id="0x1339" group="TCPIP"/>
+    <fn name="netconn_err"                        id="0x133A" group="TCPIP"/>
+    <fn name="netconn_listen"                     id="0x133B" group="TCPIP"/>
+    <fn name="netconn_new"                        id="0x133C" group="TCPIP"/>
+    <fn name="netconn_new_with_callback"          id="0x133D" group="TCPIP"/>
+    <fn name="netconn_new_with_proto_and_callback" id="0x133E" group="TCPIP"/>
+    <fn name="netconn_peer"                       id="0x133F" group="TCPIP"/>
+    <fn name="netconn_recv"                       id="0x1340" group="TCPIP"/>
+    <fn name="netconn_send"                       id="0x1341" group="TCPIP"/>
+    <fn name="netconn_type"                       id="0x1342" group="TCPIP"/>
+    <fn name="netconn_write"                      id="0x1343" group="TCPIP"/>
+    <fn name="accept_function"                    id="0x1344" group="TCPIP"/>
+    <fn name="api_msg_input"                      id="0x1345" group="TCPIP"/>
+    <fn name="api_msg_post"                       id="0x1346" group="TCPIP"/>
+    <fn name="do_accept"                          id="0x1347" group="TCPIP"/>
+    <fn name="do_bind"                            id="0x1348" group="TCPIP"/>
+    <fn name="do_close"                           id="0x1349" group="TCPIP"/>
+    <fn name="do_connect"                         id="0x134A" group="TCPIP"/>
+    <fn name="do_connected"                       id="0x134B" group="TCPIP"/>
+    <fn name="do_delconn"                         id="0x134C" group="TCPIP"/>
+    <fn name="do_disconnect"                      id="0x134D" group="TCPIP"/>
+    <fn name="do_listen"                          id="0x134E" group="TCPIP"/>
+    <fn name="do_newconn"                         id="0x134F" group="TCPIP"/>
+    <fn name="do_recv"                            id="0x1350" group="TCPIP"/>
+    <fn name="do_send"                            id="0x1351" group="TCPIP"/>
+    <fn name="do_write"                           id="0x1352" group="TCPIP"/>
+    <fn name="err_tcp"                            id="0x1353" group="TCPIP"/>
+    <fn name="poll_tcp"                           id="0x1354" group="TCPIP"/>
+    <fn name="recv_raw"                           id="0x1355" group="TCPIP"/>
+    <fn name="recv_tcp"                           id="0x1356" group="TCPIP"/>
+    <fn name="recv_udp"                           id="0x1357" group="TCPIP"/>
+    <fn name="sent_tcp"                           id="0x1358" group="TCPIP"/>
+    <fn name="setup_tcp"                          id="0x1359" group="TCPIP"/>
+    <fn name="lwip_strerr"                        id="0x135A" group="TCPIP"/>
+    <fn name="icmp_dest_unreach"                  id="0x135B" group="TCPIP"/>
+    <fn name="icmp_input"                         id="0x135C" group="TCPIP"/>
+    <fn name="icmp_time_exceeded"                 id="0x135D" group="TCPIP"/>
+    <fn name="CFW_TcpipInetAddr"                  id="0x135E" group="TCPIP"/>
+    <fn name="htonl"                              id="0x135F" group="TCPIP"/>
+    <fn name="htons"                              id="0x1360" group="TCPIP"/>
+    <fn name="inet_aton"                          id="0x1361" group="TCPIP"/>
+    <fn name="inet_chksum"                        id="0x1362" group="TCPIP"/>
+    <fn name="inet_chksum_pbuf"                   id="0x1363" group="TCPIP"/>
+    <fn name="inet_chksum_pseudo"                 id="0x1364" group="TCPIP"/>
+    <fn name="inet_ntoa"                          id="0x1365" group="TCPIP"/>
+    <fn name="lwip_standard_chksum"               id="0x1366" group="TCPIP"/>
+    <fn name="ntohl"                              id="0x1367" group="TCPIP"/>
+    <fn name="ntohs"                              id="0x1368" group="TCPIP"/>
+    <fn name="ip_forward"                         id="0x1369" group="TCPIP"/>
+    <fn name="ip_debug_print"                     id="0x136A" group="TCPIP"/>
+    <fn name="ip_init"                            id="0x136B" group="TCPIP"/>
+    <fn name="ip_input"                           id="0x136C" group="TCPIP"/>
+    <fn name="ip_output"                          id="0x136D" group="TCPIP"/>
+    <fn name="ip_output_if"                       id="0x136E" group="TCPIP"/>
+    <fn name="ip_route"                           id="0x136F" group="TCPIP"/>
+    <fn name="ip_addr_isbroadcast"                id="0x1370" group="TCPIP"/>
+    <fn name="copy_from_pbuf"                     id="0x1371" group="TCPIP"/>
+    <fn name="ip_frag"                            id="0x1372" group="TCPIP"/>
+    <fn name="ip_reass"                           id="0x1373" group="TCPIP"/>
+    <fn name="ip_reass_mem_free"                  id="0x1374" group="TCPIP"/>
+    <fn name="ip_reass_mem_init"                  id="0x1375" group="TCPIP"/>
+    <fn name="ip_reass_tmr"                       id="0x1376" group="TCPIP"/>
+    <fn name="free_sxr_mem"                       id="0x1377" group="TCPIP"/>
+    <fn name="mem_free"                           id="0x1378" group="TCPIP"/>
+    <fn name="mem_init"                           id="0x1379" group="TCPIP"/>
+    <fn name="mem_malloc"                         id="0x137A" group="TCPIP"/>
+    <fn name="mem_realloc"                        id="0x137B" group="TCPIP"/>
+    <fn name="mem_reallocm"                       id="0x137C" group="TCPIP"/>
+    <fn name="plug_holes"                         id="0x137D" group="TCPIP"/>
+    <fn name="free_sxr_memp"                      id="0x137E" group="TCPIP"/>
+    <fn name="memp_free"                          id="0x137F" group="TCPIP"/>
+    <fn name="memp_init"                          id="0x1380" group="TCPIP"/>
+    <fn name="memp_malloc"                        id="0x1381" group="TCPIP"/>
+    <fn name="memp_sanity"                        id="0x1382" group="TCPIP"/>
+    <fn name="msg_memp_malloc"                    id="0x1383" group="TCPIP"/>
+    <fn name="netif_add"                          id="0x1384" group="TCPIP"/>
+    <fn name="netif_find"                         id="0x1385" group="TCPIP"/>
+    <fn name="netif_init"                         id="0x1386" group="TCPIP"/>
+    <fn name="netif_is_up"                        id="0x1387" group="TCPIP"/>
+    <fn name="netif_remove"                       id="0x1388" group="TCPIP"/>
+    <fn name="netif_set_addr"                     id="0x1389" group="TCPIP"/>
+    <fn name="netif_set_default"                  id="0x138A" group="TCPIP"/>
+    <fn name="netif_set_down"                     id="0x138B" group="TCPIP"/>
+    <fn name="netif_set_gw"                       id="0x138C" group="TCPIP"/>
+    <fn name="netif_set_ipaddr"                   id="0x138D" group="TCPIP"/>
+    <fn name="netif_set_netmask"                  id="0x138E" group="TCPIP"/>
+    <fn name="netif_set_up"                       id="0x138F" group="TCPIP"/>
+    <fn name="free_sxr_pbuf"                      id="0x1390" group="TCPIP"/>
+    <fn name="pbuf_alloc"                         id="0x1391" group="TCPIP"/>
+    <fn name="pbuf_cat"                           id="0x1392" group="TCPIP"/>
+    <fn name="pbuf_chain"                         id="0x1393" group="TCPIP"/>
+    <fn name="pbuf_clen"                          id="0x1394" group="TCPIP"/>
+    <fn name="pbuf_dechain"                       id="0x1395" group="TCPIP"/>
+    <fn name="pbuf_dequeue"                       id="0x1396" group="TCPIP"/>
+    <fn name="pbuf_free"                          id="0x1397" group="TCPIP"/>
+    <fn name="pbuf_header"                        id="0x1398" group="TCPIP"/>
+    <fn name="pbuf_init"                          id="0x1399" group="TCPIP"/>
+    <fn name="pbuf_pool_alloc"                    id="0x139A" group="TCPIP"/>
+    <fn name="pbuf_queue"                         id="0x139B" group="TCPIP"/>
+    <fn name="pbuf_realloc"                       id="0x139C" group="TCPIP"/>
+    <fn name="pbuf_ref"                           id="0x139D" group="TCPIP"/>
+    <fn name="pbuf_take"                          id="0x139E" group="TCPIP"/>
+    <fn name="raw_bind"                           id="0x139F" group="TCPIP"/>
+    <fn name="raw_connect"                        id="0x13A0" group="TCPIP"/>
+    <fn name="raw_init"                           id="0x13A1" group="TCPIP"/>
+    <fn name="raw_input"                          id="0x13A2" group="TCPIP"/>
+    <fn name="raw_new"                            id="0x13A3" group="TCPIP"/>
+    <fn name="raw_recv"                           id="0x13A4" group="TCPIP"/>
+    <fn name="raw_remove"                         id="0x13A5" group="TCPIP"/>
+    <fn name="raw_send"                           id="0x13A6" group="TCPIP"/>
+    <fn name="raw_sendto"                         id="0x13A7" group="TCPIP"/>
+    <fn name="get_socket"                         id="0x13A8" group="TCPIP"/>
+    <fn name="alloc_socket"                       id="0x13A9" group="TCPIP"/>
+    <fn name="CFW_TcpipAvailableBuffer"           id="0x13AA" group="TCPIP"/>
+    <fn name="CFW_TcpipGetLastError"              id="0x13AB" group="TCPIP"/>
+    <fn name="CFW_TcpipSocket"                    id="0x13AC" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketAccept"              id="0x13AD" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketBind"                id="0x13AE" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketClose"               id="0x13AF" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketConnect"             id="0x13B0" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketGetpeername"         id="0x13B1" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketGetsockname"         id="0x13B2" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketGetsockopt"          id="0x13B3" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketIoctl"               id="0x13B4" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketListen"              id="0x13B5" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketRead"                id="0x13B6" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketRecv"                id="0x13B7" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketRecvfrom"            id="0x13B8" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketSelect"              id="0x13B9" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketSelscan"             id="0x13BA" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketSend"                id="0x13BB" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketSendto"              id="0x13BC" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketSetsockopt"          id="0x13BD" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketShutdown"            id="0x13BE" group="TCPIP"/>
+    <fn name="CFW_TcpipSocketWrite"               id="0x13BF" group="TCPIP"/>
+    <fn name="event_callback"                     id="0x13C0" group="TCPIP"/>
+    <fn name="free_sock_sem"                      id="0x13C1" group="TCPIP"/>
+    <fn name="stats_display"                      id="0x13C2" group="TCPIP"/>
+    <fn name="stats_display_mem"                  id="0x13C3" group="TCPIP"/>
+    <fn name="stats_display_pbuf"                 id="0x13C4" group="TCPIP"/>
+    <fn name="stats_display_proto"                id="0x13C5" group="TCPIP"/>
+    <fn name="stats_init"                         id="0x13C6" group="TCPIP"/>
+    <fn name="sys_arch_mbox_fetch"                id="0x13C7" group="TCPIP"/>
+    <fn name="sys_arch_sem_wait"                  id="0x13C8" group="TCPIP"/>
+    <fn name="sys_arch_timeouts"                  id="0x13C9" group="TCPIP"/>
+    <fn name="sys_mbox_fetch"                     id="0x13CA" group="TCPIP"/>
+    <fn name="sys_mbox_free"                      id="0x13CB" group="TCPIP"/>
+    <fn name="sys_mbox_new"                       id="0x13CC" group="TCPIP"/>
+    <fn name="sys_mbox_post"                      id="0x13CD" group="TCPIP"/>
+    <fn name="sys_msleep"                         id="0x13CE" group="TCPIP"/>
+    <fn name="sys_post_event_to_APP"              id="0x13CF" group="TCPIP"/>
+    <fn name="sys_post_event_to_APS"              id="0x13D0" group="TCPIP"/>
+    <fn name="sys_sem_free"                       id="0x13D1" group="TCPIP"/>
+    <fn name="sys_sem_new"                        id="0x13D2" group="TCPIP"/>
+    <fn name="sys_sem_signal"                     id="0x13D3" group="TCPIP"/>
+    <fn name="sys_sem_wait"                       id="0x13D4" group="TCPIP"/>
+    <fn name="sys_sem_wait_timeout"               id="0x13D5" group="TCPIP"/>
+    <fn name="sys_timeout"                        id="0x13D6" group="TCPIP"/>
+    <fn name="sys_untimeout"                      id="0x13D7" group="TCPIP"/>
+    <fn name="tcp_abort"                          id="0x13D8" group="TCPIP"/>
+    <fn name="tcp_accept"                         id="0x13D9" group="TCPIP"/>
+    <fn name="tcp_accept_null"                    id="0x13DA" group="TCPIP"/>
+    <fn name="tcp_alloc"                          id="0x13DB" group="TCPIP"/>
+    <fn name="tcp_arg"                            id="0x13DC" group="TCPIP"/>
+    <fn name="tcp_bind"                           id="0x13DD" group="TCPIP"/>
+    <fn name="tcp_close"                          id="0x13DE" group="TCPIP"/>
+    <fn name="tcp_connect"                        id="0x13DF" group="TCPIP"/>
+    <fn name="tcp_debug_print"                    id="0x13E0" group="TCPIP"/>
+    <fn name="tcp_debug_print_flags"              id="0x13E1" group="TCPIP"/>
+    <fn name="tcp_debug_print_pcbs"               id="0x13E2" group="TCPIP"/>
+    <fn name="tcp_debug_print_state"              id="0x13E3" group="TCPIP"/>
+    <fn name="tcp_err"                            id="0x13E4" group="TCPIP"/>
+    <fn name="tcp_fasttmr"                        id="0x13E5" group="TCPIP"/>
+    <fn name="tcp_init"                           id="0x13E6" group="TCPIP"/>
+    <fn name="tcp_kill_prio"                      id="0x13E7" group="TCPIP"/>
+    <fn name="tcp_kill_timewait"                  id="0x13E8" group="TCPIP"/>
+    <fn name="tcp_listen"                         id="0x13E9" group="TCPIP"/>
+    <fn name="tcp_new"                            id="0x13EA" group="TCPIP"/>
+    <fn name="tcp_new_port"                       id="0x13EB" group="TCPIP"/>
+    <fn name="tcp_next_iss"                       id="0x13EC" group="TCPIP"/>
+    <fn name="tcp_pcb_purge"                      id="0x13ED" group="TCPIP"/>
+    <fn name="tcp_pcb_remove"                     id="0x13EE" group="TCPIP"/>
+    <fn name="tcp_pcbs_sane"                      id="0x13EF" group="TCPIP"/>
+    <fn name="tcp_poll"                           id="0x13F0" group="TCPIP"/>
+    <fn name="tcp_recv"                           id="0x13F1" group="TCPIP"/>
+    <fn name="tcp_recv_null"                      id="0x13F2" group="TCPIP"/>
+    <fn name="tcp_recved"                         id="0x13F3" group="TCPIP"/>
+    <fn name="tcp_seg_copy"                       id="0x13F4" group="TCPIP"/>
+    <fn name="tcp_seg_free"                       id="0x13F5" group="TCPIP"/>
+    <fn name="tcp_segs_free"                      id="0x13F6" group="TCPIP"/>
+    <fn name="tcp_sent"                           id="0x13F7" group="TCPIP"/>
+    <fn name="tcp_setprio"                        id="0x13F8" group="TCPIP"/>
+    <fn name="tcp_slowtmr"                        id="0x13F9" group="TCPIP"/>
+    <fn name="tcp_tmr"                            id="0x13FA" group="TCPIP"/>
+    <fn name="tcp_input"                          id="0x13FB" group="TCPIP"/>
+    <fn name="tcp_listen_input"                   id="0x13FC" group="TCPIP"/>
+    <fn name="tcp_parseopt"                       id="0x13FD" group="TCPIP"/>
+    <fn name="tcp_process"                        id="0x13FE" group="TCPIP"/>
+    <fn name="tcp_receive"                        id="0x13FF" group="TCPIP"/>
+    <fn name="tcp_timewait_input"                 id="0x1400" group="TCPIP"/>
+    <fn name="tcp_enqueue"                        id="0x1401" group="TCPIP"/>
+    <fn name="tcp_keepalive"                      id="0x1402" group="TCPIP"/>
+    <fn name="tcp_output"                         id="0x1403" group="TCPIP"/>
+    <fn name="tcp_output_segment"                 id="0x1404" group="TCPIP"/>
+    <fn name="tcp_rexmit"                         id="0x1405" group="TCPIP"/>
+    <fn name="tcp_rexmit_rto"                     id="0x1406" group="TCPIP"/>
+    <fn name="tcp_rst"                            id="0x1407" group="TCPIP"/>
+    <fn name="tcp_send_ctrl"                      id="0x1408" group="TCPIP"/>
+    <fn name="tcp_write"                          id="0x1409" group="TCPIP"/>
+    <fn name="data_output"                        id="0x140A" group="TCPIP"/>
+    <fn name="ip_timer"                           id="0x140B" group="TCPIP"/>
+    <fn name="tcp_timer_needed"                   id="0x140C" group="TCPIP"/>
+    <fn name="tcpip_apimsg"                       id="0x140D" group="TCPIP"/>
+    <fn name="tcpip_callback"                     id="0x140E" group="TCPIP"/>
+    <fn name="Tcpip_Destroy"                      id="0x140F" group="TCPIP"/>
+    <fn name="tcpip_init"                         id="0x1410" group="TCPIP"/>
+    <fn name="tcpip_input"                        id="0x1411" group="TCPIP"/>
+    <fn name="tcpip_tcp_timer"                    id="0x1412" group="TCPIP"/>
+    <fn name="TCpIPInit"                          id="0x1413" group="TCPIP"/>
+    <fn name="socketdata_get"                     id="0x1414" group="TCPIP"/>
+    <fn name="socketdata_initial"                 id="0x1415" group="TCPIP"/>
+    <fn name="socketdata_store"                   id="0x1416" group="TCPIP"/>
+    <fn name="udp_bind"                           id="0x1417" group="TCPIP"/>
+    <fn name="udp_connect"                        id="0x1418" group="TCPIP"/>
+    <fn name="udp_debug_print"                    id="0x1419" group="TCPIP"/>
+    <fn name="udp_disconnect"                     id="0x141A" group="TCPIP"/>
+    <fn name="udp_init"                           id="0x141B" group="TCPIP"/>
+    <fn name="udp_input"                          id="0x141C" group="TCPIP"/>
+    <fn name="udp_new"                            id="0x141D" group="TCPIP"/>
+    <fn name="udp_recv"                           id="0x141E" group="TCPIP"/>
+    <fn name="udp_remove"                         id="0x141F" group="TCPIP"/>
+    <fn name="udp_send"                           id="0x1420" group="TCPIP"/>
+    <fn name="udp_sendto"                         id="0x1421" group="TCPIP"/>
+
+    <!-- DM -->
+
+    <fn name="DM_SetAudioMode_From_Calibration"   id="0x151A" group="DM"/>
+    <fn name="DM_SetAudioMode"                    id="0x151B" group="DM"/>
+    <fn name="DM_SetAudio_From_Calibration_Volume" id="0x151C" group="DM"/>
+    <fn name="DM_SetAudioVolume"                  id="0x151D" group="DM"/>
+    <fn name="DM_MicStartRecord"                  id="0x151E" group="DM"/>
+    <fn name="DM_StopAudio"                       id="0x151F" group="DM"/>
+    <fn name="DM_StartAudio"                      id="0x1520" group="DM"/>
+    <fn name="DM_Audio_StartStream"               id="0x1521" group="DM"/>
+    <fn name="DM_Audio_StopStream"                id="0x1522" group="DM"/>
+    <fn name="DM_PlayTone"                        id="0x1523" group="DM"/>
+    <fn name="DM_StopTone"                        id="0x1524" group="DM"/>
+
+    <!-- SIM_PBK -->
+
+    <fn name="CFW_SimPBKAddProc"                  id="0x15BA" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKDelProc"                  id="0x15BB" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKEntryProc"                id="0x15BC" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKListEntryProc"            id="0x15BD" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKListCountEntryProc"       id="0x15BE" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKStorageInfoProc"          id="0x15BF" group="SIM_PBK"/>
+    <fn name="CFW_SimPBKStorageProc"              id="0x15C0" group="SIM_PBK"/>
+    <fn name="cfw_SimParsePBKRecData"             id="0x15C1" group="SIM_PBK"/>
+
+    <!-- SIM_MSG -->
+
+    <fn name="CFW_SimReadMessage"                 id="0x15CF" group="SIM_MSG"/>
+    <fn name="CFW_SimWriteMessage"                id="0x15D0" group="SIM_MSG"/>
+    <fn name="CFW_SimListMessage"                 id="0x15D1" group="SIM_MSG"/>
+    <fn name="CFW_SimDeleteMessage"               id="0x15D2" group="SIM_MSG"/>
+    <fn name="CFW_SimReadBinary"                  id="0x15D3" group="SIM_MSG"/>
+    <fn name="CFW_SimUpdateBinary"                id="0x15D4" group="SIM_MSG"/>
+    <fn name="CFW_SimSetMR"                       id="0x15D5" group="SIM_MSG"/>
+    <fn name="CFW_SimGetMR"                       id="0x15D6" group="SIM_MSG"/>
+    <fn name="CFW_SimGetSmsStorageInfo"           id="0x15D8" group="SIM_MSG"/>
+    <fn name="CFW_SimSetSmsParameters"            id="0x15D9" group="SIM_MSG"/>
+    <fn name="CFW_SimSmsInitProc"                 id="0x15DA" group="SIM_MSG"/>
+    <fn name="CFW_SimSmsInit"                     id="0x15DB" group="SIM_MSG"/>
+    <fn name="CFW_DecomposePDU"                   id="0x15DC" group="SIM_MSG"/>
+    <fn name="CFW_SimReadMessageProc"             id="0x15DD" group="SIM_MSG"/>
+    <fn name="CFW_SimWriteMessageProc"            id="0x15DE" group="SIM_MSG"/>
+    <fn name="CFW_SimListMessageProc"             id="0x15E0" group="SIM_MSG"/>
+    <fn name="CFW_SimReadBinaryProc"              id="0x15E1" group="SIM_MSG"/>
+    <fn name="CFW_SimUpdateBinaryProc"            id="0x15E2" group="SIM_MSG"/>
+    <fn name="CFW_SimGetMRProc"                   id="0x15E3" group="SIM_MSG"/>
+    <fn name="CFW_SimSetMRProc"                   id="0x15E4" group="SIM_MSG"/>
+    <fn name="CFW_SimGetSmsStorageInfoProc"       id="0x15E5" group="SIM_MSG"/>
+    <fn name="CFW_SimGetSmsParametersProc"        id="0x15E6" group="SIM_MSG"/>
+    <fn name="CFW_SimSetSmsParametersProc"        id="0x15E7" group="SIM_MSG"/>
+
+    <fn name="CFW_SimTestProc"                    id="0x15E8" group="SIM_MSG"/>
+    <fn name="CFW_SimTest"                        id="0x15E9" group="SIM_MSG"/>
+    <fn name="Sim_ParseSW1SW2"                    id="0x15EA" group="SIM_MSG"/>
+    <fn name="SimParseDedicatedStatus"            id="0x15EB" group="SIM_MSG"/>
+    <fn name="SimReadBinaryReq"                   id="0x15EC" group="SIM_MSG"/>
+    <fn name="SimUpdateBinaryReq"                 id="0x15ED" group="SIM_MSG"/>
+    <fn name="SimElemFileStatusReq"               id="0x15EE" group="SIM_MSG"/>
+    <fn name="SimDedicFileStatusReq"              id="0x15EF" group="SIM_MSG"/>
+    <fn name="SimReadRecordReq"                   id="0x15F0" group="SIM_MSG"/>
+    <fn name="SimUpdateRecordReq"                 id="0x15F1" group="SIM_MSG"/>
+
+    <fn name="SimSeekReq"                         id="0x15F2" group="SIM_MSG"/>
+    <fn name="SimVerifyCHVReq"                    id="0x15F3" group="SIM_MSG"/>
+    <fn name="SimChangeCHVReq"                    id="0x15F4" group="SIM_MSG"/>
+    <fn name="SimDisableCHVReq"                   id="0x15F5" group="SIM_MSG"/>
+    <fn name="SimEnableCHVReq"                    id="0x15F6" group="SIM_MSG"/>
+    <fn name="SimUnblockCHVReq"                   id="0x15F7" group="SIM_MSG"/>
+    <fn name="SimInvalidateReq"                   id="0x15F8" group="SIM_MSG"/>
+    <fn name="SimRehabilitateReq"                 id="0x15F9" group="SIM_MSG"/>
+    <fn name="cfw_IMSItoASC"                      id="0x15FA" group="SIM_MSG"/>
+    <fn name="cfw_PLMNtoBCD"                      id="0x15FB" group="SIM_MSG"/>
+    <fn name="cfw_BCDtoPLMN"                      id="0x15FC" group="SIM_MSG"/>
+    <fn name="CFW_SimGetAuthenStatusProc"         id="0x15FD" group="SIM_MSG"/>
+    <fn name="CFW_SimEnterAuthenticationProc"     id="0x15FE" group="SIM_MSG"/>
+    <fn name="CFW_SimChangePasswordProc"          id="0x15FF" group="SIM_MSG"/>
+    <fn name="CFW_SimGetFacilityProc"             id="0x1600" group="SIM_MSG"/>
+
+    <fn name="CFW_SimGetAuthenticationStatus"     id="0x1601" group="SIM_MSG"/>
+    <fn name="CFW_SimEnterAuthentication"         id="0x1602" group="SIM_MSG"/>
+    <fn name="CFW_SimChangePassword"              id="0x1603" group="SIM_MSG"/>
+    <fn name="CFW_SimGetFacilityLock"             id="0x1604" group="SIM_MSG"/>
+    <fn name="CFW_SimSetFacilityLock"             id="0x1605" group="SIM_MSG"/>
+
+    <fn name="CFW_SimGetECC"                      id="0x1606" group="SIM_MSG"/>
+    <fn name="CFW_SimSetECC"                      id="0x1607" group="SIM_MSG"/>
+    <fn name="CFW_SimGetLP"                       id="0x1608" group="SIM_MSG"/>
+    <fn name="SimSpySimCard"                      id="0x1609" group="SIM_MSG"/>
+    <fn name="CFW_SimInitStage3"                  id="0x160A" group="SIM_MSG"/>
+
+    <fn name="CFW_SimInitStage2"                  id="0x160B" group="SIM_MSG"/>
+    <fn name="CFW_SimInit"                        id="0x160C" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPUCT"                     id="0x160D" group="SIM_MSG"/>
+    <fn name="CFW_SimSetPUCT"                     id="0x160E" group="SIM_MSG"/>
+    <fn name="CFW_SimGetProviderId"               id="0x160F" group="SIM_MSG"/>
+
+    <fn name="CFW_SimSetPrefOperatorList"         id="0x1610" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPrefOperatorList"         id="0x1611" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPrefOperatorListMaxNum"   id="0x1612" group="SIM_MSG"/>
+    <fn name="CFW_SimGetACM"                      id="0x1613" group="SIM_MSG"/>
+    <fn name="CFW_SimSetACMMax"                   id="0x1614" group="SIM_MSG"/>
+    <fn name="CFW_SimGetACMMax"                   id="0x1615" group="SIM_MSG"/>
+    <fn name="CFW_SimReSetACM"                    id="0x1616" group="SIM_MSG"/>
+
+    <fn name="CFW_SimInitStage3Proc"              id="0x1617" group="SIM_MSG"/>
+    <fn name="CFW_SimInitStage1Proc"              id="0x1618" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPUCTProc"                 id="0x1619" group="SIM_MSG"/>
+    <fn name="CFW_SimSetPUCTProc"                 id="0x161A" group="SIM_MSG"/>
+    <fn name="CFW_SimMisGetProviderIdProc"        id="0x161B" group="SIM_MSG"/>
+    <fn name="CFW_SimMisSetPrefListProc"          id="0x161C" group="SIM_MSG"/>
+    <fn name="CFW_SimMisGetPrefListProc"          id="0x161D" group="SIM_MSG"/>
+
+    <fn name="CFW_SimMisGetPrefListMAXNumProc"    id="0x161E" group="SIM_MSG"/>
+    <fn name="CFW_SimMisGetACMProc"               id="0x161F" group="SIM_MSG"/>
+    <fn name="CFW_SimMisReSetACMProc"             id="0x1620" group="SIM_MSG"/>
+    <fn name="CFW_SimSetACMMaxProc"               id="0x1621" group="SIM_MSG"/>
+    <fn name="CFW_SimGetACMMaxProc"               id="0x1622" group="SIM_MSG"/>
+
+
+    <fn name="CFW_SimAddPbkEntry"                 id="0x1623" group="SIM_MSG"/>
+    <fn name="CFW_SimDeletePbkEntry"              id="0x1624" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPbkEntry"                 id="0x1625" group="SIM_MSG"/>
+    <fn name="CFW_SimListCountPbkEntries"         id="0x1626" group="SIM_MSG"/>
+    <fn name="CFW_SimListPbkEntries"              id="0x1627" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPbkStrorageInfo"          id="0x1629" group="SIM_MSG"/>
+    <fn name="CFW_SimGetPbkStorage"               id="0x162A" group="SIM_MSG"/>
+
+    <fn name="CFW_SatActivation"                  id="0x162B" group="SIM_MSG"/>
+    <fn name="CFW_SatResponse"                    id="0x162C" group="SIM_MSG"/>
+    <fn name="CFW_SatGetInformation"              id="0x162D" group="SIM_MSG"/>
+    <fn name="CFW_SatResponseProc"                id="0x162E" group="SIM_MSG"/>
+    <fn name="CFW_SatActivationProc"              id="0x162F" group="SIM_MSG"/>
+    <fn name="CFW_SimGetSmsParameters"            id="0x1630" group="SIM_MSG"/>
+    <fn name="CFW_SimDeleMessageProc"             id="0x1631" group="SIM_MSG"/>
+    <fn name="CFW_CfgSetSimSwitch"                id="0x1632" group="SIM_MSG"/>
+    <fn name="CFW_CfgGetSimSwitch"                id="0x1633" group="SIM_MSG"/>
+
+    <!-- CC -->
+
+    <fn name="CC_Disc"                            id="0x166E" group="CC"/>
+    <fn name="CloseAudio"                         id="0x166F" group="CC"/>
+    <fn name="StopTheStupidStack"                 id="0x1670" group="CC"/>
+    <fn name="CFW_CcInit"                         id="0x1671" group="CC"/>
+    <fn name="CFW_CcAoProc"                       id="0x1672" group="CC"/>
+    <fn name="CFW_CcInitiateSpeechCall"           id="0x1673" group="CC"/>
+    <fn name="CFW_CcInitiateSpeechCallEx"         id="0x1674" group="CC"/>
+    <fn name="CFW_CcReleaseCall"                  id="0x1675" group="CC"/>
+    <fn name="CFW_CcAcceptSpeechCall"             id="0x1676" group="CC"/>
+    <fn name="CmMTAoProc"                         id="0x1677" group="CC"/>
+    <fn name="CFW_CcGetCurrentCall"               id="0x1678" group="CC"/>
+    <fn name="GetCallStatus"                      id="0x1679" group="CC"/>
+    <fn name="CFW_CcGetCallStatus"                id="0x167A" group="CC"/>
+    <fn name="CFW_CcCallHoldMultiparty"           id="0x167B" group="CC"/>
+    <fn name="CFW_CcEmcDial"                      id="0x167C" group="CC"/>
+    <fn name="CFW_CcEmcDialEx"                    id="0x167D" group="CC"/>
+    <fn name="CFW_CcPlayTone"                     id="0x167E" group="CC"/>
+    <fn name="CFW_CcRejectCall"                   id="0x167F" group="CC"/>
+
+    <fn name="CallingPartyBCD2String"             id="0x1680" group="CC"/>
+    <fn name="CallingPartyrRaw2BCD"               id="0x1681" group="CC"/>
+    <fn name="String2BCD"                         id="0x1682" group="CC"/>
+    <fn name="CC_Release"                         id="0x1683" group="CC"/>
+    <fn name="CC_ReleaseCmplt"                    id="0x1684" group="CC"/>
+    <fn name="CC_CallConfirm"                     id="0x1685" group="CC"/>
+    <fn name="CC_Alert"                           id="0x1686" group="CC"/>
+    <fn name="CC_RejectCall"                      id="0x1687" group="CC"/>
+    <fn name="CC_Facility"                        id="0x1688" group="CC"/>
+    <fn name="CC_TerminateOne"                    id="0x1689" group="CC"/>
+    <fn name="CC_TerminateMulti"                  id="0x168A" group="CC"/>
+    <fn name="CC_RetrieveCall"                    id="0x168B" group="CC"/>
+    <fn name="CC_HoldCall"                        id="0x168C" group="CC"/>
+    <fn name="CC_Hold_AcceptCall"                 id="0x168D" group="CC"/>
+    <fn name="CC_HoldMPTY"                        id="0x168E" group="CC"/>
+    <fn name="CC_HoldMPTY_Acceptcall"             id="0x168F" group="CC"/>
+    <fn name="CC_RetrieveMPTY"                    id="0x1690" group="CC"/>
+    <fn name="CC_StartDTMF"                       id="0x1691" group="CC"/>
+    <fn name="CC_StopDTMF"                        id="0x1692" group="CC"/>
+    <fn name="CC_GetIndex"                        id="0x1693" group="CC"/>
+    <fn name="CC_ProcNwDisconnectMsg"             id="0x1694" group="CC"/>
+    <fn name="CC_ProcNwReleaseMsg"                id="0x1695" group="CC"/>
+    <fn name="CC_ProcNwReleaseCmplMsg"            id="0x1696" group="CC"/>
+    <fn name="CC_ProcHeldStateCHLD2X"             id="0x1697" group="CC"/>
+    <fn name="CC_ProcMeetingStateCHLD2X"          id="0x1698" group="CC"/>
+    <fn name="CC_ProcMeetingHeldStateCHLD2X"      id="0x1699" group="CC"/>
+    <fn name="CC_ModifyOtherAoState"              id="0x169A" group="CC"/>
+    <fn name="CC_ModifyToMeetingHldState"         id="0x169B" group="CC"/>
+    <fn name="CC_SendCrssInfoNotify"              id="0x169C" group="CC"/>
+
+    <!-- SS -->
+
+    <fn name="CFW_SsInit"                         id="0x16AA" group="SS"/>
+    <fn name="CFW_SsStaticAoProc"                 id="0x16AB" group="SS"/>
+    <fn name="CFW_SsAoProc"                       id="0x16AC" group="SS"/>
+    <fn name="ss_GetMmiServCode"                  id="0x16AD" group="SS"/>
+    <fn name="GetBSProtocolCode"                  id="0x16AE" group="SS"/>
+    <fn name="GetBSMmiCode"                       id="0x16AF" group="SS"/>
+    <fn name="ss_SetMmiClass"                     id="0x16B0" group="SS"/>
+    <fn name="CFW_SsQueryCallWaiting"             id="0x16B8" group="SS"/>
+    <fn name="CFW_SsSetCallWaiting"               id="0x16B9" group="SS"/>
+    <fn name="CFW_SsQueryCallForwarding"          id="0x16BA" group="SS"/>
+    <fn name="CFW_SsSetCallForwarding"            id="0x16BB" group="SS"/>
+    <fn name="CFW_SsSetFacilityLock"              id="0x16BC" group="SS"/>
+    <fn name="CFW_SsQueryFacilityLock"            id="0x16BD" group="SS"/>
+    <fn name="CFW_SsChangePassword"               id="0x16BE" group="SS"/>
+    <fn name="CFW_SsQueryClip"                    id="0x16BF" group="SS"/>
+    <fn name="CFW_SsQueryClir"                    id="0x16C0" group="SS"/>
+    <fn name="CFW_SsQueryColp"                    id="0x16C1" group="SS"/>
+    <fn name="CFW_SsQueryColr"                    id="0x16C2" group="SS"/>
+    <fn name="CFW_SsSendUSSD"                     id="0x16C3" group="SS"/>
+    <fn name="CFW_SsTerminate"                    id="0x16C4" group="SS"/>
+    <fn name="ss_SetCF_Conf"                      id="0x16C5" group="SS"/>
+    <fn name="ss_interCFList_Conf"                id="0x16C6" group="SS"/>
+    <fn name="ss_Api_Err_Ind"                     id="0x16C7" group="SS"/>
+    <fn name="ss_inter_BSGroupList_Conf"          id="0x16C8" group="SS"/>
+    <fn name="ss_SetCBInfo_Conf"                  id="0x16C9" group="SS"/>
+    <fn name="ss_Inter_StatusInfo_Conf"           id="0x16CA" group="SS"/>
+    <fn name="ss_Inter_GSInfo_Conf"               id="0x16CB" group="SS"/>
+
+    <!-- SIM_EMOD -->
+
+    <fn name="CFW_EMOD_GetBatteryInfo"            id="0x16DC" group="SIM_EMOD"/>
+    <fn name="CFW_EMOD_AudioTestStart"            id="0x16DD" group="SIM_EMOD"/>
+    <fn name="CFW_EMOD_AudioTestEnd"              id="0x16DE" group="SIM_EMOD"/>
+    <fn name="CFW_EMOD_ClearUserInfo"             id="0x16DF" group="SIM_EMOD"/>
+    <fn name="CFW_EMOD_GetIMEI"                   id="0x16E0" group="SIM_EMOD"/>
+
+    <!-- CFG -->
+
+    <fn name="CFW_CfgSetPhoneFunctionality"       id="0x16F0" group="CFG"/>
+    <fn name="CFW_CfgGetPhoneFunctionality"       id="0x16F1" group="CFG"/>
+    <fn name="CFW_CfgStoreUserProfile"            id="0x16F2" group="CFG"/>
+    <fn name="CFW_CfgRestoreFactoryProfile"       id="0x16F3" group="CFG"/>
+    <fn name="CFW_CfgGetUserProfile"              id="0x16F4" group="CFG"/>
+
+    <fn name="CFW_CfgSetServiceReportingMode"     id="0x16F5" group="CFG"/>
+    <fn name="CFW_CfgGetServiceReportingMode"     id="0x16F6" group="CFG"/>
+    <fn name="CFW_CfgSetRLPType"                  id="0x16F7" group="CFG"/>
+    <fn name="CFW_CfgGetRLPType"                  id="0x16F8" group="CFG"/>
+    <fn name="CFW_CfgGetCharacterSet"             id="0x16F9" group="CFG"/>
+
+    <fn name="CFW_CfgSetCharacterSet"             id="0x16FA" group="CFG"/>
+    <fn name="CFW_CfgSetIndicatorEvent"           id="0x16FB" group="CFG"/>
+    <fn name="CFW_CfgGetIndicatorEvent"           id="0x16FC" group="CFG"/>
+    <fn name="CFW_CfgSetIndicatorEventInfo"       id="0x16FD" group="CFG"/>
+    <fn name="CFW_CfgGetIndicatorEventInfo"       id="0x16FE" group="CFG"/>
+
+    <fn name="CFW_CfgGetEventReport"              id="0x16FF" group="CFG"/>
+    <fn name="CFW_CfgSetEventReport"              id="0x1700" group="CFG"/>
+    <fn name="CFW_CfgSetResultCodeFormatMode"     id="0x1701" group="CFG"/>
+    <fn name="CFW_CfgSetResultCodePresentMode"    id="0x1702" group="CFG"/>
+    <fn name="CFW_CfgGetResultCodePresentMode"    id="0x1703" group="CFG"/>
+
+    <fn name="CFW_CfgGetResultCodeFormatMode"     id="0x1704" group="CFG"/>
+    <fn name="CFW_CfgSetEchoMode"                 id="0x1705" group="CFG"/>
+    <fn name="CFW_CfgGetEchoMode"                 id="0x1706" group="CFG"/>
+    <fn name="CFW_CfgGetProductIdentification"    id="0x1707" group="CFG"/>
+    <fn name="CFW_CfgGetExtendedErrorV0"          id="0x1708" group="CFG"/>
+
+    <fn name="CFW_CfgSetExtendedErrorV0"          id="0x1709" group="CFG"/>
+    <fn name="CFW_CfgGetExtendedErrorV1"          id="0x170A" group="CFG"/>
+    <fn name="CFW_CfgGetErrorReport"              id="0x170B" group="CFG"/>
+    <fn name="CFW_CfgSetErrorReport"              id="0x170C" group="CFG"/>
+    <fn name="CFW_GetAtCapability"                id="0x170D" group="CFG"/>
+
+    <fn name="CFW_CfgSetSmsStorage"               id="0x170E" group="CFG"/>
+    <fn name="CFW_CfgGetSmsStorage"               id="0x170F" group="CFG"/>
+    <fn name="CFW_CfgSelectSmsService"            id="0x1710" group="CFG"/>
+    <fn name="CFW_CfgQuerySmsService"             id="0x1711" group="CFG"/>
+    <fn name="CFW_CfgSetSmsOverflowInd"           id="0x1712" group="CFG"/>
+
+    <fn name="CFW_CfgGetSmsOverflowInd"           id="0x1713" group="CFG"/>
+    <fn name="CFW_CfgSetSmsFormat"                id="0x1714" group="CFG"/>
+    <fn name="CFW_CfgGetSmsFormat"                id="0x1715" group="CFG"/>
+    <fn name="CFW_CfgSetSmsShowTextModeParam"     id="0x1716" group="CFG"/>
+    <fn name="CFW_CfgGetSmsShowTextModeParam"     id="0x1717" group="CFG"/>
+
+    <fn name="CFW_CfgSetSmsCB"                    id="0x1718" group="CFG"/>
+    <fn name="CFW_CfgGetSmsCB"                    id="0x1719" group="CFG"/>
+    <fn name="CFW_CfgSetNewSmsAck"                id="0x171A" group="CFG"/>
+    <fn name="CFW_CfgGetNewSmsAck"                id="0x171B" group="CFG"/>
+    <fn name="CFW_CfgSetSmsCenter"                id="0x171C" group="CFG"/>
+
+    <fn name="CFW_CfgGetSmsCenter"                id="0x171D" group="CFG"/>
+    <fn name="CFW_CfgSetSmsFullForNew"            id="0x171E" group="CFG"/>
+    <fn name="CFW_CfgGetSmsFullForNew"            id="0x171F" group="CFG"/>
+    <fn name="CFW_CfgSetSmsParam"                 id="0x1720" group="CFG"/>
+    <fn name="CFW_CfgGetSmsParam"                 id="0x1721" group="CFG"/>
+
+    <fn name="CFW_CfgGetDefaultSmsParam"          id="0x1722" group="CFG"/>
+    <fn name="CFW_CfgSetDefaultSmsParam"          id="0x1723" group="CFG"/>
+    <fn name="CFW_CfgSetSmsStorageInfo"           id="0x1724" group="CFG"/>
+    <fn name="CFW_CfgGetSmsStorageInfo"           id="0x1725" group="CFG"/>
+    <fn name="CFW_CfgSetNewSmsOption"             id="0x1726" group="CFG"/>
+
+    <fn name="CFW_CfgGetNewSmsOption"             id="0x1727" group="CFG"/>
+
+    <fn name="CFW_CfgSetPbkStorage"               id="0x1728" group="CFG"/>
+    <fn name="CFW_CfgGetPbkStorage"               id="0x1729" group="CFG"/>
+    <fn name="CFW_CfgSetPbkStrorageInfo"          id="0x172A" group="CFG"/>
+    <fn name="CFW_CfgGetPbkStrorageInfo"          id="0x172B" group="CFG"/>
+
+    <fn name="CFW_CfgSetPbkCapacityInfo"          id="0x172C" group="CFG"/>
+    <fn name="CFW_CfgSetCalllogCapacityInfo"      id="0x172D" group="CFG"/>
+
+    <fn name="CFW_CfgSetNwOperDispFormat"         id="0x172E" group="CFG"/>
+    <fn name="CFW_CfgGetNwOperDispFormat"         id="0x172F" group="CFG"/>
+    <fn name="CFW_CfgNwGetOperatorId"             id="0x1730" group="CFG"/>
+
+    <fn name="CFW_CfgNwGetOperatorName"           id="0x1731" group="CFG"/>
+    <fn name="CFW_CfgNwGetOperatorInfo"           id="0x1732" group="CFG"/>
+    <fn name="CFW_CfgSetNwStatus"                 id="0x1733" group="CFG"/>
+    <fn name="CFW_CfgGetNwStatus"                 id="0x1734" group="CFG"/>
+    <fn name="CFW_CfgNwSetFrequencyBand"          id="0x1735" group="CFG"/>
+
+    <fn name="CFW_CfgNwGetFrequencyBand"          id="0x1736" group="CFG"/>
+    <fn name="CFW_CfgNwSetNetWorkMode"            id="0x1737" group="CFG"/>
+    <fn name="CFW_CfgNwGetNetWorkMode"            id="0x1738" group="CFG"/>
+
+    <fn name="CFW_CfgSetSSN"                      id="0x1739" group="CFG"/>
+    <fn name="CFW_CfgGetSSN"                      id="0x173A" group="CFG"/>
+
+    <fn name="CFW_CfgSetCallWaiting"              id="0x173B" group="CFG"/>
+    <fn name="CFW_CfgGetCallWaiting"              id="0x173C" group="CFG"/>
+    <fn name="CFW_CfgSetClir"                     id="0x173D" group="CFG"/>
+    <fn name="CFW_CfgGetClir"                     id="0x173E" group="CFG"/>
+    <fn name="CFW_CfgSetToneDuration"             id="0x173F" group="CFG"/>
+
+    <fn name="CFW_CfgGetToneDuration"             id="0x1740" group="CFG"/>
+    <fn name="CFW_CfgSetClip"                     id="0x1741" group="CFG"/>
+    <fn name="CFW_CfgGetClip"                     id="0x1742" group="CFG"/>
+    <fn name="CFW_CfgSetCallForwarding"           id="0x1743" group="CFG"/>
+    <fn name="CFW_CfgGetCallForwarding"           id="0x1744" group="CFG"/>
+
+    <fn name="CFW_CfgSetIncomingCallResultMode"   id="0x1745" group="CFG"/>
+    <fn name="CFW_CfgGetIncomingCallResultMode"   id="0x1746" group="CFG"/>
+    <fn name="CFW_CfgSetBearServType"             id="0x1747" group="CFG"/>
+    <fn name="CFW_CfgGetBearServType"             id="0x1748" group="CFG"/>
+    <fn name="CFW_CfgSetConnectResultFormatCode"  id="0x1749" group="CFG"/>
+
+    <fn name="CFW_CfgGetConnectResultFormatCode"  id="0x174A" group="CFG"/>
+    <fn name="CFW_CfgSetColp"                     id="0x174B" group="CFG"/>
+    <fn name="CFW_CfgGetColp"                     id="0x174C" group="CFG"/>
+
+    <fn name="CFW_CfgSetAudioAudioMode"           id="0x174D" group="CFG"/>
+    <fn name="CFW_CfgGetAudioAudioMode"           id="0x174E" group="CFG"/>
+
+    <fn name="CFW_CfgSetLoudspeakerVolumeLevel"   id="0x174F" group="CFG"/>
+    <fn name="CFW_CfgGetLoudspeakerVolumeLevel"   id="0x1750" group="CFG"/>
+    <fn name="CFW_CfgGetLoudspeakerVolumeLevelRange" id="0x1751" group="CFG"/>
+
+    <fn name="CFW_CfgSetTmParam"                  id="0x1752" group="CFG"/>
+    <fn name="CFW_CfgGetTmParam"                  id="0x1753" group="CFG"/>
+
+    <fn name="CFW_Cfg_SetInitValue"               id="0x1754" group="CFG"/>
+    <fn name="CFW_CfgInit"                        id="0x1755" group="CFG"/>
+
+    <fn name="CFW_Cfg_atoi"                       id="0x1756" group="CFG"/>
+    <fn name="GetNumber"                          id="0x1757" group="CFG"/>
+    <fn name="CFW_CfgNumRangeCheck"               id="0x1758" group="CFG"/>
+
+    <fn name="GetString"                          id="0x1759" group="CFG"/>
+    <fn name="CFW_Cfg_strcmp"                     id="0x175A" group="CFG"/>
+    <fn name="CFW_CfgStrRangeCheck"               id="0x175B" group="CFG"/>
+    <fn name="WriteRegData"                       id="0x175C" group="CFG"/>
+    <fn name="ReadRegData"                        id="0x175D" group="CFG"/>
+
+    <fn name="cfg_read_8"                         id="0x175E" group="CFG"/>
+    <fn name="cfg_write_8"                        id="0x1760" group="CFG"/>
+    <fn name="cfg_write_str"                      id="0x1761" group="CFG"/>
+    <fn name="cfg_read_str"                       id="0x1762" group="CFG"/>
+    <fn name="cfg_read_32"                        id="0x1763" group="CFG"/>
+    <fn name="cfg_write_32"                       id="0x1764" group="CFG"/>
+    <fn name="cfg_read_hex"                       id="0x1765" group="CFG"/>
+    <fn name="cfg_write_hex"                      id="0x1766" group="CFG"/>
+    <fn name="cfg_readdefault"                    id="0x1767" group="CFG"/>
+
+    <fn name="CFW_CfgGprsSetPdpCxt"               id="0x176F" group="CFG"/>
+    <fn name="CFW_CfgGprsGetPdpCxt"               id="0x1770" group="CFG"/>
+    <fn name="CFW_CfgGprsSetReqQos"               id="0x1771" group="CFG"/>
+    <fn name="CFW_CfgGprsGetReqQos"               id="0x1772" group="CFG"/>
+    <fn name="CFW_CfgGprsSetMinQos"               id="0x1773" group="CFG"/>
+    <fn name="CFW_CfgGprsGetMInQos"               id="0x1774" group="CFG"/>
+    <fn name="CFW_CfgGetEmodParam"                id="0x1775" group="CFG"/>
+    <fn name="CFW_CfgSetEmodParam"                id="0x1776" group="CFG"/>
+
+    <fn name="CFW_CfgGetIMSI"                     id="0x1777" group="CFG"/>
+    <fn name="CFW_CfgSetIMSI"                     id="0x1778" group="CFG"/>
+
+    <fn name="CFW_CfgNwSetFM"                     id="0x1779" group="CFG"/>
+    <fn name="CFW_CfgNwGetFM"                     id="0x177A" group="CFG"/>
+    <fn name="CFW_CfgSetSoftReset"                id="0x177B" group="CFG"/>
+    <fn name="CFW_CfgGetSoftReset"                id="0x177C" group="CFG"/>
+
+    <fn name="StartAudio"                         id="0x177D" group="CFG"/>
+
+    <fn name="CFW_CcReleaseProc"                  id="0x177E" group="CFG"/>
+    <fn name="CFW_SsMtReg"                        id="0x177F" group="CFG"/>
+    <fn name="CFW_SsMtAoProc"                     id="0x1780" group="CFG"/>
+    <fn name="ss_SetMmiBitStatus"                 id="0x1781" group="CFG"/>
+    <fn name="ss_InterCFList_Conf"                id="0x1782" group="CFG"/>
+    <fn name="ss_SetCF_NoRet_Conf"                id="0x1783" group="CFG"/>
+    <fn name="ss_Inter_BSGroupList_Conf"          id="0x1784" group="CFG"/>
+    <fn name="SimReHabilitateReq"                 id="0x1785" group="CFG"/>
+    <fn name="CFW_SimGetServiceProviderName"      id="0x1786" group="CFG"/>
+    <fn name="CFW_SimGetServiceProviderNameProc"  id="0x1787" group="CFG"/>
+    <fn name="SMS_SFSim2UserEX"                   id="0x1788" group="CFG"/>
+    <fn name="SMS_SFUser2SimEX"                   id="0x1789" group="CFG"/>
+    <fn name="CFW_SmsInitCompleteProc"            id="0x178A" group="CFG"/>
+    <fn name="CFW_SmsInitComplete"                id="0x178B" group="CFG"/>
+    <fn name="sms_tool_CheckDcs"                  id="0x178C" group="CFG"/>
+    <fn name="CFW_SetFlightModeProc"              id="0x178D" group="CFG"/>
+    <fn name="CFW_SetCommSIMOpen"                 id="0x178E" group="CFG"/>
+    <fn name="CFW_SetFlightMode"                  id="0x178F" group="CFG"/>
+    <fn name="CFW_SimGetICCIDProc"                id="0x1790" group="CFG"/>
+    <fn name="CFW_SimMisGetPrefListProcEX"        id="0x1791" group="CFG"/>
+    <fn name="CFW_SimGetFileStatusProc"           id="0x1792" group="CFG"/>
+    <fn name="CFW_SimReadRecordProc"              id="0x1793" group="CFG"/>
+    <fn name="CFW_SimUpdateRecordProc"            id="0x1794" group="CFG"/>
+    <fn name="CFW_SimGetICCID"                    id="0x1795" group="CFG"/>
+    <fn name="CFW_SimSetPrefOperatorListEX"       id="0x1796" group="CFG"/>
+    <fn name="CFW_SimGetPrefOperatorListEX"       id="0x1797" group="CFG"/>
+    <fn name="CFW_SimGetFileStatus"               id="0x1798" group="CFG"/>
+    <fn name="CFW_SimReadRecord"                  id="0x1799" group="CFG"/>
+    <fn name="CFW_SimUpdateRecord"                id="0x179A" group="CFG"/>
+
+    <fn name="CFW_CfgSetFirstPowerOnFlag"         id="0x179B" group="CFG"/>
+    <fn name="CFW_CfgCheckFirstPowerOnFlag"       id="0x179C" group="CFG"/>
+    <fn name="CFW_SimGetSmsTotalNum"              id="0x179D" group="CFG"/>
+    <fn name="CFW_SimGetSmsTotalNumProc"          id="0x179E" group="CFG"/>
+
+    <!-- SMS -->
+
+    <fn name="sms_mo_ComposeLongPDU"              id="0x17D6" group="SMS"/>
+    <fn name="sms_mo_InitMeLongMSGPara"           id="0x17D7" group="SMS"/>
+    <fn name="sms_mo_Parse_PDU"                   id="0x17D8" group="SMS"/>
+    <fn name="sms_mo_Parse_SmsPPErrorInd"         id="0x17D9" group="SMS"/>
+    <fn name="sms_mo_SmsPPSendMMAReq"             id="0x17DA" group="SMS"/>
+    <fn name="sms_mt_CompressedDataDecode"        id="0x17DB" group="SMS"/>
+    <fn name="sms_mt_GSM2UCS2"                    id="0x17DC" group="SMS"/>
+    <fn name="sms_mt_Parse_LongMSGPara"           id="0x17DD" group="SMS"/>
+    <fn name="sms_mt_Parse_SmsPPReceiveInd"       id="0x17DE" group="SMS"/>
+    <fn name="sms_mt_Parse_SmsPPReceiveInd_SR"    id="0x17DF" group="SMS"/>
+    <fn name="sms_mt_SerializeTime"               id="0x17E0" group="SMS"/>
+    <fn name="sms_mt_SetLongPara"                 id="0x17E1" group="SMS"/>
+    <fn name="sms_mt_SmsParseDCS"                 id="0x17E2" group="SMS"/>
+    <fn name="sms_mt_SmsPPAckReq"                 id="0x17E3" group="SMS"/>
+    <fn name="sms_mt_SmsPPErrorReq"               id="0x17E4" group="SMS"/>
+    <fn name="sms_mt_Store_SmsPPReceiveInd"       id="0x17E5" group="SMS"/>
+    <fn name="sms_mt_UncompressedDataDecode"      id="0x17E6" group="SMS"/>
+    <fn name="sms_Sync_Delete"                    id="0x17E7" group="SMS"/>
+    <fn name="sms_Sync_List"                      id="0x17E8" group="SMS"/>
+    <fn name="sms_Sync_ListHeader"                id="0x17E9" group="SMS"/>
+    <fn name="sms_Sync_Read"                      id="0x17EA" group="SMS"/>
+    <fn name="sms_Sync_SetUnRead2Read"            id="0x17EB" group="SMS"/>
+    <fn name="sms_Sync_SetUnSent2Sent"            id="0x17EC" group="SMS"/>
+    <fn name="sms_Sync_Write"                     id="0x17ED" group="SMS"/>
+    <fn name="sms_tool_ASCII2BCD"                 id="0x17EE" group="SMS"/>
+    <fn name="sms_tool_BCD2ASCII"                 id="0x17EF" group="SMS"/>
+    <fn name="sms_tool_ComposePDU"                id="0x17F0" group="SMS"/>
+    <fn name="sms_tool_DecomposePDU"              id="0x17F1" group="SMS"/>
+    <fn name="sms_tool_GetLongMSGPara"            id="0x17F3" group="SMS"/>
+    <fn name="sms_tool_Parse_LongMSGPara"         id="0x17F4" group="SMS"/>
+    <fn name="sms_tool_SetLongMSGPara"            id="0x17F6" group="SMS"/>
+    <fn name="sms_tool_SMSTime_TO_SCTS"           id="0x17F7" group="SMS"/>
+    <fn name="sms_tool_SUL_AsciiToGsmBcd"         id="0x17F8" group="SMS"/>
+    <fn name="sms_tool_SUL_GsmBcdToAscii"         id="0x17F9" group="SMS"/>
+    <fn name="SUL_UserDialNum2StackDialNum"       id="0x17FA" group="SMS"/>
+    <fn name="CFW_SmsCopyMessages"                id="0x17FB" group="SMS"/>
+    <fn name="CFW_SmsDeleteMessage"               id="0x17FC" group="SMS"/>
+    <fn name="CFW_SmsDeleteMessageSync"           id="0x17FD" group="SMS"/>
+    <fn name="CFW_SmsGetMessageNode"              id="0x17FE" group="SMS"/>
+    <fn name="CFW_SmsListMessages"                id="0x17FF" group="SMS"/>
+    <fn name="CFW_SmsListMessagesHeader"          id="0x1800" group="SMS"/>
+    <fn name="CFW_SmsListMessagesHeaderSync"      id="0x1801" group="SMS"/>
+    <fn name="CFW_SmsListMessagesSync"            id="0x1802" group="SMS"/>
+    <fn name="CFW_SmsNewSmsAck"                   id="0x1803" group="SMS"/>
+    <fn name="CFW_SmsQueryOverflowInd"            id="0x1804" group="SMS"/>
+    <fn name="CFW_SmsReadMessage"                 id="0x1805" group="SMS"/>
+    <fn name="CFW_SmsReadMessageSync"             id="0x1806" group="SMS"/>
+    <fn name="CFW_SmsSendMessage"                 id="0x1807" group="SMS"/>
+    <fn name="CFW_SmsSetUnRead2Read"              id="0x1808" group="SMS"/>
+    <fn name="CFW_SmsSetUnRead2ReadSync"          id="0x1809" group="SMS"/>
+    <fn name="CFW_SmsSetUnSent2Sent"              id="0x180A" group="SMS"/>
+    <fn name="CFW_SmsSetUnSent2SentSync"          id="0x180B" group="SMS"/>
+    <fn name="CFW_SmsWriteMessage"                id="0x180C" group="SMS"/>
+    <fn name="CFW_SmsWriteMessageSync"            id="0x180D" group="SMS"/>
+    <fn name="CFW_SIMSmsInit"                     id="0x180E" group="SMS"/>
+    <fn name="CFW_SmsCbInit"                      id="0x1810" group="SMS"/>
+    <fn name="CFW_SmsMoInit"                      id="0x1811" group="SMS"/>
+    <fn name="CFW_SmsMtInit"                      id="0x1812" group="SMS"/>
+    <fn name="sms_cb_Reg"                         id="0x1813" group="SMS"/>
+    <fn name="sms_CBAoProc"                       id="0x1814" group="SMS"/>
+    <fn name="sms_CopyAoProc"                     id="0x1815" group="SMS"/>
+    <fn name="sms_DleteAoProc"                    id="0x1816" group="SMS"/>
+    <fn name="sms_InitAoProc"                     id="0x1817" group="SMS"/>
+    <fn name="sms_ListAoProc"                     id="0x1818" group="SMS"/>
+    <fn name="sms_ListHeaderAoProc"               id="0x1819" group="SMS"/>
+    <fn name="sms_mt_Reg"                         id="0x181A" group="SMS"/>
+    <fn name="sms_MTAoProc"                       id="0x181B" group="SMS"/>
+    <fn name="sms_ReadAoProc"                     id="0x181C" group="SMS"/>
+    <fn name="sms_SendProc"                       id="0x181D" group="SMS"/>
+    <fn name="sms_SetUnRead2ReadProc"             id="0x181E" group="SMS"/>
+    <fn name="sms_SetUnSent2SentProc"             id="0x181F" group="SMS"/>
+    <fn name="sms_WriteAoProc"                    id="0x1820" group="SMS"/>
+    <fn name="CFW_MeDeleteMessage_Ex"             id="0x1821" group="SMS"/>
+    <fn name="CFW_MeGetStorageInfo_Ex"            id="0x1822" group="SMS"/>
+    <fn name="CFW_MeListMessage_Ex"               id="0x1823" group="SMS"/>
+    <fn name="CFW_MeReadMessage_Ex"               id="0x1824" group="SMS"/>
+    <fn name="CFW_MeWriteMessage_Ex"              id="0x1825" group="SMS"/>
+    <fn name="CFW_SmsMoInit_Ex"                   id="0x1826" group="SMS"/>
+    <fn name="SMS_SFSim2User_Ex"                  id="0x1827" group="SMS"/>
+    <fn name="SMS_SFUser2Sim_Ex"                  id="0x1828" group="SMS"/>
+    <fn name="CFW_MeDeleteMessage"                id="0x1829" group="SMS"/>
+    <fn name="CFW_MeGetStorageInfo"               id="0x182A" group="SMS"/>
+    <fn name="CFW_MeListMessage"                  id="0x182B" group="SMS"/>
+    <fn name="CFW_MeReadMessage"                  id="0x182C" group="SMS"/>
+    <fn name="CFW_MeWriteMessage"                 id="0x182D" group="SMS"/>
+    <fn name="Create_SMS_DATA_DB"                 id="0x182E" group="SMS"/>
+    <fn name="Create_SMS_DB"                      id="0x182F" group="SMS"/>
+    <fn name="Remove_SMS_DATA_DB"                 id="0x1830" group="SMS"/>
+    <fn name="Remove_SMS_DB"                      id="0x1831" group="SMS"/>
+    <fn name="SMS_Append"                         id="0x1832" group="SMS"/>
+    <fn name="sms_db_Init"                        id="0x1833" group="SMS"/>
+    <fn name="SMS_DeleteFromMeByIndex"            id="0x1834" group="SMS"/>
+    <fn name="SMS_DeleteFromMeByStatus"           id="0x1835" group="SMS"/>
+    <fn name="SMS_GetStorageInfo"                 id="0x1836" group="SMS"/>
+    <fn name="SMS_GetStorageInfo2"                id="0x1837" group="SMS"/>
+    <fn name="SMS_HaveFreeSlot"                   id="0x1838" group="SMS"/>
+    <fn name="SMS_Read"                           id="0x1839" group="SMS"/>
+    <fn name="SMS_Read2"                          id="0x183A" group="SMS"/>
+    <fn name="SMS_SetStorageInfo"                 id="0x183B" group="SMS"/>
+    <fn name="SMS_SFSim2User"                     id="0x183C" group="SMS"/>
+    <fn name="SMS_SFUser2Sim"                     id="0x183D" group="SMS"/>
+    <fn name="SMS_UpdateStorageInfo"              id="0x183E" group="SMS"/>
+    <fn name="SMS_Write"                          id="0x183F" group="SMS"/>
+    <fn name="sms_SetRead2UnReadProc"             id="0x1840" group="SMS"/>
+    <fn name="CFW_SmsSetRead2UnRead"              id="0x1841" group="SMS"/>
+    <fn name="CFW_SmsComposePdu"                  id="0x1842" group="SMS"/>
+    <fn name="sms_SetParamAoProc"                 id="0x1843" group="SMS"/>
+
+    <!-- SHELL -->
+
+    <fn name="BAL_CfwSetupCbs"                    id="0x186C" group="SHELL"/>
+    <fn name="CFW_ShellControl"                   id="0x186D" group="SHELL"/>
+    <fn name="CFW_ShellProc"                      id="0x186E" group="SHELL"/>
+    <fn name="SHL_InitGlobalVariables"            id="0x186F" group="SHELL"/>
+    <fn name="SHL_DisableModules"                 id="0x1870" group="SHELL"/>
+    <fn name="SHL_GetDisableModule"               id="0x1871" group="SHELL"/>
+    <fn name="SHL_CleanupData"                    id="0x1872" group="SHELL"/>
+
+    <!-- NETWORK -->
+
+    <fn name="NetWork_timer_proc"                 id="0x189D" group="NETWORK"/>
+    <fn name="CFW_NwAoProc"                       id="0x189E" group="NETWORK"/>
+    <fn name="CFW_NwGetAvailableOperators"        id="0x189F" group="NETWORK"/>
+    <fn name="CFW_NwGetCurrentOperator"           id="0x18A0" group="NETWORK"/>
+    <fn name="CFW_NwGetImei"                      id="0x18A1" group="NETWORK"/>
+    <fn name="CFW_NwGetSignalQuality"             id="0x18A2" group="NETWORK"/>
+    <fn name="CFW_NwSetRegistration"              id="0x18A3" group="NETWORK"/>
+    <fn name="CFW_NwStartStack"                   id="0x18A4" group="NETWORK"/>
+    <fn name="CFW_NwStopStack"                    id="0x18A5" group="NETWORK"/>
+    <fn name="CFW_NwQualReportConf"               id="0x18A6" group="NETWORK"/>
+    <fn name="CFW_NwListConf"                     id="0x18A7" group="NETWORK"/>
+    <fn name="CFW_NwPsStatusConf"                 id="0x18A8" group="NETWORK"/>
+    <fn name="CFW_NwCsStatusConf"                 id="0x18A9" group="NETWORK"/>
+    <fn name="CFW_GprsAtt"                        id="0x18AA" group="NETWORK"/>
+    <fn name="CFW_GetGprsAttState"                id="0x18AB" group="NETWORK"/>
+    <fn name="CFW_GprsGetstatus"                  id="0x18AC" group="NETWORK"/>
+    <fn name="CFW_NwAbortListOperators"           id="0x18AD" group="NETWORK"/>
+    <fn name="CFW_GprsDeactiveAll"                id="0x18AE" group="NETWORK"/>
+
+    <!-- DRIVER -->
+
+    <fn name="DRV_EraseFlashSectorFirst"          id="0x18B1" group="DRIVER"/>
+    <fn name="DRV_EraseFlashSectorResume"         id="0x18B2" group="DRIVER"/>
+
+    <!-- VDS -->
+
+    <fn name="VDS_CacheFlush"                     id="0x18C5" group="VDS"/>
+
+    <!-- AOM -->
+
+    <fn name="Dispatch"                           id="0x18CF" group="AOM"/>
+    <fn name="CFW_RegisterAo"                     id="0x18D0" group="AOM"/>
+    <fn name="DeleteReadyAO"                      id="0x18D1" group="AOM"/>
+    <fn name="CFW_UnRegisterAO"                   id="0x18D2" group="AOM"/>
+    <fn name="CFW_SetAoProcCode"                  id="0x18D3" group="AOM"/>
+    <fn name="TriggerStateMachine"                id="0x18D4" group="AOM"/>
+    <fn name="CFW_AoScheduler"                    id="0x18D5" group="AOM"/>
+    <fn name="CFW_PostNotifyEvent"                id="0x18D6" group="AOM"/>
+
+    <!-- GPRS -->
+
+    <fn name="Gprs_MSG_Redirect"                  id="0x18E3" group="GPRS"/>
+    <fn name="CFW_GprsAoProc"                     id="0x18E4" group="GPRS"/>
+    <fn name="GprsMTAoProc"                       id="0x18E5" group="GPRS"/>
+    <fn name="CFW_GprsGetPdpAddr"                 id="0x18E6" group="GPRS"/>
+    <fn name="CFW_GetGprsActState"                id="0x18E7" group="GPRS"/>
+    <fn name="CFW_GprsAct"                        id="0x18E8" group="GPRS"/>
+    <fn name="CFW_GprsCtxModify"                  id="0x18E9" group="GPRS"/>
+    <fn name="CFW_GprsSendData"                   id="0x18EA" group="GPRS"/>
+    <fn name="CFW_GprsSetPdpCxt"                  id="0x18EB" group="GPRS"/>
+    <fn name="CFW_GprsGetPdpCxt"                  id="0x18EC" group="GPRS"/>
+    <fn name="CFW_GprsSetReqQos"                  id="0x18ED" group="GPRS"/>
+    <fn name="CFW_GprsGetReqQos"                  id="0x18EE" group="GPRS"/>
+    <fn name="CFW_GprsSetMinQos"                  id="0x18EF" group="GPRS"/>
+    <fn name="CFW_GprsGetMInQos"                  id="0x18F0" group="GPRS"/>
+    <fn name="CFW_GprsQos2Api"                    id="0x18F1" group="GPRS"/>
+    <fn name="CFW_GprsApi2Qos"                    id="0x18F2" group="GPRS"/>
+    <fn name="CFW_GprsGetFreeCid"                 id="0x18F3" group="GPRS"/>
+    <fn name="CFW_GprsManualAcc"                  id="0x18F4" group="GPRS"/>
+    <fn name="CFW_GprsManualRej"                  id="0x18F5" group="GPRS"/>
+
+    <!-- FS -->
+
+    <fn name="FS_ChangeDir"                       id="0x1902" group="FS"/>
+    <fn name="FS_OpenByHandle"                    id="0x1903" group="FS"/>
+    <fn name="FS_Seek"                            id="0x1904" group="FS"/>
+    <fn name="FS_Read"                            id="0x1905" group="FS"/>
+    <fn name="FS_Write"                           id="0x1906" group="FS"/>
+    <fn name="FS_Close"                           id="0x1907" group="FS"/>
+    <fn name="FS_MakeDir"                         id="0x1908" group="FS"/>
+    <fn name="FS_ReadDir"                         id="0x1909" group="FS"/>
+    <fn name="FS_MountRoot"                       id="0x190A" group="FS"/>
+    <fn name="FS_RemoveDir"                       id="0x190B" group="FS"/>
+    <fn name="FS_Link"                            id="0x190C" group="FS"/>
+    <fn name="FS_UnLinkByHandle"                  id="0x190D" group="FS"/>
+    <fn name="FS_Format"                          id="0x190E" group="FS"/>
+    <fn name="FS_Stat"                            id="0x190F" group="FS"/>
+    <fn name="FS_FindFirstFile"                   id="0x1910" group="FS"/>
+    <fn name="FS_FindNextFile"                    id="0x1911" group="FS"/>
+    <fn name="FS_FindClose"                       id="0x1912" group="FS"/>
+    <fn name="FS_GetFileSize"                     id="0x1913" group="FS"/>
+    <fn name="FS_IsEndOfFile"                     id="0x1914" group="FS"/>
+    <fn name="FS_FindEx"                          id="0x1915" group="FS"/>
+
+    <!-- DB -->
+
+    <fn name="DB_CreateDatabase"                  id="0x1931" group="DB"/>
+    <fn name="DB_DeleteDatabase"                  id="0x1932" group="DB"/>
+    <fn name="DB_OpenDatabase"                    id="0x1933" group="DB"/>
+    <fn name="DB_CloseDatabase"                   id="0x1934" group="DB"/>
+    <fn name="DB_WriteRecord"                     id="0x1935" group="DB"/>
+    <fn name="DB_ReadRecord"                      id="0x1936" group="DB"/>
+    <fn name="GetDBRecordInfo"                    id="0x1937" group="DB"/>
+    <fn name="GetDBHeaderInfo"                    id="0x1938" group="DB"/>
+    <fn name="DB_SeekRecord"                      id="0x1939" group="DB"/>
+    <fn name="DB_GetMatchedRecordCount"           id="0x193A" group="DB"/>
+    <fn name="DB_SeekRecordEx"                    id="0x193B" group="DB"/>
+    <fn name="DB_RemoveRecord"                    id="0x193C" group="DB"/>
+    <fn name="DB_GetDatabaseInfo"                 id="0x193D" group="DB"/>
+    <fn name="DB_GetRecordInfo"                   id="0x193E" group="DB"/>
+    <fn name="DB_ReadFields"                      id="0x193F" group="DB"/>
+    <fn name="DB_WriteFields"                     id="0x1940" group="DB"/>
+
+    <!-- REG -->
+
+    <fn name="REG_CloseKey"                       id="0x1995" group="REG"/>
+    <fn name="REG_CreateKey"                      id="0x1996" group="REG"/>
+    <fn name="REG_OpenKey"                        id="0x1997" group="REG"/>
+    <fn name="REG_SetValue"                       id="0x1998" group="REG"/>
+    <fn name="REG_QueryValue"                     id="0x1999" group="REG"/>
+    <fn name="REG_DeleteKey"                      id="0x199A" group="REG"/>
+    <fn name="REG_DeleteValue"                    id="0x199B" group="REG"/>
+    <fn name="REG_ExportFile"                     id="0x199C" group="REG"/>
+    <fn name="REG_ImportFile"                     id="0x199D" group="REG"/>
+
+    <!-- PM -->
+
+    <fn name="PM_GetACPowerStatus"                id="0x19F9" group="PM"/>
+    <fn name="PM_GetBatteryState"                 id="0x19FA" group="PM"/>
+    <fn name="PM_GetBatteryInfo"                  id="0x19FB" group="PM"/>
+    <fn name="PM_GetGpadcInfo"                    id="0x19FC" group="PM"/>
+    <fn name="PM_BatteryChemistry"                id="0x19FD" group="PM"/>
+    <fn name="PM_SetBatteryChargeMode"            id="0x19FE" group="PM"/>
+    <fn name="PM_SetPhoneFunctionality"           id="0x19FF" group="PM"/>
+    <fn name="PM_GetPhoneFunctionality"           id="0x2000" group="PM"/>
+    <fn name="PM_SetChkGpadcPeriod"               id="0x2001" group="PM"/>
+    <fn name="pm_IdleScanProc"                    id="0x2002" group="PM"/>
+    <fn name="PM_PowerOnChck"                     id="0x2003" group="PM"/>
+    <fn name="PM_GetPowerOnVol"                   id="0x2004" group="PM"/>
+    <fn name="Chg_PulseStart"                     id="0x2005" group="PM"/>
+    <fn name="Chg_PulsePeriodic"                  id="0x2006" group="PM"/>
+    <fn name="pm_StartFastCharge"                 id="0x2007" group="PM"/>
+    <fn name="pm_SetPulseChargeParam"             id="0x2008" group="PM"/>
+    <fn name="pm_StartPulsCharge"                 id="0x2009" group="PM"/>
+    <fn name="pm_StopCharge"                      id="0x200A" group="PM"/>
+    <fn name="pm_PulseChargeOnOff"                id="0x200B" group="PM"/>
+    <fn name="pm_BatteryInit"                     id="0x200C" group="PM"/>
+    <fn name="pm_BatteryMonitorProc"              id="0x200D" group="PM"/>
+    <fn name="bat_ProgNextEvent"                  id="0x200E" group="PM"/>
+    <fn name="gpadc_measures"                     id="0x200F" group="PM"/>
+    <fn name="dm_BatteryCtrlProc"                 id="0x2010" group="PM"/>
+    <fn name="BattGetBcs"                         id="0x2011" group="PM"/>
+    <fn name="pm_BattGetBcl"                      id="0x2012" group="PM"/>
+    <fn name="BattUnderVoltageRemind"             id="0x2013" group="PM"/>
+    <fn name="BattChangeVoltageRemind"            id="0x2014" group="PM"/>
+    <fn name="BattChargeFullRemind"               id="0x2015" group="PM"/>
+    <fn name="BattChargeStarRemind"               id="0x2016" group="PM"/>
+    <fn name="BattChargePlugOffRemind"            id="0x2017" group="PM"/>
+    <fn name="dm_gpadc_send"                      id="0x2018" group="PM"/>
+    <fn name="pm_SetCheckADCTime"                 id="0x2019" group="PM"/>
+
+    <!-- TM -->
+
+    <fn name="TM_IsLeapYear"                      id="0x208F" group="TM"/>
+    <fn name="TM_GetDayNoInYear"                  id="0x2090" group="TM"/>
+    <fn name="TM_GetDayOfWeek"                    id="0x2091" group="TM"/>
+    <fn name="TM_SystemTimeToFileTime"            id="0x2092" group="TM"/>
+    <fn name="TM_FileTimeToSystemTime"            id="0x2093" group="TM"/>
+    <fn name="TM_FormatSystemTime"                id="0x2094" group="TM"/>
+    <fn name="TM_SetLocalTime"                    id="0x2095" group="TM"/>
+    <fn name="TM_GetLocalTime"                    id="0x2096" group="TM"/>
+    <fn name="TM_FormatFileTime"                  id="0x2097" group="TM"/>
+    <fn name="TM_SetTimeFormat"                   id="0x2098" group="TM"/>
+    <fn name="TM_GetTimeFormat"                   id="0x2099" group="TM"/>
+    <fn name="TM_GetTime"                         id="0x209A" group="TM"/>
+    <fn name="TM_SetSystemTime"                   id="0x209B" group="TM"/>
+    <fn name="TM_GetSystemTime"                   id="0x209C" group="TM"/>
+    <fn name="TM_GetTimeZone"                     id="0x209D" group="TM"/>
+    <fn name="TM_SetTimeZone"                     id="0x209E" group="TM"/>
+    <fn name="TM_GetTimeBase"                     id="0x209F" group="TM"/>
+    <fn name="TM_SetTimeBase"                     id="0x20A0" group="TM"/>
+    <fn name="TM_GetSystemFileTime"               id="0x20A1" group="TM"/>
+    <fn name="TM_FormatDateTime"                  id="0x20A2" group="TM"/>
+    <fn name="TM_FormatDateTimeEx"                id="0x20A3" group="TM"/>
+    <fn name="TM_FormatFileTimeToStringEx"        id="0x20A4" group="TM"/>
+    <fn name="TM_GetDayOfWeekEX"                  id="0x20A5" group="TM"/>
+    <fn name="TM_SmsTimeStampToFileTime"          id="0x20A6" group="TM"/>
+    <fn name="TM_ListAlarm"                       id="0x20A7" group="TM"/>
+    <fn name="TM_SetAlarm"                        id="0x20A8" group="TM"/>
+    <fn name="TM_KillAlarm"                       id="0x20A9" group="TM"/>
+    <fn name="TM_GetAlarm"                        id="0x20AA" group="TM"/>
+    <fn name="TIM_OpenKey"                        id="0x20AB" group="TM"/>
+    <fn name="TIM_CloseKey"                       id="0x20AC" group="TM"/>
+    <fn name="TIM_WriteBinSet"                    id="0x20AD" group="TM"/>
+    <fn name="TIM_ReadBinSet"                     id="0x20AE" group="TM"/>
+    <fn name="TIM_WriteRegData"                   id="0x20AF" group="TM"/>
+    <fn name="TIM_ReadRegData"                    id="0x20B0" group="TM"/>
+    <fn name="TIM_WriteFlash"                     id="0x20B1" group="TM"/>
+    <fn name="TIM_ReadFlash"                      id="0x20B2" group="TM"/>
+    <fn name="TM_ResetRTC"                        id="0x20B3" group="TM"/>
+    <fn name="TIM_GetMinAlarm"                    id="0x20B4" group="TM"/>
+    <fn name="TIM_CheckAlarmOfWeek"               id="0x20B5" group="TM"/>
+    <fn name="dm_AlarmDisposeInEvt"               id="0x20B6" group="TM"/>
+    <fn name="TIM_SetAlarmEX"                     id="0x20B7" group="TM"/>
+    <fn name="TIM_KillAlarmEX"                    id="0x20B8" group="TM"/>
+    <fn name="TIM_GetAlarmEX"                     id="0x20B9" group="TM"/>
+    <fn name="TIM_PowerOnInitData"                id="0x20BA" group="TM"/>
+    <fn name="TM_PowerOn"                         id="0x20BB" group="TM"/>
+    <fn name="TM_PowerOff"                        id="0x20BC" group="TM"/>
+    <fn name="TIM_SetAlarmSelfDefine"             id="0x20BD" group="TM"/>
+    <fn name="TIM_SetAlarmAndCompare"             id="0x20BE" group="TM"/>
+    <fn name="TIM_ResetAlarm"                     id="0x20BF" group="TM"/>
+    <fn name="TM_ClearAllAlarm"                   id="0x20C0" group="TM"/>
+    <fn name="TM_IsValidFormat"                   id="0x20C1" group="TM"/>
+    <fn name="TM_GetTimeZoneTime"                 id="0x20C2" group="TM"/>
+    <fn name="TM_IsValidTime"                     id="0x20C3" group="TM"/>
+    <fn name="DM_StopGpadcDetect"                 id="0x20C4" group="TM"/>
+    <fn name="DM_StartGpadcDetect"                id="0x20C5" group="TM"/>
+    <fn name="TM_SetTimeBaseToFlash"              id="0x20C6" group="TM"/>
+
+</module>
+
+

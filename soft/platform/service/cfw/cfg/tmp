@@ -1,0 +1,25 @@
+CC                cfw_cfg_cm.c
+CC                cfw_cfg_device.c
+src/cfw_cfg_device.c: In function `CFW_CfgSetAudioAudioMode':
+src/cfw_cfg_device.c:31: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_ENTER'
+src/cfw_cfg_device.c:42: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_EXIT'
+CC                cfw_cfg_general.c
+src/cfw_cfg_general.c: In function `CFW_CfgStoreUserProfile':
+src/cfw_cfg_general.c:105: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_ENTER'
+src/cfw_cfg_general.c:145: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_EXIT'
+CC                cfw_cfg_init.c
+src/cfw_cfg_init.c: In function `CFW_CfgInit':
+src/cfw_cfg_init.c:24: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_ENTER'
+src/cfw_cfg_init.c:34: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_EXIT'
+CC                cfw_cfg_main.c
+CC                cfw_cfg_nw.c
+src/cfw_cfg_nw.c: In function `CFW_CfgNwGetOperatorId':
+src/cfw_cfg_nw.c:62: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_ENTER'
+src/cfw_cfg_nw.c:72: warning: implicit declaration of function `CSW_PROFILE_FUNCTION_EXIT'
+CC                cfw_cfg_pbk.c
+CC                cfw_cfg_sim.c
+CC                cfw_cfg_sms.c
+src/cfw_cfg_sms.c: In function `CFW_CfgGetSmsStorageInfo':
+src/cfw_cfg_sms.c:740: warning: assignment makes integer from pointer without a cast
+CC                cfw_cfg_tm.c
+AR                libcfg_cool_profile.a

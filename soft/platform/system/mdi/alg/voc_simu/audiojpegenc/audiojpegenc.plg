@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: audiojpegenc - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE5.bat" with contents
+[
+@echo off
+C:\CSDTK\cygwin\bin\bash --login -c "voc_make_ide trunk platform/mdi/alg/audiojpegenc/"
+]
+Creating command line "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE5.bat"
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE6.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/audiojpegenc.pdb" /debug /machine:I386 /out:"work/audiojpegenc.exe" /pdbtype:sept 
+.\Debug\hal_voc_simu.obj
+.\Debug\voc2_library.obj
+.\Debug\voc2_profile.obj
+.\Debug\voc2_simulator.obj
+.\Debug\vpp_audiojpegenc_asm_amrjpegenc.obj
+.\Debug\vpp_audiojpegenc_asm_main.obj
+.\Debug\vpp_audiojpegenc_asm_mp3enc.obj
+.\Debug\yuvrotate.obj
+.\Debug\vpp_audiojpegenc_simu.obj
+.\Debug\vpp_audiojpegenc_simu_main.obj
+.\Debug\vpp_audiojpegenc_asm.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE6.tmp"
+Performing Custom Build Step on ..\..\audiojpegenc\src\vpp_audiojpegenc.mx
+Soft base SOFT_WORKDIR=/cygdrive/c/projects/trunk/soft
+Project Switched to trunk
+
+GCC version is 4.4.2
+Binutils version is 2.20
+
+<h3>Output Window</h3>
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE7.tmp" with contents
+[
+/nologo /o"Debug/audiojpegenc.bsc" 
+.\Debug\hal_voc_simu.sbr
+.\Debug\voc2_library.sbr
+.\Debug\voc2_profile.sbr
+.\Debug\voc2_simulator.sbr
+.\Debug\vpp_audiojpegenc_asm_amrjpegenc.sbr
+.\Debug\vpp_audiojpegenc_asm_main.sbr
+.\Debug\vpp_audiojpegenc_asm_mp3enc.sbr
+.\Debug\yuvrotate.sbr
+.\Debug\vpp_audiojpegenc_simu.sbr
+.\Debug\vpp_audiojpegenc_simu_main.sbr
+.\Debug\vpp_audiojpegenc_asm.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE7.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+audiojpegenc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

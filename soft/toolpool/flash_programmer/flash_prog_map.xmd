@@ -1,0 +1,125 @@
+<archive asm='no'>
+
+<typedef name="flash_programmer_globals" rubyconstants="yes"></typedef>
+
+<enum name='FPC_COMMAND_TYPE_T'>
+    <entry name='FPC_NONE' value='0'></entry>
+    <entry name='FPC_PROGRAM'>
+        <comment>Program with specified flash offset and size. Size will be truncated into 16bits.</comment>
+    </entry>
+    <entry name='FPC_ERASE_SECTOR'>
+        <comment>Erase sector with specified flash offset. The effective sector start and size
+            will be determined by flash layout configured in ramrun.
+        </comment>
+    </entry>
+    <entry name='FPC_ERASE_CHIP'>
+        <comment>Not implemented</comment>
+    </entry>
+    <entry name='FPC_END'>
+        <comment>When flash boot sector is written, set boot magic. Otherwise do nothing.</comment>
+    </entry>
+    <entry name='FPC_CHECK_FCS'>
+        <comment>Verify FCS checksum.</comment>
+    </entry>
+    <entry name='FPC_GET_FINALIZE_INFO'>
+        <comment>Write into ram all the magic numbers and their addresses</comment>
+    </entry>
+    <entry name='FPC_RESTART'>
+        <comment>Restart chip</comment>
+    </entry>
+    <entry name='FPC_CHECK_CALIBRFPART_CRC'>
+        <comment>Check caliberation RF part CRC</comment>
+    </entry>
+    <entry name='FPC_PING'>
+        <comment>Dummy command. It can be used to determine whether FPC is alive,
+            and the next command index.</comment>
+    </entry>
+    <entry name='FPC_ERASE_PROGRAM'>
+        <comment>Erase and program. It is useful for better pipeline. Also, caller specified
+            sector/block size will be used rather than configured flash layout.
+            Only 4K and 64K are supported. Caller should ensure alignment.
+            "fcs" field in command data will be interpreted as 16bits mask, to indicate
+            whether each 16th piece should be programmed.</comment>
+    </entry>
+    <entry name='FPC_ERASE'>
+        <comment>Erase with caller specified sector/block size rather than configured flash
+            layout. Only 4K and 64K are supported. Caller should ensure alignment.</comment>
+    </entry>
+    <entry name='FPC_LIGHT_ON'>
+        <comment>Enable camera flash. Usally, it is used to indicate FPC finish.</comment>
+    </entry>
+    <entry name='FPC_OVERWRITE'>
+        <comment>Overwrite a portion of sector(s). Ramrun should read the sector, and just
+            replace the specified data and write back. It can save time to read sector
+            data to PC. The address and size can be un-aligned. The total size (including
+            unsignment offset) must be less than (FPC_BUFFER_SIZE - 4K).</comment>
+    </entry>
+    <entry name='FPC_FACTORY_READ'>
+        <comment>Read valid factory block version 1 (0xFAC000100). It will scan valid
+            factory block based on version 1 definition. When no valid factory block is
+            found, all 0xFF block is returned. FPC will only take care of factory block
+            management, and won't look into details of factory block. Namely, only
+            crc/version/sequence are interested.</comment>
+    </entry>
+    <entry name='FPC_FACTORY_WRITE'>
+        <comment>Write factory block with version 1 block management. Also, block
+            management information will be built at FPC_FACTORY_READ. So, it is needed
+            to call FPC_FACTORY_READ beforehand.</comment>
+    </entry>
+    <entry name='FPC_SHUTDOWN'>
+        <comment>Shutdown the device once charger is plugged out.</comment>
+    </entry>
+    <entry name='FPC_DONE' value='-100'></entry>
+    <entry name='FPC_ERROR'></entry>
+    <entry name='FPC_FCS_ERROR'></entry>
+    <entry name='FPC_FLASH_NOT_AT_FF'></entry>
+</enum>
+
+<typedef name='FPC_COMMAND_DATA_T'>
+    <instance name='cmd' type='FPC_COMMAND_TYPE_T'></instance>
+    <ptr name='flashAddr' type='uint8'></ptr>
+    <ptr name='ramAddr' type='uint8'></ptr>
+    <uint32 name='size'></uint32>
+    <uint32 name='fcs'>Used by FPC_PROGRAM. Contains the FCS of the written data.</uint32>
+</typedef>
+
+<var name='EVENT_FLASH_PROG_READY' value='0xf0'></var>
+
+<var name='EVENT_FLASH_PROG_ERROR' value='0xe0'></var>
+
+<var name='EVENT_FLASH_PROG_UNKNOWN' value='0xd0'></var>
+
+<var name='EVENT_FLASH_PROG_MEM_RESET' value='0xc0'></var>
+
+<var name='EVENT_FLASH_PROG_MEM_ERROR' value='0xce'></var>
+
+<var name='EVENT_CALIB_RFCRC_ERROR' value='0xb0'></var>
+
+<var name='FPC_BUFFER_SIZE' value='64*1024'>
+
+    <comment> Size of one of the three available data buffers
+    </comment>
+</var>
+
+<var name='FPC_PROTOCOL_MAJOR' value='0xFA01'/>
+<var name='FPC_PROTOCOL_MINOR' value='0xFB05'/>
+
+<typedef name='FPC_PROTOCOL_VERSION_T'>
+    <uint16 name='major'/>
+    <uint16 name='minor'/>
+</typedef>
+
+<typedef name='FLASH_PROG_MAP_ACCESS_T'>
+    <instance name='protocolVersion' type='FPC_PROTOCOL_VERSION_T'/>
+    <instance name='commandDescr' type='FPC_COMMAND_DATA_T' count='2'/>
+    <ptr name='dataBufferA' type='UINT8'/>
+    <ptr name='dataBufferB' type='UINT8'/>
+    <ptr name='dataBufferC' type='UINT8'/>
+	<uint32 name='fpcSize'/>
+</typedef>
+
+<cjoker>
+</cjoker>
+</archive>
+
+

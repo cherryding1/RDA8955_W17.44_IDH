@@ -1,0 +1,34 @@
+S_SRC := 
+C_SRC := patch_open.c
+
+C_SRC += patch_spc_amr_rx.c \
+         patch_spc_amr_tx.c \
+         patch_spp_gsm_tx.c \
+         patch_spp_gsm_equalizer.c \
+         patch_spc_rx.c \
+         patch_spc_irq_handler.c \
+         patch_spc_scheduler.c\
+	     patch_spp_gsm_rx.c
+# Rx/Tx debugging
+#LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_RXPROCESS
+#LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPP_BUILDNBURST
+
+# Fix preample bit error in Tx
+#LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPP_MODULATION
+
+# Fix AMR issue
+ifeq "${CALL_AMR_SUPPORT}" "y"
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_AMRDEDODE
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_AMRENCODE
+endif
+
+# Enhance Equalizer Performance under fast fading
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPP_EQUALIZENBURST
+
+# Alleviate voice interrupted issue in bad signal environment
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_BFIFILTER
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_CHECK_LOOP_MODE
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_IRQHANDLER
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPC_SCHEDULERMAIN
+LOCAL_EXPORT_FLAG += PATCH_SPC_CCHRXPROCESS_ENABLE
+LOCAL_EXPORT_FLAG += ENABLE_PATCH_SPP_GETUSF

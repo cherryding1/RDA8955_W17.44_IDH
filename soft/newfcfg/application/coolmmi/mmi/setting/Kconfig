@@ -1,0 +1,37 @@
+comment "--- application/coolmmi/mmi/setting ---"
+
+config __MMI_PRIVACY_PROTECTION__
+    option skipmk
+    bool "MMI_PRIVACY_PROTECTION"
+    default y
+    ---help---
+        This option support privacy protection. Some applications need password to entry like call log, phonebook, message, etc. 
+
+config __FLIGHT_MODE_SUPPORT__
+    option skipmk
+    bool "FLIGHT_MODE_SUPPORT"
+    default y
+    ---help---
+        This option enables flight mode support.
+
+config __MMI_SOUND_EFFECT__
+    option skipmk
+    bool "MMI_SOUND_EFFECT"
+    default y
+    ---help---
+        This options enables sound effect of equalizer for audio player.
+
+config __MMI_DATETIME_CHANGE_WITH_HOMECITY__
+    option skipmk
+    bool "MMI_DATETIME_CHANGE_WITH_HOMECITY"
+    default y
+    ---help---
+        This option enables to set home city for Phonesetup->Time and Date->Set Homecity.
+
+comment "---FM Record Codec---"
+config MP3_ENC_SUPPORT
+    option skipmk
+    bool "Mp3 enc support"
+    default n
+    ---help---
+        Support MP3 encode in FM record 

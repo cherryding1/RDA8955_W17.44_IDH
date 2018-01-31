@@ -1,0 +1,31 @@
+<module name="AVRS">
+    <!-- Functions -->
+    <fn name="avrs_Open"                    id="0x1200" group="AVRS"/>
+    <fn name="avrs_Close"                   id="0x1201" group="AVRS"/>
+    <fn name="avrs_StartPictureStream"      id="0x1202" group="AVRS"/>
+    <fn name="avrs_StopPictureStream"       id="0x1203" group="AVRS"/>
+    <fn name="avrs_Capture"                 id="0x1204" group="AVRS"/>
+    <fn name="avrs_ResizeVgaTo128x160"      id="0x1205" group="AVRS"/>
+    <fn name="avrs_ZoomAndCrop"             id="0x1206" group="AVRS"/>
+    <fn name="avrs_ResizeRawToRequested"    id="0x1207" group="AVRS"/>
+    <fn name="avrs_PictureStreamHandler"    id="0x1208" group="AVRS"/>
+    <fn name="avrs_Record"                  id="0x1209" group="AVRS"/>
+    <fn name="avrs_Stop"                    id="0x120a" group="AVRS"/>
+    <fn name="avrs_FreeStreams"             id="0x120b" group="AVRS"/>
+    <fn name="avrs_ReadData"                id="0x120c" group="AVRS"/>
+    <fn name="avrs_XXXSpeechHandler"        id="0x120d" group="AVRS"/>
+    <fn name="avrs_VppSpeechHandler"        id="0x120e" group="AVRS"/>
+    <fn name="avrs_VppAmjrHandler"             id="0x120f" group="AVRS"/>
+    <fn name="avrs_VppAmjrAudioHandler"        id="0x1210" group="AVRS"/>
+    <fn name="avrs_VppAmjrVideoHandler"        id="0x1211" group="AVRS"/>
+    
+    <!-- Windows -->
+    <fn name="avrs_PictureStreamWin"        id="0x3910" group="AVRS"/>
+    <fn name="avrs_CaptureWin"              id="0x3911" group="AVRS"/>
+    <fn name="avrs_HandleCaptureDoneEvent"  id="0x3912" group="AVRS"/>
+    <fn name="avrs_PictureProcessingInProgress" id="0x3913" group="AVRS"/>
+    
+    <!-- Pulse -->
+    <fn name="avrs_PictureStreamTimerPulse" id="0x3120" group="AVRS"/>
+</module>
+

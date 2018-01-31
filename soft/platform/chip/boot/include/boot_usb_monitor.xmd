@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+
+  <include load="no" file="cs_types.h" />
+  <include load="no" file="boot_usb.h" />
+  <include load="no" file="chip_id.h" />
+  <include load="no" file="boot.h" />
+
+  <var name="BOOT_HOST_USB_FIFO_READ_SIZE"  value="32"/>
+
+  <var name="BOOT_HOST_USB_BUFFER_OUT_SIZE" value="2048"/>
+
+  <var name="BOOT_HOST_USB_BUFFER_IN_SIZE"  value="1032"/>
+
+  <enum name="BOOT_HOST_USB_STATE_T">
+    <comment>Out Ep state</comment>
+    <entry name="BOOT_HOST_USB_STATE_IDLE"         />
+    <entry name="BOOT_HOST_USB_STATE_HEADER"       />
+    <entry name="BOOT_HOST_USB_STATE_DATA"         />
+    <entry name="BOOT_HOST_USB_STATE_SXS_CMD"      />
+    <entry name="BOOT_HOST_USB_STATE_SXS_ADDR"     />
+    <entry name="BOOT_HOST_USB_STATE_SXS_DATA"     />
+    <entry name="BOOT_HOST_USB_STATE_SXS_RID"      />
+    <entry name="BOOT_HOST_USB_STATE_SXS_READ_SIZE"/>
+  </enum>
+
+  <enum name="BOOT_HOST_USB_CMD_ACCESS_T">
+    <comment>Enum access value</comment>
+    <entry name="BOOT_HOST_USB_CMD_ACCESS_BYTE"      value="0x00"/>
+    <entry name="BOOT_HOST_USB_CMD_ACCESS_HALF_WORD" value="0x01"/>
+    <entry name="BOOT_HOST_USB_CMD_ACCESS_WORD"      value="0x02"/>
+    <entry name="BOOT_HOST_USB_CMD_ACCESS_BLOCK"     value="0x03"/>
+  </enum>
+
+  <enum name="BOOT_HOST_USB_RECV_STATE_T">
+    <comment>Recv Task state</comment>
+    <entry name="BOOT_HOST_USB_RECV_STATE_RUN" />
+    <entry name="BOOT_HOST_USB_RECV_STATE_WAIT"/>
+  </enum>
+
+  <enum name="BOOT_HOST_USB_MODE_T">
+    <entry name="BOOT_HOST_USB_MODE_BOOT" value="0x01"/>
+    <entry name="BOOT_HOST_USB_MODE_SX"   value="0x02"/>
+  </enum>
+
+  <alias name="BOOT_HOST_USB_CMD_T">
+    <uint8 name="noname">
+      <bits pos="1:0" name="access"  />
+      <bits pos="2"   name="internal"/>
+      <bits pos="6:3" name="reserved"/>
+      <bits pos="7"   name="rw"      />
+    </uint8>
+  </alias>
+
+  <typedef name="BOOT_HOST_USB_MONITOR_FIFO_ELEM_T">
+    <uint32 name="Addr"/>
+    <uint8  name="Rid" />
+    <uint16 name="Size"/>
+  </typedef>
+
+  <typedef name="BOOT_HOST_USB_MONITOR_BUFFER_IN_T">
+    <uint8    name="Buffer"    count="BOOT_HOST_USB_BUFFER_IN_SIZE"/>
+  </typedef>
+
+  <typedef name="BOOT_HOST_USB_MONITOR_CTX_T">
+    <instance name="MonitorMode" type="BOOT_HOST_USB_MODE_T"        />
+    <uint8    name="BufferOut"   count="BOOT_HOST_USB_BUFFER_OUT_SIZE"/>
+    <instance name="BufferIn"    type="BOOT_HOST_USB_MONITOR_BUFFER_IN_T"
+              count="2"                                             />
+    <instance name="Fifo"        type="BOOT_HOST_USB_MONITOR_FIFO_ELEM_T"
+              count="BOOT_HOST_USB_FIFO_READ_SIZE"                  />
+  </typedef>
+
+  <typedef name="BOOT_HOST_USB_MONITOR_VAR_T">
+    <comment>Global variable of usb monitor</comment>
+    <instance name="RecvState" type="BOOT_HOST_USB_RECV_STATE_T"  />
+    <instance name="State"     type="BOOT_HOST_USB_STATE_T"       />
+    <uint16   name="DataSize"                                     />
+    <uint16   name="Residue">
+        <comment>
+            Remaining from a being received USB packet.
+        </comment>
+    </uint16>
+    <uint32   name="Addr"                                         />
+    <instance name="Cmd"       type="BOOT_HOST_USB_CMD_T"         />
+
+    <uint8  name="ReadPt"                                         />
+    <uint8  name="WritePt"                                        />
+
+    <uint8  name="CurrentBufferIn">
+        <comment>
+            Index in the swap buffer for data to send to the PC.
+        </comment>
+    </uint8>
+
+    <uint16 name="PositionBufferIn">
+        <comment>
+            Position in on the buffer of data to send to the PC.
+        </comment>
+    </uint16>
+
+    <ptr    name="Context"     type="BOOT_HOST_USB_MONITOR_CTX_T" />
+  </typedef>
+
+  <typedef name="boot_usb_monitor_globals" rubyconstants="yes">
+  </typedef>
+
+<cjoker>
+
+// =============================================================================
+// GLOBAL VARIABLES                                                             
+// =============================================================================
+
+EXPORT PUBLIC CONST HAL_USB_INTERFACE_DESCRIPTOR_T boot_HostUsbInterface[2];
+
+// =============================================================================
+// TYPES                                                                        
+// =============================================================================
+
+// =============================================================================
+// BOOT_HOST_USB_CALLBACK_T
+// -----------------------------------------------------------------------------
+/// Callback for decoding trame
+// =============================================================================
+typedef VOID (*BOOT_HOST_USB_CALLBACK_T)(VOID *buffer, UINT16 size);
+
+// =============================================================================
+// BOOT_HOST_USB_CALLBACK_T
+// -----------------------------------------------------------------------------
+/// Callback call when a command is write in internal H2PSTATUS register
+// =============================================================================
+typedef VOID (*BOOT_HOST_USB_CALLBACK_H2PSTATUS_T)(UINT32 value);
+
+// =============================================================================
+// FUNCTIONS                                                                    
+// =============================================================================
+
+// =============================================================================
+// boot_HostUsbOpen
+// -----------------------------------------------------------------------------
+/// Configure USB host
+/// @param context Define the context use. The context containt read request
+/// fifo and buffer for read and write on USB
+/// @param callback This callback is use to change the parsing process of host
+/// protocol
+// =============================================================================
+PUBLIC VOID boot_HostUsbOpen (BOOT_HOST_USB_MONITOR_CTX_T*       context,
+                              BOOT_HOST_USB_CALLBACK_T           callback,
+                              BOOT_HOST_USB_CALLBACK_H2PSTATUS_T callbackH2pstatus);
+
+// =============================================================================
+// boot_HostUsbClose
+// -----------------------------------------------------------------------------
+/// Close host usb (disable USB interrupt)
+// =============================================================================
+PUBLIC VOID  boot_HostUsbClose(VOID);
+
+// =============================================================================
+// boot_HostUsbSend
+// -----------------------------------------------------------------------------
+/// Generate packet must be send and send it
+/// Execute the read commands.
+// =============================================================================
+PUBLIC UINT8 boot_HostUsbSend (VOID);
+
+// =============================================================================
+// boot_HostUsbRecv
+// -----------------------------------------------------------------------------
+/// Receive USB packet and parse it
+///  - write command executed here.
+///  - execute command are executed here.
+///  - read command are put in a fifo for boot_HostUsbSend usage.
+// =============================================================================
+PUBLIC BOOT_MONITOR_OP_STATUS_T boot_HostUsbRecv (VOID);
+
+// =============================================================================
+// boot_HostUsbClockEnable
+// -----------------------------------------------------------------------------
+/// Enable usb clock
+// =============================================================================
+PUBLIC VOID  boot_HostUsbClockEnable(VOID);
+
+// =============================================================================
+// boot_HostUsbInit
+// -----------------------------------------------------------------------------
+/// Init global variables of host usb
+// =============================================================================
+PUBLIC VOID boot_HostUsbInit(VOID);
+
+// =============================================================================
+// boot_HostUsbDeviceCallback
+// -----------------------------------------------------------------------------
+/// Callback use to define the host usb descriptor. It's call by USB driver
+// =============================================================================
+PUBLIC HAL_USB_DEVICE_DESCRIPTOR_T* boot_HostUsbDeviceCallback(BOOL speedEnum);
+
+// =============================================================================
+// boot_HostUsbDeviceCallback
+// -----------------------------------------------------------------------------
+/// Callback use to define the host usb uart descriptor. It's call by USB driver
+// =============================================================================
+PUBLIC HAL_USB_DEVICE_DESCRIPTOR_T* boot_HostUsbUartDeviceCallback(BOOL speedEnum);
+
+// =============================================================================
+// boot_HostUsbEvent
+// -----------------------------------------------------------------------------
+/// Send USB host event with a timeout
+// =============================================================================
+PUBLIC VOID boot_HostUsbEvent(UINT32 event);
+</cjoker>
+</archive>

@@ -1,0 +1,12 @@
+menu "Sensor"
+
+config MOTION_SENSOR_SUPPORT
+	option skipmk
+	bool "Motion Sensor"
+	default n
+
+config MMI_SUPPORT_GSENSOR
+    option skiph
+    bool "MMI_SUPPORT_GSENSOR"
+    default n
+endmenu

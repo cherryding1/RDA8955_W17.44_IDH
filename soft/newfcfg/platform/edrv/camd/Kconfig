@@ -1,0 +1,118 @@
+comment "--- platform/edrv/camd ---"
+
+config CAMERA_MODEL
+	option skiph
+	string "Camera Model"
+	default "gc6133" 
+	---help---
+		It defines Camera model for integrated Chip.
+
+config CAMERA_MODULE
+	option skipmk
+	def_bool y if CAMERA_MODEL != no
+	def_bool n
+
+config CAMERA_SUPPORT
+	option skipmk
+	def_bool y if CAMERA_MODEL != no
+	def_bool n
+
+config APPMEM_SUPPORT
+	option skipmk
+	def_bool y if CAMERA_MODEL != no
+	def_bool n
+
+config MJPG_SUPPORT 
+	def_bool y if CAMERA_MODEL != no
+	def_bool n
+
+choice
+	option skipmk
+	option skiph
+	prompt "camera module interface"
+	default camera_if_spi
+	---help---
+		For spi interface, 8805/8806 only support pas6175/sp0828 which must config with serial LCD. 8808 serial and later without this restriction.
+		For gc6113 serial camera, when emulate parallel as serial, 8805/8806 only support the way of emulating parallel as serial. 8808 serial and later without this restriction.
+
+	config camera_if_spi
+		option skiph
+		option skipmk
+		bool	"spi"
+
+	config camera_if_parallel
+		option skiph
+		option skipmk
+		bool	"parallel"
+endchoice
+
+config CAMERA_IF
+	option skiph
+	string
+	default spi if camera_if_spi
+	default parallel if camera_if_parallel
+	---help---
+		camera_if_spi/camera_if_parallel
+	
+config SUPPORT_DUAL_CAMERA
+	option skipmk
+	bool "SUPPORT DUAL CAMERA"
+	default n
+	---help---
+		To support dual camera.
+
+config MEM_3216_CAMERA_LARGE_MODE
+	option skipmk
+	bool "SUPPORT MEM 3216 CAMERA LARGE MODE"
+	default n
+	---help---
+		support camera large mode(new have enough memory)
+		for example,if lcd size is 160*128, open this config,
+		captured photo can be 1280*1024 or 640*480
+
+config CAMERA_SUPPORT_300K_PIXELS
+	option skipmk
+	bool "SUPPORT 300K pixels"
+	default y
+
+config __CAMERA_FULL_OSD__
+	option skipmk
+	bool "FULL OSD"
+	default n
+	---help---
+		support full screen when capture photo or recording vedio
+	
+config __CAMERA_FEATURE_FLASH__
+	option skipmk
+	bool "CAMERA FLASH"
+	default y
+	---help---
+		whether flash or not when take photo with camera 		
+
+config _CAM_SMALL_MEM_
+	option skipmk
+	bool "CAM SMALL MEM"
+	default y
+	---help---
+		if 8w sensor used ,enable this.
+		if 30w sensor in project ULC(3216),uggest enable.
+		can not enable if _CAM_SPECIAL_GC6113_ enabled
+		open this feature , can support take photo smaller than
+		lcd size; for example lcd size is 640*480, photos size can be
+		320*240.
+
+config _CAM_SPECIAL_GC6113_
+	option skipmk
+	bool
+	default y if gc6133 && camera_if_parallel
+	default n
+	---help---
+		gc6113 with define camera_if_parallel
+
+config _CAMERA_DISPLAY_MIRRIO_
+    option skipmk
+    bool "CAMERA DISPLAY MIRRIO"
+    default n
+    ---help---
+        when the module is preversion revert the display
+

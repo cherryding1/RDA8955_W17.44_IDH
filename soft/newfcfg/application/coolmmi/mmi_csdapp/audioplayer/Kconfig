@@ -1,0 +1,82 @@
+comment "--- application/coolmmi/mmi_csdapp/audioplayer ---"
+
+config FMGR_AUDIO_PLAYER_SUPPORT
+	option skipmk
+	bool "FMGR_AUDIO_PLAYER_SUPPORT"
+	default y
+	---help---
+		It enables audio player support. 
+
+config __AUDPLY_SUPPORT_VIDEO_FORMAT__
+	option skipmk
+	bool "AUDPLY_SUPPORT_VIDEO_FORMAT"
+	default y
+	---help---
+		It enables playing video format file in auodio player. 
+
+#config AUDIO_PLAYER_SUPPORT
+#	option skipmk
+#	bool "AUDIO_PLAYER_SUPPORT"
+#	default y if TARGET_MEM_ULC_3216
+#	default y
+#
+#config __MMI_AUDIO_PLAYER__
+#	option skipmk
+#	bool "MMI Audio player screen"
+#	depends on AUDIO_PLAYER_SUPPORT && DAF_DECODE
+#	default y
+#
+#config __MMI_AUDIO_PLAYER_DETAIL_SHOW_MORE_INFO__
+#	option skipmk
+#	bool "MMI Audio player show more detail info"
+#	depends on AUDIO_PLAYER_SUPPORT && DAF_DECODE
+#	default y
+#
+#config __MMI_AUDIO_PLAYER_ANIMATION__
+#	option skipmk
+#	bool "MMI Audio player show animation"
+#	depends on AUDIO_PLAYER_SUPPORT && DAF_DECODE && (__MMI_MAINLCD_176X220__ || __MMI_MAINLCD_220X176__)
+#	default y
+#
+#config __MMI_AUDIO_PLAYER_SKIN_SHOW_REPEAT_SHUFFLE__
+#	option skipmk
+#	bool "MMI Audio player skin show repeat shuffle"
+#	depends on AUDIO_PLAYER_SUPPORT && DAF_DECODE && __MMI_MAINLCD_220X176__
+#	default y
+#
+
+config MULTI_MEDIA_AMR_SUPPORT
+	option skiph
+	bool "MULTI_MEDIA_AMR_SUPPORT"
+	default y
+	---help---
+		It enables AMR support in multimedia. 
+
+config AMR_NOT_SUPPORT
+	option skipmk
+	bool
+	default n if MULTI_MEDIA_AMR_SUPPORT
+	default y
+	---help---
+		It enables No AMR support in multimedia. 
+
+config MMI_SUPPORT_MAGIC_SOUND
+	option skiph
+	bool "Magic Sound"
+	default n
+	---help---
+		It enables magic sound support. If set at YES, MAGIC_AE_SUPPORT will work and the third part lib (JT_MAGIC_SOUND_SUPPORT / XF_MAGIC_SOUND_SUPPORT) should be configured.
+
+config MAGIC_AE_SUPPORT
+	option skipmk
+	def_bool y if MMI_SUPPORT_MAGIC_SOUND
+	def_bool n
+
+config __AUDPLY_SUPPORT_M4A_ONLY_WITH_VIDPLY__
+	option skipmk
+	bool "__AUDPLY_SUPPORT_M4A_ONLY_WITH_VIDPLY__"
+	default y
+	---help---
+		It enables show M4A file in video player.
+
+

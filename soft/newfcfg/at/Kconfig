@@ -1,0 +1,197 @@
+config CT_MODEM
+    option skiph
+    int "CT_MODEM"
+    range 0 2
+    default 0
+    ---help---
+    CT_MODEM = 0 Only application
+    CT_MODEM = 1 Only AT
+    CT_MODEM = 2 Both application and AT
+
+config AT_DEFAULT_UART
+    int "AT Uart Number"
+    range 0 3
+    default 2
+    ---help---
+        Set Dafault UART COM PORT Number.
+
+config AT_SECOND_UART_SUPPORT
+    bool "AT_SECOND_UART_SUPPORT"
+    default n
+
+config AT_SECOND_UART
+    int "AT 2nd Uart Number"
+    depends on AT_SECOND_UART_SUPPORT
+    range 0 3
+    default 1
+
+config AT_MODULE_SUPPORT_SLEEP
+    option skipmk
+    bool "AT MODULE Support Open and Close"
+    default n
+    ---help---
+        AT module support wakeup and sleep.
+
+config _USE_AT_OC_GPIO_
+    int "AT Module Wakeup GPIO"
+    range 0 31
+    depends on AT_MODULE_SUPPORT_SLEEP=y
+    default 2
+    ---help---
+        select AT module wakeup GPIO.
+
+config AT_USB_MODEM_NO_MMMI
+    option skiph
+    bool
+    depends on CT_MODEM=1
+    default y
+        ---help---
+        if no mmi task, enable this micro.
+
+config AT_ONLY_AUDIO_CALIB
+    option skipmk
+    bool "Support Dynamic tune Audio Parameters"
+    default y if CT_MODEM=2
+    default n
+        ---help---
+        Only When CT_MODEM=2, support Dynamic tune Audio Parameters.
+
+config AT_WITHOUT_GPRS
+    option skipmk
+    bool "Support AT but not support GPRS on AT"
+    depends on CT_MODEM=2
+    default y if AT_ONLY_AUDIO_CALIB=y
+    default n
+        ---help---
+        Only When CT_MODEM=2 and AT_ONLY_AUDIO_CALIB=y, this option works
+
+config AT_WITHOUT_SMS
+    option skipmk
+    bool "Support AT but not support SMS on AT"
+    depends on CT_MODEM=2
+    default y if AT_ONLY_AUDIO_CALIB=y
+    default n
+        ---help---
+        Only When CT_MODEM=2 and AT_ONLY_AUDIO_CALIB=y, this option works
+
+config AT_WITHOUT_SAT
+    option skipmk
+    bool "Support AT but not support SAT on AT"
+    depends on CT_MODEM=2
+    default y if AT_ONLY_AUDIO_CALIB=y
+    default n
+        ---help---
+        Only When CT_MODEM=2 and AT_ONLY_AUDIO_CALIB=y, this option works
+
+config AT_WITHOUT_PBK
+    option skipmk
+    bool "Support AT but not support PhoneBook on AT"
+    depends on CT_MODEM=2
+    default y if AT_ONLY_AUDIO_CALIB=y
+    default n
+        ---help---
+        Only When CT_MODEM=2 and AT_ONLY_AUDIO_CALIB=y, this option works
+
+config AT_WITHOUT_SS
+    option skipmk
+    bool "Support AT but not support SS on AT"
+    depends on CT_MODEM=2
+    default y if AT_ONLY_AUDIO_CALIB=y
+    default n
+        ---help---
+        Only When CT_MODEM=2 and AT_ONLY_AUDIO_CALIB=y, this option works
+
+config CHIP_IS_MODEM
+    option skipmk
+    depends on LWIP_SUPPORT && CT_MODEM!=0
+    bool "CHIP_IS_MODEM"
+    default n
+
+config AT_CMUX_SUPPORT
+    bool "AT_CMUX_SUPPORT"
+    default y if !AT_ONLY_AUDIO_CALIB
+
+config AT_CAMERA_SUPPORT
+    depends on CT_MODEM!=0
+    bool "AT_CAMERA_SUPPORT"
+    default n
+
+config AT_SOUND_RECORDER_SUPPORT
+    depends on CT_MODEM!=0
+    bool "AT_SOUND_RECORDER_SUPPORT"
+    default n
+
+
+config AT_AUDIO_PLAY
+    option skipmk
+    depends on CT_MODEM!=0
+    bool "AT_AUDIO_PLAY"
+    default n
+
+config MODEM_CALL_RECORDER
+    option skipmk
+    depends on CT_MODEM!=0
+    bool "MODEM_CALL_RECORDER"
+    default n
+config GCF_TTS_MODEL
+    option bool01
+    depends on CT_MODEM!=0
+    bool "GCF_TTS_MODEL"
+    default n
+	
+config AT_NITZ_SUPPORT
+    option skipmk
+    depends on CT_MODEM!=0
+    bool "AT_NITZ_SUPPORT"
+    default n
+
+config AT_HTTP_SUPPORT
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_HTTP_SUPPORT"
+    default y
+
+config AT_FTP_SUPPORT
+    option skipmk
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_FTP_SUPPORT"
+    default y
+
+config AT_PING_SUPPORT
+    option skipmk
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_PING_SUPPORT"
+    default y
+
+config AT_NETIF_SUPPORT
+    option skipmk
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_NETIF_SUPPORT"
+    default y
+
+config AT_COAP_SUPPORT
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_COAP_SUPPORT"
+    default y
+
+config AT_MQTT_SUPPORT
+    option skipmk
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_MQTT_SUPPORT"
+    default y
+
+config AT_LWM2M_SUPPORT
+    depends on LWIP_SUPPORT && CT_MODEM=1
+    bool "AT_LWM2M_SUPPORT"
+    default y
+
+config AT_FOTA_SUPPORT
+    depends on FOTA_SUPPORT && CT_MODEM!=0
+    bool "AT_FOTA_SUPPORT"
+    default n
+
+config DEFAULT_SIM_SLOT
+    int "Default sim slot"
+    range 0 1
+    default 0
+    ---help---
+        Set Dafault sim slot.

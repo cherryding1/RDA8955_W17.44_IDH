@@ -1,0 +1,4 @@
+
+
+include ${SOFT_WORKDIR}/target/target_common.def
+

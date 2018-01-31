@@ -1,0 +1,27 @@
+config ADP_EARPIECE_DET_DEBOUNCE
+	option skipmk
+	bool	"ADP_EARPIECE_DET_DEBOUNCE"
+	default y
+	---help---
+		debounce process when earpiece pluged out or in, for wrong info when earpiece  pluged out or in
+
+config SUPPORT_EP_WITHOUT_MIC
+    option skipmk
+    bool "SUPPORT_EP_WITHOUT_MIC"
+    default y
+    ---help---
+    	support the earphone without MIC or not.
+
+config __TFLASH_MOUNT_DYNAMIC__
+    option skipmk
+    bool "TFLASH_MOUNT_DYNAMIC"
+    default n
+    ---help---
+    	T-flash supports hotplug or not.
+
+config HW_MELODY_MOTOR
+	option skipmk
+	bool	"HW_MELODY_MOTOR"
+	default n
+	---help---
+		if aud 3 in 1 spk is configured, this should configured to yes

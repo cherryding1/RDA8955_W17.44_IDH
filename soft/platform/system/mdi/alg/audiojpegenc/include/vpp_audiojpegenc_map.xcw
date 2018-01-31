@@ -1,0 +1,1266 @@
+<archive>
+<!-- Generated automatically by voc_h2xmd.rb -->
+<var name='RAM_X_BEGIN_ADDR' value='VOC_RAM_BASE'/>
+<var name='RAM_Y_BEGIN_ADDR' value='VOC_RAM_BASE+0x8000'/>
+<var name='COMMON_GLOBAL_X_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_Y_SIZE' value='42'/>
+<var name='MP3_GLOBAL_X_SIZE' value='10124'/>
+<var name='MP3_GLOBAL_Y_SIZE' value='9240'/>
+<var name='MP3_LOCAL_X_SIZE' value='0'/>
+<var name='MP3_LOCAL_Y_SIZE' value='0'/>
+<var name='AMR_GLOBAL_X_SIZE' value='10098'/>
+<var name='AMR_GLOBAL_Y_SIZE' value='7616'/>
+<var name='AMR_LOCAL_X_SIZE' value='0'/>
+<var name='AMR_LOCAL_Y_SIZE' value='128'/>
+<var name='YUVROTATE_GLOBAL_X_SIZE' value='196'/>
+<var name='YUVROTATE_GLOBAL_Y_SIZE' value='622'/>
+<var name='YUVROTATE_LOCAL_X_SIZE' value='0'/>
+<var name='YUVROTATE_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_LOCAL_X_SIZE' value='0'/>
+<var name='COMMON_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_GLOBAL_Y_BEGIN_ADDR' value='(0 + RAM_Y_BEGIN_ADDR)'/>
+<var name='MP3_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='MP3_GLOBAL_Y_BEGIN_ADDR' value='(42 + RAM_Y_BEGIN_ADDR)'/>
+<var name='MP3_LOCAL_X_BEGIN_ADDR' value='(10124 + RAM_X_BEGIN_ADDR)'/>
+<var name='MP3_LOCAL_Y_BEGIN_ADDR' value='(9282 + RAM_Y_BEGIN_ADDR)'/>
+<var name='AMR_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='AMR_GLOBAL_Y_BEGIN_ADDR' value='(42 + RAM_Y_BEGIN_ADDR)'/>
+<var name='AMR_LOCAL_X_BEGIN_ADDR' value='(10098 + RAM_X_BEGIN_ADDR)'/>
+<var name='AMR_LOCAL_Y_BEGIN_ADDR' value='(7658 + RAM_Y_BEGIN_ADDR)'/>
+<var name='YUVROTATE_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='YUVROTATE_GLOBAL_Y_BEGIN_ADDR' value='(42 + RAM_Y_BEGIN_ADDR)'/>
+<var name='YUVROTATE_LOCAL_X_BEGIN_ADDR' value='(196 + RAM_X_BEGIN_ADDR)'/>
+<var name='YUVROTATE_LOCAL_Y_BEGIN_ADDR' value='(664 + RAM_Y_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_X_BEGIN_ADDR' value='(10124 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_Y_BEGIN_ADDR' value='(9282 + RAM_Y_BEGIN_ADDR)'/>
+<typedef name='t_VPP_AUDIOJPEGENC_vpp_AudioJpeg_ENC_IN_STRUCT'>
+    <int16 name='Input_mode_addr' />
+    <int16 name='Input_reset_addr' />
+    <int32 name='Input_inStreamBufAddr_addr' />
+    <int32 name='Input_outStreamBufAddr_addr' />
+    <int32 name='Input_samplerate_addr' />
+    <int16 name='Input_bitrate_addr' />
+    <int16 name='Input_JPEGENC_QUALITY_addr' />
+    <int16 name='Input_JPEGENC_WIDTH_addr' />
+    <int16 name='Input_JPEGENC_HEIGHT_addr' />
+    <int16 name='Input_Channel_Num_addr' />
+    <int16 name='Input_reserved_addr' />
+</typedef>
+<instance name='vpp_AudioJpeg_ENC_IN_STRUCT' type='t_VPP_AUDIOJPEGENC_vpp_AudioJpeg_ENC_IN_STRUCT' address='(0 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_vpp_AudioJpeg_ENC_OUT_STRUCT'>
+    <int16 name='Output_mode_addr' />
+    <int16 name='Output_streamStatus_addr' />
+    <int32 name='Output_output_len_addr' />
+    <int32 name='Output_consumedLen_addr' />
+    <int16 name='Output_ERR_Status_addr' />
+    <int16 name='Output_reserve0_addr' />
+</typedef>
+<instance name='vpp_AudioJpeg_ENC_OUT_STRUCT' type='t_VPP_AUDIOJPEGENC_vpp_AudioJpeg_ENC_OUT_STRUCT' address='(14 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_VPP_MP3_Enc_Code_ExternalAddr_addr'>
+    <int32 name='MP3_Code_ExternalAddr_addr' />
+    <int32 name='MP3_ConstX_ExternalAddr_addr' />
+    <int32 name='MP3_ConstY_ExternalAddr_addr' />
+    <int32 name='MP3_Const_rqmy_ExternalAddr_addr' />
+    <int32 name='MP3_Const_zig_ExternalAddr_addr' />
+</typedef>
+<instance name='VPP_MP3_Enc_Code_ExternalAddr_addr' type='t_VPP_AUDIOJPEGENC_VPP_MP3_Enc_Code_ExternalAddr_addr' address='(22 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_VPP_AMR_Enc_Code_ExternalAddr_addr'>
+    <int32 name='AMRJPEG_Code_ExternalAddr_addr' />
+    <int32 name='AMRJPEG_ConstX_ExternalAddr_addr' />
+    <int32 name='AMRJPEG_ConstY_ExternalAddr_addr' />
+</typedef>
+<instance name='VPP_AMR_Enc_Code_ExternalAddr_addr' type='t_VPP_AUDIOJPEGENC_VPP_AMR_Enc_Code_ExternalAddr_addr' address='(32 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_RGBYUV_ROTATE_Code_ExternalAddr_addr'>
+    <int32 name='unused' />
+</alias>
+<instance name='RGBYUV_ROTATE_Code_ExternalAddr_addr' type='a_VPP_AUDIOJPEGENC_RGBYUV_ROTATE_Code_ExternalAddr_addr' address='(38 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_MIC_DIGITAL_GAIN_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_MIC_DIGITAL_GAIN_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_MIC_DIGITAL_GAIN_ADDR' address='(40 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_Output_reserve1_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='Output_reserve1_addr' type='a_VPP_AUDIOJPEGENC_Output_reserve1_addr' address='(41 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_OUTPUT_MP3_BUFFER_ADDR'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='OUTPUT_MP3_BUFFER_ADDR' type='a_VPP_AUDIOJPEGENC_OUTPUT_MP3_BUFFER_ADDR' address='(0 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_XW_begine_ADDR'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='GLOBAL_XW_begine_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_XW_begine_ADDR' address='(1024 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_IN_MP3_BUFFER'>
+    <int16 name='IN_MP3_BUFFER_10' count='576'/>
+    <int16 name='IN_MP3_BUFFER_11' count='576'/>
+    <int16 name='IN_MP3_BUFFER_20' count='576'/>
+    <int16 name='IN_MP3_BUFFER_21' count='576'/>
+</typedef>
+<instance name='IN_MP3_BUFFER' type='t_VPP_AUDIOJPEGENC_IN_MP3_BUFFER' address='(2048 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_SHINE_GLOBAL_VARS_X_START_ADDR'>
+    <int16 name='STATIC_PartHoldersInitialized_ADDR' />
+    <int16 name='STATIC_buf_bit_idx_ADDR' />
+    <int16 name='STATIC_buf_short_idx_ADDR' />
+    <int16 name='STATIC_buf_long_idx_ADDR' />
+    <int32 name='STATIC_buf_chache_ADDR' />
+    <int32 name='STATIC_BitCount_ADDR' />
+    <int32 name='STATIC_ThisFrameSize_ADDR' />
+    <int32 name='STATIC_BitsRemaining_ADDR' />
+    <int32 name='GLOBAL_OFF_ADDR' />
+    <int16 name='STATIC_FIRSTCALL_ADDR' />
+    <int16 name='GLOBAL_main_data_begin_ADDR' />
+    <int32 name='GLOBAL_xrmax_ADDR' />
+    <int16 name='STATIC_ResvSize_ADDR' />
+    <int16 name='STATIC_scalefac_band_long_ADDR' />
+    <int16 name='STATIC_change_ADDR' />
+    <int16 name='STATIC_nGranules_ADDR' />
+    <int32 name='STRUCT_frameData_frameLength_ADDR' />
+    <int32 name='GLOBLE_channel_ADDR' />
+</typedef>
+<instance name='SHINE_GLOBAL_VARS_X_START_ADDR' type='t_VPP_AUDIOJPEGENC_SHINE_GLOBAL_VARS_X_START_ADDR' address='(4352 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_frameData_ADDR'>
+    <int32 name='STRUCT_frameData_STRUCT_header_ADDR' />
+    <int32 name='STRUCT_frameData_STRUCT_frameSI_ADDR' />
+    <int32 name='STRUCT_frameData_STRUCT_channelSI_ADDR' count='2'/>
+    <int32 name='STRUCT_frameData_STRUCT_spectrumSI_ADDR' count='4'/>
+</typedef>
+<instance name='STRUCT_frameData_ADDR' type='t_VPP_AUDIOJPEGENC_STRUCT_frameData_ADDR' address='(4378 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_GLOBAL_MDCT_FREQ_00_ADDR'>
+    <int16 name='GLOBAL_Z_ADDR' count='1024'/>
+    <int16 name='GLOBAL_Y_ADDR' count='140'/>
+</typedef>
+<instance name='GLOBAL_MDCT_FREQ_00_ADDR' type='t_VPP_AUDIOJPEGENC_GLOBAL_MDCT_FREQ_00_ADDR' address='(4394 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_L3ENC_gr0'>
+    <int16 name='unused' count='2304'/>
+</alias>
+<instance name='GLOBAL_L3ENC_gr0' type='a_VPP_AUDIOJPEGENC_GLOBAL_L3ENC_gr0' address='(5558 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t1HB_tab_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TABLE_t1HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t1HB_tab_ADDR' address='(7862 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t2HB_tab_ADDR'>
+    <int16 name='unused' count='5'/>
+</alias>
+<instance name='TABLE_t2HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t2HB_tab_ADDR' address='(7864 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t3HB_tab_ADDR'>
+    <int16 name='unused' count='5'/>
+</alias>
+<instance name='TABLE_t3HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t3HB_tab_ADDR' address='(7869 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t5HB_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t5HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t5HB_tab_ADDR' address='(7874 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t6HB_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t6HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t6HB_tab_ADDR' address='(7882 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t7HB_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t7HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t7HB_tab_ADDR' address='(7890 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t8HB_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t8HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t8HB_tab_ADDR' address='(7908 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t9HB_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t9HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t9HB_tab_ADDR' address='(7926 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t10HB_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t10HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t10HB_tab_ADDR' address='(7944 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t11HB_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t11HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t11HB_tab_ADDR' address='(7976 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t12HB_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t12HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t12HB_tab_ADDR' address='(8008 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t13HB_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t13HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t13HB_tab_ADDR' address='(8040 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t15HB_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t15HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t15HB_tab_ADDR' address='(8168 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t16HB_tab_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='TABLE_t16HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t16HB_tab_ADDR' address='(8296 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t24HB_tab_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='TABLE_t24HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t24HB_tab_ADDR' address='(8552 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t32HB_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t32HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t32HB_tab_ADDR' address='(8808 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t33HB_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t33HB_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t33HB_tab_ADDR' address='(8816 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t1l_tab_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TABLE_t1l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t1l_tab_ADDR' address='(8824 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t2l_tab_ADDR'>
+    <int16 name='unused' count='5'/>
+</alias>
+<instance name='TABLE_t2l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t2l_tab_ADDR' address='(8826 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t3l_tab_ADDR'>
+    <int16 name='unused' count='5'/>
+</alias>
+<instance name='TABLE_t3l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t3l_tab_ADDR' address='(8831 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t5l_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t5l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t5l_tab_ADDR' address='(8836 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t6l_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t6l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t6l_tab_ADDR' address='(8844 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t7l_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t7l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t7l_tab_ADDR' address='(8852 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t8l_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t8l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t8l_tab_ADDR' address='(8870 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t9l_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_t9l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t9l_tab_ADDR' address='(8888 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t10l_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t10l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t10l_tab_ADDR' address='(8906 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t11l_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t11l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t11l_tab_ADDR' address='(8938 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t12l_tab_ADDR'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='TABLE_t12l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t12l_tab_ADDR' address='(8970 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t13l_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t13l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t13l_tab_ADDR' address='(9002 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t15l_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t15l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t15l_tab_ADDR' address='(9130 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t16l_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t16l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t16l_tab_ADDR' address='(9258 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t24l_tab_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='TABLE_t24l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t24l_tab_ADDR' address='(9386 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t32l_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t32l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t32l_tab_ADDR' address='(9514 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_t33l_tab_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='TABLE_t33l_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_t33l_tab_ADDR' address='(9522 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_ht_tab_ADDR'>
+    <int16 name='unused' count='170'/>
+</alias>
+<instance name='TABLE_ht_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_ht_tab_ADDR' address='(9530 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_sfBandIndex_tab_ADDR'>
+    <int16 name='unused' count='222'/>
+</alias>
+<instance name='TABLE_sfBandIndex_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_sfBandIndex_tab_ADDR' address='(9700 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_subdv_table_tab_ADDR'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='TABLE_subdv_table_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_subdv_table_tab_ADDR' address='(9922 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_coef_tab_ADDR'>
+    <int16 name='unused' count='72'/>
+</alias>
+<instance name='TABLE_coef_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_coef_tab_ADDR' address='(9946 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_encodeSideInfo_tab_ADDR'>
+    <int16 name='unused' count='12'/>
+</alias>
+<instance name='TABLE_encodeSideInfo_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_encodeSideInfo_tab_ADDR' address='(10018 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_inverse_Zig_Zag_ADDR'>
+    <int16 name='unused' count='78'/>
+</alias>
+<instance name='MP3_CONST_inverse_Zig_Zag_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_inverse_Zig_Zag_ADDR' address='(10030 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_1152_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='MP3_CONST_1152_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_1152_ADDR' address='(10108 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_NEG7_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='MP3_CONST_NEG7_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_NEG7_ADDR' address='(10109 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_1_WORD32_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_1_WORD32_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_1_WORD32_ADDR' address='(10110 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_neg1_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='MP3_CONST_neg1_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_neg1_ADDR' address='(10112 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_NEG31_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='MP3_CONST_NEG31_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_NEG31_ADDR' address='(10113 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_0x90d0614_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_0x90d0614_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_0x90d0614_ADDR' address='(10114 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_0X28514_165140_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_0X28514_165140_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_0X28514_165140_ADDR' address='(10116 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_10000_WORD32_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_10000_WORD32_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_10000_WORD32_ADDR' address='(10118 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_0X33E40_212544_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_0X33E40_212544_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_0X33E40_212544_ADDR' address='(10120 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3_CONST_0X186A0_100000_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='MP3_CONST_0X186A0_100000_ADDR' type='a_VPP_AUDIOJPEGENC_MP3_CONST_0X186A0_100000_ADDR' address='(10122 + MP3_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_slot_lag_ADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='STRUCT_INPUT_slot_lag_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_slot_lag_ADDR' address='(0 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_frac_slots_per_frame_ADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='STRUCT_INPUT_frac_slots_per_frame_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_frac_slots_per_frame_ADDR' address='(2 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_whole_slots_per_frame_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='STRUCT_INPUT_whole_slots_per_frame_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_INPUT_whole_slots_per_frame_ADDR' address='(4 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MP3ENC_MP3_CONST_bitrate_map_ADDR'>
+    <int16 name='unused' count='15'/>
+</alias>
+<instance name='MP3ENC_MP3_CONST_bitrate_map_ADDR' type='a_VPP_AUDIOJPEGENC_MP3ENC_MP3_CONST_bitrate_map_ADDR' address='(5 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_CONFIG_ADDR'>
+    <int16 name='STRUCT_CONFIG_mpeg_bitrate_index_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_samplerate_index_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_padding_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_type_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_crc_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_mode_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_emph_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_ext_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_mode_ext_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_copyright_ADDR' />
+    <int16 name='STRUCT_CONFIG_mpeg_original_ADDR' count='2'/>
+</typedef>
+<instance name='STRUCT_CONFIG_ADDR' type='t_VPP_AUDIOJPEGENC_STRUCT_CONFIG_ADDR' address='(20 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_SIDEINFO_ADDR'>
+    <int16 name='STRUCT_SIDEINFO_main_data_begin_ADDR' count='2'/>
+    <int16 name='STRUCT_SIDEINFO_private_bits_ADDR' count='2'/>
+    <int16 name='STRUCT_SIDEINFO_resvDrain_ADDR' count='2'/>
+    <int16 name='STRUCT_SIDEINFO_scfsi_ADDR' count='16'/>
+    <int16 name='STRUCT_SIDEINFO_gr0_ch0_part2_3_length_ADDR' count='92'/>
+    <int16 name='STRUCT_SIDEINFO_gr1_ch0_part2_3_length_ADDR' count='92'/>
+</typedef>
+<instance name='STRUCT_SIDEINFO_ADDR' type='t_VPP_AUDIOJPEGENC_STRUCT_SIDEINFO_ADDR' address='(32 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_GRINFO_ADDR'>
+    <int16 name='STRUCT_GRINFO_part2_3_length_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_big_values_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_count1_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_global_gain_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_scalefac_compress_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_table_select_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_table_select1_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_table_select2_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_region0_count_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_region1_count_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_preflag_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_scalefac_scale_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_count1table_select_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_part2_length_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_sfb_lmax_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_address1_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_address2_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_address3_ADDR' count='2'/>
+    <int16 name='STRUCT_GRINFO_quantizerStepSize_ADDR' count='2'/>
+</typedef>
+<instance name='STRUCT_GRINFO_ADDR' type='t_VPP_AUDIOJPEGENC_STRUCT_GRINFO_ADDR' address='(238 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_RQ_ADDR'>
+    <int16 name='unused' count='100'/>
+</alias>
+<instance name='STATIC_RQ_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_RQ_ADDR' address='(276 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_GLOBAL_l3_sb_sample_ADDR'>
+    <int16 name='l3_sb_sample_0_0_0_0_ADDR' count='1152'/>
+    <int16 name='l3_sb_sample_0_1_0_0_ADDR' count='1152'/>
+    <int16 name='l3_sb_sample_1_0_0_0_ADDR' count='1152'/>
+    <int16 name='l3_sb_sample_1_1_0_0_ADDR' count='1152'/>
+</typedef>
+<instance name='GLOBAL_l3_sb_sample_ADDR' type='t_VPP_AUDIOJPEGENC_GLOBAL_l3_sb_sample_ADDR' address='(376 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_MDCT_FREQ_01_ADDR'>
+    <int16 name='unused' count='1164'/>
+</alias>
+<instance name='GLOBAL_MDCT_FREQ_01_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_MDCT_FREQ_01_ADDR' address='(4984 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_RXAB_ADDR'>
+    <int16 name='unused' count='1152'/>
+</alias>
+<instance name='GLOBAL_RXAB_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_RXAB_ADDR' address='(6148 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_fl_tab_ADDR'>
+    <int16 name='unused' count='992'/>
+</alias>
+<instance name='TABLE_fl_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_fl_tab_ADDR' address='(7300 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_ew_tab_ADDR'>
+    <int16 name='unused' count='500'/>
+</alias>
+<instance name='TABLE_ew_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_ew_tab_ADDR' address='(8292 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_w_tab_ADDR'>
+    <int16 name='unused' count='36'/>
+</alias>
+<instance name='TABLE_w_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_w_tab_ADDR' address='(8792 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_w2_tab_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='TABLE_w2_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_w2_tab_ADDR' address='(8828 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_win_tab_ADDR'>
+    <int16 name='unused' count='72'/>
+</alias>
+<instance name='TABLE_win_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_win_tab_ADDR' address='(8846 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_steptabi_tab_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='TABLE_steptabi_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_steptabi_tab_ADDR' address='(8918 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_pow075_tab_tab_ADDR'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='TABLE_pow075_tab_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_pow075_tab_tab_ADDR' address='(9174 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_putmask_tab_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='TABLE_putmask_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_putmask_tab_ADDR' address='(9198 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_ca_encode_tab_ADDR'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='TABLE_ca_encode_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_ca_encode_tab_ADDR' address='(9208 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_cs_encode_tab_ADDR'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='TABLE_cs_encode_tab_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_cs_encode_tab_ADDR' address='(9224 + MP3_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/MP3_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_OUT_ADDR'>
+    <int16 name='unused' count='744'/>
+</alias>
+<instance name='JPEGENC_OUT_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_OUT_ADDR' address='(0 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TEMP_MYRING_ADDR'>
+    <int16 name='unused' count='364'/>
+</alias>
+<instance name='TEMP_MYRING_ADDR' type='a_VPP_AUDIOJPEGENC_TEMP_MYRING_ADDR' address='(744 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_L_SACF_ADDR'>
+    <int16 name='unused' count='56'/>
+</alias>
+<instance name='STATIC_L_SACF_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_L_SACF_ADDR' address='(1108 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_SCAL_ACF_ADDR_P'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='SCAL_ACF_ADDR_P' type='a_VPP_AUDIOJPEGENC_SCAL_ACF_ADDR_P' address='(1164 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_PRAM4_TABLE_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='PRAM4_TABLE_ADDR' type='a_VPP_AUDIOJPEGENC_PRAM4_TABLE_ADDR' address='(1168 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_PRE_PROCESSSTATE'>
+    <int16 name='STRUCT_PRE_PROCESSSTATE_Y2_LO_ADDR' />
+    <int16 name='STRUCT_PRE_PROCESSSTATE_Y2_HI_ADDR' />
+    <int16 name='STRUCT_PRE_PROCESSSTATE_Y1_LO_ADDR' />
+    <int16 name='STRUCT_PRE_PROCESSSTATE_Y1_HI_ADDR' />
+    <int16 name='STRUCT_PRE_PROCESSSTATE_X0_ADDR' />
+    <int16 name='STRUCT_PRE_PROCESSSTATE_X1_ADDR' />
+</typedef>
+<instance name='STRUCT_PRE_PROCESSSTATE' type='t_VPP_AUDIOJPEGENC_STRUCT_PRE_PROCESSSTATE' address='(1178 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE'>
+    <int16 name='STRUCT_COD_AMRSTATE_ADDR' count='40'/>
+    <int16 name='STRUCT_COD_AMRSTATE_P_WINDOW_12K2_ADDR' count='40'/>
+    <int16 name='STRUCT_COD_AMRSTATE_P_WINDOW_ADDR' count='40'/>
+    <int16 name='STRUCT_COD_AMRSTATE_SPEECH_ADDR' count='40'/>
+    <int16 name='STRUCT_COD_AMRSTATE_NEW_SPEECH_ADDR' count='161'/>
+    <int16 name='STRUCT_COD_AMRSTATE_OLD_WSP_ADDR' count='143'/>
+    <int16 name='STRUCT_COD_AMRSTATE_WSP_ADDR' count='160'/>
+    <int16 name='STRUCT_COD_AMRSTATE_OLD_LAGS_ADDR' count='6'/>
+    <int16 name='STRUCT_COD_AMRSTATE_OL_GAIN_FLG_ADDR' count='2'/>
+    <int16 name='STRUCT_COD_AMRSTATE_OLD_EXC_ADDR' count='154'/>
+    <int16 name='STRUCT_COD_AMRSTATE_EXC_ADDR' count='161'/>
+    <int16 name='STRUCT_COD_AMRSTATE_AI_ZERO_ADDR' count='11'/>
+    <int16 name='STRUCT_COD_AMRSTATE_ZERO_ADDR' count='41'/>
+</typedef>
+<instance name='STRUCT_COD_AMRSTATE' type='t_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE' address='(1184 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_LEVINSONSTATE_ADDR'>
+    <int16 name='unused' count='11'/>
+</alias>
+<instance name='STRUCT_LEVINSONSTATE_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_LEVINSONSTATE_ADDR' address='(2183 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_LSPSTATE_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_LSPSTATE_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_LSPSTATE_ADDR' address='(2194 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_LSPSTATE_LSP_OLD_Q_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_LSPSTATE_LSP_OLD_Q_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_LSPSTATE_LSP_OLD_Q_ADDR' address='(2204 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_Q_PLSFSTATE_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_Q_PLSFSTATE_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_Q_PLSFSTATE_ADDR' address='(2214 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_CLLTPSTATE_ADDR'>
+    <int16 name='unused' count='18'/>
+</alias>
+<instance name='STRUCT_CLLTPSTATE_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_CLLTPSTATE_ADDR' address='(2224 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_GC_PREDST_ADDR'>
+    <int16 name='unused' count='30'/>
+</alias>
+<instance name='STRUCT_GC_PREDST_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_GC_PREDST_ADDR' address='(2242 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_TONSTABSTATE'>
+    <int16 name='STRUCT_TONSTABSTATE_ADDR' count='7'/>
+    <int16 name='STRUCT_TONSTABSTATE_COUNT_ADDR' />
+</typedef>
+<instance name='STRUCT_TONSTABSTATE' type='t_VPP_AUDIOJPEGENC_STRUCT_TONSTABSTATE' address='(2272 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_VADSTATE1'>
+    <int16 name='unused' count='70'/>
+</alias>
+<instance name='STRUCT_VADSTATE1' type='a_VPP_AUDIOJPEGENC_STRUCT_VADSTATE1' address='(2280 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_STRUCT_DTX_ENCSTATE'>
+    <int16 name='STRUCT_DTX_ENCSTATE_ADDR' count='80'/>
+    <int16 name='STRUCT_DTX_ENCSTATE_LOG_EN_HIST_ADDR' count='8'/>
+    <int16 name='STRUCT_DTX_ENCSTATE_HIST_PTR_ADDR' />
+    <int16 name='STRUCT_DTX_ENCSTATE_LOG_EN_INDEX_ADDR' />
+    <int16 name='STRUCT_DTX_ENCSTATE_INIT_LSF_VQ_INDEX_ADDR' count='2'/>
+    <int16 name='STRUCT_DTX_ENCSTATE_LSP_INDEX_ADDR' count='4'/>
+    <int16 name='STRUCT_DTX_ENCSTATE_DTXHANGOVERCOUNT_ADDR' />
+    <int16 name='STRUCT_DTX_ENCSTATE_DECANAELAPSEDCOUNT_ADDR' />
+</typedef>
+<instance name='STRUCT_DTX_ENCSTATE' type='t_VPP_AUDIOJPEGENC_STRUCT_DTX_ENCSTATE' address='(2350 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_SYN_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_MEM_SYN_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_SYN_ADDR' address='(2448 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_W0_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_MEM_W0_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_W0_ADDR' address='(2458 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_W_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_MEM_W_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_W_ADDR' address='(2468 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_ERROR_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_MEM_ERROR_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_MEM_ERROR_ADDR' address='(2478 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_ERROR_ADDR'>
+    <int16 name='unused' count='40'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_ERROR_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_ERROR_ADDR' address='(2488 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_SHARP_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_SHARP_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_SHARP_ADDR' address='(2528 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_AMR_LOCAL_VARS_X_LEVEL0_START_ADDR'>
+    <int16 name='BEGIN_OF_COD_AMR' count='40'/>
+    <int16 name='COD_AMR_XN2_ADDRESS' count='40'/>
+    <int16 name='COD_AMR_Y1_ADDRESS' count='40'/>
+    <int16 name='COD_AMR_Y2_ADDRESS' count='40'/>
+    <int16 name='COD_AMR_RES_ADDRESS' count='40'/>
+    <int16 name='COD_AMR_MEM_SYN_SAVE_ADDRESS' count='10'/>
+    <int16 name='COD_AMR_MEM_W0_SAVE_ADDRESS' count='10'/>
+    <int16 name='COD_AMR_MEM_ERR_SAVE_ADDRESS' count='10'/>
+    <int16 name='COD_AMR_GCOEFF_ADDRESS' count='4'/>
+    <int16 name='COD_AMR_SUBFRNR_ADDRESS' />
+    <int16 name='COD_AMR_I_SUBFR_ADDRESS' />
+    <int16 name='COD_AMR_T_OP_ADDRESS' count='2'/>
+    <int16 name='COD_AMR_T0_ADDRESS' />
+    <int16 name='COD_AMR_T0_FRAC_ADDRESS' />
+    <int16 name='COD_AMR_GAIN_PIT_ADDRESS' />
+    <int16 name='COD_AMR_GAIN_CODE_ADDRESS' />
+    <int16 name='COD_AMR_EXC_ADDR_ADDRESS' count='2'/>
+    <int16 name='COD_AMR_LSP_FLAG_ADDRESS' />
+    <int16 name='COD_AMR_GP_LIMIT_ADDRESS' />
+    <int16 name='COD_AMR_VAD_FLAG_ADDRESS' />
+    <int16 name='COD_AMR_COMPUTE_SID_FLAG_ADDRESS' />
+    <int16 name='COD_AMR_A_T_ADDRESS' count='44'/>
+    <int16 name='COD_AMR_AQ_T_ADDRESS' count='44'/>
+    <int16 name='COD_AMR_LSP_NEW_ADDRESS' count='10'/>
+    <int16 name='COD_AMR_SHARP_SAVE_ADDRESS' />
+    <int16 name='COD_AMR_EVENSUBFR_ADDRESS' />
+    <int16 name='COD_AMR_CODE_ADDRESS' count='40'/>
+</typedef>
+<instance name='AMR_LOCAL_VARS_X_LEVEL0_START_ADDR' type='t_VPP_AUDIOJPEGENC_AMR_LOCAL_VARS_X_LEVEL0_START_ADDR' address='(2530 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_SET_SIGN_X'>
+    <int16 name='SEARCH_10I40_RRV_ADDR' count='40'/>
+    <int16 name='SEARCH_CODE_CP_RR_ADDR' count='320'/>
+    <int16 name='SEARCH_CODE_PS0_TEMP_ADDR' />
+    <int16 name='SEARCH_10I40_PS0_ADDR' />
+    <int16 name='C1035PF_IPOS_ADDR' count='10'/>
+    <int16 name='C1035PF_POS_MAX_ADDR' count='10'/>
+    <int16 name='C1035PF_CODVEC_ADDR' count='10'/>
+    <int16 name='C1035PF_SIGN_ADDR' count='40'/>
+</typedef>
+<instance name='SET_SIGN_X' type='t_VPP_AUDIOJPEGENC_SET_SIGN_X' address='(2918 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_inverse_Zig_Zag_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='CONST_inverse_Zig_Zag_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_inverse_Zig_Zag_ADDR' address='(3350 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_128_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_128_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_128_ADDR' address='(3414 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_256_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_256_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_256_ADDR' address='(3415 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_neg3_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_neg3_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_neg3_ADDR' address='(3416 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_143_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_143_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_143_ADDR' address='(3417 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_160_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_160_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_160_ADDR' address='(3418 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_26214_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_26214_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_26214_ADDR' address='(3419 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_205_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_205_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_205_ADDR' address='(3420 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x199a_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_0x199a_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x199a_ADDR' address='(3421 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_640_INT_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_640_INT_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_640_INT_ADDR' address='(3422 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_640BY8_INT_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_640BY8_INT_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_640BY8_INT_ADDR' address='(3423 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_640BY9_INT_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_640BY9_INT_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_640BY9_INT_ADDR' address='(3424 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_479_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_479_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_479_ADDR' address='(3425 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_640_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_640_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_640_ADDR' address='(3426 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0X80_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0X80_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0X80_ADDR' address='(3428 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x00010001_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x00010001_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x00010001_ADDR' address='(3430 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x00020002_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x00020002_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x00020002_ADDR' address='(3432 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x0000FFFF_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x0000FFFF_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x0000FFFF_ADDR' address='(3434 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x00080008_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x00080008_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x00080008_ADDR' address='(3436 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x40000000_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x40000000_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x40000000_ADDR' address='(3438 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x7FFFFFFF_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x7FFFFFFF_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x7FFFFFFF_ADDR' address='(3440 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x80000000_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x80000000_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x80000000_ADDR' address='(3442 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_0x8000FFFF_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_0x8000FFFF_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_0x8000FFFF_ADDR' address='(3444 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_TAB244_ADDR'>
+    <int16 name='unused' count='244'/>
+</alias>
+<instance name='CONST_TAB244_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_TAB244_ADDR' address='(3446 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_BLOCKSIZE_BYTE_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_BLOCKSIZE_BYTE_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_BLOCKSIZE_BYTE_ADDR' address='(3690 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_WIDTH_ADD8'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_WIDTH_ADD8' type='a_VPP_AUDIOJPEGENC_CONST_WIDTH_ADD8' address='(3692 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_WIDTH_SUB8'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_WIDTH_SUB8' type='a_VPP_AUDIOJPEGENC_CONST_WIDTH_SUB8' address='(3693 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_WIDTH_MPY8'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_WIDTH_MPY8' type='a_VPP_AUDIOJPEGENC_CONST_WIDTH_MPY8' address='(3694 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_WIDTH_MPY8_ADD8'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONST_WIDTH_MPY8_ADD8' type='a_VPP_AUDIOJPEGENC_CONST_WIDTH_MPY8_ADD8' address='(3695 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_Y_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y_ADDR' address='(3696 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y1_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_Y1_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y1_ADDR' address='(3760 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y2_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_Y2_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y2_ADDR' address='(3824 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y3_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_Y3_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_Y3_ADDR' address='(3888 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_CB_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_CB_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_CB_ADDR' address='(3952 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_CR_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='JPEGENC_BUFF_CR_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_CR_ADDR' address='(4016 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_4WIDTH_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_4WIDTH_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_4WIDTH_ADDR' address='(4080 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCY_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_OLD_DCY_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCY_ADDR' address='(4081 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCU_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_OLD_DCU_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCU_ADDR' address='(4082 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCV_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_OLD_DCV_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OLD_DCV_ADDR' address='(4083 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_SHORT_1_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_SHORT_1_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_SHORT_1_ADDR' address='(4084 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_CURR_POS_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_CURR_POS_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_CURR_POS_ADDR' address='(4085 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_CURRBITS_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_CURRBITS_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_CURRBITS_ADDR' address='(4086 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_CURRBYTE_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_CURRBYTE_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_CURRBYTE_ADDR' address='(4087 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_pp_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_pp_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_pp_ADDR' address='(4088 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_Q_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_Q_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_Q_ADDR' address='(4089 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_m1_ADDR'>
+    <int16 name='unused' count='248'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_m1_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_m1_ADDR' address='(4090 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_ADDR' address='(4338 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_1_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_1_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_1_ADDR' address='(4978 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_2_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_2_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_2_ADDR' address='(5618 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_3_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_3_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_3_ADDR' address='(6258 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_4_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_4_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_4_ADDR' address='(6898 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_5_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_5_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_5_ADDR' address='(7538 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_6_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_6_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_6_ADDR' address='(8178 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_7_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_7_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_7_ADDR' address='(8818 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_8_ADDR'>
+    <int16 name='unused' count='640'/>
+</alias>
+<instance name='JPEGENC_BUFF_RGB_640_8_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_BUFF_RGB_640_8_ADDR' address='(9458 + AMR_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_RESET_FLAG_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_RESET_FLAG_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_RESET_FLAG_ADDR' address='(0 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_RELOAD_RESET_FLAG_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_RELOAD_RESET_FLAG_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_RELOAD_RESET_FLAG_ADDR' address='(1 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_AMR_GLOBAL_VARS_Y_START_ADDR'>
+    <int16 name='unused' count='40'/>
+</alias>
+<instance name='AMR_GLOBAL_VARS_Y_START_ADDR' type='a_VPP_AUDIOJPEGENC_AMR_GLOBAL_VARS_Y_START_ADDR' address='(2 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_H1_ADDR'>
+    <int16 name='unused' count='40'/>
+</alias>
+<instance name='STRUCT_COD_AMRSTATE_H1_ADDR' type='a_VPP_AUDIOJPEGENC_STRUCT_COD_AMRSTATE_H1_ADDR' address='(42 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_COD_AMR_H1_SF0_ADDRESS'>
+    <int16 name='unused' count='40'/>
+</alias>
+<instance name='COD_AMR_H1_SF0_ADDRESS' type='a_VPP_AUDIOJPEGENC_COD_AMR_H1_SF0_ADDRESS' address='(82 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_COD_AMR_ANA_ADDR'>
+    <int16 name='unused' count='60'/>
+</alias>
+<instance name='COD_AMR_ANA_ADDR' type='a_VPP_AUDIOJPEGENC_COD_AMR_ANA_ADDR' address='(122 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_AMR_LOCAL_VARS_Y_LEVEL1_START_ADDR'>
+    <int16 name='C1035PF_DN_ADDR' count='40'/>
+    <int16 name='C1035PF_RR_DIAG_ADDR' count='40'/>
+    <int16 name='C1035PF_RR_SIDE_ADDR' count='780'/>
+    <int16 name='SEARCH_CODE_RRV_COE_ADDR' />
+    <int16 name='SEARCH_CODE_RR_COE_ADDR' />
+    <int16 name='SEARCH_10I40_I_ADDR' count='2'/>
+    <int16 name='SEARCH_10I40_PSK_ADDR' />
+    <int16 name='SEARCH_10I40_ALPK_ADDR' />
+    <int16 name='C1035PF_RR_DIAG_ADDR_2_ADDR' />
+    <int16 name='SEARCH_CODE_CP_RR_ADDR_ADDR' />
+    <int16 name='SEARCH_CODE_DN_ADDR_ADDR' />
+    <int16 name='SEARCH_CODE_RRV_ADDR_ADDR' />
+    <int16 name='C1035PF_RR_SIDE_ADDR_ADDR' />
+    <int16 name='C1035PF_RR_DIAG_ADDR_ADDR' />
+    <int16 name='SEARCH_CODE_CP_RR_7_ADDR_ADDR' />
+    <int16 name='RR_SIDE_DIAG_TEMP_ADDR' />
+    <int16 name='SEARCH_10I40_I2_TEMP_ADDR' />
+    <int16 name='SEARCH_10I40_I2I3_TEMP_ADDR' />
+    <int16 name='SEARCH_CODE_DN_RRV_ADDR_ADDR' count='2'/>
+    <int16 name='SEARCH_CODE_ALP0_TEMP_ADDR' count='2'/>
+    <int16 name='SEARCH_10I40_I0_ADDR' />
+    <int16 name='SEARCH_10I40_I1_ADDR' />
+    <int16 name='SEARCH_10I40_I2_ADDR' />
+    <int16 name='SEARCH_10I40_I3_ADDR' />
+    <int16 name='SEARCH_10I40_I4_ADDR' />
+    <int16 name='SEARCH_10I40_I5_ADDR' />
+    <int16 name='SEARCH_10I40_I6_ADDR' />
+    <int16 name='SEARCH_10I40_I7_ADDR' />
+    <int16 name='SEARCH_10I40_I8_ADDR' />
+    <int16 name='SEARCH_10I40_I9_ADDR' />
+    <int16 name='linear_signs_ADDR' count='4'/>
+    <int16 name='linear_codewords_ADDR' count='8'/>
+</typedef>
+<instance name='AMR_LOCAL_VARS_Y_LEVEL1_START_ADDR' type='t_VPP_AUDIOJPEGENC_AMR_LOCAL_VARS_Y_LEVEL1_START_ADDR' address='(182 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_D_1_4_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_D_1_4_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_D_1_4_ADDR' address='(1084 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_D_1_8_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_D_1_8_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_D_1_8_ADDR' address='(1086 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_D_1_16_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_D_1_16_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_D_1_16_ADDR' address='(1088 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_D_1_32_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_D_1_32_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_D_1_32_ADDR' address='(1090 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_D_1_64_ADDR'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='CONST_D_1_64_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_D_1_64_ADDR' address='(1092 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_JPEGENC_MYDCT_ADDR'>
+    <int16 name='unused' count='12'/>
+</alias>
+<instance name='JPEGENC_MYDCT_ADDR' type='a_VPP_AUDIOJPEGENC_JPEGENC_MYDCT_ADDR' address='(1094 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYQUN_TAB0_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='CONST_MYQUN_TAB0_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYQUN_TAB0_ADDR' address='(1106 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYQUN_TAB1_ADDR'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='CONST_MYQUN_TAB1_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYQUN_TAB1_ADDR' address='(1234 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_DC0_ADDR'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='CONST_MYHUFF_DC0_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_DC0_ADDR' address='(1362 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_DC1_ADDR'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='CONST_MYHUFF_DC1_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_DC1_ADDR' address='(1386 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_AC0_ADDR'>
+    <int16 name='unused' count='324'/>
+</alias>
+<instance name='CONST_MYHUFF_AC0_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_AC0_ADDR' address='(1410 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_AC1_ADDR'>
+    <int16 name='unused' count='324'/>
+</alias>
+<instance name='CONST_MYHUFF_AC1_ADDR' type='a_VPP_AUDIOJPEGENC_CONST_MYHUFF_AC1_ADDR' address='(1734 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_WINDOW_160_80_ADDR'>
+    <int16 name='unused' count='240'/>
+</alias>
+<instance name='TABLE_WINDOW_160_80_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_WINDOW_160_80_ADDR' address='(2058 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_WINDOW_232_8_ADDR'>
+    <int16 name='unused' count='240'/>
+</alias>
+<instance name='TABLE_WINDOW_232_8_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_WINDOW_232_8_ADDR' address='(2298 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_MEAN_LSF_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='TABLE_MEAN_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_MEAN_LSF_ADDR' address='(2538 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_SLOPE_ADDR'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='TABLE_SLOPE_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_SLOPE_ADDR' address='(2548 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_LSP_LSF_ADDR'>
+    <int16 name='unused' count='66'/>
+</alias>
+<instance name='TABLE_LSP_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_LSP_LSF_ADDR' address='(2612 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_LOG2_ADDR'>
+    <int16 name='unused' count='34'/>
+</alias>
+<instance name='TABLE_LOG2_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_LOG2_ADDR' address='(2678 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_LAG_L_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='TABLE_LAG_L_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_LAG_L_ADDR' address='(2712 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_LAG_H_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='TABLE_LAG_H_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_LAG_H_ADDR' address='(2722 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_INV_SQRT_ADDR'>
+    <int16 name='unused' count='50'/>
+</alias>
+<instance name='TABLE_INV_SQRT_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_INV_SQRT_ADDR' address='(2732 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_GRID_ADDR'>
+    <int16 name='unused' count='62'/>
+</alias>
+<instance name='TABLE_GRID_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_GRID_ADDR' address='(2782 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_POW2_ADDR'>
+    <int16 name='unused' count='34'/>
+</alias>
+<instance name='TABLE_POW2_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_POW2_ADDR' address='(2844 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_QUA_GAIN_PITCH_ADDR'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='STATIC_CONST_QUA_GAIN_PITCH_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_QUA_GAIN_PITCH_ADDR' address='(2878 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_INTER_6_ADDR'>
+    <int16 name='unused' count='62'/>
+</alias>
+<instance name='STATIC_CONST_INTER_6_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_INTER_6_ADDR' address='(2894 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_INTER_6_25_ADDR'>
+    <int16 name='unused' count='26'/>
+</alias>
+<instance name='STATIC_CONST_INTER_6_25_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_INTER_6_25_ADDR' address='(2956 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_F_GAMMA2_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STATIC_CONST_F_GAMMA2_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_F_GAMMA2_ADDR' address='(2982 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_F_GAMMA1_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STATIC_CONST_F_GAMMA1_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_F_GAMMA1_ADDR' address='(2992 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_GRAY_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='STATIC_CONST_GRAY_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_GRAY_ADDR' address='(3002 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_DICO1_LSF_ADDR'>
+    <int16 name='unused' count='512'/>
+</alias>
+<instance name='TABLE_DICO1_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_DICO1_LSF_ADDR' address='(3010 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_DICO2_LSF_ADDR'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='TABLE_DICO2_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_DICO2_LSF_ADDR' address='(3522 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_DICO3_LSF_ADDR'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='TABLE_DICO3_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_DICO3_LSF_ADDR' address='(4546 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_DICO4_LSF_ADDR'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='TABLE_DICO4_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_DICO4_LSF_ADDR' address='(5570 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_TABLE_DICO5_LSF_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='TABLE_DICO5_LSF_ADDR' type='a_VPP_AUDIOJPEGENC_TABLE_DICO5_LSF_ADDR' address='(6594 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_BITNO_ADDR'>
+    <int16 name='unused' count='30'/>
+</alias>
+<instance name='STATIC_CONST_BITNO_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_BITNO_ADDR' address='(6850 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_qua_gain_code_ADDR'>
+    <int16 name='unused' count='96'/>
+</alias>
+<instance name='STATIC_CONST_qua_gain_code_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_qua_gain_code_ADDR' address='(6880 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_gamma1_ADDR'>
+    <int16 name='unused' count='10'/>
+</alias>
+<instance name='STATIC_CONST_gamma1_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_gamma1_ADDR' address='(6976 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_STATIC_CONST_pred_MR122_ADDR'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='STATIC_CONST_pred_MR122_ADDR' type='a_VPP_AUDIOJPEGENC_STATIC_CONST_pred_MR122_ADDR' address='(6986 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_AMR_ENC_RESET_TABLE_ADDR'>
+    <int16 name='unused' count='202'/>
+</alias>
+<instance name='AMR_ENC_RESET_TABLE_ADDR' type='a_VPP_AUDIOJPEGENC_AMR_ENC_RESET_TABLE_ADDR' address='(6990 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_MATRIC_RGB_ADDR'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='MATRIC_RGB_ADDR' type='a_VPP_AUDIOJPEGENC_MATRIC_RGB_ADDR' address='(7192 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_FOR1280BY1024_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_FOR1280BY1024_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_FOR1280BY1024_ADDR' address='(7200 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_1_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_1_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_1_ADDR' address='(7248 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_2_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_2_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_2_ADDR' address='(7296 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_3_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_3_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_3_ADDR' address='(7344 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_4_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_4_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_4_ADDR' address='(7392 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_5_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_5_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_5_ADDR' address='(7440 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_6_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_6_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_6_ADDR' address='(7488 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_7_ADDR'>
+    <int16 name='unused' count='48'/>
+</alias>
+<instance name='GLOBAL_OUT_48_7_ADDR' type='a_VPP_AUDIOJPEGENC_GLOBAL_OUT_48_7_ADDR' address='(7536 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_xScale'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_xScale' type='a_VPP_AUDIOJPEGENC_GLOBAL_xScale' address='(7584 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_yScale'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_yScale' type='a_VPP_AUDIOJPEGENC_GLOBAL_yScale' address='(7586 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_Y_Row'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_input_p_Y_Row' type='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_Y_Row' address='(7588 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_Y_Colume'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_input_p_Y_Colume' type='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_Y_Colume' address='(7590 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_UV_Row'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_input_p_UV_Row' type='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_UV_Row' address='(7592 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_UV_Colume'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_input_p_UV_Colume' type='a_VPP_AUDIOJPEGENC_GLOBAL_input_p_UV_Colume' address='(7594 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_McuZommInRow'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_McuZommInRow' type='a_VPP_AUDIOJPEGENC_GLOBAL_McuZommInRow' address='(7596 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_McuZoomINColume'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_McuZoomINColume' type='a_VPP_AUDIOJPEGENC_GLOBAL_McuZoomINColume' address='(7597 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputRows'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_DmaInputRows' type='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputRows' address='(7598 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputColumes'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_DmaInputColumes' type='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputColumes' address='(7599 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_InputRowsOffset'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_InputRowsOffset' type='a_VPP_AUDIOJPEGENC_GLOBAL_InputRowsOffset' address='(7600 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_McuInputBuffAddr'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_McuInputBuffAddr' type='a_VPP_AUDIOJPEGENC_GLOBAL_McuInputBuffAddr' address='(7601 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputBufferDddr'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_DmaInputBufferDddr' type='a_VPP_AUDIOJPEGENC_GLOBAL_DmaInputBufferDddr' address='(7602 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_GLOBAL_RGBToYUV422Coef'>
+    <int16 name='unused' count='12'/>
+</alias>
+<instance name='GLOBAL_RGBToYUV422Coef' type='a_VPP_AUDIOJPEGENC_GLOBAL_RGBToYUV422Coef' address='(7604 + AMR_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/AMR_GLOBAL'/>
+<var name='apply_fdct_Y_BEGIN_ADDR' value='(96 + AMR_LOCAL_Y_BEGIN_ADDR)'/>
+<var name='COOLSAND_1280BY1024_JPEG_Y_BEGIN_ADDR' value='(0 + AMR_LOCAL_Y_BEGIN_ADDR)'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_INPUT_ADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_INPUT_ADDR' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_INPUT_ADDR' address='(0 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_YADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_OUTPUT_YADDR' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_YADDR' address='(2 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_UADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_OUTPUT_UADDR' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_UADDR' address='(4 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_VADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_OUTPUT_VADDR' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_OUTPUT_VADDR' address='(6 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Srcwidth'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Srcwidth' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Srcwidth' address='(8 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Srcheight'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Srcheight' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Srcheight' address='(9 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Dstwidth'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Dstwidth' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Dstwidth' address='(10 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Dstheight'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Dstheight' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Dstheight' address='(11 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Direction'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Direction' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Direction' address='(12 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Stride'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_Stride' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_Stride' address='(13 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_xpos'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_xpos' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_xpos' address='(14 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_ypos'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_ypos' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_ypos' address='(15 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_mb_width'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_mb_width' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_mb_width' address='(16 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_mb_height'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_mb_height' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_mb_height' address='(17 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_MBA'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_MBA' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_MBA' address='(18 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_MBAmax'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_X_MBAmax' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_MBAmax' address='(19 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_BufY'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='YUV_ROTATE_X_BufY' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_BufY' address='(20 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_reserved'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='YUV_ROTATE_X_reserved' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_X_reserved' address='(84 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_GX_RGB_ROTATE_CFG_STRUCT'>
+    <int32 name='RGB_ROTATE_X_INPUT_ADDR' />
+    <int32 name='RGB_ROTATE_X_OUTPUT_ADDR' />
+    <int16 name='RGB_ROTATE_X_srcwidth' />
+    <int16 name='RGB_ROTATE_X_srcheight' />
+    <int16 name='RGB_ROTATE_X_dstwidth' />
+    <int16 name='RGB_ROTATE_X_dstheight' />
+    <int16 name='RGB_ROTATE_X_direction' />
+    <int16 name='RGB_ROTATE_X_stride' />
+    <int16 name='RGB_ROTATE_X_xpos' />
+    <int16 name='RGB_ROTATE_X_ypos' />
+    <int16 name='RGB_ROTATE_X_mb_width' />
+    <int16 name='RGB_ROTATE_X_mb_height' />
+    <int16 name='RGB_ROTATE_X_MBA' />
+    <int16 name='RGB_ROTATE_X_MBAmax' />
+    <int16 name='RGB_ROTATE_X_out_buf' count='64'/>
+    <int16 name='RGB_ROTATE_X_reserved' count='16'/>
+</typedef>
+<instance name='GX_RGB_ROTATE_CFG_STRUCT' type='t_VPP_AUDIOJPEGENC_GX_RGB_ROTATE_CFG_STRUCT' address='(100 + YUVROTATE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_IN_BUF'>
+    <int16 name='unused' count='384'/>
+</alias>
+<instance name='YUV_ROTATE_Y_IN_BUF' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_IN_BUF' address='(0 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_BufU'>
+    <int16 name='unused' count='20'/>
+</alias>
+<instance name='YUV_ROTATE_Y_BufU' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_BufU' address='(384 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_BufV'>
+    <int16 name='unused' count='20'/>
+</alias>
+<instance name='YUV_ROTATE_Y_BufV' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_BufV' address='(404 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_17'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_Y_const_17' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_17' address='(424 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_65'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_Y_const_65' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_65' address='(425 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_1'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_Y_const_1' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_Y_const_1' address='(426 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<alias name='a_VPP_AUDIOJPEGENC_YUV_ROTATE_dma_in_flag'>
+    <int16 name='unused' />
+</alias>
+<instance name='YUV_ROTATE_dma_in_flag' type='a_VPP_AUDIOJPEGENC_YUV_ROTATE_dma_in_flag' address='(427 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+<typedef name='t_VPP_AUDIOJPEGENC_GY_RGB_ROTATE_CFG_STRUCT'>
+    <int16 name='RGB_ROTATE_Y_in_block' count='192'/>
+    <int16 name='RGB_ROTATE_Y_dma_status' />
+    <int16 name='RGB_ROTATE_Y_const_1' />
+</typedef>
+<instance name='GY_RGB_ROTATE_CFG_STRUCT' type='t_VPP_AUDIOJPEGENC_GY_RGB_ROTATE_CFG_STRUCT' address='(428 + YUVROTATE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AUDIOJPEGENC/YUVROTATE_GLOBAL'/>
+</archive>

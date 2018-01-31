@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+
+<comment>
+Contains stuctures and function definitions for SPC use.
+</comment>
+
+<include load="no" file="cs_types.h"/>
+<include load="no" file="spp_m.h"/>
+
+<include>
+    <comment>different buffers sizes whether EDGE is supported or not.</comment>
+    <case cond="(CHIP_EDGE_SUPPORTED == 1)" file="spc_define_edge.xmd"/>
+    <default file="spc_define_std.xmd"/>
+</include>
+
+<include file="../../../../base/common/include/baseband_defs.xmd"/>
+<include file="../../include/spc_mailbox.xmd"/>
+<include file="../../spp/include/spp_gsm.xmd"/>
+
+<var name='SCH_BUF_OFFSET' value='(BB_BURST_TOTAL_SIZE*4)'>
+    <comment>SCH symbol buffer offset (aVOID overwriting during late SCH windows)</comment>
+</var>
+
+<var name='SPC_ITLV_BUFF_TX_FACCH' value='(8*4)'>
+    <comment>Interleaver Buffer sizes</comment>
+</var>
+
+<var name='SPC_ITLV_BUFF_TX_CTRL' value='(4*4)'><comment>4burst*4word*4bytes</comment></var>
+
+<var name='SPC_ITLV_BUFF_RX_CTRL' value='(4*32)'></var>
+
+<var name='SPC_ITLV_BUFF_SIZE' value='SPC_ITLV_BUFF_TX_FACCH + SPC_ITLV_BUFF_TX_CTRL + SPC_ITLV_BUFF_TX_DEDICATED + SPC_ITLV_BUFF_RX_CTRL + SPC_ITLV_BUFF_RX_DEDICATED'></var>
+
+<var name='SPC_STATIC_BUF_SIZE' value='4*BB_BURST_TOTAL_SIZE + 6*MBOX_MON_WIN_SIZE'></var>
+
+<typedef name='SPC_ITLV_BUFFERS'>
+    <comment>Interleaver Buffer Structure</comment>
+
+    <uint32 name='RxCtrl' count='SPC_ITLV_BUFF_RX_CTRL'></uint32>
+    <uint32 name='RxDedicated' count='SPC_ITLV_BUFF_RX_DEDICATED'></uint32>
+    <uint32 name='TxCtrl' count='SPC_ITLV_BUFF_TX_CTRL'></uint32>
+    <uint32 name='TxDedicated' count='SPC_ITLV_BUFF_TX_DEDICATED'></uint32>
+    <uint32 name='TxFacch' count='SPC_ITLV_BUFF_TX_FACCH'></uint32>
+</typedef>
+
+<typedef name='SPC_STATIC_BUFFERS'>
+    <comment>Overall structure : Rx (Ifc)Buffer + Vitac Buffers</comment>
+
+    <uint32 name='RxIfcBuffer' count='4*(BB_BURST_ACTIVE_SIZE+2*BB_RX_NBURST_MARGIN)'></uint32>
+    <uint32 name='MonIfcBuffer' count='6*MBOX_MON_WIN_SIZE'></uint32>
+</typedef>
+
+<alias name='SPC_DATA_BLOCK'>
+    <uint32 name='unused' count='14'>
+        <comment>Global Context Structure</comment>
+    </uint32>
+</alias>
+
+<typedef name='SPC_TX_SPEECH'>
+    <ptr name='InputBuffer' type='uint32'></ptr>
+    <uint16 name='CodecModeInd'></uint16>
+    <uint8 name='TxFrameType'></uint8>
+</typedef>
+
+<typedef name='SPC_RX_LOCALS'>
+    <comment>structure for local rx variables</comment>
+
+    <ptr name='ItlvBuffInput' type='uint32'></ptr>
+    <ptr name='BlockDecodedAdd' type='uint32'></ptr>
+    <uint16 name='Copy_ChMode'></uint16>
+    <uint8 name='burstIdx'></uint8>
+    <uint8 name='buffIdx'></uint8>
+    <uint8 name='slotIdx'></uint8>
+    <uint8 name='RxBuffOffset'></uint8>
+    <uint8 name='itlv_mode'></uint8>
+    <uint8 name='StealingResult'></uint8>
+    <uint8 name='voc_bfi'></uint8>
+    <uint8 name='voc_sid'></uint8>
+    <uint8 name='voc_taf'></uint8>
+    <uint8 name='voc_ufi'></uint8>
+    <uint8 name='RxFrameType'></uint8>
+    <uint8 name='RX_decode'></uint8>
+</typedef>
+
+<alias name='SPC_8UINT8'>
+    <uint8 name='unused' count='8'>
+        <comment>type used to avoid bugs in the matrix</comment>
+    </uint8>
+</alias>
+
+<typedef name='SPC_CONTEXT'>
+    <comment>Global structure of Context statically placed in BB_SRAM  Should be referenced by a pointer placed in a reserved register  to ease address calculation and reduce code size.</comment>
+
+    <instance name='FCCH_Result' type='SPP_FCCH_RESULT'></instance>
+    <instance name='SCH_Result' type='SPP_SCH_RESULT'></instance>
+    <instance name='NBurst_result' type='SPP_N_BURST_RESULT'></instance>
+    <instance name='NBlock_result' type='SPP_N_BLOCK_RESULT'></instance>
+    <instance name='Header_result' type='SPP_HEADER_RESULT'></instance>
+    <instance name='AMR_Cfg_Tx' type='SPP_AMR_CFG'></instance>
+    <instance name='AMR_Cfg_Rx' type='SPP_AMR_CFG'></instance>
+    <uint32 name='Rx_Hu_TCH_N_1'></uint32>
+    <uint32 name='Rx_Hu_TCH_N'></uint32>
+    <uint32 name='Rx_Hl_TCH_N'></uint32>
+    <uint32 name='ABurstBuffer' count='5'>
+        <comment>Tx buffers</comment>
+    </uint32>
+    <instance name='CSD_NBlockDataIn' type='SPC_DATA_BLOCK'></instance>
+    <instance name='CCH_NBlockDataIn' type='SPC_DATA_BLOCK'></instance>
+    <instance name='DCH_NBlockDataIn' type='SPC_PDCH_DATA_BLOCK' count='MBOX_MAX_BUF_IDX_QTY-1'></instance>
+    <ptr name='NBlockDataIn' type='uint32' count='MBOX_MAX_BUF_IDX_QTY+1'></ptr>
+    <instance name='speechEncOut' type='SPC_MBOX_SPEECH_ENC_OUT'>
+        <comment>Rx buffers</comment>
+    </instance>
+    <instance name='CSD_NBlockDataOut' type='SPC_DATA_BLOCK'></instance>
+    <instance name='CCH_NBlockDataOut' type='SPC_DATA_BLOCK'></instance>
+    <instance name='DCH_NBlockDataOut' type='SPC_PDCH_DATA_BLOCK' count='MBOX_MAX_BUF_IDX_QTY-1'></instance>
+    <ptr name='NBlockDataOut' type='uint32' count='MBOX_MAX_BUF_IDX_QTY+1'></ptr>
+    <ptr name='ItlvBufRxCtrl' type='uint32'>
+        <comment>interleaver input buffer pointers</comment>
+    </ptr>
+    <ptr name='ItlvBufRxDedicated' type='uint32'></ptr>
+    <ptr name='ItlvBufTxCtrl' type='uint32'></ptr>
+    <ptr name='ItlvBufTxDedicated' type='uint32'></ptr>
+    <ptr name='ItlvBufTxFacch' type='uint32'></ptr>
+    <ptr name='Malloc' type='uint32' ckeywords='VOLATILE'>
+        <comment>interleaver output buffer</comment>
+    </ptr>
+    <ptr name='ItlvBufRxFacch' type='uint32'>
+        <comment>next address must be aligned on 128 bytes</comment>
+    </ptr>
+    <ptr name='loopC_buffer' type='uint8'></ptr>
+    <ptr name='CIest' type='int8'></ptr>
+    <uint32 name='BaseAddress'></uint32>
+    <uint16 name='FCCH_Offset'></uint16>
+    <uint16 name='ChMode'></uint16>
+    <uint16 name='PrevChMode'></uint16>
+    <bool name='DedicatedActive'></bool>
+    <instance name='statWinRxCfg' type='SPC_MBOX_STATWIN_RX_CFG' count='MBOX_MAX_BUF_IDX_QTY'></instance>
+    <bool name='Tx_off'></bool>
+    <bool name='Init_FCCH'></bool>
+    <int16 name='BlockSnR'></int16>
+    <int16 name='LastBlockSnR'></int16>
+    <instance name='Rx_q_CCH' type='SPC_8UINT8' count='4'></instance>
+    <uint8 name='Rx_CS' count='4'>
+        <comment>Was UINT8 Rx_q_CCH[4][8];, but coolXml has its own ...</comment>
+    </uint8>
+    <uint8 name='BurstNb'></uint8>
+    <uint8 name='currentSnap'></uint8>
+    <uint8 name='TxBlockOffset'></uint8>
+    <uint8 name='RxBlockOffset'></uint8>
+    <uint8 name='cs_identifier' count='4'></uint8>
+    <uint8 name='Tx_Hu'></uint8>
+    <uint8 name='Tx_Hl'></uint8>
+    <uint8 name='FacchEncoded'></uint8>
+    <uint8 name='DTX_on'></uint8>
+    <uint32 name='RfIfCtrl'></uint32>
+    <bool name='DCOC_on'></bool>
+    <uint8 name='FcchFound'></uint8>
+    <uint8 name='txQty'></uint8>
+    <uint8 name='rxQty'></uint8>
+    <uint8 name='Taf_Flag'></uint8>
+    <uint8 name='DTX_dwnlk_flag'></uint8>
+    <uint8 name='DTX_dwnlk_count'></uint8>
+    <uint8 name='BFI_count'></uint8>
+    <uint8 name='sendEqItr'></uint8>
+    <uint8 name='resIdx'></uint8>
+    <uint8 name='frame_over'></uint8>
+    <uint8 name='loop_bufIdx'></uint8>
+    <uint8 name='CodecModeRequest'></uint8>
+    <uint8 name='ratscch_to_encode'></uint8>
+    <uint8 name='ACK_Activation'></uint8>
+    <uint8 name='REQ_Activation'></uint8>
+    <uint8 name='RATSCCH_REQ'></uint8>
+    <uint8 name='ratscch_detected'></uint8>
+    <uint8 name='sidupdate_ctr'></uint8>
+    <uint8 name='AFNmod104'></uint8>
+    <int16 name='FacchThreshold'>
+        <comment>old defines moved to variables for romming purpose</comment>
+    </int16>
+    <uint8 name='FR_BfiThreshold'></uint8>
+    <uint8 name='EFR_BfiThreshold'></uint8>
+    <uint8 name='HR_BfiThreshold'></uint8>
+    <uint8 name='UfiThreshold'></uint8>
+    <uint8 name='FsBfiBerThresh'></uint8>
+    <uint8 name='FsBfiBer2Thresh'></uint8>
+    <int8 name='FsBfiSnrThresh'></int8>
+    <uint8 name='HsBfiBerThresh'></uint8>
+    <uint8 name='HsBfiBer2Thresh'></uint8>
+    <int8 name='HsBfiSnrThresh'></int8>
+    <uint8 name='AFS_ber1_threshold' count='8'></uint8>
+    <uint8 name='AHS_ber1_threshold' count='6'></uint8>
+    <uint8 name='AFS_ber2_threshold' count='8'></uint8>
+    <uint8 name='AHS_ber2_threshold' count='6'></uint8>
+
+    <bool name='equ_hburst_mode' ckeywords='VOLATILE'></bool>
+    <bool name='ifc2_burst_mode_fcch' ckeywords='VOLATILE'></bool>
+    <bool name='ifc2_burst_mode_sbnb' ckeywords='VOLATILE'></bool>
+
+    <uint32 name='bcpuIrqCause' ckeywords='VOLATILE'>
+        <comment>extern volatile UINT32 bb_irq_cause;</comment>
+    </uint32>
+    <uint8 name='MonWinSize' ckeywords='VOLATILE'></uint8>
+    <uint8 name='FcchWinSize' ckeywords='VOLATILE'></uint8>
+    <uint8 name='FcchPreOpening' ckeywords='VOLATILE'></uint8>
+    <uint8 name='FcchInit' ckeywords='VOLATILE'></uint8>
+    <uint8 name='FcchActive' ckeywords='VOLATILE'></uint8>
+    <uint8 name='FcchSet' ckeywords='VOLATILE'></uint8>
+    <uint8 name='rx_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='sched_rx_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='slot_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='sched_slot_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='ifc2_pending' ckeywords='VOLATILE'></uint8>
+    <uint8 name='rxslotNb' ckeywords='VOLATILE'></uint8>
+    <uint8 name='tx_left' ckeywords='VOLATILE'></uint8>
+    <uint32 name='burst_to_send' ckeywords='VOLATILE' count='10'></uint32>
+    <ptr name='SilentFrame' type='uint32' ckeywords='VOLATILE'></ptr>
+    <uint32 name='voc_dtx_en' ckeywords='VOLATILE'>
+        <comment>enable for DTX uplink</comment>
+    </uint32>
+    <uint32 name='TxCodecMode' ckeywords='VOLATILE'>
+        <comment>AMR codec variables</comment>
+    </uint32>
+    <uint32 name='RxCodecMode' ckeywords='VOLATILE'></uint32>
+
+    <instance name='tx_modulation' type='SPP_MODULATION_TYPE'>
+        <comment>used for EGPRS only</comment>
+    </instance>
+    <instance name='rx_modulation' type='SPP_MODULATION_TYPE'></instance>
+    <instance name='tx_headertype' type='SPP_HEADER_TYPE' count='4'></instance>
+    <instance name='rx_headertype' type='SPP_HEADER_TYPE' count='4'></instance>
+    <instance name='curr_rx_headertype' type='SPP_HEADER_TYPE' count='4'></instance>
+    <instance name='prev_rx_headertype' type='SPP_HEADER_TYPE' count='4'></instance>
+    <uint8 name='egprs_rx_buffer_bmp'></uint8>
+
+    <ptr name='schedulerHook' type='void' ckeywords='VOLATILE'>
+        <comment>
+            Pointer to a function called during the idle time of
+            the BCPU scheduler.
+        </comment>
+    </ptr>
+    <ptr name='irqHook' type='void' ckeywords='VOLATILE'>
+        <comment>
+            Pointer to a function called by the BCPU IRQ handler.
+        </comment>
+    </ptr>
+
+    <uint32 name='dumpMask' ckeywords='VOLATILE'>
+        <comment>
+            Mask used to enable dump.
+        </comment>
+    </uint32>
+    <ptr name='dumpPtr' type='void' ckeywords='VOLATILE'>
+        <comment>
+            Pointer to a dump function.
+        </comment>
+    </ptr>
+    <ptr name='egprsIrBuffer' type='SPP_EGPRS_IR_BUF_T'>
+        <comment>
+            Pointer to the EGPRS IR buffer.
+        </comment>
+    </ptr>
+
+</typedef>
+
+<typedef name='SPC_CONTEXT_EXT_T'>
+    <uint8 name='rxQty'></uint8>
+    <uint8 name='frame_over'> </uint8>
+    <uint8 name='rx_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='sched_rx_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='sched_slot_count' ckeywords='VOLATILE'></uint8>
+    <uint8 name='rx_count_flag' ckeywords='VOLATILE'></uint8>
+</typedef>
+
+<cjoker>
+
+
+register SPC_CONTEXT_T* g_spcCtx asm("$16");
+EXPORT PROTECTED SPC_ITLV_BUFFERS_T g_spcItlvBufTab;
+EXPORT PROTECTED SPC_STATIC_BUFFERS_T g_spcStaticBufTab;
+
+</cjoker>
+</archive>

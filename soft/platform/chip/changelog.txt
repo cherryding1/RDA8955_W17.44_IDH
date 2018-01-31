@@ -1,0 +1,160 @@
+UNRELEASED chip trunk
+=====================
+  Compatibility, upgrade notes:
+    * 
+    * For the USB improvments, please use the SVC release v2.2.
+    * ####### Fixed regression - bad irq request config to BCPU causing crash in GPRS attach
+    * ####### Fixed monitoring corruption issue (present in all releases and branches!) - due to the previous fix of the AHB latency issue
+	* ####### Processing speed optimizations, allowing lower resource requests.
+
+  Changes:
+    * HAL : update assert management for coolwatcher, fix IT clear in calendar, RFSPI reorder the rfspi fifo setup sequence (stop the IFC channel before flushing the rfspi fifo)
+    * PAL : set the default stack clk to 26M, do not boost the BCPU clk for	PCH detection, new management of the latency issue, fix irq request config to BCPU causing crash in GPRS attach
+    * BCPU : the PCH detection function is optimized for speed, optimization of the FCCH detection patch, new management of the latency issue
+    * DEFS : enable the patched FCCH detection function optimized for speed
+    * HAL: Improved LPS calibration management.
+    * HAL: VOC clk switched of by default at boot, fixed COM1 management of the COMREGS driver.
+    * HAL (RFSPI): The mechanism to start the IFC on greenstone is modified to resolve the conflicts that can appear if the FINT and TCU1 have different priorities.
+    * HAL (AU): Removed dirty patch for reducing the audio noise using the bandgap start field.
+    * PAL: Separated clock resource management for the stack and for the BCPU processing.
+    * PAL, BCPU: Dummy PCH detection possible on every burst.
+    * BCPU: Dummy PCH detection, DSP_TASK_COMPLETE (COM1) IT generated after completion of all BCPU tasks of the current frame.
+    * BCPU, PATCH: Use optimized FCCH function instead of the one contained in the ROM.
+    * HAL: I2C: Fixed missing IRQ clear, thanks to Guoh remarks.
+    * HAL ANA AUDIO: Dirty workaround reducing the sensitivity to rf noise.
+    * BOOT: Added a mechanism for the Boot ROM and Boot Sector to inform CoolWatcher that the phone is executing the Boot Monitor. This is useful for to improve the stability (and to remove a bunch of sleep) in some CoolRuby scripts (fastpf, target executor, ramrun, etc).
+    * HAL, BOOT: Changed the USB vendor name from "Coolsand tech" to "Coolsand Technologies".
+
+Source delivery chip v4
+=======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/trunk             env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Sources/chip/releases/v4      platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk            platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * Same conditions as the release v3.
+
+  Changes:
+    * HAL: Added a function to check that the Serial Host event is fully transmitted.
+    * HAL: Fixed a bad buffer management in the USB Host Trace and a few other bugs, preventing the Trace Tool to configure the trace levels.
+    * HAL, PAL: Better system clock switch control.
+    * HAL: Added about 1754 bytes of HAL functions used by pal_gsmr.c in internal SRAM, to improve the performances.
+    * SX, HAL: Change the behaviour of the Raise. Use break 2 instead of break 1 for pal_SoftBreak. break 2 is now associated with hal_GdbBreakRaise. This will allow the raise the restart the system when the code is compiled in release mode.
+    * PAL: Various improvements on the RF SPI management (pal_Initialisation TCU and RFSPI clear, channel TC update bug).
+    * HAL:ANA_AUDIO: Use different gains for the left and right stereo analog gains.
+    * HAL: Added settings to handle DTX in DigRf.
+    * BOOT: Renamed boot_loader.h into boot_sector.h as this is what is actually called.
+    * HAL: Added auto switch trace path between Serial Host and USB Host, when the USB is plugged and Host USB is enabled.
+    * PAL, HAL: Modified a lot of stuff for Dual SIM. Still testing the SIMD implementation.
+    * BOOT, HAL: Forced monitor with generated internal clock, don't use clock detection as a way to know there is a dongle anymore. Still needs to be validated deeper.
+    * BOOT: Added the ISPI driver for Gallite.
+    * HAL: Various improvements related to Gallite FPGA tests only.
+
+Source delivery chip v3
+=======================
+  Workspace:
+    ^/modem2G/BJbranches/Total_integration/application      application
+    ^/Sources/env/releases/v2                               env
+    ^/Sources/platform/releases/v1                          platform
+    ^/modem2G/BJbranches/Total_integration/platform/base    platform/base
+    ^/Sources/chip/releases/v3                              platform/chip
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SERVICE}     ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk                                    platform/edrv
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/mdi     ${PLATFORM_SYSTEM}/mdi
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/stack   ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/releases/v1                               ${PLATFORM_SYSTEM}/svc
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/vpp     ${PLATFORM_SYSTEM}/vpp
+    ^/modem2G/BJbranches/Total_integration/platform_test    platform_test
+    ^/Sources/target/trunk                                  target
+    ^/Sources/toolpool/releases/v1                          toolpool
+
+  Compatibility, upgrade notes:
+    * To use this release, you need to have EDRV v2 or EDRV trunk.
+
+  Changes:
+    * HAL: Fixed a bug in the ACCO PLL enable and lock, in the case when the calibration init is not done. This will accelerate the start of the Fastpf.
+    * PAL: Added a fix for RfspiFifoFlush on asynchronious pal_Initialisation.
+    * HAL: Changed the way the IFC TC is written by the RF SPI driver, in the hal_RfspiFillFifo().
+    * HAL: Fixed a bug in the way the RF SPI driver updates its clock divider in case of system frequency change.
+    * PAL: Automatic RF disable mechanism to allow FlightMode (using pal_FintSuspend/pal_FintResume API, so API_START_REQ/API_STOP_REQ will automatically control the flight mode). Also reordered initialisation to ensure LPS is configured even if pal_Initialisation is not called.
+    * HAL: System frequency no longer appears to be 32kHz when no resource is taken, in this case, returns 26MHz to ensure the divider calculations are done.
+    * PAL: Added a flag PAL_SIMD_IMPLEMENTATION to enable the new implementation of the PAL Dual SIM, which uses EDRV SIMD instead of EDRV DUALSIM plus HAL. Without this flag, PAL uses the same implementation as the Total Integration branch.
+    * HAL: In the hal_SysRestart() function, added a full USB power cycle (power off, wait, power on of the USB LDO thanks to PMD).
+    * HAL: Added a hal_SysSoftReset() function, to only initiate a soft reset.
+    * ALL: Minor fixes for GCC4 preparation.
+    * ALL: Modifications related to Gallite FPGA tests.
+    * HAL: Disabled the ACCO PLL power optimisation: the system always uses Fast PLL.
+
+Source delivery chip v2
+=======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v2       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Sources/chip/releases/v2      platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk            platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * Integrated pal module in chip.
+      Modules and Tests must be updated to reflect this change:
+        * in LOCAL_API_DEPENDS variables platform/pal become platform/chip/pal
+        * in LOCAL_MODULE_DEPENDS variables, platform/pal should be removed
+        (as tests normally already depends on platform/chip)
+    * USB workaround disabled by default, uctls should be opened soon in the boot process (before any long action like mounting a file system, and before starting the tasks)
+    * require EDRV including simd
+    * change on linker script require ENV changes (at least v2 as stated in worksapce above).
+    * Should be mostly compatible with Total_integration
+
+  Changes:
+    * Integrated pal module in chip.
+    * USB workaround disabled by default.
+      Sample code:
+        // Start the USB services, by default in USB Trace mode.
+        #if (CHIP_HAS_USB == 1)
+            uctls_Open(testMbx, 0x0000, 0x0000, 0x0000, "USB Controller 1.0", FALSE);
+            uctls_SetMode(UCTLS_ID_TRACE);
+        #endif // (CHIP_HAS_USB == 1)
+    * key handler for coolwatcher's virtual keyboard.
+    * pal sim use simd.
+
+Source delivery chip v1
+=======================
+  Workspace:
+    ^/Sources/modem2G/trunk/application     application
+    ^/Sources/modem2G/trunk/env             env
+    ^/Sources/modem2G/trunk/mdi             mdi
+    ^/Sources/modem2G/trunk/platform        platform
+    ^/Sources/chip/releases/v1              platform/chip
+    ^/Sources/edrv/trunk                    platform/edrv
+    ^/Sources/stack/trunk                   ${PLATFORM_SYSTEM}/stack
+    ^/Sources/modem2G/trunk/platform_test   platform_test
+    ^/Sources/target/trunk                  target
+    ^/Sources/toolpool/trunk                toolpool
+
+  Compatibility, upgrade notes:
+    * update coolxml tool
+
+  Changes:
+    * First delivery done (mainly to test delivery system)
+

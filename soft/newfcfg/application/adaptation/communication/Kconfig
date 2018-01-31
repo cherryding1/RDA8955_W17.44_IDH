@@ -1,0 +1,29 @@
+comment "--- application/communication ---"
+
+config __DCS1800__
+    option skipmk
+    bool "DCS1800"
+    default y
+    ---help---
+        To support RF band DCS1800.
+
+config __EGSM900__
+    option skipmk
+    bool "EGSM900"
+    default y
+    ---help---
+        To support RF band EGSM900.
+
+config __GSM850__
+    option skipmk
+    bool "GSM850"
+    default y
+    ---help---
+        To support RF band GSM850.
+
+config __PCS1900__
+    option skipmk
+    bool "PCS1900"
+    default y
+    ---help---
+        To support RF band PCS1900.

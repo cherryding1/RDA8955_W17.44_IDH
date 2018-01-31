@@ -1,0 +1,43 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+#ifndef __SXS_SPY_HP__
+#define __SXS_SPY_HP__
+
+#include "sxs_type.h"
+#include "sxr_cnf.h"
+
+
+typedef struct
+{
+    const ascii  *Name;
+    const ascii *const *Str;
+    u16           StrLen;
+    s16          *Data;
+    s16          *LastData;
+    u32           DispatchFields;
+    void        (*DispatchFunction)(u8, u8, u16 *);
+    u8            DispatchDataOffset;
+    u8            Enable;
+    u8            Size;
+    u8            UsrId;
+} sxs_SpyDesc_t;
+
+struct
+{
+    sxs_SpyDesc_t Desc [SXS_SPY_NB_MAX];
+    u8 Idx;
+    u8 CurIdx;
+} sxs_Spy;
+
+#endif
+

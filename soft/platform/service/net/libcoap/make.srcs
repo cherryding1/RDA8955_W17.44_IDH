@@ -1,0 +1,38 @@
+
+SOURCE_FILES := \
+./obgm_libcoap/examples/client.c \
+./obgm_libcoap/examples/coap_list.c \
+./obgm_libcoap/src/coap_mem.c \
+./obgm_libcoap/src/block.c \
+./obgm_libcoap/src/option.c \
+./obgm_libcoap/src/subscribe.c \
+./obgm_libcoap/src/uri.c \
+./obgm_libcoap/src/coap_time.c \
+./obgm_libcoap/src/net.c \
+./obgm_libcoap/src/resource.c \
+./obgm_libcoap/src/pdu.c \
+./obgm_libcoap/src/async.c \
+./obgm_libcoap/src/coap_debug.c \
+./obgm_libcoap/src/address.c \
+./obgm_libcoap/src/encode.c \
+./obgm_libcoap/src/hashkey.c \
+./obgm_libcoap/src/str.c \
+./obgm_libcoap/src/coap_keystore.c \
+./obgm_libcoap/src/coap_dtls.c \
+./obgm_libcoap/src/coap_event.c \
+./obgm_libcoap/src/platform/posix/coap_io.c \
+./obgm_libcoap/src/platform/posix/run.c \
+./obgm_libcoap/src/platform/posix/prng.c \
+
+#./obgm_libcoap/examples/coap-rd.c \
+#./obgm_libcoap/examples/coap-server.c \
+#./obgm_libcoap/examples/tiny.c \
+
+
+SOURCE_INCLUDE := \
+	${LOCAL_NAME}/src/obgm_libcoap/include/coap \
+	${LOCAL_NAME}/src/obgm_libcoap/examples \
+	${LOCAL_NAME}/src/obgm_libcoap \
+	${LOCAL_NAME}/../tinydtls/src/tinydtls
+
+

@@ -1,0 +1,525 @@
+comment "--- platform/edrv/memd ---"
+
+choice
+    option skipmk
+    option skiph
+    prompt "FLASH model"
+    default FLSH_MODEL_SPI32M
+    ---help---
+        It defines Flash Model for integrated Chip.
+
+    config FLSH_MODEL_SPI32M
+        option skipmk
+        option skiph
+        bool "flsh_spi32m"
+endchoice
+
+config FLSH_MODEL
+    option skiph
+    string
+    default "flsh_spi32m" if FLSH_MODEL_SPI32M
+
+config FLSH_IF
+    option skiph
+    string
+    default spi
+    ---help---
+        It defines Flash type.
+
+config __PRJ_WITH_SPIFLSH__
+    option skipmk
+    bool
+    default y
+    ---help---
+        It defines if spi flash.
+
+config RAM_SIZE_FLAG
+    option skiph
+    string "Ram Size"
+    default "__64Mbit__" if CT_ASIC_8809
+    default "__32Mbit__" if CT_ASIC_8955
+    default "__32Mbit__" if CT_ASIC_8909
+
+choice
+    option skipmk
+    option skiph
+    prompt "EBC CLK CFG"
+    default EBC_CLK_CFG__78MHz__
+    ---help---
+        EBC CLK cfg:__39MHz__/__52MHz__/__78MHz__/__104MHz__/__125MHz__/__139MHz__/__156MHz__/__178MHz__/__208MHz__/__250MHz__/__312MHz__
+
+    config EBC_CLK_CFG__39MHz__
+        option skipmk
+        option skiph
+        bool    "__39MHz__"
+
+    config EBC_CLK_CFG__52MHz__
+        option skipmk
+        option skiph
+        bool    "__52MHz__"
+
+    config EBC_CLK_CFG__78MHz__
+        option skipmk
+        option skiph
+        bool    "__78MHz__"
+
+    config EBC_CLK_CFG__104MHz__
+        option skipmk
+        option skiph
+        bool    "__104MHz__"
+
+    config EBC_CLK_CFG__125MHz__
+        option skipmk
+        option skiph
+        bool    "__125MHz__"
+
+    config EBC_CLK_CFG__139MHz__
+        option skipmk
+        option skiph
+        bool    "__139MHz__"
+
+    config EBC_CLK_CFG__156MHz__
+        option skipmk
+        option skiph
+        bool    "__156MHz__"
+
+    config EBC_CLK_CFG__178MHz__
+        option skipmk
+        option skiph
+        bool    "__178MHz__"
+
+    config EBC_CLK_CFG__208MHz__
+        option skipmk
+        option skiph
+        bool    "__208MHz__"
+
+    config EBC_CLK_CFG__250MHz__
+        option skipmk
+        option skiph
+        bool    "__250MHz__"
+
+    config EBC_CLK_CFG__312MHz__
+        option skipmk
+        option skiph
+        bool    "__312MHz__"
+
+endchoice
+
+config SYS_MEMD_EBC_CLK
+    option skiph
+    string
+    default __39MHz__ if EBC_CLK_CFG__39MHz__
+    default __52MHz__ if EBC_CLK_CFG__52MHz__
+    default __78MHz__ if EBC_CLK_CFG__78MHz__
+    default __104MHz__ if EBC_CLK_CFG__104MHz__
+    default __125MHz__ if EBC_CLK_CFG__125MHz__
+    default __139MHz__ if EBC_CLK_CFG__139MHz__
+    default __156MHz__ if EBC_CLK_CFG__156MHz__
+    default __178MHz__ if EBC_CLK_CFG__178MHz__
+    default __208MHz__ if EBC_CLK_CFG__208MHz__
+    default __250MHz__ if EBC_CLK_CFG__250MHz__
+    default __312MHz__ if EBC_CLK_CFG__312MHz__
+    ---help---
+        SPI Flash SPI CLK cfg:__52MHz__/__78MHz__/__104MHz__/__156MHz__
+
+choice
+    option skipmk
+    option skiph
+    prompt "FLSH SPI CLK"
+    default FLSH_SPI_CLK__104MHz__
+
+    config FLSH_SPI_CLK__52MHz__
+        option skipmk
+        option skiph
+        bool    "__52MHz__"
+
+    config FLSH_SPI_CLK__78MHz__
+        option skipmk
+        option skiph
+        bool    "__78MHz__"
+
+    config FLSH_SPI_CLK__104MHz__
+        option skipmk
+        option skiph
+        bool    "__104MHz__"
+
+    config FLSH_SPI_CLK__156MHz__
+        option skipmk
+        option skiph
+        bool    "__156MHz__"
+
+endchoice
+
+config SYS_MEMD_FLSH_SPI_CLK
+    option skiph
+    string
+    default __52MHz__ if FLSH_SPI_CLK__52MHz__
+    default __78MHz__ if FLSH_SPI_CLK__78MHz__
+    default __104MHz__ if FLSH_SPI_CLK__104MHz__
+    default __156MHz__ if FLSH_SPI_CLK__156MHz__
+
+
+config SET_SYSCLK_TO_STABLE_VALUE
+    option skipmk
+    bool "SET SYSCLK TO STABLE VALUE"
+    default n
+    ---help---
+        to be deleted.
+
+config MEMD_RAM_IS_ADMUX
+    option skipmk
+    bool "MEMD_RAM_IS_ADMUX"
+    default y if CT_ASIC_8809
+    default n if CT_ASIC_8955
+    default n if CT_ASIC_8909
+    ---help---
+        Ram is ADMUX or not.
+
+config MEMD_RAM_IS_BURST
+    option skipmk
+    bool "MEMD_RAM_IS_BURST"
+    default y if CT_ASIC_8809
+    default n if CT_ASIC_8955
+    default n if CT_ASIC_8909
+    ---help---
+        Ram support burst mode or not
+
+config RDA_PSRAM_ADAPTIVE
+    option skipmk
+    bool "RDA_PSRAM_ADAPTIVE"
+    default y if CT_ASIC_8809
+    default n if CT_ASIC_8955
+    default n if CT_ASIC_8909
+    ---help---
+        auto identify kinds of psram, don't enbale this when use DDR(USE_OPIDDR_PSRAM)
+
+config ADJUST_FLSH_CLK_DYNC
+    option skipmk
+    bool "ADJUST_FLSH_CLK_DYNC"
+    default y if CT_ASIC_8955
+    default n if CT_ASIC_8809
+    default n if CT_ASIC_8909
+    ---help---
+        flash support adjust clock dynamically.
+
+config FPGA_8955_DEBUG_TEMP
+    option skipmk
+    bool "FPGA_8955_DEBUG_TEMP"
+    depends on fpga
+    default y if CT_ASIC_8955
+    default n
+
+config USE_OPIDDR_PSRAM
+    option skipmk
+    bool "USE OPI DDR PSRAM"
+    default n
+
+#config _DYNAMIC_DDR_FREQ_
+#   option skipmk
+#   bool "DYNAMIC_DDR_FREQ"
+#   default y if CT_ASIC_8955
+#   default n if CT_ASIC_8809
+
+choice
+    option skiph
+    option skipmk
+    prompt "SYS MMI CLK"
+    default SYS_MMI_CLK__104MHz__
+    ---help---
+        SYS MMI CLK cfg: __104MHz__/__139MHz__/__156MHz__/__178MHz__/_208MHz__/_250MHz__/_312MHz__
+
+    config SYS_MMI_CLK__104MHz__
+        option skipmk
+        option skiph
+        bool    "__104MHz__"
+
+    config SYS_MMI_CLK__139MHz__
+        option skipmk
+        option skiph
+        bool    "__139MHz__"
+
+    config SYS_MMI_CLK__156MHz__
+        option skipmk
+        option skiph
+        bool    "__156MHz__"
+
+    config SYS_MMI_CLK__178MHz__
+        option skipmk
+        option skiph
+        bool    "__178MHz__"
+
+    config SYS_MMI_CLK__208MHz__
+        option skipmk
+        option skiph
+        bool    "__208MHz__"
+
+    config SYS_MMI_CLK__250MHz__
+        option skipmk
+        option skiph
+        bool    "__250MHz__"
+
+    config SYS_MMI_CLK__312MHz__
+        option skipmk
+        option skiph
+        bool    "__312MHz__"
+
+endchoice
+
+config SYS_MMI_CLK
+    option skiph
+    string
+    default __104MHz__ if SYS_MMI_CLK__104MHz__
+    default __139MHz__ if SYS_MMI_CLK__139MHz__
+    default __156MHz__ if SYS_MMI_CLK__156MHz__
+    default __178MHz__ if SYS_MMI_CLK__178MHz__
+    default __208MHz__ if SYS_MMI_CLK__208MHz__
+    default __250MHz__ if SYS_MMI_CLK__250MHz__
+    default __312MHz__ if SYS_MMI_CLK__312MHz__
+    ---help---
+        SYS MMI CLK cfg: __104MHz__/__139MHz__/__156MHz__/__178MHz__/_208MHz__/_250MHz__/_312MHz__
+
+config RAM_CLK_IS_39M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__39MHz__
+    default n
+
+config RAM_CLK_IS_52M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__52MHz__
+    default n
+
+config RAM_CLK_IS_78M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__78MHz__
+    default n
+
+config RAM_CLK_IS_104M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__104MHz__
+    default n
+
+config RAM_CLK_IS_125M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__125MHz__
+    default n
+
+config RAM_CLK_IS_139M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__139MHz__
+    default n
+
+config RAM_CLK_IS_156M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__156MHz__
+    default n
+
+config RAM_CLK_IS_178M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__178MHz__
+    default n
+
+config RAM_CLK_IS_208M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__208MHz__
+    default n
+
+config RAM_CLK_IS_250M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__250MHz__
+    default n
+
+config RAM_CLK_IS_312M
+    option skipmk
+    bool
+    default y if EBC_CLK_CFG__312MHz__
+    default n
+
+config SPI_FLSH_52M
+    option skipmk
+    bool
+    default y if FLSH_SPI_CLK__52MHz__
+    default n
+
+config SPI_FLSH_78M
+    option skipmk
+    bool
+    default y if FLSH_SPI_CLK__78MHz__
+    default n
+
+config SPI_FLSH_89M
+    option skipmk
+    bool
+    default y if FLSH_SPI_CLK__89MHz__
+    default n
+
+config SPI_FLSH_104M
+    option skipmk
+    bool
+    default y if FLSH_SPI_CLK__104MHz__
+    default n
+
+config MMI_CLK_IS_104M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__104MHz__
+    default n
+
+config MMI_CLK_IS_139M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__139MHz__
+    default n
+
+config MMI_CLK_IS_156M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__156MHz__
+    default n
+
+config MMI_CLK_IS_178M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__178MHz__
+    default n
+
+config MMI_CLK_IS_208M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__208MHz__
+    default n
+
+config MMI_CLK_IS_250M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__250MHz__
+    default n
+
+config MMI_CLK_IS_312M
+    option skipmk
+    bool
+    default y if SYS_MMI_CLK__312MHz__
+    default n
+
+config __SPIFLSH_SUPPORT_SOFTRESET__
+    option skipmk
+    bool
+    default y
+    ---help---
+        SPI flash support reste by soft.
+
+comment "FLASH layout"
+
+config FLASH_SIZE
+    hex
+    prompt "Flash size"
+    default 0x400000 if FLSH_MODEL_SPI32M
+    ---help---
+        The total flash size.
+
+config FLASH_BOOT_OFFSET
+    hex
+    prompt "Flash boot offset"
+    default 0x0 if !FOTA_SUPPORT
+    default 0x10000 if FOTA_SUPPORT
+    ---help---
+        When dual boot will be used, it can't be zero.
+        Otherwise, it must be zero.
+
+config FOTA_BACKUP_AREA_START
+    hex
+    prompt "FOTA backup area base"
+
+config FOTA_BACKUP_AREA_SIZE
+    hex
+    prompt "FOTA backup area size"
+    default 0x10000 if FOTA_SUPPORT
+    ---help---
+        FOTA backup area is reserved FLASH area used during FOTA
+        upgrade. FOTA backup area should be block (64K) aligned,
+        and the size should be one block.
+
+        When FOTA is not enabled, set size to zero and set base
+        to the base of next region.
+
+config SPIFFS_FLASH_START
+    hex
+    prompt "SPIFFS base"
+
+config SPIFFS_FLASH_SIZE
+    hex
+    prompt "SPIFFS size"
+    ---help---
+        When SPIFFS is enabled, base/size specifies the SPIFFS
+        area. The base and size should be sector (4K) aligned.
+
+        When SPIFFS is not enabled, set size to zero and set base
+        to the base of next region.
+
+config USER_DATA_BASE
+    hex
+    prompt "User data base"
+
+config USER_DATA_SIZE
+    hex
+    prompt "User data size"
+    ---help---
+        When VDS is enabled, base/size specifies the VDS
+        area. The base and size should be sector (4K) aligned.
+        And it should be large enough for TGT_DSM_PART_CONFIG.
+
+config CALIB_BASE
+    hex
+    prompt "CALIB base"
+    default 0x3FA000 if CT_ASIC_8809
+    default 0x3FA000 if CT_ASIC_8955
+    default 0x3F8000 if CT_ASIC_8909
+    ---help---
+        CALIB base in FLASH. It is the address which can be interpreted
+        by CALIB_BUFFER_T data structure
+
+config CALIB_RF2G_BASE
+    hex
+    prompt "CALIB base of 2g rf"
+    default 0x3FC000 if CT_ASIC_8809
+    default 0x3FC000 if CT_ASIC_8955
+    default 0x3FA000 if CT_ASIC_8909
+    ---help---
+        CALIB base of 2g rf in FLASH. The size if 8KB (2 sector)
+
+config CALIB_RFNB_BASE
+    hex
+    prompt "CALIB base of nb rf"
+    depends on CT_ASIC_8909
+    default 0x3FC000
+    ---help---
+        CALIB base of nbiot rf in FLASH. The size if 8KB (2 sector)
+
+config CALIB_SIZE
+    hex
+    prompt "CALIB size"
+    default 0x4000 if CT_ASIC_8809
+    default 0x4000 if CT_ASIC_8955
+    default 0x6000 if CT_ASIC_8909
+    ---help---
+        CALIB base in FLASH. It is the address which can be interpreted
+        by CALIB_BUFFER_T data structure
+
+config FACT_SETTINGS_BASE
+    hex
+    prompt "Factory area base"
+    default 0x3FE000
+
+config FACT_SETTINGS_SIZE
+    hex
+    prompt "Factory area size"
+    default 0x2000

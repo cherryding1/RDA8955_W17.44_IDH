@@ -1,0 +1,3 @@
+C_SRC := ${notdir ${wildcard src/*.c}}
+S_SRC :=
+

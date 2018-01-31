@@ -1,0 +1,41 @@
+%include
+{vppp_aec_asm_common.h,vppp_aec_asm_sections.h}
+
+%mode
+{AEC_HI:  vpp_aec_asm_common.c, vpp_aec_asm_hi.c}
+{AEC_BYE: vpp_aec_asm_common.c, vpp_aec_asm_bye.c}
+
+%start
+{0, 512}
+
+%map
+{	
+  COMMON_GLOBAL
+  {
+    vpp_aec_asm_common.global    
+  }
+  HI_GLOBAL
+  {
+    vpp_aec_asm_hi.global
+  }
+  BYE_GLOBAL
+  {
+    vpp_aec_asm_bye.global
+  }
+  .=END(BYE_GLOBAL);
+  HI_LOCAL
+  {
+    vpp_aec_asm_hi.local
+  }
+  .=END(BYE_GLOBAL);
+  BYE_LOCAL
+  {
+    vpp_aec_asm_bye.local
+  } 
+  .=MAX(END(HI_LOCAL),END(BYE_LOCAL));  
+  COMMON_LOCAL
+  {
+    vpp_aec_asm_common.local   
+  }   
+}
+

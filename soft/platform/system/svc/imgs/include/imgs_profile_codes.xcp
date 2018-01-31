@@ -1,0 +1,10 @@
+<module name="IMGS">
+    <fn name="imgs_EncodeImageFile"     id="0x1000" group="IMGS API" />
+    <fn name="imgs_EncodeImageBuffer"   id="0x1001" group="IMGS API" />
+    <fn name="imgs_DecodeImageFile"     id="0x1002" group="IMGS API" />
+    <fn name="imgs_DecodeImageBuffer"   id="0x1003" group="IMGS API" />
+    <fn name="imgs_FreeFbw"             id="0x1004" group="IMGS API" />
+    <fn name="imgs_SimilarizeImage"     id="0x1005" group="IMGS API" />
+    <fn name="imgs_EncodeVideoFrame"     id="0x1006" group="IMGS API" />
+</module>
+

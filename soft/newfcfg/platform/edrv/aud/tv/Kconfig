@@ -1,0 +1,12 @@
+comment "--- platform/edrv/aud/tv ---"
+
+if ANALOG_TV_SUPPORT
+
+config TV_USING_I2S
+	option skiph
+	bool "tv using I2S"
+	default y 
+	---help---
+		If 5888h or 5888he then USING I2S need set 0
+
+endif

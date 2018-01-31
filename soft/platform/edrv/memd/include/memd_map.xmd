@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+    
+    <comment>
+        This file contains the portion of the module's memory map that will be
+        accessible through CoolWatcher (or any CoolXml tool). It is also used
+        for the get version mechanism.
+    </comment>
+
+
+
+    
+
+    
+    <!-- Type used to define the accessible structures of the module. -->
+    <alias name="MEMD_BANK_ADDR_SIZE_T">
+        <uint32 name='unused' count='2'/>
+    </alias>
+
+    <typedef name="MEMD_BANK_LAYOUT_T">
+        <uint32 name='bankStartAddr'>
+            <comment>Start address of the bank</comment>
+        </uint32>
+        <instance name="sectorLayoutTable" type="MEMD_BANK_ADDR_SIZE_T" count="3">
+            <comment>Composition of the bank, which can be made of up to 3 different sector
+                types. One line is for one sector type. The first column is the number
+                of sectors of this type and the second column is the size of this type
+                of sector.</comment>
+        </instance>
+    </typedef>
+
+    <typedef name="MEMD_FLASH_LAYOUT_T">
+        <comment>This structure describes a flash through its different banks.</comment>
+        <uint8 name="numberOfBank" ckeywords="CONST">
+            <comment>Number of banks in the flash</comment>
+        </uint8>
+        <ptr name="bankLayout" type="MEMD_BANK_LAYOUT_T" ckeywords="CONST">
+            <comment>Table of pointers to the structures describing the different banks</comment>
+        </ptr>
+        <uint32 name="fullSize" ckeywords="CONST">
+            <comment>Size of the flash in bytes</comment>
+        </uint32>
+        <uint32 name="userDataBase" ckeywords="CONST">
+            <comment>User Data Field Base Address</comment>
+        </uint32>
+        <uint32 name="userDataSize" ckeywords="CONST">
+            <comment>User Data Field Size</comment>
+        </uint32>
+        <uint32 name="userDataSectorLogicalBlockSize" ckeywords="CONST">
+            <comment>User Data Sector Logical Block Size</comment>
+        </uint32>
+    </typedef>
+
+   <typedef name="MEMD_MAP_ACCESS_T">
+        <comment>
+            Type used to define the accessible structures of the module.
+        </comment>
+        <uint32 name="ramPhySize"/>
+        <uint32 name="calibBase"/>
+        <uint32 name="calibSize"/>
+        <uint32 name="calibRfBase"/>
+        <uint32 name="factBase"/>
+        <uint32 name="factSize"/>
+        <ptr type="MEMD_FLASH_LAYOUT_T" name="flashLayout"/>
+        <uint32 name="flashSize"/>
+        <uint32 name="userBase"/>
+        <uint32 name="userSize"/>
+   </typedef>
+
+   <cjoker>
+
+// =============================================================================
+// memd_RegisterYourself
+// -----------------------------------------------------------------------------
+/// This function registers the module itself to HAL so that the version and
+/// the map accessor are filled. Then, the CSW get version function and the
+/// CoolWatcher get version command will work.
+// =============================================================================
+PUBLIC VOID memd_RegisterYourself(VOID);
+
+    </cjoker>
+
+</archive>

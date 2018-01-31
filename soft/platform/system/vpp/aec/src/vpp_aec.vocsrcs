@@ -1,0 +1,15 @@
+V_SRC = \
+src/vpp_aec_asm_bye.c\
+src/vpp_aec_asm_common.c\
+src/vpp_aec_asm_hi.c\
+src/vppp_aec_asm_common.h\
+src/vppp_aec_asm_sections.h\
+/cygdrive/d/projects/gallite_trunk/soft/platform/chip/regs/gallite/include/voc_ram.h \
+
+V_OBJ = \
+src/vpp_aec_asm_bye.tab\
+src/vpp_aec_asm_common.tab\
+src/vpp_aec_asm_hi.tab\
+src/vppp_aec_asm_map.h \
+src/vppp_aec_map.h \
+src/vpp_aec.vocsrcs

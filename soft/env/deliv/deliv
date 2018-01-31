@@ -1,0 +1,12 @@
+#!/usr/bin/ruby
+# Delivery script for coolsand modules.
+# See DELIV::Deliv for documentation
+# or run with help parameter
+
+#dependencies
+# add /env/deliv/ to the ruby search path
+$:.unshift(ENV['SOFT_WORKDIR']+'/env/deliv/')
+require 'delivlib.rb'
+
+DELIV::main
+

@@ -1,0 +1,144 @@
+<archive>
+<!-- Generated automatically by voc_h2xmd.rb -->
+<var name='RAM_X_BEGIN_ADDR' value='VOC_RAM_BASE'/>
+<var name='RAM_Y_BEGIN_ADDR' value='VOC_RAM_BASE+0x8000'/>
+<var name='COMMON_GLOBAL_X_SIZE' value='296'/>
+<var name='COMMON_GLOBAL_Y_SIZE' value='12'/>
+<var name='HI_GLOBAL_X_SIZE' value='4238'/>
+<var name='HI_GLOBAL_Y_SIZE' value='0'/>
+<var name='COMMON_LOCAL_X_SIZE' value='0'/>
+<var name='COMMON_LOCAL_Y_SIZE' value='0'/>
+<var name='HI_LOCAL_X_SIZE' value='0'/>
+<var name='HI_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_GLOBAL_Y_BEGIN_ADDR' value='(0 + RAM_Y_BEGIN_ADDR)'/>
+<var name='HI_GLOBAL_X_BEGIN_ADDR' value='(296 + RAM_X_BEGIN_ADDR)'/>
+<var name='HI_GLOBAL_Y_BEGIN_ADDR' value='(12 + RAM_Y_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_X_BEGIN_ADDR' value='(4534 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_Y_BEGIN_ADDR' value='(12 + RAM_Y_BEGIN_ADDR)'/>
+<var name='HI_LOCAL_X_BEGIN_ADDR' value='(4534 + RAM_X_BEGIN_ADDR)'/>
+<var name='HI_LOCAL_Y_BEGIN_ADDR' value='(12 + RAM_Y_BEGIN_ADDR)'/>
+<typedef name='t_VPP_MORPHVOICE_VPP_HELLO_CONST_STRUCT'>
+    <int32 name='VPP_HELLO_CONST_SAYS_HI' />
+    <int32 name='VPP_HELLO_CONST_SAYS_BYE' />
+</typedef>
+<instance name='VPP_HELLO_CONST_STRUCT' type='t_VPP_MORPHVOICE_VPP_HELLO_CONST_STRUCT' address='(0 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_COS_TABLE_ADDR'>
+    <int16 name='unused' count='129'/>
+</alias>
+<instance name='COS_TABLE_ADDR' type='a_VPP_MORPHVOICE_COS_TABLE_ADDR' address='(4 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TAN_TABLE_ADDR'>
+    <int16 name='unused' count='33'/>
+</alias>
+<instance name='TAN_TABLE_ADDR' type='a_VPP_MORPHVOICE_TAN_TABLE_ADDR' address='(133 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingSumPhase_ADDR'>
+    <int16 name='unused' count='129'/>
+</alias>
+<instance name='ingSumPhase_ADDR' type='a_VPP_MORPHVOICE_ingSumPhase_ADDR' address='(166 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_gRover_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='gRover_ADDR' type='a_VPP_MORPHVOICE_gRover_ADDR' address='(295 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_MORPHVOICE_VPP_HELLO_CFG_STRUCT'>
+    <int16 name='GLOBAL_MODE' />
+    <int16 name='GLOBAL_RESET' />
+    <int16 name='PITCH_SHIFT_ADDR' />
+    <int16 name='RESEVER10_ADDR' />
+</typedef>
+<instance name='VPP_HELLO_CFG_STRUCT' type='t_VPP_MORPHVOICE_VPP_HELLO_CFG_STRUCT' address='(0 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_MORPHVOICE_VPP_HELLO_STATUS_STRUCT'>
+    <int16 name='GLOBAL_USED_MODE' />
+    <int16 name='GLOBAL_ERR_STATUS' />
+    <int32 name='GLOBAL_HELLO_STATUS' />
+</typedef>
+<instance name='VPP_HELLO_STATUS_STRUCT' type='t_VPP_MORPHVOICE_VPP_HELLO_STATUS_STRUCT' address='(4 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_MORPHVOICE_VPP_HELLO_CODE_CFG_STRUCT'>
+    <int32 name='GLOBAL_HI_CODE_PTR' />
+    <int32 name='GLOBAL_CONST_PTR' />
+</typedef>
+<instance name='VPP_HELLO_CODE_CFG_STRUCT' type='t_VPP_MORPHVOICE_VPP_HELLO_CODE_CFG_STRUCT' address='(8 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/_COMMON_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_gInFIFO_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='gInFIFO_ADDR' type='a_VPP_MORPHVOICE_gInFIFO_ADDR' address='(0 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_gOutFIFO_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='gOutFIFO_ADDR' type='a_VPP_MORPHVOICE_gOutFIFO_ADDR' address='(256 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingLastPhase_ADDR'>
+    <int16 name='unused' count='130'/>
+</alias>
+<instance name='ingLastPhase_ADDR' type='a_VPP_MORPHVOICE_ingLastPhase_ADDR' address='(512 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingOutputAccum_ADDR'>
+    <int16 name='unused' count='512'/>
+</alias>
+<instance name='ingOutputAccum_ADDR' type='a_VPP_MORPHVOICE_ingOutputAccum_ADDR' address='(642 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_FFT_INPUT_ADDRESS'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='FFT_INPUT_ADDRESS' type='a_VPP_MORPHVOICE_FFT_INPUT_ADDRESS' address='(1154 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_FFT_OUTPUT_ADDRESS'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='FFT_OUTPUT_ADDRESS' type='a_VPP_MORPHVOICE_FFT_OUTPUT_ADDRESS' address='(1410 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingFFTworksp_ADDRESS'>
+    <int16 name='unused' count='1024'/>
+</alias>
+<instance name='ingFFTworksp_ADDRESS' type='a_VPP_MORPHVOICE_ingFFTworksp_ADDRESS' address='(1666 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_sign_ADDRESS'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='sign_ADDRESS' type='a_VPP_MORPHVOICE_sign_ADDRESS' address='(2690 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP_UR_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP_UR_ADDRESS' type='a_VPP_MORPHVOICE_TEMP_UR_ADDRESS' address='(2692 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP_UI_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP_UI_ADDRESS' type='a_VPP_MORPHVOICE_TEMP_UI_ADDRESS' address='(2693 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP_LE2_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP_LE2_ADDRESS' type='a_VPP_MORPHVOICE_TEMP_LE2_ADDRESS' address='(2694 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP_LE_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP_LE_ADDRESS' type='a_VPP_MORPHVOICE_TEMP_LE_ADDRESS' address='(2695 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_WR_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='WR_ADDRESS' type='a_VPP_MORPHVOICE_WR_ADDRESS' address='(2696 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_WI_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='WI_ADDRESS' type='a_VPP_MORPHVOICE_WI_ADDRESS' address='(2697 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP_ADDR_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP_ADDR_ADDRESS' type='a_VPP_MORPHVOICE_TEMP_ADDR_ADDRESS' address='(2698 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_TEMP1_ADDR_ADDRESS'>
+    <int16 name='unused' />
+</alias>
+<instance name='TEMP1_ADDR_ADDRESS' type='a_VPP_MORPHVOICE_TEMP1_ADDR_ADDRESS' address='(2699 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingAnaMagn_ADDRESS'>
+    <int16 name='unused' count='512'/>
+</alias>
+<instance name='ingAnaMagn_ADDRESS' type='a_VPP_MORPHVOICE_ingAnaMagn_ADDRESS' address='(2700 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingAnaFreq_ADDRESS'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='ingAnaFreq_ADDRESS' type='a_VPP_MORPHVOICE_ingAnaFreq_ADDRESS' address='(3212 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingSynFreq_ADDR'>
+    <int16 name='unused' count='256'/>
+</alias>
+<instance name='ingSynFreq_ADDR' type='a_VPP_MORPHVOICE_ingSynFreq_ADDR' address='(3468 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_ingSynMagn_ADDRESS'>
+    <int16 name='unused' count='512'/>
+</alias>
+<instance name='ingSynMagn_ADDRESS' type='a_VPP_MORPHVOICE_ingSynMagn_ADDRESS' address='(3724 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+<alias name='a_VPP_MORPHVOICE_GINOUT_ADDR_ADDRESS'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='GINOUT_ADDR_ADDRESS' type='a_VPP_MORPHVOICE_GINOUT_ADDR_ADDRESS' address='(4236 + HI_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_MORPHVOICE/HI_GLOBAL'/>
+</archive>

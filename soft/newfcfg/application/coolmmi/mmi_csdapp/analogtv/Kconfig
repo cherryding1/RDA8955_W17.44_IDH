@@ -1,0 +1,20 @@
+comment "--- application/coolmmi/mmi_csdapp/analogtv ---"
+
+config ANALOG_TV_SUPPORT
+	option skiph
+	bool "Analog TV"
+	default n
+	---help---
+		This option enables analog TV support. 
+
+config __MMI_ANALOGTV__
+	option skipmk
+	def_bool y if ANALOG_TV_SUPPORT
+	def_bool n
+
+config ANALOG_TV_SUPPORT_MCP_LOCK
+	option skipmk
+	bool "ATV support mcp lock"
+	depends on ANALOG_TV_SUPPORT
+	def_bool y
+

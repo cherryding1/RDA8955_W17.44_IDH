@@ -1,0 +1,75 @@
+<module name="VPP_FR">
+        <fn name='Gsm_Coder' id='0x532'/>
+        <fn name='Gsm_Decoder' id='0x533'/>
+        <fn name='gsm_create' id='0x534'/>
+        <fn name='Postprocessing' id='0x535'/>
+        <fn name='dtx_init' id='0x536'/>
+        <fn name='tx_dtx' id='0x537'/>
+        <fn name='rx_dtx' id='0x538'/>
+        <fn name='pseudonoise' id='0x539'/>
+        <fn name='sid_frame_detection' id='0x540'/>
+        <fn name='interpolate_CN_LARc' id='0x541'/>
+        <fn name='interpolate_CN_param' id= '0x542'/>
+        <fn name='decoder_homing' id= '0x543' />
+        <fn name='gsm_decode' id= '0x544' />
+        <fn name='lost_frame_process' id= '0x545' />
+        <fn name='CN_paramer' id= '0x546' />
+        <fn name='silence_frame_paramer' id= '0x547' />
+        <fn name='gsm_encode' id= '0x548' />
+        <fn name='gsm_explode' id= '0x549' />
+        <fn name='gsm_implode' id= '0x550' />
+        <fn name='gsm_option' id= '0x551' />
+        <fn name='umul_tbl' id= '0x552' />
+        <fn name='LTP_parameters' id='0x553' />
+        <fn name='fast_LTP_prm' id='0x554' />
+        <fn name='lng_analysis' id='0x555' />
+        <fn name='lng_predictor' id='0x556' />
+        <fn name='lng_synth_filter' id='0x557' />
+        <fn name='autocorrelation' id= '0x558' />
+        <fn name='fast_autocorrelation' id='0x559' />
+        <fn name='reflection_coefficients' id='0x560' />
+        <fn name='transformation_to_log_area_ratios' id='0x561' />
+        <fn name='quantization_and_coding' id='0x562' />
+        <fn name='GSM_LPC_Analysis' id='0x563' />
+        <fn name='GSM_Preprocess' id='0x564' />  
+        <fn name='Weighting_filter' id='0x565' />
+        <fn name='RPE_grid_selection' id= '0x566' />
+        <fn name='APCM_quantization_xmaxc_to_exp_mant' id='0x567' />
+        <fn name='Decoding_of_the_coded_Log_Area_Ratios ' id='0x568' />
+        <fn name='LARp_to_rp' id='0x569' />
+        <fn name='Short_term_analysis_filtering' id='0x570' />
+        <fn name='Fast_Short_term_analysis_filtering' id='0x571' />  
+        <fn name='Short_term_synthesis_filtering' id='0x572' />
+        <fn name='Fast_Short_term_synthesis_filtering' id='0x573' />
+        <fn name='Gsm_Short_Term_Analysis_Filter' id='0x574' />
+        <fn name='Gsm_Short_Term_Synthesis_Filter' id='0x575' />
+        <fn name='vad_computation' id='0x576' />  
+        <fn name='energy_computation' id='0x577' />
+        <fn name='acf_averaging' id='0x578' />
+        <fn name='predictor_values' id='0x579' />
+        <fn name='schur_recursion' id='0x580' />
+        <fn name='step_up' id='0x581' />
+        <fn name='compute_rav1' id='0x582' />
+        <fn name='spectral_comparison' id='0x583' />
+        <fn name='tone_detection' id='0x584' />
+        <fn name='threshold_adaptation' id='0x585' />
+        <fn name='periodicity_update' id='0x586' />
+        <fn name='APCM_quantization' id='0x587' />
+        <fn name='APCM_inverse_quantization' id='0x588' />
+        <fn name='RPE_grid_positioning' id='0x589' />
+        <fn name='Gsm_RPE_Encoding' id='0x590' />
+        <fn name='Gsm_RPE_Decoding' id='0x591' />
+            
+
+
+
+
+
+
+
+
+
+
+           
+
+</module>

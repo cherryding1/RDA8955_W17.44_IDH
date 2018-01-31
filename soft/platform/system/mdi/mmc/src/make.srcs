@@ -1,0 +1,90 @@
+# leave this comment and the last \ on last line for easier merge  
+C_SRC := \
+		 apbs.c \
+		 apfs.c \
+		 audio_api.c \
+		 fmrecord_api.c \
+		 lily_staMacLists.c \
+		 lily_stateMachine.c \
+		 mci.c \
+		 mmc.c \
+		 mmc_audio_overlay.c \
+		 mmc_audioamr.c \
+		 mmc_audiomp3stream.c \
+		 mmc_audiompeg.c \
+		 mmc_audiowav.c \
+		 mmc_camera.c \
+		 mmc_dafrtpss.c \
+		 mmc_jpegencVoc.c \
+		 mmc_sbc_drv.c \
+		 resamplesubs.c \
+		 sysmalloc.c \
+		 mmc_vdochat.c \
+		 mmc_audiovibrator.c \
+		 mmc_audiowma.c \
+		 mmc_adpcm.c \
+		 mmc_meitu.c \
+		 mmc_audiosco.c \
+		 mmc_amr_overlay.c \
+		 Mmc_sndRec.c\
+		 mpegheader_parser.c\
+
+S_SRC := \
+		 mid.S\
+ 
+ifeq "${CT_MODEM}" "1"
+C_SRC:=\
+       apbs.c\
+       mmc.c\
+       mci.c\
+       mmc_audio_overlay.c\
+       mmc_adpcm.c\
+       audio_api.c\
+       lily_stateMachine.c\
+       sysmalloc.c \
+       lily_staMacLists.c
+endif
+
+ifeq "$(strip ${MEDIA_MIDI_SUPPORT})" "y"
+C_SRC += mmc_midi.c
+endif
+
+ifeq "$(strip ${AT_CAMERA_SUPPORT})" "y"
+C_SRC += mmc_camera.c \
+       mmc_jpegencVoc.c
+endif
+
+
+ifeq "$(strip ${VIDEO_PLAYER_SUPPORT})" "y"
+    ifeq "$(strip ${MEDIA_VOCVID_SUPPORT})" "y"
+	C_SRC += video_api.c mmc_isom_video_ext.c mmc_isom_audio.c
+    else
+        C_SRC += mmc_video.c video_api.c mmc_isom_video.c
+    endif
+endif
+
+ifeq "$(strip ${SOUND_RECORDER_SUPPORT})" "y"
+C_SRC += record_api.c\
+					Mmc_sndRec.c\
+					resamplesubs.c
+endif
+ifeq "$(strip ${AT_SOUND_RECORDER_SUPPORT})" "y"
+C_SRC += record_api.c\
+					Mmc_sndRec.c\
+					mpegheader_parser.c\
+					resamplesubs.c
+ifeq "${CT_MODEM}" "1"
+C_SRC += mmc_audioamr.c mmc_audiompeg.c mmc_audiowav.c mmc_dafrtpss.c mmc_sbc_drv.c sysmalloc.c
+endif
+endif
+
+ifeq "$(strip ${VIDEO_RECORDER_SUPPORT})" "y" 
+C_SRC += mmc_videorecord.c  vidrec_api.c
+endif
+
+ifeq "$(strip ${ANALOG_TV_SUPPORT})" "y" 
+C_SRC += mmc_analogtv.c
+S_SRC += atvavg.S
+endif
+
+

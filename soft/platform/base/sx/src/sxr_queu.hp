@@ -1,0 +1,48 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+#include "sxs_type.h"
+#include "sxr_cnf.h"
+#include "sxr_queu.h"
+
+#define SXR_NO_QUEUE    0xFF
+#define SXR_NO_ENV      0xFFFF
+
+
+typedef struct
+{
+    u16 First;
+    u16 Last;
+    u16 Prev [SXR_NB_MAX_USR_QUEUE];
+    u16 Cur  [SXR_NB_MAX_USR_QUEUE];
+    u16 Load;
+#ifdef __SXR_QUEUE_DBG__
+    const ascii *Name;
+    void (*Print)(void *);
+#endif
+} sxr_QueueDesc_t;
+
+typedef struct
+{
+    u16 Next;
+    u16 Idx;
+    void *Data;
+} sxr_QueueEnv_t;
+
+
+sxr_QueueDesc_t sxr_QueueDesc [SXR_NB_MAX_QUEUE];
+sxr_QueueEnv_t  sxr_QueueEnv  [SXR_NB_QUEUE_ENVELOPPE];
+
+u8  sxr_QueueFreeDesc;
+u16 sxr_QueueFreeEnv;
+
+

@@ -1,0 +1,46 @@
+#!/bin/bash
+# check if there's any header generated from xml different from
+# the header actually in the chip directory
+
+xml_gendir=$ASIC_WORKDIR/chip/xml/gen/h
+chip_incdir=.
+
+if [ 0 = $# ]; then
+    # no argument: list all generated files not in chip/include
+    for full_header_file in $xml_gendir/*.h
+    do
+        header_file=${full_header_file##*/}
+        if (! $(diff $xml_gendir/${header_file} $chip_incdir/${header_file} --brief &> /dev/null))
+        then
+            echo "$header_file"
+        fi
+    done
+else
+    if [ "help" = $1 ]; then
+        # Display help message
+        echo "Using: $0  [help|meld|cp] [filename]"
+        echo "Without parameter: list generated files different from chip's one"
+        echo "With one of those files as a parameter: display the diff"
+        echo "With \"meld\" as a parameter: display the diff of the two directories in meld"
+        echo "With \"meld\" and one of those files as a parameter: display the diff in meld"
+        echo "With \"cp\" and one of those files as a parameter: copy the generated file to the soft header directory (!! overwriting any existing file)"
+    elif [ "meld" = $1 ]; then
+        # use meld !!
+        if [ 1 = $# ]; then
+            meld $xml_gendir $chip_incdir
+        else
+            meld $xml_gendir/$2 $chip_incdir/$2
+        fi
+    elif [ "cp" = $1 ]; then
+        # use meld !!
+        if [ 1 = $# ]; then
+            echo "cp need one parameter (only): the file to copy"
+        else
+            cp $xml_gendir/$2 $chip_incdir/$2
+        fi
+    else
+        # one file passed as argument: show the diff
+        diff $xml_gendir/$1 $chip_incdir/$1
+    fi
+
+fi

@@ -1,0 +1,8 @@
+# Assembly / C code
+S_SRC := 
+
+C_SRC := pm_mmi_stub.c
+
+LOCAL_API_DEPENDS += platform/edrv/pmd
+LOCAL_API_DEPENDS += platform/svc/uctls
+

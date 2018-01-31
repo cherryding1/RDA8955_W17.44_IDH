@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+    
+    <comment>
+        This file contains the portion of the module's memory map that will be
+        accessible through CoolWatcher (or any CoolXml tool). It is also used
+        for the get version mechanism.
+    </comment>
+
+    <!-- Add here some XMD files, to include some types. -->
+
+    <!-- Create here the types you want to access for this module. -->
+
+    <typedef name="stack_map_globals" rubyconstants="yes"></typedef>
+
+    <var name='STACK_AUTO_CALL_VALID' value='0xadf1900d'>
+        <comment>Validity pattern</comment>
+    </var>
+    
+    <typedef name='STACK_AUTO_CALL_T'>
+    	<uint32 name='validity'>
+    	  <comment>valid if it equals STACK_AUTO_CALL_VALID</comment>
+    	</uint32>
+    	<uint32 name='flag'>
+    	  <comment>auto call instruction bitset</comment>
+    	</uint32>
+    </typedef>
+    
+    <typedef  name="STACK_PROFILE_ON_BUFFER_T">
+        <comment>This is used only when the code is compiled with STACK_PROFILE_ON_BUFFER_T in debug.
+        </comment>
+        <uint32     name="buffer_start" display="hex">
+            <comment>
+                pxts buffer start address
+            </comment>
+        </uint32>
+        
+        <uint32     name="buffer_pos" display="hex">
+            <comment>
+                pxts buffer current position
+            </comment>
+        </uint32>
+        
+        <uint32     name="buffer_size" display="hex">
+            <comment>
+                pxts buffer size
+            </comment>
+        </uint32>                
+    </typedef>   
+           
+    <!-- Type used to define the accessible structures of the module. -->
+    <typedef name="STACK_MAP_ACCESS_T">
+        <comment>
+            Type used to define the accessible structures of the module.
+        </comment>
+        <!-- Add here the types you want the access. -->
+   		<ptr type="STACK_AUTO_CALL_T" name="autoCallStructPtr">
+   		</ptr>
+        <instance type="STACK_PROFILE_ON_BUFFER_T" name="ProfileOnBuffer"/>       		
+    </typedef>
+   
+    <cjoker>
+
+// =============================================================================
+// stack_GetAutoCallStruct
+// -----------------------------------------------------------------------------
+/// This function get the auto call structure pointer from the map accessor.
+// =============================================================================
+PUBLIC STACK_AUTO_CALL_T* stack_GetAutoCallStruct(VOID);
+
+
+// =============================================================================
+// stack_RegisterYourself
+// -----------------------------------------------------------------------------
+/// This function registers the module itself to HAL so that the version and
+/// the map accessor are filled. Then, the CSW get version function and the
+/// CoolWatcher get version command will work.
+// =============================================================================
+PUBLIC VOID stack_RegisterYourself(VOID);
+
+    </cjoker>
+
+</archive>

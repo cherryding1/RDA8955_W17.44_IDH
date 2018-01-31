@@ -1,0 +1,94 @@
+%include:
+{vppp_speech_const_map.h, vppp_speech_sections.h, vppp_speech_common.h,vppp_speech_asm_noisesuppress.h}
+
+%mode:
+{morph:	 vpp_speech_asm_main.c, vpp_speech_asm_noisesuppress.c}
+{morph:	 vpp_speech_asm_main.c, vpp_speech_asm_morph.c}
+{aec:	 vpp_speech_asm_main.c, vpp_speech_asm_aec.c}
+{agc:    vpp_speech_asm_main.c, vpp_speech_asm_agc.c}
+{fr:     vpp_speech_asm_main.c, vpp_speech_asm_fr.c}
+{hr:     vpp_speech_asm_main.c, vpp_speech_asm_hr.c} 
+{efr:    vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_efr.c, vpp_speech_asm_amr122_enc.c, vpp_speech_asm_amr122_dec.c}
+{amr102: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr102_enc.c, vpp_speech_asm_amr102_dec.c}
+{amr122: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr122_enc.c, vpp_speech_asm_amr122_dec.c}
+{amr475: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr475_enc.c, vpp_speech_asm_amr475_dec.c}
+{amr515: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr515_enc.c, vpp_speech_asm_amr515_dec.c}
+{amr59:  vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr59_enc.c,  vpp_speech_asm_amr59_dec.c}
+{amr67:  vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr67_enc.c,  vpp_speech_asm_amr67_dec.c}
+{amr74:  vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr74_enc.c,  vpp_speech_asm_amr74_dec.c}
+{amr795: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr795_enc.c, vpp_speech_asm_amr795_dec.c}
+
+%start
+{0, 1488, 5240, 7576, 9600}
+
+%map
+{	
+  COMMON_GLOBAL{
+    vpp_speech_asm_main.global
+  }
+  .=BEGIN(COMMON_GLOBAL);
+  NOISESUPPRESS_GLOBAL{
+  	vpp_speech_asm_noisesuppress.global
+  }
+  NOISESUPPRESS_LOCAL{
+	vpp_speech_asm_noisesuppress.local
+  }
+  .=BEGIN(COMMON_GLOBAL);
+
+  MORPH_GLOBAL{
+  	vpp_speech_asm_morph.global
+  }
+  MORPH_LOCAL  {
+	vpp_speech_asm_morph.local
+  }
+  .=BEGIN(COMMON_GLOBAL);
+
+  AGC_GLOBAL{
+	vpp_speech_asm_agc.global
+  }
+  AGC_LOCAL  {
+	vpp_speech_asm_agc.local
+  }
+  .=BEGIN(COMMON_GLOBAL);  
+  
+  AEC_GLOBAL{
+	vpp_speech_asm_aec.global
+  }
+  AEC_LOCAL  {
+	vpp_speech_asm_aec.local
+  }
+  .=END(COMMON_GLOBAL);
+
+  FR_GLOBAL{
+    vpp_speech_asm_fr.global
+  }
+  FR_LOCAL{
+    vpp_speech_asm_fr.local
+  }
+  .=END(COMMON_GLOBAL);
+  HR_GLOBAL{
+  	vpp_speech_asm_hr.global
+  }
+  HR_LOCAL{
+  	vpp_speech_asm_hr.local
+  }
+  .=END(COMMON_GLOBAL);
+  AMR_EFR_GLOBAL{
+  	vpp_speech_asm_amr_efr.global
+  	vpp_speech_asm_efr.global
+  	vpp_speech_asm_amr.global
+  	vpp_speech_asm_amr122_enc.global
+  	vpp_speech_asm_amr122_dec.global
+  }
+  AMR_EFR_LOCAL{
+  	vpp_speech_asm_amr_efr.local
+  	vpp_speech_asm_efr.local
+  	vpp_speech_asm_amr.local
+  	vpp_speech_asm_amr122_enc.local
+  	vpp_speech_asm_amr122_dec.local
+  }
+  .=MAX(END(FR_GLOBAL),MAX(END(HR_GLOBAL),END(AMR_EFR_GLOBAL)));
+  COMMON_LOCAL{
+  	vpp_speech_asm_main.local
+  }
+}

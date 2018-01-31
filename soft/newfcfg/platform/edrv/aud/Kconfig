@@ -1,0 +1,100 @@
+comment "--- platform/edrv/aud ---"
+
+menu "tv"
+source "newfcfg/platform/edrv/aud/tv/Kconfig"
+endmenu
+
+config AD_MODEL
+	option skiph
+	string "AD_MODEL"
+	default "codec_gallite"
+
+config BT_BTHSNREC_SUPPORT
+	option skipmk
+	bool "BT BTHSNREC SUPPORT"
+	depends on BT_MODEL_ENABLE
+	default y
+	---help---
+		close all the voice enhanced module if bt voice enhanced is enabled(under bt conversation)
+
+config RECV_USE_SPK_LINE
+	option skipmk
+	bool	"recv use spk line"
+	default y
+	---help---
+		Receiver uses one speaker line (using left line by default)
+
+config RECV_USE_SPK_LINE_R
+	option skipmk
+	bool	"recv use spk line r"
+	default n
+	---help---
+		If using right line, the macro should be added as well,defalut use left line
+
+config PM_EARPIECE_DET_DEBOUNCE
+	option skipmk
+	bool	"pm earpiece det debounce"
+	default y
+	---help---
+		debounce process when earpiece pluged out or in, for wrong info when earpiece  pluged out or in
+
+config MODULE_EAR_DETECT
+	option skipmk
+	bool "Module ear detect"
+	default n
+
+config MIC_CAPLESS_MODE
+	option skiph
+	bool	"mic capless mode"
+	default y
+	---help---
+		if mic capless mode, set 1,otherwise 0
+
+config MIC_MEMS_MODE
+	option skipmk
+	bool	"mic mems mode"
+	default n
+	---help---
+		if mic mems mode, set 1,otherwise 0
+
+config AUD_2_IN_1_SPK
+	option skipmk
+	bool	"aud 2 in 1 spk"
+	default y
+	---help---
+		2 in 1 loudspeaker. 2 in 1 and 3 in 1 loudspeaker are mutually exclusive.
+
+config AUD_SPK_ON_WITH_LCD
+	option skipmk
+	bool	"aud spk on with lcd"
+	default n
+	---help---
+		Alleviate the "pop" sound on loud speaker for some external audio PAs
+
+config ABB_HP_DETECT
+	option skipmk
+	bool	"ABB headphone detection"
+	default n
+	---help---
+		ABB headphone detection
+
+config VOLUME_WITH_15_LEVEL
+	option skipmk
+	bool "VOLUME_WITH_15_LEVEL"
+	default y
+	---help---
+		To support 15 levels or 7 levels for volume.
+
+config VOIS_DUMP_PCM
+    option skipmk
+    bool "VOIS_DUMP_PCM"
+    default y
+    ---help---
+        This option enables vois supports dump PCM.
+
+config CHIP_8955_AUD_WAVE_TEST
+    option skipmk
+	bool "CHIP_8955_AUD_WAVE_TEST"
+	default n
+	---help---
+	    This option enables wave test on chip 8955

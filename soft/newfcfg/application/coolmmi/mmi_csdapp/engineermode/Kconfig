@@ -1,0 +1,15 @@
+comment "--- application/coolmmi/mmi_csdapp/engineermode ---"
+
+config __MMI_ENGINEER_MODE__
+    option skipmk
+    bool "MMI_ENGINEER_MODE"
+    default y
+    ---help---
+        This option enables engineering mode.
+
+config __MMI_EM_AUDIO_SPEECH_ENHANCEMENT__
+    option skipmk
+    bool "MMI_EM_AUDIO_SPEECH_ENHANCEMENT"
+    default y
+    ---help---
+       This option enables audio speech enhanacement test of engineering mode.

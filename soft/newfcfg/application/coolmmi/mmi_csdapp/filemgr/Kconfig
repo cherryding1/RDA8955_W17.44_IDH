@@ -1,0 +1,71 @@
+comment "--- application/coolmmi/mmi_csdapp/filemgr ---"
+
+config FMGR_USING_CACHE
+	option skipmk
+	bool "FMGR_USING_CACHE"
+	default y
+	---help---
+		This option enables saving image thumbnail feature in file mangement application.
+
+config __SUPPORT_MEMORY_CARD_RENAME__
+    option skipmk
+    bool "SUPPORT_MEMORY_CARD_RENAME"
+    default y
+	---help---
+		This option enables rename memeory card feature.
+
+config __MMI_IMAGEVIEWER_MARK_SEVERAL__
+	option skipmk
+	bool "MMI_IMAGEVIEWER_MARK_SEVERAL"
+	def_bool y
+	---help---
+		This option enables mark several feature in image viewer application.
+
+config __MMI_FILEMANAGER_MARK_SEVERAL__
+	option skipmk
+	bool "MMI_FILEMANAGER_MARK_SEVERAL"
+	def_bool y
+	---help---
+		This option enables mark several feature in file management application.
+
+#config __MMI_DATA_STORE__
+#	option skipmk
+#	bool "MMI datat store"
+#	default y
+#
+#config CAT222_IMAGE_FIT_CONTENT_SIZE
+#	option skipmk
+#	bool "CAT222_IMAGE_FIT_CONTENT_SIZE"
+#	default y
+#	---help---
+#	define for display the capacity of file system
+
+config __MMI_FILE_MANAGER__
+	option skipmk
+	bool "MMI support file management"
+	default y
+	---help---
+		This option enables MMI file management function.
+
+
+#config __MMI_SHOW_FILE_EXT__
+#	option skipmk
+#	bool "MMI support show file ext"
+#	default y
+#
+#config __MMI_SLIM_FILE_MANAGER__
+#	option skipmk
+#	bool "MMI support slim file manager"
+#	default y
+#
+#config __MMI_MEMORY_CARD_SUPPORT__
+#	option skipmk
+#	bool "MMI support memory card"
+#	default y
+
+config MMI_MULTIMEDIA_USE_FLASHFS
+	option skipmk
+	bool "MMI_MULTIMEDIA_USE_FLASHFS"
+	default y
+	---help---
+		This option supports multimedia (audioplayer/image viewer/camera/sound recorder/file management) using memcory card.

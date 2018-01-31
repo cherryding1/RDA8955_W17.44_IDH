@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+    
+    <comment>
+        This file contains the portion of the module's memory map that will be
+        accessible through CoolWatcher (or any CoolXml tool). It is also used
+        for the get version mechanism.
+    </comment>
+
+
+    <!-- Add here some XMD files, to include some types. -->
+
+    
+    <!-- Create here the types you want to access for this module. -->
+    <typedef name='VOIS_MAP_AUDIO_CFG'>
+        <comment>
+            Configuration structure.
+            A configuration structure allows to record a stream with the proper
+            configuration  set as far as the audio interface and the decoding
+            are concerned.
+        </comment>
+
+        <uint32 name='spkSel'>
+            <comment>Type of speaker</comment>
+        </uint32>
+        <uint32 name='micSel'>
+            <comment>Type of speaker</comment>
+        </uint32>
+        <uint32 name='spkLevel'>
+            <comment>Speaker level.</comment>
+        </uint32>
+        <uint32 name='micLevel'>
+            <comment>Mic level</comment>
+        </uint32>
+        <uint32 name='sideLevel'>
+            <comment>Side tone</comment>
+        </uint32>
+        <uint32 name='toneLevel'>
+            <comment>Tone level</comment>
+        </uint32>
+        <int16 name='encMute'>
+            <comment>encoder gain</comment>
+        </int16>
+        <int16 name='decMute'>
+            <comment>decoder gain</comment>
+        </int16>
+    </typedef>
+
+
+    <typedef name='AUD_MAP_LEVEL'>
+        <comment>
+            Configuration structure. A configuration structure allows to start an AUD
+            operation (start stream, start  record, or start tone) with the desired
+            parameters.
+        </comment>
+
+        <uint32 name='spkLevel'>
+            <comment>Speaker level,</comment>
+        </uint32>
+        <uint32 name='micLevel'>
+            <comment>Microphone level: muted or enabled</comment>
+        </uint32>
+        <uint32 name='sideLevel'>
+            <comment>Sidetone</comment>
+        </uint32>
+        <uint32 name='toneLevel'></uint32>
+    </typedef>
+
+
+
+    <typedef name='VPP_MAP_SPEECH_AUDIO_CFG'>
+        <comment>
+            VPP Speech audio configuration for echo cancellation, encoder gain and
+            anti-distorsion filter, decoder gain and anti-distorsion filter.
+        </comment>
+        <int16 name='echoEsOn'>
+            <comment>enable the echo suppresor</comment>
+        </int16>
+        <int16 name='echoEsVad'>
+            <comment>echo suppresor voice activity detection threshold</comment>
+        </int16>
+        <int16 name='echoEsDtd'>
+            <comment>echo suppresor double-talk detection threshold</comment>
+        </int16>   
+        <int16 name='echoExpRel'>
+            <comment>echo canceller relative threshold</comment>
+        </int16>
+        <int16 name='echoExpMu'>
+            <comment>echo canceller mu paramater (NULL to disable the echo canceller)</comment>
+        </int16>
+        <int16 name='echoExpMin'>
+            <comment>echo canceller minimum threshold</comment>
+        </int16>   
+        <int16 name='encMute'>
+            <comment>encoder gain</comment>
+        </int16>
+        <int16 name='decMute'>
+            <comment>decoder gain</comment>
+        </int16>
+        <ptr name='sdf' type='int32'>
+            <comment>pointer to the speaker anti-distorsion filter (SDF) coefficients</comment>
+        </ptr>
+        <ptr name='mdf' type='int32'>
+            <comment>pointer to the mic anti-distorsion filter (MDF) coefficients</comment>
+        </ptr>
+        <int16 name='if1'>
+            <comment>push-to-talk enable flag</comment>
+        </int16>
+
+    </typedef>
+
+
+
+    <typedef name='VOIS_CONTEXT'>
+        <bool name='voisStarted'>
+            <comment>
+                Hold the 'started' or 'not started' state of VOIS
+            </comment>
+        </bool>
+
+        <ptr name='voisEncOutput'   type="void">
+            <comment>
+                Pointer to the output (encoded) buffer of VPP
+                This field is to be used casted as a HAL_SPEECH_ENC_OUT_T.
+            </comment>
+        </ptr>
+
+        <ptr name='voisDecInput'   type="void">
+            <comment>
+                Pointer to the input (decoded) buffer of VPP
+                This field is to be used casted as a HAL_SPEECH_DEC_IN_T.
+            </comment>
+        </ptr>
+
+        <uint32 name='voisTramePlayedNb'>
+            <comment>
+                Number of played trames
+            </comment>
+        </uint32>
+
+        <instance name='voisAudioCfg' type='AUD_MAP_LEVEL'>
+            <comment>
+                Audio configuration used to play the stream in normal state.
+                (ie not when started or stopped.
+                This field is to be used casted as a AUD_LEVEL_T.
+            </comment>
+        </instance>
+
+        <instance name="voisVppCfg" type="VPP_MAP_SPEECH_AUDIO_CFG">
+            <comment>
+                VPP configuration used to play the stream in normal state.
+                (ie not when started or stopped.)
+                This field should be used casted as a VPP_SPEECH_AUDIO_CFG_T.
+            </comment>
+        </instance>
+
+        <uint32 name='voisItf'>
+            <comment>
+                Interface used by vois to get and tell the words
+                To be used casted as a AUD_ITF_ID_T.
+            </comment>
+        </uint32>
+
+        <instance name='voisLatestCfg' type='VOIS_MAP_AUDIO_CFG'>
+            <comment>
+                Latest config applied to Vois.
+            </comment>
+        </instance>
+
+        <uint32 name='mode'/>
+        <uint32 name='bufferSize'/>
+    </typedef>
+
+    <!-- Type used to define the accessible structures of the module. -->
+    <alias name='VOIS_MAP_ACCESS_T'>
+<!--
+        <comment>
+            Type used to define the accessible structures of the module.
+        </comment>
+-->
+        <instance name='unused' type='VOIS_CONTEXT'></instance>
+    </alias>
+   
+   <cjoker>
+
+// =============================================================================
+// vois_RegisterYourself
+// -----------------------------------------------------------------------------
+/// This function registers the module itself to HAL so that the version and
+/// the map accessor are filled. Then, the CSW get version function and the
+/// CoolWatcher get version command will work.
+// =============================================================================
+PUBLIC VOID vois_RegisterYourself(VOID);
+
+    </cjoker>
+
+</archive>
+

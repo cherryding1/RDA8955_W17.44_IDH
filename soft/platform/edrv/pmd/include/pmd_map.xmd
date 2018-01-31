@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+
+    <comment>
+        This file contains the portion of the module's memory map that will be
+        accessible through CoolWatcher (or any CoolXml tool). It is also used
+        for the get version mechanism.
+    </comment>
+
+
+    <!-- Add here some XMD files, to include some types. -->
+
+    <!-- Create here the types you want to access for this module. -->
+
+    <!-- Must be in sync with pmd_m.h PMD_POWER_ID_QTY -->
+    <var name="PMD_MAP_POWER_ID_QTY" value="14" />
+    <!-- Must be in sync with pmd_m.h PMD_LEVEL_ID_QTY -->
+    <var name="PMD_MAP_LEVEL_ID_QTY" value="10" />
+
+    <!-- Must be in sync with pmdp_charger.h PMD_CHARGER_STATE_T -->
+    <typedef name="PMD_MAP_CHARGER_STATE_T">
+        <uint32 name="status" />
+        <uint32 name="current" />
+        <ptr type="void" name="handler" />
+        <uint16 name="batteryLevel" />
+        <uint16 name="pulsedOnCount" />
+        <uint16 name="pulsedOffCount" />
+        <uint16 name="pulsedCycleCount" />
+        <uint16 name="pulsedOnMeanCount" />
+        <uint16 name="pulsedOffMeanCount" />
+        <uint32 name="startTime" />
+        <uint32 name="lastWTime" />
+        <bool name="highActivityState" />
+    </typedef>
+
+
+    <!-- Type used to define the accessible structures of the module. -->
+    <typedef name="PMD_MAP_ACCESS_T">
+        <comment>
+            Type used to define the accessible structures of the module.
+        </comment>
+        <!-- Add here the types you want the access. -->
+        <uint32 name="powerInfo" count="PMD_MAP_POWER_ID_QTY" display="hex">
+            <bits name="Power_Shared_Link_Flag" pos="31" access="r"/>
+            <bits name="Power_Value" pos="30:0" access="r" display="hex">
+                <comment>If Shared_Link_Flag = 0, Value bits represent resource used
+                    <br/>If Shared_Link_Flag = 1, Value is the ID of the main resource
+                </comment>
+            </bits>
+        </uint32>
+        <uint32 name="levelInfo" count="PMD_MAP_LEVEL_ID_QTY">
+            <comment>Current level value.
+            </comment>
+        </uint32>
+        <ptr type="PMD_MAP_CHARGER_STATE_T" name="chargerState" />
+    </typedef>
+
+<cjoker>
+
+// =============================================================================
+// pmd_RegisterYourself
+// -----------------------------------------------------------------------------
+/// This function registers the module itself to HAL so that the version and
+/// the map accessor are filled. Then, the CSW get version function and the
+/// CoolWatcher get version command will work.
+// =============================================================================
+PUBLIC VOID pmd_RegisterYourself(VOID);
+
+</cjoker>
+
+</archive>

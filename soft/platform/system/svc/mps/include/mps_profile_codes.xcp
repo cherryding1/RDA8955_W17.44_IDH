@@ -1,0 +1,14 @@
+<module name="MPS">
+    <!-- Functions -->
+    <fn name="mps_demuxGetAudioData"        id="0x1080" group="MPS"/>
+    <fn name="mps_demuxGetVideoData"        id="0x1081" group="MPS"/>
+    <fn name="mps_demuxPlay"                id="0x1082" group="MPS"/>
+    <fn name="mps_task"                     id="0x1083" group="MPS"/>
+    <fn name="mps_blit"                     id="0x1084" group="MPS"/>
+    <fn name="mps_demuxTell"                id="0x1085" group="MPS"/>
+    <fn name="mps_demuxSeek"                id="0x1086" group="MPS"/>
+    <fn name="mps_demuxPause"               id="0x1087" group="MPS"/>
+    <fn name="mps_demuxSkipVideo"           id="0x1088" group="MPS"/>
+    <fn name="mps_demuxOpen"                id="0x1089" group="MPS"/>
+    <fn name="mps_demuxClose"               id="0x108A" group="MPS"/>
+</module>

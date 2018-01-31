@@ -1,0 +1,12 @@
+C_SRC :=                        \
+        mrs.c                   \
+        mrs_medium.c            \
+        mrs_codec_amr.c         \
+        mrs_codec_pcm.c         \
+
+#mrs_codec_mp3.c          \
+#        mrs_codec_riff.c         \
+#        mrs_codec_amr122.c       \
+
+
+

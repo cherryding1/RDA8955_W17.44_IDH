@@ -1,0 +1,491 @@
+comment "--- languages support ---"
+
+config __MMI_LANG_ENGLISH__
+    option skipmk
+    def_bool y
+
+config ML_SUPPORT
+    option skipmk
+    def_bool y
+    
+config ML_SUPPORT_ISO8859_1
+    option skipmk
+    def_bool y
+    
+config __MMI_LANG_FRENCH__
+    option skipmk
+    bool "French Support"
+    select __MMI_MULTITAP_FRENCH__
+    default n
+    
+config __MMI_LANG_ITALIAN__
+    option skipmk
+    bool "Italian Support"
+    select __MMI_MULTITAP_ITALIAN__
+    default n
+    
+config __MMI_LANG_VIETNAMESE__
+    option skipmk
+    bool "Vietnamese Support"
+    select __MMI_MULTITAP_VIETNAMESE__
+    select ML_SUPPORT_CP1258
+    default n     
+    
+config __MMI_LANG_RUSSIAN__
+    option skipmk
+    bool "Russian Support"
+    select __MMI_MULTITAP_RUSSIAN__
+    select ML_SUPPORT_ISO8859_5
+    default n            
+
+config __MMI_LANG_ARABIC__
+    option skipmk
+    bool "Arabic Support"
+    select __MMI_MULTITAP_ARABIC__
+    select __MMI_BIDI_ALG__
+    select __MMI_ARSHAPING_ENGINE__
+    select __MMI_HIJRI_CALENDAR__
+    select ML_SUPPORT_ISO8859_6
+    default n
+    
+config __MMI_LANG_THAI__
+    option skipmk
+    bool "Thai Support"
+    select __MMI_MULTITAP_THAI__
+    select ML_SUPPORT_CP874
+    default n
+    
+config __MMI_LANG_SM_CHINESE__
+    option skipmk
+    bool "SM Chinese Support"
+    select __MMI_CHAR_SET_GB2312__
+    select __MMI_CHSET_GB2312__
+    select ML_SUPPORT_CP936
+    default n
+    
+config __MMI_LANG_TR_CHINESE__
+    option skipmk
+    bool "TR Chinese Support"
+    select __MMI_GB_TR_CHINESE__
+    select __MMI_CHAR_SET_BIG5__
+    select __MMI_CHSET_BIG5__
+    select ML_SUPPORT_CP936
+    default n        
+    
+config __MMI_LANG_GERMAN__
+    option skipmk
+    bool "German Support"
+    select __MMI_MULTITAP_GERMAN__
+    default n     
+    
+config __MMI_LANG_SPANISH__
+    option skipmk
+    bool "Spanish Support"
+    select __MMI_MULTITAP_SPANISH__
+    default n    
+    
+config __MMI_LANG_PORTUGUESE__
+    option skipmk
+    bool "Portuguese Support"
+    select __MMI_MULTITAP_PORTUGUESE__
+    default n
+    
+config __MMI_LANG_URDU__
+    option skipmk
+    bool "Urdu Support"
+    select __MMI_MULTITAP_URDU__
+    select __MMI_BIDI_ALG__
+    select __MMI_ARSHAPING_ENGINE__
+    default n    
+    
+config __MMI_LANG_PERSIAN__
+    option skipmk
+    bool "Persian Support"
+    select __MMI_MULTITAP_PERSIAN__
+    select __MMI_BIDI_ALG__
+    select __MMI_ARSHAPING_ENGINE__
+    select ML_SUPPORT_CP1256
+    default n
+    
+config __MMI_LANG_TURKISH__
+    option skipmk
+    bool "Turkish Support"
+    select __MMI_MULTITAP_TURKISH__
+    select ML_SUPPORT_CP857
+    default n     
+    
+config __MMI_LANG_INDONESIAN__
+    option skipmk
+    bool "Indonesian Support"
+    select __MMI_MULTITAP_INDONESIAN__
+    default n     
+    
+config __MMI_LANG_MALAY__
+    option skipmk
+    bool "Malay Support"
+    select __MMI_MULTITAP_MALAY__
+    default n 
+    
+config __MMI_LANG_ZULU__
+    option skipmk
+    bool "Zulu Support"
+    select __MMI_MULTITAP_ZULU__
+    default n
+    
+config __MMI_LANG_XHOSA__
+    option skipmk
+    bool "Xhosa Support"
+    select __MMI_MULTITAP_XHOSA__
+    default n
+    
+config __MMI_LANG_SWAHILI__
+    option skipmk
+    bool "Swahili Support"
+    select __MMI_MULTITAP_SWAHILI__
+    default n
+    
+config __MMI_LANG_CZECH__
+    option skipmk
+    bool "Czech Support"
+    select __MMI_MULTITAP_CZECH__
+    default n
+    
+config __MMI_LANG_POLISH__
+    option skipmk
+    bool "Polish Support"
+    select __MMI_MULTITAP_POLISH__
+    default n
+    
+config __MMI_LANG_HUNGARIAN__
+    option skipmk
+    bool "Hungarian Support"
+    select __MMI_MULTITAP_HUNGARIAN__
+    default n
+    
+config __MMI_LANG_NORWEGIAN__
+    option skipmk
+    bool "Norwegian Support"
+    select __MMI_MULTITAP_NORWEGIAN__
+    default n  
+    
+config __MMI_LANG_SLOVAK__
+    option skipmk
+    bool "Slovak Support"
+    select __MMI_MULTITAP_SLOVAK__
+    default n 
+    
+config __MMI_LANG_DUTCH__
+    option skipmk
+    bool "Dutch Support"
+    select __MMI_MULTITAP_DUTCH__
+    default n
+    
+config __MMI_LANG_SWEDISH__
+    option skipmk
+    bool "Swedish Support"
+    select __MMI_MULTITAP_SWEDISH__
+    default n
+    
+config __MMI_LANG_CROATIAN__
+    option skipmk
+    bool "Croatian Support"
+    select __MMI_MULTITAP_CROATIAN__
+    default n
+    
+config __MMI_LANG_SLOVENIAN__
+    option skipmk
+    bool "Slovenian Support"
+    select __MMI_MULTITAP_SLOVENIAN__
+    default n 
+    
+config __MMI_LANG_AFRIKAANS__
+    option skipmk
+    bool "Afrikaans  Support"
+    select __MMI_MULTITAP_AFRIKAANS__
+    default n
+    
+config __MMI_LANG_LITHUANIAN__
+    option skipmk
+    bool "Lithuanian Support"
+    select __MMI_MULTITAP_LITHUANIAN__
+    default n 
+    
+config __MMI_LANG_LATVIAN__
+    option skipmk
+    bool "Latvian Support"
+    select __MMI_MULTITAP_LATVIAN__
+    default n
+    
+config __MMI_LANG_ESTONIAN__
+    option skipmk
+    bool "Estonian Support"
+    select __MMI_MULTITAP_ESTONIAN__
+    default n  
+    
+config __MMI_LANG_MOLDOVAN__
+    option skipmk
+    bool "Moldovan Support"
+    select __MMI_MULTITAP_MOLDOVAN__
+    default n
+    
+config __MMI_LANG_ALBANIAN__
+    option skipmk
+    bool "Albanian Support"
+    select __MMI_MULTITAP_ALBANIAN__
+    default n
+    
+config __MMI_LANG_CA_FRENCH__
+    option skipmk
+    bool "Ca French Support"
+    select __MMI_MULTITAP_FRENCH__
+    default n 
+    
+config __MMI_LANG_SA_SPANISH__
+    option skipmk
+    bool "Latin.Am.Spanish Support"
+    select __MMI_MULTITAP_SPANISH__
+    default n
+    
+config __MMI_LANG_SA_PORTUGUESE__
+    option skipmk
+    bool "Brazil.Portuguese Support"
+    select __MMI_MULTITAP_PORTUGUESE__
+    default n
+    
+config __MMI_LANG_SESOTHO__
+    option skipmk
+    bool "Sesotho Support"
+    select __MMI_MULTITAP_SESOTHO__
+    default n
+    
+config __MMI_LANG_TAGALOG__
+    option skipmk
+    bool "Tagalog Support"
+    select __MMI_MULTITAP_TAGALOG__
+    default n
+    
+config __MMI_LANG_YORUBA__
+    option skipmk
+    bool "Yoruba Support"
+    select __MMI_MULTITAP_YORUBA__
+    default n
+       
+config __MMI_LANG_CATALAN__
+    option skipmk
+    bool "Catalan Support"
+    select __MMI_MULTITAP_CATALAN__
+    default n
+    
+config __MMI_LANG_ICELANDIC__
+    option skipmk
+    bool "Icelandic Support"
+    select __MMI_MULTITAP_ICELANDIC__
+    default n
+    
+config __MMI_LANG_DANISH__
+    option skipmk
+    bool "Danish Support"
+    select __MMI_MULTITAP_DANISH__
+    default n
+    
+config __MMI_LANG_FINNISH__
+    option skipmk
+    bool "Finnish Support"
+    select __MMI_MULTITAP_FINNISH__
+    default n
+    
+config __MMI_LANG_ROMANIAN__
+    option skipmk
+    bool "Romanian Support"
+    select __MMI_MULTITAP_ROMANIAN__
+    default n
+    
+config __MMI_LANG_HAUSA__
+    option skipmk
+    bool "Hausa Support"
+    select __MMI_MULTITAP_HAUSA__
+    default n
+    
+config __MMI_LANG_BULGARIAN__
+    option skipmk
+    bool "Bulgarian Support"
+    select __MMI_MULTITAP_BULGARIAN__
+    default n
+    
+config __MMI_LANG_UKRAINIAN__
+    option skipmk
+    bool "Ukrainian Support"
+    select __MMI_MULTITAP_UKRAINIAN__
+    default n
+    
+config __MMI_LANG_MACEDONIAN__
+    option skipmk
+    bool "Macedonian Support"
+    select __MMI_MULTITAP_MACEDONIAN__
+    default n
+    
+config __MMI_LANG_SERBIAN__
+    option skipmk
+    bool "Serbian Support"
+    select __MMI_MULTITAP_SERBIAN__
+    default n
+    
+config __MMI_LANG_GREEK__
+    option skipmk
+    bool "Greek Support"
+    select __MMI_MULTITAP_GREEK__
+    default n
+    
+config __MMI_LANG_HEBREW__
+    option skipmk
+    bool "Hebrew Support"
+    select __MMI_MULTITAP_HEBREW__
+    select __MMI_BIDI_ALG__
+    default n  
+    
+config __MMI_LANG_HINDI__
+    option skipmk
+    bool "Hindi Support"
+    select ML_SUPPORT_CP0
+    default n
+    
+config __MMI_LANG_TELUGU__
+    option skipmk
+    bool "Telugu Support"
+    default n
+    
+config __MMI_LANG_PUNJABI__
+    option skipmk
+    bool "Punjabi Support"
+    default n
+    
+config __MMI_LANG_BENGALI__
+    option skipmk
+    bool "Bengali Support"
+    default n
+    
+config __MMI_LANG_MARATHI__
+    option skipmk
+    bool "Marathi Support"
+    default n
+    
+config __MMI_LANG_MYANMAR__
+    option skipmk
+    bool "Mayanmar Support"
+    default n
+    
+config __MMI_LANG_TAMIL__
+    option skipmk
+    bool "Tamil Support"
+    default n
+    
+config __MMI_LANG_ASSAMESE__
+    option skipmk
+    bool "Assamese Support"
+    default n
+    
+config __MMI_LANG_ORIYA__
+    option skipmk
+    bool "Oriya Support"
+    default n
+    
+config __MMI_LANG_KANNADA__
+    option skipmk
+    bool "Kannada Support"
+    default n
+    
+config __MMI_LANG_MALAYALAM__
+    option skipmk
+    bool "Malayalam Support"
+    default n
+    
+config __MMI_LANG_GUJARATI__
+    option skipmk
+    bool "Gujarati Support"
+    default n  
+
+config __MMI_HINDI_ALG__
+    option skipmk
+    bool 
+    default y if (!__MMI_REVERIE_FONT_ENGINE__)&&(__MMI_LANG_HINDI__ || __MMI_LANG_TELUGU__ || __MMI_LANG_PUNJABI__ || __MMI_LANG_BENGALI__ \
+    || __MMI_LANG_MARATHI__ || __MMI_LANG_MYANMAR__ || __MMI_LANG_TAMIL__ || __MMI_LANG_ASSAMESE__ || __MMI_LANG_ORIYA__ \
+    || __MMI_LANG_KANNADA__ || __MMI_LANG_MALAYALAM__|| __MMI_LANG_GUJARATI__)
+    default n 
+
+config __MMI_INDICAL__
+    option skipmk
+    bool 
+    default y if (!__MMI_REVERIE_FONT_ENGINE__) && (__MMI_LANG_HINDI__ )
+    default n
+    
+config __MMI_INDICAL_DYNAMIC_ADHIKA_INFO_GEN__
+    option skipmk
+    bool 
+    default y if (!__MMI_REVERIE_FONT_ENGINE__) && (__MMI_LANG_HINDI__ )
+    default n 
+
+config __MMI_BIDI_ALG__
+    option skipmk
+    bool "__MMI_BIDI_ALG__"
+    depends on __MMI_LANG_ARABIC__ || __MMI_LANG_PERSIAN__ || __MMI_LANG_URDU__ || __MMI_LANG_HEBREW__
+    default n    
+    
+config __MMI_ARSHAPING_ENGINE__
+    option skipmk
+    bool "__MMI_ARSHAPING_ENGINE__"
+    depends on __MMI_LANG_ARABIC__ || __MMI_LANG_PERSIAN__ || __MMI_LANG_URDU__
+    default n 
+    
+config __MMI_HIJRI_CALENDAR__
+    option skipmk
+    bool "__MMI_HIJRI_CALENDAR__"
+    depends on __MMI_LANG_ARABIC__
+    default n         
+    
+config ML_SUPPORT_CP1258
+    option skipmk
+    bool "ML_SUPPORT_CP1258"
+    depends on __MMI_LANG_VIETNAMESE__
+    default n 
+config ML_SUPPORT_ISO8859_5
+    option skipmk
+    bool "ML_SUPPORT_ISO8859_5"
+    depends on __MMI_LANG_RUSSIAN__
+    default n 
+
+config ML_SUPPORT_ISO8859_6
+    option skipmk
+    bool "ML_SUPPORT_ISO8859_6"
+    depends on __MMI_LANG_ARABIC__
+    default n
+    
+config ML_SUPPORT_CP874
+    option skipmk
+    bool "ML_SUPPORT_CP874"
+    depends on __MMI_LANG_THAI__
+    default n 
+       
+config ML_SUPPORT_CP936
+    option skipmk
+    bool "ML_SUPPORT_CP936"
+    depends on __MMI_LANG_SM_CHINESE__ || __MMI_LANG_TR_CHINESE__
+    default n 
+
+config ML_SUPPORT_CP0
+    option skipmk
+    bool "ML_SUPPORT_CP0"
+    depends on __MMI_LANG_HINDI__
+    default n 
+
+config ML_SUPPORT_CP1256
+    option skipmk
+    bool "ML_SUPPORT_CP1256"
+    depends on __MMI_LANG_PERSIAN__
+    default n
+    
+config ML_SUPPORT_CP857
+    option skipmk
+    bool "ML_SUPPORT_CP857"
+    depends on __MMI_MULTITAP_TURKISH__
+    default n 
+                                                                                                                                                             

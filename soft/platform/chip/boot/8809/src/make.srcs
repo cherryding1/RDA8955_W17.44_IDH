@@ -1,0 +1,24 @@
+C_SRC +=                 \
+    boot_host.c          \
+    boot_irq_dispatch.c  \
+    boot_ispi.c          \
+    boot_march_c_bbcp2.c \
+    boot_monitor.c       \
+    boot_rom_version.c   \
+    boot_romstring.c     \
+    boot_uart_monitor.c  \
+    boot_usb.c           \
+    boot_usb_monitor.c   \
+
+S_SRC +=                 \
+    boot_ram.S           \
+    boot_rom.S           \
+
+# BIST module has been removed since Gallite
+# boot_test.S  boot_bist.c
+
+ifneq "${BUILD_ROM}" "1"
+C_SRC += boot_sector_chip.c
+endif
+
+%/boot_march_c_bbcp2.o: CT_MIPS16_CFLAGS=

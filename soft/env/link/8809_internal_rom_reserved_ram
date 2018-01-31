@@ -1,0 +1,93 @@
+/* This file describes the content of the internal SRAM used by object
+   place into the internal ROM.
+   This content is used twice:
+   - in granite_internal_rom_master.ld, to produce the ROM file
+   - in granite_master.ld, to place what is located in ROM but not
+   burnt with the FPGA.
+   One subtlety is that the ALIGN keyword is forbidden in the
+   DISCARD section, as are the symbol definition. Thus we play with the ROM_BUILD
+   flag to include those linker script command only in the rom building
+   script.
+*/
+
+/* Other macros are used, to specifically detail the content of the
+   ROM according to its fate: the real chip or a FPGA, where it is
+   faster to copy the ROM content during the program execution,
+   often needed due to the under dev state of the code.
+   We discriminate thus 2 parts:
+    - a mandatory one (ROM_MANDATORY_PART) needed to boot and
+    containing codes and object which shouldn't change.
+    - an optional part (ROM_OPTIONAL_PART) (as in optionally
+    in the ROM before booting), not needed to boot and containing
+    code under heavy development and subject to fast pace changes.
+    (faster than the fpga release scale).
+    We need to discard, in the software build, the content of
+    what already in ROM. We use those flags in that case too.
+*/
+
+/* TODO: How about the following sections?
+    .sdata .sdata.* .sdata2 .sdata2.* .sbss .sbss.*
+    .sbss2 .sbss2.* .gnu.linkonce.*
+*/
+
+/* Using parentheses syntax to emphasize that this is a macro */
+#define DATA_BSS_SECTIONS() .data .data.* .bss .bss.* .scommon COMMON
+
+        *boot_host.o(DATA_BSS_SECTIONS())
+        *boot_ram.o(DATA_BSS_SECTIONS())
+        *boot_uart_monitor.o(DATA_BSS_SECTIONS())
+        *boot_rom.o(DATA_BSS_SECTIONS())
+        *boot_monitor.o(DATA_BSS_SECTIONS())
+        *boot_ram.o(DATA_BSS_SECTIONS())
+        *boot_uart_monitor.o(DATA_BSS_SECTIONS())
+
+        *boot_ispi.o(DATA_BSS_SECTIONS())
+        *boot_usb.o(DATA_BSS_SECTIONS())
+        *boot_usb_monitor.o(DATA_BSS_SECTIONS())
+        *boot_irq_dispatch.o(DATA_BSS_SECTIONS())
+
+#ifdef CHIP_HAS_BTCPU
+        *btcpu_ram.o(DATA_BSS_SECTIONS())
+#endif
+
+        /* Standard Lib */
+        *atoi.o(DATA_BSS_SECTIONS())
+        *bsearch.o(DATA_BSS_SECTIONS())
+        *ctype.o(DATA_BSS_SECTIONS())
+        *memchr.o(DATA_BSS_SECTIONS())
+        *memcmp.o(DATA_BSS_SECTIONS())
+        *memcpy.o(DATA_BSS_SECTIONS())
+        *memmove.o(DATA_BSS_SECTIONS())
+        *memscan.o(DATA_BSS_SECTIONS())
+        *memset.o(DATA_BSS_SECTIONS())
+        *qsort.o(DATA_BSS_SECTIONS())
+        *strcat.o(DATA_BSS_SECTIONS())
+        *strchr.o(DATA_BSS_SECTIONS())
+        *strcmp.o(DATA_BSS_SECTIONS())
+        *strcpy.o(DATA_BSS_SECTIONS())
+        *strcspn.o(DATA_BSS_SECTIONS())
+        *strlen.o(DATA_BSS_SECTIONS())
+        *strncat.o(DATA_BSS_SECTIONS())
+        *strncmp.o(DATA_BSS_SECTIONS())
+        *strncpy.o(DATA_BSS_SECTIONS())
+        *strnicmp.o(DATA_BSS_SECTIONS())
+        *strsep.o(DATA_BSS_SECTIONS())
+        *strspn.o(DATA_BSS_SECTIONS())
+        *strstr.o(DATA_BSS_SECTIONS())
+        *strtok.o(DATA_BSS_SECTIONS())
+        *strtol.o(DATA_BSS_SECTIONS())
+        *strtoul.o(DATA_BSS_SECTIONS())
+        *vsprintf.o(DATA_BSS_SECTIONS())
+
+        /* FIXME Check rom content, this
+           is removed for place issues */
+/*
+        *vsscanf.o(DATA_BSS_SECTIONS())
+ */
+
+        /* rand.o cannot be in ROM as its seed value
+         * (a static variable) has an initial value */
+/*
+        *rand.o(DATA_BSS_SECTIONS())
+*/
+

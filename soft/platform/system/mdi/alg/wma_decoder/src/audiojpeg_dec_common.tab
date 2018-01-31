@@ -1,0 +1,11 @@
+		//0x0000		VoC_code_section_0
+		//0x0000		Coolsand_AudioDecode_MAIN
+0x67FE0AAB,	//0x0000		VoC_lw16i(SP32,0x67fe)
+0x27FF0AAA,	//0x0002		VoC_lw16i(SP16,0x27ff)
+		//0x0004		AudioDecode_MAIN_L0
+0x000E2B80,	//0x0004		VoC_jal(CII_prvDecodeFrame_VOC)
+0x00043180,	//0x0006		VoC_bez16_r(AudioDecode_MAIN_L0,REG0)
+0x003F1794,	//0x0008		VoC_cfg_lg(0x3f,)
+0x00101792,	//0x000a		VoC_cfg_lg(0x10,)
+0xE5F7DEA0,	//0x000c		VoC_jump(AudioDecode_MAIN_L0)	|	VoC_cfg(0x20)
+		//0x000e		CII_prvDecodeFrame_VOC

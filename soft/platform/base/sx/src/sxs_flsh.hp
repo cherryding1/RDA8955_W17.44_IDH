@@ -1,0 +1,116 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+#ifndef __SXS_FLSH_HP__
+#define __SXS_FLSH_HP__
+
+#include "sxs_type.h"
+#include "sxr_cnf.h"
+
+#define SXS_FLH_BANK_READY  0x2EAD2EAD
+#define SXS_FLH_BANK_FULL   0x00A000A0
+#define SXS_FLH_BANK_FREE   0xFFFF
+
+
+typedef struct
+{
+    u16 Pad;
+    u16 Length;
+    u32 Id;
+} sxs_BlockFooter_t;
+
+
+typedef struct
+{
+    u8   FirstSector;
+    u8   NbSector;
+    u16  PurgeThres;
+    u32  Size;
+    u16 *StartAdd;
+    u16 *LastAdd;
+} sxs_BankDesc_t;
+
+typedef struct
+{
+    u16  ManufCode;
+    u16  DeviceId;
+} sxs_FlashId_t;
+
+typedef struct
+{
+    sxs_FlashId_t Id;
+
+    u16 *(*FlhSectorToAdd   )(u8);
+    void (*FlhIdentification)(sxs_FlashId_t *);
+    void (*FlhLock          )(u8 *);
+    void (*FlhUnLock        )(u8 *);
+    void (*FlhEraseSector   )(void *);
+    void (*FlhWrite         )(u16 *, u16);
+
+    u8   NbSector;
+
+    sxs_BankDesc_t StaticBnk;
+    sxs_BankDesc_t DynamicBnk [2];
+    sxs_BankDesc_t StackedBnk;
+} sxs_FlashDesc_t;
+
+
+struct
+{
+    const sxs_FlashDesc_t *Desc;
+    u16   *StaticAdd;
+    u16   *DynamicAdd;
+    u16   *StackedAdd;
+    u16 *(*SectorToAdd)(u8);
+    void (*Lock       )(u8 *SectorAddress);
+    void (*UnLock     )(u8 *SectorAddress);
+    void (*EraseSector)(void *Address);
+    void (*Write      )(u16 *Address, u16 Data);
+    u8     DynamicIdx;
+    u8     PurgeRequired;
+    u8     SemIdx;
+} sxs_FlashCtx;
+
+const sxs_BlockFooter_t sxs_FlhBankReady = {0, 0, SXS_FLH_BANK_READY};
+const sxs_BlockFooter_t sxs_FlhBankFull  = {0, 0, SXS_FLH_BANK_FULL};
+
+
+#ifdef __SXS_FILE_IN_RAM__
+const u16 sxs_FileMaxSize [SXS_FLH_NB_FILES_MAX] =
+{
+    20 * SXS_FLH_NB_FILES_MAX,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+};
+
+u32 sxs_FileOffset [SXS_FLH_NB_FILES_MAX];
+u8 *sxs_RamFile;
+#endif
+
+u8   sxs_BankBlockRead (u32 Id, u8 *Data, u16 Length, u16 *BankAdd);
+void sxs_GetFileBankLimit (u32 *Start, u32 *End, u16 *BankAdd);
+void sxs_BankErase (const sxs_BankDesc_t *BankDesc);
+#endif
+

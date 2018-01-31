@@ -1,0 +1,57 @@
+# vocoder (Ruby_NewLib) matrix
+
+%include:
+{voc_ram_asm.h, voc2_define.h, vppp_speech_const_map.h, vppp_speech_sections.h, vppp_speech_common.h}
+
+%mode:
+{fr:     vpp_speech_asm_main.c, vpp_speech_asm_fr.c}
+{hr:     vpp_speech_asm_main.c, vpp_speech_asm_hr.c} 
+{efr:    vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_efr.c, vpp_speech_asm_amr122_enc.c, vpp_speech_asm_amr122_dec.c}
+{amr122: vpp_speech_asm_main.c, vpp_speech_asm_amr_efr.c, vpp_speech_asm_amr.c, vpp_speech_asm_amr122_enc.c, vpp_speech_asm_amr122_dec.c}
+
+%start
+{0, 624, 4120, 6448, 8560}
+
+%memory
+{RAM_X: size = 0x1000}
+{RAM_Y: size = 0x0800}
+{ROM_Z: size = 0x5800}
+
+%map
+{	
+  COMMON_GLOBAL{
+    vpp_speech_asm_main.global
+  }
+  FR_GLOBAL{
+    vpp_speech_asm_fr.global
+  }
+  FR_LOCAL{
+    vpp_speech_asm_fr.local
+  }
+  .=END(COMMON_GLOBAL);
+  HR_GLOBAL{
+  	vpp_speech_asm_hr.global
+  }
+  HR_LOCAL{
+  	vpp_speech_asm_hr.local
+  }
+  .=END(COMMON_GLOBAL);
+  AMR_EFR_GLOBAL{
+  	vpp_speech_asm_amr_efr.global
+  	vpp_speech_asm_efr.global
+  	vpp_speech_asm_amr.global
+  	vpp_speech_asm_amr122_enc.global
+  	vpp_speech_asm_amr122_dec.global
+  }
+  AMR_EFR_LOCAL{
+  	vpp_speech_asm_amr_efr.local
+  	vpp_speech_asm_efr.local
+  	vpp_speech_asm_amr.local
+  	vpp_speech_asm_amr122_enc.local
+  	vpp_speech_asm_amr122_dec.local
+  }
+  .=MAX(END(FR_GLOBAL),MAX(END(HR_GLOBAL),END(AMR_EFR_GLOBAL)));
+  COMMON_LOCAL{
+  	vpp_speech_asm_main.local
+  }
+}

@@ -1,0 +1,20 @@
+# make.srcs for drivers, to include at end of test's make.srcs
+S_SRC := 
+C_SRC := 
+
+ifeq (${CSW_EXTENDED_API_CAMERA},1)
+#C_SRC += mci_camera.c
+endif
+
+ifeq (${CSW_EXTENDED_API_AUDIO_VIDEO},1)
+#C_SRC += mci_audio.c
+#C_SRC += mci_video.c
+endif
+
+ifeq (${CSW_EXTENDED_API_MRC},1)
+C_SRC += mci_sound_recorder.c
+endif
+
+ifeq (${CSW_EXTENDED_API_LCD},1)
+C_SRC += mci_lcd.c
+endif

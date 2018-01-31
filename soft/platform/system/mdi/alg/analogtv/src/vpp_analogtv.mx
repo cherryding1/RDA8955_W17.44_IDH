@@ -1,0 +1,24 @@
+%include
+{vppp_analogtv_common.h}
+
+%mode
+{analogtv:vpp_analogtv_asm_main.c}
+
+%start
+{0, 256}
+
+
+%map
+{	
+
+  ANALOGTV_GLOBAL
+  {
+    vpp_analogtv_asm_main.global
+  }
+  ANALOGTV_LOCAL
+  {
+    vpp_analogtv_asm_main.local
+  }
+   
+}
+

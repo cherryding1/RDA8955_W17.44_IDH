@@ -1,0 +1,125 @@
+/* This file describes the content of the internal ROM
+   This content is used twice:
+   - in granite_internal_rom_master.ld, to produce the ROM file
+   - in granite_master.ld, to remove objects already in ROM in
+   a DISCARD section,
+   One subtlety is that the ALIGN keyword is forbidden in the
+   DISCARD section, as are the symbol definition. Thus we play with the ROM_BUILD
+   flag to include those linker script command only in the rom building
+   script.
+*/
+
+/* Other macros are used, to specifically detail the content of the
+   ROM according to its fate: the real chip or a FPGA, where it is
+   faster to copy the ROM content during the program execution,
+   often needed due to the under dev state of the code.
+   We discriminate thus 2 parts:
+    - a mandatory one (ROM_MANDATORY_PART) needed to boot and
+    containing codes and object which shouldn't change.
+    - an optional part (ROM_OPTIONAL_PART) (as in optionally
+    in the ROM before booting), not needed to boot and containing
+    code under heavy development and subject to fast pace changes.
+    (faster than the fpga release scale).
+    We need to discard, in the software build, the content of
+    what already in ROM. We use those flags in that case too.
+*/
+
+#define RODATA() .rdata .rodata .rodata.str1.4 .rodata.*
+#define ROTEXT() .text .text.*
+
+#undef INPUT_SECTIONS
+#if defined(ROTEXT_CONTENT)
+#define INPUT_SECTIONS() ROTEXT()
+#elif defined(RODATA_CONTENT)
+#define INPUT_SECTIONS() RODATA()
+#else
+#define INPUT_SECTIONS() ROTEXT() RODATA()
+#endif
+
+        *bcpu_rom.o(INPUT_SECTIONS())
+
+        /* Add things to fill the hole*/
+
+        *bcpu_romstring.o(INPUT_SECTIONS())
+        *bcpu_rom_version.o(INPUT_SECTIONS())
+
+        *spal_cache.o(INPUT_SECTIONS())
+        *spp_cipher.o(INPUT_SECTIONS())
+
+        /* End of filling */
+
+#ifndef RODATA_CONTENT
+        /* BCPU IRQ handler */
+        /* must be aligned at 0xa1e80180 */
+        /* section starts at __bcpu_start/0xa1e80000 */
+         . = 0x0180;
+#endif
+        *spal_irq_handler.o(INPUT_SECTIONS())
+
+        *spp_*.o(INPUT_SECTIONS())
+        *spal_*.o(INPUT_SECTIONS())
+
+        *spc_amr_tx.o(INPUT_SECTIONS())
+        *spc_amr_rx.o(INPUT_SECTIONS())
+        *spc_edge_rx.o(INPUT_SECTIONS())
+        *spc_irq_handler.o(INPUT_SECTIONS())
+        *spc_mailbox.o(INPUT_SECTIONS())
+        *spc_rx.o(INPUT_SECTIONS())
+        *spc_scheduler.o(INPUT_SECTIONS())
+        *spc_tables.o(INPUT_SECTIONS())
+        *spc_tx.o(INPUT_SECTIONS())
+        *spc_version.o(INPUT_SECTIONS())
+
+#ifndef RODATA_CONTENT
+        *(.bcpu_rom_text)
+#endif
+#ifndef ROTEXT_CONTENT
+        *(.bcpu_rom_rodata)
+#endif
+
+        /* Standard Lib */
+        *atoi.o(INPUT_SECTIONS())
+        *ctype.o(INPUT_SECTIONS())
+        *memchr.o(INPUT_SECTIONS())
+        *memcmp.o(INPUT_SECTIONS())
+        *memcpy.o(INPUT_SECTIONS())
+        *memmove.o(INPUT_SECTIONS())
+        *memscan.o(INPUT_SECTIONS())
+        *memset.o(INPUT_SECTIONS())
+        *strcat.o(INPUT_SECTIONS())
+        *strchr.o(INPUT_SECTIONS())
+        *strcmp.o(INPUT_SECTIONS())
+        *strcpy.o(INPUT_SECTIONS())
+        *strlen.o(INPUT_SECTIONS())
+        *strncmp.o(INPUT_SECTIONS())
+        *strncpy.o(INPUT_SECTIONS())
+        *strsep.o(INPUT_SECTIONS())
+        *strstr.o(INPUT_SECTIONS())
+
+        /* FIXME Check rom content, this
+           is removed for place issues */
+/*
+        *bsearch.o(INPUT_SECTIONS())
+        *strcspn.o(INPUT_SECTIONS())
+        *strncat.o(INPUT_SECTIONS())
+        *strnicmp.o(INPUT_SECTIONS())
+        *strspn.o(INPUT_SECTIONS())
+        *strtol.o(INPUT_SECTIONS())
+        *strtoul.o(INPUT_SECTIONS())
+        *vsprintf.o(INPUT_SECTIONS())
+        *vsscanf.o(INPUT_SECTIONS())
+ */
+
+        /* Note that the following files have static variables,
+         * which must be put in BBSRAM if included in ROM */
+/*
+        *qsort.o(INPUT_SECTIONS())
+        *strtok.o(INPUT_SECTIONS())
+*/
+
+        /* rand.o cannot be in ROM as its seed value
+         * (a static variable) has an initial value */
+/*
+        *rand.o(INPUT_SECTIONS())
+*/
+

@@ -1,0 +1,2 @@
+
+C_SRC := jsmn.c cJSON.c

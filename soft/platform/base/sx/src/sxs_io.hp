@@ -1,0 +1,57 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+/*
+================================================================================
+
+  This source code is property of StackCom. The information contained in this
+  file is confidential. Distribution, reproduction, as well as exploitation,or
+  transmisison of any content of this file is not allowed except if expressly
+  permitted. Infringements result in damage claims.
+
+  Copyright StackCom (c) 2003
+
+================================================================================
+*/
+
+/*
+================================================================================
+  File         sxs_io.hp
+--------------------------------------------------------------------------------
+
+  Scope      : Input / Output private header file
+
+  History    :
+--------------------------------------------------------------------------------
+ Aug 13 2003 |  ADA  | Creation
+================================================================================
+*/
+
+#ifndef __SXS_IO_HP__
+#define __SXS_IO_HP__
+
+#include "sxs_type.h"
+#include "sxs_flsh.h"
+
+struct
+{
+    u8 NbFiles;
+    u8 FreeHandle;
+    u8 Handle [SXS_FLH_NB_FILES_MAX];
+    sxs_FileDesc_t Desc [SXS_FLH_NB_FILES_MAX];
+} sxs_FileCtx;
+
+
+void sxs_FileInit (void);
+
+#endif
+

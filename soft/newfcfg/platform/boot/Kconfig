@@ -1,0 +1,5 @@
+comment "--- platform/boot ---"
+
+config FOTA_SUPPORT
+    bool "FOTA support"
+    default n

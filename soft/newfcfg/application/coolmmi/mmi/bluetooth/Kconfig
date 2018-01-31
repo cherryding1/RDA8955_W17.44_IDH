@@ -1,0 +1,234 @@
+comment "--- application/coolmmi/mmi/bluetooth ---"
+
+if BT_MODEL_ENABLE
+
+config MMI_SUPPORT_BLUETOOTH
+	option skiph
+	bool "BT Support"
+	default y
+	---help---
+		For general Bluetooth MMI screen in any related application.
+
+config __MMI_SUPPORT_BLUETOOTH__
+	option skipmk
+	bool
+	def_bool y if MMI_SUPPORT_BLUETOOTH
+
+config __BTCOOLSAND__
+	option skipmk
+	bool "BT coolsand support"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default y
+	---help---
+		It must be defined if defines MMI_SUPPORT_BLUETOOTH.
+
+config __BT_HFG_PROFILE__
+	option skipmk
+	bool "BT support HFG profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default y
+
+config __BT_DUN_PROFILE__
+	option skipmk
+	bool "BT support DUN profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default n
+
+config __BT_SPP_PROFILE__
+	option skipmk
+	bool "BT support SPP profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default n
+
+config __BT_OPP_PROFILE__
+	option skipmk
+	bool "BT support OPP profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default y
+
+config __BT_FTS_PROFILE__
+	option skipmk
+	bool "BT support FTS profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default y
+
+config __BT_FTC_PROFILE__
+	option skipmk
+	bool "BT support FTC profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default n
+
+config __BT_FTS_PROFILE_SMALL__
+	option skipmk
+	bool "BT support small FTC profile"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default n	
+
+config __MMI_BTTEST__
+	option skipmk
+	bool "BT MMI test"
+	depends on __MMI_SUPPORT_BLUETOOTH__
+	default y
+	---help---
+		MMI supports bt test in engineer mode. It must be defined if defines MMI_SUPPORT_BLUETOOTH.
+
+config __BT_NO_A2DP_PROFILE__
+    option skipmk
+    bool "BT NOT support A2DP profile"
+    default n
+    ---help---
+    	Bluetooth does Not support A2DP profile.
+
+ config __BT_A2DP_PROFILE__
+ 	option skipmk
+ 	bool "BT support A2DP profile"
+ 	depends on !__BT_NO_A2DP_PROFILE__
+ 	def_bool y
+
+ config __BT_AVRCP_PROFILE__
+ 	option skipmk
+ 	bool "BT support AVRCP profile"
+ 	depends on !__BT_NO_A2DP_PROFILE__
+ 	def_bool y
+
+config __MMI_BT_SUPPORT__
+	option skipmk
+	bool "BT MMI screen, menu, string, image"
+	depends on __BTCOOLSAND__
+	def_bool y
+
+config __MMI_BT_COOLSAND_SUPPORT__
+	option skipmk
+	bool "BT MMI for bchs"
+	depends on __BTCOOLSAND__
+	def_bool y
+
+config __MMI_EM_BT_RF_TEST__
+	option skipmk
+	bool "BT RF test"
+	depends on __BTCOOLSAND__
+	def_bool y
+
+config __MMI_EM_BT_GET_CHIP_VERION__
+	option skipmk
+	bool "BT Get Chip Version"
+	depends on __BTCOOLSAND__
+	def_bool y
+
+config __BT_RDA5868__
+	option skipmk
+	bool "RDA BT test"
+	depends on __BTCOOLSAND__
+	def_bool y
+
+config __MMI_HFP_SUPPORT__
+	option skipmk
+	bool "BT MMI For HFG"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_HFG_PROFILE__
+	def_bool n
+
+config __MMI_SPP_SUPPORT__
+	option skipmk
+	bool "BT MMI For SPP"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_SPP_PROFILE__
+	def_bool n
+
+config __MMI_DUN_SUPPORT__
+	option skipmk
+	bool "BT MMI For DUN"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_DUN_PROFILE__
+	def_bool n
+
+config __MMI_OPP_SUPPORT__
+	option skipmk
+	bool "BT MMI For OPP"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_OPP_PROFILE__
+	def_bool n
+
+config __MMI_FTS_SUPPORT__
+	option skipmk
+	bool "BT MMI For FTS"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_FTS_PROFILE__
+	def_bool n
+
+config __MMI_FTC_SUPPORT__
+	option skipmk
+	bool "BT MMI For FTC"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_FTC_PROFILE__
+	def_bool n
+
+config __MMI_FTC_MULTIPULL_SUPPORT__
+	option skipmk
+	bool "BT MMI For FTC Multipull"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_FTC_PROFILE__
+	def_bool n
+
+config __MMI_A2DP_SUPPORT__
+	option skipmk
+	bool "BT MMI For A2DP"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_A2DP_PROFILE__
+	def_bool n
+
+config __MMI_AVRCP_SUPPORT__
+	option skipmk
+	bool "BT MMI For AVRCP"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_AVRCP_PROFILE__
+	def_bool n
+
+config __MMI_SIMAP_SUPPORT__
+	option skipmk
+	bool "BT MMI For SIMAP"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_SIM_PROFILE__
+	def_bool n
+
+config __MMI_FAX_SUPPORT__
+	option skipmk
+	bool "BT MMI For FAX"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_FAX_PROFILE__
+	def_bool n
+
+config __MMI_HIDD_SUPPORT__
+	option skipmk
+	bool "BT MMI For HID device"
+	def_bool y if __MMI_BT_SUPPORT__ && __BT_HIDD_PROFILE__
+	def_bool n
+
+config __MMI_BT_PROHIBIT_OPP__
+	option skipmk
+	bool "BT OPP services was prohibitted while a2dp is active"
+	def_bool y if __MMI_A2DP_SUPPORT__ && __MMI_BT_BCHS_SUPPORT__
+	def_bool n
+
+config __MMI_BT_PROHIBIT_FTP__
+	option skipmk
+	bool "BT FTP services was prohibitted while a2dp is active"
+	def_bool y if __MMI_A2DP_SUPPORT__ && __MMI_BT_BCHS_SUPPORT__
+	def_bool n
+
+config __MMI_BT_PROHIBIT_SPP__
+	option skipmk
+	bool "BT SPP services was prohibitted while a2dp is active"
+	def_bool y if __MMI_A2DP_SUPPORT__ && __MMI_BT_BCHS_SUPPORT__
+	def_bool n
+
+config __MMI_BT_PROHIBIT_DUN__
+	option skipmk
+	bool "BT DUN services was prohibitted while a2dp is active"
+	def_bool y if __MMI_A2DP_SUPPORT__ && __MMI_BT_BCHS_SUPPORT__
+	def_bool n
+
+config __MMI_BT_SIMPLE_PAIR__
+	option skipmk
+	bool "MMI BT SIMPLE PAIR"
+	depends on BT_MODEL_ENABLE
+	default y
+	---help---
+		MMI supports bluetooth pairing.
+
+config BT_A2DP_ANA_DAC_MUTE
+    bool "BT_A2DP_ANA_DAC_MUTE"
+    default y
+    ---help---
+    	To support mute ANA gain and DAC gain when playing music via bluetooth.If it defines to 0, current will increase when playing music via bluetooth.
+
+endif

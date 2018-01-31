@@ -1,0 +1,102 @@
+/* This file describes the content of the internal ROM
+   This content is used twice:
+   - in granite_internal_rom_master.ld, to produce the ROM file
+   - in granite_master.ld, to remove objects already in ROM in
+   a DISCARD section,
+   One subtlety is that the ALIGN keyword is forbidden in the
+   DISCARD section, as are the symbol definition. Thus we play with the ROM_BUILD
+   flag to include those linker script command only in the rom building
+   script.
+*/
+
+/* Other macros are used, to specifically detail the content of the
+   ROM according to its fate: the real chip or a FPGA, where it is
+   faster to copy the ROM content during the program execution,
+   often needed due to the under dev state of the code.
+   We discriminate thus 2 parts:
+    - a mandatory one (ROM_MANDATORY_PART) needed to boot and
+    containing codes and object which shouldn't change.
+    - an optional part (ROM_OPTIONAL_PART) (as in optionally
+    in the ROM before booting), not needed to boot and containing
+    code under heavy development and subject to fast pace changes.
+    (faster than the fpga release scale).
+    We need to discard, in the software build, the content of
+    what already in ROM. We use those flags in that case too.
+*/
+
+#define RODATA() .rdata .rodata .rodata.str1.4 .rodata.*
+#define ROTEXT() .text .text.*
+
+#undef INPUT_SECTIONS
+#if defined(ROTEXT_CONTENT)
+#define INPUT_SECTIONS() ROTEXT()
+#elif defined(RODATA_CONTENT)
+#define INPUT_SECTIONS() RODATA()
+#else
+#define INPUT_SECTIONS() ROTEXT() RODATA()
+#endif
+
+        /* XCPU ROM start */
+        *boot_rom.o(INPUT_SECTIONS())
+
+        /* Add things to fill the hole*/
+        /* End of filling */
+
+        /* XCPU codes */
+        *boot_dma.o(INPUT_SECTIONS())
+        *boot_host.o(INPUT_SECTIONS())
+        *boot_irq_dispatch.o(INPUT_SECTIONS())
+        *boot_ispi.o(INPUT_SECTIONS())
+        *boot_monitor.o(INPUT_SECTIONS())
+        *boot_romstring.o(INPUT_SECTIONS())
+        *boot_rom_version.o(INPUT_SECTIONS())
+        *boot_uart_monitor.o(INPUT_SECTIONS())
+
+        /* Functional test. */
+        *boot_bist.o(INPUT_SECTIONS())
+        *boot_march_c_bbcp2.o(INPUT_SECTIONS())
+        *boot_test.o(INPUT_SECTIONS())
+
+        *(.internal_rom_text)
+        *(.internal_rom_rodata)
+
+        /* Standard Lib */
+        *atoi.o(INPUT_SECTIONS())
+        *bsearch.o(INPUT_SECTIONS())
+        *ctype.o(INPUT_SECTIONS())
+        *memchr.o(INPUT_SECTIONS())
+        *memcmp.o(INPUT_SECTIONS())
+        *memcpy.o(INPUT_SECTIONS())
+        *memmove.o(INPUT_SECTIONS())
+        *memscan.o(INPUT_SECTIONS())
+        *memset.o(INPUT_SECTIONS())
+        *qsort.o(INPUT_SECTIONS())
+        *strcat.o(INPUT_SECTIONS())
+        *strchr.o(INPUT_SECTIONS())
+        *strcmp.o(INPUT_SECTIONS())
+        *strcpy.o(INPUT_SECTIONS())
+        *strcspn.o(INPUT_SECTIONS())
+        *strlen.o(INPUT_SECTIONS())
+        *strncat.o(INPUT_SECTIONS())
+        *strncmp.o(INPUT_SECTIONS())
+        *strncpy.o(INPUT_SECTIONS())
+        *strnicmp.o(INPUT_SECTIONS())
+        *strsep.o(INPUT_SECTIONS())
+        *strspn.o(INPUT_SECTIONS())
+        *strstr.o(INPUT_SECTIONS())
+        *strtok.o(INPUT_SECTIONS())
+        *strtol.o(INPUT_SECTIONS())
+        *strtoul.o(INPUT_SECTIONS())
+
+        /* FIXME Check rom content, this
+           is removed for place issues */
+/*
+        *vsprintf.o(INPUT_SECTIONS())
+        *vsscanf.o(INPUT_SECTIONS())
+ */
+
+        /* rand.o cannot be in ROM as its seed value
+         * (a static variable) has an initial value */
+/*
+        *rand.o(INPUT_SECTIONS())
+*/

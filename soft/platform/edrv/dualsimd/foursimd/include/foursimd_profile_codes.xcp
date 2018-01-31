@@ -1,0 +1,15 @@
+<module name="DUALSIMD">
+
+    <!-- Function -->
+    <fn name="foursim_SendRegData"                id="0x12B0" group="DUALSIMD API"/>
+    <fn name="foursim_SetSim3VVoltage"            id="0x12B1" group="DUALSIMD API"/>
+    <fn name="foursim_SetSim1V8Voltage"           id="0x12B2" group="DUALSIMD API"/>
+    <fn name="foursim_SetSim0VVoltage"            id="0x12B3" group="DUALSIMD API"/>
+    <fn name="foursim_SetSimVoltage"              id="0x12B4" group="DUALSIMD API"/>
+    <fn name="foursim_SetSimEnable"               id="0x12B5" group="DUALSIMD API"/>
+    <fn name="foursim_SetSimRstEnable"            id="0x12B6" group="DUALSIMD API"/>
+    <fn name="foursim_SetSimClkEnable"            id="0x12B7" group="DUALSIMD API"/>
+    <fn name="foursim_SetSimDataEnable"           id="0x12B8" group="DUALSIMD API"/>
+
+</module>
+

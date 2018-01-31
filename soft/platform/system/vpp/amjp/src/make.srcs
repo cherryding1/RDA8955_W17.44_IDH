@@ -1,0 +1,3 @@
+S_SRC := $(S_SRC)   
+C_SRC := $(C_SRC)   vpp_amjp.c vpp_amjp_asm.c  
+

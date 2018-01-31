@@ -1,0 +1,54 @@
+<module name="BOOT">
+
+    <!-- Don't change the numbering of the items sent by romed code --> 
+
+    <!-- Usb driver -->
+    <fn name="boot_UsbIrqHandler"                 id="0x0130" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerI"                id="0x0131" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerO"                id="0x0132" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerIcp"              id="0x0133" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerIto"              id="0x0134" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerOsp"              id="0x0135" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerOcp"              id="0x0136" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerReset"            id="0x0137" group="BOOT"/>
+    <fn name="boot_UsbIrqHandlerEnum"             id="0x0138" group="BOOT"/>
+
+    <!-- Usb Host -->
+    <fn name="boot_HostUsbDecode"                 id="0x0139" group="BOOT"/>
+    <fn name="boot_HostUsbGenerateReadPacket"     id="0x013A" group="BOOT"/>
+    <fn name="boot_HostUsbSendReadPacket"         id="0x013B" group="BOOT"/>
+    <fn name="boot_HostUsbWriteInternal"          id="0x013C" group="BOOT"/>
+    <fn name="boot_HostUsbInit"                   id="0x013D" group="BOOT"/>
+
+    <!-- XCPU Pulses -->
+    <fn name="XCPU_BOOT"                          id="0x2F00" group="HAL"/>
+    <fn name="XCPU_MAIN"                          id="0x2F01" group="HAL"/>
+
+    <!-- The following codes were in conflict in Greenstone -->
+    <fn name="BOOT_START_or_POWER_STATE_DONE"     id="0x2F04" group="BOOT"/>
+    <fn name="BOOT_PU_ST_START_or_ENTER_MONITOR_LOOP" id="0x2F05" group="BOOT"/>
+    <fn name="BOOT_PU_ST_END_or_USB_TIMEOUT_IN"   id="0x2F06" group="BOOT"/>
+    <fn name="BOOT_CACHE_FLUSHED_or_USB_MONITOR_EVENT_TIMEOUT" id="0x2F07" group="BOOT"/>
+    <!-- The previous codes were in conflict in Greenstone -->
+
+    <fn name="BOOT_ADMUX"                         id="0x2F08" group="BOOT"/>
+    <fn name="BOOT_WRITE_FLASH_MODE"              id="0x2F09" group="BOOT"/>
+    <fn name="BOOT_PU_END_START"                  id="0x2F0A" group="BOOT"/>
+    <fn name="BOOT_PU_END_END"                    id="0x2F0B" group="BOOT"/>
+    <fn name="BOOT_DIRECT_IN_FLASH"               id="0x2F0C" group="BOOT"/>
+    <fn name="BOOT_EXIT_BOOT"                     id="0x2F0D" group="BOOT"/>
+    <fn name="BOOT_POWER_STATE_DONE"              id="0x2F0E" group="BOOT"/>
+    <fn name="BOOT_ENTER_MONITOR_LOOP"            id="0x2F0F" group="BOOT"/>
+    <fn name="BOOT_USB_TIMEOUT_IN"                id="0x2F10" group="BOOT"/>
+    <fn name="BOOT_USB_MONITOR_EVENT_TIMEOUT"     id="0x2F11" group="BOOT"/>
+    <fn name="BOOT_ROMED_XCPU_ERROR"              id="0x2F12" group="BOOT"/>
+    <fn name="BOOT_START"                         id="0x2F13" group="BOOT"/>
+    <fn name="BOOT_PU_ST_START"                   id="0x2F14" group="BOOT"/>
+    <fn name="BOOT_PU_ST_END"                     id="0x2F15" group="BOOT"/>
+    <fn name="BOOT_CACHE_FLUSHED"                 id="0x2F16" group="BOOT"/>
+    <fn name="BOOT_USB_REQUEST_DEVICE_SETADDR"    id="0x2F17" group="BOOT"/>
+    <fn name="BOOT_USB_STATUS_OUT"                id="0x2F18" group="BOOT"/>
+    <fn name="BOOT_USB_STATUS_IN"                 id="0x2F19" group="BOOT"/>
+
+</module>
+

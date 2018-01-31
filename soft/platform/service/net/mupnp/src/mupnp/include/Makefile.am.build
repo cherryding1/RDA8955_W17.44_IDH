@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+print<<HEADER;
+############################################################
+#
+# mUPnP for C
+#
+# Copyright (C) Satoshi Konno 2005
+#
+############################################################
+
+mupnp_headers = \\
+HEADER
+
+my @find_files = `find ./mupnp -name *.h`;
+my @include_files;
+foreach $file (@find_files) {
+	$file =~ s/\n//;
+	$file = "\t" . $file;
+	push @include_files, $file;
+}
+print join(" \\\n", @include_files) . "\n";
+
+print<<FOTTER;
+
+
+mupnp/upnp.h: \$(top_builddir)/config.h
+	sed -e "s/MUPNP_VER/MUPNP_VER \\"\$(PACKAGE_VERSION)\\"/" \\
+	\$(srcdir)/mupnp/upnp.h.in > \$(srcdir)/mupnp/upnp.h
+
+nobase_include_HEADERS = \\
+	\$(mupnp_headers)
+FOTTER

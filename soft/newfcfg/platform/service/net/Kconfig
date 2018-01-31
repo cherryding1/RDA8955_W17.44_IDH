@@ -1,0 +1,63 @@
+comment "--- platform/service/net/ ---"
+
+config CFW_TCPIP_SUPPORT
+	bool "CFW_TCPIP_SUPPORT"
+	default y
+
+config CFW_PPP_SUPPORT
+	bool "CFW_PPP_SUPPORT"
+	def_bool n if CT_MODEM=0
+	default y
+
+menuconfig LWIP_SUPPORT
+	depends on CFW_TCPIP_SUPPORT
+	bool "Lwip Support"
+	default y
+
+if LWIP_SUPPORT
+	config LWIP_DEBUG_ON
+		bool "LWIP_DEBUG_ON"
+		default y
+
+	config LWIP_PPP_ON
+	    depends on CFW_PPP_SUPPORT
+		bool "LWIP_PPP_ON"
+		default y
+
+	config LWIP_IPV4_ON
+		bool "LWIP_IPV4_ON"
+		default y
+
+	config LWIP_IPV6_ON
+		bool "LWIP_IPV6_ON"
+		def_bool n if CT_MODEM=0
+		def_bool y
+
+	config LWIP_TEST
+		bool "LWIP_TEST"
+		def_bool n if CT_MODEM=0
+		def_bool y
+
+if LWIP_TEST
+	config LWIP_MQTT_TEST
+		bool "LWIP_MQTT_TEST"
+		default y if CT_MODEM=1
+		default n
+
+	config LWIP_HTTP_TEST
+		bool "LWIP_HTTP_TEST"
+		default y if CT_MODEM=1
+		default n
+
+	config LWIP_COAP_TEST
+		bool "LWIP_COAP_TEST"
+		default y if CT_MODEM=1
+		default n
+
+    config LWIP_LIBWM2M_TEST
+        bool "LWIP_LIBWM2M_TEST"
+        default y if CT_MODEM=1
+        default n
+endif
+
+endif

@@ -1,0 +1,1136 @@
+Archive member included because of file (symbol)
+
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+                              (atoi)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+                              (bsearch)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+                              (_ctype)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+                              (memchr)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+                              (memcmp)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+                              (memcpy)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+                              (memmove)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+                              (memscan)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+                              (memset)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+                              (qsort)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+                              (strcat)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+                              (strchr)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+                              (strcmp)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+                              (strcpy)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+                              (strcspn)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+                              (strlen)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+                              (strncat)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+                              (strncmp)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+                              (strncpy)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+                              (strnicmp)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+                              (strsep)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+                              (strspn)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+                              (strstr)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+                              (strtok_r)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+                              (strtol)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+                              (strtoul)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+                              (vsnprintf)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+                              (vsscanf)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+                              (boot_Monitor)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o) (g_bootBootMode)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+                              (__xcpu_start)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+                              (g_bootRomVersionNumber)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+                              (boot_romCsString)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o) (g_bootUartMonitorBaudRate)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o) (boot_UsbInitVar)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o) (boot_HostUsbDeviceCallback)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o) (boot_HstMonitorXCtx)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o) (boot_IrqDispatch)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+                              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o) (boot_IspiOpen)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+                              (btcpu_error_code)
+/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+                              (__btcpu_start)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_BootUsbVar        0x5c              /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+g_bootUartMonitorBaudRate
+                    0x4               /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .data          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .bss           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .debug_abbrev  0x0000000000000000       0x2a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .debug_info    0x0000000000000000       0x81 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .debug_line    0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .debug_str     0x0000000000000000      0x11a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_abbrev  0x0000000000000000       0x90 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_info    0x0000000000000000       0xdd /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_line    0x0000000000000000       0x8b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_loc     0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_pubnames
+                0x0000000000000000       0x1b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .debug_str     0x0000000000000000      0x117 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_abbrev  0x0000000000000000       0xd1 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_info    0x0000000000000000      0x15c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_line    0x0000000000000000       0x9a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_frame   0x0000000000000000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_loc     0x0000000000000000      0x17a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .debug_str     0x0000000000000000      0x13f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .debug_abbrev  0x0000000000000000       0x52 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .debug_info    0x0000000000000000       0x57 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .debug_line    0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .debug_str     0x0000000000000000       0x8b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_abbrev  0x0000000000000000       0xa2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_info    0x0000000000000000       0xf6 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_line    0x0000000000000000       0x8e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_loc     0x0000000000000000       0x47 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .debug_str     0x0000000000000000      0x11b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_abbrev  0x0000000000000000       0x88 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_info    0x0000000000000000       0xf7 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_line    0x0000000000000000       0x8d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_ranges  0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .debug_str     0x0000000000000000      0x11b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_abbrev  0x0000000000000000       0xdf /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_info    0x0000000000000000      0x19e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_line    0x0000000000000000      0x134 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_loc     0x0000000000000000      0x2c1 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .debug_str     0x0000000000000000      0x171 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_abbrev  0x0000000000000000       0x97 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_info    0x0000000000000000      0x127 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_line    0x0000000000000000       0xbd /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_loc     0x0000000000000000      0x31a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .debug_str     0x0000000000000000      0x135 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_abbrev  0x0000000000000000       0x85 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_info    0x0000000000000000       0xe3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_line    0x0000000000000000       0x8f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_loc     0x0000000000000000       0x13 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .debug_str     0x0000000000000000      0x11d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_abbrev  0x0000000000000000       0x9a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_info    0x0000000000000000      0x101 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_line    0x0000000000000000       0xb3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_loc     0x0000000000000000      0x144 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .debug_str     0x0000000000000000      0x127 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_abbrev  0x0000000000000000      0x165 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_info    0x0000000000000000      0x402 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_line    0x0000000000000000      0x165 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_frame   0x0000000000000000       0x48 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_loc     0x0000000000000000      0x5c8 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_pubnames
+                0x0000000000000000       0x1c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_ranges  0x0000000000000000       0x70 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .debug_str     0x0000000000000000      0x1c9 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_abbrev  0x0000000000000000       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_info    0x0000000000000000       0xd5 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_line    0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_loc     0x0000000000000000       0x52 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .debug_str     0x0000000000000000      0x11b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_abbrev  0x0000000000000000       0x97 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_info    0x0000000000000000      0x105 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_line    0x0000000000000000       0x4a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_frame   0x0000000000000000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_loc     0x0000000000000000       0x3c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_pubnames
+                0x0000000000000000       0x29 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .debug_str     0x0000000000000000      0x121 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_abbrev  0x0000000000000000       0x71 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_info    0x0000000000000000       0xc2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_line    0x0000000000000000       0x43 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_loc     0x0000000000000000       0x3f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .debug_str     0x0000000000000000      0x114 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_abbrev  0x0000000000000000       0x7e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_info    0x0000000000000000       0xd4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_line    0x0000000000000000       0x3f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_loc     0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .debug_str     0x0000000000000000      0x11e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_abbrev  0x0000000000000000       0x8d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_info    0x0000000000000000       0xe0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_line    0x0000000000000000       0x93 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_frame   0x0000000000000000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_loc     0x0000000000000000       0xa8 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .debug_str     0x0000000000000000      0x12a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_abbrev  0x0000000000000000       0xa4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_info    0x0000000000000000      0x10e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_line    0x0000000000000000       0x8e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_frame   0x0000000000000000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_loc     0x0000000000000000       0x44 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_pubnames
+                0x0000000000000000       0x29 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .debug_str     0x0000000000000000      0x123 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_abbrev  0x0000000000000000       0xb2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_info    0x0000000000000000      0x117 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_line    0x0000000000000000       0xb3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_loc     0x0000000000000000       0x65 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .debug_str     0x0000000000000000      0x126 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_abbrev  0x0000000000000000       0x7e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_info    0x0000000000000000       0xda /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_line    0x0000000000000000       0x91 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_loc     0x0000000000000000       0x47 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .debug_str     0x0000000000000000      0x11d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_abbrev  0x0000000000000000       0xa3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_info    0x0000000000000000      0x100 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_line    0x0000000000000000       0x93 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_frame   0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_loc     0x0000000000000000       0x65 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_ranges  0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .debug_str     0x0000000000000000      0x11d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_abbrev  0x0000000000000000       0x94 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_info    0x0000000000000000       0xf8 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_line    0x0000000000000000       0xa0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_frame   0x0000000000000000       0x28 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_loc     0x0000000000000000       0x3d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_pubnames
+                0x0000000000000000       0x1f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_ranges  0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .debug_str     0x0000000000000000      0x11f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_abbrev  0x0000000000000000       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_info    0x0000000000000000      0x116 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_line    0x0000000000000000       0x4f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_loc     0x0000000000000000       0xcb /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .debug_str     0x0000000000000000      0x128 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_abbrev  0x0000000000000000       0xa9 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_info    0x0000000000000000      0x10b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_line    0x0000000000000000       0x8b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_frame   0x0000000000000000       0x28 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_loc     0x0000000000000000       0x5b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .debug_str     0x0000000000000000      0x126 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_abbrev  0x0000000000000000       0x9c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_info    0x0000000000000000      0x100 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_line    0x0000000000000000       0x99 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_frame   0x0000000000000000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_loc     0x0000000000000000       0xce /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .debug_str     0x0000000000000000      0x120 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_abbrev  0x0000000000000000       0xcf /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_info    0x0000000000000000      0x164 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_line    0x0000000000000000       0x66 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_frame   0x0000000000000000       0x44 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_loc     0x0000000000000000      0x147 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_pubnames
+                0x0000000000000000       0x2a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .debug_str     0x0000000000000000      0x134 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_abbrev  0x0000000000000000       0x9f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_info    0x0000000000000000      0x165 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_line    0x0000000000000000       0xf7 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_loc     0x0000000000000000      0x1f6 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_pubnames
+                0x0000000000000000       0x1d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .debug_str     0x0000000000000000      0x13a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_abbrev  0x0000000000000000       0xac /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_info    0x0000000000000000      0x15b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_line    0x0000000000000000       0xd2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_frame   0x0000000000000000       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_loc     0x0000000000000000      0x1f9 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_pubnames
+                0x0000000000000000       0x1e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .debug_str     0x0000000000000000      0x13c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .pdr           0x0000000000000000       0xa0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_abbrev  0x0000000000000000      0x239 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_info    0x0000000000000000      0x879 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_line    0x0000000000000000      0x2b0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_frame   0x0000000000000000       0x94 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_loc     0x0000000000000000      0x7a1 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_pubnames
+                0x0000000000000000       0x46 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_ranges  0x0000000000000000      0x4b0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .debug_str     0x0000000000000000      0x1e8 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .text          0x0000000000000000      0x680 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .data          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .bss           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_abbrev  0x0000000000000000      0x1c3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_info    0x0000000000000000      0x2fb /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_line    0x0000000000000000      0x208 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .rodata        0x0000000000000000       0x24 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_frame   0x0000000000000000       0x48 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_loc     0x0000000000000000      0x902 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_pubnames
+                0x0000000000000000       0x29 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_ranges  0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .debug_str     0x0000000000000000      0x1c0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsscanf.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .pdr           0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_abbrev  0x0000000000000000      0x152 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_info    0x0000000000000000      0xa10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_line    0x0000000000000000      0x25e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_frame   0x0000000000000000       0x4c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_loc     0x0000000000000000       0x88 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_pubnames
+                0x0000000000000000       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .debug_str     0x0000000000000000      0xbbd /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .text          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+ .pdr           0x0000000000000000       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+ .data          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .bss           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .debug_abbrev  0x0000000000000000       0x6a /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .debug_info    0x0000000000000000      0x142 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .debug_line    0x0000000000000000       0x88 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .debug_pubnames
+                0x0000000000000000       0x77 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .debug_str     0x0000000000000000      0x176 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .data          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .bss           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .debug_abbrev  0x0000000000000000       0x52 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .debug_info    0x0000000000000000       0x7e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .debug_line    0x0000000000000000       0x3b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .debug_pubnames
+                0x0000000000000000       0x36 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .debug_str     0x0000000000000000       0xa7 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .pdr           0x0000000000000000      0x1a0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_abbrev  0x0000000000000000      0x29e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_info    0x0000000000000000     0x116b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_line    0x0000000000000000      0x45e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_frame   0x0000000000000000      0x158 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_loc     0x0000000000000000      0x606 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_pubnames
+                0x0000000000000000      0x1b9 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_ranges  0x0000000000000000       0x50 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .debug_str     0x0000000000000000      0xf9c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .pdr           0x0000000000000000      0x360 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_abbrev  0x0000000000000000      0x3fb /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_info    0x0000000000000000     0x1de5 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_line    0x0000000000000000      0x5f0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_frame   0x0000000000000000      0x2a4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_loc     0x0000000000000000     0x1090 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_pubnames
+                0x0000000000000000      0x19f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_ranges  0x0000000000000000       0x70 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .debug_str     0x0000000000000000     0x12fd /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .pdr           0x0000000000000000      0x140 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_abbrev  0x0000000000000000      0x312 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_info    0x0000000000000000     0x14b7 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_line    0x0000000000000000      0x3c2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_frame   0x0000000000000000      0x10c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_loc     0x0000000000000000      0x3f2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_pubnames
+                0x0000000000000000       0xff /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .debug_str     0x0000000000000000     0x1524 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .pdr           0x0000000000000000       0x60 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_abbrev  0x0000000000000000      0x10b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_info    0x0000000000000000      0x453 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_line    0x0000000000000000      0x15b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_frame   0x0000000000000000       0x58 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_loc     0x0000000000000000       0xa3 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_pubnames
+                0x0000000000000000       0x8b /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .debug_str     0x0000000000000000      0x53e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .pdr           0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_abbrev  0x0000000000000000       0xa2 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_info    0x0000000000000000      0x331 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_line    0x0000000000000000      0x121 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_frame   0x0000000000000000       0x28 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_loc     0x0000000000000000       0x1f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_pubnames
+                0x0000000000000000       0x27 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .debug_str     0x0000000000000000      0x50e /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .pdr           0x0000000000000000      0x2a0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .mdebug.abi32  0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_abbrev  0x0000000000000000      0x27f /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_info    0x0000000000000000      0x989 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_line    0x0000000000000000      0x2a9 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_frame   0x0000000000000000      0x1b4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_loc     0x0000000000000000      0x48d /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_pubnames
+                0x0000000000000000      0x201 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .debug_str     0x0000000000000000      0x872 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .comment       0x0000000000000000       0x32 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .gnu.attributes
+                0x0000000000000000       0x10 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .text          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+ .data          0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+ .bss           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+ .reginfo       0x0000000000000000       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+ .pdr           0x0000000000000000        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/obj/cool_profile/stub.o
+                0xffffffff81e00000                . = 0xffffffff81e00000
+                0xffffffff81e00000                __int_rom_main = .
+                0xffffffff81e00000                _int_rom_start = .
+
+.internal_rom   0xffffffff81e00000     0x4ae0
+ *boot_rom.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e00000      0x500 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+                0xffffffff81e00000                __xcpu_start
+                0xffffffff81e00180                _boot_IrqHandler
+                0xffffffff81e002c0                boot_HstMonitorX
+                0xffffffff81e00320                boot_DbgExlTrigFunction0
+                0xffffffff81e0047c                monitor_entry
+                0xffffffff81e00480                initial_stack_top_var
+                0xffffffff81e00484                boot_FlushCache
+                0xffffffff81e004a8                boot_DisableInterrupt
+ *boot_monitor.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e00500      0x180 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+                0xffffffff81e00501                boot_MonitorDoMonitoring
+                0xffffffff81e00641                boot_Monitor
+ *boot_uart_monitor.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e00680      0x8e0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+                0xffffffff81e00681                boot_UartMonitorGetBaudRate
+                0xffffffff81e00695                boot_UartMonitorSend
+                0xffffffff81e006f9                boot_UartMonitorGet
+                0xffffffff81e0075d                boot_UartMonitorOpen
+                0xffffffff81e00795                boot_UartMonitorClose
+                0xffffffff81e007a5                boot_UartMonitorAck
+                0xffffffff81e00831                boot_UartMonitorTimeOut
+                0xffffffff81e00859                boot_UartMonitorWriteProcess
+                0xffffffff81e009a1                boot_UartMonitorRpcProcess
+                0xffffffff81e00ae9                boot_UartMonitorReadProcess
+                0xffffffff81e00ca9                boot_UartMonitorExitProcess
+                0xffffffff81e00cfd                boot_UartMonitorProcess
+                0xffffffff81e00da5                boot_UartMonitor
+ .rodata.str1.4
+                0xffffffff81e00f60       0x2c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+                0xffffffff81e00ff8                . = 0xff8
+ *fill*         0xffffffff81e00f8c       0x6c 00
+ *boot_usb.o(.usbFixptr)
+ .usbFixptr     0xffffffff81e00ff8        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+                0xffffffff81e00ffc                . = 0xffc
+ *boot_usb_monitor.o(.usbmonitorFixptr)
+ .usbmonitorFixptr
+                0xffffffff81e00ffc        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+                0xffffffff81e00ffc                g_BootHostUsbFixPtr
+ *boot_irq_dispatch.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e01000       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+                0xffffffff81e01001                boot_IrqDispatch
+ *boot_host.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e01030      0x104 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+                0xffffffff81e01031                mon_Event
+                0xffffffff81e01069                boot_HstCmdBasicHandler
+                0xffffffff81e010c9                boot_HstMonitor
+ *boot_ispi.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e01134      0x4e0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+                0xffffffff81e01135                boot_IspiGetRomedCfg
+                0xffffffff81e011c1                boot_IspiOpen
+                0xffffffff81e012a1                boot_IspiFlushFifos
+                0xffffffff81e012b1                boot_IspiClearRxDmaDone
+                0xffffffff81e012c1                boot_IspiClearTxDmaDone
+                0xffffffff81e012d1                boot_IspiClose
+                0xffffffff81e01315                boot_IspiRxIfcChannelRelease
+                0xffffffff81e0132d                boot_IspiTxIfcChannelRelease
+                0xffffffff81e01345                boot_IspiSendData
+                0xffffffff81e013a1                boot_IspiSendDataBuffer
+                0xffffffff81e0140d                boot_IspiTxFifoAvail
+                0xffffffff81e01429                boot_IspiTxDmaDone
+                0xffffffff81e01459                boot_IspiTxFinished
+                0xffffffff81e01485                boot_IspiGetData
+                0xffffffff81e014b5                boot_IspiGetDataBuffer
+                0xffffffff81e01521                boot_IspiRxFifoLevel
+                0xffffffff81e01539                boot_IspiRxDmaDone
+                0xffffffff81e01569                boot_IspiForcePin
+                0xffffffff81e015fd                boot_IspiGetRxIfcTc
+ .rodata        0xffffffff81e01614       0x24 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+                0xffffffff81e01614                g_bootIspiRomedCfg
+ *boot_dma.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *boot_nand.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *boot_usb.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e01638     0x1478 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+                0xffffffff81e01679                boot_UsbResetTransfert
+                0xffffffff81e016a1                boot_UsbStartTransfert
+                0xffffffff81e017a1                boot_UsbCancelTransfert
+                0xffffffff81e017c9                boot_UsbContinueTransfert
+                0xffffffff81e01d31                boot_UsbInitVar
+                0xffffffff81e01d59                boot_UsbOpen
+                0xffffffff81e01d79                boot_UsbEpStall
+                0xffffffff81e01e01                boot_UsbRecv
+                0xffffffff81e01e49                boot_UsbSend
+                0xffffffff81e01ecd                boot_UsbCompletedCommand
+                0xffffffff81e01f15                boot_UsbEpEnableInterrupt
+                0xffffffff81e01f65                boot_UsbEpRxTransferedSize
+                0xffffffff81e01f81                boot_UsbEpTransfertDone
+                0xffffffff81e0203d                boot_UsbClose
+                0xffffffff81e02079                boot_UsbReset
+                0xffffffff81e02801                boot_UsbIrqHandler
+ .rodata.str1.4
+                0xffffffff81e02ab0       0x16 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+                                         0x18 (size before relaxing)
+ *fill*         0xffffffff81e02ac6        0x2 00
+ .rodata        0xffffffff81e02ac8        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ *boot_usb_monitor.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e02acc      0x784 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+                0xffffffff81e02acd                boot_HostUsbDeviceCallback
+                0xffffffff81e02ad9                boot_HostUsbClockEnable
+                0xffffffff81e02b11                boot_HostUsbClose
+                0xffffffff81e02b21                boot_HostUsbSend
+                0xffffffff81e02c7d                boot_HostUsbEvent
+                0xffffffff81e0310d                boot_HostUsbRecv
+                0xffffffff81e031a5                boot_HostUsbInit
+                0xffffffff81e0321d                boot_HostUsbOpen
+ .rodata.str1.4
+                0xffffffff81e03250       0x3c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .rodata        0xffffffff81e0328c       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+                0xffffffff81e0328c                boot_HostUsbInterface
+ *boot_romstring.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e0330c        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+ .rodata        0xffffffff81e0330c       0x44 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_romstring.o)
+                0xffffffff81e0330c                boot_romCsString
+                0xffffffff81e03340                boot_romDT
+ *boot_rom_version.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03350        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+ .rodata        0xffffffff81e03350       0x5c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+                0xffffffff81e03350                MutedFrame_AMR
+                0xffffffff81e03358                MutedFrame_HR
+                0xffffffff81e03368                MutedFrame_EFR
+                0xffffffff81e03388                MutedFrame_FR
+ *boot_test.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *boot_bist.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *boot_march_c_bbcp2.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *(.internal_rom_text)
+ *(.internal_rom_rodata)
+ *atoi.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ *fill*         0xffffffff81e033ac        0x4 00
+ .text          0xffffffff81e033b0       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+                0xffffffff81e033b1                atoi
+ *bsearch.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e033f0       0x60 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+                0xffffffff81e033f1                bsearch
+ *ctype.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03450        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .rodata        0xffffffff81e03450      0x100 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+                0xffffffff81e03450                _ctype
+ *memchr.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03550       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+                0xffffffff81e03551                memchr
+ *memcmp.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03590       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+                0xffffffff81e03591                memcmp
+ *memcpy.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e035c0      0x1d0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+                0xffffffff81e035c1                memcpy
+ *memmove.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03790      0x140 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+                0xffffffff81e03791                memmove
+ *memscan.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e038d0       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+                0xffffffff81e038d1                memscan
+ *memset.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e038f0       0x90 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+                0xffffffff81e038f1                memset
+ *qsort.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03980      0x2e0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+                0xffffffff81e03c31                qsort
+ *strcat.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03c60       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+                0xffffffff81e03c61                strcat
+ *strchr.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03c80       0x50 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+                0xffffffff81e03c81                strchr
+                0xffffffff81e03cb1                strrchr
+ *strcmp.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03cd0       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+                0xffffffff81e03cd1                strcmp
+ *strcpy.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03d10       0x20 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+                0xffffffff81e03d11                strcpy
+ *strcspn.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03d30       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+                0xffffffff81e03d31                strcspn
+ *strlen.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03d70       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+                0xffffffff81e03d71                strlen
+                0xffffffff81e03d91                strnlen
+ *strncat.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03db0       0x50 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+                0xffffffff81e03db1                strncat
+ *strncmp.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03e00       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+                0xffffffff81e03e01                strncmp
+ *strncpy.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03e40       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+                0xffffffff81e03e41                strncpy
+ *strnicmp.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03e80       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+                0xffffffff81e03e81                strnicmp
+ *strsep.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03f00       0x40 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+                0xffffffff81e03f01                strsep
+ *strspn.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03f40       0x30 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+                0xffffffff81e03f41                strspn
+ *strstr.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03f70       0x60 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+                0xffffffff81e03f71                strstr
+ *strtok.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e03fd0       0xa0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+                0xffffffff81e03fd1                strtok_r
+                0xffffffff81e04051                strtok
+ *strtol.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e04070      0x1c0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+                0xffffffff81e04071                strtol
+ *strtoul.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e04230      0x190 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+                0xffffffff81e04231                strtoul
+ *vsprintf.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e043c0      0x6f0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+                0xffffffff81e045b1                vsnprintf
+                0xffffffff81e04a51                vsprintf
+                0xffffffff81e04a71                snprintf
+                0xffffffff81e04a91                sprintf
+ .rodata.str1.4
+                0xffffffff81e04ab0       0x25 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+                                         0x28 (size before relaxing)
+                0xffffffff81e04ae0                . = ALIGN (0x10)
+ *fill*         0xffffffff81e04ad5        0xb 00
+                0xffffffff81e04b00                . = 0xffffffff81e04b00
+
+.btcpu_rom      0xffffffff81e04b00       0xa0
+ *btcpu_rom.o(.text .text.* .rdata .rodata .rodata.str1.4 .rodata.*)
+ .text          0xffffffff81e04b00       0x94 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_rom.o)
+                0xffffffff81e04b00                __btcpu_start
+                0xffffffff81e04b24                __btcpu_init
+                0xffffffff81e04b80                __btcpu_int_handler
+                0xffffffff81e04ba0                . = ALIGN (0x10)
+ *fill*         0xffffffff81e04b94        0xc 00
+                0xffffffff81e04ba0                __int_rom_end = .
+                0xffffffffa1c000a0                . = 0xffffffffa1c000a0
+
+.rom_entries_uncached
+                0xffffffffa1c000a0       0x18
+                0xffffffffa1c000a0                _hstMonitorXCtx_start = .
+ *boot_host.o(.sram_hst_monitor_ctx)
+ .sram_hst_monitor_ctx
+                0xffffffffa1c000a0       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+                0xffffffffa1c000a0                boot_HstMonitorXCtx
+                0xffffffffa1c000b4                boot_HstMonitorExtendedHandler
+                0xffffffffa1c000b8                . = ALIGN (0x4)
+                0xffffffff81c000b8                . = (. - 0x20000000)
+
+.rom_entries_cached
+                0xffffffff81c000b8      0x148
+ *boot_host.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000b8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ .bss           0xffffffff81c000b8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_host.o)
+ *boot_ram.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000b8       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+                0xffffffff81c000b8                xcpu_error_code
+                0xffffffff81c000bc                xcpu_error_status
+                0xffffffff81c000c0                xcpu_sp_context
+                0xffffffff81c000c4                sxr_IrqStack_pointer
+                0xffffffff81c000c8                g_bootResetCause
+                0xffffffff81c000cc                g_bootBootMode
+ .bss           0xffffffff81c000d0        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ram.o)
+ *boot_uart_monitor.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000d0        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+ .bss           0xffffffff81c000d0        0x1 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+                0xffffffff81c000d0                g_bootUartMonitorBrDetected
+ *fill*         0xffffffff81c000d1        0x3 00
+ .scommon       0xffffffff81c000d4        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_uart_monitor.o)
+                0xffffffff81c000d4                g_bootUartMonitorBaudRate
+ *boot_rom.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000d8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+ .bss           0xffffffff81c000d8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom.o)
+ *boot_monitor.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000d8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ .bss           0xffffffff81c000d8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_monitor.o)
+ *boot_ram.o(.data .data.* .bss .bss.* .scommon COMMON)
+ *boot_uart_monitor.o(.data .data.* .bss .bss.* .scommon COMMON)
+ *boot_ispi.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000d8        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ .bss           0xffffffff81c000dc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_ispi.o)
+ *boot_usb.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c000dc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ .bss           0xffffffff81c000dc       0x80 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+ COMMON         0xffffffff81c0015c       0x5c /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb.o)
+                0xffffffff81c0015c                g_BootUsbVar
+ *boot_usb_monitor.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001b8        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ .bss           0xffffffff81c001b8       0x24 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_usb_monitor.o)
+ *boot_irq_dispatch.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001dc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ .bss           0xffffffff81c001dc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_irq_dispatch.o)
+ *btcpu_ram.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001dc       0x18 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+                0xffffffff81c001dc                btcpu_error_code
+                0xffffffff81c001e0                btcpu_error_status
+                0xffffffff81c001e4                btcpu_sp_context
+                0xffffffff81c001e8                btcpu_stack_base
+                0xffffffff81c001ec                btcpu_main_entry
+                0xffffffff81c001f0                btcpu_int_entry
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a(btcpu_ram.o)
+ *atoi.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(atoi.o)
+ *bsearch.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(bsearch.o)
+ *ctype.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(ctype.o)
+ *memchr.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memchr.o)
+ *memcmp.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcmp.o)
+ *memcpy.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memcpy.o)
+ *memmove.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memmove.o)
+ *memscan.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memscan.o)
+ *memset.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ .bss           0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(memset.o)
+ *qsort.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001f4        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ .bss           0xffffffff81c001f4        0x8 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(qsort.o)
+ *strcat.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcat.o)
+ *strchr.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strchr.o)
+ *strcmp.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcmp.o)
+ *strcpy.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcpy.o)
+ *strcspn.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strcspn.o)
+ *strlen.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strlen.o)
+ *strncat.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncat.o)
+ *strncmp.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncmp.o)
+ *strncpy.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strncpy.o)
+ *strnicmp.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strnicmp.o)
+ *strsep.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strsep.o)
+ *strspn.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strspn.o)
+ *strstr.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ .bss           0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strstr.o)
+ *strtok.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c001fc        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ .bss           0xffffffff81c001fc        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtok.o)
+ *strtol.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ .bss           0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtol.o)
+ *strtoul.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ .bss           0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(strtoul.o)
+ *vsprintf.o(.data .data.* .bss .bss.* .scommon COMMON)
+ .data          0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+ .bss           0xffffffff81c00200        0x0 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a(vsprintf.o)
+                0xffffffff81c00200                __int_rom_reserved_end = .
+                0x0000000000000001                ASSERT ((ABSOLUTE (__int_rom_reserved_end) <= 0xffffffff81c00220), Reserved Ram Reserved for Rom Overflowed)
+
+.sram_romed_top
+                0xffffffff81c0fffc        0x0
+                0xffffffff81c0fffc                _sys_sram_non_romed_top = .
+
+.boot_rom_version_number
+                0xffffffff81e04ff8        0x4
+                0xffffffff81e04ff8                _int_rom_version_number = .
+ *(.boot_rom_version_number)
+ .boot_rom_version_number
+                0xffffffff81e04ff8        0x4 /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a(boot_rom_version.o)
+                0xffffffff81e04ff8                g_bootRomVersionNumber
+
+.internal_rom.crc
+                0xffffffff81e04ffc        0x4
+                0xffffffff81e04ffc                __int_rom_crc = .
+                0xffffffff81e04ffc        0x4 LONG 0xc001c001
+
+/DISCARD/
+ *(*)
+START GROUP
+LOAD /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/base/std/lib/libstd_cool_profile.a
+LOAD /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/bcpu/lib/libbcpu_cool_profile.a
+LOAD /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/boot/lib/libboot_cool_profile.a
+LOAD /cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform/chip/btcpu/lib/libbtcpu_cool_profile.a
+END GROUP
+LOAD /crosscompiler/bin/../lib/gcc/mips-elf/4.4.2/libgcc.a
+OUTPUT(/cygdrive/d/greenstoneprj/home/gallite/soft/build/8809p_fpga/int_rom_programmer/platform_test/rom/int_rom_programmer/int_rom_programmer_fpga_8809p_fpga_cool_profile.elf elf32-littlemips)

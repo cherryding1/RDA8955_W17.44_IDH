@@ -1,0 +1,111 @@
+#!/bin/bash
+
+# ---------------------------------------
+# Starting info
+if [ "x`echo $0 | grep ^/`" = "x" ]; then
+    PROGRAM_NAME="`pwd`/$0"
+else
+    PROGRAM_NAME="$0"
+fi
+
+echo "Running $PROGRAM_NAME"
+echo
+
+
+# ---------------------------------------
+# Working thread
+
+TARGET_DIR=${TARGET_DIR:-"${SOFT_WORKDIR}/target"}
+
+for arg in $@; do
+    if [[ "x$arg" = xTARGET_DIR=* ]]; then
+        eval "$arg"
+    fi
+done
+
+TARGET_LIST=`find -L "${TARGET_DIR}" -maxdepth 2 -type d \( -name .svn -o -name .git -o -name template \) -prune -o -name target.def -printf "%h\0" | xargs -0ri basename "{}"`
+if [ "x$?" != "x0" ] || [ "x$TARGET_LIST" = "x" ]; then
+    echo "Failed to list targets in: ${TARGET_DIR}"
+    exit 1
+fi
+
+CMD_ARGS=
+for arg in $@; do
+    # release abbreviation
+    if [ "x$arg" = "xdebug" ] || [ "x$arg" = "xrelease" ] || [ "x$arg" = "xcool_profile" ]; then
+        CMD_ARGS="$CMD_ARGS CT_RELEASE=$arg"
+        continue;
+    fi
+
+    # user abbreviation
+    if [ "x$arg" = "xADMIN" ] || [ "x$arg" = "xFAE" ] || \
+       [ "x$arg" = "xCHIP" ] || [ "x$arg" = "xMMI" ] || \
+       [ "x$arg" = "xMODEM" ]; then
+        CMD_ARGS="$CMD_ARGS CT_USER=$arg"
+        continue;
+    fi
+
+    # target abbreviation
+    TARGET=
+    if [ "x$arg" = "xg800" ]; then
+        TARGET="gallite_g800_6432"
+    elif [ "x$arg" = "xgs800" ]; then
+        TARGET="gallite_gs800_6432"
+    elif [ "x$arg" = "xgs021" ]; then
+        TARGET="gallite_gs021_foursim_bt_p1"
+    else
+        for tgt in $TARGET_LIST; do
+            if [ "x$arg" = "x$tgt" ]; then
+                TARGET="$arg"
+                break
+            fi
+        done
+    fi
+
+    if [ "x$TARGET" != "x" ]; then
+        CMD_ARGS="$CMD_ARGS CT_TARGET=$TARGET"
+    else
+        CMD_ARGS="$CMD_ARGS $arg"
+    fi
+done
+
+# Function parameters: <var_name> <default_value>
+function init_unset_var()
+{
+    if [ "x$1" = "x" ]; then
+        echo "Wrong argument for fucntion: ${FUNCNAME[0]}"
+        exit 2;
+    fi
+
+    if [[ "x$CMD_ARGS" != *$1=* ]] && eval [ "x\${$1}" = "x" ]; then
+        CMD_ARGS="$1=$2 $CMD_ARGS"
+    fi
+}
+
+init_unset_var AUTO_XCP2H no
+init_unset_var AUTO_XMD2H no
+init_unset_var WITH_FLASH 1
+init_unset_var WITH_SVN 0
+init_unset_var CT_RELEASE debug
+init_unset_var CT_TARGET _null_
+
+if [ -f "${SOFT_WORKDIR}/platform/system/stack/api/src/api.c" ]; then
+DEFAULT_USER=ADMIN
+else
+DEFAULT_USER=FAE
+fi
+init_unset_var CT_USER "$DEFAULT_USER"
+
+set -x
+
+ctmake $CMD_ARGS
+
+# ---------------------------------------
+# Ending info
+#STATUS=$?
+#set +x
+
+#echo
+#echo "Exiting $PROGRAM_NAME (Status=$STATUS)"
+
+#exit $STATUS

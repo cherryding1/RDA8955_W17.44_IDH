@@ -1,0 +1,135 @@
+/* This file describes the content of the internal ROM
+   This content is used twice:
+   - in granite_internal_rom_master.ld, to produce the ROM file
+   - in granite_master.ld, to remove objects already in ROM in
+   a DISCARD section,
+   One subtlety is that the ALIGN keyword is forbidden in the
+   DISCARD section, as are the symbol definition. Thus we play with the ROM_BUILD
+   flag to include those linker script command only in the rom building
+   script.
+*/
+
+/* Other macros are used, to specifically detail the content of the
+   ROM according to its fate: the real chip or a FPGA, where it is
+   faster to copy the ROM content during the program execution,
+   often needed due to the under dev state of the code.
+   We discriminate thus 2 parts:
+    - a mandatory one (ROM_MANDATORY_PART) needed to boot and
+    containing codes and object which shouldn't change.
+    - an optional part (ROM_OPTIONAL_PART) (as in optionally
+    in the ROM before booting), not needed to boot and containing
+    code under heavy development and subject to fast pace changes.
+    (faster than the fpga release scale).
+    We need to discard, in the software build, the content of
+    what already in ROM. We use those flags in that case too.
+
+*/
+
+#define RODATA() .rodata .rodata.str1.4 .rodata.*
+
+        *boot_rom.o(.text .text.*)
+        *boot_rom.o(.rdata)
+        *boot_rom.o(RODATA())
+        *boot_monitor.o(.text .text.*)
+        *boot_monitor.o(.rdata)
+        *boot_monitor.o(RODATA())
+        *boot_host.o(.text .text.*)
+        *boot_host.o(.rdata)
+        *boot_host.o(RODATA())
+
+        /* Add things to fill the hole*/
+        *memcpy.o(.text .text.* .rdata RODATA())
+        *memset.o(.text .text.* .rdata RODATA())
+        *spp_math.o(.text .text.* RODATA())
+        *spc_tables.o(.text .text.* RODATA())
+
+
+        *boot_romstring.o(.text .text.* .rdata RODATA())
+        /* End of filling */
+
+        /* Some fixed pointers for the USB (used by CoolWatcher). */
+         . = 0x00ff8;
+        *boot_usb.o(.usbFixptr)
+
+         . = 0x00ffc;
+        *boot_usb_monitor.o(.usbmonitorFixptr)
+
+        /* must be aligned at 0x81e01000 */
+         . = 0x01000;
+        *bcpu_rom.o(.text .text.*)
+        *bcpu_rom.o(.rdata)
+        *bcpu_rom.o(RODATA())
+
+        /* Filling */
+        *boot_irq_dispatch.o(.text .text.* .rdata RODATA())
+        *spal_cipher.o(.text .text.* RODATA())
+        /* End of filling */
+
+        /* must be aligned at 0x81e01180 */
+         . = 0x01180;
+        *spal_irq_handler.o(.text .text.* .rdata RODATA())
+        *boot_ispi.o(.text .text.* RODATA())
+        *boot_dma.o(.text .text.* RODATA())
+        *boot_nand.o(.text .text.* RODATA())
+        *boot_uart_monitor.o(.text .text.* RODATA())
+        *boot_usb.o(.text .text.* RODATA())
+        *boot_usb_monitor.o(.text .text.* .rdata RODATA())
+
+        *spal_gdb*.o(.text .text.* .rdata RODATA())
+        *spal_debug.o(.text .text.* .rdata RODATA())
+        *spp_cipher.o(.text .text.* RODATA())
+        *spp_fcch_detect_asm.o(.text .text.* RODATA())
+
+        *spp_*.o(.text .text.* RODATA())
+        *spal_*.o(.text .text.* RODATA())
+
+        *spc_amr_tx.o(.text .text.* .rdata RODATA())
+        *spc_amr_rx.o(.text .text.* .rdata RODATA())
+        *spc_irq_handler.o(.text .text.* .rdata RODATA())
+        *spc_mailbox.o(.text .text.* .rdata RODATA())
+        *spc_rx.o(.text .text.* .rdata RODATA())
+        *spc_scheduler.o(.text .text.* .rdata RODATA())
+        *spc_tx.o(.text .text.* .rdata RODATA())
+        *spc_version.o(.text .text.* .rdata RODATA())
+
+        /* Functional test. */
+		*boot_test.o(.text .text.* .rdata RODATA())
+		*boot_bist.o(.text .text.* .rdata RODATA())
+		*boot_march_c_bbcp2.o(.text .text.* .rdata RODATA())
+
+        *(.internal_rom)
+
+
+        /* Standard Lib */
+        *atoi.o(.text .text.* .rdata RODATA())
+        *strlen.o(.text .text.* .rdata RODATA())
+        *ctype.o(.text .text.* .rdata RODATA())
+        *memmove.o(.text .text.* .rdata RODATA())
+        *memscan.o(.text .text.* .rdata RODATA())
+        *strcat.o(.text .text.* .rdata RODATA())
+        *strncpy.o(.text .text.* .rdata RODATA())
+        *strsep.o(.text .text.* .rdata RODATA())
+        *strstr.o(.text .text.* .rdata RODATA())
+        *strcmp.o(.text .text.* .rdata RODATA())
+        *strcpy.o(.text .text.* .rdata RODATA())
+        *strncmp.o(.text .text.* .rdata RODATA())
+        *strchr.o(.text .text.* .rdata RODATA())
+        *memchr.o(.text .text.* .rdata RODATA())
+        *memcmp.o(.text .text.* .rdata RODATA())
+
+        /* FIXME Check rom content, this
+           is removed for place issues */
+        /* *strncat.o(.text .text.* .rdata RODATA())*/
+        /* *strnicmp.o(.text .text.* .rdata RODATA())*/
+/*
+        *vsscanf.o(.text .text.* .rdata RODATA())
+        *strtol.o(.text .text.* .rdata RODATA())
+        *strtoul.o(.text .text.* .rdata RODATA())
+        *vsprintf.o(.text .text.* .rdata RODATA())
+ */
+
+
+
+
+
+

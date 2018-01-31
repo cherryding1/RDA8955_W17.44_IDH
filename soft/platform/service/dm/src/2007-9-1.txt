@@ -1,0 +1,5 @@
+2007-9-1:
+
+1: 由于sxr_sleep()可能会引起死机，所以用dm_sysMSleep()替换（死等）；
+2：在所有和audio相关函数的调用处，加返回值判断，如果返回false，则重新调用。
+3: 在dm.h中增加VOID DM_LpwDeviceActive()，VOID DM_LpwDeviceInactive()，分别用来开关外部设备以进入低功耗。

@@ -1,0 +1,7 @@
+
+export PLATFORM_SERVICE :=  platform/service
+export PLATFORM_SYSTEM :=platform/system
+
+# Include memory parameter definition file
+include ${SOFT_WORKDIR}/platform/edrv/memd/${FLSH_MODEL}/memd.def
+

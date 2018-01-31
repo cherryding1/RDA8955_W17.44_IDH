@@ -1,0 +1,43 @@
+choice DUALSIM_MODEL
+	option enum
+	option skiph
+	prompt "SIM MODEL"
+	default rda1203_gallite_CT1129
+	---help---
+		It defines Dual SIM model for integrated Chip.
+
+	config rda1203_gallite_CT1129
+		option skiph
+		bool	"rda1203_gallite_CT1129"
+	
+endchoice
+
+config USER_SIM_SWAP
+	option skipmk
+	bool "USER_SIM_SWAP"
+	default y if USER_SIM_ORDER != ""
+	default n
+	---help---
+		This option enables to support the order of SIM cards dynamically when SIM init. USER_SIM_SWAP must be YES if USER_SIM_ORDER is not defined.
+
+config USIM_SUPPORT
+	option skiph
+	bool "USIM"
+	default y
+	---help---
+		this option enables to support usim card.
+
+config NUMBER_OF_SIM
+	option skiph
+	int "number of sim"
+	range 1 2
+	default 2
+	---help---
+		It defines the number of SIM cards can be used.
+
+config USER_SIM_ORDER
+	option skiph
+	string "order of sim"
+	default "1 2"	if NUMBER_OF_SIM=2
+	---help---
+		It defines the order of SIM cards when support dual SIM cards.

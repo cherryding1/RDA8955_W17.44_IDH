@@ -1,0 +1,37 @@
+voc_fun: exit with success
+voc_fun: exit with success
+voc_gen: exit with success
+copy voc2_define.h into source.h
+copy vppp_morphvoice_asm_common.h into source.h
+copy vppp_morphvoice_asm_sections.h into source.h
+
+copy source.h vpp_morphvoice_asm_common.c into source.voc
+voc_ppc source.voc -o source.par
+voc_fun source.par -o vpp_morphvoice_asm_common.map
+
+copy source.h vpp_morphvoice_asm_hi.c into source.voc
+voc_ppc source.voc -o source.par
+voc_fun source.par -o vpp_morphvoice_asm_hi.map
+
+voc_gen -m map.mx
+
+voc_map: exit with success
+copy voc2_define.h into source.h
+copy MAP_ADDR.h into source.h
+copy vppp_morphvoice_asm_common.h into source.h
+copy vppp_morphvoice_asm_sections.h into source.h
+
+copy source.h vpp_morphvoice_asm_common.c into source.voc
+voc_parser source.voc -o source.par
+voc_assembler source.par -o vpp_morphvoice_asm_common.sec
+
+copy source.h vpp_morphvoice_asm_hi.c into source.voc
+voc_parser source.voc -o source.par
+voc_assembler source.par -o vpp_morphvoice_asm_hi.sec
+
+voc_section -m code.mx
+MAP_ADDR.h: done.
+MAP_EXPORT.h: done.
+vpp_morphvoice_asm_common.tab: done.
+vpp_morphvoice_asm_hi.tab: done.
+/cygdrive/D/projectroot/gallite_g800/soft/platform/vpp/morphvoice

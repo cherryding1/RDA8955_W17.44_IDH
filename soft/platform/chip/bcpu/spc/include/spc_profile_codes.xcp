@@ -1,0 +1,62 @@
+<module name="SPC">
+
+    <fn name="spc_RxProcess"                      id="0x4000"/>
+    <fn name="spc_CCHRxProcess"                   id="0x4001"/>
+    <fn name="spc_TCHRxProcess"                   id="0x4002"/>
+    <fn name="spc_CheckLoopMode"                  id="0x4003"/>
+    <fn name="spc_UpdateSpeechDec"                id="0x4004"/>
+    <fn name="spc_BfiFilter"                      id="0x4005"/>
+    <fn name="spc_SetFacch"                       id="0x4006"/>
+    <fn name="spc_AmrDecode"                      id="0x4007"/>
+    <fn name="spc_AmrRatscch"                     id="0x4008"/>
+    <fn name="spc_FcchProcess"                    id="0x4009"/>
+    <fn name="spc_TxProcess"                      id="0x400A"/>
+    <fn name="spc_CCHTxProcess"                   id="0x400B"/>
+    <fn name="spc_TCHTxProcess"                   id="0x400C"/>
+    <fn name="spc_RACHTxProcess"                  id="0x400D"/>
+    <fn name="spc_UpdateSpeechEnc"                id="0x400E"/>
+    <fn name="spc_DataFacch"                      id="0x400F"/>
+    <fn name="spc_DataEncode"                     id="0x4010"/>
+    <fn name="spc_AmrEncode"                      id="0x4011"/>
+    <fn name="spc_UpdateOnFint"                   id="0x4012"/>
+    <fn name="spc_UpdateAmrCfg"                   id="0x4013"/>
+    <fn name="spc_ResetAudio"                     id="0x4014"/>
+    <fn name="spc_ResetCodec"                     id="0x4015"/>
+    <fn name="spc_AudioProcess"                   id="0x4016"/>
+    <fn name="spc_AudioSpkUpd"                    id="0x4017"/>
+    <fn name="spc_Debug"                          id="0x4018"/>
+    <fn name="spc_EgprsCCHRxProcess"              id="0x4019"/>
+    <fn name="spc_EgprsCCHTxProcess"              id="0x401A"/>
+    <fn name="spc_RxProcessExt"                   id="0x401D"/>
+    <fn name="spc_EgprsBlockDecode"               id="0x401E"/>
+    <fn name="BCPU_RUNNING"                       id="0x7700"/>
+    <fn name="FRAME"                              id="0x7701"/>
+    <fn name="RF_IFC"                             id="0x7702"/>
+    <fn name="MAILBOX"                            id="0x7703"/>
+    <fn name="FCCH"                               id="0x7704"/>
+    <fn name="SCH"                                id="0x7705"/>
+    <fn name="NBURST"                             id="0x7706"/>
+    <fn name="MONITORING"                         id="0x7707"/>
+    <fn name="INTERF"                             id="0x7708"/>
+    <fn name="DEBUG"                              id="0x7709"/>
+    <fn name="SPC_SCHED_HOOK"                     id="0x770A"/>
+    <fn name="TCU0"                               id="0x770B"/>
+    <fn name="TCU1"                     	  id="0x770C"/>
+    
+    <!-- BCPU Pulses -->
+    <fn name="BB_RX_WIN_MONIT"                    id="0x6F10"/>
+    <fn name="BB_RX_WIN_FCCH"                     id="0x6F11"/>
+    <fn name="BB_RX_WIN_SCH"                      id="0x6F12"/>
+    <fn name="BB_RX_WIN_NBURST"                   id="0x6F13"/>
+    <fn name="BB_RX_WIN_INTRF"                    id="0x6F14"/>
+    <fn name="BB_RX_WIN_UNKNOWN"                  id="0x6F15"/>
+
+    <fn name="DSP_SCH_DECODING_COMPLETE"          id="0x6F20"/>
+    <fn name="DSP_PCH_READY"                      id="0x6F21"/>
+    <fn name="DSP_USF_READY"                      id="0x6F22"/>
+    <fn name="DSP_EQUALIZATION_COMPLETE"          id="0x6F23"/>
+    <fn name="DSP_TASK_COMPLETE"                  id="0x6F24"/>
+    <fn name="DSP_NB_DECODING_COMPLETE"           id="0x6F25"/>
+
+</module>
+

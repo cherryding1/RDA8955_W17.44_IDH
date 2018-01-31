@@ -1,0 +1,8 @@
+comment "--- application/coolmmi/mmi/soundrecorder ---"
+
+config __MMI_SOUND_RECORDER__
+    option skipmk
+    bool "MMI_SOUND_RECORDER"
+    default y
+    ---help---
+    	This option enables sound recorder.

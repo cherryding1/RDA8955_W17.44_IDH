@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vpp_pngdec" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="vpp_asm\;voc_lib\;vpp_target\;vpp_tab\;vpp_simu\;" />
+		<Build>
+			<Target title="Win32 Release">
+				<Option output=".\Release\vpp_pngdec" prefix_auto="1" extension_auto="1" />
+				<Option working_dir=".\tests\" />
+				<Option object_output="Release" />
+				<Option type="1" />
+				<Option compiler="msvc8" />
+				<Option parameters="vpp_pngdec.dat" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Compiler>
+					<Add option="/Oy" />
+					<Add option="/DCS_PLATFORM_SIMU" />
+					<Add directory="..\..\voc_lib" />
+					<Add directory="..\..\..\..\platform\chip\regs\greenstone\include" />
+					<Add directory="..\..\..\..\platform\chip\hal\include" />
+					<Add directory="..\..\..\..\platform\vpp\pngdec\include" />
+					<Add directory="..\..\..\..\platform\vpp\pngdec\src" />
+					<Add directory="..\..\..\include" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before='C:\CSDTK\cygwin\bin\bash --login -c &quot;voc_make_ide greenstone platform/vpp/pngdec&quot;' />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Win32 Debug">
+				<Option output=".\Debug\vpp_pngdec" prefix_auto="1" extension_auto="1" />
+				<Option working_dir=".\tests\" />
+				<Option object_output="Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="vpp_pngdec.dat" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DCS_PLATFORM_SIMU" />
+					<Add directory="..\..\voc_lib" />
+					<Add directory="..\..\..\..\platform\chip\regs\greenstone\include" />
+					<Add directory="..\..\..\..\platform\chip\hal\include" />
+					<Add directory="..\..\..\..\platform\vpp\pngdec\include" />
+					<Add directory="..\..\..\..\platform\vpp\pngdec\src" />
+					<Add directory="..\..\..\include" />
+				</Compiler>
+				<ExtraCommands>
+					<Add before='C:\CSDTK\cygwin\bin\bash --login -c &quot;voc_make_ide greenstone platform/vpp/pngdec&quot;' />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\..\platform\chip\hal\include\hal_error.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\chip\hal\include\hal_voc.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\chip\regs\greenstone\include\voc_ram_asm.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\include\vpp_pngdec.h">
+			<Option virtualFolder="vpp_target\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_target\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_bye.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_bye.tab">
+			<Option virtualFolder="vpp_tab\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_common.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_common.tab">
+			<Option virtualFolder="vpp_tab\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_hi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_asm_hi.tab">
+			<Option virtualFolder="vpp_tab\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vpp_pngdec_const.tab">
+			<Option virtualFolder="vpp_tab\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vppp_pngdec.h">
+			<Option virtualFolder="vpp_target\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vppp_pngdec_asm.h">
+			<Option virtualFolder="vpp_target\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vppp_pngdec_asm_common.h">
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vppp_pngdec_asm_map.h">
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\..\platform\vpp\pngdec\src\vppp_pngdec_asm_sections.h">
+			<Option virtualFolder="vpp_asm\" />
+		</Unit>
+		<Unit filename="..\..\..\include\cs_types.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\hal_voc_simu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_define.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_library.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_library.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_opcodes.tab">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_profile.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_profile.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_simulator.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_simulator.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="..\..\voc_lib\voc2_typedef.h">
+			<Option virtualFolder="voc_lib\" />
+		</Unit>
+		<Unit filename="src\vpp_pngdec_simu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_simu\" />
+		</Unit>
+		<Unit filename="src\vpp_pngdec_simu_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="vpp_simu\" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

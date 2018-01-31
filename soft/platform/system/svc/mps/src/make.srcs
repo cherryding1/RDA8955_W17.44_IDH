@@ -1,0 +1,8 @@
+C_SRC :=                         \
+        mps.c                    \
+        mps_medium.c             \
+        mps_demux_adts.c         \
+        mps_demux_riff.c         \
+        mps_demux_pcm8kmono.c    \
+        mps_demux_iso.c          \
+        mps_demux_amr.c

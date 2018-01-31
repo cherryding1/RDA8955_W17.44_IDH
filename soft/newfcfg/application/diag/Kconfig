@@ -1,0 +1,14 @@
+comment "--- application/diag ---"
+if _UCDCACM_
+config SUPPORT_SPRD_BBAT
+    bool "SUPPORT_SPRD_BBAT"
+    default y
+    ---help---
+    Support SPRD BBAT
+
+config SUPPORT_QUICK_VCOM
+    option skipmk
+    bool "SUPPORT_QUICK_VCOM"
+	depends on SUPPORT_SPRD_BBAT
+    default y
+endif

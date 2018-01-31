@@ -1,0 +1,170 @@
+comment "--- Default Options ---"
+
+config __EM_MODE__
+	option skipmk
+	def_bool y
+
+config __GSM_MODE__
+	option skipmk
+	def_bool y
+
+config __UCS2_ENCODING 
+	option skipmk
+	def_bool y
+
+config __FF_AUDIO_SET__
+	option skipmk
+	def_bool y
+
+config __MCD__
+	option skipmk
+	def_bool y
+
+config __SAT__
+	option skipmk
+	def_bool y
+
+config __VIBRATOR__
+	option skipmk
+	bool
+	default y
+
+config __MOD_CSM__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_NVRAM__ 
+	option skipmk
+	def_bool y
+
+config __MOD_ORGANIZER__
+	option skipmk
+	def_bool y
+
+config __MOD_PHB__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_RAC__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_SIM__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_SMS__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_SMSAL__ 
+	option skipmk
+	def_bool y
+
+config __MMI_MESSAGE_DIFFERENTIATE_STORAGE__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_CONCAT_SMS__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_TEMPLATE__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_PREFER_STORAGE_MEMORY_STATUS__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_SEND_BY_GROUP__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_SEND_TO_MANY__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_SEND_TO_MANY_BY_LIST__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_INSERT_FROM_PHB__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config _MUTILANG_TEMPLATE_
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && !(__MMI_R_WATCH_KIDS__)
+	def_bool n
+
+config __MMI_MESSAGES_CONTINUE_SEND_AFTER_FAIL__
+	option skipmk
+	def_bool y if __MMI_MESSAGES_SEND_TO_MANY__ || __MMI_MESSAGES_SEND_BY_GROUP__
+	def_bool n
+
+config __MOD_SMU__ 	
+	option skipmk
+	def_bool y
+
+config __MOD_UEM__ 
+	option skipmk
+	def_bool y
+
+config __MED_MMA_MOD__
+	option skipmk
+	def_bool y
+
+config __MMI_IMAGE_VIEWER__
+	option skipmk
+	def_bool y
+
+config __MMI_MERGE_SAT_TO_MAINMENU__
+	option skipmk
+	def_bool y
+
+config VM_SUPPORT
+	option skipmk
+	def_bool y
+
+config SIM_APP_TOOLKIT
+	option skipmk
+	def_bool y
+
+config AAC_DECODE
+	option skipmk
+	def_bool y
+
+config __MMI_RESOURCE_SLIM__
+	option skipmk
+	def_bool y
+
+#config MESSAGES_APPLICATION
+#	option skipmk
+#	bool
+#	default y
+#
+config JPG_DECODE_USING_SOFTWARE
+	option skipmk
+	def_bool y
+
+config JPG_DECODE
+	option skipmk
+	def_bool y
+
+config PHB_REJECTCALL_NO_RECORD_AND_MENU
+	option skipmk
+	def_bool y
+
+config __MMI_MSG_MEMORY_STATUS_DISPLAY_NUM__
+	option skipmk
+	def_bool y
+

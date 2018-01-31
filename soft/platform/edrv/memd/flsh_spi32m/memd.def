@@ -1,0 +1,23 @@
+# this file is to be included in target.def by dev targets that use the 
+# flash_SPI_32M 
+#
+ifeq "${RAM_SIZE_FLAG}" "__16Mbit__"
+    RAM_PHY_SIZE:=          0x00200000
+else
+ifeq "${RAM_SIZE_FLAG}" "__32Mbit__"
+    RAM_PHY_SIZE:=          0x00400000
+else
+ifeq "${RAM_SIZE_FLAG}" "__64Mbit__"
+    RAM_PHY_SIZE:=          0x00800000
+else
+ifeq "${RAM_SIZE_FLAG}" "__128Mbit__"
+    RAM_PHY_SIZE:=          0x01000000
+endif
+endif
+endif
+endif
+
+    RAM_SIZE:=              ${RAM_PHY_SIZE}
+
+# form factor models can define the values directly in their target.def
+    USER_DATA_BLOCK_SIZE:=	0x00000200

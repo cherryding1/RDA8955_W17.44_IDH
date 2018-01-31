@@ -1,0 +1,20 @@
+<module name="VPP_HR">
+        <fn name='vpp_hr_encode' id='0x592'/>
+        <fn name='aflat ' id='0x593'/>
+        <fn name='flat' id='0x594'/>
+        <fn name='aflatRecursion' id='0x595'/>
+        <fn name='aflatNewBarRecursionL' id='0x596'/>
+        <fn name='vad_algorithm' id='0x597'/>
+        <fn name='openLoopLagSearch' id='0x598'/>
+        <fn name='closedLoopLagSearch ' id='0x599'/>
+        <fn name='filt4_2nd'  id='0x59a'/>
+        <fn name='getSfrmLpcTx' id='0x59b'/>
+        <fn name='getNWCoefs' id='0x59c'/>
+        <fn name='weightSpeechFrame' id='0x59d'/>
+        <fn name='vpp_hr_decode' id='0x59e'/>
+        <fn name='aFlatRcDp ' id='0x59f'/>
+        <fn name='rcToCorrDpL' id='0x600'/>
+        <fn name='error_free_initial ' id='0x601'/>
+</module>
+
+

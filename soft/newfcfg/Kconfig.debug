@@ -1,0 +1,257 @@
+comment "--- Debug Options ---"
+
+config WITHOUT_WERROR
+	option skiph
+	bool "WITHOUT_WERROR"
+	default y
+	---help---
+	   Compile warning regard as error
+	   
+config JOB_DEBUG
+    option skipmk
+    bool "JOB_DEBUG"
+    default n
+    ---help---
+    	To open page spy for job debug.
+
+comment "--- Register Debug Options ---"
+
+config SPI_REG_DEBUG
+	option skiph
+	bool "SPI register Debug"
+	default y
+	---help---
+	   Open the SPI register debug
+
+config I2C_REG_DEBUG
+	option skiph
+	bool "I2C register Debug"
+	default n
+	---help---
+	   Open the I2C register debug, used for debug FM
+
+comment "--- Profile Options ---"
+
+choice
+	prompt "Profile"
+	default HAL_PROFILE_ON_BUFFER
+	---help---
+	   Open the Hal Profile
+
+	config HAL_PROFILE_ON_BUFFER
+		option skipmk
+		bool "On Buffer"
+	config HAL_PROFILE_ON_ROMULATOR
+		option skipmk
+		bool "On Romulator"
+	config DISABLE
+		option skipmk
+		option skiph
+		bool "Disable"
+
+endchoice
+
+if HAL_PROFILE_ON_ROMULATOR || HAL_PROFILE_ON_BUFFER
+
+config HAL_PROFILING
+	option skipmk
+	bool "HAL Profile"
+	default y
+	---help---
+	   Hal Profile Enable or Disable
+
+config SX_PROFILING
+	option skipmk
+	bool "SX Profile"
+	default y 
+	---help---
+	   SX Profile Enable or Disable
+
+config PAL_PROFILING
+	option skipmk
+	bool "PAL Profile"
+	default y 
+	---help---
+	   PAL Profile Enable or Disable
+
+config VOIS_PROFILING
+	option skipmk
+	bool "VOIS Profile"
+	default y 
+	---help---
+	   VOIS Profile Enable or Disable
+
+config STK_PROFILING
+	option skipmk
+	bool "STK Profile"
+	default n 
+	---help---
+	   STK Profile Enable or Disable
+
+config PMD_PROFILING
+	option skipmk
+	bool "PMD Profile"
+	default n 
+	---help---
+	   PMD Profile Enable or Disable
+
+config TSD_PROFILING
+	option skipmk
+	bool "TSD Profile"
+	default n 
+	---help---
+	   TSD Profile Enable or Disable
+
+config DUALSIMD_PROFILING
+	option skipmk
+	bool "Dual Sim Profile"
+	default n 
+	---help---
+	   SX Profile Enable or Disable
+
+endif
+
+comment "--- Trace Options ---"
+
+config EARLY_TRACE_OPEN
+	option skipmk
+	bool "Early Open Trace"
+	default n
+	---help---
+	   Open the trace when the system start up.
+
+config SXS_NO_DUMP
+	option skipmk
+	bool "SXS No Dump"
+	default n
+	---help---
+	   System dump.
+
+config SXS_NO_PRINTF
+	option skipmk
+	bool "SXS No Trace"
+	default n
+	---help---
+	   Trace for SXS.
+
+config AT_NO_TRACE
+	option skipmk
+	bool "AT No Trace"
+	default y
+	---help---
+	   Trace for AT.
+
+config MMI_NO_TRACE
+        option skipmk
+	bool "MMI No Trace"
+	default y
+	---help---
+	   Trace for MMI.
+
+config WAP_NO_TRACE
+	bool "WAP No Trace"
+	default y
+	---help---
+	   Trace for WAP.
+	   
+config CSW_NO_TRACE
+	option skipmk
+	bool "CSW No Trace"
+	default y
+	---help---
+	   Trace for CSW.
+
+config MCI_NO_TRACE
+	option skipmk
+	bool "MCI No Trace"
+	default y
+	---help---
+	   Trace for MCI.
+
+config STACK_NO_PRINTF
+	bool "Stack No Trace"
+	default y
+	---help---
+	   Trace for Stack.
+
+config HAL_NO_PRINTF
+	option skipmk
+	bool "HAL No Trace"
+	default y
+	---help---
+	   Trace for HAL.
+
+config PAL_NO_TRACE
+	option skipmk
+	bool "PAL No Trace"
+	default y
+	---help---
+	   Trace for PAL.
+
+config VOIS_NO_PRINTF
+	option skipmk
+	bool "VOIS No Trace"
+	default y
+	---help---
+	   Trace for VOIS.
+
+config EDRV_NO_TRACE
+	option skipmk
+	bool "EDRV No Trace"
+	default y
+	---help---
+	   Trace for EDRV.
+
+config CALIB_NO_PRINTF
+	option skipmk
+	bool "Calib No Trace"
+	default y
+	---help---
+	   Trace for Calibration.
+
+config UCTLS_NO_PRINTF
+	option skipmk
+	bool "Uctls No Trace"
+	default y
+	---help---
+	   Trace for Uctls.
+
+config UMSS_NO_PRINTF
+	option skipmk
+	bool "Umss No Trace"
+	default y
+	---help---
+	   Trace for Umss.
+
+config ARS_NO_PRINTF
+	option skipmk
+	bool "ARS No Trace"
+	default y
+	---help---
+	   Trace for ARS.
+
+config RFD_NO_TRACE
+	option skipmk
+	bool "RFD No Trace"
+	default y
+	---help---
+	   Trace for RFD.
+
+config BT_NO_PRINTF
+	option skipmk
+	bool "BT No Trace"
+	default y
+	---help---
+	   Trace for BT.
+
+#config I2C_REG_DEBUG
+#	bool "I2C_REG_DEBUG"
+#	default y
+#	---help---
+#	   Open the SPI register debug
+#
+#config CHIP_DIE_8809M_FOR_TEMP_TEST
+#	option skipmk
+#	bool "CHIP_DIE_8809M_FOR_TEMP_TEST"
+#	default y
+#

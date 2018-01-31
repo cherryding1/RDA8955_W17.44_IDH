@@ -1,0 +1,42 @@
+comment "--- Application ---"
+
+menu "Communication"
+source "newfcfg/application/adaptation/communication/Kconfig"
+endmenu
+
+menu "Features"
+source "newfcfg/application/Kconfig.features"
+endmenu
+
+menu "Resource"
+source "newfcfg/application/target_res/Kconfig"
+endmenu
+
+menu "Compress"
+source "newfcfg/application/Kconfig.compress"
+endmenu
+
+menu "Display"
+source "newfcfg/application/Kconfig.display"
+endmenu
+
+menu "SIM"
+source "newfcfg/application/Kconfig.sim"
+endmenu
+
+menu "diag && BBAT"
+source "newfcfg/application/diag/Kconfig"
+endmenu
+
+menu "Device"
+source "newfcfg/application/Kconfig.device"
+endmenu
+
+source "newfcfg/application/Kconfig.sensor"
+source "newfcfg/application/Kconfig.key"
+source "newfcfg/application/Kconfig.touch"
+
+menu "Default Setup"
+source "newfcfg/application/Kconfig.default"
+endmenu
+

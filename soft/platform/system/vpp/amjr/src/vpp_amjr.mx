@@ -1,0 +1,50 @@
+%include
+{vppp_amjr_asm_mp3.h,vppp_amjr_asm_amr.h,vppp_amjr_asm_jpeg.h,vppp_amjr_asm_sections.h}
+
+%mode
+{MP3_JPG_enc: vpp_amjr_asm_common.c, vpp_amjr_asm_jpeg.c, vpp_amjr_asm_mp3.c}
+{AMR_JPG_enc: vpp_amjr_asm_common.c, vpp_amjr_asm_jpeg.c, vpp_amjr_asm_amr.c}
+
+%start
+{0, 512, 4608}
+
+%map
+{	
+  COMMON_GLOBAL
+  {
+    vpp_amjr_asm_common.global    
+  }
+  JPEG_GLOBAL
+  {
+    vpp_amjr_asm_jpeg.global
+  }
+  .=END(JPEG_GLOBAL);
+  MP3_GLOBAL
+  {
+    vpp_amjr_asm_mp3.global
+  }
+  MP3_LOCAL
+  {
+    vpp_amjr_asm_mp3.local
+  }  
+  .=END(JPEG_GLOBAL);
+  AMR_GLOBAL
+  {
+    vpp_amjr_asm_amr.global
+  }
+  AMR_LOCAL
+  {
+    vpp_amjr_asm_amr.local
+  }
+  .=MAX(END(MP3_GLOBAL),END(AMR_GLOBAL));  
+  JPEG_LOCAL
+  {
+    vpp_amjr_asm_jpeg.local
+  }
+  .=MAX(END(JPEG_LOCAL),MAX(END(MP3_LOCAL),END(AMR_LOCAL)));  
+  COMMON_LOCAL
+  {
+    vpp_amjr_asm_common.local   
+  }   
+}
+

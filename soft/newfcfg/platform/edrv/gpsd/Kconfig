@@ -1,0 +1,20 @@
+
+comment "--- platform/edrv/gpsd ---"
+
+
+
+config GPSD_MODEL
+	option skiph
+	string "GPSD_MODEL"
+	default ""
+	
+config GPS_DEFAULT_UART
+    int "GPS_DEFAULT_UART"
+    range 0 2
+    default 0
+	
+config GPS_SUPPORT
+    bool "GPS_SUPPORT"
+    default n	
+
+

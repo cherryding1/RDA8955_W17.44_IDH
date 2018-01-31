@@ -1,0 +1,10 @@
+1.
+Date:2008-03-20
+wangqy:
+Update:
+	1)at_cmd_gc.c增加了文件头注释
+	2)at_cmd_gc.c，line：1064，增加了atl_para变量的初始化，默认值为：GC_RESULTCODE_FORMAT_VERBOSE，atl_para数据类型原代码为UINT32，现改为UINT8。
+	3)at_cmd_gc.c，line：1165，增加了atl_para变量的初始化，默认值为：GC_RESULTCODE_PRESENTATION_ENABLE，atl_para数据类型原代码为UINT32，现改为UINT8。
+	4)增加了AT_GC_CmdFunc_V函数头和代码注释
+	5)增加了AT_GC_CmdFunc_Q函数头和代码注释
+	

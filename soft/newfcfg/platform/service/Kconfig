@@ -1,0 +1,21 @@
+comment "--- platform/service ---"
+
+menu "base"
+source "newfcfg/platform/service/base/Kconfig"
+endmenu
+
+menu "gprs"
+source "newfcfg/platform/service/gprs/Kconfig"
+endmenu
+
+menu "Net Support"
+	depends on GPRS_SUPPORT || WIFI_SUPPORT
+	source "newfcfg/platform/service/net/Kconfig"
+endmenu
+
+config CALL_AMR_SUPPORT
+    bool "CALL_AMR_SUPPORT"
+    option skiph
+    default y
+    ---help---
+        This option enables AMR support when speech call.

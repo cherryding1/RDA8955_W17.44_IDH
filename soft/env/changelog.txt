@@ -1,0 +1,80 @@
+Source delivery env v3
+======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v3       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Sources/chip/trunk            platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk            platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * n/a
+
+  Changes:
+    * TOOL: Bug fixes on deliv and wsh scripts.
+    * LINK: A few minor fixes in Gallite, asic simu and flash programmer linker scripts.
+
+Source delivery env v2
+======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v2       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Sources/chip/trunk            platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk            platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * This environment require the chip modules (currently in trunk) that will
+      be released soon.
+
+  Changes:
+    * deliv script improved: all features for source and library delivery
+      are implemented.
+
+Source delivery env v1
+======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v1       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Sources/chip/trunk            platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk            platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * This environment require the chip modules (currently in trunk) that will
+      be released soon.
+
+  Changes:
+    * Test delivery of env
+    * Include several features specific to Total_integration to prepare merging
+    * If you want to compile the (old)MMI in workspaces you will have to define the following variables in your customvars.mk :
+        export MULTIPLE_APPLICATIONS := 1
+        export NO_WIDE_CHARSET:=1
+

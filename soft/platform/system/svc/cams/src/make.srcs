@@ -1,0 +1,5 @@
+C_SRC := \
+    cams_fnc.c \
+    cams_task.c \
+    \
+

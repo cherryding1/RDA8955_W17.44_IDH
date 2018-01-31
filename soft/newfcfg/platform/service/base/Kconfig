@@ -1,0 +1,66 @@
+comment "--- platform/service/base ---"
+
+config _FS_DEBUG
+	option skipmk
+	bool "File System Debug"
+	default n
+	---help---
+	   Open the File System debug.
+
+config CSW_COS_USING_ONE_HEAP
+	option skipmk
+	bool "CSW Use the same Heap with COS"
+	default n
+	---help---
+	    This option enables CSW can use the same heap with COS.
+
+config CFG_NEW_MECHANISM_TEST
+	bool "load/store config with new mechanism test"
+	default n
+
+comment "--- VDS Cache Related Options ---"
+config VDS_CACHE_USER_CLUSTER
+	option skipmk
+	bool "VDS cache buffer from COS heap"
+	default y
+	---help---
+	    This option enables VDS supports get cache buffer from COS heap.
+
+config __VDS_QUICK_FLUSH__
+	option skipmk
+	bool "VDS Quick Flush"
+	default y
+	---help---
+	    This option enables VDS supports save user data quickly.
+
+config USER_DATA_CACHE_SUPPORT
+	option skipmk
+	bool "user data support using cache"
+	default y
+	---help---
+	    This option enables data structure of flash cache has redundent data regions.
+
+config __MMI_NEW_NVRAM_INTERFACE__
+    option skipmk
+    bool "MMI_NEW_NVRAM_INTERFACE"
+    default y
+    ---help---
+        This option enables MMI user new nvram with related API.
+
+config REDUNDANT_DATA_REGION
+	bool "Flash cache support redundent data regions"
+	default n
+
+config FS_SUPPORT_EXFAT
+	option skipmk
+	bool "File System support exfat"
+	default n
+    ---help---
+        This option enables that file system can support exfat type.
+
+config __RESTORE_RESET_NORMAL_POWERON_MODE__
+    option skipmk
+    bool "RESTORE_RESET_NORMAL_POWERON_MODE"
+    default y
+    ---help---
+    	To set normal poweron mode after restore factory mode.

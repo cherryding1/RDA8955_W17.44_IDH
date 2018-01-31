@@ -1,0 +1,9 @@
+#!/bin/sh
+rm tags
+ctags -h +hp -R platform
+ctags -h +hp -Ra platform_test
+ctags -h +hp -Ra application
+ctags -h +hp -Ra target
+ctags -h +hp -Ra mdi
+ctags -h +hp -Ra mdi_stub
+

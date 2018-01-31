@@ -1,0 +1,98 @@
+S_SRC := $(S_SRC)
+C_SRC := $(C_SRC)   vpp_efr_agc.c \
+                    vpp_efr_autocorr.c\
+                    vpp_efr_az_lsp.c \
+                    vpp_efr_basicop2.c \
+                    vpp_efr_bits2prm.c \
+                    vpp_efr_c1035pf.c \
+                    vpp_efr_cod_12k2.c \
+                    vpp_efr_convolve.c \
+                    vpp_efr_copy.c \
+                    vpp_efr_d1035pf.c \
+                    vpp_efr_dec_12k2.c \
+                    vpp_efr_dec_lag6.c \
+                    vpp_efr_dtx.c \
+                    vpp_efr_d_gains.c \
+                    vpp_efr_d_homing.c \
+                    vpp_efr_d_plsf_5.c \
+                    vpp_efr_enc_lag6.c \
+                    vpp_efr_e_homing.c \
+                    vpp_efr_g_code.c \
+                    vpp_efr_g_pitch.c \
+                    vpp_efr_inter_6.c \
+                    vpp_efr_int_lpc.c \
+                    vpp_efr_inv_sqrt.c \
+                    vpp_efr_lag_wind.c \
+                    vpp_efr_levinson.c \
+                    vpp_efr_log2.c \
+                    vpp_efr_lsp_az.c \
+                    vpp_efr_lsp_lsf.c \
+                    vpp_efr_oper_32b.c \
+                    vpp_efr_pitch_f6.c \
+                    vpp_efr_pitch_ol.c \
+                    vpp_efr_pow2.c \
+                    vpp_efr_pred_lt6.c \
+                    vpp_efr_preemph.c \
+                    vpp_efr_pre_proc.c \
+                    vpp_efr_prm2bits.c \
+                    vpp_efr_pstfilt2.c \
+                    vpp_efr_q_gains.c \
+                    vpp_efr_q_plsf_5.c \
+                    vpp_efr_reorder.c \
+                    vpp_efr_residu.c \
+                    vpp_efr_syn_filt.c \
+                    vpp_efr_vad.c \
+                    vpp_efr_weight_a.c \
+                    vpp_efr_decoder.c \
+                    vpp_efr_encoder.c
+                   
+
+%/vpp_efr_pitch_ol.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_agc.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_autocorr.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_az_lsp.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_c1035pf.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_cod_12k2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_convolve.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_dec_12k2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_dtx.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_d_gains.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_g_code.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_g_pitch.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_inter_6.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_basicop2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_levinson.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_oper_32b.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_pitch_f6.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_pred_lt6.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_pre_proc.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_pstfilt2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_q_gains.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_q_plsf_5.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_residu.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_vad.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_inv_sqrt.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_log2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_lsp_az.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_pow2.o: CT_MIPS16_CFLAGS=
+%/vpp_efr_syn_filt.o: CT_MIPS16_CFLAGS=
+
+
+
+
+
+
+
+
+
+
+
+
+             
+                   
+
+
+
+
+
+ 

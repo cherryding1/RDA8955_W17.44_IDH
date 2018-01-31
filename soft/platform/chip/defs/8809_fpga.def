@@ -1,0 +1,17 @@
+# Include the default configuration for the Gallite family
+include ${SOFT_WORKDIR}/platform/chip/defs/${CT_ASIC}_base.def
+
+# Now override the base configuration and add special flags/values
+CHIP_EXPORT_FLAG    += FPGA
+
+# Limited fast clock 156M on the FPGA.
+FAST_CLOCK_156M     ?= 52000000
+
+# Number of the GPIO dedicated to charger detect.
+CHIP_EXPORT_FLAG += CHIP_GPIO_NUM_CHARGER_DETECT=5
+
+# The ROM to use. This can be overloaded in the "target.def" file.
+CHIP_ROM_ELF_FILE ?= platform/chip/rom/${CT_ASIC}/lib/mem_bridge_rom_FPGA.elf
+CHIP_ROM_DEF_FILE ?= platform/chip/rom/$(CT_ASIC)/lib/mem_bridge_rom_FPGA.def
+BCPU_ROM_ELF_FILE ?= platform/chip/rom/${CT_ASIC}/lib/bcpu_rom_FPGA.elf
+BCPU_ROM_DEF_FILE ?= platform/chip/rom/$(CT_ASIC)/lib/bcpu_rom_FPGA.def

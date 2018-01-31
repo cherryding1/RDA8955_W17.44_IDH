@@ -1,0 +1,22 @@
+<module name="CAMS">
+    <!-- Functions -->
+    <fn name="cams_Open"                    id="0x10A0" group="CAMS"/>
+    <fn name="cams_Close"                   id="0x10A1" group="CAMS"/>
+    <fn name="cams_StartPreview"            id="0x10A2" group="CAMS"/>
+    <fn name="cams_StopPreview"             id="0x10A3" group="CAMS"/>
+    <fn name="cams_Capture"                 id="0x10A4" group="CAMS"/>
+    <fn name="cams_ResizeVgaTo128x160"      id="0x10A5" group="CAMS"/>
+    <fn name="cams_ZoomAndCrop"             id="0x10A6" group="CAMS"/>
+    <fn name="cams_ResizeRawToRequested"    id="0x10A7" group="CAMS"/>
+    <fn name="cams_PreviewHandler"          id="0x10A8" group="CAMS"/>
+    
+    <!-- Windows -->
+    <fn name="cams_PreviewWin"     id="0x3810" group="CAMS"/>
+    <fn name="cams_CaptureWin"     id="0x3811" group="CAMS"/>
+    
+    <!-- Pulse -->
+    <fn name="cams_PreviewTimerPulse"   id="0x3009" group="CAMS"/>
+
+</module>
+
+

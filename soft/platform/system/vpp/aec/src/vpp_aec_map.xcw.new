@@ -1,0 +1,51 @@
+<archive>
+
+<typedef name="COMMON_GLOBAL_X_BEGIN_ADDR" category="VOC">
+	<int32 name="VPP_HELLO_CONST_SAYS_HI"/>
+	<int32 name="VPP_HELLO_CONST_SAYS_BYE"/>
+</typedef>
+
+<typedef name="COMMON_GLOBAL_Y_BEGIN_ADDR" category="VOC">
+	<int16 name="GLOBAL_MODE"/>
+	<int16 name="GLOBAL_RESET"/>
+	<int16 name="GLOBAL_USED_MODE"/>
+	<int16 name="GLOBAL_ERR_STATUS"/>
+	<int32 name="GLOBAL_HELLO_STATUS"/>
+	<int32 name="GLOBAL_HI_CODE_PTR"/>
+	<int32 name="GLOBAL_BYE_CODE_PTR"/>
+	<int32 name="GLOBAL_CONST_PTR"/>
+</typedef>
+
+<typedef name="HI_GLOBAL_X_BEGIN_ADDR" category="VOC">
+	<int16 name="GLOBAL_HI2"/>
+</typedef>
+
+<typedef name="HI_GLOBAL_Y_BEGIN_ADDR" category="VOC">
+	<int32 name="GLOBAL_HI"/>
+</typedef>
+
+<typedef name="BYE_GLOBAL_X_BEGIN_ADDR" category="VOC">
+	<int32 name="GLOBAL_BYE"/>
+</typedef>
+
+<typedef name="BYE_GLOBAL_Y_BEGIN_ADDR" category="VOC">
+	<int16 name="GLOBAL_BYE2"/>
+</typedef>
+
+<typedef name="vpp_HelloHi_X_BEGIN_ADDR" category="VOC">
+	<int32 name="LOCAL_HI2"/>
+</typedef>
+
+<typedef name="vpp_HelloHi_Y_BEGIN_ADDR" category="VOC">
+	<int16 name="LOCAL_HI" count="4"/>
+</typedef>
+
+<typedef name="vpp_HelloBye_X_BEGIN_ADDR" category="VOC">
+	<int16 name="LOCAL_BYE" count="4"/>
+</typedef>
+
+<typedef name="vpp_HelloBye_Y_BEGIN_ADDR" category="VOC">
+	<int32 name="LOCAL_BYE2"/>
+</typedef>
+
+</archive>

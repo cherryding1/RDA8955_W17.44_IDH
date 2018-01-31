@@ -1,0 +1,819 @@
+<archive>
+<!-- Generated automatically by voc_h2xmd.rb -->
+<var name='RAM_X_BEGIN_ADDR' value='VOC_RAM_BASE'/>
+<var name='RAM_Y_BEGIN_ADDR' value='VOC_RAM_BASE+0x8000'/>
+<var name='COMMON_GLOBAL_X_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_Y_SIZE' value='174'/>
+<var name='PREPROCESS_GLOBAL_X_SIZE' value='5802'/>
+<var name='PREPROCESS_GLOBAL_Y_SIZE' value='0'/>
+<var name='PREPROCESS_LOCAL_X_SIZE' value='0'/>
+<var name='PREPROCESS_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_LOCAL_X_SIZE' value='0'/>
+<var name='COMMON_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_GLOBAL_Y_BEGIN_ADDR' value='(0 + RAM_Y_BEGIN_ADDR)'/>
+<var name='PREPROCESS_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='PREPROCESS_GLOBAL_Y_BEGIN_ADDR' value='(174 + RAM_Y_BEGIN_ADDR)'/>
+<var name='PREPROCESS_LOCAL_X_BEGIN_ADDR' value='(5802 + RAM_X_BEGIN_ADDR)'/>
+<var name='PREPROCESS_LOCAL_Y_BEGIN_ADDR' value='(174 + RAM_Y_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_X_BEGIN_ADDR' value='(5802 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_Y_BEGIN_ADDR' value='(174 + RAM_Y_BEGIN_ADDR)'/>
+<typedef name='t_VPP_NOISESUPPRESS_VPP_NOISESUPPRESS_CFG_STRUCT'>
+    <int32 name='GLOBAL_NOISESUPPRESS_CONSTX_ADDR' />
+    <int32 name='SPEEX_NS_Code_ExternalAddr_addr' />
+    <int32 name='GLABAL_OUT_PARA' />
+    <int16 name='GLOBAL_MIC_NOISE_SUPPRESS_RESET_ADDR' />
+    <int16 name='GLOBAL_RECEIVER_NOISE_SUPPRESS_RESET_ADDR' />
+</typedef>
+<instance name='VPP_NOISESUPPRESS_CFG_STRUCT' type='t_VPP_NOISESUPPRESS_VPP_NOISESUPPRESS_CFG_STRUCT' address='(0 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_NOISESUPPRESS_VPP_NOISESUPPRESS_STATUS_STRUCT'>
+    <int16 name='GLOBAL_USED_MODE' />
+    <int16 name='GLOBAL_NOISESUPPRESS_STATUS' />
+    <int32 name='GLOBAL_OUTSIZE' />
+</typedef>
+<instance name='VPP_NOISESUPPRESS_STATUS_STRUCT' type='t_VPP_NOISESUPPRESS_VPP_NOISESUPPRESS_STATUS_STRUCT' address='(8 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/_COMMON_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_GLABAL_NOISESUPPRESS_RESET_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLABAL_NOISESUPPRESS_RESET_ADDR' type='a_VPP_NOISESUPPRESS_GLABAL_NOISESUPPRESS_RESET_ADDR' address='(12 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/_COMMON_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_GLABAL_NOISESUPPRESS_INPUTADDR_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLABAL_NOISESUPPRESS_INPUTADDR_ADDR' type='a_VPP_NOISESUPPRESS_GLABAL_NOISESUPPRESS_INPUTADDR_ADDR' address='(13 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/_COMMON_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_ENC_INPUT_ADDR_ADDR'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='ENC_INPUT_ADDR_ADDR' type='a_VPP_NOISESUPPRESS_ENC_INPUT_ADDR_ADDR' address='(14 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/_COMMON_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_For_noisesuppress_align'>
+    <int16 name='unused' count='816'/>
+</alias>
+<instance name='For_noisesuppress_align' type='a_VPP_NOISESUPPRESS_For_noisesuppress_align' address='(0 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_frame_size'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_frame_size' type='a_VPP_NOISESUPPRESS_SpxPpState_frame_size' address='(816 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_ps_size'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_ps_size' type='a_VPP_NOISESUPPRESS_SpxPpState_ps_size' address='(817 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_sampling_rate'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_sampling_rate' type='a_VPP_NOISESUPPRESS_SpxPpState_sampling_rate' address='(818 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_nbands'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_nbands' type='a_VPP_NOISESUPPRESS_SpxPpState_nbands' address='(819 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_denoise_enabled'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_denoise_enabled' type='a_VPP_NOISESUPPRESS_SpxPpState_denoise_enabled' address='(820 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_vad_enabled'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_vad_enabled' type='a_VPP_NOISESUPPRESS_SpxPpState_vad_enabled' address='(821 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_dereverb_enabled'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_dereverb_enabled' type='a_VPP_NOISESUPPRESS_SpxPpState_dereverb_enabled' address='(822 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_reverb_decay'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_reverb_decay' type='a_VPP_NOISESUPPRESS_SpxPpState_reverb_decay' address='(823 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_reverb_level'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_reverb_level' type='a_VPP_NOISESUPPRESS_SpxPpState_reverb_level' address='(824 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob_start'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_speech_prob_start' type='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob_start' address='(825 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob_continue'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_speech_prob_continue' type='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob_continue' address='(826 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_noise_suppress'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_noise_suppress' type='a_VPP_NOISESUPPRESS_SpxPpState_noise_suppress' address='(827 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_echo_suppress'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_echo_suppress' type='a_VPP_NOISESUPPRESS_SpxPpState_echo_suppress' address='(828 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_echo_suppress_active'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_echo_suppress_active' type='a_VPP_NOISESUPPRESS_SpxPpState_echo_suppress_active' address='(829 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_echo_state_ADDR'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_echo_state_ADDR' type='a_VPP_NOISESUPPRESS_SpxPpState_echo_state_ADDR' address='(830 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_speech_prob' type='a_VPP_NOISESUPPRESS_SpxPpState_speech_prob' address='(831 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_frame'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_frame' type='a_VPP_NOISESUPPRESS_SpxPpState_frame' address='(832 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_frame_N'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_frame_N' type='a_VPP_NOISESUPPRESS_SpxPpState_frame_N' address='(912 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_ft'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_ft' type='a_VPP_NOISESUPPRESS_SpxPpState_ft' address='(992 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_gain' type='a_VPP_NOISESUPPRESS_SpxPpState_gain' address='(1152 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_gain_M' type='a_VPP_NOISESUPPRESS_SpxPpState_gain_M' address='(1232 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_prior'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_prior' type='a_VPP_NOISESUPPRESS_SpxPpState_prior' address='(1256 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_prior_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_prior_M' type='a_VPP_NOISESUPPRESS_SpxPpState_prior_M' address='(1336 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_post'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_post' type='a_VPP_NOISESUPPRESS_SpxPpState_post' address='(1360 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_post_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_post_M' type='a_VPP_NOISESUPPRESS_SpxPpState_post_M' address='(1440 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain2'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_gain2' type='a_VPP_NOISESUPPRESS_SpxPpState_gain2' address='(1464 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain2_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_gain2_M' type='a_VPP_NOISESUPPRESS_SpxPpState_gain2_M' address='(1544 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain_floor'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_gain_floor' type='a_VPP_NOISESUPPRESS_SpxPpState_gain_floor' address='(1568 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_gain_floor_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_gain_floor_M' type='a_VPP_NOISESUPPRESS_SpxPpState_gain_floor_M' address='(1648 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_zeta'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_zeta' type='a_VPP_NOISESUPPRESS_SpxPpState_zeta' address='(1672 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_zeta_M'>
+    <int16 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_zeta_M' type='a_VPP_NOISESUPPRESS_SpxPpState_zeta_M' address='(1752 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_inbuf'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_inbuf' type='a_VPP_NOISESUPPRESS_SpxPpState_inbuf' address='(1776 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_outbuf'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_outbuf' type='a_VPP_NOISESUPPRESS_SpxPpState_outbuf' address='(1856 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_nb_adapt'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_nb_adapt' type='a_VPP_NOISESUPPRESS_SpxPpState_nb_adapt' address='(1936 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_was_speech'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_was_speech' type='a_VPP_NOISESUPPRESS_SpxPpState_was_speech' address='(1937 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_min_count'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_min_count' type='a_VPP_NOISESUPPRESS_SpxPpState_min_count' address='(1938 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_frame_shift'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_frame_shift' type='a_VPP_NOISESUPPRESS_SpxPpState_frame_shift' address='(1939 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_noise'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_noise' type='a_VPP_NOISESUPPRESS_SpxPpState_noise' address='(1940 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_noise_M'>
+    <int32 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_noise_M' type='a_VPP_NOISESUPPRESS_SpxPpState_noise_M' address='(2100 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_reverb_estimate'>
+    <int32 name='unused' count='104'/>
+</alias>
+<instance name='SpxPpState_reverb_estimate' type='a_VPP_NOISESUPPRESS_SpxPpState_reverb_estimate' address='(2148 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_old_ps'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_old_ps' type='a_VPP_NOISESUPPRESS_SpxPpState_old_ps' address='(2356 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_old_ps_M'>
+    <int32 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_old_ps_M' type='a_VPP_NOISESUPPRESS_SpxPpState_old_ps_M' address='(2516 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_ps'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_ps' type='a_VPP_NOISESUPPRESS_SpxPpState_ps' address='(2564 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_ps_M'>
+    <int32 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_ps_M' type='a_VPP_NOISESUPPRESS_SpxPpState_ps_M' address='(2724 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_S'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_S' type='a_VPP_NOISESUPPRESS_SpxPpState_S' address='(2772 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_Smin'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_Smin' type='a_VPP_NOISESUPPRESS_SpxPpState_Smin' address='(2932 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_Stmp'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_Stmp' type='a_VPP_NOISESUPPRESS_SpxPpState_Stmp' address='(3092 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_update_prob'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_update_prob' type='a_VPP_NOISESUPPRESS_SpxPpState_update_prob' address='(3252 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_echo_noise'>
+    <int32 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_echo_noise' type='a_VPP_NOISESUPPRESS_SpxPpState_echo_noise' address='(3332 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_echo_noise_M'>
+    <int32 name='unused' count='24'/>
+</alias>
+<instance name='SpxPpState_echo_noise_M' type='a_VPP_NOISESUPPRESS_SpxPpState_echo_noise_M' address='(3492 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_residual_echo'>
+    <int32 name='unused' count='104'/>
+</alias>
+<instance name='SpxPpState_residual_echo' type='a_VPP_NOISESUPPRESS_SpxPpState_residual_echo' address='(3540 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_VAR_RL7_ADDR'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_VAR_RL7_ADDR' type='a_VPP_NOISESUPPRESS_SPEEX_VAR_RL7_ADDR' address='(3748 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_REF_BUF'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SPEEX_REF_BUF' type='a_VPP_NOISESUPPRESS_SPEEX_REF_BUF' address='(3750 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_FILTERBANK_NEW_SAMPLING'>
+    <int16 name='unused' />
+</alias>
+<instance name='FILTERBANK_NEW_SAMPLING' type='a_VPP_NOISESUPPRESS_FILTERBANK_NEW_SAMPLING' address='(3830 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_FILTERBANK_NEW_TYPE'>
+    <int16 name='unused' />
+</alias>
+<instance name='FILTERBANK_NEW_TYPE' type='a_VPP_NOISESUPPRESS_FILTERBANK_NEW_TYPE' address='(3831 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_FILTERBANK_DF'>
+    <int32 name='unused' />
+</alias>
+<instance name='FILTERBANK_DF' type='a_VPP_NOISESUPPRESS_FILTERBANK_DF' address='(3832 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_FILTERBANK_MAX_MEL'>
+    <int32 name='unused' />
+</alias>
+<instance name='FILTERBANK_MAX_MEL' type='a_VPP_NOISESUPPRESS_FILTERBANK_MAX_MEL' address='(3834 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_FILTERBANK_MEL_INTERVAL'>
+    <int32 name='unused' />
+</alias>
+<instance name='FILTERBANK_MEL_INTERVAL' type='a_VPP_NOISESUPPRESS_FILTERBANK_MEL_INTERVAL' address='(3836 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_ST_WINDOW'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SPEEX_ST_WINDOW' type='a_VPP_NOISESUPPRESS_SPEEX_ST_WINDOW' address='(3838 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_CONJ_WINDOW_LEN'>
+    <int16 name='unused' />
+</alias>
+<instance name='CONJ_WINDOW_LEN' type='a_VPP_NOISESUPPRESS_CONJ_WINDOW_LEN' address='(3998 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_PRE_RETURN'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPEEX_PRE_RETURN' type='a_VPP_NOISESUPPRESS_SPEEX_PRE_RETURN' address='(3999 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_COMPUTE_GAIN_FLOOR_NOISE_ECHO_GAIN'>
+    <int32 name='unused' />
+</alias>
+<instance name='COMPUTE_GAIN_FLOOR_NOISE_ECHO_GAIN' type='a_VPP_NOISESUPPRESS_COMPUTE_GAIN_FLOOR_NOISE_ECHO_GAIN' address='(4000 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY3_EPI3'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY3_EPI3' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY3_EPI3' address='(4002 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH' address='(4004 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_0i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_0i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_0i' address='(4005 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_1'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_1' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_1' address='(4006 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_1i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_1i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_1i' address='(4007 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_2'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_2' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_2' address='(4008 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_2i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_2i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_2i' address='(4009 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_3'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_3' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_3' address='(4010 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_3i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_3i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_3i' address='(4011 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_4'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_4' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_4' address='(4012 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_4i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_4i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_4i' address='(4013 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_5'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_5' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_5' address='(4014 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_5i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_5i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_5i' address='(4015 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_6'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_6' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_6' address='(4016 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_6i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_6i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_6i' address='(4017 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_7'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_7' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_7' address='(4018 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_7i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_7i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_7i' address='(4019 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_8'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_8' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_8' address='(4020 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_8i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_8i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_8i' address='(4021 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_9'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_9' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_9' address='(4022 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_9i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_9i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_9i' address='(4023 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_10'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_10' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_10' address='(4024 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_10i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_10i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_10i' address='(4025 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_11'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_11' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_11' address='(4026 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_11i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_11i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_11i' address='(4027 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_12'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_12' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_12' address='(4028 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_12i'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_SCRATCH_12i' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_SCRATCH_12i' address='(4029 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YA'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_YA' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YA' address='(4030 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YAi'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_YAi' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YAi' address='(4031 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YB'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_YB' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YB' address='(4032 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YBi'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_YBi' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_YBi' address='(4033 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_FSTRIDE'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_FSTRIDE' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_FSTRIDE' address='(4034 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_M'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_M' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_M' address='(4035 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_N'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_N' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_N' address='(4036 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_MM'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_MM' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_MM' address='(4037 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_TMP'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPX_KF_BFLY_TMP' type='a_VPP_NOISESUPPRESS_SPX_KF_BFLY_TMP' address='(4038 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_PRE_RESET'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPEEX_PRE_RESET' type='a_VPP_NOISESUPPRESS_SPEEX_PRE_RESET' address='(4039 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_PRE_FRAME_NUM'>
+    <int16 name='unused' />
+</alias>
+<instance name='SPEEX_PRE_FRAME_NUM' type='a_VPP_NOISESUPPRESS_SPEEX_PRE_FRAME_NUM' address='(4040 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_RESERVR_FOR_ALIGN'>
+    <int16 name='unused' count='7'/>
+</alias>
+<instance name='SPEEX_RESERVR_FOR_ALIGN' type='a_VPP_NOISESUPPRESS_SPEEX_RESERVR_FOR_ALIGN' address='(4041 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_window'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_window' type='a_VPP_NOISESUPPRESS_SpxPpState_window' address='(4048 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_bank_left'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_bank_bank_left' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_bank_left' address='(4208 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_bank_right'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_bank_bank_right' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_bank_right' address='(4288 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_filter_left'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_bank_filter_left' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_filter_left' address='(4368 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_filter_right'>
+    <int16 name='unused' count='80'/>
+</alias>
+<instance name='SpxPpState_bank_filter_right' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_filter_right' address='(4448 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_nb_banks'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_bank_nb_banks' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_nb_banks' address='(4528 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_bank_len'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_bank_len' type='a_VPP_NOISESUPPRESS_SpxPpState_bank_len' address='(4529 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_nfft'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_substate_nfft' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_nfft' address='(4530 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_inverse'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_substate_inverse' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_inverse' address='(4531 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_factors'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_substate_factors' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_factors' address='(4532 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_twiddles'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_substate_twiddles' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_substate_twiddles' address='(4596 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_tmpbuf'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_tmpbuf' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_tmpbuf' address='(4756 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_super_twiddles'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_forward_super_twiddles' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_forward_super_twiddles' address='(4916 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_nfft'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_substate_nfft' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_nfft' address='(5076 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_inverse'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_substate_inverse' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_inverse' address='(5077 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_factors'>
+    <int16 name='unused' count='64'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_substate_factors' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_factors' address='(5078 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_twiddles'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_substate_twiddles' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_substate_twiddles' address='(5142 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_tmpbuf'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_tmpbuf' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_tmpbuf' address='(5302 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_super_twiddles'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='SpxPpState_fft_lookup_backward_super_twiddles' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_backward_super_twiddles' address='(5462 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_N'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_N' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_N' address='(5622 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_reserved'>
+    <int16 name='unused' />
+</alias>
+<instance name='SpxPpState_fft_lookup_reserved' type='a_VPP_NOISESUPPRESS_SpxPpState_fft_lookup_reserved' address='(5623 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_ATAN01_M'>
+    <int32 name='unused' count='4'/>
+</alias>
+<instance name='SPEEX_ATAN01_M' type='a_VPP_NOISESUPPRESS_SPEEX_ATAN01_M' address='(5624 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_COS_PI_2_L'>
+    <int32 name='unused' count='4'/>
+</alias>
+<instance name='SPEEX_COS_PI_2_L' type='a_VPP_NOISESUPPRESS_SPEEX_COS_PI_2_L' address='(5632 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_SQRT_C'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='SPEEX_SQRT_C' type='a_VPP_NOISESUPPRESS_SPEEX_SQRT_C' address='(5640 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_UPDATE_NOISE_X'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='SPEEX_UPDATE_NOISE_X' type='a_VPP_NOISESUPPRESS_SPEEX_UPDATE_NOISE_X' address='(5644 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_HYPERGEOM_GAIN_TABLE'>
+    <int16 name='unused' count='22'/>
+</alias>
+<instance name='SPEEX_HYPERGEOM_GAIN_TABLE' type='a_VPP_NOISESUPPRESS_SPEEX_HYPERGEOM_GAIN_TABLE' address='(5648 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_EXP_D'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='SPEEX_EXP_D' type='a_VPP_NOISESUPPRESS_SPEEX_EXP_D' address='(5670 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_0'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_0' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_0' address='(5674 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_1'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_1' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_1' address='(5676 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_2'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_2' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_2' address='(5678 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_3'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_3' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_3' address='(5680 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_4'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_4' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_4' address='(5682 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_5'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_5' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_5' address='(5684 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_6'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_6' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_6' address='(5686 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_7'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_7' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_7' address='(5688 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_8'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_8' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_8' address='(5690 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_14'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_14' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_14' address='(5692 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_16'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_16' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_16' address='(5694 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_17'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_17' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_17' address='(5696 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_19'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_19' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_19' address='(5698 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_20'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_20' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_20' address='(5700 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_29'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_29' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_29' address='(5702 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_64'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_64' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_64' address='(5704 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_97'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_97' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_97' address='(5706 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_100'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_100' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_100' address='(5708 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_128'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_128' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_128' address='(5710 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_236'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_236' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_236' address='(5712 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_256'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_256' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_256' address='(5714 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_472'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_472' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_472' address='(5716 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_512'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_512' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_512' address='(5718 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_983'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_983' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_983' address='(5720 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_1000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_1000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_1000' address='(5722 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_2458'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_2458' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_2458' address='(5724 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_3277'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_3277' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_3277' address='(5726 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_4915'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_4915' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_4915' address='(5728 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_6521'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_6521' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_6521' address='(5730 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_6711'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_6711' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_6711' address='(5732 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_8192'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_8192' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_8192' address='(5734 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_9830'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_9830' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_9830' address='(5736 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_10000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_10000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_10000' address='(5738 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_10912'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_10912' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_10912' address='(5740 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_16384'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_16384' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_16384' address='(5742 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_19458'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_19458' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_19458' address='(5744 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_19661'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_19661' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_19661' address='(5746 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_20000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_20000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_20000' address='(5748 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_20839'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_20839' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_20839' address='(5750 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_21290'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_21290' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_21290' address='(5752 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_21924'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_21924' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_21924' address='(5754 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_22938'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_22938' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_22938' address='(5756 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_23637'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_23637' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_23637' address='(5758 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_24576'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_24576' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_24576' address='(5760 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_25736'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_25736' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_25736' address='(5762 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_26214'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_26214' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_26214' address='(5764 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_29164'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_29164' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_29164' address='(5766 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_29458'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_29458' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_29458' address='(5768 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_32000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_32000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_32000' address='(5770 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_32766'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_32766' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_32766' address='(5772 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_32767'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_32767' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_32767' address='(5774 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_32768'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_32768' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_32768' address='(5776 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_65535'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_65535' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_65535' address='(5778 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_65536'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_65536' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_65536' address='(5780 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_131071'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_131071' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_131071' address='(5782 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_131072'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_131072' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_131072' address='(5784 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x80000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_0x80000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x80000' address='(5786 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_1087164'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_1087164' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_1087164' address='(5788 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x800000'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_0x800000' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x800000' address='(5790 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x7fffffff'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_0x7fffffff' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_0x7fffffff' address='(5792 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG21290'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_NEG21290' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG21290' address='(5794 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG15'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_NEG15' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG15' address='(5796 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG2'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_NEG2' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG2' address='(5798 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+<alias name='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG32767'>
+    <int32 name='unused' />
+</alias>
+<instance name='SPEEX_CONST_NEG32767' type='a_VPP_NOISESUPPRESS_SPEEX_CONST_NEG32767' address='(5800 + PREPROCESS_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_NOISESUPPRESS/PREPROCESS_GLOBAL'/>
+</archive>

@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+print<<HEADER;
+############################################################
+#
+# mUPnP for C
+#
+# Copyright (C) Satoshi Konno 2005
+#
+############################################################
+
+#if HAVE_LIBTOOL
+#lib_LTLIBRARIES = libmupnp.la
+#else
+lib_LIBRARIES = libmupnp.a
+#endif
+
+AM_CFLAGS = -I\$(top_srcdir)/include -I\$(top_builddir)/include \@XML_CFLAGS\@ \@HTTP_CFLAGS\@ \@CLOG_DEBUG_FLAGS\@
+
+mupnp_sources = \\
+HEADER
+my @find_files = `find ../../src/mupnp -name *.c`;
+my @source_files;
+foreach $file (@find_files) {
+	$file =~ s/\n//;
+	$file = "\t" . $file;
+	push @source_files, $file;
+}
+print join(" \\\n", @source_files) . "\n";
+
+print<<FOTTER;
+
+libmupnpincludedir = \$(includedir)/mupnp
+nobase_libmupnpinclude_HEADERS =  \\
+        \$(mupnp_headers)
+
+#if HAVE_LIBTOOL
+#libmupnp_la_SOURCES = \\
+#        \$(mupnp_source)
+#libmupnp_la_LIBADD = \@HTTP_LIBS\@ \@XML_LIBS\@
+#else
+libmupnp_a_SOURCES = \\
+        \$(mupnp_sources)
+libmupnp_a_CFLAGS = \$(AM_CFLAGS)
+#libmupnp_a_LIBADD = \@HTTP_LIBS\@ \@XML_LIBS\@
+#endif
+FOTTER

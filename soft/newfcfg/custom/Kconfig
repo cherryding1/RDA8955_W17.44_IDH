@@ -1,0 +1,96 @@
+config CT_PROTOSTACK_IN_RAM
+	option skiph
+	bool "PROTOSTACK IN RAM"
+	default y
+	---help---
+		put proto stack code to ram,enhance perfance
+
+config EXPORT_BOARD_INFO
+	option skiph
+	bool "EXPORT_BOARD_INFO"
+	default y
+	---help---
+	   Export board infomation to lod
+
+if EXPORT_BOARD_INFO
+
+config EXPORT_BOARD_FLAGS
+	option skiph
+	string "EXPORT_BOARD_FLAGS"
+	default "PM_MODEL ATV_MODEL FM_MODEL"
+
+endif
+
+#config EFFUSE_NOT_BE_CALIBED
+#	option skipmk
+#	bool "EFFUSE_NOT_BE_CALIBED"
+#	default y
+
+menu "Lower Power Options"
+
+menuconfig LOW_POWER_OPTIMISE
+	option skiph
+	option skipmk
+	bool "Lower Power Optimise"
+	default n
+	---help---
+	   low power optimise
+
+if LOW_POWER_OPTIMISE
+config CHIP_XTAL_CLK_IS_52M
+	option skipmk
+	bool "CHIP_XTAL_CLK_IS_52M"
+	default y
+
+config HAL_SHUTDOWN_PLL_IN_LIGHT_SLEEP
+	option skipmk
+	bool "HAL_SHUTDOWN_PLL_IN_LIGHT_SLEEP"
+	default y
+
+config HAL_FORCE_LPS_OS_ALIGN
+	option skipmk
+	bool "HAL_FORCE_LPS_OS_ALIGN"
+	default y
+
+config __L1_CCH_DEC_DONE_IRQ_EN__
+	option skipmk
+	bool "__L1_CCH_DEC_DONE_IRQ_EN__"
+	default y
+
+config XCV_WAKEUP_FRAME_NB
+	option skipmk
+	bool "XCV_WAKEUP_FRAME_NB"
+	default y
+
+config XCV_DAC_MUX_EN_DISABLE
+	option skipmk
+	bool "XCV_DAC_MUX_EN_DISABLE"
+	default y
+
+config __L1_TWO_BURST_PCH__
+	option skipmk
+	bool "__L1_TWO_BURST_PCH__"
+	default y
+	
+endif	
+endmenu
+
+config GCF_TEST_SUPPORT
+	option bool01
+	option skipmk
+	option skiph
+	bool "GCF test support"
+	default n
+
+config GCF_TEST
+	option skipmk
+	bool "GCF_TEST"
+	depends on GCF_TEST_SUPPORT
+	def_bool y
+
+config MODEM_WITHOUT_VOICE_FORGCF
+	option skipmk
+	bool "MODEM_WITHOUT_VOICE_FORGCF"
+	depends on GCF_TEST_SUPPORT
+	default n
+

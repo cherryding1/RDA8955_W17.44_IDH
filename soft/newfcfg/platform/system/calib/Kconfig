@@ -1,0 +1,17 @@
+comment "--- platform/system/calib ---"
+
+config CES_DISPLAY
+	option skiph
+	bool "Screen display in RF calibration"
+	default n
+	---help---
+		Screen display in RF calibration: 1/0
+		if not configured here,CES_DISPLAY will set to 1 by ${PLATFORM_SYSTEM}/calib
+		for ULC project, CES_DISPLAY can set to 0 to save flash space.
+
+config CALIB_USE_0207
+	bool "CALIB_USE_0207"
+	option skipmk
+	default y if CT_ASIC_8809
+	default n if CT_ASIC_8955
+	default n if CT_ASIC_8909

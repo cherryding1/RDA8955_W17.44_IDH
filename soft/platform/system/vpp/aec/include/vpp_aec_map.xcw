@@ -1,0 +1,552 @@
+<archive>
+<!-- Generated automatically by voc_h2xmd.rb -->
+<var name='RAM_X_BEGIN_ADDR' value='VOC_RAM_BASE'/>
+<var name='RAM_Y_BEGIN_ADDR' value='VOC_RAM_BASE+0x8000'/>
+<var name='COMMON_GLOBAL_X_SIZE' value='2758'/>
+<var name='COMMON_GLOBAL_Y_SIZE' value='62'/>
+<var name='HI_GLOBAL_X_SIZE' value='0'/>
+<var name='HI_GLOBAL_Y_SIZE' value='0'/>
+<var name='BYE_GLOBAL_X_SIZE' value='2'/>
+<var name='BYE_GLOBAL_Y_SIZE' value='2'/>
+<var name='HI_LOCAL_X_SIZE' value='0'/>
+<var name='HI_LOCAL_Y_SIZE' value='0'/>
+<var name='BYE_LOCAL_X_SIZE' value='4'/>
+<var name='BYE_LOCAL_Y_SIZE' value='2'/>
+<var name='COMMON_LOCAL_X_SIZE' value='0'/>
+<var name='COMMON_LOCAL_Y_SIZE' value='0'/>
+<var name='COMMON_GLOBAL_X_BEGIN_ADDR' value='(0 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_GLOBAL_Y_BEGIN_ADDR' value='(0 + RAM_Y_BEGIN_ADDR)'/>
+<var name='HI_GLOBAL_X_BEGIN_ADDR' value='(2758 + RAM_X_BEGIN_ADDR)'/>
+<var name='HI_GLOBAL_Y_BEGIN_ADDR' value='(62 + RAM_Y_BEGIN_ADDR)'/>
+<var name='BYE_GLOBAL_X_BEGIN_ADDR' value='(2758 + RAM_X_BEGIN_ADDR)'/>
+<var name='BYE_GLOBAL_Y_BEGIN_ADDR' value='(62 + RAM_Y_BEGIN_ADDR)'/>
+<var name='HI_LOCAL_X_BEGIN_ADDR' value='(2760 + RAM_X_BEGIN_ADDR)'/>
+<var name='HI_LOCAL_Y_BEGIN_ADDR' value='(64 + RAM_Y_BEGIN_ADDR)'/>
+<var name='BYE_LOCAL_X_BEGIN_ADDR' value='(2760 + RAM_X_BEGIN_ADDR)'/>
+<var name='BYE_LOCAL_Y_BEGIN_ADDR' value='(64 + RAM_Y_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_X_BEGIN_ADDR' value='(2764 + RAM_X_BEGIN_ADDR)'/>
+<var name='COMMON_LOCAL_Y_BEGIN_ADDR' value='(66 + RAM_Y_BEGIN_ADDR)'/>
+<typedef name='t_VPP_AEC_VPP_HELLO_CONST_STRUCT'>
+    <int32 name='VPP_HELLO_CONST_SAYS_HI' />
+    <int32 name='VPP_HELLO_CONST_SAYS_BYE' />
+</typedef>
+<instance name='VPP_HELLO_CONST_STRUCT' type='t_VPP_AEC_VPP_HELLO_CONST_STRUCT' address='(0 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_GLOBAL_INPUT_MIC_PCM_ADDR'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='GLOBAL_INPUT_MIC_PCM_ADDR' type='a_VPP_AEC_GLOBAL_INPUT_MIC_PCM_ADDR' address='(4 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_GLOBAL_INPUT_SPK_PCM_ADDR'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='GLOBAL_INPUT_SPK_PCM_ADDR' type='a_VPP_AEC_GLOBAL_INPUT_SPK_PCM_ADDR' address='(164 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_GLOBAL_OUTPUT_MIC_PCM_ADDR'>
+    <int16 name='unused' count='160'/>
+</alias>
+<instance name='GLOBAL_OUTPUT_MIC_PCM_ADDR' type='a_VPP_AEC_GLOBAL_OUTPUT_MIC_PCM_ADDR' address='(324 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_SpkAnaFilterDelayLine'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='r_SpkAnaFilterDelayLine' type='a_VPP_AEC_r_SpkAnaFilterDelayLine' address='(484 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_MicAnaFilterDelayLine'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='r_MicAnaFilterDelayLine' type='a_VPP_AEC_r_MicAnaFilterDelayLine' address='(612 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_OutSynFilterDelayLine'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='r_OutSynFilterDelayLine' type='a_VPP_AEC_r_OutSynFilterDelayLine' address='(740 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_FilterBank_MulBuf'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='g_FilterBank_MulBuf' type='a_VPP_AEC_g_FilterBank_MulBuf' address='(868 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_SpkAnaFilterOutBufI'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_SpkAnaFilterOutBufI' type='a_VPP_AEC_g_SpkAnaFilterOutBufI' address='(996 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_SpkAnaFilterOutBufQ'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_SpkAnaFilterOutBufQ' type='a_VPP_AEC_g_SpkAnaFilterOutBufQ' address='(1012 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_MicAnaFilterOutBufI'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_MicAnaFilterOutBufI' type='a_VPP_AEC_g_MicAnaFilterOutBufI' address='(1028 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_MicAnaFilterOutBufQ'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_MicAnaFilterOutBufQ' type='a_VPP_AEC_g_MicAnaFilterOutBufQ' address='(1044 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_OutSynFilterInBufI'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_OutSynFilterInBufI' type='a_VPP_AEC_g_OutSynFilterInBufI' address='(1060 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_OutSynFilterInBufQ'>
+    <int16 name='unused' count='16'/>
+</alias>
+<instance name='g_OutSynFilterInBufQ' type='a_VPP_AEC_g_OutSynFilterInBufQ' address='(1076 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_SpkSigBufI'>
+    <int16 name='unused' count='72'/>
+</alias>
+<instance name='r_AF_SpkSigBufI' type='a_VPP_AEC_r_AF_SpkSigBufI' address='(1092 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_SpkSigBufQ'>
+    <int16 name='unused' count='72'/>
+</alias>
+<instance name='r_AF_SpkSigBufQ' type='a_VPP_AEC_r_AF_SpkSigBufQ' address='(1164 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_FilterBufI'>
+    <int32 name='unused' count='72'/>
+</alias>
+<instance name='r_AF_FilterBufI' type='a_VPP_AEC_r_AF_FilterBufI' address='(1236 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_FilterBufQ'>
+    <int32 name='unused' count='72'/>
+</alias>
+<instance name='r_AF_FilterBufQ' type='a_VPP_AEC_r_AF_FilterBufQ' address='(1380 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_FilterOutBufI'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_AF_FilterOutBufI' type='a_VPP_AEC_g_AF_FilterOutBufI' address='(1524 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve00_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve00_addr' type='a_VPP_AEC_reserve00_addr' address='(1533 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_FilterOutBufQ'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_AF_FilterOutBufQ' type='a_VPP_AEC_g_AF_FilterOutBufQ' address='(1534 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve01_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve01_addr' type='a_VPP_AEC_reserve01_addr' address='(1543 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_OldSpkDataBufI'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_OldSpkDataBufI' type='a_VPP_AEC_r_AF_OldSpkDataBufI' address='(1544 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve02_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve02_addr' type='a_VPP_AEC_reserve02_addr' address='(1553 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_OldSpkDataBufQ'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_OldSpkDataBufQ' type='a_VPP_AEC_r_AF_OldSpkDataBufQ' address='(1554 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve03_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve03_addr' type='a_VPP_AEC_reserve03_addr' address='(1563 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_ErrDataBufI'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_AF_ErrDataBufI' type='a_VPP_AEC_g_AF_ErrDataBufI' address='(1564 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve04_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve04_addr' type='a_VPP_AEC_reserve04_addr' address='(1573 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_ErrDataBufQ'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_AF_ErrDataBufQ' type='a_VPP_AEC_g_AF_ErrDataBufQ' address='(1574 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve05_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve05_addr' type='a_VPP_AEC_reserve05_addr' address='(1583 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_ShortFilterBufI'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='g_AF_ShortFilterBufI' type='a_VPP_AEC_g_AF_ShortFilterBufI' address='(1584 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_ShortFilterBufQ'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='g_AF_ShortFilterBufQ' type='a_VPP_AEC_g_AF_ShortFilterBufQ' address='(1592 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_tempCmplxBufI'>
+    <int32 name='unused' count='8'/>
+</alias>
+<instance name='g_AF_tempCmplxBufI' type='a_VPP_AEC_g_AF_tempCmplxBufI' address='(1600 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_tempCmplxBufQ'>
+    <int32 name='unused' count='8'/>
+</alias>
+<instance name='g_AF_tempCmplxBufQ' type='a_VPP_AEC_g_AF_tempCmplxBufQ' address='(1616 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_SpkSigPower'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_SpkSigPower' type='a_VPP_AEC_r_AF_SpkSigPower' address='(1632 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_SpkSigSmoothPower'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_SpkSigSmoothPower' type='a_VPP_AEC_r_AF_SpkSigSmoothPower' address='(1650 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_RErrSpkI'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_RErrSpkI' type='a_VPP_AEC_r_AF_RErrSpkI' address='(1668 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_RErrSpkQ'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_RErrSpkQ' type='a_VPP_AEC_r_AF_RErrSpkQ' address='(1686 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_AF_StepSize'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_AF_StepSize' type='a_VPP_AEC_g_AF_StepSize' address='(1704 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_reserve06_addr'>
+    <int16 name='unused' />
+</alias>
+<instance name='reserve06_addr' type='a_VPP_AEC_reserve06_addr' address='(1713 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_SmoothErrPower'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_SmoothErrPower' type='a_VPP_AEC_r_PF_SmoothErrPower' address='(1714 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_NoisePowerEstBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_NoisePowerEstBuf' type='a_VPP_AEC_r_PF_NoisePowerEstBuf' address='(1732 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_NoiseFloorDevCnt'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_NoiseFloorDevCnt' type='a_VPP_AEC_r_PF_NoiseFloorDevCnt' address='(1750 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_DTD_ch'>
+    <int16 name='unused' />
+</alias>
+<instance name='g_DTD_ch' type='a_VPP_AEC_g_DTD_ch' address='(1759 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_PostSToNRatio'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_PostSToNRatio' type='a_VPP_AEC_g_PF_PostSToNRatio' address='(1760 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_CLChnl'>
+    <int16 name='unused' />
+</alias>
+<instance name='CLChnl' type='a_VPP_AEC_CLChnl' address='(1769 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_PrevSigPowerNBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_PrevSigPowerNBuf' type='a_VPP_AEC_r_PF_PrevSigPowerNBuf' address='(1770 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_PrevSigPowerEBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_PrevSigPowerEBuf' type='a_VPP_AEC_r_PF_PrevSigPowerEBuf' address='(1788 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_NoiseWeight'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_NoiseWeight' type='a_VPP_AEC_g_PF_NoiseWeight' address='(1806 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_EC_ErrToOutRatio'>
+    <int16 name='unused' />
+</alias>
+<instance name='r_EC_ErrToOutRatio' type='a_VPP_AEC_r_EC_ErrToOutRatio' address='(1815 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_NoiseAmpWeight'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_NoiseAmpWeight' type='a_VPP_AEC_g_PF_NoiseAmpWeight' address='(1816 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_m_AF_FrameCnt'>
+    <int16 name='unused' />
+</alias>
+<instance name='m_AF_FrameCnt' type='a_VPP_AEC_m_AF_FrameCnt' address='(1825 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_m_Taps'>
+    <int16 name='unused' count='4'/>
+</alias>
+<instance name='m_Taps' type='a_VPP_AEC_m_Taps' address='(1826 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_m_Registers'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='m_Registers' type='a_VPP_AEC_m_Registers' address='(1830 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_r_AF_SpkSigBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_r_AF_SpkSigBufIQ_addr_addr' type='a_VPP_AEC_TEMP_r_AF_SpkSigBufIQ_addr_addr' address='(1862 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_r_AF_FilterBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_r_AF_FilterBufIQ_addr_addr' type='a_VPP_AEC_TEMP_r_AF_FilterBufIQ_addr_addr' address='(1864 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_g_AF_FilterOutBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_g_AF_FilterOutBufIQ_addr_addr' type='a_VPP_AEC_TEMP_g_AF_FilterOutBufIQ_addr_addr' address='(1866 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_r_AF_OldSpkDataBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_r_AF_OldSpkDataBufIQ_addr_addr' type='a_VPP_AEC_TEMP_r_AF_OldSpkDataBufIQ_addr_addr' address='(1868 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_g_AF_ErrDataBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_g_AF_ErrDataBufIQ_addr_addr' type='a_VPP_AEC_TEMP_g_AF_ErrDataBufIQ_addr_addr' address='(1870 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_g_MicAnaFilterOutBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_g_MicAnaFilterOutBufIQ_addr_addr' type='a_VPP_AEC_TEMP_g_MicAnaFilterOutBufIQ_addr_addr' address='(1872 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_g_SpkAnaFilterOutBufIQ_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_g_SpkAnaFilterOutBufIQ_addr_addr' type='a_VPP_AEC_TEMP_g_SpkAnaFilterOutBufIQ_addr_addr' address='(1874 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_TEMP_r_AF_SpkSigPower_addr_addr'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='TEMP_r_AF_SpkSigPower_addr_addr' type='a_VPP_AEC_TEMP_r_AF_SpkSigPower_addr_addr' address='(1876 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_AnaFilterCoef'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='AnaFilterCoef' type='a_VPP_AEC_AnaFilterCoef' address='(1878 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_SynFilterCoef'>
+    <int16 name='unused' count='128'/>
+</alias>
+<instance name='SynFilterCoef' type='a_VPP_AEC_SynFilterCoef' address='(2006 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_wnreal'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='wnreal' type='a_VPP_AEC_wnreal' address='(2134 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_wnimag'>
+    <int16 name='unused' count='8'/>
+</alias>
+<instance name='wnimag' type='a_VPP_AEC_wnimag' address='(2142 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_AdaptTable'>
+    <int16 name='unused' count='32'/>
+</alias>
+<instance name='AdaptTable' type='a_VPP_AEC_AdaptTable' address='(2150 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_counter_subframe'>
+    <int16 name='unused' />
+</alias>
+<instance name='g_counter_subframe' type='a_VPP_AEC_g_counter_subframe' address='(2182 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_ch'>
+    <int16 name='unused' />
+</alias>
+<instance name='g_ch' type='a_VPP_AEC_g_ch' address='(2183 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_real_int'>
+    <int32 name='unused' count='16'/>
+</alias>
+<instance name='real_int' type='a_VPP_AEC_real_int' address='(2184 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_imag_int'>
+    <int32 name='unused' count='16'/>
+</alias>
+<instance name='imag_int' type='a_VPP_AEC_imag_int' address='(2216 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_MicSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_MicSmoothPower' type='a_VPP_AEC_r_PF_CL_MicSmoothPower' address='(2248 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_MicNoise'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_MicNoise' type='a_VPP_AEC_r_PF_CL_MicNoise' address='(2252 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_SpkSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_SpkSmoothPower' type='a_VPP_AEC_r_PF_CL_SpkSmoothPower' address='(2256 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_SpkNoise'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_SpkNoise' type='a_VPP_AEC_r_PF_CL_SpkNoise' address='(2260 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_MicNoiseFloorDevCnt'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_MicNoiseFloorDevCnt' type='a_VPP_AEC_r_PF_CL_MicNoiseFloorDevCnt' address='(2264 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_SpkNoiseFloorDevCnt'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_SpkNoiseFloorDevCnt' type='a_VPP_AEC_r_PF_CL_SpkNoiseFloorDevCnt' address='(2266 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_ifMicSigOn'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_ifMicSigOn' type='a_VPP_AEC_r_PF_CL_ifMicSigOn' address='(2268 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_ifSpkSigOn'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_ifSpkSigOn' type='a_VPP_AEC_r_PF_CL_ifSpkSigOn' address='(2270 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_ChnlState'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_ChnlState' type='a_VPP_AEC_r_PF_CL_ChnlState' address='(2272 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_State'>
+    <int16 name='unused' />
+</alias>
+<instance name='r_PF_CL_State' type='a_VPP_AEC_r_PF_CL_State' address='(2274 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTCountDown'>
+    <int16 name='unused' />
+</alias>
+<instance name='r_PF_CL_DTCountDown' type='a_VPP_AEC_r_PF_CL_DTCountDown' address='(2275 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_NoisePowerSmoothEstBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_NoisePowerSmoothEstBuf' type='a_VPP_AEC_r_PF_NoisePowerSmoothEstBuf' address='(2276 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_PriorSToNRatio'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_PriorSToNRatio' type='a_VPP_AEC_g_PF_PriorSToNRatio' address='(2294 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_PriorSToERatio'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_PriorSToERatio' type='a_VPP_AEC_g_PF_PriorSToERatio' address='(2303 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_SpkPowerBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_SpkPowerBuf' type='a_VPP_AEC_r_PF_SpkPowerBuf' address='(2312 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CCErrSpkVecBufI'>
+    <int32 name='unused' count='72'/>
+</alias>
+<instance name='r_PF_CCErrSpkVecBufI' type='a_VPP_AEC_r_PF_CCErrSpkVecBufI' address='(2330 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CCErrSpkVecBufQ'>
+    <int32 name='unused' count='72'/>
+</alias>
+<instance name='r_PF_CCErrSpkVecBufQ' type='a_VPP_AEC_r_PF_CCErrSpkVecBufQ' address='(2474 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_EchoPowerEstBuf'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_EchoPowerEstBuf' type='a_VPP_AEC_r_PF_EchoPowerEstBuf' address='(2618 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_g_PF_EchoWeight'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='g_PF_EchoWeight' type='a_VPP_AEC_g_PF_EchoWeight' address='(2636 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTCountUp'>
+    <int16 name='unused' />
+</alias>
+<instance name='r_PF_CL_DTCountUp' type='a_VPP_AEC_r_PF_CL_DTCountUp' address='(2645 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_ErrSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_ErrSmoothPower' type='a_VPP_AEC_r_PF_CL_ErrSmoothPower' address='(2646 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_FilterAmpI'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_FilterAmpI' type='a_VPP_AEC_r_AF_FilterAmpI' address='(2650 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_AF_FilterAmpQ'>
+    <int16 name='unused' count='9'/>
+</alias>
+<instance name='r_AF_FilterAmpQ' type='a_VPP_AEC_r_AF_FilterAmpQ' address='(2659 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_PrevEchoPowerEst'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_PrevEchoPowerEst' type='a_VPP_AEC_r_PF_PrevEchoPowerEst' address='(2668 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_PrevSpkPower'>
+    <int32 name='unused' count='9'/>
+</alias>
+<instance name='r_PF_PrevSpkPower' type='a_VPP_AEC_r_PF_PrevSpkPower' address='(2686 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDXcorrMicErrI'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDXcorrMicErrI' type='a_VPP_AEC_r_PF_CL_DTDXcorrMicErrI' address='(2704 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDXcorrMicErrQ'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDXcorrMicErrQ' type='a_VPP_AEC_r_PF_CL_DTDXcorrMicErrQ' address='(2708 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDXcorrMicEchoI'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDXcorrMicEchoI' type='a_VPP_AEC_r_PF_CL_DTDXcorrMicEchoI' address='(2712 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDXcorrMicEchoQ'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDXcorrMicEchoQ' type='a_VPP_AEC_r_PF_CL_DTDXcorrMicEchoQ' address='(2716 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDMicSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDMicSmoothPower' type='a_VPP_AEC_r_PF_CL_DTDMicSmoothPower' address='(2720 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDErrSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDErrSmoothPower' type='a_VPP_AEC_r_PF_CL_DTDErrSmoothPower' address='(2724 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDEchoSmoothPower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDEchoSmoothPower' type='a_VPP_AEC_r_PF_CL_DTDEchoSmoothPower' address='(2728 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDMicNoisePower'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDMicNoisePower' type='a_VPP_AEC_r_PF_CL_DTDMicNoisePower' address='(2732 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDMicNoiseFloorDevCnt'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDMicNoiseFloorDevCnt' type='a_VPP_AEC_r_PF_CL_DTDMicNoiseFloorDevCnt' address='(2736 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTDDecision'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTDDecision' type='a_VPP_AEC_r_PF_CL_DTDDecision' address='(2740 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_r_PF_CL_DTD2ndDecision'>
+    <int32 name='unused' count='2'/>
+</alias>
+<instance name='r_PF_CL_DTD2ndDecision' type='a_VPP_AEC_r_PF_CL_DTD2ndDecision' address='(2744 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_pInstantSNR_t'>
+    <int16 name='unused' />
+</alias>
+<instance name='pInstantSNR_t' type='a_VPP_AEC_pInstantSNR_t' address='(2748 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_pInstantSNR_f'>
+    <int16 name='unused' />
+</alias>
+<instance name='pInstantSNR_f' type='a_VPP_AEC_pInstantSNR_f' address='(2749 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_SumMicPower'>
+    <int32 name='unused' />
+</alias>
+<instance name='SumMicPower' type='a_VPP_AEC_SumMicPower' address='(2750 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_SumSpkPower'>
+    <int32 name='unused' />
+</alias>
+<instance name='SumSpkPower' type='a_VPP_AEC_SumSpkPower' address='(2752 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_SumErrPower'>
+    <int32 name='unused' />
+</alias>
+<instance name='SumErrPower' type='a_VPP_AEC_SumErrPower' address='(2754 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_PFCLDTDOut'>
+    <int16 name='unused' count='2'/>
+</alias>
+<instance name='PFCLDTDOut' type='a_VPP_AEC_PFCLDTDOut' address='(2756 + COMMON_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AEC_VPP_HELLO_CFG_STRUCT'>
+    <int16 name='GLOBAL_MODE' />
+    <int16 name='GLOBAL_RESET_ADDR' />
+</typedef>
+<instance name='VPP_HELLO_CFG_STRUCT' type='t_VPP_AEC_VPP_HELLO_CFG_STRUCT' address='(0 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AEC_VPP_HELLO_STATUS_STRUCT'>
+    <int16 name='GLOBAL_USED_MODE' />
+    <int16 name='GLOBAL_ERR_STATUS' />
+    <int32 name='GLOBAL_HELLO_STATUS' />
+</typedef>
+<instance name='VPP_HELLO_STATUS_STRUCT' type='t_VPP_AEC_VPP_HELLO_STATUS_STRUCT' address='(2 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AEC_VPP_HELLO_CODE_CFG_STRUCT'>
+    <int32 name='GLOBAL_HI_CODE_PTR' />
+    <int32 name='GLOBAL_BYE_CODE_PTR' />
+    <int32 name='GLOBAL_CONST_PTR' />
+</typedef>
+<instance name='VPP_HELLO_CODE_CFG_STRUCT' type='t_VPP_AEC_VPP_HELLO_CODE_CFG_STRUCT' address='(6 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<typedef name='t_VPP_AEC_m_AECProcPara_ADDR'>
+    <int16 name='m_AECProcPara_ProcessMode' />
+    <int16 name='m_AECProcPara_InitRegularFactor' />
+    <int16 name='m_AECProcPara_AFUpdateFactor' />
+    <int16 name='m_AECProcPara_AFCtrlSpeedUpFactor' />
+    <int16 name='m_AECProcPara_AFFilterAmp' />
+    <int16 name='m_AECProcPara_EchoEstMethod' />
+    <int16 name='m_AECProcPara_NoiseUpdateFactor' />
+    <int16 name='m_AECProcPara_SNRUpdateFactor' />
+    <int16 name='m_AECProcPara_SNRLimit' />
+    <int16 name='m_AECProcPara_NoiseOverEstFactor' />
+    <int16 name='m_AECProcPara_NoiseGainLimit' />
+    <int16 name='m_AECProcPara_EchoUpdateFactor' />
+    <int16 name='m_AECProcPara_SERUpdateFactor' />
+    <int16 name='m_AECProcPara_SERLimit' />
+    <int16 name='m_AECProcPara_EchoOverEstFactor' />
+    <int16 name='m_AECProcPara_EchoGainLimit' />
+    <int16 name='m_AECProcPara_CNGFactor' />
+    <int16 name='m_AECProcPara_AmpGain' />
+    <int32 name='m_AECProcPara_NoiseMin' />
+    <int32 name='m_AECProcPara_PFPrevEchoEstLimit' />
+    <int16 name='m_AECProcPara_PFDTEchoOverEstFactor' />
+    <int16 name='m_AECProcPara_pPFEchoGainLimitAmp' count='9'/>
+    <int16 name='m_AECProcPara_NoiseGainLimitStep' />
+    <int16 name='m_AECProcPara_AmpThr_ADDR' />
+    <int16 name='m_AECProcPara_PFCLDataSmoothFactor' />
+    <int16 name='m_AECProcPara_PFCLNoiseUpdateFactor' />
+    <int16 name='m_AECProcPara_PFCLThrSigDet' />
+    <int16 name='m_AECProcPara_PFCLThrDT' />
+    <int16 name='m_AECProcPara_DataSmoothFactor' />
+    <int16 name='m_AECProcPara_PFCLChanlGain' />
+    <int16 name='m_AECProcPara_PFCLThrNT' />
+    <int16 name='m_AECProcPara_PFCLThrDTDiff' />
+    <int16 name='m_AECProcPara_PFCLDTHoldTime' />
+    <int16 name='m_AECProcPara_PFCLDTStartTime' />
+    <int16 name='m_AECProcPara_PFCLDTDUpdateFactor' />
+    <int16 name='m_AECProcPara_PFCLDTDThreshold' />
+    <int16 name='m_AECProcPara_PFCLDTD2ndThreshold' />
+    <int16 name='m_AECProcPara_StrongEchoFlag' />
+    <int16 name='AECProcPara_PFCLDTDThrRatio' />
+    <int16 name='AECProcPara_reserve' />
+</typedef>
+<instance name='m_AECProcPara_ADDR' type='t_VPP_AEC_m_AECProcPara_ADDR' address='(12 + COMMON_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AEC/_COMMON_GLOBAL'/>
+<alias name='a_VPP_AEC_GLOBAL_BYE'>
+    <int32 name='unused' />
+</alias>
+<instance name='GLOBAL_BYE' type='a_VPP_AEC_GLOBAL_BYE' address='(0 + BYE_GLOBAL_X_BEGIN_ADDR)' category='VOC/VPP_AEC/BYE_GLOBAL'/>
+<alias name='a_VPP_AEC_GLOBAL_BYE2'>
+    <int16 name='unused' />
+</alias>
+<instance name='GLOBAL_BYE2' type='a_VPP_AEC_GLOBAL_BYE2' address='(0 + BYE_GLOBAL_Y_BEGIN_ADDR)' category='VOC/VPP_AEC/BYE_GLOBAL'/>
+<var name='vpp_HelloBye_X_BEGIN_ADDR' value='(0 + BYE_LOCAL_X_BEGIN_ADDR)'/>
+<var name='vpp_HelloBye_Y_BEGIN_ADDR' value='(0 + BYE_LOCAL_Y_BEGIN_ADDR)'/>
+</archive>

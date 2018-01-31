@@ -1,0 +1,123 @@
+;
+; Jungo Confidential. Copyright (c) Jungo 2011.  http://www.jungo.com
+;
+; CDC ACM Virtual Serial Port
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%Mfg%
+DriverVer=09/01/2014,2.4.0.32
+
+; ================= Device Install section =====================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksFiles]
+rda_acm.sys=1
+
+[SourceDisksNames]
+; diskid = disk-description[,[tag-or-cab-file],[unused,path][,flags]]
+1=%DiskName%,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+; Windows 2000
+[DeviceList]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%USBCDCACM\VID_0525&PID_A4A7&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A7&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_00&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_02&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_02&0
+%USBCDCACM\VID_18D1&PID_5D30&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_18D1&PID_5D30&MI_00&0
+
+; Windows XP and later
+[DeviceList.NTx86]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%USBCDCACM\VID_0525&PID_A4A7&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A7&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_00&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_02&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_02&0
+%USBCDCACM\VID_18D1&PID_5D30&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_18D1&PID_5D30&MI_00&0
+
+; For XP and later x64
+[DeviceList.NTamd64]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%USBCDCACM\VID_0525&PID_A4A7&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A7&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_00&0
+%USBCDCACM\VID_0525&PID_A4A9&MI_02&0.DeviceDesc% = DevInstall, USBCDCACM\VID_0525&PID_A4A9&MI_02&0
+%USBCDCACM\VID_18D1&PID_5D30&MI_00&0.DeviceDesc% = DevInstall, USBCDCACM\VID_18D1&PID_5D30&MI_00&0
+
+[DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg
+
+[DevInstall_CopyFiles]
+rda_acm.sys,,,0x6    ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+[DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService
+
+[DevInstall_AddService]
+ServiceType   = 1                  ; SERVICE_KERNEL_DRIVER
+StartType     = 3                  ; SERVICE_DEMAND_START
+ErrorControl  = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\rda_acm.sys
+AddReg        = DevInstall_AddService_AddReg
+
+[DevInstall_AddService_AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 0
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 0
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 0
+HKR, Parameters,     DebugLevel,      0x00010001, 2
+
+[DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[DevInstall_NT_HW_AddReg]
+HKR,,"DataInBuffers",0x00010001,0x80 ; Number of USB IN requests to be buffered
+
+;-------------- Add standard properties page (displayed in Device Manager)
+[DevInstall_AddReg]
+HKR,,PortSubClass,1,01 ; "01" stands for serial port
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+;
+;-------------- WDF Coinstaller installation
+;
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[DevInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01009.dll,WdfCoInstaller"
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01009.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DevInstall.NT.Wdf]
+KmdfService = %ServiceName%, rda_acm_modem_wdfsect
+
+[rda_acm_modem_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+Mfg = "Rdamicro"
+ServiceName = "rda_acm_modem"
+DiskName = "DriverCore Installation Disk"
+USBCDCACM\VID_0525&PID_A4A7&0.DeviceDesc = "Gadget Serial"
+USBCDCACM\VID_0525&PID_A4A9&MI_00&0.DeviceDesc = "Gadget Serial"
+USBCDCACM\VID_0525&PID_A4A9&MI_02&0.DeviceDesc = "RDA Debug Serial"
+USBCDCACM\VID_18D1&PID_5D30&MI_00&0.DeviceDesc = "Gadget Serial"
+

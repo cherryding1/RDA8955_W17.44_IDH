@@ -1,0 +1,130 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+// ================================================================================
+/// @file         sxs_rmt.hp
+/// @par Data exchange with remote computer private header file.
+// --------------------------------------------------------------------------------
+/// @defgroup sx_rmt SX Data exchange with remote computer
+/// @{
+
+#ifndef __SXS_RMT_HP__
+#define __SXS_RMT_HP__
+
+#include "sxs_type.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+#if defined (__SXS_SPLIT_2_CPU__) || !defined(__TARGET__)
+#define SXS_RMT_NB_BUF      1
+#else
+#define SXS_RMT_NB_BUF      0
+#endif
+
+#define SXS_RMT_START_FRM   0xAD
+
+
+#if defined(MMI_NO_TRACE) && defined(CSW_NO_TRACE) && defined(STACK_NO_PRINTF) && \
+     defined(HAL_NO_PRINTF) && defined(PAL_NO_TRACE) && defined(EDRV_NO_TRACE) && \
+     defined(VOIS_NO_PRINTF) && defined(UCTLS_NO_PRINTF) && defined(UMSS_NO_PRINTF) && \
+     defined(MCI_NO_TRACE) && defined(RFD_NO_TRACE) && defined(SXS_NO_DUMP) && defined(SXS_NO_PRINTF)
+#ifdef ULC_3232_SAVE_RAM
+#define SXS_RMT_BUF_SIZE    2*1024
+#else
+#define SXS_RMT_BUF_SIZE    8*1024
+#endif
+#else
+#if defined(MMI_NO_TRACE) && defined(CSW_NO_TRACE) && defined(STACK_NO_PRINTF)
+#define SXS_RMT_BUF_SIZE    16*1024
+#else
+#if defined(MMI_NO_TRACE) || defined(CSW_NO_TRACE) ||defined(STACK_NO_PRINTF)
+#define SXS_RMT_BUF_SIZE    32*1024
+#else
+#define SXS_RMT_BUF_SIZE    64*1024
+#endif
+#endif
+#endif
+
+#ifdef CHIP_HAS_WCPU
+#undef SXS_RMT_BUF_SIZE
+//#ifdef ZSP_TTCN
+#ifdef _TTCN_TEST_
+#define SXS_RMT_BUF_SIZE    (32*1024)
+#define SXS_ZSP_TTCN_RMT_BUF_SIZE    (4*1024)
+#define SXS_ZSP_TTCN_RMT_BUF_SIZE_MOD    (SXS_ZSP_TTCN_RMT_BUF_SIZE-1)
+#else
+#define SXS_RMT_BUF_SIZE    64*1024
+#endif
+#endif
+
+#define SXS_RMT_BUF_MOD     (SXS_RMT_BUF_SIZE-1)
+#define SXS_RMT_CASING_SIZE 6 /* Start Frame + 2*Length + Id + CheckSum + Next frame offset. */
+
+typedef struct
+{
+    u8  Buf [SXS_RMT_BUF_SIZE];
+//#ifdef ZSP_TTCN
+#ifdef _TTCN_TEST_
+    u8  ttcnBuf [SXS_ZSP_TTCN_RMT_BUF_SIZE];
+    u16 ttcnWIdx;
+    u16 ttcnRIdx;
+#endif
+    u16 WIdx;
+    u16 RIdx;
+    u16 NextIdx;
+    u8  Suspended;
+    u8  StampStarted;
+    u32 *FnStamp;
+    u32 Fn;
+    u8  (*UserPrcsRmtData) (u8, u8 *, u16);
+    u16 (*ATWriteRxData)   (u8 *DataIn, u16 Size, u8 RmtCpuIdx);
+    u8  RmtQueue;
+    u8  DataLost;
+    u16 SavedRIdx;
+} sxs_Rmt_t;
+
+#define SXS_TRACE_LOCATION HAL_DATA_BACKUP
+
+#ifdef CHIP_HAS_WCPU
+#ifdef WCPU_TRACE_SINGLE_BUFFER
+#undef SXS_TRACE_LOCATION
+#define SXS_TRACE_LOCATION HAL_UNCACHED_DATA_BACKUP
+#else
+#define WD_TRACE_LOCATION __attribute__((section(".ucbss")))
+sxs_Rmt_t WD_TRACE_LOCATION wd_Rmt [1];
+#endif
+#endif// CHIP_HAS_WCPU
+
+#if (SXS_RMT_NB_BUF > 0)
+sxs_Rmt_t SXS_TRACE_LOCATION sxs_Rmt [SXS_RMT_NB_BUF];
+
+void (*sxs_PrcsRmtDataArray [SXS_RMT_NB_BUF])(u8 Id, u8 *Data, u16 Length);
+#endif
+
+
+typedef struct
+{
+    u16 Length;
+    u8  Id;
+    u8  Pad;
+} sxs_RmtHeader_t;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+/// @} // <-- End of sx_rmt group

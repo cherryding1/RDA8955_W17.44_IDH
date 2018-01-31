@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+
+<comment>
+@file spc.h<br/>
+This File contains SPC context structures and enums.<br/>
+<br/>
+@author RDA Microelectronics.<br/>
+@version 1.1<br/>
+@date April 2014<br/>
+<br/>
+</comment>
+
+<include>
+    <comment> spc contex definition depending on
+              the SPC interface version
+    </comment>
+    <case cond="(SPC_IF_VER == 0)" file="spc_ctx_v0.xmd"/>
+    <case cond="(SPC_IF_VER == 1)" file="spc_ctx_v1.xmd"/>
+    <case cond="(SPC_IF_VER == 2)" file="spc_ctx_v2.xmd"/>
+    <case cond="(SPC_IF_VER == 3)" file="spc_ctx_v3.xmd"/>
+    <case cond="(SPC_IF_VER == 4)" file="spc_ctx_v4.xmd"/>
+    <case cond="(SPC_IF_VER == 5)" file="spc_ctx_v5.xmd"/>
+    <default file="spc_ctx_std.xmd"/>
+</include>
+
+</archive>

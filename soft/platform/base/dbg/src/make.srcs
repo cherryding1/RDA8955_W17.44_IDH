@@ -1,0 +1,11 @@
+# leave this comment and the last \ on last line for easier merge
+C_SRC := \
+    dbg_assert.c \
+    dbg_profile.c \
+    dbg_trace.c \
+
+
+
+
+
+

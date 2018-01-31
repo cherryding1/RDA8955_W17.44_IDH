@@ -1,0 +1,5 @@
+# This file contains the version of the ROM Library.
+# It is used by the Boot Loader to check that the ROM of the chip or
+# of the FPGA is the same as the ROM used during the link of the code.
+
+ROM_LINKED_AGAINST_VERSION := 0x11501281

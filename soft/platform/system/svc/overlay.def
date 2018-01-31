@@ -1,0 +1,32 @@
+# Define here the content of the overlays used by SVC.
+
+
+# Interal SRAM Overlay 0 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_0 := 
+
+# Interal SRAM Overlay 1 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_1 := 
+
+# Interal SRAM Overlay 2 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_2 := 
+
+# Interal SRAM Overlay 3 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_3 := 
+
+# Interal SRAM Overlay 4 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_4 := 
+
+# Interal SRAM Overlay 5 content is used by XXX 
+# to do YYY.
+INT_SRAM_OVERLAY_CONTENT_5 := 
+
+
+
+
+
+

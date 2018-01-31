@@ -1,0 +1,126 @@
+menuconfig __MMI_SMART_REVERIE_INPUT__
+    option skipmk
+    bool "Reverie Smart"
+    default n
+    
+if __MMI_SMART_REVERIE_INPUT__
+
+config __MMI_SMART_REVERIE_ENGLISH__
+    option skipmk
+    bool "English Smart"
+    default n
+
+config __MMI_SMART_REVERIE_HINDI__
+    option skipmk
+    bool "Hindi Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_ASSAMESE__
+    option skipmk
+    bool "Assamese Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_BENGALI__
+    option skipmk
+    bool "Bengali Smart"
+    default n
+        
+config __MMI_SMART_REVERIE_GUJARATI__
+    option skipmk
+    bool "Gujarati Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_MARATHI__
+    option skipmk
+    bool "Marathi Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_NEPALI__
+    option skipmk
+    bool "Nepail Smart"
+    default n                
+
+config __MMI_SMART_REVERIE_BODO__
+    option skipmk
+    bool "Bodo Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_KONKANI__
+    option skipmk
+    bool "Konkani Smart"
+    default n
+   
+config __MMI_SMART_REVERIE_DOGRI__
+    option skipmk
+    bool "Dogri Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_TELUGU__
+    option skipmk
+    bool "Telugu Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_TAMIL__
+    option skipmk
+    bool "Tamil Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_SINDHI__
+    option skipmk
+    bool "Sindhi Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_MALAYALAM__
+    option skipmk
+    bool "Malayalam Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_PUNJABI__
+    option skipmk
+    bool "Punjabi Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_ODIA__
+    option skipmk
+    bool "Odia Smart"
+    default n
+    
+config __MMI_SMART_REVERIE_SANSKRIT__
+    option skipmk
+    bool "Sanskrit Smart"
+    default n   
+    
+config __MMI_SMART_REVERIE_MANIPURI__
+    option skipmk
+    bool "Manipuri Smart"
+    default n   
+    
+config __MMI_SMART_REVERIE_KANNADA__
+    option skipmk
+    bool "Kannada Smart"
+    default n   
+    
+config __MMI_SMART_REVERIE_MAITHILI__
+    option skipmk
+    bool "Maithili Smart"
+    default n   
+    
+config __MMI_SMART_REVERIE_SANTALI__
+    option skipmk
+    bool "Santali Smart"
+    default n   
+    
+config __MMI_SMART_REVERIE_URDU__
+    option skipmk
+    bool "Urdu Smart"
+    select __MMI_BIDI_ALG__
+    default n   
+    
+config __MMI_SMART_REVERIE_KASHMIRI__
+    option skipmk
+    bool "Kashmiri Smart"
+    select __MMI_BIDI_ALG__
+    default n   
+                                  
+                                 
+endif

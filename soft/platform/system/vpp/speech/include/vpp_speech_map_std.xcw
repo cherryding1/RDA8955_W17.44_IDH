@@ -1,0 +1,1595 @@
+<archive>
+
+<typedef name="SPEECH_BUFFERS" category="voc_speech_api">
+	<int16 name="DTX"/>
+	<int16 name="MODE"/>
+	<int16 name="DEC_FRAME_TYPE"/>
+	<int16 name="BFI"/>
+	<int16 name="SID"/>
+	<int16 name="TAF"/>
+	<int16 name="UFI"/>
+	<int16 name="RESERVED0"/>
+	<int16 name="INPUT_CODED_BUFFER" count="18"/>
+	<int16 name="MODE_USED"/>
+	<int16 name="ENC_FRAME_TYPE"/>
+	<int16 name="RESERVED1"/>
+	<int16 name="SP"/>
+    <int16 name="OUTPUT_CODED_BUFFER" count="18"/>
+    <int16 name="INPUT_SPEECH_BUFFER" count="320"/>
+	<int16 name="OUTPUT_SPEECH_BUFFER" count="320"/>
+</typedef>
+
+<typedef name="SPEECH_CONFIG" category="voc_speech_api">
+	<int16 name="GLOBAL_LOADED_VOCODER_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_EFR_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_ENC_MODE_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_DEC_MODE_ADDR"/>
+	<int16 name="GLOBAL_VOCODER_SOURCE_CODE_ADDR_ADDR" count="6"/>
+	<int16 name="GLOBAL_AMR_EFR_SOURCE_CODE_ADDR_ADDR" count="4"/>
+	<int16 name="GLOBAL_AMR_ENC_MODE_SOURCE_CODE_ADDR_ADDR" count="16"/>
+	<int16 name="GLOBAL_AMR_DEC_MODE_SOURCE_CODE_ADDR_ADDR" count="16"/>
+	<int16 name="GLOBAL_CONSTANTS_ADDR_ADDR" count="8"/>
+	<int16 name="GLOBAL_RESET_ADDR"/>
+	<int16 name="GLOBAL_IRQGEN_ADDR"/>
+	<int16 name="GLOBAL_ECHO_ES_ON"/>
+	<int16 name="GLOBAL_ECHO_ES_VAD"/>
+	<int16 name="GLOBAL_ECHO_ES_DTD"/>
+	<int16 name="GLOBAL_ECHO_EC_REL"/>
+	<int16 name="GLOBAL_ECHO_EC_MU"/>
+	<int16 name="GLOBAL_ECHO_EC_MIN"/>
+	<int16 name="GLOBAL_ENC_MICGAIN_ADDR"/>
+	<int16 name="GLOBAL_DEC_SPKGAIN_ADDR"/>
+	<int16 name="GLOBAL_SDF_ADDR" count="2"/>
+	<int16 name="GLOBAL_MDF_ADDR" count="2"/>
+	<int16 name="GLOBAL_IF1_flag_ADDR"/>
+</typedef>
+
+<typedef name="SPEECH_GLOBAL_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="INPUT_BITS2_ADDR" count="26"/>
+	<int16 name="OUTPUT_BITS2_ADDR" count="22"/>
+	<int16 name="INPUT_SPEECH_BUFFER2_ADDR" count="160"/>
+	<int16 name="INPUT_SPEECH_BUFFER1_ADDR" count="160"/>
+	<int16 name="OUTPUT_SPEECH_BUFFER2_ADDR" count="160"/>
+	<int16 name="OUTPUT_SPEECH_BUFFER1_ADDR" count="160"/>
+	<int16 name="GLOBAL_SDF_SAMPLS_ADDR" count="64"/>
+	<int16 name="GLOBAL_MDF_SAMPLS_ADDR" count="64"/>
+	<int16 name="CONST_2_ADDR"/>
+	<int16 name="CONST_3_ADDR"/>
+	<int16 name="CONST_4_ADDR"/>
+	<int16 name="CONST_6_ADDR"/>
+	<int16 name="CONST_7_ADDR"/>
+	<int16 name="CONST_8_ADDR"/>
+	<int16 name="CONST_9_ADDR"/>
+	<int16 name="CONST_10_ADDR"/>
+	<int16 name="CONST_11_ADDR"/>
+	<int16 name="CONST_12_ADDR"/>
+	<int16 name="CONST_13_ADDR"/>
+	<int16 name="CONST_15_ADDR"/>
+	<int16 name="CONST_16_ADDR"/>
+	<int16 name="CONST_20_ADDR"/>
+	<int16 name="CONST_30_ADDR"/>
+	<int16 name="CONST_32_ADDR"/>
+	<int16 name="CONST_40_ADDR"/>
+	<int16 name="CONST_41_ADDR"/>
+	<int16 name="CONST_64_ADDR"/>
+	<int16 name="CONST_80_ADDR"/>
+	<int16 name="CONST_120_ADDR"/>
+	<int16 name="CONST_143_ADDR"/>
+	<int16 name="CONST_160_ADDR"/>
+	<int16 name="CONST_197_ADDR"/>
+	<int16 name="CONST_5325_ADDR"/>
+	<int16 name="CONST_0x1fff_ADDR"/>
+	<int16 name="CONST_5_ADDR"/>
+	<int16 name="CONST_15565_ADDR"/>
+	<int16 name="CONST_0x1555_ADDR"/>
+	<int16 name="CONST_0x2000_ADDR"/>
+	<int16 name="CONST_neg2_ADDR"/>
+	<int16 name="CONST_0x199a_ADDR"/>
+	<int16 name="CONST_0x5a82_ADDR"/>
+	<int16 name="CONST_0x00ff_ADDR"/>
+	<int16 name="CONST_0_ADDR" count="2"/>
+	<int16 name="CONST_1_ADDR" count="2"/>
+	<int16 name="CONST_0x40000000_ADDR" count="2"/>
+	<int16 name="CONST_0x7FFFFFFF_ADDR" count="2"/>
+	<int16 name="CONST_0x80000000_ADDR" count="2"/>
+	<int16 name="CONST_0x8000FFFF_ADDR" count="2"/>
+	<int16 name="CONST_D_1_4_ADDR" count="2"/>
+	<int16 name="CONST_0x00010001_ADDR" count="2"/>
+	<int16 name="CONST_0x00004000L_ADDR" count="2"/>
+	<int16 name="CONST_0x00007FFF_ADDR" count="2"/>
+	<int16 name="CONST_0x00008000_ADDR" count="2"/>
+	<int16 name="CONST_0x0000FFFF_ADDR" count="2"/>
+	<int16 name="TABLE_SQRT_L_ADDR" count="50"/>
+	<int16 name="STATIC_CONST_PRMNO_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_CDOWN_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_PDOWN_ADDR" count="8"/>
+	<int16 name="TABLE_POW2_ADDR" count="34"/>
+	<int16 name="TABLE_INV_SQRT_ADDR" count="50"/>
+	<int16 name="TABLE_LSP_LSF_ADDR" count="66"/>
+	<int16 name="TABLE_SLOPE_ADDR" count="64"/>
+	<int16 name="STATIC_CONST_dtx_log_en_adjust_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_lsf_hist_mean_scale_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_DGRAY_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_GRAY_ADDR" count="8"/>
+	<int16 name="TABLE_LOG2_ADDR" count="34"/>
+	<int16 name="STATIC_CONST_qua_gain_code_ADDR" count="96"/>
+	<int16 name="STATIC_CONST_QUA_GAIN_PITCH_ADDR" count="16"/>
+	<int16 name="TABLE_GRID_ADDR" count="62"/>
+	<int16 name="STATIC_CONST_PRMNOFSF_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_BITNO_ADDR" count="30"/>
+	<int16 name="STATIC_CONST_bitno_MR475_ADDR" count="9"/>
+	<int16 name="STATIC_CONST_bitno_MR515_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR59_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR67_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR74_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR795_ADDR" count="12"/>
+	<int16 name="STATIC_CONST_bitno_MR102_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_bitno_MRDTX_ADDR" count="3"/>
+	<int16 name="STATIC_CONST_ph_imp_mid_ADDR" count="40"/>
+	<int16 name="STATIC_CONST_ph_imp_low_MR795_ADDR" count="40"/>
+	<int16 name="STATIC_trackTable_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_table_gain_highrates_ADDR" count="512"/>
+	<int16 name="STATIC_CONST_table_gain_MR475_ADDR" count="1024"/>
+	<int16 name="STATIC_mr515_3_lsf_compressed_ADDR" count="416"/>
+	<int16 name="TABLE_DICO1_LSF_3_compressed_ADDR" count="624"/>
+	<int16 name="TABLE_DICO3_LSF_3_compressed_ADDR" count="1664"/>
+	<int16 name="TABLE_DICO1_LSF_compressed_ADDR" count="416"/>
+	<int16 name="ReservedX4_ADDR" count="730"/>
+</typedef>
+
+<typedef name="SPEECH_GLOBAL_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="GLOBAL_LOADED_VOCODER_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_EFR_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_ENC_MODE_ADDR"/>
+	<int16 name="GLOBAL_LOADED_AMR_DEC_MODE_ADDR"/>
+	<int16 name="GLOBAL_VOCODER_SOURCE_CODE_ADDR_ADDR" count="6"/>
+	<int16 name="GLOBAL_AMR_EFR_SOURCE_CODE_ADDR_ADDR" count="4"/>
+	<int16 name="GLOBAL_AMR_ENC_MODE_SOURCE_CODE_ADDR_ADDR" count="16"/>
+	<int16 name="GLOBAL_AMR_DEC_MODE_SOURCE_CODE_ADDR_ADDR" count="16"/>
+	<int16 name="GLOBAL_CONSTANTS_ADDR_ADDR" count="8"/>
+	<int16 name="GLOBAL_RESET_ADDR"/>
+	<int16 name="GLOBAL_IRQGEN_ADDR"/>
+	<int16 name="GLOBAL_ECHO_ES_ON"/>
+	<int16 name="GLOBAL_ECHO_ES_VAD"/>
+	<int16 name="GLOBAL_ECHO_ES_DTD"/>
+	<int16 name="GLOBAL_ECHO_EC_REL"/>
+	<int16 name="GLOBAL_ECHO_EC_MU"/>
+	<int16 name="GLOBAL_ECHO_EC_MIN"/>
+	<int16 name="GLOBAL_ENC_MICGAIN_ADDR"/>
+	<int16 name="GLOBAL_DEC_SPKGAIN_ADDR"/>
+	<int16 name="GLOBAL_SDF_ADDR" count="2"/>
+	<int16 name="GLOBAL_MDF_ADDR" count="2"/>
+	<int16 name="GLOBAL_IF1_flag_ADDR"/>
+	<int16 name="GLOBAL_DTX_ADDR"/>
+	<int16 name="GLOBAL_RELOAD_MODE_ADDR"/>
+	<int16 name="GLOBAL_AMR_EFR_RESET_ADDR"/>
+	<int16 name="GLOBAL_OLD_MICGAIN_ADDR"/>
+	<int16 name="GLOBAL_OLD_SPKGAIN_ADDR"/>
+	<int16 name="GLOBAL_SDF_COEFFS_ADDR" count="64"/>
+	<int16 name="GLOBAL_BFI_ADDR"/>
+	<int16 name="GLOBAL_UFI_ADDR"/>
+	<int16 name="GLOBAL_SID_ADDR"/>
+	<int16 name="GLOBAL_TAF_ADDR"/>
+	<int16 name="GLOBAL_DEC_MODE_ADDR"/>
+	<int16 name="GLOBAL_ENC_MODE_ADDR"/>
+	<int16 name="GLOBAL_ENC_USED_MODE_ADDR"/>
+	<int16 name="GLOBAL_EFR_FLAG_ADDR"/>
+	<int16 name="DEC_RESET_FLAG_ADDR"/>
+	<int16 name="DEC_MAIN_RESET_FLAG_OLD_ADDR"/>
+	<int16 name="GLOBAL_MDF_COEFFS_ADDR" count="64"/>
+	<int16 name="GLOBAL_ECHO_SUPPRESS_EXP_COUNTER"/>
+	<int16 name="GLOBAL_ECHO_CANCEL_EXP_MU"/>
+	<int16 name="GLOBAL_ECHO_CANCEL_DEC_PWR" count="2"/>
+	<int16 name="GLOBAL_ECHO_CANCEL_SAMPLS_ADDR" count="296"/>
+	<int16 name="GLOBAL_ECHO_CANCEL_COEFFS_ADDR" count="256"/>
+	<int16 name="GLOBAL_VOCODER_RESET_ADDR"/>
+	<int16 name="GLOBAL_OUTPUT_Vad_ADDR"/>
+	<int16 name="GLOBAL_OUTPUT_SP_ADDR"/>
+	<int16 name="DEC_AMR_FRAME_TYPE_ADDR"/>
+	<int16 name="ENC_INPUT_ADDR_ADDR"/>
+	<int16 name="DEC_OUTPUT_ADDR_ADDR"/>
+	<int16 name="ENC_INPUT_ADDR_BAK_ADDR"/>
+	<int16 name="DEC_OUTPUT_ADDR_BAK_ADDR"/>
+	<int16 name="STATIC_CONST_F_GAMMA1_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_F_GAMMA2_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_F_GAMMA3_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_F_GAMMA4_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_gamma3_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_gamma1_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_WIND_200_40_compressd_ADDR" count="122"/>
+	<int16 name="STATIC_CONST_INTER_6_ADDR" count="62"/>
+	<int16 name="STATIC_CONST_INTER_6_25_ADDR" count="26"/>
+	<int16 name="TABLE_LAG_L_ADDR" count="10"/>
+	<int16 name="TABLE_LAG_H_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_pred_ADDR" count="4"/>
+	<int16 name="STATIC_pred_fac_ADDR" count="10"/>
+	<int16 name="STATIC_past_rq_init_ADDR" count="80"/>
+	<int16 name="STATIC_MEAN_LSF_3_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_lsp_init_data_ADDR" count="10"/>
+	<int16 name="TABLE_MEAN_LSF_ADDR" count="10"/>
+	<int16 name="TABLE_WINDOW_160_80_compressd_ADDR" count="122"/>
+	<int16 name="TABLE_WINDOW_232_8_compressd_ADDR" count="126"/>
+	<int16 name="STATIC_CONST_pred_MR122_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_INTERP_FACTOR_ADDR" count="24"/>
+	<int16 name="STATIC_CONST_SID_CODEWORD_BIT_IDX_ADDR" count="96"/>
+	<int16 name="STATIC_CONST_DHF_MASK_ADDR" count="58"/>
+	<int16 name="STATIC_CONST_dhf_MR122_ADDR" count="58"/>
+	<int16 name="STATIC_CONST_dhf_MR475_ADDR" count="18"/>
+	<int16 name="STATIC_CONST_dhf_MR515_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR59_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR67_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR74_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR795_ADDR" count="24"/>
+	<int16 name="STATIC_CONST_dhf_MR102_ADDR" count="40"/>
+	<int16 name="STATIC_CONST_corrweight_ADDR" count="128"/>
+	<int16 name="STATIC_CONST_startPos_ADDR" count="16"/>
+	<int16 name="STATIC_CONST_ph_imp_low_ADDR" count="40"/>
+	<int16 name="STATIC_CONST_table_gain_lowrates_ADDR" count="256"/>
+	<int16 name="TABLE_DICO2_LSF_3_compressed_ADDR" count="1248"/>
+	<int16 name="TABLE_DICO2_LSF_compressed_ADDR" count="832"/>
+	<int16 name="TABLE_DICO3_LSF_compressed_ADDR" count="832"/>
+	<int16 name="TABLE_DICO4_LSF_compressed_ADDR" count="832"/>
+	<int16 name="TABLE_DICO5_LSF_compressed_ADDR" count="208"/>
+	<int16 name="STATIC_mr795_1_lsf_compressed_ADDR" count="1248"/>
+	<int16 name="TABLE_MR475_ADDR" count="96"/>
+	<int16 name="TABLE_MR515_ADDR" count="104"/>
+	<int16 name="TABLE_MR59_ADDR" count="118"/>
+	<int16 name="TABLE_MR67_ADDR" count="134"/>
+	<int16 name="TABLE_MR74_ADDR" count="148"/>
+	<int16 name="TABLE_MR795_ADDR" count="160"/>
+	<int16 name="TABLE_MR102_ADDR" count="204"/>
+	<int16 name="TABLE_MR122_ADDR" count="244"/>
+	<int16 name="Frame_header_ADDR" count="8"/>
+	<int16 name="Bits_no_ADDR" count="8"/>
+	<int16 name="Reserved2_ADDR" count="284"/>
+</typedef>
+
+<typedef name="FR_GLOBAL_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="STATIC_ENC_GSM_STATE_ADDR" count="280"/>
+	<int16 name="STATIC_ENC_GSM_STATE_Z1_ADDR" count="2"/>
+	<int16 name="STATIC_ENC_GSM_STATE_L_Z2_ADDR" count="2"/>
+	<int16 name="STATIC_ENC_GSM_STATE_MP_ADDR" count="2"/>
+	<int16 name="STATIC_ENC_GSM_STATE_U_ADDR" count="8"/>
+	<int16 name="STATIC_ENC_GSM_STATE_LARPP_ADDR" count="16"/>
+	<int16 name="STATIC_ENC_GSM_STATE_J_ADDR"/>
+	<int16 name="STATIC_ENC_GSM_STATE_NRP_ADDR"/>
+	<int16 name="STATIC_ENC_GSM_STATE_V_ADDR" count="9"/>
+	<int16 name="STATIC_ENC_GSM_STATE_MSR_ADDR"/>
+	<int16 name="STATIC_ENC_GSM_STATE_VERBOSE_ADDR"/>
+	<int16 name="STATIC_ENC_GSM_STATE_FAST_ADDR"/>
+	<int16 name="GLOBAL_ENC_LARC_ADDR" count="8"/>
+	<int16 name="GLOBAL_ENC_NC_ADDR" count="4"/>
+	<int16 name="GLOBAL_ENC_MC_ADDR" count="4"/>
+	<int16 name="GLOBAL_ENC_BC_ADDR" count="4"/>
+	<int16 name="GLOBAL_ENC_XMAXC_ADDR" count="4"/>
+	<int16 name="GLOBAL_ENC_XMC_ADDR" count="52"/>
+	<int16 name="STATIC_DEC_GSM_STATE_DP0_ADDR" count="280"/>
+	<int16 name="STATIC_DEC_GSM_STATE_Z1_ADDR" count="2"/>
+	<int16 name="STATIC_DEC_GSM_STATE_L_Z2_ADDR" count="2"/>
+	<int16 name="STATIC_DEC_GSM_STATE_MP_ADDR" count="2"/>
+	<int16 name="STATIC_DEC_GSM_STATE_U_ADDR" count="8"/>
+	<int16 name="STATIC_DEC_GSM_STATE_LARPP_ADDR" count="16"/>
+	<int16 name="STATIC_DEC_GSM_STATE_J_ADDR"/>
+	<int16 name="STATIC_DEC_GSM_STATE_NRP_ADDR"/>
+	<int16 name="STATIC_DEC_GSM_STATE_V_ADDR" count="9"/>
+	<int16 name="STATIC_DEC_GSM_STATE_MSR_ADDR"/>
+	<int16 name="STATIC_DEC_GSM_STATE_VERBOSE_ADDR"/>
+	<int16 name="STATIC_DEC_GSM_STATE_FAST_ADDR"/>
+	<int16 name="GLOBAL_DEC_LARC_ADDR" count="8"/>
+	<int16 name="GLOBAL_DEC_NC_ADDR" count="4"/>
+	<int16 name="GLOBAL_DEC_MC_ADDR" count="4"/>
+	<int16 name="GLOBAL_DEC_BC_ADDR" count="4"/>
+	<int16 name="GLOBAL_DEC_XMAXC_ADDR" count="4"/>
+	<int16 name="GLOBAL_DEC_XMC_ADDR" count="52"/>
+	<int16 name="STATIC_VAD_pswRvad_ADDR" count="9"/>
+	<int16 name="STATIC_VAD_tone_ADDR"/>
+	<int16 name="STATIC_VAD_swNormRvad_ADDR"/>
+	<int16 name="STATIC_VAD_swPt_sacf_ADDR"/>
+	<int16 name="STATIC_VAD_swPt_sav0_ADDR"/>
+	<int16 name="STATIC_VAD_swE_thvad_ADDR"/>
+	<int16 name="STATIC_VAD_swM_thvad_ADDR"/>
+	<int16 name="STATIC_VAD_swAdaptCount_ADDR"/>
+	<int16 name="STATIC_VAD_swBurstCount_ADDR"/>
+	<int16 name="STATIC_VAD_swHangCount_ADDR"/>
+	<int16 name="STATIC_VAD_swOldLagCount_ADDR"/>
+	<int16 name="STATIC_VAD_swVeryOldLagCount_ADDR"/>
+	<int16 name="STATIC_VAD_swOldLag_ADDR" count="2"/>
+	<int16 name="STATIC_VAD_pL_sacf_ADDR" count="54"/>
+	<int16 name="STATIC_VAD_pL_sav0_ADDR" count="72"/>
+	<int16 name="STATIC_VAD_L_lastdm_ADDR" count="2"/>
+	<int16 name="STATIC_VAD_SCALVAD_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_GSM_DLB_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_GSM_QLB_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_GSM_NRFAC_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_GSM_FAC_ADDR" count="8"/>
+	<int16 name="DEC_HOMING_LPC_PARM_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_GSM_H_ADDR" count="12"/>
+	<int16 name="STATIC_TABLE_HANN_ADDR" count="80"/>
+	<int16 name="STATIC_CONST_INTERP_FACTOR_FR_ADDR" count="24"/>
+</typedef>
+
+<typedef name="FR_GLOBAL_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="STATIC_ENC_E_ADDR" count="50"/>
+	<int16 name="GLOBAL_dtx_begin_BLANK"/>
+	<int16 name="GLOBAL_subfrm_ADDR" count="2"/>
+	<int16 name="GLOBAL_txdtx_ctrl_ADDR"/>
+	<int16 name="GLOBAL_txdtx_hangover_ADDR"/>
+	<int16 name="GLOBAL_txdtx_N_elapsed_ADDR"/>
+	<int16 name="GLOBAL_lost_speech_frames_ADDR"/>
+	<int16 name="GLOBAL_rxdtx_aver_period_ADDR"/>
+	<int16 name="GLOBAL_rxdtx_N_elapsed_ADDR"/>
+	<int16 name="GLOBAL_rxdtx_ctrl_ADDR"/>
+	<int16 name="GLOBAL_rx_dtx_state_ADDR"/>
+	<int16 name="GLOBAL_prev_SID_frames_lost_ADDR"/>
+	<int16 name="GLOBAL_L_pn_seed_rx_ADDR" count="8"/>
+	<int16 name="GLOBAL_LAR_SID_tx_ADDR" count="32"/>
+	<int16 name="GLOBAL_xmax_SID_tx_ADDR" count="16"/>
+	<int16 name="GLOBAL_LARc_old_tx_ADDR" count="8"/>
+	<int16 name="GLOBAL_xmaxc_old_tx_ADDR" count="4"/>
+	<int16 name="GLOBAL_LARc_old_rx_ADDR" count="8"/>
+	<int16 name="GLOBAL_Nc_old_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_Mc_old_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_bc_old_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_xmaxc_old_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_xmc_old_rx_ADDR" count="52"/>
+	<int16 name="GLOBAL_LARc_old_2_rx_ADDR" count="8"/>
+	<int16 name="GLOBAL_xmaxc_old_2_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_LARc_old_SID_rx_ADDR" count="8"/>
+	<int16 name="GLOBAL_LARc_old_2_SID_rx_ADDR" count="8"/>
+	<int16 name="GLOBAL_xmaxc_old_SID_rx_ADDR" count="4"/>
+	<int16 name="GLOBAL_xmaxc_old_2_SID_rx_ADDR" count="4"/>
+	<int16 name="VAD_ALGORITHM_swStat_ADDR"/>
+	<int16 name="VAD_ALGORITHM_swNormRav1_ADDR"/>
+	<int16 name="VAD_ALGORITHM_pswRav1_ADDR" count="10"/>
+	<int16 name="VAD_ALGORITHM_pL_av0_ADDR" count="18"/>
+	<int16 name="VAD_ALGORITHM_pL_av1_ADDR" count="18"/>
+	<int16 name="VAD_ALGORITHM_swM_pvad_ADDR"/>
+	<int16 name="VAD_ALGORITHM_swE_pvad_ADDR"/>
+	<int16 name="VAD_ALGORITHM_swM_acf0_ADDR"/>
+	<int16 name="VAD_ALGORITHM_swE_acf0_ADDR"/>
+	<int16 name="VAD_PREDICTOR_VALUES_pswAav1_ADDR" count="10"/>
+	<int16 name="VAD_PREDICTOR_VALUES_pswVpar_ADDR" count="8"/>
+	<int16 name="VAD_STEP_UP_pL_coef_ADDR" count="18"/>
+	<int16 name="VAD_STEP_UP_pL_work_ADDR" count="18"/>
+	<int16 name="VAD_COMPUTE_RAV1_pL_work_ADDR" count="18"/>
+	<int16 name="VAD_TONE_DETECTION_pswA_ADDR" count="4"/>
+	<int16 name="SCHUR_RECURSION_pswPp_ADDR" count="10"/>
+	<int16 name="SCHUR_RECURSION_pswKk_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Gsm_Coder_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_ENC_SO_ADDR" count="160"/>
+	<int16 name="LOCAL_ENC_L_ACF_ADDR" count="18"/>
+	<int16 name="LOCAL_ENC_X_ADDR" count="40"/>
+	<int16 name="LOCAL_ENC_XM_ADDR" count="14"/>
+	<int16 name="LOCAL_ENC_XMP_ADDR" count="14"/>
+	<int16 name="LOCAL_DEC_XMP_ADDR" count="14"/>
+	<int16 name="LOCAL_ENC_ACF_ADDR" count="10"/>
+	<int16 name="LOCAL_ENC_P_ADDR" count="10"/>
+	<int16 name="LOCAL_ENC_K_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Gsm_Coder_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_ENC_WT_ADDR" count="40"/>
+	<int16 name="LOCAL_ENC_LARP_ADDR" count="100"/>
+</typedef>
+
+<typedef name="CII_vad_computation_fr_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="BIT_PARA_TEMP_ADDR" count="500"/>
+</typedef>
+
+<typedef name="CII_Gsm_Decoder_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_DEC_WT_ADDR" count="160"/>
+	<int16 name="LOCAL_DEC_ERP_ADDR" count="40"/>
+	<int16 name="LOCAL_VAD_L_ACFH_ADDR" count="10"/>
+	<int16 name="LOCAL_VAD_SAV0_ADDR" count="100"/>
+</typedef>
+
+<typedef name="CII_Gsm_Decoder_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_DEC_LARP_ADDR" count="196"/>
+	<int16 name="LOCAL_SOF_Y_ADDR" count="160"/>
+	<int16 name="LOCAL_VAD_SACF_Y_ADDR" count="6"/>
+	<int16 name="LOCAL_VAD_K_Y_ADDR" count="6"/>
+	<int16 name="LOCAL_VAD_RC_Y_ADDR" count="100"/>
+</typedef>
+
+<typedef name="HR_GLOBAL_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="HR_RESERVED1"/>
+	<int16 name="GLOBAL_DTX_swVadFrmCnt_ADDR"/>
+	<int16 name="GLOBAL_DTX_siUpdPointer_ADDR"/>
+	<int16 name="GLOBAL_DTX_swNElapsed_ADDR"/>
+	<int16 name="GLOBAL_DTX_pL_GsHist_ADDR" count="56"/>
+	<int16 name="STATIC_DTX_pL_R0Hist_ADDR" count="16"/>
+	<int16 name="STATIC_DTX_ppL_CorrHist_ADDR" count="176"/>
+	<int16 name="STATIC_DTX_swQntRefR0_ADDR"/>
+	<int16 name="STATIC_DTX_swRefGsIndex_ADDR"/>
+	<int16 name="STATIC_DTX_piRefVqCodewds_ADDR" count="4"/>
+	<int16 name="STATIC_DTX_swShortBurst_ADDR"/>
+	<int16 name="DECODER_resetflag_ADDR"/>
+	<int16 name="STATIC_DTX_L_TxPNSeed_ADDR" count="2"/>
+	<int16 name="STATIC_DTX_swR0OldCN_ADDR"/>
+	<int16 name="HR_RESERVED2"/>
+	<int16 name="STATIC_DTX_pL_OldCorrSeq_ADDR" count="22"/>
+	<int16 name="STATIC_DTX_pL_NewCorrSeq_ADDR" count="22"/>
+	<int16 name="STATIC_DTX_pL_CorrSeq_ADDR" count="22"/>
+	<int16 name="GLOBAL_ERR_plSubfrEnergyMem_ADDR" count="8"/>
+	<int16 name="GLOBAL_ERR_swLevelMem_ADDR" count="4"/>
+	<int16 name="GLOBAL_DE_swDecoMode_ADDR"/>
+	<int16 name="DECODER_resetflag_old_ADDR"/>
+	<int16 name="GLOBAL_ERR_swState_ADDR"/>
+	<int16 name="GLOBAL_DTX_DE_swRxDTXState_ADDR"/>
+	<int16 name="HR_RESERVED5" count="3"/>
+	<int16 name="GLOBAL_DE_giSfrmCnt_ADDR"/>
+	<int16 name="STATIC_DE_pswSpeechPara_ADDR" count="22"/>
+	<int16 name="STATIC_DE_pswDecodedSpeechFrame_ADDR" count="160"/>
+	<int16 name="GLOBAL_swPreBfi_ADDR"/>
+	<int16 name="GLOBAL_swOldR0_ADDR"/>
+	<int16 name="STATIC_EN_pswSpeechPara_ADDR" count="20"/>
+	<int16 name="STATIC_EN_pswSpeechBuff_ADDR" count="160"/>
+	<int16 name="GLOBAL_ERR_pswLastGood_ADDR" count="18"/>
+	<int16 name="GLOBAL_DE_gswPostFiltAgcGain_ADDR"/>
+	<int16 name="LOCAL_sfrmAnalysis_siPrevLagCode_ADDR"/>
+	<int16 name="GLOBAL_DE_gpswPostFiltStateNum_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_gpswPostFiltStateDenom_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_swPostEmphasisState_ADDR" count="2"/>
+	<int16 name="GLOBAL_DE_pswSynthFiltState_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_pswOldFrmPFDenom_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_pswOldFrmKsDec_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_pswOldFrmAsDec_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_pswOldFrmPFNum_ADDR" count="10"/>
+	<int16 name="GLOBAL_DE_swOldR0Dec_ADDR" count="2"/>
+	<int16 name="GLOBAL_DE_pswLtpStateBaseDec_ADDR" count="188"/>
+	<int16 name="GLOBAL_DE_pswPPreState_ADDR" count="188"/>
+	<int16 name="GLOBAL_DE_swMuteFlagOld_ADDR"/>
+	<int16 name="GLOBAL_ERR_swLastFlag_ADDR"/>
+	<int16 name="GLOBAL_ERR_lastR0_ADDR"/>
+	<int16 name="GLOBAL_DE_swDtxMuting_ADDR"/>
+	<int16 name="GLOBAL_DE_swDtxBfiCnt_ADDR"/>
+	<int16 name="GLOBAL_DE_swOldR0IndexDec_ADDR"/>
+	<int16 name="GLOBAL_DE_swRxGsHistPtr_ADDR" count="2"/>
+	<int16 name="GLOBAL_DE_pL_RxGsHist_ADDR" count="56"/>
+	<int16 name="GLOBAL_DE_SP_swR0Dec_ADDR"/>
+	<int16 name="GLOBAL_DE_SP_swVoicingMode_ADDR"/>
+	<int16 name="GLOBAL_DE_SP_pswVq_ADDR" count="4"/>
+	<int16 name="GLOBAL_DE_SP_swSi_ADDR"/>
+	<int16 name="GLOBAL_DE_SP_swEngyRShift_ADDR"/>
+	<int16 name="GLOBAL_DE_SP_swR0NewCN_ADDR"/>
+	<int16 name="STATIC_DE_SP_swLastLag_ADDR"/>
+	<int16 name="GLOBAL_EN_swOldR0_ADDR"/>
+	<int16 name="GLOBAL_EN_swOldR0Index_ADDR"/>
+	<int16 name="GLOBAL_EN_psnsWSfrmEngSpace_ADDR" count="16"/>
+	<int16 name="GLOBAL_EN_pswHPFXState_ADDR" count="4"/>
+	<int16 name="GLOBAL_EN_pswHPFYState_ADDR" count="8"/>
+	<int16 name="GLOBAL_EN_pswOldFrmKs_ADDR" count="10"/>
+	<int16 name="GLOBAL_EN_pswOldFrmAs_ADDR" count="10"/>
+	<int16 name="GLOBAL_EN_pswOldFrmSNWCoefs_ADDR" count="10"/>
+	<int16 name="GLOBAL_EN_pswWgtSpeechSpace_ADDR" count="306"/>
+	<int16 name="GLOBAL_EN_pswSpeech_ADDR" count="196"/>
+	<int16 name="GLOBAL_EN_swPtch_ADDR"/>
+	<int16 name="GLOBAL_DTX_TX_swTxGsHistPtr_ADDR"/>
+	<int16 name="GLOBAL_DTX_TX_pswCNVSCode1_ADDR" count="4"/>
+	<int16 name="GLOBAL_DTX_TX_pswCNVSCode2_ADDR" count="4"/>
+	<int16 name="GLOBAL_DTX_TX_pswCNGsp0Code_ADDR" count="4"/>
+	<int16 name="GLOBAL_DTX_TX_pswCNLpc_ADDR" count="4"/>
+	<int16 name="GLOBAL_DTX_TX_swCNR0_ADDR" count="2"/>
+	<int16 name="GLOBAL_EN_SP_FRM_pswAnalysisState_ADDR" count="10"/>
+	<int16 name="GLOBAL_EN_SP_FRM_pswWStateNum_ADDR" count="10"/>
+	<int16 name="GLOBAL_EN_SP_FRM_pswWStateDenom_ADDR" count="10"/>
+	<int16 name="STATIC_EN_SP_FRM_psrTable_ADDR_ADDR"/>
+	<int16 name="HR_RESERVED3"/>
+	<int16 name="STATIC_EN_SP_FRM_iLow_ADDR"/>
+	<int16 name="STATIC_EN_SP_FRM_iThree_ADDR"/>
+	<int16 name="STATIC_EN_SP_FRM_iWordHalfPtr_ADDR"/>
+	<int16 name="STATIC_EN_SP_FRM_iWordPtr_ADDR"/>
+	<int16 name="HR_STATIC_VAD_pswRvad_ADDR" count="10"/>
+	<int16 name="HR_STATIC_VAD_swNormRvad_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swPt_sacf_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swPt_sav0_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swE_thvad_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swM_thvad_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swAdaptCount_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swBurstCount_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swHangCount_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swOldLagCount_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swVeryOldLagCount_ADDR"/>
+	<int16 name="HR_STATIC_VAD_swOldLag_ADDR" count="2"/>
+	<int16 name="HR_STATIC_VAD_pL_sacf_ADDR" count="54"/>
+	<int16 name="HR_STATIC_VAD_pL_sav0_ADDR" count="72"/>
+	<int16 name="HR_STATIC_VAD_L_lastdm_ADDR" count="2"/>
+	<int16 name="GLOBAL_SFRM_pswLtpStateBase_ADDR" count="188"/>
+	<int16 name="GLOBAL_SFRM_pswHState_ADDR" count="10"/>
+	<int16 name="GLOBAL_SFRM_pswHNWState_ADDR" count="145"/>
+	<int16 name="HR_RESERVED4"/>
+	<int16 name="BITS_SHORT_ADDR"/>
+</typedef>
+
+<typedef name="HR_GLOBAL_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DEC_pswSythAsSpace_ADDR" count="40"/>
+	<int16 name="DEC_pswPFNumAsSpace_ADDR" count="40"/>
+	<int16 name="DEC_pswPFDenomAsSpace_ADDR" count="40"/>
+	<int16 name="DEC_L_RxPNSeed_ADDR" count="2"/>
+	<int16 name="DEC_swRxDtxGsIndex_ADDR" count="2"/>
+</typedef>
+
+<typedef name="CII_speechEncoder_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_EN_SPEECHENCODER_swR0_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_iR0_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_swVadFlag_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_swSP_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswFrmKs_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswVadLags_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswLagList_ADDR" count="12"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_piVq_ADDR" count="3"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_siUVCode_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_piVSCode1_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_piVSCode2_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_piGsp0Code_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_piLagCode_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswNumLagList_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswPitchBuf_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswHNWCoefBuf_ADDR" count="4"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswFrmSNWCoefs_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_ppswSNWCoefAs_ADDR" count="40"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_iSi_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_iVoicing_ADDR"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_psnsSqrtRs_ADDR" count="8"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswLagListPtr_ADDR_ADDR" count="2"/>
+</typedef>
+
+<typedef name="CII_speechEncoder_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswFrmAs_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_ppswSynthAs_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_iir_d_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="CII_iir_d_temp" count="10"/>
+</typedef>
+
+<typedef name="CII_aflat_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_AFLAT_pL_VadAcf_ADDR" count="18"/>
+	<int16 name="LOCAL_AFLAT_pswFlatsRc_ADDR" count="10"/>
+	<int16 name="LOCAL_AFLAT_pL_CorrelSeq_ADDR" count="22"/>
+	<int16 name="LOCAL_AFLAT_pswVadRc_ADDR" count="6"/>
+	<int16 name="LOCAL_AFLAT_swVadScalAuto_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_speechEncoder_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswCoefTmp2_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswCoefTmp3_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswVecTmp_ADDR" count="40"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswVecTmp2_ADDR" count="40"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_L_Temp_ADDR" count="2"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pL_AutoCorTmp_ADDR" count="22"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pswTempRc_ADDR" count="10"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pL_A_ADDR" count="20"/>
+	<int16 name="LOCAL_EN_SPEECHENCODER_pL_tmp_ADDR" count="20"/>
+</typedef>
+
+<typedef name="CII_aFlatRcDp_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="AFLATRCDP_pL_pjNewSpace_ADDR" count="20"/>
+	<int16 name="AFLATRCDP_pL_pjOldSpace_ADDR" count="20"/>
+	<int16 name="AFLATRCDP_pL_vjNewSpace_ADDR" count="38"/>
+	<int16 name="AFLATRCDP_pL_vjOldSpace_ADDR" count="38"/>
+</typedef>
+
+<typedef name="CII_getSfrmLpcTx_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_EN_SPEECHENCODER_interpolateCheck_pswRcTemp_ADDR" count="10"/>
+	<int16 name="LOCAL_compResidEnergy_pswResidual_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_getSfrmLpcTx_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="cov32_copy_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_speechEncoder_inner_1_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="weightSpeechFrame_pswScratch0_ADDR" count="305"/>
+</typedef>
+
+<typedef name="CII_lpcIir_opt_paris_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="TEMP_COPY_ADDR_Y" count="10"/>
+</typedef>
+
+<typedef name="CII_openLoopLagSearch_new_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswGFrame_ADDR" count="248"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswScaledWSpeechBuffer_ADDR" count="306"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswLPeaks_ADDR" count="14"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswCPeaks_ADDR" count="14"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswGPeaks_ADDR" count="14"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswLArray_ADDR" count="16"/>
+</typedef>
+
+<typedef name="CII_openLoopLagSearch_new_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswCFrame_ADDR" count="512"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswSfrmEng_ADDR" count="4"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswLIntBuf_ADDR" count="4"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswCCThresh_ADDR" count="4"/>
+	<int16 name="OPENLOOP_SP32_SAVE_ADDR"/>
+	<int16 name="OPENLOOP_SP16_SAVE_ADDR"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_ppswTrajLBuf_ADDR" count="32"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_ppswTrajCCBuf_ADDR" count="32"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_ppswTrajGBuf_ADDR" count="32"/>
+	<int16 name="LOCAL_OPENLOOPSEARCH_pswScaledWSpeechBufferCopy_ADDR" count="306"/>
+</typedef>
+
+<typedef name="CII_sfrmAnalysis_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_sfrmAnalysis_pswPVec_ADDR" count="40"/>
+	<int16 name="LOCAL_sfrmAnalysis_pswWPVec_ADDR" count="40"/>
+	<int16 name="LOCAL_sfrmAnalysis_pswWBasisVecs_ADDR" count="360"/>
+	<int16 name="LOCAL_sfrmAnalysis_ppswWVselpEx_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_sfrmAnalysis_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_sfrmAnalysis_pswTempVec_ADDR" count="40"/>
+	<int16 name="LOCAL_sfrmAnalysis_pswBitArray_ADDR" count="10"/>
+	<int16 name="LOCAL_sfrmAnalysis_pswHNWCoefs_ADDR" count="6"/>
+	<int16 name="LOCAL_sfrmAnalysis_pswWSVec_ADDR" count="40"/>
+	<int16 name="sfrmAnalysis_psiVSCode1_ADDR_ADDR"/>
+	<int16 name="sfrmAnalysis_psiVSCode2_ADDR_ADDR"/>
+	<int16 name="sfrmAnalysis_psiGsp0Code_ADDR_ADDR"/>
+	<int16 name="sfrmAnalysis_psiLagCode_ADDR_ADDR"/>
+	<int16 name="LOCAL_sfrmAnalysis_swLag_ADDR"/>
+	<int16 name="LOCAL_sfrmAnalysis_swLtpShift_ADDR"/>
+	<int16 name="LOCAL_sfrmAnalysis_snsRs00_ADDR" count="2"/>
+	<int16 name="LOCAL_sfrmAnalysis_snsRs11_ADDR" count="2"/>
+	<int16 name="LOCAL_sfrmAnalysis_snsRs22_ADDR" count="2"/>
+	<int16 name="sfrmAnalysis_SP16_SAVE0_ADDR"/>
+	<int16 name="sfrmAnalysis_SP16_SAVE1_ADDR"/>
+	<int16 name="LOCAL_sfrmAnalysis_ppswVselpEx_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_flat_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_FLAT_pppL_B_ADDR" count="400"/>
+	<int16 name="LOCAL_pswInScale_ADDR" count="170"/>
+	<int16 name="LOCAL_pL_Phi_ADDR" count="22"/>
+</typedef>
+
+<typedef name="CII_flat_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_FLAT_pppL_C_ADDR" count="400"/>
+	<int16 name="LOCAL_FLAT_pppL_F_ADDR" count="400"/>
+</typedef>
+
+<typedef name="CII_rcToCorrDpL_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_rcToCorrDpL_pL_tmpSpace_ADDR" count="20"/>
+	<int16 name="LOCAL_rcToCorrDpL_pL_ASpace_ADDR" count="20"/>
+</typedef>
+
+<typedef name="CII_vad_algorithm_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="HR_VAD_ALGORITHM_swStat_ADDR"/>
+	<int16 name="HR_VAD_ALGORITHM_swNormRav1_ADDR"/>
+	<int16 name="HR_VAD_ALGORITHM_pswRav1_ADDR" count="10"/>
+	<int16 name="HR_VAD_ALGORITHM_pL_av0_ADDR" count="18"/>
+	<int16 name="HR_VAD_ALGORITHM_pL_av1_ADDR" count="18"/>
+	<int16 name="HR_VAD_ALGORITHM_swM_pvad_ADDR"/>
+	<int16 name="HR_VAD_ALGORITHM_swE_pvad_ADDR"/>
+	<int16 name="HR_VAD_ALGORITHM_swM_acf0_ADDR"/>
+	<int16 name="HR_VAD_ALGORITHM_swE_acf0_ADDR"/>
+	<int16 name="HR_VAD_PREDICTOR_VALUES_pswAav1_ADDR" count="10"/>
+	<int16 name="HR_VAD_PREDICTOR_VALUES_pswVpar_ADDR" count="8"/>
+	<int16 name="HR_VAD_STEP_UP_pL_coef_ADDR" count="18"/>
+	<int16 name="HR_VAD_STEP_UP_pL_work_ADDR" count="18"/>
+	<int16 name="HR_VAD_COMPUTE_RAV1_pL_work_ADDR" count="18"/>
+	<int16 name="HR_VAD_TONE_DETECTION_pswA_ADDR" count="4"/>
+	<int16 name="HR_SCHUR_RECURSION_pswPp_ADDR" count="10"/>
+	<int16 name="HR_SCHUR_RECURSION_pswKk_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_aflat_opt_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_SWCOMFORTNOISE_pswFinalRc_ADDR" count="10"/>
+	<int16 name="LOCAL_SWCOMFORTNOISE_pL_RefCorr_ADDR" count="22"/>
+</typedef>
+
+<typedef name="CII_lpcCorrQntz_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LPCCORRQNTZ_pswPOldSpace_ADDR" count="4"/>
+	<int16 name="LPCCORRQNTZ_pswVOldSpace_ADDR" count="7"/>
+	<int16 name="LPCCORRQNTZ_pswPNewSpace_ADDR" count="4"/>
+	<int16 name="LPCCORRQNTZ_pswVNewSpace_ADDR" count="7"/>
+	<int16 name="LPCCORRQNTZ_pswPBar_ADDR" count="4"/>
+	<int16 name="LPCCORRQNTZ_pswVBarSpace_ADDR" count="8"/>
+	<int16 name="LPCCORRQNTZ_pswRc_ADDR" count="12"/>
+	<int16 name="LPCCORRQNTZ_pL_PBarFull_ADDR" count="20"/>
+	<int16 name="LPCCORRQNTZ_pL_VBarFullSpace_ADDR" count="38"/>
+</typedef>
+
+<typedef name="CII_lpcCorrQntz_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LPCCORRQNTZ_quantList_ADDR" count="66"/>
+	<int16 name="LPCCORRQNTZ_bestPql_ADDR" count="264"/>
+	<int16 name="LPCCORRQNTZ_bestQl_ADDR" count="264"/>
+</typedef>
+
+<typedef name="CII_aToRc_opt2_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="aToRc_pswASpace_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_aToRc_opt2_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="aToRc_pswTmp_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_pitchLags_new_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_PITCHLAGS_pswLBuf_ADDR" count="12"/>
+	<int16 name="LOCAL_PITCHLAGS_pswCBuf_ADDR" count="12"/>
+	<int16 name="LOCAL_PITCHLAGS_pswLPeaks_ADDR" count="14"/>
+	<int16 name="LOCAL_PITCHLAGS_pswCPeaks_ADDR" count="14"/>
+</typedef>
+
+<typedef name="CII_pitchLags_new_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_PITCHLAGS_pswGBuf_ADDR" count="12"/>
+	<int16 name="LOCAL_PITCHLAGS_pswGPeaks_ADDR" count="14"/>
+	<int16 name="PITCHLAG_SP32_SAVE_ADDR"/>
+	<int16 name="PITCHLAG_SP16_SAVE_ADDR"/>
+</typedef>
+
+<typedef name="CII_bestDelta_new_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_BESTDELTA_pswCBuf_ADDR" count="24"/>
+	<int16 name="LOCAL_BESTDELTA_pswCInterp_ADDR" count="18"/>
+</typedef>
+
+<typedef name="CII_bestDelta_new_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_BESTDELTA_pswGBuf_ADDR" count="24"/>
+	<int16 name="LOCAL_BESTDELTA_pswGInterp_ADDR" count="18"/>
+</typedef>
+
+<typedef name="CII_sfrmAnalysis_opt_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_closedLoopLagSearch_ppswTVect_ADDR" count="160"/>
+</typedef>
+
+<typedef name="CII_sfrmAnalysis_opt_inner_0_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_closedLoopLagSearch_pL_CCBuf_ADDR" count="12"/>
+	<int16 name="LOCAL_closedLoopLagSearch_pL_CGBuf_ADDR" count="12"/>
+	<int16 name="LOCAL_closedLoopLagSearch_pswCCBuf_ADDR" count="6"/>
+	<int16 name="LOCAL_closedLoopLagSearch_pswCGBuf_ADDR" count="6"/>
+</typedef>
+
+<typedef name="CII_hnwFilt_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="hnwFilt_swZeroState_ADDR"/>
+</typedef>
+
+<typedef name="CII_lpcZsIir_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="lpcZsIir_copy_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_decorr_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="decorr_pswGivenVect_ADDR_ADDR"/>
+</typedef>
+
+<typedef name="CII_v_srch_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_v_srch_pswCGUpdates_ADDR" count="144"/>
+</typedef>
+
+<typedef name="CII_v_srch_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_v_srch_pswBits_ADDR" count="10"/>
+	<int16 name="LOCAL_v_srch_pswWBasisVecs_copy_ADDR" count="360"/>
+	<int16 name="LOCAL_v_srch_pswDSpace_ADDR" count="144"/>
+	<int16 name="LOCAL_v_srch_pL_R_ADDR" count="18"/>
+	<int16 name="LOCAL_v_srch_siBest_ADDR"/>
+	<int16 name="LOCAL_v_srch_pswModNextBit_ADDR_ADDR"/>
+	<int16 name="LOCAL_v_srch_pswBits_ADDR_ADDR"/>
+</typedef>
+
+<typedef name="CII_sfrmAnalysis_opt_inner_1_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="g_quant_vl_swWIShift_ADDR"/>
+	<int16 name="LOCAL_g_quant_vl_siNormMin_ADDR"/>
+	<int16 name="LOCAL_g_quant_vl_ErrorTerm_ADDR" count="12"/>
+	<int16 name="LOCAL_gainTweak_siNorm_ADDR" count="2"/>
+	<int16 name="LOCAL_gainTweak_terms_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_lpcCorrQntz_opt_inner_0_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_AFLATNEWBARRECURSION_pL_POldSpace_ADDR" count="20"/>
+	<int16 name="LOCAL_AFLATNEWBARRECURSION_pL_VOldSpace_ADDR" count="38"/>
+	<int16 name="LOCAL_AFLATNEWBARRECURSION_pL_PNewSpace_ADDR" count="20"/>
+	<int16 name="LOCAL_AFLATNEWBARRECURSION_pL_VNewSpace_ADDR" count="38"/>
+</typedef>
+
+<typedef name="CII_aflatRecursionLoop_opt_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_AFLATRECURSION_pswQntRcSqd_ADDR" count="4"/>
+</typedef>
+
+<typedef name="CII_speechDecoder_opt_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DEC_pswSynthFiltOut_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_speechDecoder_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DEC_pswFrmPFDenom_ADDR" count="10"/>
+	<int16 name="DEC_pswFrmKs_ADDR" count="10"/>
+	<int16 name="DEC_pswFrmAs_ADDR" count="10"/>
+	<int16 name="DEC_pswFrmPFNum_ADDR" count="20"/>
+	<int16 name="DEC_siGsp0Code_ADDR"/>
+	<int16 name="FLAG_GETSFRMLPC_TX_ADDR"/>
+	<int16 name="DEC_psiVselpCw_ADDR" count="2"/>
+	<int16 name="DEC_pswPVec_ADDR" count="40"/>
+	<int16 name="DEC_ppswVselpEx_ADDR" count="80"/>
+	<int16 name="DEC_pswExcite_ADDR" count="40"/>
+	<int16 name="DEC_pswPPFExcit_ADDR" count="40"/>
+	<int16 name="DEC_pswBitArray_ADDR" count="10"/>
+	<int16 name="DEC_psnsSqrtRs_ADDR" count="8"/>
+	<int16 name="DEC_snsRs00_ADDR" count="2"/>
+	<int16 name="DEC_snsRs11_ADDR" count="2"/>
+	<int16 name="DEC_snsRs22_ADDR" count="2"/>
+	<int16 name="DEC_swMutePermit_ADDR"/>
+	<int16 name="DEC_swLevelMean_ADDR"/>
+	<int16 name="DEC_swLevelMax_ADDR"/>
+	<int16 name="DEC_swMuteFlag_ADDR"/>
+</typedef>
+
+<typedef name="CII_a_sst_opt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="A_SST_pL_CorrTemp_ADDR" count="22"/>
+	<int16 name="A_SST_pswRCNum_ADDR" count="10"/>
+	<int16 name="A_SST_pswRCDenom_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_speechDecoder_opt_inner_0_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_pitchPreFilt_pswInterpCoefs_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_speechDecoder_opt_inner_1_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LOCAL_signal_conceal_sub_pswStateTmp_ADDR" count="10"/>
+	<int16 name="LOCAL_signal_conceal_sub_swOutTmp_ADDR" count="40"/>
+</typedef>
+
+<typedef name="AMR_EFR_GLOBAL_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="STRUCT_POST_FILTERSTATE_RES2_ADDR" count="40"/>
+	<int16 name="STRUCT_POST_FILTERSTATE_MEM_SYN_PST_ADDR" count="10"/>
+	<int16 name="STRUCT_PREEMPHASISSTATE_ADDR"/>
+	<int16 name="STRUCT_AGCSTATE_ADDR"/>
+	<int16 name="STRUCT_POST_FILTERSTATE_SYNTH_BUF_ADDR" count="170"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y2_LO_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y2_HI_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y1_LO_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y1_HI_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_X0_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_X1_ADDR"/>
+	<int16 name="STURCT_SPEECH_DECODE_FRAMESTATE_PREV_MODE_ADDR" count="8"/>
+	<int16 name="STATIC_L_SACF_ADDR" count="54"/>
+	<int16 name="GLOBAL_CN_EXCITATION_GAIN_ADDR"/>
+	<int16 name="GLOBAL_GCODE0_CN_ADDR"/>
+	<int16 name="SCAL_ACF_ADDR_P"/>
+	<int16 name="VAD_FLAG_ADDR_P"/>
+	<int16 name="TX_SP_FLAG_ADDR"/>
+	<int16 name="GLOBAL_TXDTX_CTRL_ADDR"/>
+	<int16 name="PRAM4_TABLE_ADDR" count="10"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_Y2_LO_ADDR"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_Y2_HI_ADDR"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_Y1_LO_ADDR"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_Y1_HI_ADDR"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_X0_ADDR"/>
+	<int16 name="STRUCT_PRE_PROCESSSTATE_X1_ADDR"/>
+	<int16 name="STRUCT_COD_AMRSTATE_OLD_SPEECH_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_P_WINDOW_12K2_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_P_WINDOW_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_SPEECH_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_NEW_SPEECH_ADDR" count="161"/>
+	<int16 name="STRUCT_COD_AMRSTATE_OLD_WSP_ADDR" count="143"/>
+	<int16 name="STRUCT_COD_AMRSTATE_WSP_ADDR" count="160"/>
+	<int16 name="STRUCT_COD_AMRSTATE_OLD_LAGS_ADDR" count="6"/>
+	<int16 name="STRUCT_COD_AMRSTATE_OL_GAIN_FLG_ADDR" count="2"/>
+	<int16 name="STRUCT_COD_AMRSTATE_OLD_EXC_ADDR" count="154"/>
+	<int16 name="STRUCT_COD_AMRSTATE_EXC_ADDR" count="161"/>
+	<int16 name="STRUCT_COD_AMRSTATE_AI_ZERO_ADDR" count="11"/>
+	<int16 name="STRUCT_COD_AMRSTATE_ZERO_ADDR" count="41"/>
+	<int16 name="STRUCT_LEVINSONSTATE_OLD_A_ADDR" count="11"/>
+	<int16 name="STRUCT_LSPSTATE_LSP_OLD_ADDR" count="10"/>
+	<int16 name="STRUCT_LSPSTATE_LSP_OLD_Q_ADDR" count="10"/>
+	<int16 name="STRUCT_Q_PLSFSTATE_PAST_RQ_ADDR" count="10"/>
+	<int16 name="STRUCT_PITCH_FRSTATE_T0_PREV_SUBFRAME_ADDR" count="2"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_FRAC_GCODE0_ADDR"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_EXP_GCODE0_ADDR"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_EXP_TARGET_EN_ADDR"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_FRAC_TARGET_EN_ADDR"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_EXP_COEFF_ADDR" count="6"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_SF0_FRAC_COEFF_ADDR" count="5"/>
+	<int16 name="STRUCT_GAINQUANTSTATE_GAIN_IDX_PTR_ADDR"/>
+	<int16 name="STRUCT_GC_PREDST_ADDR" count="4"/>
+	<int16 name="STRUCT_GC_PREDST_PAST_QUA_EN_MR122_ADDR" count="4"/>
+	<int16 name="STURCT_GC_PREDUNQST_ADDR" count="4"/>
+	<int16 name="STRUCT_GC_PREDUNQST_PAST_QUA_EN_MR122_ADDR" count="4"/>
+	<int16 name="STRUCT_GAINADAPTSTATE_ONSET_ADDR"/>
+	<int16 name="STRUCT_GAINADAPTSTATE_PREV_ALPHA_ADDR"/>
+	<int16 name="STRUCT_GAINADAPTSTATE_PREV_GC_ADDR" count="2"/>
+	<int16 name="STRUCT_GAINADAPTSTATE_LTPG_MEM_ADDR" count="6"/>
+	<int16 name="STRUCT_PITCHOLWGHTSTATE_OLD_T0_MED_ADDR"/>
+	<int16 name="STRUCT_PITCHOLWGHTSTATE_ADA_W_ADDR"/>
+	<int16 name="STRUCT_PITCHOLWGHTSTATE_WGHT_FLG_ADDR" count="2"/>
+	<int16 name="STRUCT_TONSTABSTATE_GP_ADDR" count="7"/>
+	<int16 name="STRUCT_TONSTABSTATE_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_BCKR_EST_ADDR" count="10"/>
+	<int16 name="STRUCT_VADSTATE1_AVE_LEVEL_ADDR" count="10"/>
+	<int16 name="STRUCT_VADSTATE1_OLD_LEVEL_ADDR" count="10"/>
+	<int16 name="STRUCT_VADSTATE1_SUB_LEVEL_ADDR" count="10"/>
+	<int16 name="STRUCT_VADSTATE1_A_DATA5_ADDR" count="6"/>
+	<int16 name="STRUCT_VADSTATE1_A_DATA3_ADDR" count="6"/>
+	<int16 name="STRUCT_VADSTATE1_BURST_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_HANG_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_STAT_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_VADREG_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_PITCH_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_TONE_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_COMPLEX_HIGH_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_COMPLEX_LOW_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_OLDLAG_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_OLDLAG_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_COMPLEX_HANG_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_COMPLEX_HANG_TIMER_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_BEST_CORR_HP_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_SPEECH_VAD_DECISION_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_COMPLEX_WARNING_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_SP_BURST_COUNT_ADDR"/>
+	<int16 name="STRUCT_VADSTATE1_CORR_HP_FAST_ADDR"/>
+	<int16 name="STRUCT_COD_AMRSTATE_DTX_ADDR"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_LSP_HIST_ADDR" count="80"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_LOG_EN_HIST_ADDR" count="8"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_HIST_PTR_ADDR"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_LOG_EN_INDEX_ADDR"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_INIT_LSF_VQ_INDEX_ADDR" count="2"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_LSP_INDEX_ADDR" count="4"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_DTXHANGOVERCOUNT_ADDR"/>
+	<int16 name="STRUCT_DTX_ENCSTATE_DECANAELAPSEDCOUNT_ADDR"/>
+	<int16 name="STRUCT_COD_AMRSTATE_MEM_SYN_ADDR" count="10"/>
+	<int16 name="STRUCT_COD_AMRSTATE_MEM_W0_ADDR" count="10"/>
+	<int16 name="STRUCT_COD_AMRSTATE_MEM_W_ADDR" count="10"/>
+	<int16 name="STRUCT_COD_AMRSTATE_MEM_ERROR_ADDR" count="10"/>
+	<int16 name="STRUCT_COD_AMRSTATE_ERROR_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_SHARP_ADDR"/>
+	<int16 name="STRUCT_SPEECH_ENCODE_FRAMESTATE_DTX_ADDR"/>
+	<int16 name="STRUCT_SID_SYNCSTATE_SID_UPDATE_RATE_ADDR"/>
+	<int16 name="STRUCT_SID_SYNCSTATE_SID_UPDATE_COUNTER_ADDR"/>
+	<int16 name="STRUCT_SID_SYNCSTATE_SID_HANDOVER_DEBT_ADDR"/>
+	<int16 name="STRUCT_SID_SYNCSTATE_PREV_FT_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_OLD_EXC_ADDR" count="154"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_EXC_ADDR" count="40"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_LSP_OLD_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_MEM_SYN_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_SHARP_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_OLD_T0_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_PREV_BF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_PREV_PDF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_STATE_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_T0_LAGBUFF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_EXCENERGYHIST_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_INBACKGROUNDNOISE_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_VOICEDHANGOVER_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_LTPGAINHISTORY_ADDR" count="9"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_NODATASEED_ADDR"/>
+	<int16 name="STRUCT_BGN_SCDSTATE_FRAMEENERGYHIST_ADDR" count="60"/>
+	<int16 name="STRUCT_BGN_SCDSTATE_BGHANGOVER_ADDR" count="2"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_ADDR" count="8"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_HANGCOUNT_ADDR"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_HANGVAR_ADDR"/>
+	<int16 name="STRUCT_LSP_AVGSTATE_LSP_MEANSAVE_ADDR" count="10"/>
+	<int16 name="STRUCT_D_PLSFSTATE_PAST_LSF_Q_ADDR" count="10"/>
+	<int16 name="STRUCT_D_PLSFSTATE_PAST_R_Q_ADDR" count="10"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_ADDR" count="6"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_PAST_GAIN_PIT_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_PREV_GP_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_ADDR" count="6"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_PAST_GAIN_CODE_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_PREV_GC_ADDR"/>
+	<int16 name="STRUCT_GC_PREDSTATE_PAST_QUA_EN_ADDR" count="4"/>
+	<int16 name="STRUCT_GC_PREDSTATE_PAST_QUA_EN_MR122_ADDR" count="4"/>
+	<int16 name="STRUCT_PH_DISPSTATE_GAINMEM_ADDR" count="6"/>
+	<int16 name="STRUCT_PH_DISPSTATE_PREVSTATE_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_PREVCBGAIN_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_LOCKFULL_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_ONSET_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_SINCE_LAST_SID_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_TRUE_SID_PERIOD_INV_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_OLD_LOG_EN_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_L_PN_SEED_RX_ADDR" count="2"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSP_ADDR" count="10"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSP_OLD_ADDR" count="10"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSF_HIST_ADDR" count="80"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSF_HIST_PTR_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_PG_MEAN_ADDR"/>
+	<int16 name="DEC_STATIC_LSF_P_CN_ADDR" count="10"/>
+	<int16 name="GLOBAL_LSF_OLD_RX_ADDR" count="70"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_HIST_ADDR" count="8"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_HIST_PTR_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_ADJUST_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXHANGOVERCOUNT_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DECANAELAPSEDCOUNT_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_SID_FRAME_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_VALID_DATA_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXHANGOVERADDED_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXGLOBALSTATE_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DATA_UPDATED_ADDR" count="2"/>
+	<int16 name="STATIC_L_SAV0_ADDR" count="72"/>
+	<int16 name="GLOBAL_LSF_NEW_CN_DEC_ADDR" count="10"/>
+	<int16 name="GLOBAL_LSF_OLD_CN_DEC_ADDR" count="10"/>
+	<int16 name="GLOBAL_GAIN_CODE_OLD_RX_ADDR" count="28"/>
+</typedef>
+
+<typedef name="AMR_EFR_GLOBAL_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="STRUCT_COD_AMRSTATE_HVEC_ADDR" count="40"/>
+	<int16 name="STRUCT_COD_AMRSTATE_H1_ADDR" count="40"/>
+	<int16 name="STATIC_SCAL_RVAD_ADDR"/>
+	<int16 name="STATIC_RVAD_ADDR" count="9"/>
+	<int16 name="STATIC_BURSTCOUNT_ADDR"/>
+	<int16 name="STATIC_HANGCOUNT_ADDR"/>
+	<int16 name="STATIC_PT_SACF_ADDR"/>
+	<int16 name="STATIC_PT_SAV0_ADDR"/>
+	<int16 name="STATIC_L_LASTDM_ADDR" count="2"/>
+	<int16 name="STATIC_ADAPTCOUNT_ADDR"/>
+	<int16 name="GLOBAL_PTCH_ADDR"/>
+	<int16 name="STATIC_THVAD_ADDR" count="4"/>
+	<int16 name="STATIC_LSF_P_CN_ADDR" count="10"/>
+	<int16 name="GLOBAL_LSF_OLD_TX_ADDR" count="10"/>
+	<int16 name="COD_AMR_XN_SF0_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_Y2_SF0_ADDRESS" count="20"/>
+	<int16 name="STATIC_TXDTX_HANGOVER_ADDR"/>
+	<int16 name="STATIC_TXDTX_N_ELAPSED_ADDR"/>
+	<int16 name="GLOBAL_L_PN_SEED_TX_ADDR" count="2"/>
+	<int16 name="STATIC_VERYOLDLAGCOUNT_ADDR"/>
+	<int16 name="STATIC_BUF_P_TX_ADDR"/>
+	<int16 name="STATIC_OLD_CN_MEM_TX_ADDR" count="8"/>
+	<int16 name="GLOBAL_GAIN_CODE_OLD_TX_ADDR" count="6"/>
+	<int16 name="COD_AMR_T0_SF0_ADDRESS"/>
+	<int16 name="COD_AMR_T0_FRAC_SF0_ADDRESS"/>
+	<int16 name="COD_AMR_I_SUBFR_SF0_ADDRESS" count="2"/>
+	<int16 name="COD_AMR_GAIN_PIT_SF0_ADDRESS"/>
+	<int16 name="COD_AMR_GAIN_CODE_SF0_ADDRESS"/>
+	<int16 name="Blankkk" count="16"/>
+	<int16 name="GLOBAL_L_PN_SEED_RX_ADDR" count="2"/>
+	<int16 name="GLOBAL_GCODE0_CN_DEC_ADDR"/>
+	<int16 name="GLOBAL_GAIN_CODE_OLD_CN_DEC_ADDR"/>
+	<int16 name="GLOBAL_GAIN_CODE_NEW_CN_DEC_ADDR"/>
+	<int16 name="GLOBAL_GAIN_CODE_MUTING_CN_DEC_ADDR"/>
+</typedef>
+
+<typedef name="CII_AMR_Encode_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COD_AMR_XN_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_XN2_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_Y1_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_Y2_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_RES_ADDRESS" count="40"/>
+	<int16 name="COD_AMR_MEM_SYN_SAVE_ADDRESS" count="10"/>
+	<int16 name="COD_AMR_MEM_W0_SAVE_ADDRESS" count="10"/>
+	<int16 name="COD_AMR_MEM_ERR_SAVE_ADDRESS" count="10"/>
+	<int16 name="COD_AMR_GCOEFF_ADDRESS" count="4"/>
+	<int16 name="COD_AMR_SUBFRNR_ADDRESS"/>
+	<int16 name="COD_AMR_I_SUBFR_ADDRESS"/>
+	<int16 name="COD_AMR_T_OP_ADDRESS" count="2"/>
+	<int16 name="COD_AMR_T0_ADDRESS"/>
+	<int16 name="COD_AMR_T0_FRAC_ADDRESS"/>
+	<int16 name="COD_AMR_GAIN_PIT_ADDRESS"/>
+	<int16 name="COD_AMR_GAIN_CODE_ADDRESS"/>
+	<int16 name="COD_AMR_EXC_ADDR_ADDRESS" count="2"/>
+	<int16 name="COD_AMR_LSP_FLAG_ADDRESS"/>
+	<int16 name="COD_AMR_GP_LIMIT_ADDRESS"/>
+	<int16 name="COD_AMR_VAD_FLAG_ADDRESS"/>
+	<int16 name="COD_AMR_COMPUTE_SID_FLAG_ADDRESS"/>
+	<int16 name="COD_AMR_A_T_ADDRESS" count="44"/>
+	<int16 name="COD_AMR_AQ_T_ADDRESS" count="44"/>
+	<int16 name="COD_AMR_LSP_NEW_ADDRESS" count="10"/>
+	<int16 name="COD_AMR_SHARP_SAVE_ADDRESS"/>
+	<int16 name="COD_AMR_EVENSUBFR_ADDRESS"/>
+	<int16 name="COD_AMR_CODE_ADDRESS" count="40"/>
+</typedef>
+
+<typedef name="CII_AMR_Encode_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COD_AMR_ANA_ADDR" count="60"/>
+	<int16 name="COD_AMR_RES3_ADDRESS" count="40"/>
+	<int16 name="BLANK" count="2"/>
+</typedef>
+
+<typedef name="CII_vad1_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="VAD1_level_ADDR" count="11"/>
+	<int16 name="VAD1_decission_noise_level_ADDR"/>
+	<int16 name="VAD1_low_power_flag_ADDR"/>
+</typedef>
+
+<typedef name="CII_Levinson_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LEVINSON_ANL_ADDR" count="11"/>
+</typedef>
+
+<typedef name="CII_Levinson_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Blank_LEVINSON" count="3"/>
+	<int16 name="PARA4_ADDR_ADDR"/>
+	<int16 name="LEVINSON_AL_ADDR" count="22"/>
+</typedef>
+
+<typedef name="CII_subframePostProc_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COD_AMR_SYNTH_ADDR" count="160"/>
+</typedef>
+
+<typedef name="CII_Syn_filt_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="SYN_FILT_TMP_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_Autocorr_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="AUTOCORR_Y_ADDR" count="240"/>
+	<int16 name="LPC_RLOW_ADDR" count="12"/>
+	<int16 name="LPC_RHIGH_ADDR" count="18"/>
+	<int16 name="LPC_RC_ADDR" count="4"/>
+</typedef>
+
+<typedef name="CII_Autocorr_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Blamk_AUTOCORR_Y_ADDR" count="4"/>
+	<int16 name="AUTOCORR_Y_COPY_ADDR" count="240"/>
+	<int16 name="Windows_table_ADDR" count="240"/>
+</typedef>
+
+<typedef name="CII_Az_lsp_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="AZ_LSP_IP_ADDR"/>
+	<int16 name="AZ_LSP_COEF_ADDR"/>
+	<int16 name="AZ_LSP_GRID_J_ADDR_ADDR"/>
+	<int16 name="AZ_LSP_LOOP_CTRL_ADDR"/>
+	<int16 name="AZ_LSP_XLOW_ADDR"/>
+	<int16 name="AZ_LSP_YLOW_ADDR"/>
+	<int16 name="AZ_LSP_XHIGH_ADDR"/>
+	<int16 name="AZ_LSP_YHIGH_ADDR"/>
+	<int16 name="AZ_LSP_XMID_ADDR"/>
+	<int16 name="AZ_LSP_YMID_ADDR"/>
+	<int16 name="AZ_LSP_F1_ADDR" count="10"/>
+	<int16 name="AZ_LSP_F2_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Chebps_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="CHEBPS_B2_ADDR" count="2"/>
+</typedef>
+
+<typedef name="CII_cor_h_x_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COR_H_X_Y32_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_cor_h_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COR_H_H2_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_cor_h_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="COR_H_H2_COPY_ADDR" count="40"/>
+	<int16 name="COPY_C1035PF_SIGN_ADDR" count="20"/>
+</typedef>
+
+<typedef name="CII_G_pitch_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="G_PITCH_SCALED_Y1_ADDR" count="40"/>
+	<int16 name="G_PITCH_Y1_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_subframePreProc_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="PRE_BIG_AP1_ADDR" count="20"/>
+	<int16 name="PRE_BIG_AP2_ADDR" count="20"/>
+</typedef>
+
+<typedef name="CII_AMR_Decode_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DEC_AMR_LSP_NEW_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_LSP_MID_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_PREV_LSF_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_LSF_I_ADDRESS" count="50"/>
+	<int16 name="DEC_AMR_EXCP_ADDRESS" count="40"/>
+	<int16 name="DEC_AMR_EXC_ENHANCED_ADDRESS" count="44"/>
+	<int16 name="DEC_AMR_T0_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_FRAC_ADDRESS"/>
+	<int16 name="DEC_AMR_INDEX_ADDRESS"/>
+	<int16 name="DEC_AMR_INDEX_MR475_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_PIT_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_CODE_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_CODE_MIX_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_SHARP_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_FLAG_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_FAC_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_MIN_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_MAX_ADDRESS"/>
+	<int16 name="DEC_AMR_DELTA_FRC_LOW_ADDRESS"/>
+	<int16 name="DEC_AMR_DELTA_FRC_RANGE_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP_SHIFT_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP_ADDRESS"/>
+	<int16 name="DEC_AMR_L_TEMP_ADDRESS" count="2"/>
+	<int16 name="DEC_AMR_FLAG4_ADDRESS"/>
+	<int16 name="DEC_AMR_CAREFULFLAG_ADDRESS"/>
+	<int16 name="DEC_AMR_EXCENERGY_ADDRESS"/>
+	<int16 name="DEC_AMR_SUBFRNR_ADDRESS"/>
+	<int16 name="DEC_AMR_EVENSUBFR_ADDRESS"/>
+	<int16 name="DEC_AMR_NEWDTXSTATE_ADDRESS"/>
+	<int16 name="DEC_AMR_BFI_ADDRESS"/>
+	<int16 name="DEC_AMR_PDFI_ADDRESS"/>
+	<int16 name="DEC_AMR_A_T_ADDRESS" count="44"/>
+	<int16 name="DEC_AMR_PARM_ADDRESS" count="57"/>
+</typedef>
+
+<typedef name="CII_AMR_Decode_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="AMR_DEC_BUFOUT_ADDR" count="160"/>
+</typedef>
+
+<typedef name="CII_bits2prm_amr_efr_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="AMR_DEC_BUFIN_ADDR" count="256"/>
+	<int16 name="AMR_IF1_DEC_BUFIN_ADDR" count="256"/>
+</typedef>
+
+<typedef name="CII_dtx_dec_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DTX_DEC_L_lsf_ADDR" count="20"/>
+	<int16 name="DTX_DEC_lsf_ADDR" count="10"/>
+	<int16 name="dtx_dec_LSP_INT_ADDR" count="10"/>
+	<int16 name="dtx_dec_LSF_INT_ADDR" count="10"/>
+	<int16 name="dtx_dec_lsf_int_variab_ADDR" count="10"/>
+	<int16 name="dtx_dec_lsp_int_variab_ADDR" count="10"/>
+	<int16 name="dtx_dec_acoeff_ADDR" count="12"/>
+	<int16 name="dtx_dec_acoeff_variab_ADDR" count="12"/>
+	<int16 name="dtx_dec_refl_ADDR" count="10"/>
+	<int16 name="dtx_dec_ex_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_amr_dec_122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="blank_dec" count="106"/>
+	<int16 name="DEC_AMR_BUFA40_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP1_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP2_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP3_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP4_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP5_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP6_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP7_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP8_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP9_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP10_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP11_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP12_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP13_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP14_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP15_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP16_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP17_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP18_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP19_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP20_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP21_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP22_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP23_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP24_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP25_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP26_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP27_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP28_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP29_ADDRESS" count="11"/>
+	<int16 name="DEC_AMR_D2PF_POS_ADDRESS" count="2"/>
+	<int16 name="DEC_AMR_D2PF_POS2_ADDRESS" count="2"/>
+	<int16 name="DEC_AMR_D2PF_POS4_ADDRESS" count="2"/>
+	<int16 name="DEC_AMR_D2PF_POS6_ADDRESS" count="14"/>
+	<int16 name="DEC_AMR_TEMP30_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP31_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP32_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP33_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP34_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP35_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP36_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP37_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP38_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP39_ADDRESS"/>
+</typedef>
+
+<typedef name="CII_prm2bits_amr_efr_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="BIT_SERIAL_ADDR_RAM" count="244"/>
+</typedef>
+
+<typedef name="CII_prm2bits_amr_efr_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="BIT_SERIAL_TRANS_ADDR" count="256"/>
+</typedef>
+
+<typedef name="CII_schur_recursion_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="VAD_SCHUR_RECUR_KK_ADDR_ADDR" count="9"/>
+</typedef>
+
+<typedef name="CII_compute_rav1_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="VAD_COMP_RAV1_L_WORK_ADDR" count="100"/>
+	<int16 name="VAD_COMP_RAV1_AAV1_ADDR_ADDR" count="20"/>
+</typedef>
+
+<typedef name="CII_spectral_comparison_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="SPECTRAL_COMPARISON_SAV0_ADDR" count="9"/>
+</typedef>
+
+<typedef name="CII_vad_computation_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="VAD_COMPUTATION_ACF0_ADDR" count="2"/>
+	<int16 name="VAD_COMPUTATION_PVAD_ADDR" count="2"/>
+	<int16 name="VAD_COMPUTATION_L_AV0_ADDR" count="18"/>
+	<int16 name="VAD_COMPUTATION_L_AV1_ADDR" count="18"/>
+	<int16 name="VAD_COMPUTATION_RAV1_ADDR" count="9"/>
+	<int16 name="VAD_COMPUTATION_SCAL_RAV1_ADDR"/>
+	<int16 name="VAD_COMPUTATION_STAT_ADDR"/>
+	<int16 name="VAD_COMPUTATION_TONE_ADDR"/>
+	<int16 name="VAD_COMPUTATION_VVAD_ADDR"/>
+	<int16 name="VAD_COMPUTATION_VAD_ADDR" count="7"/>
+	<int16 name="VAD_PRED_VAL_VPAR_ADDR" count="10"/>
+	<int16 name="VAD_PRED_VAL_AAV1_ADDR" count="20"/>
+	<int16 name="VAD_COMPUTATION_A_ADDR" count="10"/>
+	<int16 name="VAD_STEP_UP_L_COEF_ADDR_ADDR" count="9"/>
+	<int16 name="VAD_COMPUTATION_A_ADDR_END"/>
+	<int16 name="VAD_SCHUR_RECUR_PP_ADDR_ADDR" count="10"/>
+	<int16 name="VAD_STEP_UP_L_WORK_ADDR_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_vad1_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="FILTER_BANK_tmp_buf_ADDR" count="160"/>
+</typedef>
+
+<typedef name="CII_dtx_enc_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="DTX_ENC_LSP_ADDR" count="10"/>
+	<int16 name="DTX_ENC_LSF_ADDR" count="10"/>
+	<int16 name="DTX_ENC_LSP_Q_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Q_plsf_3_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Q_PLSF_3_LSF1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_3_LSF_R1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_3_LSF1_Q_ADDR" count="20"/>
+	<int16 name="Q_PLSF_3_PRED_INIT_I_ADDR"/>
+	<int16 name="Q_PLSF_3_LOOP_I_ADDR" count="9"/>
+	<int16 name="Q_PLSF_3_TEMP_P_ADDR" count="80"/>
+	<int16 name="Q_PLSF_3_MEAN_LSF_COPY_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Q_plsf_3_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Q_PLSF_3_LSF_P_ADDR" count="10"/>
+	<int16 name="Q_PLSF_3_WF1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_3_TEMP_R1_ADDR" count="80"/>
+</typedef>
+
+<typedef name="CII_lsp_122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="LSP_LSP_NEW_Q_ADDR" count="10"/>
+	<int16 name="LSP_LSP_MID_ADDR" count="10"/>
+	<int16 name="LSP_LSP_MID_Q_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_COD_AMR_122_inner_0_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Pitch_fr6_max_loop_addr" count="2"/>
+	<int16 name="Pitch_fr6_corr_v_addr" count="40"/>
+	<int16 name="Pitch_fr6_t0_min_addr"/>
+	<int16 name="Pitch_fr6_t0_max_addr"/>
+	<int16 name="Pitch_delta_search_addr"/>
+</typedef>
+
+<typedef name="CII_COD_AMR_122_inner_0_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="PITCH_F6_EXCF_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_code_10i40_35bits_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="C1035PF_DN_ADDR" count="40"/>
+	<int16 name="C1035PF_RR_DIAG_ADDR" count="40"/>
+	<int16 name="C1035PF_RR_SIDE_ADDR" count="780"/>
+</typedef>
+
+<typedef name="CII_gainQuant_M122_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="calc_filt_energies_Y2_ADDRESS" count="50"/>
+	<int16 name="gainQuant_frac_coeff_ADDRESS" count="10"/>
+	<int16 name="gainQuant_exp_coeff_ADDRESS" count="10"/>
+	<int16 name="MR475_gain_quant_coeff_ADDRESS" count="10"/>
+	<int16 name="MR475_gain_quant_coeff_lo_ADDRESS" count="10"/>
+	<int16 name="MR475_gain_quant_exp_max_ADDRESS" count="10"/>
+	<int16 name="MR795_gain_quant_frac_en_ADDRESS" count="10"/>
+	<int16 name="MR795_gain_quant_exp_en_ADDRESS" count="10"/>
+	<int16 name="MR795_gain_quant_g_pitch_cand_ADDRESS" count="10"/>
+	<int16 name="MR795_gain_quant_g_pitch_cind_ADDRESS" count="10"/>
+</typedef>
+
+<typedef name="CII_Lag_max_M122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="PITCH_OL_M122_SCALED_SIGNAL2_ADDR" count="310"/>
+</typedef>
+
+<typedef name="CII_Lag_max_M122_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="PITCH_OL_M475_SCALED_SIGNAL_ADDR" count="310"/>
+	<int16 name="PITCH_OL_M475_P_MAX1_ADDR"/>
+	<int16 name="PITCH_OL_M475_MAX1_ADDR"/>
+	<int16 name="PITCH_OL_M475_P_MAX2_ADDR"/>
+	<int16 name="PITCH_OL_M475_MAX2_ADDR"/>
+	<int16 name="PITCH_OL_M475_P_MAX3_ADDR"/>
+	<int16 name="PITCH_OL_M475_MAX3_ADDR" count="7"/>
+	<int16 name="PITCH_OL_M475_CORR_ADDR" count="300"/>
+</typedef>
+
+<typedef name="CII_set_sign12k2_122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="SET_SIGN_EN_ADDR" count="230"/>
+	<int16 name="C417PF_DN2_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_search_M122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="SEARCH_10I40_RRV_ADDR" count="40"/>
+	<int16 name="SEARCH_CODE_CP_RR_ADDR" count="320"/>
+	<int16 name="SEARCH_CODE_PS0_TEMP_ADDR"/>
+	<int16 name="SEARCH_10I40_PS0_ADDR"/>
+	<int16 name="C1035PF_IPOS_ADDR" count="10"/>
+	<int16 name="C1035PF_POS_MAX_ADDR" count="10"/>
+	<int16 name="C1035PF_CODVEC_ADDR" count="10"/>
+	<int16 name="C1035PF_SIGN_ADDR" count="40"/>
+</typedef>
+
+<typedef name="CII_build_code_M122_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="build_code_sign_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_SEARCH_LOOP_M122_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="SEARCH_CODE_RRV_COE_ADDR"/>
+	<int16 name="SEARCH_CODE_RR_COE_ADDR"/>
+	<int16 name="SEARCH_10I40_I_ADDR" count="2"/>
+	<int16 name="SEARCH_10I40_PSK_ADDR"/>
+	<int16 name="SEARCH_10I40_ALPK_ADDR"/>
+	<int16 name="C1035PF_RR_DIAG_ADDR_2_ADDR"/>
+	<int16 name="SEARCH_CODE_CP_RR_ADDR_ADDR"/>
+	<int16 name="SEARCH_CODE_DN_ADDR_ADDR"/>
+	<int16 name="SEARCH_CODE_RRV_ADDR_ADDR"/>
+	<int16 name="C1035PF_RR_SIDE_ADDR_ADDR"/>
+	<int16 name="C1035PF_RR_DIAG_ADDR_ADDR"/>
+	<int16 name="SEARCH_CODE_CP_RR_7_ADDR_ADDR"/>
+	<int16 name="RR_SIDE_DIAG_TEMP_ADDR"/>
+	<int16 name="SEARCH_10I40_I2_TEMP_ADDR"/>
+	<int16 name="SEARCH_10I40_I2I3_TEMP_ADDR"/>
+	<int16 name="SEARCH_CODE_DN_RRV_ADDR_ADDR" count="2"/>
+	<int16 name="SEARCH_CODE_ALP0_TEMP_ADDR" count="2"/>
+	<int16 name="SEARCH_10I40_I0_ADDR"/>
+	<int16 name="SEARCH_10I40_I1_ADDR"/>
+	<int16 name="SEARCH_10I40_I2_ADDR"/>
+	<int16 name="SEARCH_10I40_I3_ADDR"/>
+	<int16 name="SEARCH_M74_TRACK_ADDR"/>
+	<int16 name="SEARCH_M67_TRACK2_ADDR"/>
+	<int16 name="SEARCH_10I40_I6_ADDR"/>
+	<int16 name="SEARCH_10I40_I7_ADDR"/>
+	<int16 name="SEARCH_10I40_I8_ADDR"/>
+	<int16 name="SEARCH_10I40_I9_ADDR"/>
+	<int16 name="linear_signs_ADDR" count="4"/>
+	<int16 name="linear_codewords_ADDR" count="4"/>
+</typedef>
+
+<typedef name="CII_build_code_com2_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="BUILD_CODE_POINT_ADDR_ADDR" count="10"/>
+</typedef>
+
+<typedef name="CII_Int_lpc_1and3_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="INT_LPC_LSP_ADDR" count="10"/>
+	<int16 name="F1_ADDR" count="12"/>
+	<int16 name="F2_ADDR" count="12"/>
+</typedef>
+
+<typedef name="CII_Q_plsf_5_X_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Q_PLSF_5_LSF1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF2_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_WF1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_WF2_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF_R1_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF_R2_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF1_Q_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF2_Q_ADDR" count="10"/>
+	<int16 name="Q_PLSF_5_LSF_AVER_ADDR" count="30"/>
+	<int16 name="Q_PLSF_5_DTX_AND_SP_ADDR"/>
+	<int16 name="Q_PLSF_5_DTX_AND_SID_ADDR"/>
+	<int16 name="Q_PLSF_5_DTX_AND_HAN_ADDR"/>
+	<int16 name="Q_PLSF_5_DTX_AND_PREV_HAN_ADDR"/>
+</typedef>
+
+<typedef name="CII_Q_plsf_5_Y_BEGIN_ADDR" category="voc_speech">
+	<int16 name="Q_PLSF_5_LSF_P_ADDR" count="10"/>
+</typedef>
+
+<var name="RAM_X_BEGIN_ADDR" value="11534336/2"/>
+<var name="RAM_Y_BEGIN_ADDR" value="11567104/2"/>
+
+<var name="COMMON_GLOBAL_X_SIZE" value="7016"/>
+<var name="COMMON_GLOBAL_Y_SIZE" value="8988"/>
+<var name="FR_GLOBAL_X_SIZE" value="1102"/>
+<var name="FR_GLOBAL_Y_SIZE" value="390"/>
+<var name="FR_LOCAL_X_SIZE" value="790"/>
+<var name="FR_LOCAL_Y_SIZE" value="468"/>
+<var name="HR_GLOBAL_X_SIZE" value="2372"/>
+<var name="HR_GLOBAL_Y_SIZE" value="124"/>
+<var name="HR_LOCAL_X_SIZE" value="804"/>
+<var name="HR_LOCAL_Y_SIZE" value="1020"/>
+<var name="AMR_EFR_GLOBAL_X_SIZE" value="2366"/>
+<var name="AMR_EFR_GLOBAL_Y_SIZE" value="230"/>
+<var name="AMR_EFR_LOCAL_X_SIZE" value="820"/>
+<var name="AMR_EFR_LOCAL_Y_SIZE" value="1022"/>
+<var name="COMMON_LOCAL_X_SIZE" value="0"/>
+<var name="COMMON_LOCAL_Y_SIZE" value="0"/>
+<var name="SPEECH_BUFFERS" value="(0 + RAM_X_BEGIN_ADDR)"/>
+<var name="SPEECH_CONFIG" value="(0 + RAM_Y_BEGIN_ADDR)"/>
+<var name="SPEECH_GLOBAL_X_BEGIN_ADDR" value="(0 + RAM_X_BEGIN_ADDR)"/>
+<var name="SPEECH_GLOBAL_Y_BEGIN_ADDR" value="(0 + RAM_Y_BEGIN_ADDR)"/>
+<var name="FR_GLOBAL_X_BEGIN_ADDR" value="(7016 + RAM_X_BEGIN_ADDR)"/>
+<var name="FR_GLOBAL_Y_BEGIN_ADDR" value="(8988 + RAM_Y_BEGIN_ADDR)"/>
+<var name="FR_LOCAL_X_BEGIN_ADDR" value="(8118 + RAM_X_BEGIN_ADDR)"/>
+<var name="FR_LOCAL_Y_BEGIN_ADDR" value="(9378 + RAM_Y_BEGIN_ADDR)"/>
+<var name="HR_GLOBAL_X_BEGIN_ADDR" value="(7016 + RAM_X_BEGIN_ADDR)"/>
+<var name="HR_GLOBAL_Y_BEGIN_ADDR" value="(8988 + RAM_Y_BEGIN_ADDR)"/>
+<var name="HR_LOCAL_X_BEGIN_ADDR" value="(9388 + RAM_X_BEGIN_ADDR)"/>
+<var name="HR_LOCAL_Y_BEGIN_ADDR" value="(9112 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AMR_EFR_GLOBAL_X_BEGIN_ADDR" value="(7016 + RAM_X_BEGIN_ADDR)"/>
+<var name="AMR_EFR_GLOBAL_Y_BEGIN_ADDR" value="(8988 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AMR_EFR_LOCAL_X_BEGIN_ADDR" value="(9382 + RAM_X_BEGIN_ADDR)"/>
+<var name="AMR_EFR_LOCAL_Y_BEGIN_ADDR" value="(9218 + RAM_Y_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_X_BEGIN_ADDR" value="(9388 + RAM_X_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_Y_BEGIN_ADDR" value="(9378 + RAM_Y_BEGIN_ADDR)"/>
+<instance address="(0+SPEECH_BUFFERS)*2" type="SPEECH_BUFFERS" name="SPEECH_BUFFERS"/>
+<instance address="(0+SPEECH_CONFIG)*2" type="SPEECH_CONFIG" name="SPEECH_CONFIG"/>
+<instance address="(0+SPEECH_GLOBAL_X_BEGIN_ADDR)*2" type="SPEECH_GLOBAL_X_BEGIN_ADDR" name="SPEECH_GLOBAL_X_BEGIN_ADDR"/>
+<instance address="(0+SPEECH_GLOBAL_Y_BEGIN_ADDR)*2" type="SPEECH_GLOBAL_Y_BEGIN_ADDR" name="SPEECH_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+FR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Gsm_Coder_X_BEGIN_ADDR" name="CII_Gsm_Coder_X_BEGIN_ADDR"/>
+<instance address="(0+FR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Gsm_Coder_Y_BEGIN_ADDR" name="CII_Gsm_Coder_Y_BEGIN_ADDR"/>
+<instance address="(290+FR_LOCAL_X_BEGIN_ADDR)*2" type="CII_vad_computation_fr_X_BEGIN_ADDR" name="CII_vad_computation_fr_X_BEGIN_ADDR"/>
+<instance address="(0+FR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Gsm_Decoder_X_BEGIN_ADDR" name="CII_Gsm_Decoder_X_BEGIN_ADDR"/>
+<instance address="(0+FR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Gsm_Decoder_Y_BEGIN_ADDR" name="CII_Gsm_Decoder_Y_BEGIN_ADDR"/>
+<instance address="(0+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_speechEncoder_X_BEGIN_ADDR" name="CII_speechEncoder_X_BEGIN_ADDR"/>
+<instance address="(0+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_speechEncoder_Y_BEGIN_ADDR" name="CII_speechEncoder_Y_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_iir_d_opt_X_BEGIN_ADDR" name="CII_iir_d_opt_X_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_aflat_opt_X_BEGIN_ADDR" name="CII_aflat_opt_X_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_speechEncoder_inner_0_X_BEGIN_ADDR" name="CII_speechEncoder_inner_0_X_BEGIN_ADDR"/>
+<instance address="(324+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_aFlatRcDp_opt_Y_BEGIN_ADDR" name="CII_aFlatRcDp_opt_Y_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_getSfrmLpcTx_opt_X_BEGIN_ADDR" name="CII_getSfrmLpcTx_opt_X_BEGIN_ADDR"/>
+<instance address="(282+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_getSfrmLpcTx_opt_Y_BEGIN_ADDR" name="CII_getSfrmLpcTx_opt_Y_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_speechEncoder_inner_1_X_BEGIN_ADDR" name="CII_speechEncoder_inner_1_X_BEGIN_ADDR"/>
+<instance address="(282+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_lpcIir_opt_paris_Y_BEGIN_ADDR" name="CII_lpcIir_opt_paris_Y_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_openLoopLagSearch_new_X_BEGIN_ADDR" name="CII_openLoopLagSearch_new_X_BEGIN_ADDR"/>
+<instance address="(50+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_openLoopLagSearch_new_Y_BEGIN_ADDR" name="CII_openLoopLagSearch_new_Y_BEGIN_ADDR"/>
+<instance address="(124+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_sfrmAnalysis_opt_X_BEGIN_ADDR" name="CII_sfrmAnalysis_opt_X_BEGIN_ADDR"/>
+<instance address="(50+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_sfrmAnalysis_opt_Y_BEGIN_ADDR" name="CII_sfrmAnalysis_opt_Y_BEGIN_ADDR"/>
+<instance address="(190+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_flat_opt_X_BEGIN_ADDR" name="CII_flat_opt_X_BEGIN_ADDR"/>
+<instance address="(50+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_flat_opt_Y_BEGIN_ADDR" name="CII_flat_opt_Y_BEGIN_ADDR"/>
+<instance address="(190+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_rcToCorrDpL_opt_X_BEGIN_ADDR" name="CII_rcToCorrDpL_opt_X_BEGIN_ADDR"/>
+<instance address="(50+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_vad_algorithm_Y_BEGIN_ADDR" name="CII_vad_algorithm_Y_BEGIN_ADDR"/>
+<instance address="(190+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_aflat_opt_inner_0_X_BEGIN_ADDR" name="CII_aflat_opt_inner_0_X_BEGIN_ADDR"/>
+<instance address="(222+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_lpcCorrQntz_opt_X_BEGIN_ADDR" name="CII_lpcCorrQntz_opt_X_BEGIN_ADDR"/>
+<instance address="(50+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_lpcCorrQntz_opt_Y_BEGIN_ADDR" name="CII_lpcCorrQntz_opt_Y_BEGIN_ADDR"/>
+<instance address="(174+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_aToRc_opt2_X_BEGIN_ADDR" name="CII_aToRc_opt2_X_BEGIN_ADDR"/>
+<instance address="(324+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_aToRc_opt2_Y_BEGIN_ADDR" name="CII_aToRc_opt2_Y_BEGIN_ADDR"/>
+<instance address="(736+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_pitchLags_new_X_BEGIN_ADDR" name="CII_pitchLags_new_X_BEGIN_ADDR"/>
+<instance address="(978+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_pitchLags_new_Y_BEGIN_ADDR" name="CII_pitchLags_new_Y_BEGIN_ADDR"/>
+<instance address="(736+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_bestDelta_new_X_BEGIN_ADDR" name="CII_bestDelta_new_X_BEGIN_ADDR"/>
+<instance address="(978+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_bestDelta_new_Y_BEGIN_ADDR" name="CII_bestDelta_new_Y_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_sfrmAnalysis_opt_inner_0_X_BEGIN_ADDR" name="CII_sfrmAnalysis_opt_inner_0_X_BEGIN_ADDR"/>
+<instance address="(240+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_sfrmAnalysis_opt_inner_0_Y_BEGIN_ADDR" name="CII_sfrmAnalysis_opt_inner_0_Y_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_hnwFilt_opt_X_BEGIN_ADDR" name="CII_hnwFilt_opt_X_BEGIN_ADDR"/>
+<instance address="(276+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_lpcZsIir_opt_Y_BEGIN_ADDR" name="CII_lpcZsIir_opt_Y_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_decorr_opt_X_BEGIN_ADDR" name="CII_decorr_opt_X_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_v_srch_opt_X_BEGIN_ADDR" name="CII_v_srch_opt_X_BEGIN_ADDR"/>
+<instance address="(240+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_v_srch_opt_Y_BEGIN_ADDR" name="CII_v_srch_opt_Y_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_sfrmAnalysis_opt_inner_1_X_BEGIN_ADDR" name="CII_sfrmAnalysis_opt_inner_1_X_BEGIN_ADDR"/>
+<instance address="(644+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_lpcCorrQntz_opt_inner_0_Y_BEGIN_ADDR" name="CII_lpcCorrQntz_opt_inner_0_Y_BEGIN_ADDR"/>
+<instance address="(326+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_aflatRecursionLoop_opt_inner_0_X_BEGIN_ADDR" name="CII_aflatRecursionLoop_opt_inner_0_X_BEGIN_ADDR"/>
+<instance address="(0+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_speechDecoder_opt_X_BEGIN_ADDR" name="CII_speechDecoder_opt_X_BEGIN_ADDR"/>
+<instance address="(0+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_speechDecoder_opt_Y_BEGIN_ADDR" name="CII_speechDecoder_opt_Y_BEGIN_ADDR"/>
+<instance address="(282+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_a_sst_opt_Y_BEGIN_ADDR" name="CII_a_sst_opt_Y_BEGIN_ADDR"/>
+<instance address="(282+HR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_speechDecoder_opt_inner_0_Y_BEGIN_ADDR" name="CII_speechDecoder_opt_inner_0_Y_BEGIN_ADDR"/>
+<instance address="(40+HR_LOCAL_X_BEGIN_ADDR)*2" type="CII_speechDecoder_opt_inner_1_X_BEGIN_ADDR" name="CII_speechDecoder_opt_inner_1_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_AMR_Encode_X_BEGIN_ADDR" name="CII_AMR_Encode_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_AMR_Encode_Y_BEGIN_ADDR" name="CII_AMR_Encode_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_vad1_Y_BEGIN_ADDR" name="CII_vad1_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Levinson_X_BEGIN_ADDR" name="CII_Levinson_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Levinson_Y_BEGIN_ADDR" name="CII_Levinson_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_subframePostProc_Y_BEGIN_ADDR" name="CII_subframePostProc_Y_BEGIN_ADDR"/>
+<instance address="(262+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Syn_filt_Y_BEGIN_ADDR" name="CII_Syn_filt_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Autocorr_X_BEGIN_ADDR" name="CII_Autocorr_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Autocorr_Y_BEGIN_ADDR" name="CII_Autocorr_Y_BEGIN_ADDR"/>
+<instance address="(418+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Az_lsp_X_BEGIN_ADDR" name="CII_Az_lsp_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Chebps_Y_BEGIN_ADDR" name="CII_Chebps_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_cor_h_x_X_BEGIN_ADDR" name="CII_cor_h_x_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_cor_h_X_BEGIN_ADDR" name="CII_cor_h_X_BEGIN_ADDR"/>
+<instance address="(962+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_cor_h_Y_BEGIN_ADDR" name="CII_cor_h_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_G_pitch_Y_BEGIN_ADDR" name="CII_G_pitch_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_subframePreProc_X_BEGIN_ADDR" name="CII_subframePreProc_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_AMR_Decode_X_BEGIN_ADDR" name="CII_AMR_Decode_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_AMR_Decode_Y_BEGIN_ADDR" name="CII_AMR_Decode_Y_BEGIN_ADDR"/>
+<instance address="(292+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_bits2prm_amr_efr_X_BEGIN_ADDR" name="CII_bits2prm_amr_efr_X_BEGIN_ADDR"/>
+<instance address="(292+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_dtx_dec_X_BEGIN_ADDR" name="CII_dtx_dec_X_BEGIN_ADDR"/>
+<instance address="(292+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_amr_dec_122_X_BEGIN_ADDR" name="CII_amr_dec_122_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_prm2bits_amr_efr_X_BEGIN_ADDR" name="CII_prm2bits_amr_efr_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_prm2bits_amr_efr_Y_BEGIN_ADDR" name="CII_prm2bits_amr_efr_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_schur_recursion_Y_BEGIN_ADDR" name="CII_schur_recursion_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_compute_rav1_Y_BEGIN_ADDR" name="CII_compute_rav1_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_spectral_comparison_Y_BEGIN_ADDR" name="CII_spectral_comparison_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_vad_computation_X_BEGIN_ADDR" name="CII_vad_computation_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_vad1_inner_0_X_BEGIN_ADDR" name="CII_vad1_inner_0_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_dtx_enc_X_BEGIN_ADDR" name="CII_dtx_enc_X_BEGIN_ADDR"/>
+<instance address="(418+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Q_plsf_3_X_BEGIN_ADDR" name="CII_Q_plsf_3_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Q_plsf_3_Y_BEGIN_ADDR" name="CII_Q_plsf_3_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_lsp_122_X_BEGIN_ADDR" name="CII_lsp_122_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_COD_AMR_122_inner_0_X_BEGIN_ADDR" name="CII_COD_AMR_122_inner_0_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_COD_AMR_122_inner_0_Y_BEGIN_ADDR" name="CII_COD_AMR_122_inner_0_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_code_10i40_35bits_Y_BEGIN_ADDR" name="CII_code_10i40_35bits_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_gainQuant_M122_Y_BEGIN_ADDR" name="CII_gainQuant_M122_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Lag_max_M122_X_BEGIN_ADDR" name="CII_Lag_max_M122_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Lag_max_M122_Y_BEGIN_ADDR" name="CII_Lag_max_M122_Y_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_set_sign12k2_122_X_BEGIN_ADDR" name="CII_set_sign12k2_122_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_search_M122_X_BEGIN_ADDR" name="CII_search_M122_X_BEGIN_ADDR"/>
+<instance address="(388+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_build_code_M122_X_BEGIN_ADDR" name="CII_build_code_M122_X_BEGIN_ADDR"/>
+<instance address="(962+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_SEARCH_LOOP_M122_Y_BEGIN_ADDR" name="CII_SEARCH_LOOP_M122_Y_BEGIN_ADDR"/>
+<instance address="(962+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_build_code_com2_Y_BEGIN_ADDR" name="CII_build_code_com2_Y_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Int_lpc_1and3_Y_BEGIN_ADDR" name="CII_Int_lpc_1and3_Y_BEGIN_ADDR"/>
+<instance address="(418+AMR_EFR_LOCAL_X_BEGIN_ADDR)*2" type="CII_Q_plsf_5_X_BEGIN_ADDR" name="CII_Q_plsf_5_X_BEGIN_ADDR"/>
+<instance address="(102+AMR_EFR_LOCAL_Y_BEGIN_ADDR)*2" type="CII_Q_plsf_5_Y_BEGIN_ADDR" name="CII_Q_plsf_5_Y_BEGIN_ADDR"/>
+
+</archive>

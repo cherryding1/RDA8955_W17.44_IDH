@@ -1,0 +1,82 @@
+comment "--- platform/edrv/fmd ---"
+
+config FM_MODEL
+	option skiph
+	string "FM Model"
+	default rdafm_8809e if CT_ASIC_8809
+	default rdafm_8955 if CT_ASIC_8955
+	---help---
+		It defines FM Model for integrated chip.
+
+config FM_RADIO_ENABLE
+	option skipmk
+	bool "FM Radio Enable"
+	default y
+	---help---
+		MMI support FM radio. It should be defined if FM_MODEL is defined.
+
+choice
+	option skipmk
+	option skiph
+	prompt "32k clock pin used by FM: 1/0"
+	default fmpin0
+	---help---
+		It defines 32k clock pin of FM. 0 is for CLK_OUT pin; 1 is for 32K_CLK pin.
+
+	config fmpin0
+		option skipmk
+		option skiph
+		bool	"CLK_OUT"
+	
+	config fmpin1
+		option skipmk
+		option skiph
+		bool	"32K_CLK"	
+endchoice
+		
+config FM_RADIO_RECORD
+	option skipmk
+	bool "FM Radio Record"
+	depends on FM_RADIO_ENABLE && SOUND_RECORDER_SUPPORT
+	default y
+
+config FM_RECORD_WITH_NEW_PATH
+	option skipmk
+	bool "FM Record With new path"
+	default n
+
+config FM_USING_I2S
+	option skiph
+	bool "use i2s"
+	default n
+	---help---
+		set to 1 if I2S used, set to 0 if LINE-IN
+
+config FM_USE_32K_CLK_PIN
+	option skiph
+	string
+	default 0 if fmpin0
+	default 1 if fmpin1
+	---help---
+		It defines 32k clock pin of FM. 0 is for CLK_OUT pin; 1 is for 32K_CLK pin.
+
+config FM_LDO_WORKAROUND
+	option skipmk
+	bool	"FM LDO workaround"
+	default n
+	---help---
+		To support set Dcdc when Ldo Mode.
+
+config FM_RADIO_WITH_EXTERNAL_ANT
+	option skipmk
+	bool "FM_RADIO_WITH_EXTERNAL_ANT"
+	default n
+	---help---
+		It defines whether could support FM with external antenna or not.
+
+config FM_FLIGHT_MODE_SUPPORT
+    option skipmk
+    bool "Fm Flight Mode Support"
+    default n
+    ---help---
+        Support flight mode when in FM

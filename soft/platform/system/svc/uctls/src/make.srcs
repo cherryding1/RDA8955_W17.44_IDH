@@ -1,0 +1,12 @@
+# leave this comment and the last \ on last line for easier merge
+ifeq "${WITHOUT_UCTLS}" "1"
+C_SRC :=                     \
+         uctls_descriptor.c
+else
+C_SRC :=                     \
+         uctls_descriptor.c  \
+         uctls_fnc.c
+endif
+
+
+

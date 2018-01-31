@@ -1,0 +1,53 @@
+Source delivery edrv v2
+=======================
+  Workspace:
+    ^/Sources/application/branches/Total_BJ application
+    ^/Sources/env/trunk                     env
+    ^/Sources/platform/trunk                platform
+    ^/Sources/base/trunk                    platform/base
+    ^/Sources/chip/trunk                    platform/chip
+    ^/Sources/csw/branches/Total_BJ         ${PLATFORM_SERVICE}
+    ^/Sources/edrv/releases/v2              platform/edrv
+    ^/Sources/mdi/branches/Total_BJ         ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/branches/Total_BJ       ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk                     ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk                     ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk           platform_test
+    ^/Sources/target/trunk                  target
+    ^/Sources/toolpool/trunk                toolpool
+
+  Compatibility, upgrade notes:
+    * Requires SVC v2 or later.
+    * Requires CHIP v4.3 or later.
+    * Requires TGT v2 or later.
+
+  Changes:
+    * First real release. A lot of changes, especially in BTD, SIMD, AUD.
+    * PMD Opal: fixed spi protection between different task.
+    * MEMD: Added a memd_FlashRomulatorSetRamMode function to configure the romulator to behave as a RAM.
+
+Source delivery edrv v1
+=======================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v2       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Libraries/chip/releases/v2.1  platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/releases/v1      platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/trunk           ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk             ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/trunk          target
+    ^/Sources/toolpool/trunk        toolpool
+
+  Compatibility, upgrade notes:
+    * Should be compatible with Total_integration (tested at r29206) but btd changes a lot in Total_integration.
+
+  Changes:
+    * include simd
+    * initial release
+

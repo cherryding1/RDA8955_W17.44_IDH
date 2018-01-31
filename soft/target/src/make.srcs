@@ -1,0 +1,13 @@
+C_SRC := 
+
+ifneq "${STANDALONE_RAMINIT_IMAGE}-${BUILD_RAMINIT_IMAGE}" "1-"
+C_SRC += target_boot_config.c
+endif
+
+ifneq "${STANDALONE_RAMINIT_IMAGE}-${BUILD_RAMINIT_IMAGE}" "1-1"
+C_SRC += target_config.c
+endif
+
+S_SRC :=
+
+

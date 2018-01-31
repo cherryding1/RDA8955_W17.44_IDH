@@ -1,0 +1,13 @@
+<module name="TSD">
+
+    <!-- Functions -->
+    <fn name="tsd_GpioIrqHandler"                 id="0x1290" group="TSD API"/>
+    <fn name="tsd_Debounce"                       id="0x1291" group="TSD API"/>
+    <fn name="tsd_GetScreenPoints"                id="0x1292" group="TSD API"/>
+    <fn name="tsd_GetSamples"                     id="0x1293" group="TSD API"/>
+    <fn name="tsd_EvaluateSamples"                id="0x1294" group="TSD API"/>
+    <fn name="tsd_Open"                           id="0x1295" group="TSD API"/>
+    <fn name="tsd_Close"                          id="0x1296" group="TSD API"/>
+
+</module>
+

@@ -1,0 +1,7 @@
+# leave this comment and the last \ on last line for easier merge
+C_SRC := \
+         imgs.c \
+         imgs_similarize.c \
+         imgs_jpeg_enc.c \
+         imgs_jpeg_dec.c \
+         \

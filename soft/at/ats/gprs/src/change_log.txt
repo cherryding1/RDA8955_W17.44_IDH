@@ -1,0 +1,101 @@
+
+10.Data:2008-04-01
+Caoxh
+1)调试通过+CGREG命令;
+
+9.Data:2008-03-31
+Caoxh
+1)调试通过+CGATT命令;
+2)调试通过+CGQREQ命令；
+3)去掉了SNFS（该命令不是GPRS模块的命令，原来at_cmd_gprs.h/c中带的，一直没有去掉）。
+
+8.Data:2008-03-31
+Yangy
+1)调试通过CGDCONT命令。（CFW中目前不支持X.25和OSPIH这2种格式，所以请不要用其做测试）
+2)修该g_staAtGprsCidInfo的定义为AT_Gprs_CidInfo g_staAtGprsCidInfo[AT_PDPCID_MAX+1]
+3)根据Cxh的意见进行修改。
+
+7.Data:2008-03-24
+Yangy
+1)增加CGANS, CGACT命令支持--Lable:11582
+2)修改AT_GPRS_AsyncEventProcess()函数
+3)增加部分部分全局变量，如g_staAtGprsCidInfo
+4)统一全局变量命名。
+
+6.Date:2008-03-21
+Caoxh:
+Update:
+1)at_cmd_gprs.c--Lable:11499
+  A.实现了AT_GPRS_CmdFunc_CGSMS().
+  B.增加空函数：
+    UINT32  CFW_GprsGetSmsSeviceMode(
+	UINT8* pnService);
+
+     UINT32  CFW_GprsSetSmsSeviceMode(
+	UINT8  nService);
+2)at_cmd_gprs.h--Lable:11499
+  A.增加了AT_GPRS_CID_COUNT宏定义.
+
+5.Date:2008-03-20
+Suwg:
+Update:
+1)at_cmd_gprs.c--Lable:11417
+  A.实现了AT_GPRS_CmdFunc_CGREG().
+
+4.
+Date:2008-03-20
+Caoxh:
+Update:
+1)at_cmd_gprs.c--Lable:11417
+  A.实现了AT_GPRS_CmdFunc_CGATT().
+  B.增加了应答处理函数AT_GPRS_Result_OK/AT_GPRS_Result_ERR。
+  C.修改了命令处理函数中应答处理部分的代码，改为直接调用AT_GPRS_Result_OK/AT_GPRS_Result_ERR。
+  D.为了能link，在该文件中加入以下空函数.
+    CFW_GprsAtt   
+2)at_cmd_gprs.h--Lable:11414
+  A.增加了AT_GPRS_Result_OK/AT_GPRS_Result_ERR的声明。
+  
+3.
+Date:2008-03-19
+Caoxh:
+Update:
+1)at_cmd_gprs.c--Lable:11335
+  A.实现了AT_GPRS_CmdFunc_CGQREQ().
+  B.实现了AT_GPRS_CmdFunc_CGQMIN().
+  C.为了能link，在该文件中加入以下几个空函数.
+    CFW_GprsSetPdpCxt
+    CFW_GprsGetPdpCxt
+    CFW_GprsGetReqQos
+    CFW_GprsSetReqQos
+    CFW_GprsGetMinQos
+    CFW_GprsSetMinQos
+
+2.
+Date:2008-03-18
+Caoxh:
+Update:
+1)at_cmd_gprs.c--Lable:11283
+  A.增加了GPRS相关的所有函数的函数体(NULL).
+  B.实现了AT_GPRS_CmdFunc_CGDCONT().
+  
+2)at_cmd_gprs.h--Lable:11284
+  A.增加了GPRS相关函数的声明.
+  B.增加了Apn,PdpType,PdpAddr长度的宏定义.
+  
+3)at_errinfo.h--Lable:11283
+  A.在The CME error table中增加了GPRS相关的内容
+    
+4)at_errcode.h--Lable:11285
+  A.增加了GPRS相关的错误码定义
+  
+5)at_command_table.c--Lable:11311
+  A.在CommandTable中增加了GPRS相关的内容
+  
+6)at_main.c--Lable:11285
+  A.在AT_AsyncEventProcess()函数中增加了GPRS相关的EVENT分发.
+7)at_sa.h
+  A.Add the SA_CMDCLS_GPRS in SA_CMD_CLASS_T enum.  
+1.
+Date:2008-03-18
+Zhanggs：
+Create.

@@ -1,0 +1,242 @@
+digraph ClassChart {
+    subgraph cluster_changeloglib {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "changeloglib.rb"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+
+        Changelog [
+            fontcolor = black,
+            URL = "classes/Changelog.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "Changelog"
+        ]
+
+    }
+
+    subgraph cluster_deliv {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "deliv"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+        deliv[
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+        ]
+
+    }
+
+    subgraph cluster_delivlib {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "delivlib.rb"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+
+        subgraph cluster_DELIV {
+            fillcolor = palegreen1
+            URL = "classes/DELIV.html"
+            fontname = Arial
+            color = blue
+            label = "DELIV"
+            style = filled
+            DELIV [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            DELIV__Config [
+                fontcolor = black,
+                URL = "classes/DELIV/Config.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Config"
+            ]
+
+            DELIV__Deliv [
+                fontcolor = black,
+                URL = "classes/DELIV/Deliv.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Deliv"
+            ]
+
+        }
+
+    }
+
+    subgraph cluster_svnlib {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "svnlib.rb"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+
+        SVN__SvnError -> SVN__SvnNotATag [
+
+        ]
+
+        SVN__SvnError -> SVN__SvnNotAWorkdir [
+
+        ]
+
+        StandardError [
+            URL = "classes/StandardError.html",
+            label = "StandardError"
+        ]
+
+        StandardError -> SVN__SvnError [
+
+        ]
+
+        subgraph cluster_SVN {
+            fillcolor = palegreen1
+            URL = "classes/SVN.html"
+            fontname = Arial
+            color = blue
+            label = "SVN"
+            style = filled
+            SVN [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            SVN__SvnNotATag [
+                fontcolor = black,
+                URL = "classes/SVN/SvnNotATag.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "SvnNotATag"
+            ]
+
+            SVN__SvnNotAWorkdir [
+                fontcolor = black,
+                URL = "classes/SVN/SvnNotAWorkdir.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "SvnNotAWorkdir"
+            ]
+
+            SVN__SvnError [
+                fontcolor = black,
+                URL = "classes/SVN/SvnError.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "SvnError"
+            ]
+
+        }
+
+    }
+
+    subgraph cluster_workspacelib {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "workspacelib.rb"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+
+        subgraph cluster_WORKSPACE {
+            fillcolor = palegreen1
+            URL = "classes/WORKSPACE.html"
+            fontname = Arial
+            color = blue
+            label = "WORKSPACE"
+            style = filled
+            WORKSPACE [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            WORKSPACE__WorkspaceHelper [
+                fontcolor = black,
+                URL = "classes/WORKSPACE/WorkspaceHelper.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "WorkspaceHelper"
+            ]
+
+            WORKSPACE__Workspace [
+                fontcolor = black,
+                URL = "classes/WORKSPACE/Workspace.html",
+                shape = ellipse,
+                color = palegoldenrod,
+                style = filled,
+                label = "Workspace"
+            ]
+
+        }
+
+    }
+
+    subgraph cluster_wsh {
+        compound = true
+        bgcolor = lightcyan1
+        fontname = Arial
+        fontsize = 8
+        label = "wsh"
+        node [
+            fontname = Arial,
+            fontsize = 8,
+            color = black
+        ]
+        wsh[
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+        ]
+    }
+
+    deliv -> DELIV__Deliv [style=dotted];
+    wsh -> WORKSPACE__WorkspaceHelper [style=dotted];
+    DELIV__Deliv -> SVN [style=dotted];
+    DELIV__Deliv -> WORKSPACE__Workspace [style=dotted];
+    DELIV__Deliv -> Changelog [style=dotted];
+    WORKSPACE__WorkspaceHelper -> SVN [style=dotted];
+    WORKSPACE__Workspace -> SVN [style=dotted];
+
+}

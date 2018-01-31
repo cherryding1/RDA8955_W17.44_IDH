@@ -1,0 +1,69 @@
+comment "--- platform/edrv/pmd ---"
+
+config PM_MODEL
+	option skiph
+	string "PM Model"
+	default "pmu_8809" if CT_ASIC_8809
+	default "pmu_8955" if CT_ASIC_8955
+	default "pmu_8809" if CT_ASIC_8909
+	---help---
+		It defines PM Model for integrated Chip.
+
+config AUD_SPK_LINE_L_R_DOUBLE
+	option skiph
+	bool	"aud spk line l r double"
+	default y
+	---help---
+		Whether to enable speaker line L-R-double(left and right line parallel) mode,
+		if hardware left and right line paralled,this config must set to 1. 
+
+choice AUD_SPK_LINE_CLASS_MODE
+	option enum
+	option skiph
+	prompt "speaker class mode"
+	default class_d
+	---help---
+		Select speaker class mode: class_ab, class_d, class_k
+		If LCD_BACKLIGHT_CHARGE_PUMP or HEADPHONE_CHARGE_PUMP is enabled, class_k must be selected
+		
+	config class_ab
+		option skiph
+		bool	"class_ab"
+	
+	config class_d
+		option skiph
+		bool	"class_d"
+	
+	config 	class_k
+		option skiph
+		bool	"class_k"
+		
+endchoice
+
+config FM_8809E2_LOD_MODE
+	option skipmk
+	bool "use LDO"
+	default y
+	---help---
+		vcore enter LDO mode when FM open,work with FM_LDO_WORKAROUND
+
+config FM_RADIO_WITH_EXTERNAL_ANT
+	option skipmk
+	bool	"use EXTERNAL ANT"
+	default n
+	---help---
+		listen radio without headset, just use external ant
+
+config LCD_BACKLIGHT_CHARGE_PUMP
+	option skiph
+	bool "LCD backlight charge pump"
+	default n
+	---help---
+		whether to enable charge pump for lcd backlight.
+
+config _USE_VCORE_LDO_MODE_
+    option skipmk
+    bool "_USE_VCORE_LDO_MODE_"
+    default n
+    ---help---
+    	voree is ldo mode.

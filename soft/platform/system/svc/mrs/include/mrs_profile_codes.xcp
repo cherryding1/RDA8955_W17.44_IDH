@@ -1,0 +1,10 @@
+<module name="MRS">
+    <!-- Functions -->
+    <fn name="mrs_codecWriteAudioData"      id="0x1240" group="MRS"/>
+    <fn name="mrs_codecWriteVideoData"      id="0x1241" group="MRS"/>
+    <fn name="mrs_codecRecord"              id="0x1242" group="MRS"/>
+    <fn name="mrs_task"                     id="0x1243" group="MRS"/>
+    <fn name="mrs_blit"                     id="0x1244" group="MRS"/>
+</module>
+
+

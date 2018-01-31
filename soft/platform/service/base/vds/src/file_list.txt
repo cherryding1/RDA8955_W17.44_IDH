@@ -1,0 +1,9 @@
+1. dsm_cf.c/.h         DSM(Data Storage Management)使用的通用函数定义.
+2. dsm_stdtype.h       DSM使用的标准类型定义文件.
+3. flash_simu.c/.h     flash模拟程序实现
+4. vds_local.h         VDS内部实现机制函数及结构声明
+5. vds_api.h           VDS的对外接口声明
+6. vds_cd.h            VDS公用宏放在这里, cd-common define
+
+
+n. change_log.txt 更改日值

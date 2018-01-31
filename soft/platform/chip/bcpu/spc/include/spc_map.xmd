@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive asm="no">
+    <comment>
+        This file contains the portion of SPC's memory map that will be
+        accessible through CoolWatcher (or any CoolXml tool).
+    </comment>
+
+    <include file="../../include/spc_mailbox.xmd"/>
+    <include file="spc_ctx.xmd"/>
+
+    <!-- Type used to define the accessible structures of SPC. -->
+    <typedef name="SPC_MAP_ACCESS_T">
+        <comment>
+            Type used to define the accessible structures of SPC.
+        </comment>
+        <ptr type="SPC_MAILBOX" name="mailbox"/>
+        <ptr type="SPC_CONTEXT" name="context"/>
+    </typedef>
+
+</archive>

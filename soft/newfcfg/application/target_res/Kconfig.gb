@@ -1,0 +1,169 @@
+menuconfig __MMI_GB__
+    option skipmk
+    bool "GB smart"
+    default y
+help 
+    GB and Reverie are not compatible.
+    Switch on GB then Reverie need to be switched off.
+    Switch on GB to support Gb smart inputmethod.    
+        
+if __MMI_GB__
+
+menuconfig __MMI_GB_V5__
+    option skipmk
+    bool "GB V5"
+    default n
+   
+config __MMI_SMART_URDU__
+    option skipmk
+    bool "Urdu Smart"
+    depends on __MMI_LANG_URDU__ && __MMI_GB_V5__
+    default n 
+       
+config __MMI_SMART_GREEK__
+    option skipmk
+    bool "Greek Smart"
+    depends on __MMI_LANG_GREEK__ && __MMI_GB_V5__
+    default n
+    
+config __MMI_SMART_HEBREW__
+    option skipmk
+    bool "Hebrew Smart"
+    depends on __MMI_LANG_HEBREW__ && __MMI_GB_V5__
+    default n  
+
+if !(__MMI_MULTITAP_BANGLA_SPEC__)     
+config __MMI_SMART_BENGALI__
+    option skipmk
+    bool "Bengali Smart"
+    depends on __MMI_LANG_BENGALI__ && __MMI_GB_V5__
+    default n
+endif
+     
+config __MMI_GB_ENGLISH__
+    option skipmk
+    bool "English Smart"
+    depends on __MMI_LANG_ENGLISH__
+    default n 
+    
+config __MMI_SMART_FRENCH__
+    option skipmk
+    bool "French Smart"
+    depends on __MMI_LANG_FRENCH__ || __MMI_LANG_CA_FRENCH__
+    default n 
+
+config __MMI_SMART_ITALIAN__
+    option skipmk
+    bool "Italian Smart"
+    depends on __MMI_LANG_ITALIAN__
+    default n 
+        
+config __MMI_SMART_VIETNAMESE__
+    option skipmk
+    bool "Vietnamese Smart"
+    depends on __MMI_LANG_VIETNAMESE__
+    default n     
+    
+config __MMI_SMART_RUSSIAN__
+    option skipmk
+    bool "Russian Smart"
+    depends on __MMI_LANG_RUSSIAN__
+    default n            
+
+config __MMI_SMART_ARABIC__
+    option skipmk
+    bool "Arabic Smart"
+    depends on __MMI_LANG_ARABIC__ && !(MEM_ULC_3216)
+    default n
+    
+config __MMI_SMART_THAI__
+    option skipmk
+    bool "Thai Smart"
+    depends on __MMI_LANG_THAI__
+    default n
+    
+config __MMI_GB_SM_CHINESE__
+    option skipmk
+    bool "SM Chinese"
+    depends on __MMI_LANG_SM_CHINESE__
+    default n
+    
+config __MMI_GB_TR_CHINESE__
+    option skipmk
+    bool "TR Chinese"
+    depends on __MMI_LANG_TR_CHINESE__
+    default n        
+    
+config __MMI_SMART_GERMAN__
+    option skipmk
+    bool "German Smart"
+    depends on __MMI_LANG_GERMAN__
+    default n     
+    
+config __MMI_SMART_SPANISH__
+    option skipmk
+    bool "Spanish Smart"
+    depends on __MMI_LANG_SPANISH__ || __MMI_LANG_SA_SPANISH__
+    default n    
+    
+config __MMI_GB_SMART_PORTUGUESE__
+    option skipmk
+    bool "Portuguese Smart"
+    depends on __MMI_LANG_PORTUGUESE__ || __MMI_LANG_SA_PORTUGUESE__
+    default n   
+    
+config __MMI_SMART_PERSIAN__
+    option skipmk
+    bool "Persian Smart"
+    depends on __MMI_LANG_PERSIAN__
+    default n
+    
+config __MMI_SMART_TURKISH__
+    option skipmk
+    bool "Turkish Smart"
+    depends on __MMI_LANG_TURKISH__
+    default n     
+    
+config __MMI_SMART_INDONESIAN__
+    option skipmk
+    bool "Indonesian Smart"
+    depends on __MMI_LANG_INDONESIAN__
+    default n     
+    
+config __MMI_SMART_MALAY__
+    option skipmk
+    bool "Malay Smart"
+    depends on __MMI_LANG_MALAY__
+    default n 
+     
+config __MMI_SMART_SWAHILI__
+    option skipmk
+    bool "Swahili Smart"
+    depends on __MMI_LANG_SWAHILI__
+    default n
+        
+config __MMI_SMART_HINDI__
+    option skipmk
+    bool "Hindi Smart"
+    depends on __MMI_LANG_HINDI__
+    default n
+    
+config __MMI_SMART_TELUGU__
+    option skipmk
+    bool "Telugu Smart"
+    depends on __MMI_LANG_TELUGU__
+    default n
+    
+config __MMI_SMART_PUNJABI__
+    option skipmk
+    bool "Punjabi Smart"
+    depends on __MMI_LANG_PUNJABI__
+    default n
+           
+config __MMI_SMART_TAMIL__
+    option skipmk
+    bool "Tamil Smart"
+    depends on __MMI_LANG_TAMIL__
+    default n
+    
+endif    

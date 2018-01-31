@@ -1,0 +1,60 @@
+<archive asm="no">
+
+    <enum name="BOOT_MAIN_TAG">
+        <comment>
+            Magic tags used by the boot loader to switch between boot modes.
+        </comment>
+        <entry name="BOOT_MAIN_TAG_NORMAL"/>
+        <entry name="BOOT_MAIN_TAG_BREAKBOOT" value="0xB4EAB007"/>
+        <entry name="BOOT_MAIN_TAG_CALIB" value="0xCA1BCA1B"/>
+    </enum>
+
+    <enum name="BOOT_SECTOR_CMD_T">
+        <comment>List of Boot Sector commands.</comment>
+        <entry name="BOOT_SECTOR_CMD_ENTER_BOOT_MONITOR" value="0x4E6A821C">
+            <comment>The Boot Sector must jump into the ROMed Boot Monitor.</comment>
+        </entry>
+        <entry name="BOOT_SECTOR_CMD_ENTER_CALIB" value="0x4E6A8215">
+            <comment>The Boot Sector must jump into the calib daemon.</comment>
+        </entry>
+    </enum>
+
+    <var name="BOOT_SECTOR_EBC_VALID_TAG" value="0xB0075EC7">
+        <comment>
+            Value written in the Boot Sector structure to say that the EBC
+            configuration present in this structure is valid and can be programmed.
+            Used for the field ebcConfigValidTag.
+        </comment>
+    </var>
+
+    <var name="BOOT_SECTOR_EBC_EXT_VALID_TAG" value="0xEBC00E28">
+        <comment>
+            Value written in the Boot Sector structure to say that the EBC extension
+            configuration present in this structure is valid and can be programmed.
+            Used for the field ebcConfigValidTag.
+        </comment>
+    </var>
+
+    <typedef name="BOOT_SECTOR_STRUCT_T">
+        <comment>
+            Structure type used by the Boot Sector to determine in which mode it must
+            boot and how the EBC RAM must be configured (this is useful in case of
+            burst mode RAM).
+            This structure contains information written by HAL during the normal
+            execution of the code and used by the Boot Sector when the phone boots.
+        </comment>
+        <instance name="command" type="BOOT_SECTOR_CMD_T"/>
+        <uint32 name="ebcConfigValidTag" />
+        <uint32 name="ebcConfigRamTimings" />
+        <uint32 name="ebcConfigRamMode" />
+        <uint32 name="ebcExtConfigValidTag" />
+        <uint32 name="ebcFreq" />
+        <uint8 name="ramId" />
+        <uint8 name="reserved" count="2" />
+        <uint8 name="ebcConfigVersion" />
+    </typedef>
+
+    <typedef name="boot_map_globals" rubyconstants="yes">
+    </typedef>
+
+</archive>

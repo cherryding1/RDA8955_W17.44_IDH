@@ -1,0 +1,57 @@
+<module name="PAL">
+
+    <fn name="pal_FrameStart"                     id="0x0001"/>
+    <fn name="pal_FrameEnd"                       id="0x0002"/>
+    <fn name="pal_TimeTuning"                     id="0x0003"/>
+    <fn name="pal_SynchronizationChange"          id="0x0004"/>
+    <fn name="pal_FrequencyTuning"                id="0x0005"/>
+    <fn name="pal_SetGsmCounters"                 id="0x0006"/>
+    <fn name="pal_RxBufferCfg"                    id="0x0007"/>
+    <fn name="pal_SetMonRxWin"                    id="0x0008"/>
+    <fn name="pal_GetMonResult"                   id="0x0009"/>
+    <fn name="pal_SetFchRxWin"                    id="0x000A"/>
+    <fn name="pal_CloseFchRxWin"                  id="0x000B"/>
+    <fn name="pal_GetFchResult"                   id="0x000C"/>
+    <fn name="pal_SetSchRxWin"                    id="0x000D"/>
+    <fn name="pal_GetSchResult"                   id="0x000E"/>
+    <fn name="pal_SetIntRxWin"                    id="0x000F"/>
+    <fn name="pal_GetIntResult"                   id="0x0010"/>
+    <fn name="pal_SetNBurstRxWin"                 id="0x0011"/>
+    <fn name="pal_GetNBurstResult"                id="0x0012"/>
+    <fn name="pal_GetNBlockResult"                id="0x0013"/>
+    <fn name="pal_GetUsf"                         id="0x0014"/>
+    <fn name="pal_ABurstEncoding"                 id="0x0015"/>
+    <fn name="pal_NblockEncoding"                 id="0x0016"/>
+    <fn name="pal_SetTxWin"                       id="0x0017"/>
+    <fn name="pal_WinResize"                      id="0x0018"/>
+    <fn name="pal_SetTxWin_calib"                 id="0x0019"/>
+    <fn name="pal_StartCiphering"                 id="0x001A"/>
+    <fn name="pal_StopCiphering"                  id="0x001B"/>
+    <fn name="pal_GprsCiphering"                  id="0x001C"/>
+    <fn name="pal_StartTch"                       id="0x001D"/>
+    <fn name="pal_ChangeTchMode"                  id="0x001E"/>
+    <fn name="pal_RetrieveCurrentAMRCfg"          id="0x001F"/>
+    <fn name="pal_SetDtx"                         id="0x0020"/>
+    <fn name="pal_GetDtx"                         id="0x0021"/>
+    <fn name="pal_SetTchLoop"                     id="0x0022"/>
+    <fn name="pal_StopTch"                        id="0x0023"/>
+    <fn name="pal_FintSuspend"                    id="0x0024"/>
+    <fn name="pal_FintResume"                     id="0x0025"/>
+    <fn name="pal_GetElapsedTime"                 id="0x0026"/>
+    <fn name="pal_RfWakeUp"                       id="0x0027"/>
+    <fn name="pal_RfSleep"                        id="0x0028"/>
+    <fn name="pal_ResourceActive"                 id="0x0029"/>
+    <fn name="pal_ResourceInactive"               id="0x002A"/>
+    <fn name="pal_Sleep"                          id="0x002B"/>
+    <fn name="pal_SetUsrVector"                   id="0x002C"/>
+    <fn name="pal_SetUsrVectorMsk"                id="0x002D"/>
+    <fn name="pal_SleepDeep"                      id="0x002E"/>
+    <fn name="pal_Debug"                          id="0x0030"/>
+    <fn name="pal_Initialisation"                 id="0x00FF"/>
+
+    <fn name="PAL_FRAME"                          id="0x3730"/>
+    <fn name="pal_WinDebug"                       id="0x3731"/>
+    <fn name="SkipFrameAllowed"                   id="0x3732"/>
+
+</module>
+

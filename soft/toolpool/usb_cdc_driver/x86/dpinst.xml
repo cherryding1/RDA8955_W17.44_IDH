@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<dpInst>
+    <legacyMode/>
+    <deleteBinaries/>
+    <forceIfDriverIsNotBetter/>
+    <group>
+        <package path=".\driver\rda_enum.inf" />
+        <package path=".\driver\rda_u2s.inf" />
+        <package path=".\driver\android_winusb.inf" />
+        <package path=".\driver\wpdmtp.inf" />
+    </group>
+</dpInst>

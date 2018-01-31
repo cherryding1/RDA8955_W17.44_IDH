@@ -1,0 +1,25 @@
+<module name="CALIB">
+
+    <!-- CalibStub functions. -->
+    <fn name="calib_StubTestTaskInit"             id="0x0150" group="CalibStub"/>
+    <fn name="calib_StubFintIrqHandler"           id="0x0151" group="CalibStub"/>
+    <fn name="calib_StubDispState"                id="0x0152" group="CalibStub"/>
+    <fn name="calib_StubGetFromGlobal"            id="0x0153" group="CalibStub"/>
+    <fn name="calib_StubAudioHandler"             id="0x0154" group="CalibStub"/>
+
+    <!-- CalibStub pulses. -->
+    <fn name="calib_StubTimDisp"                  id="0x3100" group="CalibStub"/>
+    <fn name="calib_StubTimGpadcMeas"             id="0x3101" group="CalibStub"/>
+    <fn name="calib_StubCmdGlobal"                id="0x3102" group="CalibStub"/>
+    <fn name="calib_StubCmdXtal"                  id="0x3103" group="CalibStub"/>
+    <fn name="calib_StubCmdAfcBound"              id="0x3104" group="CalibStub"/>
+    <fn name="calib_StubCmdAfcFOf"                id="0x3105" group="CalibStub"/>
+    <fn name="calib_StubCmdILoss"                 id="0x3106" group="CalibStub"/>
+    <fn name="calib_StubCmdPaProf"                id="0x3107" group="CalibStub"/>
+    <fn name="calib_StubCmdUpdate"                id="0x3108" group="CalibStub"/>
+    <fn name="calib_StubCmdRstGpadc"              id="0x3109" group="CalibStub"/>
+    <fn name="calib_StubCmdAudioDict"             id="0x310A" group="CalibStub"/>
+    <fn name="calib_StubCmdPmdCustom"             id="0x310B" group="CalibStub"/>
+
+</module>
+

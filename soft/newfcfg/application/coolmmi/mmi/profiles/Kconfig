@@ -1,0 +1,15 @@
+comment "--- application/coolmmi/mmi/profiles ---"
+
+config __MMI_KEYPAD_LIGHT_SETTIMER_SUPPORT__
+    option skipmk
+    bool "MMI_KEYPAD_LIGHT_SETTIMER_SUPPORT"
+    default y
+    ---help---
+    	This option defines that keypad supports timer lights or not.
+
+config __MMI_USER_DEF_PROFILE__
+    option skipmk
+    bool "MMI_USER_DEF_PROFILE"
+    default y
+    ---help---
+    	This option defines that MMI uses the default profile.

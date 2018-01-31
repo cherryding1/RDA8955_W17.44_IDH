@@ -1,0 +1,4 @@
+#TARGET_EXPORT_FLAG += AT_HTTP_SUPPORT
+#TARGET_EXPORT_FLAG += _TCPIP_SYNC_IO_
+include ${SOFT_WORKDIR}/target/target_common.def
+

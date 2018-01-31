@@ -1,0 +1,74 @@
+
+menu "Call"
+source "newfcfg/application/coolmmi/mmi/calls/Kconfig"
+source "newfcfg/application/coolmmi/mmi/callmanagement/Kconfig"
+endmenu
+
+menu "Messages"
+source "newfcfg/application/coolmmi/mmi/messages/Kconfig"
+endmenu
+
+menu "Phonebook"
+source "newfcfg/application/coolmmi/mmi/phonebook/Kconfig"
+endmenu
+
+menu "Profiles & Settings"
+source "newfcfg/application/coolmmi/mmi/profiles/Kconfig"
+source "newfcfg/application/coolmmi/mmi/setting/Kconfig"
+endmenu
+
+menu "Idlescreen"
+source "newfcfg/application/coolmmi/mmi/idlescreen/Kconfig"
+endmenu
+
+menu "Watch"
+source "newfcfg/application/coolmmi/mmi/rwatch/Kconfig"
+endmenu
+
+menu "Multimedia"
+
+menu "Radio"
+source "newfcfg/application/coolmmi/mmi_csdapp/fmradio/Kconfig"
+endmenu
+menu "Audio"
+source "newfcfg/application/coolmmi/mmi_csdapp/audioplayer/Kconfig"
+endmenu
+menu "Video"
+source "newfcfg/application/coolmmi/mmi_csdapp/video/Kconfig"
+endmenu
+menu "Camera"
+source "newfcfg/application/coolmmi/mmi_csdapp/camera/Kconfig"
+endmenu
+menu "SoundRecorder"
+source "newfcfg/application/coolmmi/mmi/soundrecorder/Kconfig"
+endmenu
+menu "ATV"
+source "newfcfg/application/coolmmi/mmi_csdapp/analogtv/Kconfig"
+endmenu
+
+endmenu
+
+menu "FileManagement"
+source "newfcfg/application/coolmmi/mmi_csdapp/filemgr/Kconfig"
+endmenu
+
+menu "Wap & MMS"
+source "newfcfg/application/coolmmi/mmi/wapmms/Kconfig"
+endmenu
+
+menu "Bluetooth"
+source "newfcfg/application/coolmmi/mmi/bluetooth/Kconfig"
+endmenu
+
+menu "USB"
+source "newfcfg/application/coolmmi/mmi/usb/Kconfig"
+endmenu
+
+menu "Organizer"
+source "newfcfg/application/coolmmi/mmi/organizer/Kconfig"
+endmenu
+
+menu "EngineerMode"
+source "newfcfg/application/coolmmi/mmi_csdapp/engineermode/Kconfig"
+endmenu
+

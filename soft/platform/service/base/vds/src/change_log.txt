@@ -1,0 +1,350 @@
+Label: VER00C0002
+date : 2007-2-2
+Caoxh
+1.去掉了_CSW_VER_2_相关的代码。
+
+
+Label: VER00C0001
+date : 2007-11-05
+Caoxh
+1.修改了g_module_info_table，改大了REG和SMS_DM分配空间的大小，去掉了PBK的空间分配。
+2.VDS VERSION: 0x1112 -> 0x1113
+3.对VDS_Read()/VDS_Read()增加了信号量
+4.修改了VDS_WriteBlock()，在设置old block statues之前修改BMT。
+-------------------------------------------------------------------------
+Label: VER00C00
+date : 2007-08-23
+Suwg:
+1.擦除FLASH扇区调用的驱动接口由DRV_EraseFlash()改为DRV_EraseFlashSector().
+2.这个版本是优化VDS支持多bank概念以及不同大小的扇区之前的一个稳定版本，
+  以后的版本将开始做支持不同大小扇区的优化。
+
+
+-------------------------------------------------------------------------
+Label: VER00B31
+date : 2007-06-26
+Suwg:
+1.调整了FS的两个分区的大小,VDS0改为4个扇区,而VDS1减掉一个成为7个扇区.
+
+
+-------------------------------------------------------------------------
+Label: VER00B30
+date : 2007-06-16
+Caoxh:
+1.在dsm_cf.c/h中增加了如下函数：
+  DSM_GetFileTime()
+  DSM_GetFileTime2Date()
+  DSM_GetFileTime2Time() 
+2.在dsm_cf.c/h中将函数名DSM_GetSysTime()改为DSM_UniteFileTime 
+
+Zouyh:
+3.增加了在VC环境下的如下三个函数：
+  DSM_GetFileTime()
+  DSM_GetFileTime2Date()
+  DSM_GetFileTime2Time() 
+-------------------------------------------------------------------------
+
+
+Label: VER00B29
+date : 2007-06-11
+suwg:
+1. 修改了VDS分区的个数，把原来FS使用的分区"vds0"一分为二成"vds0"和"vds1"，
+    REG和DB使用的分区改为"vds2"；其中"vds0"和"vds1"分别使用了3个和8个扇区，"vds2"使用4个扇区；
+2. 修改了dsm_dev_driver.c的device_info_table（设备配置表中增加一个设备，对应FS的第二个分区）。
+
+
+-------------------------------------------------------------------------
+Label: VER00B28
+date : 2007-05-14
+suwg:
+修改了vds_CheckGcRule()，当该函数返回ERR_SUCCESS时，
+当前分区上至少有一个dirty-block可以被回收。
+
+
+-------------------------------------------------------------------------
+Label: VER00B26
+date : 2007-04-30
+gaokj:
+1. 修改了VDS的启动流程：
+   如果判断partition已经格式化，但对partition初始化失败，则格式化
+   该partition，然后再初始化该partition。以确保VDS能初始化成功。
+
+-------------------------------------------------------------------------
+Label: VER00B25
+date : 2007-04-18
+suwg:
+1. 修改了：GC遇到系统错误时（例如源PB校验不过），进行撤消GC的时候将
+    原来的错误码冲掉，导致返回成功。
+  
+-------------------------------------------------------------------------
+Label: VER00B24
+date : 2007-04-16
+1.lvxf:
+修改了VDS_Down和VDS_Up在VDS_ReadBlock()和VDS_WriteBlock()中的位置。这样
+  避免了某一个分区初始化不成功(信号量也未初始化)以后，系统继续运行，调用该分区的写或读操作，
+  造成信号量错误   
+
+-------------------------------------------------------------------------
+Label: VER00B21
+date : 2007-03-15
+1. 将V1和V2中的INT32 vds_Init_Entry()合并为一个函数。
+2. VDS_WriteBlock, VDS_ReadBlock 函数加了信号量   
+-------------------------------------------------------------------------
+Label: VER00B20
+date : 2007-03-02
+1. 解决了MMC设备不能打开的问题。
+2.在dsm_cf.c增加了DSM_GetSysTime（）函数，该函数将FAT格式的日期和时间转换为系统时间格式。   
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Label: VER00B19
+date : 2007-03-02
+1. 解决MMC设备不能打开的问题前的一个备份版本。
+   
+
+-------------------------------------------------------------------------
+Label: VER00B18
+date : 2007-03-01
+1. 修改了V1环境的vds_Init_Entry()函数，去掉了VDS对REG 和SMS_DM的管理。
+2.调试通过了FS_MountRoot("vds0").
+   
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Label: VER00B16
+date : 2007-02-14
+1. 对PB的CRC检查失败后，通常都应该作错误处理，但函数vds_SetGcingBlock()
+   中例外。
+  // 当VBN匹配的PB校验失败时不能返回失败，应继续查找。
+  // 因为Remain-sector上面不会有相同VBN的PB，而Gcing-sector上面可以有多个VBN相同
+  // 的PB，但在VBN相同的PB中只有最后的能通过校验的（它的status可以是invalid）
+  // 才是拷贝到Remain-sector上面的那个。
+
+2. vds_ChangeSectStatus()中向sector写sector-header时，VDS_SH的几个字段没有初始化。
+   在VC下不会有问题，因为VC缺省总是将局部变量用0xCC填充。而在开发板上，如果没有
+   显式地初始化局部变量，则其值是随机的。再加上flash的0不能再直接改为1的特性，
+   导致写sector-header失败。
+   将VDS_SH的所有字段显式初始化为确定的值就可以了。
+   pc-lint能够发现这个bug吗??????????????????????
+   
+-------------------------------------------------------------------------
+Label: VER00B15
+date : 2007-02-13
+1. 完善读PB后的CRC检查
+
+-------------------------------------------------------------------------
+Label: VER00B14
+date : 2007-02-13
+1. 
+在erase sector时掉电，重启后不能对该sector上的内容作任何假设。
+
+以前的方案是在sector的开头写上magic-number和sector-status
+(该方案!!!假设!!!了erase sector时开头的magic-number一定会被改成非法值)。
+
+但是硬件实际上可能先改动sector尾的内容，这导致erase sector过程中掉电，
+重启系统后却无法发现这是一个在erase sector过程中掉电的sector而需要重新
+erase。
+
+在erase sector之前，我们先改写sector开头的magic-number和sector-status
+为非法值，然后再擦除之。
+
+这样如果掉电，由于掉电时将非法值改为合法的magic-number和sector-status
+概率非常低，这就意味着重启时能够以非常高的概率发现在erase时掉电的sector。
+
+参见vds_gc.c中对函数vds_ChangeSectStatus()的修改。
+-------------------------------------------------------------------------
+Label: VER00B13
+date : 2007-01-31
+1. VER00B10 中的错误未修改，在此label中进行修改
+-------------------------------------------------------------------------
+Label: VER00B12
+date : 2007-01-26
+
+1. 修改了VDS_ReadBlock()和VDS_WriteBlock()的返回值含义。
+
+-------------------------------------------------------------------------
+Label: VER00B11
+date : 2007-01-24
+
+1. vds_cd.h中去掉了判断GC条件的宏定义。
+2. vds_gc.c中修改了判断GC条件函数vds_CheckGcRule()，新的判断条件不用频繁
+   读FLASH以统计dirty-block的个数，提前的程序运行的效率。
+3. 将Indent由2个空格改为4个空格。  
+
+-------------------------------------------------------------------------
+Label: VER00B10
+date : 2007-01-22
+
+1.函数vds_ListScan()中当sector为VDS_STATUS_SECT_CURCAND时，应该将currentPBN
+移动到最后一条已经写过的记录处。
+
+-------------------------------------------------------------------------
+Label: VER00B09
+date : 2007-01-18
+
+1. 修改了原来的几个接口名称：VDS_Read()改为VDS_ReadBlock()、VDS_Write() 
+    改为VDS_WriteBlock()； 
+2. 添加了新的按字节线性读写的接口：VDS_Read()、VDS_Write() 。
+3. 添加VDS对各个在VDS上面运行的模块的管理，各模块通过VDS_GetModuleInfo()
+    来获取模块使用VDS的信息。
+
+-------------------------------------------------------------------------
+Label: VER00B08
+date : 2007-01-15
+
+1. vds_GC()中修改了对CurrentList的处理，GC完毕以后，如果发现remain-sector上
+   没有free-block，则将其直接挂到DirtyList中，而不放入CurrentList中。
+   a. vds_ChangeSectStatus()添加对STATUS_SECT_REMAIN到STATUS_SECT_DIRTY的
+      转换的支持。
+   b. vds_GcInitialize()中的掉电保护处理流程作类似vds_GC()的修改。 
+2. 由于1的修改，可以简化vds_MoveCurrentPos()的代码：从CurrentList中的取出的
+   扇区肯定有free-block。
+3. 添加了命令行：
+    export <filename> {[vpn] [counter]}
+   用于将VDS的image导出到windows下。
+   添加了命令行：
+     dump vb [ vbn ] { [ counter ] }
+   用于导出VB。  
+
+-------------------------------------------------------------------------
+Label: VER00B07
+date : 2007-01-12
+1. vds_GetLastVbOnRemain()重命名为vds_GetLastValidBlock()
+2. 调整了vds_SetGcingBlock()的接口, 
+3. 删除了struct vds_partition中的域iMaxInvalidNum
+
+-------------------------------------------------------------------------
+Label: VER00B06
+date : 2007-01-11
+1. vds_local.c中缩进由4个空格改为2个空格
+2. 简化了vds_MoveCurrentPos()的代码
+3. 删除了vds_GetGcingSector()和vds_CheckGcRule()中的冗余代码
+
+-------------------------------------------------------------------------
+Label: VER00B05
+date : 2007-01-11
+1. 将宏FLASH_SIMU_STRICT_CHECK改为全局变量g_IsFlashSimuStrictCheck, 这样
+   可以通过命令行来控制写flash时是否进行严格检查.(是否允许将0改为1).
+   添加了一个shell命令:
+   flashchk [on|off]
+2. fix GC的一个bug:
+   当remain-sector上没有free-sector时ds_GcInitialize()失败.
+3. VDS_Init()加强了检查: 如果有两个current-sector/remain-sector/gcing-sector,
+   则VDS初始化失败.
+
+-------------------------------------------------------------------------
+Label: VER00B04
+date : 2007-01-10
+1. 判断VDS是否初始化的变量不能保存在VDS_Partition{}中。
+   已改用一个全局变量来记录VDS是否已经初始化。
+2. 修正了vds_ReadSH,vds_WriteSHD,VDS_ReadBlock,VDS_WriteBlock中的offset by one的bug
+3. 调整debug命令，由
+    debug [on | off] [error | brief | detail]
+改为
+    debug []FAT|VDS] [on | off] [error | brief | detail]
+   并作为所有模块的公共命令。
+4. 对DSM下的文件的修改取label VDS-VER00B04
+   
+   
+-------------------------------------------------------------------------
+Label: VER00B03
+date : 2007-01-09
+1. 对GC做了比较大的改动，具体见vds_gc.c
+2. 修正了vds_ReadPBD()和vds_WritePBD()中的offset by one的bug
+3. 在DSM\common下添加dsm_dbg.h, dsm_dbg.c; dsm_shell.h, dsm_shell.c
+
+
+-------------------------------------------------------------------------
+Label: VER00B02
+date : 2007-01-09
+1. 将debug功能的公共代码移到DSM下
+2. 将shell功能的公共代码移到DSM下，DSM中的诸模块都可以用shell
+3. 在DSM\common下添加dsm_dbg.h, dsm_dbg.c; dsm_shell.h, dsm_shell.c
+
+
+-------------------------------------------------------------------------
+Label: VER00B01
+date : 2006-12-31
+
+1. 重命名vds_ScanSect()为vds_SetMTByScanSec(). 并调整了接口.
+INT32 vds_SectScan( VDS_PARTITION *psCP, UINT16 iSectNo, UINT16 iIgnoreOldSectNo );
+
+改为:
+
+INT32 vds_SetMTByScanSec
+( VDS_PARTITION *psCP, UINT16 iSectNo, UINT16 iIgnoreOldSectNo, UINT16 *iNrBlkScaaned );
+
+2. 纠正了vds_ListScan( )中重复释放资源的bug.
+
+
+-------------------------------------------------------------------------
+Label: V 0.2
+date : 2006-12-26
+1. GC时进行回读, 但用于存储Block的data的buffer不够. 为此, 在VDS_PARTITION{}中
+   添加了域pPBBufGc. 
+   由于VDS_Init()的错误处理模式, 直接为pPBBufGc分配空间比较麻烦.
+   临时实现如下:
+       psCP->pPBBuff = vds_malloc( 2 * VDS_SZ_PB( psCP ) );
+    if ( NULL == psCP->pPBBuff )
+    {
+      D( ( DL_ERROR, "In VDS_Init,malloc error,psCP->pPBBuff = NULL\n" ) );
+      vds_free( psCP->psMT );
+      return ERR_VDS_NO_MORE_MEM;
+    }
+    psCP->pPBBufGc = psCP->pPBBuff + VDS_SZ_PB( psCP );
+
+    以避免对错误处理代码的改到.
+    但功能稳定后, 必须修改该代码.
+
+2. 在local.c中添加了函数vds_ScanList();
+   修改了VDS_Init()函数中的step5.扫描DirtyList和CurrentList时,调用vds_ScanList();使代码看起来更简洁一些.
+
+3. 在系统启动时调用的vds_GcInitialize()中增加了，如果上次GC操作未完成，则对remain-sector中
+   最后一个valid-block进行校验，避免上次GC在写数据时被打断，造成数据错误。
+
+4. 在VDS_GC()中修改了调用vds_GcCopyPB()返回失败时的处理，增加了拷贝PB失败时对
+   目标PB的状态的验证。
+
+5. vds_GcCopyPB()中修改了使用VDS_PARTITION的新成员pPBBufGc进行读源PB，
+   原来与读写操作共用pPBBuff产生了冲 突。
+
+6. vds_WritePBDandPB()函数去掉重复回读PBD的代码 
+
+7. VDS_PartitionFormat()中处理了擦除FreeList时死循环的情况.  
+
+8. 由于要跟VDS_write()同步，GC一个sector结束后，remain转current时iCurrentPBN修改为指向最后一个写过
+    的PB，而原来是向第一个free PB。
+
+
+
+-------------------------------------------------------------------------
+Label: V 0.3
+date : 2006-12-28
+
+1. VDS_PartitionFormat()中设置了各个扇区的CurrentPBN.其中RemainSector设置为 0,其他扇区设置为NR_NONE.
+2. VDS_WriteBlock()中调用vds_CheckGcRule()函数,达到调用条件以后就调用gc;为了让程序执行到该处,去掉了   前面if esle语句中的   return 语句.
+3. vds_MoveCurrentPos()中 while(NULL == psVDSPart->CurrentList) 之后,从CurrentList中pop出CurrentSector以后,PBN都加一.而GC模块
+   中GC完毕以后,CurrentList中的扇区CurrentPBN都指向最后一条可用纪录,而不指向空纪录.
+
+4. 改写了flash_simu.c
+5. 在vds_dbg.h中增加了宏ERR_GOTO()和ERR_RETURN()
+
+-------------------------------------------------------------------------
+Label: V 0.4
+date : 2006-12-29
+1. 支持命令行
+  rw pbd [ sn ] [ pbn ] pbdcrc {[hex_CRC_value]}
+  rw pbd [ sn ] [ pbn ] pbcrc {[hex_CRC_value]}
+  rw sh [sn] crc 
+  以在修改sector header/PBD/PB的其他字段后自动计算出CRC.
+
+2. GcInitialize()函数中get不到RemainSector的分支,加上return语句,避免死机情况出现.
+
+3. 支持从script中自动测试VDS。为此，添加了命令：
+   init [ON | OFF] [YES | NO] [sector_size] [nr_sector_in_partition] [blk_size]
+   其中：
+    [ON | OFF]确定是否打开debug；
+    [YES | NO]确定是否format VDS；
+   注意，不论是否format，都必须给出partition的参数。并且，会在初始化时，将所有的
+   partition的参数调整为一致。 
+4. vds_local.c中的vds_MoveCurrentPos()当CurrentSector为NULL时,处理了第一次从CurrentList得到的Sector就满时,vbn下标越界的情况.
+  

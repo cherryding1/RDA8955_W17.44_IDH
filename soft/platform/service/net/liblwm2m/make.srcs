@@ -1,0 +1,57 @@
+
+SOURCE_FILES := \
+./wakaama/core/objects.c \
+./wakaama/core/packet.c \
+./wakaama/core/er-coap-13/er-coap-13.c \
+./wakaama/core/data.c \
+./wakaama/core/bootstrap.c \
+./wakaama/core/discover.c \
+./wakaama/core/lwm2m_uri.c \
+./wakaama/core/block1.c \
+./wakaama/core/lwm2m_list.c \
+./wakaama/core/tlv.c \
+./wakaama/core/registration.c \
+./wakaama/core/utils.c \
+./wakaama/core/observe.c \
+./wakaama/core/liblwm2m.c \
+./wakaama/core/management.c \
+./wakaama/core/json.c \
+./wakaama/core/transaction.c \
+./wakaama/examples/shared/commandline.c  \
+./wakaama/examples/shared/memtrace.c  \
+./wakaama/examples/shared/lwm2m_platform.c  \
+./wakaama/examples/client/object_location.c  \
+./wakaama/examples/client/object_access_control.c  \
+./wakaama/examples/client/object_server.c  \
+./wakaama/examples/client/lwm2mclient.c  \
+./wakaama/examples/client/object_connectivity_stat.c  \
+./wakaama/examples/client/object_security.c  \
+./wakaama/examples/client/system_api.c  \
+./wakaama/examples/client/test_object.c  \
+./wakaama/examples/client/object_connectivity_moni.c  \
+./wakaama/examples/client/object_device.c  \
+./wakaama/examples/client/object_firmware.c  \
+./wakaama/examples/bootstrap_server/bootstrap_server.c  \
+./wakaama/examples/bootstrap_server/bootstrap_info.c  \
+./wakaama/examples/server/lwm2mserver.c \
+#./wakaama/examples/lightclient/object_server.c \
+#./wakaama/examples/lightclient/lightclient.c \
+#./wakaama/examples/lightclient/object_security.c \
+#./wakaama/examples/lightclient/test_object.c \
+#./wakaama/examples/lightclient/object_device.c
+
+ifeq (${TINYDTLS_SUPPORT},1)
+SOURCE_FILES += ./wakaama/examples/shared/dtlsconnection.c
+else ifeq (${MBEDDTLS_SUPPORT},1)
+SOURCE_FILES += ./wakaama/examples/shared/mbedconnection.c
+else
+SOURCE_FILES += ./wakaama/examples/shared/connection.c
+endif
+
+SOURCE_INCLUDE := \
+	${LOCAL_NAME}/src/wakaama/examples/shared \
+	${LOCAL_NAME}/src/wakaama/examples/client \
+	${LOCAL_NAME}/src/wakaama/examples/bootstrap_server \
+	${LOCAL_NAME}/src/wakaama/core/er-coap-13 \
+	${LOCAL_NAME}/src/wakaama/core \
+

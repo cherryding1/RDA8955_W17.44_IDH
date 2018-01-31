@@ -1,0 +1,93 @@
+%include
+{vppp_amjp_asm_aac.h, vppp_amjp_asm_zoom.h, vppp_amjp_asm_mp3.h, vppp_amjp_asm_amr.h, vppp_amjp_asm_jpeg.h, vppp_amjp_asm_sections.h}
+
+%mode
+{AAC_dec: vpp_amjp_asm_common.c,vpp_amjp_asm_zoom.c,vpp_amjp_asm_aac.c}
+{MP3_dec: vpp_amjp_asm_common.c,vpp_amjp_asm_mp12.c,vpp_amjp_asm_mp3.c}
+{AMR_dec: vpp_amjp_asm_common.c,vpp_amjp_asm_jpeg.c,vpp_amjp_asm_amr.c}
+
+%start
+{0, 768, 3328}
+
+%map
+{	
+  COMMON_GLOBAL
+  {
+    vpp_amjp_asm_common.global    
+  }
+ 
+  .=END(COMMON_GLOBAL);
+  AAC_GLOBAL
+  {
+    vpp_amjp_asm_aac.global
+  }
+
+  ZOOM_GLOBAL
+  {
+    vpp_amjp_asm_zoom.global
+  }
+
+  .=END(ZOOM_GLOBAL); 
+  AAC_LOCAL
+  {
+    vpp_amjp_asm_aac.local
+  }
+
+  .=END(ZOOM_GLOBAL); 
+  ZOOM_LOCAL
+  {
+    vpp_amjp_asm_zoom.local
+  }
+
+  .=END(COMMON_GLOBAL);
+  MP3_GLOBAL
+  {
+    vpp_amjp_asm_mp3.global
+  }
+
+  .=END(COMMON_GLOBAL);
+  AMR_GLOBAL
+  {
+    vpp_amjp_asm_amr.global
+  }
+
+  .=MAX(END(MP3_GLOBAL),END(AMR_GLOBAL));
+  JPEG_GLOBAL
+  {
+    vpp_amjp_asm_jpeg.global
+  }
+  
+  .=END(MP3_GLOBAL);
+  MP12_GLOBAL
+  {
+    vpp_amjp_asm_mp12.global
+  }
+  MP12_LOCAL
+  {
+    vpp_amjp_asm_mp12.local
+  }
+  
+  .=END(JPEG_GLOBAL);  
+  JPEG_LOCAL
+  {
+    vpp_amjp_asm_jpeg.local
+  }
+
+  .=END(JPEG_GLOBAL);  
+  MP3_LOCAL
+  {
+    vpp_amjp_asm_mp3.local
+  }
+  
+  .=END(JPEG_GLOBAL);  
+  AMR_LOCAL
+  {
+    vpp_amjp_asm_amr.local
+  }
+
+  .=MAX(END(AAC_GLOBAL),END(JPEG_GLOBAL));  
+   COMMON_LOCAL
+   {
+     vpp_amjp_asm_common.local   
+   }   
+}

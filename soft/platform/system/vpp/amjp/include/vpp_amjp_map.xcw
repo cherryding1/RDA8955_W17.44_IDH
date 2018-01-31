@@ -1,0 +1,1098 @@
+<archive>
+
+<typedef name="AMJP_GLOBAL_X_BEGIN_ADDR" category="voc_amjp_api">
+	<int16 name="GLOBAL_INPUT_DATA_BUFFER" count="1024"/>
+	<int32 name="GLOBAL_TAB_EQUALIZER_ADDR" count="5"/>
+</typedef>
+
+<typedef name="AMJP_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp_api">
+	<int16 name="GLOBAL_MODE_IN"/>
+	<int16 name="GLOBAL_RESET"/>
+	<int16 name="GLOBAL_EQ_TYPE"/>
+	<int16 name="GLOBAL_CFG_RESERVED"/>
+	<int32 name="GLOBAL_STRM_BUF_IN_START"/>
+	<int32 name="GLOBAL_STRM_BUF_IN_END"/>
+	<int32 name="GLOBAL_STRM_BUF_OUT_PTR"/>
+	<int32 name="GLOBAL_STRM_BUF_IFC_PTR"/>
+	<int16 name="GLOBAL_ZOOM_MODE"/>
+	<int16 name="GLOBAL_ROTATE_MODE"/>
+	<int16 name="GLOBAL_RESIZE_TO_WIDTH"/>
+	<int16 name="GLOBAL_VID_BUF_MODE"/>
+	<int32 name="GLOBAL_VID_BUF_IN_START"/>
+	<int32 name="GLOBAL_VID_BUF_IN_END"/>
+	<int32 name="GLOBAL_VID_BUF_OUT_PTR"/>
+	<int16 name="Source_width_ADDR"/>
+	<int16 name="Source_height_ADDR"/>
+	<int16 name="Cut_width_ADDR"/>
+	<int16 name="Cut_height_ADDR"/>
+	<int16 name="Zoomed_width_ADDR"/>
+	<int16 name="Zoomed_height_ADDR"/>
+	<int32 name="INPUT_ADDR_U_ADDR"/>
+	<int32 name="INPUT_ADDR_V_ADDR"/>
+	<int16 name="GLOBAL_MODE_OUT"/>
+	<int16 name="GLOBAL_ERR_STATUS"/>
+	<int16 name="GLOBAL_STRM_STATUS"/>
+	<int16 name="GLOBAL_NB_CHAN"/>
+	<int32 name="GLOBAL_SAMPLE_RATE"/>
+	<int16 name="GLOBAL_BIT_RATE"/>
+	<int16 name="GLOBAL_DISPLAY_BARS_LOG" count="5"/>
+	<int32 name="GLOBAL_STRM_BUF_IN_CURR"/>
+	<int32 name="GLOBAL_STRM_BUF_IFC_CURR"/>
+	<int16 name="GLOBAL_IMG_WIDTH"/>
+	<int16 name="GLOBAL_IMG_HEIGHT"/>
+	<int32 name="GLOBAL_VID_BUF_IN_CURR"/>
+	<int32 name="GLOBAL_JPEG_CODE_PTR"/>
+	<int32 name="GLOBAL_JPEG_CONST_Y_PTR"/>
+	<int32 name="GLOBAL_MP12_CODE_PTR"/>
+	<int32 name="GLOBAL_MP12_CONST_Y_PTR"/>
+	<int32 name="GLOBAL_MP3_CODE_PTR"/>
+	<int32 name="GLOBAL_MP3_CONST_X_PTR"/>
+	<int32 name="GLOBAL_MP3_CONST_Y_PTR"/>
+	<int32 name="GLOBAL_AMR_CODE_PTR"/>
+	<int32 name="GLOBAL_AMR_CONST_Y_PTR"/>
+	<int32 name="GLOBAL_AAC_CODE_PTR"/>
+	<int32 name="GLOBAL_AAC_CONST_Y_PTR"/>
+	<int32 name="GLOBAL_EQ_TAB_PTR"/>
+	<int32 name="GLOBAL_H263_CODE_PTR"/>
+	<int32 name="GLOBAL_H263_CONST_Y_PTR"/>
+	<int16 name="GLOBAL_DISPLAY_BARS" count="10"/>
+	<int32 name="GLOBAL_STRM_BUF_IN_PTR"/>
+	<int32 name="GLOBAL_VID_BUF_IN_PTR"/>
+</typedef>
+
+<typedef name="AAC_GLOBAL_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_nChans_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_useImpChanMap_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_sampRateIdx_addr"/>
+	<int16 name="STRUCT_AACDecInfo_prevBlockID_addr"/>
+	<int16 name="STRUCT_AACDecInfo_currBlockID_addr"/>
+	<int16 name="STRUCT_AACDecInfo_currInstTag_addr"/>
+	<int32 name="STRUCT_AACDecInfo_sbDeinterleaveReqd_addr" count="2"/>
+	<int16 name="STRUCT_AACDecInfo_adtsBlocksLeft_addr"/>
+	<int16 name="STRUCT_AACDecInfo_nChans_addr"/>
+	<int32 name="STRUCT_AACDecInfo_bitRate_addr"/>
+	<int32 name="STRUCT_AACDecInfo_sampRate_addr"/>
+	<int16 name="STRUCT_AACDecInfo_profile_addr"/>
+	<int16 name="STRUCT_AACDecInfo_format_addr"/>
+	<int16 name="STRUCT_AACDecInfo_sbrEnabled_addr"/>
+	<int16 name="STRUCT_AACDecInfo_tnsUsed_addr"/>
+	<int16 name="STRUCT_AACDecInfo_pnsUsed_addr"/>
+	<int16 name="STRUCT_AACDecInfo_frameCount_addr"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_overlap_addr" count="1024"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_overlap1_addr" count="1024"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_prevWinShape_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_prevWinShape1_addr"/>
+	<int32 name="GLOBAL_bitbuffer_addr"/>
+	<int16 name="GLOBAL_bytesLeft_addr"/>
+	<int16 name="GLOBAL_inputbuffiled_ptr_addr"/>
+	<int16 name="GLOBAL_inputptr_addr"/>
+	<int16 name="GLOBAL_BITCACHE_addr"/>
+</typedef>
+
+<typedef name="AAC_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="Tab_huffTabSpec_addr" count="621"/>
+	<int32 name="Tab_Cos1Sin1Compressed_addr" count="70"/>
+	<int32 name="Tab_Cos4Compressed_addr" count="49"/>
+	<int32 name="Tab_Sin4Compressed_addr" count="143"/>
+	<int32 name="Tab_SinwShortCompressed_addr" count="27"/>
+	<int32 name="Tab_SinwLongCompressed_addr" count="135"/>
+	<int32 name="Tab_KbdwShortCompressed_addr" count="46"/>
+	<int32 name="Tab_KbdwLongCompressed_addr" count="148"/>
+	<int32 name="Tab_twidOddCompressed_addr" count="196"/>
+	<int32 name="Tab_TwidEvenCompressed_addr" count="143"/>
+	<int32 name="Tab_bitrevtabCompressed_addr" count="37"/>
+	<int32 name="Tab_invQuant3_addr" count="16"/>
+	<int32 name="Tab_invQuant4_addr" count="16"/>
+	<int16 name="Tab_sfBandTotal_addr" count="12"/>
+	<int16 name="Tab_tnsMaxBands_addr" count="12"/>
+	<int32 name="Tab_pow14_addr" count="4"/>
+	<int32 name="Tab_pow43_14_addr" count="64"/>
+	<int32 name="Tab_pow43_addr" count="48"/>
+	<int32 name="Tab_poly43lo_addr" count="5"/>
+	<int32 name="Tab_poly43hi_addr" count="5"/>
+	<int16 name="Tab_pow2exp_addr" count="8"/>
+	<int32 name="Tab_pow2frac_addr" count="8"/>
+	<int16 name="Tab_sfBandTabLongOffset_addr" count="12"/>
+	<int32 name="Tab_sfBandTabLongCompressed_addr" count="59"/>
+	<int32 name="Tab_huffTabSpecInfoCompressed_addr" count="44"/>
+	<int16 name="Tab_sfBandTabShortOffset_addr" count="12"/>
+	<int16 name="Tab_sfBandTabShort_addr" count="76"/>
+	<int16 name="Tab_huffTabScaleFact_addr" count="122"/>
+	<int16 name="Tab_huffTabScaleFactInfo_addr" count="22"/>
+	<int16 name="Tab_channelMapTab_addr" count="8"/>
+	<int32 name="Tab_sampRateTab_addr" count="12"/>
+	<int16 name="Tab_elementNumChans_addr" count="8"/>
+	<int32 name="const_SQRT1_2_addr"/>
+	<int32 name="const_0x80000000_addr"/>
+	<int32 name="const_0x7fffffff_addr"/>
+	<int32 name="const_0_addr"/>
+	<int32 name="const_1_addr"/>
+	<int16 name="const_2_addr"/>
+	<int16 name="const_3_addr"/>
+	<int16 name="const_4_addr"/>
+	<int16 name="const_5_addr"/>
+	<int16 name="const_6_addr"/>
+	<int16 name="const_7_addr"/>
+	<int16 name="const_8_addr"/>
+	<int16 name="const_9_addr"/>
+	<int16 name="const_10_addr"/>
+	<int16 name="const_11_addr"/>
+	<int16 name="const_13_addr"/>
+	<int16 name="const_14_addr"/>
+	<int16 name="const_15_addr"/>
+	<int16 name="const_16_addr"/>
+	<int16 name="const_32_addr"/>
+	<int16 name="const_0x0fff_addr"/>
+	<int16 name="AAC_Dec_ConstY_end"/>
+</typedef>
+
+<typedef name="H263_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="CONST_YUV2RGB_STRUCT_COMPRESSED" count="69"/>
+</typedef>
+
+<typedef name="Coolsand_AACDecode_X_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_coef_addr" count="1024"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_coef1_addr" count="1024"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_id_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_layer_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_protectBit_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_profile_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_sampRateIdx_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_privateBit_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_channelConfig_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_origCopy_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_home_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_copyBit_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_copyStart_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_frameLength_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_bufferFull_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_fhADTS_numRawDataBlocks_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_icsResBit_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_winSequence_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_winShape_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_maxSFB_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_sfGroup_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_predictorDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_numWinGroup_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo_winGroupLen_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_icsResBit_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_winSequence_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_winShape_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_maxSFB_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_sfGroup_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_predictorDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_numWinGroup_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_icsInfo1_winGroupLen_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo_pulseDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo_numPulse_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo_startSFB_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo_offset_addr" count="4"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo_amp_addr" count="4"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo1_pulseDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo1_numPulse_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo1_startSFB_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo1_offset_addr" count="4"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pulseInfo1_amp_addr" count="4"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_tnsDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_numFilt_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_coefRes_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_length_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_order_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_dir_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo_coef_addr" count="60"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_tnsDataPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_numFilt_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_coefRes_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_length_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_order_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_dir_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_tnsInfo1_coef_addr" count="60"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_commonWin_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_scaleFactors_addr" count="120"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_scaleFactors1_addr" count="120"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_sfbCodeBook_addr" count="120"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_sfbCodeBook1_addr" count="120"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_msMaskPresent_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_msMaskBits_addr" count="8"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_pnsUsed_addr" count="2"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_pnsLastVal_addr"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_intensityUsed_addr" count="2"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_tnsLPCBuf_addr" count="20"/>
+	<int32 name="STRUCT_AACDecInfo_PSInfoBase_tnsWorkBuf_addr" count="20"/>
+	<int16 name="STRUCT_AACDecInfo_PSInfoBase_gbCurrent_addr" count="2"/>
+</typedef>
+
+<typedef name="Coolsand_AACDecode_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="Tab_DMA_start_addr" count="4608"/>
+	<int16 name="MONO_outbuf_addr" count="1024"/>
+</typedef>
+
+<typedef name="Coolsand_PNS_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_PNS_gp_M_maxSFB_addr"/>
+	<int16 name="LOCAL_PNS_CH_addr"/>
+	<int16 name="LOCAL_PNS_maxSFB_addr"/>
+	<int16 name="LOCAL_PNS_gbMask_addr" count="2"/>
+	<int16 name="LOCAL_PNS_numWinGroup_addr"/>
+	<int16 name="LOCAL_PNS_checkCorr_addr"/>
+	<int16 name="LOCAL_PNS_genNew_addr"/>
+	<int16 name="LOCAL_PNS_nSamps_addr"/>
+	<int16 name="LOCAL_PNS_gbCurrent_addr_addr"/>
+</typedef>
+
+<typedef name="Coolsand_TNSFilter_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_TNSFilter_nWindows_addr"/>
+	<int16 name="LOCAL_TNSFilter_winLen_addr"/>
+	<int16 name="LOCAL_TNSFilter_nSFB_addr"/>
+	<int16 name="LOCAL_TNSFilter_maxOrder_addr"/>
+	<int16 name="LOCAL_TNSFilter_tnsMaxBand_addr"/>
+	<int16 name="LOCAL_TNSFilter_order_addr"/>
+	<int32 name="LOCAL_TNSFilter_gbMask_addr"/>
+</typedef>
+
+<typedef name="Coolsand_DequantBlock_X_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="LOCAL_DequantBlock_tab4_addr" count="4"/>
+	<int16 name="LOCAL_Dequantize_sfbTab_addr_addr"/>
+	<int16 name="LOCAL_Dequantize_gbCurrent_addr_addr"/>
+	<int16 name="LOCAL_Dequantize_numWinGroup_addr"/>
+	<int16 name="LOCAL_Dequantize_maxSFB_addr"/>
+	<int32 name="LOCAL_Dequantize_gbMask_addr"/>
+</typedef>
+
+<typedef name="Coolsand_DecodeSectionData_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_DecodeSectionData_maxSFB"/>
+</typedef>
+
+<typedef name="vpp_AmjpH263Zoom_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="CONST_TabV2R_ADDR" count="256"/>
+	<int16 name="CONST_TableV2G_ADDR" count="256"/>
+	<int16 name="CONST_TabU2G_ADDR" count="256"/>
+	<int16 name="CONST_TabU2B_ADDR" count="256"/>
+	<int16 name="GLOBAL_TEMP_BUF_ADDR" count="1280"/>
+	<int16 name="GLOBAL_BUF_IN_ADDR" count="2560"/>
+</typedef>
+
+<typedef name="vpp_AmjpH263Zoom_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="GLOBAL_INLINE_NUM_1_ADDR"/>
+	<int16 name="GLOBAL_INLINE_NUM_2_ADDR"/>
+	<int16 name="TEMP_ADDRY_ADDR"/>
+	<int16 name="TEMP_ADDRU_ADDR"/>
+	<int16 name="TEMP_ADDRV_ADDR"/>
+	<int16 name="GLOBAL_INNER_Y_ADDR"/>
+	<int16 name="GLOBAL_INNER_U_ADDR"/>
+	<int16 name="GLOBAL_BUFIN_U_ADDR"/>
+	<int16 name="GLOBAL_INNER_V_ADDR"/>
+	<int16 name="GLOBAL_BUFIN_V_ADDR"/>
+	<int16 name="GLOBAL_SRCW_HALF_ADDR"/>
+	<int16 name="GLOBAL_SRCW_QUA_ADDR"/>
+	<int16 name="GLOBAL_NUM1_ADDR"/>
+	<int16 name="GLOBAL_NUM3_ADDR"/>
+	<int16 name="GLOBAL_MASK_ADDR" count="2"/>
+	<int16 name="GLOBAL_DMAOUT_SIZE_ADDR"/>
+	<int16 name="GLOBAL_DEAD_OUT_LINE_ADDR"/>
+	<int16 name="GLOBAL_DMAOUT_INC_ADDR" count="2"/>
+	<int16 name="GLOBAL_INLINE_COUNT_ADDR"/>
+	<int16 name="GLOBAL_INLINE_COUNT_UV_ADDR"/>
+	<int16 name="GLOBAL_DMAIN_SIZE_ADDR" count="2"/>
+	<int16 name="GLOBAL_DMAIN_SIZE_UV_ADDR" count="2"/>
+	<int16 name="GLOBAL_SCALEX_SIZE_ADDR" count="2"/>
+	<int16 name="GLOBAL_SCALEY_SIZE_ADDR" count="2"/>
+	<int16 name="GLOBAL_P1_ADDR"/>
+	<int16 name="GLOBAL_P2_ADDR"/>
+	<int16 name="GLOBAL_BUF_OUT_ADDR" count="2560"/>
+</typedef>
+<typedef name="MP3_GLOBAL_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="TABLE_hufftab0_ADDR" count="2"/>
+	<int16 name="TABLE_hufftab1_ADDR" count="8"/>
+	<int16 name="TABLE_hufftab2_ADDR" count="16"/>
+	<int16 name="TABLE_hufftab3_ADDR" count="16"/>
+	<int16 name="TABLE_hufftab5_ADDR" count="26"/>
+	<int16 name="TABLE_hufftab6_ADDR" count="28"/>
+	<int16 name="TABLE_hufftab7_ADDR" count="64"/>
+	<int16 name="TABLE_hufftab8_ADDR" count="66"/>
+	<int16 name="TABLE_hufftab9_ADDR" count="54"/>
+	<int16 name="TABLE_hufftab10_ADDR" count="102"/>
+	<int16 name="TABLE_hufftab11_ADDR" count="104"/>
+	<int16 name="TABLE_hufftab12_ADDR" count="96"/>
+	<int16 name="TABLE_hufftab13_ADDR" count="398"/>
+	<int16 name="TABLE_hufftab15_ADDR" count="380"/>
+	<int16 name="TABLE_hufftab16_ADDR" count="402"/>
+	<int16 name="TABLE_hufftab24_ADDR" count="386"/>
+	<int16 name="TABLE_hufftabA_ADDR" count="28"/>
+	<int16 name="TABLE_hufftabB_ADDR" count="16"/>
+</typedef>
+
+<typedef name="MP3_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="CONST_0x00000800_ADDR"/>
+	<int16 name="CONST_neg1_ADDR"/>
+	<int16 name="CONST_0xe0ff_ADDR"/>
+	<int16 name="CONST_1152_ADDR"/>
+	<int16 name="CONST_17_ADDR"/>
+	<int16 name="CONST_576_ADDR"/>
+	<int16 name="CONST_1024_ADDR"/>
+	<int32 name="CONST_0x00001000_ADDR"/>
+	<int32 name="CONST_0x100010_ADDR"/>
+	<int16 name="TABLE_imdct36_y_tab_ADDR" count="18"/>
+	<int16 name="TABLE_D_ADDR" count="544"/>
+	<int16 name="TABLE_sflen_table_ADDR" count="32"/>
+	<int16 name="TABLE_nsfb_table_ADDR" count="72"/>
+	<int16 name="TABLE_pretab_ADDR" count="22"/>
+	<int16 name="TABLE_cs_ADDR" count="8"/>
+	<int16 name="TABLE_ca_ADDR" count="8"/>
+	<int16 name="TABLE_imdct_s_ADDR" count="36"/>
+	<int16 name="TABLE_window_l_ADDR" count="36"/>
+	<int16 name="TABLE_window_s_ADDR" count="12"/>
+	<int16 name="TABLE_is_table_ADDR" count="8"/>
+	<int16 name="TABLE_is_lsf_table_ADDR" count="30"/>
+	<int16 name="TABLE_bitrate_table_ADDR" count="80"/>
+	<int16 name="TABLE_imdct36_tab_ADDR" count="188"/>
+	<int16 name="TABLE_dct32_tab_ADDR" count="32"/>
+	<int16 name="TABLE_imdct36_x_tab_ADDR" count="36"/>
+	<int16 name="TABLE_sfb_48000_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_44100_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_32000_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_48000_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_44100_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_32000_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_48000_mixed_ADDR" count="38"/>
+	<int16 name="TABLE_sfb_44100_mixed_ADDR" count="38"/>
+	<int16 name="TABLE_sfb_32000_mixed_ADDR" count="38"/>
+	<int16 name="TABLE_sfb_24000_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_22050_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_24000_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_22050_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_16000_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_24000_mixed_ADDR" count="36"/>
+	<int16 name="TABLE_sfb_22050_mixed_ADDR" count="36"/>
+	<int16 name="TABLE_sfb_16000_mixed_ADDR" count="36"/>
+	<int16 name="TABLE_sfb_8000_long_ADDR" count="22"/>
+	<int16 name="TABLE_sfb_8000_short_ADDR" count="40"/>
+	<int16 name="TABLE_sfb_8000_mixed_ADDR" count="40"/>
+	<int16 name="TABLE_sfbwidth_table_ADDR" count="28"/>
+	<int16 name="TABLE_mad_huff_pair_table_ADDR" count="64"/>
+	<int32 name="STRUCT_left_dither_error_ADDR" count="3"/>
+	<int32 name="STRUCT_right_dither_error_ADDR" count="3"/>
+	<int16 name="STRUCT_MAD_HEADER_LAYER_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_MODE_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_MODE_EXTENSION_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_EMPHASIS_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_BITRATE_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_SAMPLERATE_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_CRC_CHECK_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_CRC_TARGET_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_FLAGS_ADDR"/>
+	<int16 name="STRUCT_MAD_HEADER_PRIVATE_BITS_ADDR"/>
+	<int16 name="STRUCT_MAD_TIMER_DURATION_SECONDS_ADDR"/>
+	<int16 name="STRUCT_MAD_TIMER_DURATION_FRACTION_ADDR"/>
+	<int16 name="STRUCT_MAD_FRAME_OPTIONS_ADDR"/>
+	<int16 name="GLOBAL_MAD_SYNTH_PHASE_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_BUFFER_ADDR_ADDR" count="2"/>
+	<int16 name="STRUCT_MAD_STREAM_SKIPLEN_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_SYNC_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_FREERATE_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_THIS_FRAME_ADDR_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_NEXT_FRAME_ADDR_ADDR"/>
+	<int16 name="STRUCT_BITPTR_PTR_BYTE_ADDR_ADDR"/>
+	<int16 name="STRUCT_BITPTR_PTR_CACHE_ADDR" count="2"/>
+	<int16 name="STRUCT_BITPTR_PTR_LEFT_ADDR"/>
+	<int16 name="STRUCT_BITPTR_ANC_PTR_BYTE_ADDR_ADDR"/>
+	<int16 name="STRUCT_BITPTR_ANC_PTR_CACHE_ADDR" count="2"/>
+	<int16 name="STRUCT_BITPTR_ANC_PTR_LEFT_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_ANC_BITLEN_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_MD_LEN_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_OPTIONS_ADDR"/>
+	<int16 name="STRUCT_MAD_STREAM_MAD_ERROR_ADDR"/>
+	<int16 name="GLOBLE_WRITE_POINTER_ADDR"/>
+	<int16 name="GLOBAL_NCH_ADDR"/>
+	<int16 name="GLOBAL_NS_ADDR"/>
+	<int16 name="GLOBAL_NGR_ADDR"/>
+	<int16 name="GLOBAL_WRAP_INDEX_ADDR"/>
+	<int16 name="STRUCT_SIDEINFO_ADDR"/>
+	<int16 name="STRUCT_SIDEINFO_private_bits_ADDR"/>
+	<int16 name="STRUCT_SIDEINFO_scfsi_ADDR" count="2"/>
+	<int16 name="STRUCT_GRANULE0CH0_part2_3_length_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_big_values_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_global_gain_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_scalefac_compress_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_flags_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_block_type_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_table_select_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE0CH0_subblock_gain_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE0CH0_region0_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_region1_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH0_scalefac_ADDR" count="40"/>
+	<int16 name="STRUCT_GRANULE0CH1_part2_3_length_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_big_values_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_global_gain_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_scalefac_compress_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_flags_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_block_type_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_table_select_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE0CH1_subblock_gain_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE0CH1_region0_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_region1_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE0CH1_scalefac_ADDR" count="40"/>
+	<int16 name="STRUCT_GRANULE1CH0_part2_3_length_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_big_values_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_global_gain_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_scalefac_compress_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_flags_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_block_type_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_table_select_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE1CH0_subblock_gain_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE1CH0_region0_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_region1_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH0_scalefac_ADDR" count="40"/>
+	<int16 name="STRUCT_GRANULE1CH1_part2_3_length_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_big_values_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_global_gain_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_scalefac_compress_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_flags_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_block_type_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_table_select_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE1CH1_subblock_gain_ADDR" count="3"/>
+	<int16 name="STRUCT_GRANULE1CH1_region0_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_region1_count_ADDR"/>
+	<int16 name="STRUCT_GRANULE1CH1_scalefac_ADDR" count="40"/>
+	<int16 name="PTR_CACHE_ADDR" count="2"/>
+	<int16 name="PTR_BYTE_ADDR_ADDR"/>
+	<int16 name="PTR_LEFT_ADDR"/>
+	<int16 name="mad_layer_III_result"/>
+	<int16 name="GLOBAL_MAIN_DATA_OFFSET_ADDR"/>
+	<int16 name="STRUCT_GRANULE1_RESERVED" count="2"/>
+	<int16 name="STATIC_MAD_OVERLAP_ADDR" count="2304"/>
+	<int16 name="GLOBAL_MAD_SYNTH_FILTER_ADDR" count="2048"/>
+	<int16 name="STATIC_MAD_MAIN_DATA_ADDR" count="900"/>
+</typedef>
+
+<typedef name="AMR_GLOBAL_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="INPUT_BITS2_ADDR" count="8"/>
+	<int16 name="INPUT_ACTUAL_ADDR" count="48"/>
+	<int16 name="OUTPUT_SPEECH_BUFFER2_ADDR" count="160"/>
+	<int16 name="STRUCT_POST_FILTERSTATE_RES2_ADDR" count="40"/>
+	<int16 name="STRUCT_POST_FILTERSTATE_MEM_SYN_PST_ADDR" count="10"/>
+	<int16 name="STRUCT_PREEMPHASISSTATE_ADDR"/>
+	<int16 name="STRUCT_AGCSTATE_ADDR"/>
+	<int16 name="STRUCT_POST_FILTERSTATE_SYNTH_BUF_ADDR" count="170"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y2_HI_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y1_LO_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_Y1_HI_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_X0_ADDR"/>
+	<int16 name="STRUCT_POST_PROCESSSTATE_X1_ADDR"/>
+	<int16 name="STURCT_SPEECH_DECODE_FRAMESTATE_PREV_MODE_ADDR" count="8"/>
+	<int16 name="TX_SP_FLAG_ADDR" count="2"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_OLD_EXC_ADDR" count="154"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_EXC_ADDR" count="40"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_LSP_OLD_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_MEM_SYN_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_SHARP_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_OLD_T0_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_PREV_BF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_PREV_PDF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_STATE_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_T0_LAGBUFF_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_EXCENERGYHIST_ADDR" count="10"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_INBACKGROUNDNOISE_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_VOICEDHANGOVER_ADDR"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_LTPGAINHISTORY_ADDR" count="9"/>
+	<int16 name="STRUCT_DECOD_AMRSTATE_NODATASEED_ADDR"/>
+	<int16 name="STRUCT_BGN_SCDSTATE_ADDR" count="60"/>
+	<int16 name="STRUCT_BGN_SCDSTATE_BGHANGOVER_ADDR" count="2"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_ADDR" count="8"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_HANGCOUNT_ADDR"/>
+	<int16 name="STRUCT_CB_GAIN_AVERAGESTATE_HANGVAR_ADDR"/>
+	<int16 name="STRUCT_LSP_AVGSTATE_ADDR" count="10"/>
+	<int16 name="STRUCT_D_PLSFSTATE_ADDR" count="10"/>
+	<int16 name="STRUCT_D_PLSFSTATE_PAST_R_Q_ADDR" count="10"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_ADDR" count="6"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_PAST_GAIN_PIT_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_PITCHSTATE_PREV_GP_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_ADDR" count="6"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_PAST_GAIN_CODE_ADDR"/>
+	<int16 name="STRUCT_EC_GAIN_CODESTATE_PREV_GC_ADDR"/>
+	<int16 name="STRUCT_GC_PREDSTATE_ADDR" count="4"/>
+	<int16 name="STRUCT_GC_PREDSTATE_PAST_QUA_EN_MR122_ADDR" count="4"/>
+	<int16 name="STRUCT_PH_DISPSTATE_ADDR" count="6"/>
+	<int16 name="STRUCT_PH_DISPSTATE_PREVSTATE_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_PREVCBGAIN_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_LOCKFULL_ADDR"/>
+	<int16 name="STRUCT_PH_DISPSTATE_ONSET_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_TRUE_SID_PERIOD_INV_ADDR"/>
+	<int16 name="STRUCT_AMR_DEC_GLOBAL_MODE"/>
+	<int16 name="STRUCT_AMR_DEC_GLOBAL_RESET"/>
+	<int16 name="STRUCT_AMR_DEC_INBUF_ADDR" count="2"/>
+	<int16 name="STRUCT_AMR_DEC_OUTBUF_ADDR" count="2"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSP_OLD_ADDR" count="10"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSF_HIST_ADDR" count="80"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LSF_HIST_PTR_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_PG_MEAN_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_HIST_ADDR" count="8"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_HIST_PTR_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_LOG_EN_ADJUST_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXHANGOVERCOUNT_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DECANAELAPSEDCOUNT_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_SID_FRAME_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_VALID_DATA_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXHANGOVERADDED_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DTXGLOBALSTATE_ADDR"/>
+	<int16 name="STRUCT_DTX_DECSTATE_DATA_UPDATED_ADDR" count="2"/>
+</typedef>
+
+<typedef name="AMR_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="CONST_AMR_0x1fff_ADDR"/>
+	<int16 name="CONST_AMR_5462_ADDR"/>
+	<int16 name="CONST_AMR_0x3fff_ADDR"/>
+	<int16 name="CONST_AMR_0x0800_ADDR"/>
+	<int16 name="CONST_AMR_21299_ADDR"/>
+	<int16 name="CONST_AMR_5443_ADDR"/>
+	<int16 name="CONST_AMR_112_ADDR"/>
+	<int16 name="CONST_AMR_105_ADDR"/>
+	<int16 name="CONST_AMR_197_ADDR"/>
+	<int16 name="CONST_AMR_31128_ADDR"/>
+	<int16 name="CONST_AMR_134_ADDR"/>
+	<int16 name="CONST_AMR_0x177_ADDR"/>
+	<int16 name="CONST_AMR_102_ADDR"/>
+	<int16 name="CONST_AMR_3277_ADDR"/>
+	<int16 name="CONST_AMR_0x87_ADDR"/>
+	<int16 name="CONST_AMR_NEG11_ADDR"/>
+	<int16 name="CONST_AMR_31821_ADDR"/>
+	<int16 name="CONST_AMR_29491_ADDR"/>
+	<int16 name="CONST_AMR_9830_ADDR"/>
+	<int16 name="CONST_AMR_14746_ADDR"/>
+	<int16 name="CONST_AMR_17578_ADDR"/>
+	<int16 name="CONST_AMR_16384_ADDR"/>
+	<int16 name="CONST_AMR_256_ADDR"/>
+	<int16 name="CONST_AMR_160_ADDR"/>
+	<int16 name="CONST_AMR_143_ADDR"/>
+	<int16 name="CONST_AMR_26214_ADDR"/>
+	<int16 name="CONST_AMR_4096_ADDR"/>
+	<int16 name="CONST_AMR_64_ADDR"/>
+	<int16 name="CONST_AMR_128_ADDR"/>
+	<int16 name="CONST_AMR_205_ADDR"/>
+	<int16 name="CONST_AMR_50_ADDR"/>
+	<int16 name="CONST_AMR_44_ADDR"/>
+	<int16 name="CONST_AMR_2_ADDR"/>
+	<int16 name="CONST_AMR_3_ADDR"/>
+	<int16 name="CONST_AMR_4_ADDR"/>
+	<int16 name="CONST_AMR_6_ADDR"/>
+	<int16 name="CONST_AMR_7_ADDR"/>
+	<int16 name="CONST_AMR_8_ADDR"/>
+	<int16 name="CONST_AMR_9_ADDR"/>
+	<int16 name="CONST_AMR_10_ADDR"/>
+	<int16 name="CONST_AMR_12_ADDR"/>
+	<int16 name="CONST_AMR_16_ADDR"/>
+	<int16 name="CONST_AMR_17_ADDR"/>
+	<int16 name="CONST_AMR_18_ADDR"/>
+	<int16 name="CONST_AMR_20_ADDR"/>
+	<int16 name="CONST_AMR_22_ADDR"/>
+	<int16 name="CONST_AMR_25_ADDR"/>
+	<int16 name="CONST_AMR_30_ADDR"/>
+	<int16 name="CONST_AMR_31_ADDR"/>
+	<int16 name="CONST_AMR_32_ADDR"/>
+	<int16 name="CONST_AMR_33_ADDR"/>
+	<int16 name="CONST_AMR_40_ADDR"/>
+	<int16 name="CONST_AMR_41_ADDR"/>
+	<int16 name="CONST_AMR_15_ADDR"/>
+	<int16 name="CONST_AMR_11_ADDR"/>
+	<int16 name="CONST_AMR_3276_ADDR"/>
+	<int16 name="CONST_AMR_0x2000_ADDR"/>
+	<int16 name="CONST_AMR_0x2666_ADDR"/>
+	<int16 name="CONST_AMR_neg2_ADDR"/>
+	<int16 name="CONST_AMR_80_ADDR"/>
+	<int16 name="CONST_AMR_512_ADDR"/>
+	<int16 name="CONST_AMR_1024_ADDR"/>
+	<int16 name="CONST_AMR_0x199a_ADDR"/>
+	<int16 name="CONST_AMR_120_ADDR"/>
+	<int16 name="CONST_AMR_124_ADDR"/>
+	<int16 name="CONST_AMR_1311_ADDR"/>
+	<int16 name="CONST_AMR_368_ADDR"/>
+	<int16 name="CONST_AMR_463_ADDR"/>
+	<int16 name="CONST_AMR_9000_ADDR"/>
+	<int16 name="CONST_AMR_5325_ADDR"/>
+	<int32 name="CONST_AMR_0_ADDR"/>
+	<int32 name="CONST_AMR_1_ADDR"/>
+	<int32 name="CONST_AMR_0x40000000_ADDR"/>
+	<int32 name="CONST_AMR_0x7FFFFFFF_ADDR"/>
+	<int32 name="CONST_AMR_0x70816958_ADDR"/>
+	<int32 name="CONST_AMR_0x00010001_ADDR"/>
+	<int32 name="CONST_AMR_0x00020002_ADDR"/>
+	<int32 name="CONST_AMR_0x00080008_ADDR"/>
+	<int32 name="CONST_AMR_0xFFFFFFFF_ADDR"/>
+	<int32 name="CONST_AMR_0x00004000L_ADDR"/>
+	<int32 name="CONST_AMR_0x00007FFF_ADDR"/>
+	<int32 name="CONST_AMR_0x00008000_ADDR"/>
+	<int32 name="CONST_AMR_0x0000FFFF_ADDR"/>
+	<int32 name="CONST_AMR_0x00000005L_ADDR"/>
+	<int16 name="TABLE_MEAN_LSF_ADDR" count="10"/>
+	<int16 name="TABLE_SLOPE_ADDR" count="64"/>
+	<int16 name="TABLE_LSP_LSF_ADDR" count="66"/>
+	<int16 name="TABLE_LOG2_ADDR" count="34"/>
+	<int16 name="TABLE_INV_SQRT_ADDR" count="50"/>
+	<int16 name="TABLE_POW2_ADDR" count="34"/>
+	<int16 name="STATIC_CONST_DHF_MASK_ADDR" count="58"/>
+	<int16 name="STATIC_CONST_QUA_GAIN_PITCH_ADDR" count="16"/>
+	<int16 name="STATIC_CONST_F_GAMMA4_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_F_GAMMA3_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_INTER_6_ADDR" count="62"/>
+	<int16 name="STATIC_CONST_DGRAY_ADDR" count="8"/>
+	<int16 name="TABLE_DICO1_LSF_ADDR" count="512"/>
+	<int16 name="TABLE_DICO2_LSF_ADDR" count="1024"/>
+	<int16 name="TABLE_DICO3_LSF_ADDR" count="1024"/>
+	<int16 name="TABLE_DICO4_LSF_ADDR" count="1024"/>
+	<int16 name="TABLE_DICO5_LSF_ADDR" count="256"/>
+	<int16 name="STATIC_CONST_BITNO_ADDR" count="30"/>
+	<int16 name="STATIC_CONST_PRMNO_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_PRMNOFSF_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_bitno_MR475_ADDR" count="9"/>
+	<int16 name="STATIC_CONST_bitno_MR515_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR59_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR67_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR74_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_bitno_MR795_ADDR" count="12"/>
+	<int16 name="STATIC_CONST_bitno_MR102_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_bitno_MRDTX_ADDR" count="3"/>
+	<int16 name="STATIC_CONST_BITNO_AMR_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_startPos_ADDR" count="16"/>
+	<int16 name="STATIC_CONST_dhf_MR475_ADDR" count="18"/>
+	<int16 name="STATIC_CONST_dhf_MR515_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR59_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR67_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR74_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_dhf_MR795_ADDR" count="24"/>
+	<int16 name="STATIC_CONST_dhf_MR102_ADDR" count="40"/>
+	<int16 name="STATIC_CONST_dhf_MR122_ADDR" count="58"/>
+	<int16 name="STATIC_CONST_dhf_amr_ADDR" count="8"/>
+	<int16 name="STATIC_CONST_qua_gain_code_ADDR" count="96"/>
+	<int16 name="STATIC_CONST_lsp_init_data_ADDR" count="10"/>
+	<int16 name="STATIC_past_rq_init_ADDR" count="80"/>
+	<int16 name="TABLE_SQRT_L_ADDR" count="50"/>
+	<int16 name="STATIC_CONST_WIND_200_40_ADDR" count="240"/>
+	<int16 name="STATIC_trackTable_ADDR" count="20"/>
+	<int16 name="STATIC_CONST_lsf_hist_mean_scale_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_dtx_log_en_adjust_ADDR" count="10"/>
+	<int16 name="STATIC_CONST_pred_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_pred_MR122_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_b_60Hz_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_a_60Hz_ADDR" count="4"/>
+	<int16 name="STATIC_CONST_gamma3_ADDR" count="10"/>
+	<int16 name="AMR_RESET_VALUE_TABLE_ADDR" count="48"/>
+	<int16 name="CONST_TAB244_ADDR" count="244"/>
+	<int16 name="CONST_HEAD_RING" count="2"/>
+	<int16 name="GLOBAL_RELOAD_MODE_ADDR"/>
+	<int16 name="GLOBAL_RESET_FLAG_ADDR"/>
+	<int16 name="GLOBAL_AMR_RESET_ADDR"/>
+	<int16 name="GLOBAL_DEC_RESET_DONE_ADDR"/>
+	<int16 name="GLOBAL_RELOAD_RESET_FLAG_ADDR"/>
+	<int16 name="GLOBAL_BFI_ADDR"/>
+	<int16 name="GLOBAL_UFI_ADDR"/>
+	<int16 name="GLOBAL_SID_ADDR"/>
+	<int16 name="GLOBAL_TAF_ADDR"/>
+	<int16 name="GLOBAL_DEC_MODE_ADDR"/>
+	<int16 name="GLOBAL_ENC_MODE_ADDR"/>
+	<int16 name="GLOBAL_ENC_USED_MODE_ADDR"/>
+	<int16 name="DEC_RESET_FLAG_ADDR"/>
+	<int16 name="DEC_MAIN_RESET_FLAG_OLD_ADDR"/>
+	<int16 name="DEC_AMR_FRAME_TYPE_ADDR" count="2"/>
+	<int16 name="DEC_INPUT_ADDR_ADDR"/>
+	<int16 name="DEC_OUTPUT_ADDR_ADDR"/>
+	<int16 name="DEC_INOUT_ADDR_BAK_ADDR" count="2"/>
+	<int16 name="STRUCT_AMR_DEC_mode_ADDR"/>
+	<int16 name="STRUCT_AMR_DEC_CONSUME_ADDR"/>
+	<int16 name="STRUCT_AMR_DEC_length_ADDR"/>
+</typedef>
+
+<typedef name="JPEG_GLOBAL_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="CONST_JPEG_DEC_18_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_367_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_159_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_220_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_411_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_NEG_29_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_1108_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_3784_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_1568_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_565_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_2276_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_3406_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_2408_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_799_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_4017_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_181_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x00000040_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0xFFFFFFFF_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x00000080_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x00002000_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x0000ffff_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x0000ff80_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x0000fd80_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x0000e800_ADDR"/>
+	<int32 name="CONST_JPEG_DEC_0x0000e000_ADDR"/>
+	<int32 name="TABLE_DClumtab0_ADDR" count="8"/>
+	<int32 name="TABLE_DClumtab1_ADDR" count="8"/>
+	<int32 name="TABLE_DCchromtab0_ADDR" count="16"/>
+	<int32 name="TABLE_DCchromtab1_ADDR" count="16"/>
+	<int32 name="TABLE_AClumtab0_ADDR" count="32"/>
+	<int32 name="TABLE_AClumtab1_ADDR" count="48"/>
+	<int32 name="TABLE_AClumtab2_ADDR" count="32"/>
+	<int32 name="TABLE_AClumtab3_ADDR" count="128"/>
+	<int32 name="TABLE_ACchromtab0_ADDR" count="32"/>
+	<int32 name="TABLE_ACchromtab1_ADDR" count="64"/>
+	<int32 name="TABLE_ACchromtab2_ADDR" count="32"/>
+	<int32 name="TABLE_ACchromtab3_ADDR" count="128"/>
+	<int32 name="TABLE_inverse_Zig_Zag_ADDR" count="32"/>
+	<int16 name="TABLE_add_para_ADDR" count="320"/>
+	<int32 name="TABLE_AClumcodetab0_ADDR"/>
+	<int32 name="TABLE_AClumcodetab1_ADDR"/>
+	<int32 name="TABLE_AClumcodetab2_ADDR"/>
+	<int32 name="TABLE_AClumcodetab3_ADDR"/>
+	<int32 name="TABLE_ACchromcodetab0_ADDR"/>
+	<int32 name="TABLE_ACchromcodetab1_ADDR"/>
+	<int32 name="TABLE_ACchromcodetab2_ADDR"/>
+	<int32 name="TABLE_ACchromcodetab3_ADDR"/>
+	<int16 name="TABLE_inverse_Zig_Zag_ADDR_ADDR"/>
+	<int16 name="CONST_JPEG_DEC_448_ADDR"/>
+</typedef>
+
+<typedef name="AMJP_I_sample_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="TABLE_offset_table_ADDR" count="90"/>
+	<int16 name="TABLE_linear_table_ADDR" count="14"/>
+	<int16 name="TABLE_sf_table_ADDR" count="64"/>
+	<int32 name="TABLE_sbquant_table_ADDR" count="160"/>
+	<int16 name="TABLE_bitalloc_table_ADDR" count="16"/>
+	<int16 name="TABLE_qc_table_ADDR" count="20"/>
+</typedef>
+
+<typedef name="AMJP_II_samples_Y_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="layer_II_samples_addr" count="3"/>
+	<int16 name="layer_II_TEMP_ADDR" count="2"/>
+	<int16 name="TABLE_sf_table_ADDR_ADDR"/>
+	<int16 name="layer_II_scalefactor_ADDR_ADDR"/>
+	<int16 name="layer_II_SBSAMPLE_SFTABLE_ADDR"/>
+	<int16 name="layer_II_SFTABLE_ADDR"/>
+	<int16 name="layer_II_bound_addr"/>
+	<int16 name="layer_II_sblimit_addr"/>
+</typedef>
+
+<typedef name="AMJP_mad_layer_II_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="layer_II_allocation_addr" count="64"/>
+	<int16 name="layer_II_scfsi_addr" count="64"/>
+	<int16 name="layer_II_scalefactor_addr" count="192"/>
+	<int16 name="TABLE_bitalloc_table_ADDR_ADDR" count="2"/>
+	<int16 name="layer_II_BACK_JUMP1_addr"/>
+	<int16 name="layer_II_BACK_JUMP_addr"/>
+</typedef>
+
+<typedef name="AMJP_JPEG_Decode_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="GLOBAL_MCUBuffer_ADDR" count="640"/>
+	<int16 name="GLOBAL_MCU_lastcoef_ADDR" count="10"/>
+	<int16 name="GLOBAL_ycoef_ADDR"/>
+	<int16 name="GLOBAL_ucoef_ADDR"/>
+	<int16 name="GLOBAL_vcoef_ADDR"/>
+	<int16 name="GLOBAL_coef_ADDR"/>
+	<int16 name="GLOBAL_image_control_ADDR"/>
+	<int16 name="GLOBAL_lpMCUBuffer_ADDR_ADDR"/>
+	<int16 name="GLOBAL_lastcoef_pt_ADDR"/>
+	<int16 name="GLOBAL_temp_lpJpegBuf_ADDR"/>
+	<int16 name="GLOBAL_Y_data_ADDR" count="256"/>
+	<int16 name="GLOBAL_rgb_buf_ADDR" count="5632"/>
+	<int16 name="GLOBAL_temp_Y_data_ADDR"/>
+	<int16 name="GLOBAL_col_num_ADDR"/>
+	<int16 name="TABLE_qt_table_ADDR" count="196"/>
+	<int16 name="GLOBAL_IDCT_BUFFER_X_ADDR" count="8"/>
+	<int16 name="GLOBAL_row_even_ADDR"/>
+	<int16 name="GLOBAL_col_even_ADDR"/>
+	<int16 name="GLOBAL_block_id_ADDR" count="2"/>
+	<int16 name="GLOBAL_JPEG_IMAGECONTROL_ADDR"/>
+	<int16 name="GLOBAL_ImgWidth_ADDR"/>
+	<int16 name="GLOBAL_ImgHeight_ADDR"/>
+	<int16 name="GLOBAL_Temp_ImgHeight_ADDR"/>
+	<int16 name="GLOBAL_temp_ImgWidth_ADDR"/>
+	<int16 name="GLOBAL_Temp_ImgWidth_ADDR"/>
+</typedef>
+
+<typedef name="AMJP_JPEG_Decode_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_IDCT_BUFFER_Y_ADDR" count="8"/>
+	<int16 name="LOCAL_JPEG_IN_BUF_ADDR" count="448"/>
+	<int16 name="LOCAL_VID_BMP_BUF_ADDR" count="640"/>
+	<int32 name="LOCAL_VID_BUF_OUT_PTR"/>
+</typedef>
+
+<typedef name="AMJP_DMAI_WRITEDATA_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_JPEG_DMA_TMP" count="63"/>
+</typedef>
+<typedef name="AMJP_DMAI_WRITEDATA_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_ImgWidth_ADDR"/>
+</typedef>
+<typedef name="AMJP_VPP_MP3_DECODE_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="OUTPUT_PCM_BUFFER1_ADDR" count="2304"/>
+	<int16 name="STATIC_MAD_SBSAMPLE_ADDR" count="4608"/>
+</typedef>
+
+<typedef name="AMJP_mad_synth_frame_X_BEGIN_ADDR" category="voc_amjp">
+</typedef>
+
+<typedef name="AMJP_mad_synth_frame_Y_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="LOCAL_mad_synth_frame_addr" count="32"/>
+	<int16 name="LOCAL_output_addr_addr"/>
+	<int16 name="LOCAL_output_raw_addr_addr"/>
+</typedef>
+
+<typedef name="AMJP_dct32_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_X_DCT32_TX1_T_ADDR" count="2"/>
+	<int16 name="LOCAL_X_DCT32_TX1_ADDR" count="32"/>
+	<int16 name="LOCAL_X_DCT32_TX2_T_ADDR" count="2"/>
+	<int16 name="LOCAL_X_DCT32_TX2_ADDR" count="32"/>
+</typedef>
+
+<typedef name="AMJP_dct32_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_Y_DCT32_TY2_T_ADDR" count="2"/>
+	<int16 name="LOCAL_Y_DCT32_TY2_ADDR" count="32"/>
+	<int16 name="LOCAL_X_DCT32_IN_ADDR" count="34"/>
+	<int16 name="LOCAL_Y_DCT32_TX1_T_ADDR" count="2"/>
+	<int16 name="LOCAL_Y_DCT32_TY1_ADDR" count="32"/>
+	<int16 name="LOCAL_Y_PHASE_ADDR" count="2"/>
+	<int16 name="CONST_DCT32_A24_ADDR_ADDR" count="2"/>
+</typedef>
+
+<typedef name="AMJP_III_decode_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_III_decode_sfbwidth_ADDR" count="2"/>
+</typedef>
+
+<typedef name="AMJP_III_decode_inner_0_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_III_decode_sblimit_ADDR" count="2"/>
+	<int32 name="LOCAL_III_decode_output_ADDR" count="36"/>
+</typedef>
+
+<typedef name="AMJP_III_scalefactors_lsf_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_III_scalefactors_lsf_slen_ADDR" count="4"/>
+</typedef>
+
+<typedef name="AMJP_III_huffdecode_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_HUFF_SFBOUND_ADDR" count="2"/>
+	<int32 name="LOCAL_HUFF_REQCACHE_ADDR" count="16"/>
+	<int16 name="LOCAL_HUFF_TABLE_ADDR"/>
+	<int16 name="LOCAL_HUFF_LINBITS_ADDR"/>
+	<int16 name="LOCAL_HUFF_STARTBITS_ADDR"/>
+	<int16 name="LOCAL_HUFF_REQHITS_ADDR"/>
+	<int16 name="LOCAL_HUFF_REGION_ADDR"/>
+	<int16 name="LOCAL_HUFF_XRPTR_ADDR"/>
+</typedef>
+
+<typedef name="AMJP_III_stereo_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_modes_ADDR" count="40"/>
+	<int16 name="LOCAL_bound_ADDR" count="4"/>
+</typedef>
+
+<typedef name="AMJP_III_reorder_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_sbw_ADDR" count="3"/>
+	<int16 name="LOCAL_sw_ADDR" count="3"/>
+</typedef>
+
+<typedef name="AMJP_III_imdct_s_X_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="LOCAL_III_imdct_s_Y_ADDR" count="20"/>
+</typedef>
+
+<typedef name="AMJP_III_exponents_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="LOCAL_EXPONENTS_ADDR" count="39"/>
+</typedef>
+
+<typedef name="AMJP_imdct36_X_BEGIN_ADDR" category="voc_amjp">
+	<int32 name="LOCAL_III_imdct36_X_16_ADDR" count="9"/>
+	<int32 name="LOCAL_III_imdct36_X_4_ADDR" count="9"/>
+	<int32 name="LOCAL_III_imdct36_t_16_ADDR" count="4"/>
+	<int32 name="LOCAL_III_imdct36_t_4_ADDR" count="4"/>
+</typedef>
+
+<typedef name="AMJP_AMR_Decode_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="DEC_AMR_LSP_NEW_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_LSP_MID_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_PREV_LSF_ADDRESS" count="10"/>
+	<int16 name="DEC_AMR_LSF_I_ADDRESS" count="50"/>
+	<int16 name="DEC_AMR_EXCP_ADDRESS" count="40"/>
+	<int16 name="DEC_AMR_EXC_ENHANCED_ADDRESS" count="44"/>
+	<int16 name="DEC_AMR_T0_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_FRAC_ADDRESS"/>
+	<int16 name="DEC_AMR_INDEX_ADDRESS"/>
+	<int16 name="DEC_AMR_INDEX_MR475_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_PIT_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_CODE_ADDRESS"/>
+	<int16 name="DEC_AMR_GAIN_CODE_MIX_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_SHARP_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_FLAG_ADDRESS"/>
+	<int16 name="DEC_AMR_PIT_FAC_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_MIN_ADDRESS"/>
+	<int16 name="DEC_AMR_T0_MAX_ADDRESS"/>
+	<int16 name="DEC_AMR_DELTA_FRC_LOW_ADDRESS"/>
+	<int16 name="DEC_AMR_DELTA_FRC_RANGE_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP_SHIFT_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP_ADDRESS"/>
+	<int16 name="DEC_AMR_L_TEMP_ADDRESS" count="2"/>
+	<int16 name="DEC_AMR_FLAG4_ADDRESS"/>
+	<int16 name="DEC_AMR_CAREFULFLAG_ADDRESS"/>
+	<int16 name="DEC_AMR_EXCENERGY_ADDRESS"/>
+	<int16 name="DEC_AMR_SUBFRNR_ADDRESS"/>
+	<int16 name="DEC_AMR_EVENSUBFR_ADDRESS"/>
+	<int16 name="DEC_AMR_NEWDTXSTATE_ADDRESS"/>
+	<int16 name="DEC_AMR_BFI_ADDRESS"/>
+	<int16 name="DEC_AMR_PDFI_ADDRESS"/>
+	<int16 name="DEC_AMR_A_T_ADDRESS" count="44"/>
+	<int16 name="DEC_AMR_PARM_ADDRESS" count="58"/>
+	<int16 name="COD_AMR_CODE_ADDRESS" count="40"/>
+</typedef>
+
+<typedef name="AMJP_AMR_Decode_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="AMR_DEC_BUFOUT_ADDR" count="160"/>
+</typedef>
+
+<typedef name="AMJP_Syn_filt_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="SYN_FILT_TMP_ADDR" count="80"/>
+</typedef>
+
+<typedef name="AMJP_bits2prm_amr_efr_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="AMR_DEC_BUFIN_ADDR" count="246"/>
+</typedef>
+
+<typedef name="AMJP_amr_dec_122_X_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="DEC_AMR_TEMP0_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP1_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP2_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP3_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP4_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP5_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP6_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP7_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP8_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP9_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP10_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP11_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP12_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP13_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP14_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP15_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP16_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP17_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP18_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP19_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP20_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP21_ADDRESS"/>
+	<int16 name="DEC_AMR_TEMP22_ADDRESS"/>
+</typedef>
+
+<typedef name="AMJP_Int_lpc_1and3_dec_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="INT_LPC_LSP_ADDR" count="10"/>
+	<int16 name="F1_ADDR" count="12"/>
+	<int16 name="F2_ADDR" count="12"/>
+</typedef>
+
+<typedef name="AMJP_gmed_n_Y_BEGIN_ADDR" category="voc_amjp">
+	<int16 name="MR475_gain_quant_coeff_ADDRESS" count="10"/>
+	<int16 name="MR475_gain_quant_coeff_lo_ADDRESS" count="10"/>
+</typedef>
+
+
+<var name="RAM_X_BEGIN_ADDR" value="11534336/2"/>
+<var name="RAM_Y_BEGIN_ADDR" value="11567104/2"/>
+
+<var name="COMMON_GLOBAL_X_SIZE" value="1034"/>
+<var name="COMMON_GLOBAL_Y_SIZE" value="94"/>
+<var name="AAC_GLOBAL_X_SIZE" value="4126"/>
+<var name="AAC_GLOBAL_Y_SIZE" value="4112"/>
+<var name="H263_GLOBAL_X_SIZE" value="0"/>
+<var name="H263_GLOBAL_Y_SIZE" value="138"/>
+<var name="AAC_LOCAL_X_SIZE" value="4956"/>
+<var name="AAC_LOCAL_Y_SIZE" value="5632"/>
+<var name="H263_LOCAL_X_SIZE" value="4864"/>
+<var name="H263_LOCAL_Y_SIZE" value="2592"/>
+<var name="MP3_GLOBAL_X_SIZE" value="2192"/>
+<var name="MP3_GLOBAL_Y_SIZE" value="7470"/>
+<var name="AMR_GLOBAL_X_SIZE" value="950"/>
+<var name="AMR_GLOBAL_Y_SIZE" value="5606"/>
+<var name="JPEG_GLOBAL_X_SIZE" value="0"/>
+<var name="JPEG_GLOBAL_Y_SIZE" value="1524"/>
+<var name="MP12_GLOBAL_X_SIZE" value="0"/>
+<var name="MP12_GLOBAL_Y_SIZE" value="0"/>
+<var name="MP12_LOCAL_X_SIZE" value="0"/>
+<var name="MP12_LOCAL_Y_SIZE" value="524"/>
+<var name="JPEG_LOCAL_X_SIZE" value="6826"/>
+<var name="JPEG_LOCAL_Y_SIZE" value="1100"/>
+<var name="MP3_LOCAL_X_SIZE" value="6980"/>
+<var name="MP3_LOCAL_Y_SIZE" value="172"/>
+<var name="AMR_LOCAL_X_SIZE" value="578"/>
+<var name="AMR_LOCAL_Y_SIZE" value="240"/>
+<var name="COMMON_LOCAL_X_SIZE" value="0"/>
+<var name="COMMON_LOCAL_Y_SIZE" value="0"/>
+
+<var name="AMJP_GLOBAL_X_BEGIN_ADDR" value="(0 + RAM_X_BEGIN_ADDR)"/>
+<var name="AMJP_GLOBAL_Y_BEGIN_ADDR" value="(0 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AAC_GLOBAL_X_BEGIN_ADDR" value="(1034 + RAM_X_BEGIN_ADDR)"/>
+<var name="AAC_GLOBAL_Y_BEGIN_ADDR" value="(94 + RAM_Y_BEGIN_ADDR)"/>
+<var name="H263_GLOBAL_X_BEGIN_ADDR" value="(5160 + RAM_X_BEGIN_ADDR)"/>
+<var name="H263_GLOBAL_Y_BEGIN_ADDR" value="(4206 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AAC_LOCAL_X_BEGIN_ADDR" value="(5160 + RAM_X_BEGIN_ADDR)"/>
+<var name="AAC_LOCAL_Y_BEGIN_ADDR" value="(4344 + RAM_Y_BEGIN_ADDR)"/>
+<var name="H263_LOCAL_X_BEGIN_ADDR" value="(5160 + RAM_X_BEGIN_ADDR)"/>
+<var name="H263_LOCAL_Y_BEGIN_ADDR" value="(4344 + RAM_Y_BEGIN_ADDR)"/>
+<var name="MP3_GLOBAL_X_BEGIN_ADDR" value="(1034 + RAM_X_BEGIN_ADDR)"/>
+<var name="MP3_GLOBAL_Y_BEGIN_ADDR" value="(94 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AMR_GLOBAL_X_BEGIN_ADDR" value="(1034 + RAM_X_BEGIN_ADDR)"/>
+<var name="AMR_GLOBAL_Y_BEGIN_ADDR" value="(94 + RAM_Y_BEGIN_ADDR)"/>
+<var name="JPEG_GLOBAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="JPEG_GLOBAL_Y_BEGIN_ADDR" value="(7564 + RAM_Y_BEGIN_ADDR)"/>
+<var name="MP12_GLOBAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="MP12_GLOBAL_Y_BEGIN_ADDR" value="(7564 + RAM_Y_BEGIN_ADDR)"/>
+<var name="MP12_LOCAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="MP12_LOCAL_Y_BEGIN_ADDR" value="(7564 + RAM_Y_BEGIN_ADDR)"/>
+<var name="JPEG_LOCAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="JPEG_LOCAL_Y_BEGIN_ADDR" value="(9088 + RAM_Y_BEGIN_ADDR)"/>
+<var name="MP3_LOCAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="MP3_LOCAL_Y_BEGIN_ADDR" value="(9088 + RAM_Y_BEGIN_ADDR)"/>
+<var name="AMR_LOCAL_X_BEGIN_ADDR" value="(3226 + RAM_X_BEGIN_ADDR)"/>
+<var name="AMR_LOCAL_Y_BEGIN_ADDR" value="(9088 + RAM_Y_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_X_BEGIN_ADDR" value="(5160 + RAM_X_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_Y_BEGIN_ADDR" value="(9088 + RAM_Y_BEGIN_ADDR)"/>
+
+<instance address="(0+AMJP_GLOBAL_X_BEGIN_ADDR)*2" type="AMJP_GLOBAL_X_BEGIN_ADDR" name="MAIN_GLOBAL_X_BEGIN_ADDR"/>
+<instance address="(0+AAC_GLOBAL_X_BEGIN_ADDR)*2" type="AAC_GLOBAL_X_BEGIN_ADDR" name="AAC_GLOBAL_X_BEGIN_ADDR"/>
+<instance address="(0+MP3_GLOBAL_X_BEGIN_ADDR)*2" type="MP3_GLOBAL_X_BEGIN_ADDR" name="MP3_GLOBAL_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_GLOBAL_X_BEGIN_ADDR)*2" type="AMR_GLOBAL_X_BEGIN_ADDR" name="AMR_GLOBAL_X_BEGIN_ADDR"/>
+<instance address="(0+JPEG_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_JPEG_Decode_X_BEGIN_ADDR" name="JPEG_LOCAL_X_BEGIN_ADDR"/>
+<instance address="(0+MP3_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_VPP_MP3_DECODE_X_BEGIN_ADDR" name="MP3_LOCAL_X_BEGIN_ADDR"/>
+<instance address="(0+AMR_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_AMR_Decode_X_BEGIN_ADDR" name="AMR_LOCAL_X_BEGIN_ADDR"/>
+<instance address="(0+H263_LOCAL_X_BEGIN_ADDR)*2" type="vpp_AmjpH263Zoom_X_BEGIN_ADDR" name="vpp_AmjpH263Zoom_X_BEGIN_ADDR"/>
+
+<instance address="(0+AMJP_GLOBAL_Y_BEGIN_ADDR)*2" type="AMJP_GLOBAL_Y_BEGIN_ADDR" name="MAIN_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+AAC_GLOBAL_Y_BEGIN_ADDR)*2" type="AAC_GLOBAL_Y_BEGIN_ADDR" name="AAC_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+H263_GLOBAL_Y_BEGIN_ADDR)*2" type="H263_GLOBAL_Y_BEGIN_ADDR" name="H263_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+MP3_GLOBAL_Y_BEGIN_ADDR)*2" type="MP3_GLOBAL_Y_BEGIN_ADDR" name="MP3_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+AMR_GLOBAL_Y_BEGIN_ADDR)*2" type="AMR_GLOBAL_Y_BEGIN_ADDR" name="AMR_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+JPEG_GLOBAL_Y_BEGIN_ADDR)*2" type="JPEG_GLOBAL_Y_BEGIN_ADDR" name="JPEG_GLOBAL_Y_BEGIN_ADDR"/>
+<instance address="(0+MP12_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_I_sample_Y_BEGIN_ADDR" name="MP1_LOCAL_Y_BEGIN_ADDR"/>
+<instance address="(0+MP12_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_mad_layer_II_Y_BEGIN_ADDR" name="MP2_LOCAL_Y_BEGIN_ADDR"/>
+<instance address="(0+JPEG_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_JPEG_Decode_Y_BEGIN_ADDR" name="JPEG_LOCAL_Y_BEGIN_ADDR"/>
+<instance address="(0+AMR_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_AMR_Decode_Y_BEGIN_ADDR" name="AMR_LOCAL_Y_BEGIN_ADDR"/>
+<instance address="(0+H263_LOCAL_Y_BEGIN_ADDR)*2" type="vpp_AmjpH263Zoom_Y_BEGIN_ADDR" name="vpp_AmjpH263Zoom_Y_BEGIN_ADDR"/>
+
+<instance address="(324+MP12_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_II_samples_Y_BEGIN_ADDR" name="AMJP_II_samples_Y_BEGIN_ADDR"/>
+<instance address="(6762+JPEG_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_DMAI_WRITEDATA_X_BEGIN_ADDR" name="AMJP_DMAI_WRITEDATA_X_BEGIN_ADDR"/>
+<instance address="(1098+JPEG_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_DMAI_WRITEDATA_Y_BEGIN_ADDR" name="AMJP_DMAI_WRITEDATA_Y_BEGIN_ADDR"/>
+<instance address="(6912+MP3_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_mad_synth_frame_X_BEGIN_ADDR" name="AMJP_mad_synth_frame_X_BEGIN_ADDR"/>
+<instance address="(0+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_mad_synth_frame_Y_BEGIN_ADDR" name="AMJP_mad_synth_frame_Y_BEGIN_ADDR"/>
+<instance address="(6912+MP3_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_dct32_X_BEGIN_ADDR" name="AMJP_dct32_X_BEGIN_ADDR"/>
+<instance address="(66+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_dct32_Y_BEGIN_ADDR" name="AMJP_dct32_Y_BEGIN_ADDR"/>
+<instance address="(0+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_decode_Y_BEGIN_ADDR" name="AMJP_III_decode_Y_BEGIN_ADDR"/>
+<instance address="(2+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_decode_inner_0_Y_BEGIN_ADDR" name="AMJP_III_decode_inner_0_Y_BEGIN_ADDR"/>
+<instance address="(2+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_scalefactors_lsf_Y_BEGIN_ADDR" name="AMJP_III_scalefactors_lsf_Y_BEGIN_ADDR"/>
+<instance address="(2+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_huffdecode_Y_BEGIN_ADDR" name="AMJP_III_huffdecode_Y_BEGIN_ADDR"/>
+<instance address="(2+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_stereo_Y_BEGIN_ADDR" name="AMJP_III_stereo_Y_BEGIN_ADDR"/>
+<instance address="(2+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_reorder_Y_BEGIN_ADDR" name="AMJP_III_reorder_Y_BEGIN_ADDR"/>
+<instance address="(6912+MP3_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_III_imdct_s_X_BEGIN_ADDR" name="AMJP_III_imdct_s_X_BEGIN_ADDR"/>
+<instance address="(42+MP3_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_III_exponents_Y_BEGIN_ADDR" name="AMJP_III_exponents_Y_BEGIN_ADDR"/>
+<instance address="(6912+MP3_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_imdct36_X_BEGIN_ADDR" name="AMJP_imdct36_X_BEGIN_ADDR"/>
+<instance address="(160+AMR_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_Syn_filt_Y_BEGIN_ADDR" name="AMJP_Syn_filt_Y_BEGIN_ADDR"/>
+<instance address="(332+AMR_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_bits2prm_amr_efr_X_BEGIN_ADDR" name="AMJP_bits2prm_amr_efr_X_BEGIN_ADDR"/>
+<instance address="(332+AMR_LOCAL_X_BEGIN_ADDR)*2" type="AMJP_amr_dec_122_X_BEGIN_ADDR" name="AMJP_amr_dec_122_X_BEGIN_ADDR"/>
+<instance address="(160+AMR_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_Int_lpc_1and3_dec_Y_BEGIN_ADDR" name="AMJP_Int_lpc_1and3_dec_Y_BEGIN_ADDR"/>
+<instance address="(160+AMR_LOCAL_Y_BEGIN_ADDR)*2" type="AMJP_gmed_n_Y_BEGIN_ADDR" name="AMJP_gmed_n_Y_BEGIN_ADDR"/>
+
+</archive>

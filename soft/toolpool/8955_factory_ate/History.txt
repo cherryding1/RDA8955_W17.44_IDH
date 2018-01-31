@@ -1,0 +1,43 @@
+20140303
+Remove flash erase code at the begining of the Flash test to aoid HST interface hal after PSRAM BIST
+Add GPIO GPO high low action during PSRAM check according to Xiao Yifeng
+Use 0x5555AAAA 0xAAAA5555 PSRAM test pattern for FT program
+Use 0xFFFFFFFF 0x00000000 0x5555AAAA 0xAAAA5555 PSRAM test pattern for QA program
+
+
+
+
+20140124
+Use NoDMA mode for PSRAM test in Main function to avoid xcpu halt issue
+
+
+
+
+20140123
+Note: Still need to debug
+
+Use Bcpu to test flash and burn bootloader
+Use Xcpu to test psram
+
+Masked while(1) loop voc_test in cp2.c
+change PSRAM check pass result from 0xaaaaaaa9 to 0xaaaaaaaa
+Change RAM check flag in cp2.c from register 0x81c00000 to 0x81b0001c
+
+0x81c00000 -> PSRAM check pass
+0x81b00004 -> flash fail id1
+0x81b00008 -> flash fail id2
+0x81b0000c -> flash fail id3
+0x81b00010 -> flash check pass
+0x81b00018 -> flash check done
+0x81b0001c -> RAM check pass
+
+
+
+20140122
+Note: This edition is the final stable program
+
+Set cpu into while loop after flash check to avoid following item ustable issue.
+Move flash program data from PSRAM to RAM
+
+Use 0x55555555 0xAAAAAAAA PSRAM test pattern for FT program
+Use 0xFFFFFFFF 0x00000000 0x55555555 0xAAAAAAAA PSRAM test pattern for QA program

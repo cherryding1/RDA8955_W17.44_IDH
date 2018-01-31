@@ -1,0 +1,55 @@
+<module name="VPP_EFR">
+        <fn name='agc' id='0x500'/>
+        <fn name='agc2' id='0x501'/>
+        <fn name='Autocorr' id='0x502'/>
+        <fn name='Az_lsp' id='0x503'/>
+        <fn name='Bits2prm_12k2' id='0x504'/>
+        <fn name='CN_excitation_gain' id='0x505'/>
+        <fn name='code_10i40_35bits' id='0x506'/>
+        <fn name='Coder_12k2' id='0x507'/>
+        <fn name='Convolve' id='0x508'/>
+        <fn name='Copy' id='0x509'/>
+        <fn name='d_gain_code' id='0x50a'/>
+        <fn name='d_gain_pitch' id='0x50b'/>
+        <fn name='D_plsf_5' id='0x50c'/>
+        <fn name='dec_10i40_35bits' id='0x50d'/>
+        <fn name='Decoder_12k2' id='0x50e'/>
+        <fn name='Dec_lag6' id='0x50f'/>
+        <fn name='Enc_lag6' id='0x510'/>
+        <fn name='G_code' id='0x511'/>
+        <fn name='G_pitch' id='0x512'/>
+        <fn name='Int_lpc' id='0x513'/>
+        <fn name='Int_lpc2' id='0x514'/>
+        <fn name='Interpol_6' id='0x515'/>
+        <fn name='Init_Coder_12k2' id='0x516'/>
+        <fn name='Init_Decoder_12k2' id='0x517'/>
+        <fn name='Init_Post_Filter' id='0x518'/>
+        <fn name='Init_Pre_Process' id='0x519'/>
+        <fn name='Inv_sqrt' id='0x51a'/>
+        <fn name='Lag_window' id='0x51b'/>
+	    <fn name='Levinson' id='0x51c'/>
+        <fn name='Log2' id='0x51d'/>
+        <fn name='Lsf_lsp' id='0x51e'/>
+        <fn name='Lsp_Az' id='0x51f'/>
+        <fn name='Lsp_lsf' id='0x520'/>
+        <fn name='Pitch_fr6' id='0x521'/>
+        <fn name='Pitch_ol' id='0x522'/>
+        <fn name='Post_Filter' id='0x523'/>
+        <fn name='Pred_lt_6' id='0x524'/>
+        <fn name='preemphasis' id='0x525'/>
+        <fn name='Pre_Process' id='0x526'/>
+        <fn name='Prm2bits_12k2' id='0x527'/>
+        <fn name='q_gain_code' id='0x528'/>
+        <fn name='q_gain_pitch' id='0x529'/>
+	    <fn name='Q_plsf_5' id='0x52a'/>
+        <fn name='Residu' id='0x52b'/>
+        <fn name='Syn_filt' id='0x52c'/>
+        <fn name='vad_computation' id='0x52d'/>
+       	<fn name='Weight_Ai' id='0x52e'/>
+        <fn name='Weight_Fac' id='0x52f'/>
+        <fn name='vpp_efr_decode' id='0x530'/>
+        <fn name='vpp_efr_encode' id='0x531'/>
+
+
+
+</module>

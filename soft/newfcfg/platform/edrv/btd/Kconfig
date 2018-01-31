@@ -1,0 +1,64 @@
+
+comment "--- platform/edrv/btd ---"
+
+config BT_MODEL_ENABLE
+	option skiph
+	option skipmk
+	bool "BT Support"	
+	default n if CT_ASIC_8955
+	default y
+
+if BT_MODEL_ENABLE
+
+menu "bluetooth"
+
+config BT_MODEL
+	option skiph
+	string "BT_MODEL"
+	default "rdabt_8809"
+	
+config BT_SHARE_CRYSTAL
+	option skiph
+	bool "BT SHARE CRYSTAL"
+	default y
+	---help---
+		Define BT crystal flag
+
+choice
+	option skipmk
+	option skiph
+	prompt "32k clock pin used by bt:1/0"
+	default bt_pin0
+	---help---
+		32k clock pin used by bt:1/0
+		
+	config bt_pin0
+		option skiph
+		option skipmk
+		bool	"CLK_OUT"
+	
+	config bt_pin1
+		option skiph
+		option skipmk
+		bool	"32K_CLK"	
+endchoice
+
+config BT_USE_32K_CLK_PIN
+	option skiph
+	string
+	default 0 if bt_pin0
+	default 1 if bt_pin1
+	---help---
+		It defines 32k clock pin of Bluetooth. 0 is for CLK_OUT pin; 1 is for 32K_CLK pin.
+
+endmenu
+
+config BT_NO_A2DP_PROFILE
+	option skipmk
+	bool "BT NO A2DP PROFILE"
+	depends on BT_MODEL_ENABLE
+	default n
+	---help---
+		enable the config if A2DP is not supported
+
+endif

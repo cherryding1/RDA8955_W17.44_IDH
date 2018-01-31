@@ -1,0 +1,8 @@
+
+C_SRC := \
+    gsensor.c \
+    gpio_iic.c \
+
+
+
+

@@ -1,0 +1,25 @@
+
+SOURCE_FILES := \
+./tinydtls/dtls_ccm.c \
+./tinydtls/ecc/ecc.c \
+./tinydtls/aes/rijndael.c \
+./tinydtls/crypto.c \
+./tinydtls/netq.c \
+./tinydtls/dtls_debug.c \
+./tinydtls/session.c \
+./tinydtls/sha2/sha2.c \
+./tinydtls/dtls_time.c \
+./tinydtls/dtls_hmac.c \
+./tinydtls/peer.c \
+./tinydtls/dtls.c
+
+#./tinydtls/sha2/sha2speed.c \
+#./tinydtls/sha2/sha2prog.c \
+#./tinydtls/ecc/testfield.c \
+
+
+SOURCE_INCLUDE := \
+	${LOCAL_NAME}/src/tinydtls \
+	${LOCAL_NAME}/src/tinydtls/platform-specific
+
+

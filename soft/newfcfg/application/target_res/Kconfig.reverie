@@ -1,0 +1,32 @@
+menuconfig __MMI_REVERIE_FONT_ENGINE__
+    option skipmk
+    bool "Reverie Support"
+    default y
+help 
+    Reverie and GB are not compatible.
+    Switch on Reverie then GB need to be switched off.
+    Switch on Reverie to support 22 Hindi local languages.   
+    
+if __MMI_REVERIE_FONT_ENGINE__
+
+config __MMI_REVERIE_ENGLISH__
+    option skipmk
+    bool "Reverie English Multitap"
+    depends on __MMI_LANG_ENGLISH__
+    default y
+
+menu "Reverie Multitap"
+source "newfcfg/application/target_res/Kconfig.multitap"
+endmenu
+
+menu "Reverie Smart"
+source "newfcfg/application/target_res/Kconfig.smart"
+endmenu
+
+config __MMI_BIDI_ALG__
+    option skipmk
+    bool "__MMI_BIDI_ALG__"
+    depends on __MMI_MULTITAP_REVERIE_URDU__ || __MMI_MULTITAP_REVERIE_KASHMIRI__ || __MMI_SMART_REVERIE_URDU__ || __MMI_SMART_REVERIE_KASHMIRI__
+    default n  
+
+endif    

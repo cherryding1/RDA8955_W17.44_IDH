@@ -1,0 +1,145 @@
+comment "--- platform/edrv/lcdd ---"
+	
+config LCD_MODEL
+	option skiph
+	string "LCD_MODEL"
+	default gc9102
+	   ---help---
+		1 QVGA	240*320
+			hx8347 lgdp4532 st7781 ssd1297 spfd5408b
+			hx8367 s6d1121 st7787 ili9320
+			otm3225 ili9325 ili9328 ili9340
+			s6d04h0a01
+		2 QCIF	176*220
+			hx8340b kc20 r61503v otm2201a
+			ili9225 lgb4525b r61503vr otm2201h
+			ili9225b ili9225br s6d0164 dc2200
+		3 QQVGA	128*160
+			ili9163 s6b33bf st7669v s6d0144
+			st7735 hx8345a fd54124bv
+		
+choice
+	option skiph
+	option skipmk
+	prompt "lcd interface"
+	default lcd_gouda
+	---help---
+		lcd interface:gouda/slcd
+		
+	config lcd_gouda
+		option skiph
+		option skipmk
+		bool	"gouda"
+			
+endchoice
+		
+config LCD_IF
+	option skiph
+	string
+	default gouda if lcd_gouda
+	default slcd if lcd_slcd
+	---help---
+		guoda/slcd
+
+config __PRJ_WITH_SPILCD__
+	option skipmk
+	bool
+	default y if lcd_slcd
+	default n
+	---help---
+		It must be YES if usd SPI lcd.
+
+if lcd_gouda
+config USE_SPI_LCD
+	bool "use spi lcd"
+	default y
+	---help---
+		gouda can support serial lcd starting from 8808
+endif
+
+config __USE_LCD_FMARK__
+	bool "use lcd fmark"
+	default n
+	---help---
+		use lcd fmark for fix tearing effect
+
+config lcd_line_8_low
+	option skipmk
+	bool "lcd line 8 low"
+	default y
+	---help---
+		former platform support low 8 and high 8 for lcd wire connection. now 8 lod is common used.
+	
+menuconfig SUBLCD_MODEL_ENABLE
+	option skiph
+	option skipmk
+	bool "sub lcd"
+	default n
+	
+if SUBLCD_MODEL_ENABLE
+
+choice
+	option skiph
+	option skipmk
+	prompt "sub lcd interface"
+	default sub_lcd_gouda
+	---help---
+		lcd interface:gouda/slcd
+		
+	config sub_lcd_gouda
+	bool	"gouda"
+	
+	config sub_lcd_slcd
+	bool	"slcd"
+		
+endchoice
+		
+config SUBLCD_IF
+	option skiph
+	string
+	default gouda if sub_lcd_gouda
+	default slcd if sub_lcd_slcd
+	
+	
+if sub_lcd_gouda
+
+config USE_SPI_SUBLCD
+	option skipmk
+	bool "use spi lcd"
+	default n	
+endif
+	
+choice
+	option skiph
+	prompt "sub lcd size"
+	default SUBLCDSIZE_128_128
+	---help---
+		SUBLCDSIZE_128_128/SUBLCDSIZE_96_64/SUBLCDSIZE_64_96
+		
+	config SUBLCDSIZE_128_128
+		option skipmk
+		bool	"SUBLCDSIZE_128_128"
+	
+	config SUBLCDSIZE_96_64
+		option skipmk
+		bool	"SUBLCDSIZE_96_64"
+	
+	config SUBLCDSIZE_64_96
+		option skipmk
+		bool	"SUBLCDSIZE_64_96"
+		
+endchoice	
+
+config DUAL_LCD
+	option skipmk
+	bool
+	default y
+	 	
+endif
+
+config LCD_BACKLIGHT_CHARGE_PUMP
+	option skiph
+	bool "LCD backlight charge pump"
+	default n
+	---help---
+		whether to enable charge pump for lcd backlight.

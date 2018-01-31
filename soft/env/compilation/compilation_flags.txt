@@ -1,0 +1,44 @@
+################################################
+## Required variables in all Makefiles
+################################################
+LOCAL_NAME                      name of the module
+LOCAL_API_DEPENDS               list all the modules which header are used to compile this module
+LOCAL_MODULE_DEPENDS            For a module, list all the libraries that will be used to build 
+                                that module library (list of submodules) 
+                                For an entry point, list all the libraries that will be used 
+                                to build the binary
+                                In both cases the include directory of the modules listed are 
+                                available during compilation, no need to specifyy them 
+                                in LOCAL_API_DEPENDS
+################################################
+## Optionnal variables
+################################################
+LOCAL_OBJS                      to add a specific external object to link to the project 
+                                or add a to a module. Filename must be specified from $SOFT_WORKDIR
+LOCAL_LIBS                      to add a specific external library to link to the project 
+                                or add a to a module. Filename must be specified from $SOFT_WORKDIR
+LOCAL_ADD_INCLUDE               to add a specific include directory
+                                Directory path must be given from $SOFT_WORKDIR
+
+LOCAL_EXPORT_FLAG               additionnal flags exported to recursive calls of make
+
+FLASH_RAM_OBJ_LIST
+SRAM_OBJ_LIST
+UCRAM_OBJ_LIST
+
+CT_RELEASE                      default release type for the module.
+                                must be specified as CT_RELEASE?=<release/debug/...>
+                                to allow the command line value to overwrite the default
+CT_TARGET                       default target for the module.
+                                must be specified as CT_TARGET?=<simu/fpga/...>
+                                to allow the command line value to overwrite the default
+CT_OPT                          optimization options. Can be dbg/dbg_opt/size/speed
+CT_ROMULATOR                    yes or no. Enables the romulator flash emulation
+
+
+All files are compiled by default in mips16. If a specific file can not be compiled in mips16
+(special processing requiring a lot of registers, usage of coprocessor, add the following line
+in the make.srcs
+%/<filename>.o: CT_MIPS16_CFLAGS=
+
+

@@ -1,0 +1,122 @@
+comment "--- application/coolmmi/mmi/messages ---"
+
+config PHONE_SMS_ENTRY_COUNT
+    int "PHONE_SMS_ENTRY_COUNT"
+    range 0 100
+    default 100
+    ---help---
+        Select the maximum count for SMS saved in phone. By default, set at 100.
+
+config SIM_SMS_ENTRY_COUNT
+    int "SIM_SMS_ENTRY_COUNT"
+    range 0 255
+    default 255
+    ---help---
+        Select the maximum count for SMS saved in SIM. By default, set at 255.
+
+config __MMI_MESSAGES_DRAFT_BOX__
+    option skipmk
+    bool "MMI_MESSAGES_DRAFT_BOX"
+    default y
+
+config __MMI_MESSAGES_DELETE_SAME_NUMER__
+    option skipmk
+    bool "MMI_MESSAGES_DELETE_SAME_NUMER"
+    default y
+
+config __MMI_MESSAGES_SMS_MARK_SEVERAL__
+    option skipmk
+    bool "MMI_MESSAGES_SMS_MARK_SEVERAL"
+    default y
+
+config __MMI_MESSAGES_DRAFT_BOX_SPLIT__
+    option skipmk
+    bool "MMI_MESSAGES_DRAFT_BOX_SPLIT"
+    default y
+
+config __MMI_MESSAGES_COPY__
+    option skipmk
+    bool "MMI_MESSAGES_COPY"
+    default y
+
+config SUPPORT_SMS_EXPORT_IMPORT
+    option skipmk
+    bool "SUPPORT_SMS_EXPORT_IMPORT"
+    default y
+
+config __MMI_MSG_NUM_ADD_TO_BLACKLIST__
+    option skipmk
+    bool "MMI_MSG_NUM_ADD_TO_BLACKLIST"
+    default y
+
+config __MMI_MESSAGES_RENAME_OUTBOX__
+    option skipmk
+    bool "MMI_MESSAGES_RENAME_OUTBOX"
+    default y
+
+config __MMI_MESSAGES_VOICE_MAIL__
+    option skipmk
+    bool "MMI_MESSAGES_VOICE_MAIL"
+    default y
+
+#config __MMI_MSG_NUM_ADD_TO_BLACKLIST__
+#    option skipmk
+#    bool "MMI_MSG_NUM_ADD_TO_BLACKLIST"
+#    default y
+
+config __MMI_MESSAGES_MULTI_REPLY__
+    option skipmk
+    bool "MMI_MESSAGES_MULTI_REPLY"
+    default y
+
+config __MMI_MESSAGES_BLACK_LIST__
+    option skipmk
+    bool "Message Black List"
+    default y
+
+config CM_SMS_MAX_MSG_NUM
+	option skiph
+	int "CM_SMS_MAX_MSG_NUM"
+	range 0 100
+	default PHONE_SMS_ENTRY_COUNT
+	---help---
+	   it was used in simulator and saved temporarily.
+
+config MAX_INDEX_MAP_LENGTH
+	option skiph
+	int "MAX_INDEX_MAP_LENGTH"
+	range 0 100
+	default PHONE_SMS_ENTRY_COUNT
+	---help---
+	   it was used in simulator and saved temporarily.
+
+config CB_SUPPORT
+	bool "Cell Broadcast"
+	default y
+	---help---
+		cell broadcast support
+
+config __MMI_MESSAGES_CB__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && CB_SUPPORT
+	def_bool n
+
+config __MMI_MESSAGES_CB_MSG_STORED_LIST__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && __MMI_MESSAGES_CB__
+	def_bool n
+
+config __MMI_MESSAGES_CB_CHNL_WITH_NAME__
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && __MMI_MESSAGES_CB__
+	def_bool n
+
+config __MMI_MESSAGES_TWO_CB_MODES_DISPLAY__ 
+	option skipmk
+	def_bool y if __MOD_SMSAL__ && __MMI_MESSAGES_CB__
+	def_bool n
+
+#config MESSAGES_CB_DEBUG
+#	option skipmk
+#	bool "MESSAGES CB DEBUG"
+#	default n

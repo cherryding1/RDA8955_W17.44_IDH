@@ -1,0 +1,174 @@
+#!/bin/bash
+
+set -e
+CMD_PATH=/bin:/usr/bin
+ECHO=`env -i PATH=${CMD_PATH} which echo`
+BASENAME=`env -i PATH=${CMD_PATH} which basename`
+DIRNAME=`env -i PATH=${CMD_PATH} which dirname`
+LS=`env -i PATH=${CMD_PATH} which ls`
+GREP=`env -i PATH=${CMD_PATH} which grep`
+SED=`env -i PATH=${CMD_PATH} which sed`
+EXPR=`env -i PATH=${CMD_PATH} which expr`
+set +e
+
+$ECHO
+
+PGM_NAME=`$BASENAME $0`
+USAGE="$PGM_NAME [-h|--help] [-j [<job num>]] [<module list>]
+        [<args passed to make>]
+
+Description:
+    A helper script to 
+    1. execute make in parallel;
+    2. build designated modules only and link all others.
+
+    -h
+    --help
+        Show this help.
+
+    -j <job num>
+        Specify the parallel execution option passed to make.
+        Its meaning is the same as that in make, except:
+        -j 0
+            Do not execute in parallel.
+        -j
+            Execute in parallel, and the number of concurrent
+            jobs is equal to the number of CPUs.
+
+    <module list>
+        Specify modules that must be build.
+        E.g., application/coolmmi/mmi platform/base target
+
+        If module list only contains one module, link,
+        the script will merely build top level source files
+        and link all the required libraries.
+
+    <args passed to make>
+        Specify arguments that are passed to make.
+"
+
+CMD_ARGS=
+CT_MODULES=
+PARALLEL_EXEC_FLAG=
+JOB_NUM=
+ERROR_NO=
+
+check_mod_name_case()
+{
+    if [ "x$OSTYPE" != "xcygwin" ]; then
+        return 0
+    fi
+    
+    local upper_dir=$1
+    while [ 1 ]; do
+        local this_dir=`$BASENAME $upper_dir`
+        local upper_dir=`$DIRNAME $upper_dir`
+    
+        local dir_exists=`$LS -1 ${SOFT_WORKDIR}/${upper_dir} | $GREP "^${this_dir}$"`
+        if [ "x$dir_exists" = "x" ]; then
+            return 1
+        fi
+    
+        if [ "x$upper_dir" = "x." ]; then
+            break
+        fi
+    done
+    
+    return 0
+}
+
+while [ "x$#" != "x0" ]; do
+    arg=$1
+    shift
+    
+    if [ "x$arg" = "x-h" ] || [ "x$arg" = "x--help" ]; then
+        $ECHO "$USAGE"
+        exit 0
+    fi
+
+    if [[ "x$arg" == xapplication* ]] ||
+       [[ "x$arg" == xat* ]]          ||
+       [[ "x$arg" == xplatform* ]]    ||
+       [[ "x$arg" == xtarget* ]]      ||
+       [[ "x$arg" == "xlink" ]]
+    then
+        # Optional build flags
+        if [ ! -d "${SOFT_WORKDIR}/$arg" ] &&
+           [ "x$arg" != "xlink" ]
+        then
+            $ECHO "*** Error: Nonexistent Module: $arg"
+            ERROR_NO=11
+        else
+            # Remove the duplicate slashes and trailing slashes
+            mod_name=`$ECHO $arg | $SED 's/\/\/*/\//g' | $SED 's/\/$//'`
+            check_result=0
+            if [ "x$arg" != "xlink" ]; then
+                check_mod_name_case $mod_name
+                check_result=$?
+            fi
+            if [ "x$check_result" != "x0" ]; then
+                $ECHO "*** Error: Module Name Case Incorrect: $arg"
+                ERROR_NO=21
+            elif [ "x$CT_MODULES" = "x" ]; then
+                CT_MODULES="$mod_name"
+            else
+                CT_MODULES="$CT_MODULES,$mod_name"
+            fi
+        fi
+    elif [[ "x$arg" == x-j* ]]; then
+        # Parallel execution flag
+        if [ "x$arg" = "x-j" ]; then
+            JOB_NUM=`$ECHO " "$1 | $GREP '^ [0-9][0-9]*$'`
+            if [ "x$JOB_NUM" != "x" ]; then
+                shift
+            fi
+        else
+            JOB_NUM=`$ECHO " "$arg | $SED 's/^ -j//' | $GREP '^[0-9][0-9]*$'`
+            if [ "x$JOB_NUM" = "x" ]; then
+                $ECHO "*** Error: Invalid -j parameter: $arg"
+                ERROR_NO=31
+            fi
+        fi
+    else
+        # The flags passed to make
+        CMD_ARGS="$CMD_ARGS $arg"
+    fi
+done
+
+# -- Error handling
+if [ "x$ERROR_NO" != "x" ]; then
+    exit $ERROR_NO;
+fi
+
+# -- Parallel execution flag
+if [ "x$JOB_NUM" = "x" ]; then
+    JOB_NUM=`$GREP -c '^processor' '/proc/cpuinfo'`
+    if [ "x$JOB_NUM" == "x" ]; then
+        $ECHO "*** Error: Failed to count CPU number. Is /proc/cpuinfo corrupted?"
+        ERROR_NO=3
+    fi
+else
+    JOB_NUM=`$EXPR $JOB_NUM + 0`
+fi
+
+if [ "x$JOB_NUM" = "x0" ]; then
+    PARALLEL_EXEC_FLAG=
+else
+    PARALLEL_EXEC_FLAG="-j $JOB_NUM"
+fi
+
+# -- Final make
+if test "x$CSDTKVER" = "x4" -a `uname` != "Linux"; then
+    export PATH="$(cygpath -au $CSDTK4INSTALLDIR)/make:$(cygpath -au $CSDTK4INSTALLDIR)/perl/bin:$(cygpath -au $CSDTK4INSTALLDIR)/mingw32/bin:$PATH"
+    export SOFT_WORKDIR="$(cygpath -am $SOFT_WORKDIR)"
+fi
+
+# Disable all the built-in implicit rules
+MAKE="make -r"
+if [ "x$CT_MODULES" = "x" ]; then
+    set -x
+    $MAKE $PARALLEL_EXEC_FLAG $CMD_ARGS
+else
+    set -x
+    $MAKE $PARALLEL_EXEC_FLAG CT_MODULES=${CT_MODULES} $CMD_ARGS
+fi

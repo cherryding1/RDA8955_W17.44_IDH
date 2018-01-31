@@ -1,0 +1,41 @@
+		//0x16f4		VoC_code_section_1
+		//0x16f4		CII_prvWeightedQuantization_VOC
+0x0C0E0A85,	//0x16f4		VoC_lw16i(REG5,0xc0e)
+0x09D61404,	//0x16f6		VoC_lw16_d(REG4,0x9d6)
+0x08E46C06,	//0x16f8		VoC_bez16_d(WQLabel_Left_rgiCoefRecon,0x8e4)
+0x0C270A85,	//0x16fa		VoC_lw16i(REG5,0xc27)
+0x09FE1404,	//0x16fc		VoC_lw16_d(REG4,0x9fe)
+		//0x16fe		WQLabel_Left_rgiCoefRecon
+0x0A81C145,	//0x16fe		VoC_lw16i(REG1,0x47)(lo)	|	VoC_add16_rr(REG5,REG5,REG0,DEFAULT)
+0xD8550047,	//0x1700		VoC_lw16_p(REG5,REG5,DEFAULT)	|	VoC_lw16i(REG1,0x47)(hi)
+0xC32CFFC0,	//0x1702		VoC_sub16_rr(REG4,REG4,REG5,DEFAULT)	|	VoC_NOP
+0x34A1FFC0,	//0x1704		VoC_bngt16_rr(WQLabel_ngt71,REG4,REG1)(lo)	|	VoC_NOP
+0xE0241708,	//0x1706		VoC_movreg16(REG4,REG1,DEFAULT)	|	VoC_bngt16_rr(WQLabel_ngt71,REG4,REG1)(hi)
+		//0x1708		WQLabel_ngt71
+0x61360A85,	//0x1708		VoC_lw16i(REG5,0x6136)
+0x1481F8FC,	//0x170a		VoC_lw32_d(REG23,0x9ae)(lo)	|	VoC_shr16_ri(REG4,0xffffffff,DEFAULT)
+0xC16509AE,	//0x170c		VoC_add16_rr(REG5,REG5,REG4,DEFAULT)	|	VoC_lw32_d(REG23,0x9ae)(hi)
+0x0A81F81C,	//0x170e		VoC_lw16i(REG1,0x3)(lo)	|	VoC_shr16_ri(REG4,0x3,DEFAULT)
+0xC0A20003,	//0x1710		VoC_add16_rr(REG2,REG2,REG4,DEFAULT)	|	VoC_lw16i(REG1,0x3)(hi)
+0xC28AD9AB,	//0x1712		VoC_sub16_rr(REG2,REG2,REG1,DEFAULT)	|	VoC_lw32_p(REG67,REG5,DEFAULT)
+0x09B01482,	//0x1714		VoC_lw32_d(REG45,0x9b0)
+0xF90CFF0E,	//0x1716		VoC_shru16_ri(REG4,0x1,DEFAULT)	|	VoC_movreg32(RL6,REG23,DEFAULT)
+0xCDEDF90E,	//0x1718		VoC_multf32_rr(ACC1,REG7,REG5,DEFAULT)	|	VoC_shru16_ri(REG6,0x1,DEFAULT)
+0xCD74CD3F,	//0x171a		VoC_multf32_rr(ACC0,REG5,REG6,DEFAULT)	|	VoC_multf32_rr(RL7,REG4,REG7,DEFAULT)
+0xC93CFFC0,	//0x171c		VoC_add32_rr(ACC0,ACC0,RL7,DEFAULT)	|	VoC_NOP
+0xFA7CFFC0,	//0x171e		VoC_shr32_ri(ACC0,0xf,DEFAULT)	|	VoC_NOP
+0xC929FFC0,	//0x1720		VoC_add32_rr(REG23,ACC0,ACC1,DEFAULT)	|	VoC_NOP
+0xFDF9FFC0,	//0x1722		VoC_shru32_ri(REG23,0xffffffff,DEFAULT)	|	VoC_NOP
+0x33C1FF47,	//0x1724		VoC_bnltz32_r(Label_FFTgtz,REG23)(lo)	|	VoC_lw32z(RL7,DEFAULT)
+0xCBC91728,	//0x1726		VoC_sub32_rr(REG23,RL7,REG23,DEFAULT)	|	VoC_bnltz32_r(Label_FFTgtz,REG23)(hi)
+		//0x1728		Label_FFTgtz
+0x00010A8E,	//0x1728		VoC_lw16i(RL7_LO,0x1)
+0x7FFF0AC4,	//0x172a		VoC_lw16i(REG4,0xffff)
+0x3FFF0A85,	//0x172c		VoC_lw16i(REG5,0x3fff)
+0x17323341,	//0x172e		VoC_bnez32_r(Label_FFTnez,REG23)
+0xE5C6FF46,	//0x1730		VoC_jump(WQLabel_return)	|	VoC_lw32z(RL6,DEFAULT)
+		//0x1732		Label_FFTnez
+0x17373691,	//0x1732		VoC_bngt32_rr(WQLabel_return,REG45,REG23)
+0xC9BEFDF9,	//0x1734		VoC_add32_rr(RL6,RL6,RL7,DEFAULT)	|	VoC_shru32_ri(REG23,0xffffffff,DEFAULT)
+0xE580E5FC,	//0x1736		VoC_return	|	VoC_jump(Label_FFTnez)
+		//0x1737		WQLabel_return

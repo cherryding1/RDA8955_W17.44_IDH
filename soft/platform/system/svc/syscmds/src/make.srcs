@@ -1,0 +1,13 @@
+# leave this comment and the last \ on last line for easier merge
+
+S_SRC := 
+
+C_SRC := syscmds.c \
+         syscmds_audio.c \
+         syscmds_calib.c \
+         syscmds_general.c \
+         syscmds_pm.c \
+         syscmds_ts.c \
+         syscmds_gpio.c \
+         syscmds_ap_sleep.c \
+

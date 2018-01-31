@@ -1,0 +1,80 @@
+comment "--- SIM Options ---"
+
+config ADP_SIM_NUMBER
+	option skipmk
+	int
+	default NUMBER_OF_SIM
+	---help---
+		It defines the number of SIM for adaptation. It must be same as NUMBER_OF_SIM.
+
+config MMI_SIM_NUMBER
+	option skipmk
+	int "MMI Sim Number"
+	default NUMBER_OF_SIM
+	---help---
+		It defines the number of SIM for MMI. It must be same as NUMBER_OF_SIM.
+
+config __MMI_MULTI_SIM__
+	option skipmk
+	bool
+	default y 
+	---help---
+		This option supports multi SIM cards in MMI. It must be YES if SIM number is not 1.
+
+config __ADP_MULTI_SIM__
+	option skipmk
+	bool
+	default y
+	---help---
+		This option supports multi SIM cards in ADP. It must be YES if SIM number is not 1.
+
+config __MMI_DUAL_SIM_SINGLE_OPENED__
+	option skipmk
+	bool "DUAL_SIM_SINGLE_OPENED"
+	default n
+	---help---
+	    This option supports showing one SIM with Dual SIM platform. 
+
+config MMI_SUPPORT_SENDKEY2
+	option skiph
+	depends on MMI_SIM_NUMBER = 2
+	bool "MMI_SUPPORT_SENDKEY2"
+	default n
+	---help---
+		This option supports the seconde call key for 2C2D1T dual mode.
+
+config __SENDKEY2_SUPPORT__
+	option skipmk
+	def_bool y if MMI_SUPPORT_SENDKEY2
+	def_bool n
+
+config __MMI_RENAME_SIM__
+	option skipmk
+	bool "__MMI_RENAME_SIM__"
+	default n
+	---help---
+		This option supports rename SIM.
+
+
+menuconfig SUPPORT_SIMCARD_HOT_DETECT
+    option skipmk
+    bool "SUPPORT_SIMCARD_HOT_DETECT"
+    default n
+    ---help---
+    SIM HOt Detect Support Function
+    
+if SUPPORT_SIMCARD_HOT_DETECT
+config SIMCARD_HOT_DETECT
+	option skipmk
+	int "SIMCARD_HOT_DETECT"
+	default 1
+	---help---
+		It defines which SIM card support hot detect.
+		
+config SIMCARD_DETECT_GPIO
+	option skipmk
+	string "SIMCARD_DETECT_GPIO"
+	default HAL_GPIO_3
+	---help---
+		It defines which GPIO used as SIM hot detect.		
+endif

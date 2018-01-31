@@ -1,0 +1,14 @@
+
+config GPIOI2C_MODEL
+	option skiph
+	bool "gpio i2c model"
+    default n
+	---help---
+		virtual i2c with gpio
+
+config GPIOSPI_MODEL
+	option skiph
+	bool "gpio spi model"
+    default n
+	---help---
+		virtual spi with gpio

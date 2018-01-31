@@ -1,0 +1,53 @@
+comment "--- application/coolmmi/mmi/idlescreen ---"
+
+config __MMI_DEDICATED_KEY_SHORTCUTS__
+    option skipmk
+    bool "MMI_DEDICATED_KEY_SHORTCUTS"
+    default y
+    ---help---
+    	To support dedicated key for shortcut in some screens like idle.
+
+config SHORTCUTS_APP
+    option skipmk
+    bool "SHORTCUTS_APP"
+    default y
+    ---help---
+    	MMI supports shortcut setting function and display shortcut list in IDLE screen..
+
+config __MMI_SMARTPHONE_FEATHER__
+	option skipmk
+	bool "MMI SmartPhone Feathers"
+	default n
+	---help---
+	   MMI SmartPhone Feathers
+
+config __IPHONE__
+	option skipmk
+	bool "Iphone Like Style"
+	default y if __MMI_SMARTPHONE_FEATHER__
+	default n
+
+config __MMI_IPHONE_EXTRA__
+	option skipmk
+	bool "Iphone Extra"
+	default y if __IPHONE__
+	default n
+
+config __MMI_IPHONE_VKB__
+	option skipmk
+	bool "Iphone Virtual Keyboard"
+	default y if __IPHONE__
+	default n
+
+config __MMI_CHANGE_WIN_WITH_DYNAMIC__
+	option skipmk
+	bool "change win with dynamic memory"
+	default y if __IPHONE__
+	default n
+
+config __MMI_LIKE_IPHONE_FEATURE__
+	option skipmk
+	bool "IDLE Like Iphone Features"
+	default y if __IPHONE__
+	default n
+

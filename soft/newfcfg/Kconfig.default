@@ -1,0 +1,34 @@
+		
+config MMI_ON_HARDWARE_P
+	option skipmk
+	bool "On Hardware"
+	default y
+	---help---
+	   Run on hardware or not.
+
+config CSD_TARGET
+	option skipmk
+	bool "Coolsand Target"
+	default y
+	---help---
+	   Run on Coolsand Target.
+
+config CSD_NEW_API
+	option skipmk
+	bool "CDS new api"
+	default y
+	---help---
+	   Use the new api on CSD.
+
+config CT_ROMULATOR
+	option skiph
+	bool "romulator"
+	default n
+    ---help---
+         if CT_ROMULATOR is set to yes, the flash mapping emulated will be the one corresponding to the FLSH_MODEL selected for the CT_TARGET, this model can be overwritten by adding FLSH_MODEL=<model> to the make command line the actual driver used will be the romulator driver.
+
+config USE_KCONFIG
+	option skiph
+	bool
+	default y
+

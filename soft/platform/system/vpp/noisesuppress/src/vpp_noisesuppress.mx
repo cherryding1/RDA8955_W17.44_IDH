@@ -1,0 +1,32 @@
+%include
+{vppp_noisesuppress_asm_sections.h,vppp_noisesuppress_asm_common.h,vppp_noisesuppress_asm_preprocess.h}
+
+%mode
+{noisesuppress:  vpp_noisesuppress_asm_common.c,vpp_noisesuppress_asm_preprocess.c}
+
+%start
+{0,1488}
+
+%map
+{	
+  COMMON_GLOBAL
+  {
+    vpp_noisesuppress_asm_common.global    
+  }
+
+  PREPROCESS_GLOBAL
+  {
+    vpp_noisesuppress_asm_preprocess.global    
+  }
+  PREPROCESS_LOCAL
+  {
+    vpp_noisesuppress_asm_preprocess.local   
+  }   
+  
+  COMMON_LOCAL
+  {
+    vpp_noisesuppress_asm_common.local   
+  }   
+
+}
+

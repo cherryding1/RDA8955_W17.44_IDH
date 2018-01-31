@@ -1,0 +1,65 @@
+comment "--- platform/edrv ---"
+
+menu "ATV"
+source "newfcfg/platform/edrv/atvd/Kconfig"
+endmenu
+
+menu "audio"
+source "newfcfg/platform/edrv/aud/Kconfig"
+endmenu
+
+menu "bluetooth"
+source "newfcfg/platform/edrv/btd/Kconfig"
+endmenu
+
+menu "usb"
+source "newfcfg/platform/edrv/usb/Kconfig"
+endmenu
+
+menu "camera"
+source "newfcfg/platform/edrv/camd/Kconfig"
+endmenu
+
+menu "fm"
+source "newfcfg/platform/edrv/fmd/Kconfig"
+endmenu
+
+source "newfcfg/platform/edrv/gsensor/Kconfig"
+
+menu "lcd"
+source "newfcfg/platform/edrv/lcdd/Kconfig"
+endmenu
+
+menu "mem"
+source "newfcfg/platform/edrv/memd/Kconfig"
+endmenu
+
+menu "pm"
+source "newfcfg/platform/edrv/pmd/Kconfig"
+endmenu
+
+menu "rf"
+source "newfcfg/platform/edrv/rfd/Kconfig"
+endmenu
+
+source "newfcfg/platform/edrv/wifi/Kconfig"
+
+menu "sim"
+source "newfcfg/platform/edrv/dualsimd/Kconfig"
+endmenu
+
+menu "Touch Screen"
+source "newfcfg/platform/edrv/tsd/Kconfig"
+endmenu
+
+menu "gpio extend"
+source "newfcfg/platform/edrv/gpioex/Kconfig"
+endmenu
+
+menu "mcd"
+source "newfcfg/platform/edrv/mcd/Kconfig"
+endmenu
+
+menu "gpsd"
+source "newfcfg/platform/edrv/gpsd/Kconfig"
+endmenu

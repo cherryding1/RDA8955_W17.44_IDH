@@ -1,0 +1,10 @@
+C_SRC := \
+sxr_jbsd.c  sxr_sbx.c   sxr_tls.c   sxs_jbsd.c  sxs_rmt.c  sxs_srl.c  \
+sxr_mem.c   sxr_tim.c   sxs_flsh.c  sxs_mem.c   sxs_sbx.c  sxs_tim.c  \
+sxr_queu.c  sxr_tksd.c  sxs_io.c    sxs_rmc.c   sxs_spy.c  sxs_tksd.c \
+sx_map.c    sxr_mutx.c  sxs_mutx.c  sxr_usrmem.c  sxs_usrmem.c sxs_idle.c \
+sxs_cksum.c
+
+# Overwrite the normal optimisation to fit in the internal SRAM
+%/sxr_jbsd.o: MYCFLAGS=-O2
+%/sxr_mem.o: MYCFLAGS=-O2

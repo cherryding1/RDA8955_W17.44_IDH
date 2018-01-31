@@ -1,0 +1,37 @@
+<soft>
+
+<include file="MAP.xml"/>
+
+<var name="RAM_X_BEGIN_ADDR" value="0x0000"/>
+<var name="RAM_Y_BEGIN_ADDR" value="0x4000"/>
+
+<var name="COMMON_GLOBAL_X_SIZE" value="4"/>
+<var name="COMMON_GLOBAL_Y_SIZE" value="12"/>
+<var name="HI_GLOBAL_X_SIZE" value="2"/>
+<var name="HI_GLOBAL_Y_SIZE" value="2"/>
+<var name="BYE_GLOBAL_X_SIZE" value="2"/>
+<var name="BYE_GLOBAL_Y_SIZE" value="2"/>
+<var name="HI_LOCAL_X_SIZE" value="2"/>
+<var name="HI_LOCAL_Y_SIZE" value="4"/>
+<var name="BYE_LOCAL_X_SIZE" value="4"/>
+<var name="BYE_LOCAL_Y_SIZE" value="2"/>
+<var name="COMMON_LOCAL_X_SIZE" value="0"/>
+<var name="COMMON_LOCAL_Y_SIZE" value="0"/>
+<var name="COMMON_GLOBAL_X_BEGIN_ADDR" value="(0 + RAM_X_BEGIN_ADDR)"/>
+<var name="COMMON_GLOBAL_Y_BEGIN_ADDR" value="(0 + RAM_Y_BEGIN_ADDR)"/>
+<var name="HI_GLOBAL_X_BEGIN_ADDR" value="(4 + RAM_X_BEGIN_ADDR)"/>
+<var name="HI_GLOBAL_Y_BEGIN_ADDR" value="(12 + RAM_Y_BEGIN_ADDR)"/>
+<var name="BYE_GLOBAL_X_BEGIN_ADDR" value="(6 + RAM_X_BEGIN_ADDR)"/>
+<var name="BYE_GLOBAL_Y_BEGIN_ADDR" value="(14 + RAM_Y_BEGIN_ADDR)"/>
+<var name="HI_LOCAL_X_BEGIN_ADDR" value="(8 + RAM_X_BEGIN_ADDR)"/>
+<var name="HI_LOCAL_Y_BEGIN_ADDR" value="(16 + RAM_Y_BEGIN_ADDR)"/>
+<var name="BYE_LOCAL_X_BEGIN_ADDR" value="(8 + RAM_X_BEGIN_ADDR)"/>
+<var name="BYE_LOCAL_Y_BEGIN_ADDR" value="(16 + RAM_Y_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_X_BEGIN_ADDR" value="(12 + RAM_X_BEGIN_ADDR)"/>
+<var name="COMMON_LOCAL_Y_BEGIN_ADDR" value="(20 + RAM_Y_BEGIN_ADDR)"/>
+<instance address="(0+HI_LOCAL_X_BEGIN_ADDR)*2" typedef="vpp_HelloHi_X_BEGIN_ADDR" name="vpp_HelloHi_X_BEGIN_ADDR"/>
+<instance address="(0+HI_LOCAL_Y_BEGIN_ADDR)*2" typedef="vpp_HelloHi_Y_BEGIN_ADDR" name="vpp_HelloHi_Y_BEGIN_ADDR"/>
+<instance address="(0+BYE_LOCAL_X_BEGIN_ADDR)*2" typedef="vpp_HelloBye_X_BEGIN_ADDR" name="vpp_HelloBye_X_BEGIN_ADDR"/>
+<instance address="(0+BYE_LOCAL_Y_BEGIN_ADDR)*2" typedef="vpp_HelloBye_Y_BEGIN_ADDR" name="vpp_HelloBye_Y_BEGIN_ADDR"/>
+
+</soft>

@@ -1,0 +1,8 @@
+
+config MCD_IF
+	option skiph
+	string "MCD IF"
+	default sdmmc
+	---help---
+		Interface: sdmmc/spi
+

@@ -1,0 +1,59 @@
+# Define here the content of the overlays used by MDI.
+
+
+# Interal SRAM Overlay 0 content is used by MDI 
+# to do H263.
+#INT_SRAM_OVERLAY_CONTENT_0 := \
+#				h263_idct_mips.o \
+#				getbits.o \
+#				getblk.o \
+#				getvlc.o \
+#				recon.o \
+
+# Interal SRAM Overlay 1 content is used by MDI 
+# to do MPEG4.
+#INT_SRAM_OVERLAY_CONTENT_1 := \
+#				mpeg4_idct_mips.o \
+#				mpeg4_decoder.o \
+#				interpolate8x8.o \
+#				mbcoding.o \
+#				mbprediction.o \
+#				mpeg4_bitstream.o \
+#				quant_h263.o \
+
+# Interal SRAM Overlay 2 content is used by MDI 
+# to do Audio Play.
+INT_SRAM_OVERLAY_CONTENT_2 :=mmc_audio_overlay.o
+
+# Interal SRAM Overlay 3 content is used by XXX 
+# to do YYY.
+#ifeq "$(strip ${MMI_SUPPORT_IPTV})" "YES" 
+INT_SRAM_OVERLAY_CONTENT_3 := zyvc_idct.o yuv420_to_rgb16.o
+#endif
+
+# Interal SRAM Overlay 4 content is used by MDI 
+# to do RMVB.
+INT_SRAM_OVERLAY_CONTENT_4 := \
+				rv_overlay_set.o \
+				deblock.o \
+				rv_bs.o \
+
+# Interal SRAM Overlay 5 content is used by VPP 
+# to do AMR coder.
+INT_SRAM_OVERLAY_CONTENT_5 := \
+                mmc_amr_overlay.o \
+                vpp_speech_asm.o \
+
+# Reserve bss section to optimise flash usage
+INT_SRAM_OVERLAY_BSS_RESERVED_OBJECT_LIST := mmc_audio_overlay.o
+
+
+ifeq "${LTE_NBIOT_SUPPORT}" "1"
+INT_SRAM_OVERLAY_BSS_RESERVED_SIZE := 0
+else
+INT_SRAM_OVERLAY_BSS_RESERVED_SIZE := 18432
+endif
+
+# Specific input sections to be put in overlay output section
+INT_SRAM_OVERLAY_CONTENT_5_INPUT_SECTIONS := .sram_overlay
+

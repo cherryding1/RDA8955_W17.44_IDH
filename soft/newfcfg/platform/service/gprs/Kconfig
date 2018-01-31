@@ -1,0 +1,46 @@
+
+config EGPRS_SUPPORT
+	option skiph
+	bool "EGPRS_SUPPORT"
+	default n
+
+config GPRS_SUPPORT
+	option skiph
+	default y
+	bool "GPRS_SUPPORT"
+		
+if GPRS_SUPPORT
+
+config __AUTO_GPRS_ATT__
+	option skipmk
+	bool "AUTO GPRS ATT"
+	default n
+	---help---
+		gprs automatic attach at poweron or switch on
+
+config __MOD_TCM__
+	option skipmk
+	bool "__MOD_TCM__"
+	default y
+
+config __GPRS_MODE__
+	option skipmk
+	bool "__GPRS_MOD__"
+	default y
+
+config __TCPIP__
+	option skipmk
+	bool "__TCPIP__"
+	default y
+
+config __GPRS_SWITCH__
+	option skipmk
+	bool "__GPRS_SWITCH__"
+	default y
+
+config CFW_GPRS_SUPPORT
+	option skipmk
+	bool "CFW_GPRS_SUPPORT"
+	default y
+
+endif

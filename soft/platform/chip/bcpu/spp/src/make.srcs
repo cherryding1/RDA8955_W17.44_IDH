@@ -1,0 +1,30 @@
+ifneq "${CHIP_HAS_BCPU_ROM}-${BUILD_BCPU_IMAGE}" "1-"
+
+S_SRC += spp_fcch_detect_asm.S \
+         spp_DummyPCH_DisAsm.S
+
+C_SRC += spp_cfg.c \
+         spp_cipher.c \
+         spp_gsm_amr_rx.c \
+         spp_gsm_decoder.c \
+         spp_gsm_equalizer.c \
+         spp_gsm_rx.c \
+         spp_gsm_tables.c \
+         spp_gsm_tx.c \
+         spp_math.c \
+         spp_misc.c \
+         spp_version.c \
+         spp_pch_detect.c
+
+ifeq "${SPC_IF_VER}" "1"
+S_SRC := $(filter-out spp_fcch_detect_asm.S,${S_SRC}) \
+         spp_fcch_detect_asm_v1.S
+C_SRC += spp_fcch_detect_v1.c
+endif
+
+S_SRC += spp_fcch_detect_filter_asm.S
+
+endif # !CHIP_HAS_BCPU_ROM || BUILD_BCPU_IMAGE
+
+%/spp_fcch_detect_v1.o: REDUCED_REGS_FLAG=
+%/spp_fcch_detect_v1.o: CT_MIPS16_CFLAGS=

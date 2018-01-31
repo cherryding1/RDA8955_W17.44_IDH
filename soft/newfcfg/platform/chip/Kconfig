@@ -1,0 +1,146 @@
+comment "--- platform/chip ---"
+
+choice CT_ASIC_SEL
+	option skiph
+	option skipmk
+	prompt "ASIC Type :"
+	default CT_ASIC_8809
+
+	config CT_ASIC_8809
+		option skipmk
+		option skiph
+		bool "8809"
+
+	config CT_ASIC_8955
+		option skipmk
+		option skiph
+		bool "8955"
+
+	config CT_ASIC_8909
+		option skipmk
+		option skiph
+		bool "8909"
+endchoice
+
+config CT_ASIC
+	option skiph
+	string
+	default "8809" if CT_ASIC_8809
+	default "8955" if CT_ASIC_8955
+	default "8909" if CT_ASIC_8909
+
+choice CT_CHIP_DIE
+	option enum
+	option skiph
+	prompt "Chip Die :"
+	default 8809e2
+	---help---
+		Chip die type:
+		8809e2/8955/8909
+
+	config 8809e2
+		option skiph
+		bool "8809e2"
+	config 8955
+		option skiph
+		bool "8955"
+	config 8909
+		option skiph
+		bool "8909"
+	config null 
+		option skiph
+		bool "null"
+endchoice
+
+choice CT_COMPILER
+	option enum
+	option skiph
+	prompt "Compiler :"
+	default gcc4_xcpu
+
+	config gcc4_xcpu
+		option skiph
+		bool "GCC4 XCPU"
+	config gcc7_xcpu2
+		option skiph
+		bool "GCC7 XCPU2" if CT_ASIC_8909
+endchoice
+
+choice CT_ASIC_CFG
+	option enum
+	option skiph
+	prompt "ASIC config"
+	default chip
+	---help---
+	   fpga or chip?
+
+	config fpga
+		option skiph
+		bool "fpga"
+	config chip
+		option skiph
+		bool "chip"
+endchoice
+
+config SAIC_SUPPORT
+	option skipmk
+	option skiph
+	bool "SAIC support"
+	default n
+	---help---
+	   SAIC support
+
+config CHIP_SAIC_SUPPORTED
+	option skipmk
+	depends on SAIC_SUPPORT
+	bool "Chip SAIC supported"
+	default y
+	---help---
+		Saic function is enabled.
+
+config CHIP_SAIC_CTRL_BY_SOFT
+	option skipmk
+	depends on SAIC_SUPPORT
+	bool "Chip SAIC Control by soft"
+	default y
+	---help---
+		Dynamic saic is enabled，it will  be useful when CHIP_SAIC_SUPPORT is defined.
+
+config CHIP_SAIC_ENABLE_STEP2
+	option skipmk
+	depends on SAIC_SUPPORT
+	bool "Chip SAIC Enable Step2"
+	default n
+	---help---
+		Full saic is enabled，it will  be useful when CHIP_SAIC_SUPPORT is defined.
+
+config FREQ_LARGESCALE_SUPPORT
+	option skipmk
+	depends on CT_ASIC_8955
+	bool "Support large scale Frequency"
+	default y
+	---help---
+		This micro is patch of large freqency offset.
+
+config DISABLE_TRACE_AT_PLL_OFF
+	option skipmk
+	depends on CT_ASIC_8955
+	bool "Disable Trace at PLL off"
+	default y
+
+config SIM_RX_IFC_IN_SRAM
+	option skipmk
+	depends on CT_ASIC_8955 || CT_ASIC_8909
+	bool "Put SIM RX IFC in SRAM"
+	default y
+
+config SIM_TX_IFC_IN_SRAM
+	option skipmk
+	depends on CT_ASIC_8955 || CT_ASIC_8909
+	bool "Put SIM TX IFC in SRAM"
+	default y
+config LOW_TEMPERATURE_RETRY_5_TIMES
+    option skipmk
+    depends on CT_ASIC_8955 || CT_ASIC_8909
+	bool "-40 degree low temperature losting network retry 5 times"
+	default n

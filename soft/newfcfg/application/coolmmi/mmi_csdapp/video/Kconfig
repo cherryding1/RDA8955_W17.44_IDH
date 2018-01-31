@@ -1,0 +1,51 @@
+config __MMI_VIDEO_RECORDER__
+	option skipmk
+	def_bool y if VIDEO_RECORDER_SUPPORT
+	def_bool n
+
+config __MED_MJPG_AUDIO__
+	option skipmk
+	def_bool y if VIDEO_RECORDER_SUPPORT
+	def_bool n
+
+#if VIDEO_RECORDER_SUPPORT
+#
+#config __MMI_VIDEO_RECORDER__
+#	option skipmk
+#	bool
+#	default y
+#
+#config __MED_MJPG_AUDIO__
+#	option skipmk
+#	bool
+#	default y
+#
+#endif
+#
+#config __MMI_VIDEO__
+#	option skipmk
+#	def_bool y if VIDEO_PLAYER_SUPPORT
+#
+#config __MMI_VIDEO_PLAYER__
+#	option skipmk
+#	bool "MMI video player screen"
+#	depends on VIDEO_PLAYER_SUPPORT
+#	default y
+config MEDIA_H264_SUPPORT
+	bool "MEDIA_H264_SUPPORT"
+	default n
+	---help---
+		This option enables video player supports H264 format file.
+
+config MEDIA_VOCVID_SUPPORT
+	bool "MEDIA_VOCVID_SUPPORT"
+	default y
+	---help---
+		This option enables voc decoder function for video.
+
+config __MMI_PLAYER_LEFT_KEY_OPTION__
+	option skipmk
+	bool "__MMI_PLAYER_LEFT_KEY_OPTION__"
+	default n
+	---help---
+		This option enables enter HELP screen by left key in video player.

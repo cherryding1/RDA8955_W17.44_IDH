@@ -1,0 +1,121 @@
+/* Copyright (C) 2016 RDA Technologies Limited and/or its affiliates("RDA").
+ * All rights reserved.
+ *
+ * This software is supplied "AS IS" without any warranties.
+ * RDA assumes no responsibility or liability for the use of the software,
+ * conveys no license or title under any patent, copyright, or mask work
+ * right to the product. RDA reserves the right to make changes in the
+ * software without notification.  RDA also make no representation or
+ * warranty that such application will be suitable for the specified use
+ * without further testing or modification.
+ */
+
+#ifndef __SXS_SRL_HP__
+#define __SXS_SRL_HP__
+
+#ifdef __SXS_SRL_VAR__
+#define DefExtern
+#else
+#define DefExtern extern
+#endif
+
+#include "sxs_type.h"
+#include "sxs_srl.h"
+#include "sxr_csp.h"
+
+
+#define SXS_NB_SERIAL_PORTS PAL_NB_MAX_SERIAL
+
+#if (SXS_NB_SERIAL_PORTS > 0)
+
+#define SXS_RX_BUFFER_SIZE  256
+#define SXS_TX_BUFFER_SIZE  256
+
+typedef struct
+{
+    u8   RxBuffer [SXS_RX_BUFFER_SIZE];
+    u8   TxBuffer [SXS_TX_BUFFER_SIZE];
+    u8   WIdxRx;
+    u8   RIdxRx;
+    u8   WIdxTx;
+    u8   RIdxTx;
+    u16  Setting;
+    u8   Status;
+    u8   RmtCpuIdx;
+    u8   NotificationMsk;
+    u8   ModemStatus    ;
+    u8   LastModemStatus;
+    u8   PlusCnt;
+    u16  (*ReadTxData) (u8 *BufOut, u16 Size, u8 RmtCpuIdx);
+    u16  (*WriteRxData) (u8 *BufIn, u16 Size, u8 RmtCpuIdx);
+    u16  (*GetBufStatus) (u8 RmtCpuIdx);
+    void (*StatusNotification) (u8 PortIdx, u8 Status, u8 LastStatus);
+} sxs_SerialDesc_t;
+
+#ifdef CHIP_XTAL_CLK_IS_52M
+#define SXS_SERIALDESC_LOC  HAL_UNCACHED_BSS_INTERNAL
+#elif (XCPU_CACHE_MODE_WRITE_BACK==1)
+#define SXS_SERIALDESC_LOC  HAL_UNCACHED_DATA
+#else
+#define SXS_SERIALDESC_LOC
+#endif
+
+DefExtern sxs_SerialDesc_t SXS_SERIALDESC_LOC sxs_SerialDesc [SXS_NB_SERIAL_PORTS];
+
+#define SXS_RX_DISABLED (1 << 0)
+#define SXS_TX_DISABLED (1 << 1)
+#define SXS_SERIAL_ON   (1 << 2)
+#define SXS_ECHO_SET    (1 << 3)
+
+#ifdef __SXS_SRL_VAR__
+DefExtern const u32 sxs_SerialRateList [SXS_NB_SERIAL_RATE] =
+{
+    460800, 230400, 115200,
+    57600,  38400,  19200,
+    9600,   4800,   2400,
+    1200,   600,    300,
+    75
+};
+#else
+DefExtern const u32 sxs_SerialRateList [SXS_NB_SERIAL_RATE];
+#endif
+
+#undef DefExtern
+
+void sxs_SerialISR (u8 PortIdx);
+
+// =============================================================================
+// sxs_Flush
+// -----------------------------------------------------------------------------
+/// Fill the FIFO with Tx buffer data when any.
+/// @param PortIdx  Port index.
+/// @return         Active status of the port.
+// =============================================================================
+u8 sxs_Flush     (u8 PortIdx);
+/*
+===============================================================================
+   Function   : sxs_GetTxBufAvailability
+ -----------------------------------------------------------------------------
+   Scope      : Check the number of available bytes in the Tx Buffer associated
+                the identifed serial port.
+   Parameters : Serial port number.
+   Return     : Number of avalaible bytes.
+===============================================================================
+*/
+u16 sxs_GetTxBufAvailability (u8 PortIdx);
+/*
+===============================================================================
+   Function   : sxs_GetRxBufAvailability
+ -----------------------------------------------------------------------------
+   Scope      : Check the number of available bytes in the Rx Buffer associated
+                the identifed serial port.
+   Parameters : Serial port number.
+   Return     : Number of avalaible bytes.
+===============================================================================
+*/
+u16  sxs_GetRxBufAvailability (u8 PortIdx);
+u8   sxs_PutRxData (u8 *Data, u8 Size, u8 PortIdx);
+
+#endif // SXS_NB_SERIAL_PORTS
+#endif
+

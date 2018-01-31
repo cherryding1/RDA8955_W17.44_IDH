@@ -1,0 +1,68 @@
+<archive asm='no'>
+
+<typedef name="flash_programmer_globals" rubyconstants="yes"></typedef>
+
+<enum name='FPC_COMMAND_TYPE_T'>
+	<entry name='FPC_NONE' value='0'></entry>
+	<entry name='FPC_PROGRAM'></entry>
+	<entry name='FPC_ERASE_SECTOR'></entry>
+	<entry name='FPC_ERASE_CHIP'></entry>
+	<entry name='FPC_END'></entry>
+	<entry name='FPC_CHECK_FCS'></entry>
+	<entry name='FPC_GET_FINALIZE_INFO'></entry>
+	<entry name='FPC_RESTART'></entry>
+	<entry name='FPC_CHECK_CALIBRFPART_CRC'></entry>
+	<entry name='FPC_DONE' value='-100'></entry>
+	<entry name='FPC_ERROR'></entry>
+	<entry name='FPC_FCS_ERROR'></entry>
+	<entry name='FPC_FLASH_NOT_AT_FF'></entry>
+</enum>
+
+<typedef name='FPC_COMMAND_DATA_T'>
+	<instance name='cmd' type='FPC_COMMAND_TYPE_T'></instance>
+	<ptr name='flashAddr' type='uint8'></ptr>
+	<ptr name='ramAddr' type='uint8'></ptr>
+	<uint32 name='size'></uint32>
+	<uint32 name='fcs'>Used by FPC_PROGRAM. Contains the FCS of the written data.</uint32>
+</typedef>
+
+<var name='EVENT_FLASH_PROG_READY' value='0xf0'></var>
+
+<var name='EVENT_FLASH_PROG_ERROR' value='0xe0'></var>
+
+<var name='EVENT_FLASH_PROG_UNKNOWN' value='0xd0'></var>
+
+<var name='EVENT_FLASH_PROG_MEM_RESET' value='0xc0'></var>
+
+<var name='EVENT_FLASH_PROG_MEM_ERROR' value='0xce'></var>
+
+<var name='EVENT_CALIB_RFCRC_ERROR' value='0xb0'></var>
+
+<var name='FPC_BUFFER_SIZE' value='32*1024'>
+
+    <comment> Size of one of the three available data buffers
+    </comment>
+</var>
+
+<var name='FPC_PROTOCOL_MAJOR' value='0xFA01'/>
+<var name='FPC_PROTOCOL_MINOR' value='0xFB04'/>
+
+<typedef name='FPC_PROTOCOL_VERSION_T'>
+    <uint16 name='major'/>
+    <uint16 name='minor'/>
+</typedef>
+
+<typedef name='FLASH_PROG_MAP_ACCESS_T'>
+    <instance name='protocolVersion' type='FPC_PROTOCOL_VERSION_T'/>
+    <instance name='commandDescr' type='FPC_COMMAND_DATA_T' count='2'/>
+    <ptr name='dataBufferA' type='UINT8'/>
+    <ptr name='dataBufferB' type='UINT8'/>
+    <ptr name='dataBufferC' type='UINT8'/>
+	<uint32 name='fpcSize'/>
+</typedef>
+
+<cjoker>
+</cjoker>
+</archive>
+
+

@@ -1,0 +1,13 @@
+<module name="MCD">
+    <!-- Functions -->
+    <fn name="mcd_Open"              id="0x1050" group="MCD API"/>
+    <fn name="mcd_Write"             id="0x1051" group="MCD API"/>
+    <fn name="mcd_Read"              id="0x1052" group="MCD API"/>
+    <fn name="mcd_Close"             id="0x1053" group="MCD API"/>
+    <fn name="mcd_Xxx_WaitTc"        id="0x1054" group="MCD API"/>
+    <fn name="mcd_ReadCsd"           id="0x1055" group="MCD API"/>
+
+    <!-- Windows -->
+
+</module>
+

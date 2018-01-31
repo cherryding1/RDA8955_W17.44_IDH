@@ -1,0 +1,62 @@
+Source delivery toolpool v2
+===========================
+  Workspace:
+    ^/modem2G/BJbranches/Total_integration/application      application
+    ^/Sources/env/trunk                                     env
+    ^/Sources/platform/trunk                                platform
+    ^/Sources/base/trunk                                    platform/base
+    ^/Sources/chip/trunk                                    platform/chip
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SERVICE}     ${PLATFORM_SERVICE}
+    ^/Sources/edrv/trunk                                    platform/edrv
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/mdi     ${PLATFORM_SYSTEM}/mdi
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/stack   ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/trunk                                     ${PLATFORM_SYSTEM}/svc
+    ^/modem2G/BJbranches/Total_integration/${PLATFORM_SYSTEM}/vpp     ${PLATFORM_SYSTEM}/vpp
+    ^/modem2G/BJbranches/Total_integration/platform_test    platform_test
+    ^/Sources/target/trunk                                  target
+    ^/Sources/toolpool/releases/v2                          toolpool
+
+  Compatibility, upgrade notes:
+    * Use CoolTools, at least, r1163.
+    * Use Platform Test, at least, v2 or trunk, if you need to regenerate the flash programmers.
+
+  Changes:
+    * SVN Checker: Minor bug fixes and improvements.
+    * Fastpf: Split the burn of the normal code and Boot Sector code. This will ensure the user to update the Boot Sector independently from the rest of the final code. This is important for the robustness of the Fastpf, especially with the USB Host or 2-wire Serial Host.
+    * Fastpf: Added a restart command, done by the embedded code (instead of by CoolWatcher). This ensures that the restart of the system is done properly (for instance, the USB is power cycled before the restart to have the PC re-detect it). The version of the XMD is now 1.3.
+    * Fastpf: Improved the RAM or FLASH errors handling.
+    * Target Executor: Waits for USB to be connected after enterHostMonitor instead of sleeping 4 seconds.
+    * CW GUI: Added the RA register to the "XCPU add watch" button.
+    * CW GUI: Added the fastpf command with parameters in the command line history.
+    * Map: Updated Gallite's hardware XMD.
+    * Scripts: Added a wait for the 0xFFFFFFFF event after the reset. Removed Opal hack in restart.
+    * Scripts: Added hardware_versions.rb for Gallite.
+    * Scripts: Improved the disassembly loading/unloading.
+    * Scripts: Updated all scripts after API change on how connections are managed in Ruby (flow control selection).
+    * Scripts: Some improvements to support the 2-wire Serial Host.
+    * Calib: Better timeout management.
+
+Source delivery toolpool v1
+===========================
+  Workspace:
+    ^/Sources/application/trunk     application
+    ^/Sources/env/releases/v2       env
+    ^/Sources/platform/trunk        platform
+    ^/Sources/base/trunk            platform/base
+    ^/Libraries/chip/releases/v2.1  platform/chip
+    ^/Sources/csw/trunk             ${PLATFORM_SERVICE}
+    ^/Sources/edrv/releases/v1      platform/edrv
+    ^/Sources/mdi/trunk             ${PLATFORM_SYSTEM}/mdi
+    ^/Sources/stack/releases/v1     ${PLATFORM_SYSTEM}/stack
+    ^/Sources/svc/releases/v1       ${PLATFORM_SYSTEM}/svc
+    ^/Sources/vpp/trunk             ${PLATFORM_SYSTEM}/vpp
+    ^/Sources/platform_test/trunk   platform_test
+    ^/Sources/target/releases/v1    target
+    ^/Sources/toolpool/releases/v1  toolpool
+
+  Compatibility, upgrade notes:
+    *
+
+  Changes:
+    *
+
